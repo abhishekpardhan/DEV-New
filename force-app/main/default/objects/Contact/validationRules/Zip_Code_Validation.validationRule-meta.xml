@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Zip_Code_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(!ISBLANK(  MailingPostalCode ),NOT(REGEX(MailingPostalCode , &quot;\\d{6}&quot;)))</errorConditionFormula>
+    <errorDisplayField>MailingPostalCode</errorDisplayField>
+    <errorMessage>Pin Code Should be 6 Digits</errorMessage>
+</ValidationRule>

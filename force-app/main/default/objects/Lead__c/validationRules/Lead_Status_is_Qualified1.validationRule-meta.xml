@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Status_is_Qualified1</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(ISPICKVAL( Status__c , &apos;Qualified&apos;) ,PRIORVALUE(Name)!= Name )</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>You can&apos;t change the Lead name while Status is Qualified.</errorMessage>
+</ValidationRule>

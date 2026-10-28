@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__FlowScreen</target>
+        <target>lightning__RecordPage</target>
+
+    </targets>
+    <targetConfigs> 
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="inputPinCode" label="Pincode Code" type="String" />
+            <property name="completeAddressForDisplay" label="Complete Address For Display" type="String" />
+
+            <!-- Input Variables for Flow Screen -->
+            <property name="pincodeLabel" label="Pincode Label" type="String" default="Pincode" role="inputOnly"/>
+            <property name="addressLabel" label="Address Label" type="String" default="Address"  role="inputOnly"/>
+            <property name="showAddressWithBranch" label="Show Address With Branch" type="Boolean" default="false" role="inputOnly"/>
+            <property name="showAddressWithPOName" label="Show Address With PO Name" type="Boolean" default="false" role="inputOnly"/>
+            <property name="isCompleteAddressShow" label="Show Complete Address" type="Boolean" default="false" role="inputOnly"/>
+            
+            <!-- Output Variables for Flow Screen -->
+            <property name="completeAddress" label="Complete Address" type="String" role="outputOnly"/>
+            <property name="pincode" label="Output Pincode" type="String" role="outputOnly"/>
+            <property name="branch" label="Branch" type="String" role="outputOnly"/>
+            <property name="poName" label="PO Name" type="String" role="outputOnly"/>
+            <property name="city" label="City" type="String" role="outputOnly"/>
+            <property name="state" label="State" type="String" role="outputOnly"/>
+            <property name="country" label="Country" type="String" role="outputOnly"/>    
+
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

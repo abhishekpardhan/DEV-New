@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Assigned Branch --></label>
+    <name>Assigned_Branch__c</name>
+    <relationshipLabel><!-- Account Teams (Assigned Branch) --></relationshipLabel>
+</CustomFieldTranslation>

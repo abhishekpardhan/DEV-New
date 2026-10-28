@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Claim_Case_Completion_VR</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISCHANGED(Status__c),
+    RecordType.DeveloperName = &quot;Claim_Issues&quot;,
+    ISPICKVAL(Status__c, &quot;Completed&quot;),
+    OR(
+        ISBLANK(Claim_Settlement_Date__c),
+ISBLANK( Claim_Approved_Amount__c),
+        ISBLANK(Cheque_COF_No__c)
+    )
+)</errorConditionFormula>
+    <errorMessage>Claim Approved Amount, Claim Settlement Date and Cheque/COF No are required when changing Status to Completed.</errorMessage>
+</ValidationRule>

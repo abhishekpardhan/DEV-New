@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Origin_Destination_Pincode_Required</fullName>
+    <active>true</active>
+    <description>Origin and Destination Pincode is required to create a booking request</description>
+    <errorConditionFormula>AND(
+NOT($Setup.Custom_Validation_Exception_Setting__c.Bypass_Validation_Rules__c),
+TEXT(Case_Nature__c) = &apos;Request&apos;,
+TEXT(Case_Type__c) =&apos;Booking Request&apos;,
+OR(ISBLANK(Origin_Pincode__c),ISNULL(Origin_Pincode__c),ISBLANK(Destination_PinCode__c),ISNULL(Destination_PinCode__c))
+)</errorConditionFormula>
+    <errorMessage>Origin and Destination Pincode is required to create booking request</errorMessage>
+</ValidationRule>

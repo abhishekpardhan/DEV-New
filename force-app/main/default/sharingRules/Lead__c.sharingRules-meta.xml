@@ -1,0 +1,1431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Alliance_Partner_Management</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Alliance Partner Management</label>
+        <sharedTo>
+            <group>Alliance_Partner_Management</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Vertical__c</field>
+            <operation>equals</operation>
+            <value>ALLIANCE PARTNER MANAGEMENT</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_ICM_1</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead ICM 1</label>
+        <sharedTo>
+            <role>Regional_ICM_Manager_1</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>ICM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>ANDHRA PRADESH - TELANGANA</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_ICM_10</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead ICM 10</label>
+        <sharedTo>
+            <role>Regional_ICM_Manager_MHG</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>ICM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>MAHARASHTRA - GOA</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_ICM_11</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead ICM 11</label>
+        <sharedTo>
+            <role>Regional_ICM_Manager_MUM</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>ICM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>MUMBAI</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_ICM_12</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead ICM 12</label>
+        <sharedTo>
+            <role>Regional_ICM_Manager_NRE</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>ICM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>NORTH EAST</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_ICM_13</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead ICM 13</label>
+        <sharedTo>
+            <role>Regional_ICM_Manager_PBC</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>ICM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>PUNJAB - CHANDIGARH</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_ICM_14</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead ICM 14</label>
+        <sharedTo>
+            <role>Regional_ICM_Manager_RJN</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>ICM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>RAJASTHAN</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_ICM_15</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead ICM 15</label>
+        <sharedTo>
+            <role>Regional_ICM_Manager_TNP</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>ICM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>TAMILNADU - PUDUCHERRY</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_ICM_16</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead ICM 16</label>
+        <sharedTo>
+            <role>Regional_ICM_Manager_UPR</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>ICM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>UTTAR PRADESH</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_ICM_17</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead ICM 17</label>
+        <sharedTo>
+            <role>Regional_ICM_Manager_UKH</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>ICM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>UTTARAKHAND</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_ICM_18</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead ICM 18</label>
+        <sharedTo>
+            <role>Regional_ICM_Manager_WBS</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>ICM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>WEST BENGAL - SIKKIM</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_ICM_2</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead ICM 2</label>
+        <sharedTo>
+            <role>Regional_ICM_Manager_2</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>ICM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>BIHAR - JHARKHAND - ODISHA</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_ICM_3</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead ICM 3</label>
+        <sharedTo>
+            <role>Regional_ICM_Manager_DLI</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>ICM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>DELHI</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_ICM_4</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead ICM 4</label>
+        <sharedTo>
+            <role>Regional_ICM_Manager_GJT</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>ICM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>GUJARAT</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_ICM_5</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead ICM 5</label>
+        <sharedTo>
+            <role>Regional_ICM_Manager_HRN</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>ICM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>HARYANA</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_ICM_6</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead ICM 6</label>
+        <sharedTo>
+            <role>Regional_ICM_Manager_JKH</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>ICM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>JAMMU KASHMIR - HIMACHAL PRADESH</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_ICM_7</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead ICM 7</label>
+        <sharedTo>
+            <role>Regional_ICM_Manager_KRL</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>ICM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>KERALAM</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_ICM_8</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead ICM 8</label>
+        <sharedTo>
+            <role>Regional_ICM_Manager_KTK</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>ICM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>KARNATAKA</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_ICM_9</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead ICM 9</label>
+        <sharedTo>
+            <role>Regional_ICM_Manager_MPC</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>ICM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>MADHYA PRADESH - CHHATTISGARH</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_New_Sales_Corporate</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead New Sales Corporate</label>
+        <sharedTo>
+            <role>New_Sales_Head_Corporate1</role>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_New_sales_cooperation_APT</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead New sales cooperation APT</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_1</role>
+        </sharedTo>
+        <booleanFilter>2 AND (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>ANDHRA PRADESH - TELANGANA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_New_sales_cooperation_BJO</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead New sales cooperation BJO</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_2</role>
+        </sharedTo>
+        <booleanFilter>2 AND (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>BIHAR - JHARKHAND - ODISHA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_New_sales_cooperation_DLI</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead New sales cooperation DLI</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_DLI</role>
+        </sharedTo>
+        <booleanFilter>2 AND (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>DELHI</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_New_sales_cooperation_GJT</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead New sales cooperation GJT</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_GJT</role>
+        </sharedTo>
+        <booleanFilter>2 AND (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>GUJARAT</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_New_sales_cooperation_HRN</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead New sales cooperation HRN</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_HRN</role>
+        </sharedTo>
+        <booleanFilter>2 AND (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>HARYANA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_New_sales_cooperation_JKH</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead New sales cooperation JKH</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_JKH</role>
+        </sharedTo>
+        <booleanFilter>2 AND (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>JAMMU KASHMIR - HIMACHAL PRADESH</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_New_sales_cooperation_KRL</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead New sales cooperation KRL</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_KRL</role>
+        </sharedTo>
+        <booleanFilter>2 AND (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>KERALAM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_New_sales_cooperation_KTK</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead New sales cooperation KTK</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_KTK</role>
+        </sharedTo>
+        <booleanFilter>2 AND (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>KARNATAKA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_New_sales_cooperation_MHG</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead New sales cooperation MHG</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_MHG</role>
+        </sharedTo>
+        <booleanFilter>2 AND (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>MAHARASHTRA - GOA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_New_sales_cooperation_MPC</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead New sales cooperation MPC</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_MPC</role>
+        </sharedTo>
+        <booleanFilter>2 AND (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>MADHYA PRADESH - CHHATTISGARH</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_New_sales_cooperation_MUM</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead New sales cooperation MUM</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_MUM</role>
+        </sharedTo>
+        <booleanFilter>2 AND (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>MUMBAI</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_New_sales_cooperation_NRE</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead New sales cooperation NRE</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_NRE</role>
+        </sharedTo>
+        <booleanFilter>2 AND (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>NORTH EAST</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_New_sales_cooperation_PBC</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead New sales cooperation PBC</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_PBC</role>
+        </sharedTo>
+        <booleanFilter>2 AND (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>PUNJAB - CHANDIGARH</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_New_sales_cooperation_RJN</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead New sales cooperation RJN</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_RJN</role>
+        </sharedTo>
+        <booleanFilter>2 AND (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>RAJASTHAN</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_New_sales_cooperation_TNP</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead New sales cooperation TNP</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_TNP</role>
+        </sharedTo>
+        <booleanFilter>2 AND (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>TAMILNADU - PUDUCHERRY</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_New_sales_cooperation_UPR</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead New sales cooperation UPR</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_UPR</role>
+        </sharedTo>
+        <booleanFilter>2 AND (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>UTTAR PRADESH</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_New_sales_cooperation_Ukh</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead New sales cooperation Ukh</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_UKH</role>
+        </sharedTo>
+        <booleanFilter>2 AND (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>UTTARAKHAND</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_New_sales_cooperation_wbs</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead New sales cooperation wbs</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_WBS</role>
+        </sharedTo>
+        <booleanFilter>2 AND (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>WEST BENGAL - SIKKIM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_Retail_1</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead Retail 1</label>
+        <sharedTo>
+            <role>Regional_Retail_Manager_1</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Retail</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>ANDHRA PRADESH - TELANGANA</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_Retail_10</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead Retail 10</label>
+        <sharedTo>
+            <role>Regional_Retail_Manager_MHG</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Retail</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>MAHARASHTRA - GOA</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_Retail_11</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead Retail 11</label>
+        <sharedTo>
+            <role>Regional_Retail_Manager_MUM</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Retail</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>MUMBAI</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_Retail_12</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead Retail 12</label>
+        <sharedTo>
+            <role>Regional_Retail_Manager_NRE</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Retail</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>NORTH EAST</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_Retail_13</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead Retail 13</label>
+        <sharedTo>
+            <role>Regional_Retail_Manager_PBC</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Retail</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>PUNJAB - CHANDIGARH</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_Retail_14</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead Retail 14</label>
+        <sharedTo>
+            <role>Regional_Retail_Manager_RJN</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Retail</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>RAJASTHAN</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_Retail_15</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead Retail 15</label>
+        <sharedTo>
+            <role>Regional_Retail_Manager_TNP</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Retail</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>TAMILNADU - PUDUCHERRY</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_Retail_16</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead Retail 16</label>
+        <sharedTo>
+            <role>Regional_Retail_Manager_UPR</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Retail</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>UTTAR PRADESH</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_Retail_17</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead Retail 17</label>
+        <sharedTo>
+            <role>Regional_Retail_Manager_UKH</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Retail</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>UTTARAKHAND</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_Retail_18</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead Retail 18</label>
+        <sharedTo>
+            <role>Regional_Retail_Manager_WBS</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Retail</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>WEST BENGAL - SIKKIM</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_Retail_2</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead Retail 2</label>
+        <sharedTo>
+            <role>Regional_Retail_Manager_2</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Retail</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>BIHAR - JHARKHAND - ODISHA</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_Retail_3</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead Retail 3</label>
+        <sharedTo>
+            <role>Regional_Retail_Manager_DLI</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Retail</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>DELHI</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_Retail_4</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead Retail 4</label>
+        <sharedTo>
+            <role>Regional_Retail_Manager_GJT</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Retail</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>GUJARAT</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_Retail_5</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead Retail 5</label>
+        <sharedTo>
+            <role>Regional_Retail_Manager_HRN</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Retail</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>HARYANA</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_Retail_6</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead Retail 6</label>
+        <sharedTo>
+            <role>Regional_Retail_Manager_JKH</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Retail</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>JAMMU KASHMIR - HIMACHAL PRADESH</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_Retail_7</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead Retail 7</label>
+        <sharedTo>
+            <role>Regional_Retail_Manager_KTK</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Retail</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>KARNATAKA</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_Retail_8</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead Retail 8</label>
+        <sharedTo>
+            <role>Regional_Retail_Manager_KRL</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Retail</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>KERALAM</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_Retail_9</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead Retail 9</label>
+        <sharedTo>
+            <role>Regional_Retail_Manager_MPC</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Retail</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>MADHYA PRADESH - CHHATTISGARH</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_sharing_corporate_level</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead sharing corporate level</label>
+        <sharedTo>
+            <role>Retail_Head_Corporate</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Retail</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_with_Safexperience_Center</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share with Safexperience Center</label>
+        <sharedTo>
+            <role>Call_Center_Head</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Source__c</field>
+            <operation>equals</operation>
+            <value>Safexperience Centre</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>VH_APPARELS_LIFESTYLE</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Vertical Head visibility for APPARELS &amp; LIFESTYLE</description>
+        <label>VH APPARELS &amp; LIFESTYLE</label>
+        <sharedTo>
+            <group>VH_APPARELS_LIFESTYLE</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Vertical__c</field>
+            <operation>equals</operation>
+            <value>APPARELS &amp; LIFESTYLE</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>VH_AUTOMOTIVE</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Vertical Head visibility for AUTOMOTIVE</description>
+        <label>VH AUTOMOTIVE</label>
+        <sharedTo>
+            <group>VH_AUTOMOTIVE</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Vertical__c</field>
+            <operation>equals</operation>
+            <value>AUTOMOTIVE</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>VH_Engineering_Electrical_Hardware</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Vertical Head visibility Engineering &amp; Electrical Hardware</description>
+        <label>VH Engineering &amp; Electrical Hardware</label>
+        <sharedTo>
+            <group>VH_Engineering_Electrical_Hardware</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Vertical__c</field>
+            <operation>equals</operation>
+            <value>Engineering &amp; Electrical Hardware</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>VH_FMCG_CONSUMER_GOODS</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Vertical Head visibility FMCG/CONSUMER GOODS</description>
+        <label>VH FMCG/CONSUMER GOODS</label>
+        <sharedTo>
+            <group>VH_FMCG_CONSUMER_GOODS</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Vertical__c</field>
+            <operation>equals</operation>
+            <value>FMCG/CONSUMER GOODS</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>VH_HEALTHCARE</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>VH HEALTHCARE</label>
+        <sharedTo>
+            <group>VH_HEALTHCARE</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Vertical__c</field>
+            <operation>equals</operation>
+            <value>HEALTHCARE</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>VH_HI_TECH</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Vertical Head visibility HI TECH</description>
+        <label>VH HI TECH</label>
+        <sharedTo>
+            <group>VH_HI_TECH</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Vertical__c</field>
+            <operation>equals</operation>
+            <value>HI TECH</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>VH_Institutional</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Vertical Head Institutional</description>
+        <label>VH Institutional</label>
+        <sharedTo>
+            <group>VH_Institutional</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Vertical__c</field>
+            <operation>equals</operation>
+            <value>Institutional</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>VH_Publishing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>VH Publishing</label>
+        <sharedTo>
+            <group>VH_Publishing</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Vertical__c</field>
+            <operation>equals</operation>
+            <value>Publishing</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>VH_Retail_Campus_2_Home</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>VH Retail Campus 2 Home</label>
+        <sharedTo>
+            <group>VH_Retail_Campus_2_Home</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Vertical__c</field>
+            <operation>equals</operation>
+            <value>Retail Special Services</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Sub_Vertical__c</field>
+            <operation>equals</operation>
+            <value>CAMPUS 2 HOME</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>VH_Retail_Commodity_Express</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>VH Retail Commodity Express</label>
+        <sharedTo>
+            <group>VH_Retail_Commodity_Express</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Vertical__c</field>
+            <operation>equals</operation>
+            <value>Retail Special Services</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Sub_Vertical__c</field>
+            <operation>equals</operation>
+            <value>COMMODITY EXPRESS</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>VH_Retail_Easy_2_Move</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>VH Retail Easy 2 Move</label>
+        <sharedTo>
+            <group>VH_Retail_Easy_2_Move</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Vertical__c</field>
+            <operation>equals</operation>
+            <value>Retail Special Services</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Sub_Vertical__c</field>
+            <operation>equals</operation>
+            <value>EASY 2 MOVE</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>VH_Retail_SAFEHOME</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>VH Retail SAFEHOME</label>
+        <sharedTo>
+            <group>VH_Retail_SAFEHOME</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Vertical__c</field>
+            <operation>equals</operation>
+            <value>Retail Special Services</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Sub_Vertical__c</field>
+            <operation>equals</operation>
+            <value>SAFEHOME</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>VH_Retail_SAINIK_EXPRESS</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>VH Retail SAINIK EXPRESS</label>
+        <sharedTo>
+            <group>VH_Retail_SAINIK_EXPRESS</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Vertical__c</field>
+            <operation>equals</operation>
+            <value>Retail Special Services</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Sub_Vertical__c</field>
+            <operation>equals</operation>
+            <value>SAINIK EXPRESS</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>VH_Retail_Safe_Returns</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>VH Retail Safe Returns</label>
+        <sharedTo>
+            <group>VH_Retail_Safe_Returns</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Vertical__c</field>
+            <operation>equals</operation>
+            <value>Retail Special Services</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Sub_Vertical__c</field>
+            <operation>equals</operation>
+            <value>Safe Returns</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

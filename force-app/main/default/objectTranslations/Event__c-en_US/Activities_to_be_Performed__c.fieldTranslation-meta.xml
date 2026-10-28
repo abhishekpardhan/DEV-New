@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Activities Performed --></label>
+    <name>Activities_to_be_Performed__c</name>
+    <picklistValues>
+        <masterLabel>ARM Associate Meeting</masterLabel>
+        <translation><!-- ARM Associate Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Admin Issue Resolution</masterLabel>
+        <translation><!-- Admin Issue Resolution --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Admin Issues and Branch Audit</masterLabel>
+        <translation><!-- Admin Issues and Branch Audit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Area Manager Review</masterLabel>
+        <translation><!-- Area Manager Review --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Area office</masterLabel>
+        <translation><!-- Area office --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BDM Review</masterLabel>
+        <translation><!-- BDM Review --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BIR</masterLabel>
+        <translation><!-- BIR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BRM Associate Meeting</masterLabel>
+        <translation><!-- BRM Associate Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Visit</masterLabel>
+        <translation><!-- Bank Visit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Branch</masterLabel>
+        <translation><!-- Branch --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Branch Audit</masterLabel>
+        <translation><!-- Branch Audit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Business Review</masterLabel>
+        <translation><!-- Business Review --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Business Revival</masterLabel>
+        <translation><!-- Business Revival --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Campus Visit</masterLabel>
+        <translation><!-- Campus Visit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Claim Resolution</masterLabel>
+        <translation><!-- Claim Resolution --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cluster Visit</masterLabel>
+        <translation><!-- Cluster Visit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Collection</masterLabel>
+        <translation><!-- Collection --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Conference</masterLabel>
+        <translation><!-- Conference --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Consignee Visit</masterLabel>
+        <translation><!-- Consignee Visit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contract Renewal</masterLabel>
+        <translation><!-- Contract Renewal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contract Signing</masterLabel>
+        <translation><!-- Contract Signing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Corporate Leader Meeting</masterLabel>
+        <translation><!-- Corporate Leader Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Corporate Meeting</masterLabel>
+        <translation><!-- Corporate Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DRM Associate Meeting</masterLabel>
+        <translation><!-- DRM Associate Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Damage</masterLabel>
+        <translation><!-- Damage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Freight Dispute</masterLabel>
+        <translation><!-- Freight Dispute --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Govt Authority Visit</masterLabel>
+        <translation><!-- Govt Authority Visit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Green Truck Associate Meeting</masterLabel>
+        <translation><!-- Green Truck Associate Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Home</masterLabel>
+        <translation><!-- Home --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hotel</masterLabel>
+        <translation><!-- Hotel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incident Spot Visit</masterLabel>
+        <translation><!-- Incident Spot Visit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Institution Visit</masterLabel>
+        <translation><!-- Institution Visit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Interview</masterLabel>
+        <translation><!-- Interview --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Labour Associate Meeting</masterLabel>
+        <translation><!-- Labour Associate Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Late Delivery</masterLabel>
+        <translation><!-- Late Delivery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing Event</masterLabel>
+        <translation><!-- Marketing Event --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Meeting Landlord</masterLabel>
+        <translation><!-- Meeting Landlord --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mis-behaviour</masterLabel>
+        <translation><!-- Mis-behaviour --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NRM Associate Meeting</masterLabel>
+        <translation><!-- NRM Associate Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Negotiation</masterLabel>
+        <translation><!-- Negotiation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Associate Interview</masterLabel>
+        <translation><!-- New Associate Interview --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Business</masterLabel>
+        <translation><!-- New Business --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Warehouse</masterLabel>
+        <translation><!-- New Warehouse --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Meeting Done</masterLabel>
+        <translation><!-- No Meeting Done --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Office Search</masterLabel>
+        <translation><!-- Office Search --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Onboarding</masterLabel>
+        <translation><!-- Onboarding --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Operation Analysis</masterLabel>
+        <translation><!-- Operation Analysis --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Operation Review</masterLabel>
+        <translation><!-- Operation Review --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Others</masterLabel>
+        <translation><!-- Others --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outstanding Review</masterLabel>
+        <translation><!-- Outstanding Review --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Price Revision</masterLabel>
+        <translation><!-- Price Revision --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Promotional Campaign</masterLabel>
+        <translation><!-- Promotional Campaign --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Promotional Gifting</masterLabel>
+        <translation><!-- Promotional Gifting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prospecting</masterLabel>
+        <translation><!-- Prospecting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RFQ Meeting</masterLabel>
+        <translation><!-- RFQ Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Regional Manager Review</masterLabel>
+        <translation><!-- Regional Manager Review --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Regional Office</masterLabel>
+        <translation><!-- Regional Office --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Relationship Building</masterLabel>
+        <translation><!-- Relationship Building --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Retail Business Discussion</masterLabel>
+        <translation><!-- Retail Business Discussion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Safe Air</masterLabel>
+        <translation><!-- Safe Air --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Safexpress Mobile App</masterLabel>
+        <translation><!-- Safexpress Mobile App --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Service and Business Review</masterLabel>
+        <translation><!-- Service and Business Review --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shortage</masterLabel>
+        <translation><!-- Shortage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Special Delivery Requirement.</masterLabel>
+        <translation><!-- Special Delivery Requirement. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Submission</masterLabel>
+        <translation><!-- Submission --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trade Fair Visit</masterLabel>
+        <translation><!-- Trade Fair Visit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Training</masterLabel>
+        <translation><!-- Training --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Warehouse Visit</masterLabel>
+        <translation><!-- Warehouse Visit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Weight Volume %</masterLabel>
+        <translation><!-- Weight Volume % --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Weight Volume Discussion</masterLabel>
+        <translation><!-- Weight Volume Discussion --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

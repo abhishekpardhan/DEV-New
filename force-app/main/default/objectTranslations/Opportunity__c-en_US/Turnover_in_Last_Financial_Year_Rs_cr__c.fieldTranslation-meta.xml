@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Turnover in Last Financial Year (Rs cr) --></label>
+    <name>Turnover_in_Last_Financial_Year_Rs_cr__c</name>
+</CustomFieldTranslation>

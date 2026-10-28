@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Preferred_CallBack_Time__c</fullName>
+    <label>Preferred CallBack Time</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>08:00 AM - 10:00 AM</fullName>
+                <default>false</default>
+                <label>08:00 AM - 10:00 AM</label>
+            </value>
+            <value>
+                <fullName>10:00 AM - 12:00 PM</fullName>
+                <default>false</default>
+                <label>10:00 AM - 12:00 PM</label>
+            </value>
+            <value>
+                <fullName>12:00 PM - 02:00 PM</fullName>
+                <default>false</default>
+                <label>12:00 PM - 02:00 PM</label>
+            </value>
+            <value>
+                <fullName>02:00 PM - 04:00 PM</fullName>
+                <default>false</default>
+                <label>02:00 PM - 04:00 PM</label>
+            </value>
+            <value>
+                <fullName>04:00 PM - 06:00 PM</fullName>
+                <default>false</default>
+                <label>04:00 PM - 06:00 PM</label>
+            </value>
+            <value>
+                <fullName>06:00 PM - 08 :00 PM</fullName>
+                <default>false</default>
+                <label>06:00 PM - 08 :00 PM</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

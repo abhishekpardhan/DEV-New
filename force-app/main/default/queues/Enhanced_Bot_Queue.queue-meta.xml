@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesIncludeBosses>true</doesIncludeBosses>
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Enhanced Bot Queue</name>
+    <queueMembers>
+        <users>
+            <user>amit.kumar25@safexpress.com</user>
+            <user>dinesh.kumar26@safexpress.com</user>
+            <user>mayank.sachan@safexpress.com</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Enhanced_Bot_Routing</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>MessagingSession</sobjectType>
+    </queueSobject>
+</Queue>

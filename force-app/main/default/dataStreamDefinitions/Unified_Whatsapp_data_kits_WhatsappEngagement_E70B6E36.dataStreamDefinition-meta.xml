@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataStreamDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <areHeadersIncludedInFile>false</areHeadersIncludedInFile>
+    <bulkIngest>false</bulkIngest>
+    <creationType>Custom</creationType>
+    <dataConnector>Unified_Whatsapp_data_kits_767ed6d2_d641_480e_9848_d6a4c67a8ba3</dataConnector>
+    <dataConnectorType>IngestApi</dataConnectorType>
+    <dataExtractMethods>FULL_REFRESH</dataExtractMethods>
+    <dataPlatformDataSetItemName>INGESTAPI</dataPlatformDataSetItemName>
+    <dataSource>Unified_Whatsapp_data_kits_767ed6d2_d641_480e_9848_d6a4c67a8ba3</dataSource>
+    <isLimitedToNewFiles>false</isLimitedToNewFiles>
+    <isMissingFileFailure>false</isMissingFileFailure>
+    <masterLabel>Unified_Whatsapp_data_kits-WhatsappEngagement</masterLabel>
+    <mktDataLakeObject>Unified_Whatsapp_data_kits_What_E70B6E36__dll</mktDataLakeObject>
+    <mktDataTranObject>Unified_Whatsapp_data_kits_What_E70B6E36</mktDataTranObject>
+</DataStreamDefinition>

@@ -1,0 +1,66 @@
+<head>
+<style>
+table, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+td{
+	padding:5px;
+}
+</style>
+</head>
+
+Dear Sir,
+<br/>
+<br/>
+Please find details of a potential customer who has requirement of Full Truck Load services.
+<br/>
+Do contact the customer and take it forward.
+<br/>
+<br/>
+<table>
+	<tr>
+		<td>SF Lead No</td>
+		<td>&nbsp;{!Lead__c.SF_Lead_No__c}</td>
+		<td>Lead Name :</td>
+		<td>&nbsp;{!Lead__c.Name}</td>
+	</tr>
+	<tr>
+		<td>Lead Type</td>
+		<td>&nbsp;{!Lead__c.Type__c}</td>
+		<td>Contact Person Name</td>
+		<td>&nbsp;{!Lead__c.Contact_Person_Name__c}</td>
+	</tr>
+	<tr>
+		<td>Region</td>
+		<td>&nbsp;{!Lead__c.Region__c}</td>
+		<td>Status</td>
+		<td>&nbsp;{!Lead__c.Status__c}</td>
+		</tr>
+	<tr>
+		<td>Phone</td>
+		<td>&nbsp;{!Lead__c.Phone__c}</td>
+		<td>Email</td>
+		<td>&nbsp;{!Lead__c.Email__c}</td>
+	</tr>
+	<tr>
+		<td>Country</td>
+		<td>&nbsp;{!Lead__c.Country__c}</td>
+		<td>City</td>
+		<td>&nbsp;{!Lead__c.City__c}</td>
+	</tr>
+	<tr>
+		<td>State</td>
+		<td>&nbsp;{!Lead__c.State__c}</td>
+		<td>Address</td>
+		<td>&nbsp;{!Lead__c.Street__c}</td>
+	</tr>
+	<tr>
+		<td>Zip/Postal Code</td>
+		<td>&nbsp;{!Lead__c.Zip_Postal_Code__c}</td>
+	</tr>
+</table>
+<br/>
+Regards,
+<br/>
+Safexpress Central Team

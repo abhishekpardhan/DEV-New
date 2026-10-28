@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Support Case</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Support Cases</value>
+    </caseValues>
+    <layouts>
+        <layout>Booking Request Layout</layout>
+        <sections>
+            <label><!-- Basic Details --></label>
+            <section>Basic Details</section>
+        </sections>
+        <sections>
+            <label><!-- Booking Information --></label>
+            <section>Booking Information</section>
+        </sections>
+        <sections>
+            <label><!-- Consignee Detail --></label>
+            <section>Consignee Detail</section>
+        </sections>
+        <sections>
+            <label><!-- Consignor Detail --></label>
+            <section>Consignor Detail</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Change Request Layout</layout>
+        <sections>
+            <label><!-- Basic Details --></label>
+            <section>Basic Details</section>
+        </sections>
+        <sections>
+            <label><!-- OTRS Ticket Details --></label>
+            <section>OTRS Ticket Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Complaint Layout</layout>
+        <sections>
+            <label><!-- Basic Details --></label>
+            <section>Basic Details</section>
+        </sections>
+        <sections>
+            <label><!-- OTRS Ticket Details --></label>
+            <section>OTRS Ticket Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Enquiry Layout</layout>
+        <sections>
+            <label><!-- Basic Details --></label>
+            <section>Basic Details</section>
+        </sections>
+        <sections>
+            <label><!-- Other Details --></label>
+            <section>Other Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Other Layout</layout>
+        <sections>
+            <label><!-- Basic Details --></label>
+            <section>Basic Details</section>
+        </sections>
+        <sections>
+            <label><!-- Other Details --></label>
+            <section>Other Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>POD Layout</layout>
+        <sections>
+            <label><!-- Basic Details --></label>
+            <section>Basic Details</section>
+        </sections>
+        <sections>
+            <label><!-- OTRS Details --></label>
+            <section>OTRS Details</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Cancel --></label>
+        <name>Cancel_Case</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- CloseCaseLightning --></label>
+        <name>CloseCaseLightning</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Fetch Propeli Id --></label>
+        <name>Fetch_Propeli_id</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewChildCase --></label>
+        <name>NewChildCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- OTRS Status --></label>
+        <name>OTRS_Status</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Raise Claim Request --></label>
+        <name>Raise_Claim_Request</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SocialPublisher --></label>
+        <name>SocialPublisher</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Update Waybill Number --></label>
+        <name>Update_Waybill_Number</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Booking Request --></label>
+        <name>Booking_Request</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Change Request --></label>
+        <name>Change_Request</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Complaint --></label>
+        <name>Complaint</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Enquiry --></label>
+        <name>Enquiry</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Other --></label>
+        <name>Other</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- POD --></label>
+        <name>POD</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- The Box Drop Date should be today or later. --></errorMessage>
+        <name>Boxdrop_Date_Check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select today or future date. --></errorMessage>
+        <name>CallBackDate_Future</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Fill CallBack Date --></errorMessage>
+        <name>CallBack_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Fill CallBack Time --></errorMessage>
+        <name>CallBack_Time</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- WayBill Status should be not be Delivered to create a Change Request Type Case. --></errorMessage>
+        <name>ChangeRequest_WayBill_Check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Consignee Phone Number should be of 10 digits and can only contain numbers. --></errorMessage>
+        <name>Consignee_Phone_length</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Consignor Phone Number should be of 10 digits and can only contain numbers. --></errorMessage>
+        <name>Consignor_Phone_length</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Origin and Destination Pincode is required to create booking request --></errorMessage>
+        <name>Origin_Destination_Pincode_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- WayBill Status should be Delivered to create a POD Type Case. --></errorMessage>
+        <name>POD_WayBill_Check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The pickup Date should be today or later. --></errorMessage>
+        <name>Pickup_Date_Check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Pickup date should be Today&apos;s date of greater than today. --></errorMessage>
+        <name>Pickup_date_future</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Origin Pincode and Destination Pincode is required to create a booking request. --></errorMessage>
+        <name>Pincode_Code_Required_Check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can&apos;t edit the records. --></errorMessage>
+        <name>Record_Edit</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- WayBill Number is required to Complete the Case. --></errorMessage>
+        <name>WayBill_Check_On_Closed_Case</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Waybill Number is mandatory for complaint cases with the given case type. --></errorMessage>
+        <name>WayBill_Check_On_Complaint</name>
+    </validationRules>
+</CustomObjectTranslation>

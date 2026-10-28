@@ -1,0 +1,1425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>AD_API</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AD API</shortDescription>
+        <value>http://webs.safexpress.com:8081/SafeApi/webresources/sale_force_login</value>
+    </labels>
+    <labels>
+        <fullName>AD_URL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AD URL</shortDescription>
+        <value>https://safeforce1.lightning.force.com/one/one.app</value>
+    </labels>
+    <labels>
+        <fullName>API_KEY</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>API Key for Propeli Integration</shortDescription>
+        <value>NsgDiyaube5kURRzN5Ial85xr6NvkNbV59yXpC7v</value>
+    </labels>
+    <labels>
+        <fullName>Assign_Bal_Conf</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Assign_Bal_Conf</shortDescription>
+        <value>0057F000006gVPNQA2</value>
+    </labels>
+    <labels>
+        <fullName>Assign_Base_Loc</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Assign_Base_Loc</shortDescription>
+        <value>005C5000000JKvzIAG</value>
+    </labels>
+    <labels>
+        <fullName>Assign_Bill_Dispatch</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Assign_Bill_Dispatch</shortDescription>
+        <value>0052y000001lf3yAAA</value>
+    </labels>
+    <labels>
+        <fullName>Assign_Credit_Note</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Assign_Credit_Note</shortDescription>
+        <value>0057F0000064OgfQAE</value>
+    </labels>
+    <labels>
+        <fullName>Assign_Discount_ToPay</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Assign_Discount_ToPay</shortDescription>
+        <value>0057F0000064Oh4QAE</value>
+    </labels>
+    <labels>
+        <fullName>Assign_Location_1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Assign_Location_1</shortDescription>
+        <value>0057F000002y8ofQAA</value>
+    </labels>
+    <labels>
+        <fullName>Assign_Paid_Invoice</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Assign_Paid_Invoice</shortDescription>
+        <value>0057F0000064Oh4QAE</value>
+    </labels>
+    <labels>
+        <fullName>Assign_RTGS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Assign_RTGS</shortDescription>
+        <value>0057F0000064OgkQAE</value>
+    </labels>
+    <labels>
+        <fullName>Assign_Revised_Bill</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Assign_Revised_Bill</shortDescription>
+        <value>0057F0000064OgLQAU</value>
+    </labels>
+    <labels>
+        <fullName>Assign_base_location_BDM</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Assign base location BDM</shortDescription>
+        <value>0057F000002y8ofQAA</value>
+    </labels>
+    <labels>
+        <fullName>Assign_base_location_colleciton</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Assign base location collection</shortDescription>
+        <value>0057F000002y8ofQAA</value>
+    </labels>
+    <labels>
+        <fullName>Assign_base_location_colleciton_NEW</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Assign base location Colleciton new</shortDescription>
+        <value>0057F000002y8ofQAA</value>
+    </labels>
+    <labels>
+        <fullName>Assign_for_Customer_Technology_IT_request</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Assign for Customer Technology/IT request</shortDescription>
+        <value>0052y000000QjIHAA0</value>
+    </labels>
+    <labels>
+        <fullName>BatchToPullSFXSize</fullName>
+        <categories>BatchToPullSFX Class</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BatchToPullSFXSize</shortDescription>
+        <value>50</value>
+    </labels>
+    <labels>
+        <fullName>BillingPropelIGrantType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BillingPropelIGrantType</shortDescription>
+        <value>client_credentials</value>
+    </labels>
+    <labels>
+        <fullName>BillingPropelIScope</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BillingPropelIScope</shortDescription>
+        <value>propeli-test/test</value>
+    </labels>
+    <labels>
+        <fullName>Billing_Submission_Days</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Billing Submission Days</shortDescription>
+        <value>LAST_N_DAYS:5</value>
+    </labels>
+    <labels>
+        <fullName>CCD_BDM</fullName>
+        <categories>CCD BDM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCD_BDM</shortDescription>
+        <value>0052y000001FZ38AAG</value>
+    </labels>
+    <labels>
+        <fullName>CCD_code_extention_BDM</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCD code extention BDM</shortDescription>
+        <value>0057F000004eThDQAU</value>
+    </labels>
+    <labels>
+        <fullName>COF</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>COF</shortDescription>
+        <value>0057F000006eCf6QAE</value>
+    </labels>
+    <labels>
+        <fullName>CREDIT_RTGS_NEFT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Credit Claims (RTGS/NEFT)</shortDescription>
+        <value>005OX00000olHITYA2</value>
+    </labels>
+    <labels>
+        <fullName>CampaignAPIEndpoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CampaignAPIEndpoint</shortDescription>
+        <value>http://proton.safexpress.com/saleforcetestapi/sales-force-api/Api/PostCampaign</value>
+    </labels>
+    <labels>
+        <fullName>Cancel_Invoices_Endpoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Cancel_Invoices_Endpoint</shortDescription>
+        <value>https://apigateway.safexpress.com/bil/credit/sfdc/getCancelledBills</value>
+    </labels>
+    <labels>
+        <fullName>CaseGETAPI</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CaseGETAPI</shortDescription>
+        <value>http://proton.safexpress.com/sales-force-api/saleforce/api/casestatus?tokenno=</value>
+    </labels>
+    <labels>
+        <fullName>Case_Api</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case Api</shortDescription>
+        <value>http://proton.safexpress.com/sales-force-api/SaleForce/Api/GenerateTokenForCase</value>
+    </labels>
+    <labels>
+        <fullName>Case_Assignment_Notification_Body</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case_Assignment_Notification_Body</shortDescription>
+        <value>Hi, New Support Case has been assigned to you, Click to view the details.</value>
+    </labels>
+    <labels>
+        <fullName>Case_Assignment_Notification_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case_Assignment_Notification_Name</shortDescription>
+        <value>Case_Assignment_Notification</value>
+    </labels>
+    <labels>
+        <fullName>Case_Assignment_Notification_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case_Assignment_Notification_Title</shortDescription>
+        <value>Case Assignment Alert</value>
+    </labels>
+    <labels>
+        <fullName>Case_Authentication_Api</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case Authentication Api</shortDescription>
+        <value>http://proton.safexpress.com/sales-force-api/token</value>
+    </labels>
+    <labels>
+        <fullName>Check_In_Accuracy</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Check In Accuracy</shortDescription>
+        <value>500</value>
+    </labels>
+    <labels>
+        <fullName>Check_In_Accuracy_Journey</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Check In Accuracy Journey</shortDescription>
+        <value>500</value>
+    </labels>
+    <labels>
+        <fullName>Cheque</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Cheque</shortDescription>
+        <value>005C5000000JHZWIA4</value>
+    </labels>
+    <labels>
+        <fullName>ClaimUserId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Claim user Id</shortDescription>
+        <value>0057F000002y8ol</value>
+    </labels>
+    <labels>
+        <fullName>Client_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Client Id</shortDescription>
+        <value>SALEFORCE</value>
+    </labels>
+    <labels>
+        <fullName>Client_Secret</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Client Secret</shortDescription>
+        <value>BDD2AFF518B008B320A6FA06DE8F1C39CFAC51DC1412952754A233F3882E519F</value>
+    </labels>
+    <labels>
+        <fullName>Client_Secret_AccountTeam</fullName>
+        <categories>Proton Sandbox Client Secret</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Client_Secret_AccountTeam</shortDescription>
+        <value>462ae09a58c81cffc317f93d59d62b1309c1e3b46e67f813939a46ee4b4831df</value>
+    </labels>
+    <labels>
+        <fullName>Default_Opportunity_Team_Users</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Default_Opportunity_Team_Users</shortDescription>
+        <value>70004,50725,14335,13250,00109</value>
+    </labels>
+    <labels>
+        <fullName>Discount_on_topay1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DIscount on topay 1</shortDescription>
+        <value>005C5000000JP2VIAW</value>
+    </labels>
+    <labels>
+        <fullName>ExpenseAPI</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ExpenseAPI</shortDescription>
+        <value>http://proton.safexpress.com/saleforcetestapi/sales-force-api/Api/Expense</value>
+    </labels>
+    <labels>
+        <fullName>FUsion_Test_Username</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FUsion_Test_Username</shortDescription>
+        <value>sfx_api</value>
+    </labels>
+    <labels>
+        <fullName>Freight_Calculator_Url</fullName>
+        <categories>URL for the Freight Calculator Used in the Utility Bar Iframe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Freight Calculator Url</shortDescription>
+        <value>https://safexpressfreightcalc.s3.ap-south-1.amazonaws.com/index.html</value>
+    </labels>
+    <labels>
+        <fullName>Fuel_Index</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fuel Index</shortDescription>
+        <value>67</value>
+    </labels>
+    <labels>
+        <fullName>FusionInvoiceAPILimit</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FusionInvoiceAPILimit</shortDescription>
+        <value>1</value>
+    </labels>
+    <labels>
+        <fullName>Fusion_Test_Endpoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fusion_Test_Endpoint</shortDescription>
+        <value>https://eftd.fa.us6.oraclecloud.com/fscmRestApi/resources/11.13.18.05/invoices</value>
+    </labels>
+    <labels>
+        <fullName>Fusion_Test_Password</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fusion_Test_Password</shortDescription>
+        <value>Safexpress@delhi11</value>
+    </labels>
+    <labels>
+        <fullName>GST_Validation_End_Point</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GST Validation End Point</shortDescription>
+        <value>https://dgapi-prod.safexpress.com/propel-util-api/secured-propel/api/v1/mast/validate-gstin</value>
+    </labels>
+    <labels>
+        <fullName>GST_Validation_Key</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GST Validation Key</shortDescription>
+        <value>ZmM6ZTA5YjUwMGQtYjZlYy00ZThiLThhZDgtOTU0OTg4MDRkMjM2</value>
+    </labels>
+    <labels>
+        <fullName>IConnect_Client_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IConnect Client Id</shortDescription>
+        <value>cP8t)94@g[7NLde9</value>
+    </labels>
+    <labels>
+        <fullName>IConnect_Endpoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IConnect Endpoint</shortDescription>
+        <value>https://dgapi.safexpress.com/customerportal/updateStatus</value>
+    </labels>
+    <labels>
+        <fullName>IConnect_Endpoint1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IConnect_Endpoint1</shortDescription>
+        <value>https://dgapi-prod.safexpress.com/iconnectapp/api/pickup/v1/updatewbstatus</value>
+    </labels>
+    <labels>
+        <fullName>Instance_Url</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Instance Url</shortDescription>
+        <value>https://login.salesforce.com</value>
+    </labels>
+    <labels>
+        <fullName>Jira_Endpoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Jira_Endpoint</shortDescription>
+        <value>https://safexpress.atlassian.net/rest/api/2/issue/</value>
+    </labels>
+    <labels>
+        <fullName>Jira_Password</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Jira_Password</shortDescription>
+        <value>vsPQOqG6MKuBdQswLJ1A1A3C</value>
+    </labels>
+    <labels>
+        <fullName>Jira_Username</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Jira_Username</shortDescription>
+        <value>jira.integration@safexpress.com</value>
+    </labels>
+    <labels>
+        <fullName>Journey_Bike_RS_KM</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Journey Bike RS/KM</shortDescription>
+        <value>3</value>
+    </labels>
+    <labels>
+        <fullName>Journey_Car_RS_KM</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Journey Car RS/KM</shortDescription>
+        <value>7.50</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_AddQuestion</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Add Question</shortDescription>
+        <value>Add Question</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Anonymous</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Anonymous</shortDescription>
+        <value>Anonymous</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Answer_as</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Answer as</shortDescription>
+        <value>Answer as</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Cancel</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Cancel</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Chatter</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Chatter</shortDescription>
+        <value>Chatter</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Chatter_Link</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Chatter Link</shortDescription>
+        <value>Chatter Link</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Close</fullName>
+        <categories>Survey Force</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Close</shortDescription>
+        <value>Close</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Community</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Community</shortDescription>
+        <value>Community</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Default_Option_Label</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Default Option Label</shortDescription>
+        <value>--SELECT--</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Detail</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Detail</shortDescription>
+        <value>Detail</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Edit</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Edit</shortDescription>
+        <value>Edit</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Email_Link_Anonymous</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Email Link, Anonymous</shortDescription>
+        <value>Email Link</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Email_Link_w_Contact_Case_Merge</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Email Link w/ Contact &amp; Case Merge</shortDescription>
+        <value>Email Link w/ Contact &amp; Case Merge</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Email_Link_w_Contact_Merge</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Email Link w/ Contact Merge</shortDescription>
+        <value>Email Link w/ Contact Merge</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_External_Please_Create_Site</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>For external facing surveys, please create a site first.</shortDescription>
+        <value>For external facing surveys, please create a site first.  You may still create internal surveys without creating a site.</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_For_community_assistance_with_Survey_Force</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>For community assistance with Survey Force</shortDescription>
+        <value>For community assistance with Survey Force</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Getting_Help</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Getting Help</shortDescription>
+        <value>Getting Help</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_HeaderAndThankYou</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Header and Thank You</shortDescription>
+        <value>Header, Thank You &amp; CSS</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Installation_Guide</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Installation Guide</shortDescription>
+        <value>Installation Guide</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Learn_More</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Learn More</shortDescription>
+        <value>Learn More</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_MakeANewSurvey</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Make A New Survey</shortDescription>
+        <value>Make A New Survey</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_MakeNewSurvey</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Make New Survey</shortDescription>
+        <value>Make New Survey</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Make_a_Sample_Survey</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Make a Sample Survey</shortDescription>
+        <value>Make a Sample Survey</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_NewQAdded</fullName>
+        <categories>Survey Force</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>NewQuestionAdded</shortDescription>
+        <value>New question was added!</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Next_Steps</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Next Steps</shortDescription>
+        <value>Next Steps</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Open_Survey_New_Window</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Open Survey New Window</shortDescription>
+        <value>Open Survey (New Window)</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_PleaseEnterTheList</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Please enter the list</shortDescription>
+        <value>Please enter the list of answers/responses in the field below. Each value should be separated by a new line.</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Required</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Required</shortDescription>
+        <value>required</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Resources</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Resources</shortDescription>
+        <value>Resources</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Results</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Results</shortDescription>
+        <value>Results</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Salesforce_Answers</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Trailblazer Community</shortDescription>
+        <value>the Trailblazer Community</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Save</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Save</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_SaveOrder</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Save Order</shortDescription>
+        <value>Save Order</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_SelectQuestionType</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select Question Type</shortDescription>
+        <value>Select Question Type</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Share</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Share</shortDescription>
+        <value>Share</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Share_My_Survey</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Share My Survey</shortDescription>
+        <value>Share My Survey</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Sharing_Options</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Sharing Options</shortDescription>
+        <value>Sharing Options</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_SubmitSurvey</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Submit Survey</shortDescription>
+        <value>Submit Survey</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_SurveyForceIsOpenSource</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SurveyForce is OpenSource</shortDescription>
+        <value>Survey Force is Open Source software.  We welcome your issue reports, ideas, documentation, code tweaks and all other participation.</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Survey_Force_is_unsupported</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Survey Force is unsupported</shortDescription>
+        <value>Survey Force is unsupported.</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Survey_Force_on_Github</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Survey Force on GitHub</shortDescription>
+        <value>Survey Force on GitHub</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Survey_Submitted_Thank_you</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Your survey has been submitted. Thank you for taking our survey.</shortDescription>
+        <value>Your survey has been submitted. Thank you for taking our survey.</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_ThankYou</fullName>
+        <categories>Survey Force</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Thank You</shortDescription>
+        <value>Thank You</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_To_submit_ideas_or_issues</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>To submit ideas or issues</shortDescription>
+        <value>To submit ideas or issues</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_User_Guide</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>User Guide</shortDescription>
+        <value>User Guide</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_View_Results_In_New_Window</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>View Results In New Window</shortDescription>
+        <value>View Results In New Window</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_View_Sample_Survey</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>View Sample Survey</shortDescription>
+        <value>View Sample Survey</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Welcome_to_Survey_Force</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Welcome to Survey Force</shortDescription>
+        <value>Welcome to Survey Force</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_X1_Create_a_sample_survey</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>1. Create a sample survey by clicking the button below.</shortDescription>
+        <value>1. Create a sample survey by clicking the button below.</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_X2_External_Setup_Site</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>2. Set up a site if you would like to have external-facing surveys.</shortDescription>
+        <value>2. Set up a site if you would like to have external-facing surveys.</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_X3_Start_creating_your_first_survey</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>3. Start creating your first survey.</shortDescription>
+        <value>3. Start creating your first survey.</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_You_have_already_taken_this_survey</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>You have already taken this survey!</shortDescription>
+        <value>You have already taken this survey!</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Your_next_few_steps_are_easy</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Your next few steps are easy.</shortDescription>
+        <value>Your next few steps are easy.</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_please_visit</fullName>
+        <categories>SurveyForce</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>please visit</shortDescription>
+        <value>please visit</value>
+    </labels>
+    <labels>
+        <fullName>Labs_SF_Delete</fullName>
+        <categories>Survey Force</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Delete</shortDescription>
+        <value>Delete</value>
+    </labels>
+    <labels>
+        <fullName>Lead_Account_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Account ID</shortDescription>
+        <value>0017F00002PYkgUQAT</value>
+    </labels>
+    <labels>
+        <fullName>Lead_Assigned</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Assigned</shortDescription>
+        <value>Lead Assigned</value>
+    </labels>
+    <labels>
+        <fullName>Lead_Notification_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Notification Id</shortDescription>
+        <value>0MLC500000000YwOAI</value>
+    </labels>
+    <labels>
+        <fullName>MSAPushEndpointCC</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MSAPushEndpointCC</shortDescription>
+        <value>https://apigateway.safexpress.com/sfdc/v3/sfi/cc/msa</value>
+    </labels>
+    <labels>
+        <fullName>MSAPushEndpointPRC</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MSAPushEndpointPRC</shortDescription>
+        <value>https://apigateway.safexpress.com/sfdc/v3/sfi/prc/msa</value>
+    </labels>
+    <labels>
+        <fullName>OperationType_PropelI_PincodeLookup</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OperationType_PropelI_PincodeLookup</shortDescription>
+        <value>PROPELI_PINCODE_LOOKUP</value>
+    </labels>
+    <labels>
+        <fullName>MapKey</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MapKey</shortDescription>
+        <value>AIzaSyCXAaNlCIrYe_qqqMFfsJhjJ4IH7DdK1ko</value>
+    </labels>
+    <labels>
+        <fullName>Max_Retries</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Max Retries</shortDescription>
+        <value>3</value>
+    </labels>
+    <labels>
+        <fullName>OTRS_Duplicate_Check_API</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OTRS Duplicate Check API</shortDescription>
+        <value>https://servicedesk.safexpress.com/SafeAPI/TicketValidateTest.php?access_key=</value>
+    </labels>
+    <labels>
+        <fullName>OperationType_Enterprise_EnquiryCaseStatus</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OperationType_Enterprise_EnquiryCaseStatus</shortDescription>
+        <value>EnterpriseEnquiryCaseStatus</value>
+    </labels>
+    <labels>
+        <fullName>OperationType_PropelI_CaseCancellation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OperationType PropelI CaseCancellation</shortDescription>
+        <value>PropelICaseCancellation</value>
+    </labels>
+    <labels>
+        <fullName>OperationType_PropelI_CaseCreation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OperationType_PropelI_CaseCreation</shortDescription>
+        <value>PropelICaseCreation</value>
+    </labels>
+    <labels>
+        <fullName>OperationType_PropelI_CreateOpportunityPropeli</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OperationType_PropelI_CreateOpportunityPropeli</shortDescription>
+        <value>CreateOpportunityPropeli</value>
+    </labels>
+    <labels>
+        <fullName>OperationType_Proton_UpdateCase</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OperationType Proton UpdateCase</shortDescription>
+        <value>protonUpdateCase</value>
+    </labels>
+    <labels>
+        <fullName>OperationType_enterprise_UpdateCase</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OperationType_Enterprise_UpdateCase</shortDescription>
+        <value>EnterpriseUpdateCase</value>
+    </labels>
+    <labels>
+        <fullName>OperationType_iConnect_UpdateCase</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OperationType_iConnect_UpdateCase</shortDescription>
+        <value>iConnectUpdateCase</value>
+    </labels>
+    <labels>
+        <fullName>Paid_Rebate_Advise</fullName>
+        <categories>Paid Rebate Advise</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Paid Rebate Advise</shortDescription>
+        <value>0057F0000064Oh4QAE</value>
+    </labels>
+    <labels>
+        <fullName>Platform_Integration_Profile_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Platform Integration Profile ID</shortDescription>
+        <value>0052y000000SXgbAAG</value>
+    </labels>
+    <labels>
+        <fullName>Portfolio_API</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Portfolio API</shortDescription>
+        <value>http://proton.safexpress.com/SaleForceApi/sales-force-api/Api/PortfolioMapData</value>
+    </labels>
+    <labels>
+        <fullName>Prasenjit_email</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Prasenjit email</shortDescription>
+        <value>prasenjit.mandal@safexpress.com</value>
+    </labels>
+    <labels>
+        <fullName>ProfileIdsToAllowEditUserFields</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ProfileIdsToAllowEditUserFields</shortDescription>
+        <value>00e7F000001x0CFQAY</value>
+    </labels>
+    <labels>
+        <fullName>PropelI</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PropelI</shortDescription>
+        <value>https://sfi.safexpress.com</value>
+    </labels>
+    <labels>
+        <fullName>PropelIAlliedEndPoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PropelIAlliedEndPoint</shortDescription>
+        <value>https://apigateway.safexpress.com/bil/allied</value>
+    </labels>
+    <labels>
+        <fullName>PropelIBillingPaswrd</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PropelIBillingPaswrd</shortDescription>
+        <value>5ndncnnj9pb7dqb3d9tdv7ub5gqb1n0fme64fmj0ekcmbl9m6i5</value>
+    </labels>
+    <labels>
+        <fullName>PropelIBillingTokenEndPoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PropelIBillingTokenEndPoint</shortDescription>
+        <value>https://api-auth.safexpress.com/oauth2/token</value>
+    </labels>
+    <labels>
+        <fullName>PropelIBillingUsrName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PropelIBillingUsrName</shortDescription>
+        <value>upo0s0gs34eu8aae2gmnb7re4</value>
+    </labels>
+    <labels>
+        <fullName>PropelIBillingXKeys</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PropelIBillingXKeys</shortDescription>
+        <value>4e9JeEpYH97gJMtAKgc9h3u6NLIxKC092ITIpSAg</value>
+    </labels>
+    <labels>
+        <fullName>PropelIChannelId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PropelIChannelId</shortDescription>
+        <value>33</value>
+    </labels>
+    <labels>
+        <fullName>PropelICreditEndPoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PropelICreditEndPoint</shortDescription>
+        <value>https://apigateway.safexpress.com/bil/credit</value>
+    </labels>
+    <labels>
+        <fullName>PropelIIntegrationUsrId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PropelIIntegrationUsrId</shortDescription>
+        <value>0052y000000SXgbAAG</value>
+    </labels>
+    <labels>
+        <fullName>PropelIInvoicesTokenEndPoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PropelIInvoicesTokenEndPoint</shortDescription>
+        <value>https://api-auth.safexpress.com/oauth2/token</value>
+    </labels>
+    <labels>
+        <fullName>PropelIPreBookingAPIKey</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PropelIPreBookingAPIKey</shortDescription>
+        <value>oJFDADDhGf20CTrLLut9d7n1oXm66GOC1oAky807</value>
+    </labels>
+    <labels>
+        <fullName>PropelIPreBookingEndpoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PropelIPreBookingEndpoint</shortDescription>
+        <value>https://apigateway.safexpress.com/bkg/prebooking</value>
+    </labels>
+    <labels>
+        <fullName>PropelIWMSBill</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PropelIWMSBill</shortDescription>
+        <value>https://apigateway.safexpress.com/bil/wms</value>
+    </labels>
+    <labels>
+        <fullName>PropelI_Auth</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PropelI_Auth</shortDescription>
+        <value>NmN2OGMyczk2bmlhNXRkaXRpNDEwMXVhZTY6dGpia2syb2Z1bWptdjBtZWpxdmhwbjAzaHY4NDZmMG8zdjRicXZwM2k3ZjllaDNwdWtz</value>
+    </labels>
+    <labels>
+        <fullName>Propel_SubmissionTasks</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Propel_SubmissionTasks</shortDescription>
+        <value>http://proton.safexpress.com/sales-force-api/saleforce/api/invoiceack</value>
+    </labels>
+    <labels>
+        <fullName>PropeliEndpoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PropeliEndpoint</shortDescription>
+        <value>https://apigateway.safexpress.com/cc/v1/sfi/cc/updtBranchesOrRateCard?updtDt=</value>
+    </labels>
+    <labels>
+        <fullName>PropeliTokenEndpoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PropeliTokenEndpoint</shortDescription>
+        <value>https://api-auth.safexpress.com/oauth2/token</value>
+    </labels>
+    <labels>
+        <fullName>Propeli_From_Date</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Enter number of days before today. 0 = Today, 1 = Yesterday, 2 = Two days ago.</shortDescription>
+        <value>0</value>
+    </labels>
+    <labels>
+        <fullName>Propeli_Password</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Propeli Password</shortDescription>
+        <value>1q6dtcsk4s06s2fdjhao9qcljoh5n82v20or3h5ti9nc4rjni2v8</value>
+    </labels>
+    <labels>
+        <fullName>Propeli_To_Date</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Enter number of days before today. 0 = Today, 1 = Yesterday, 2 = Two days ago.</shortDescription>
+        <value>0</value>
+    </labels>
+    <labels>
+        <fullName>Propeli_Username</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Propeli Username</shortDescription>
+        <value>2lmbdo1m60d97asfke8qqfkeds</value>
+    </labels>
+    <labels>
+        <fullName>ProtonAPIEnable</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ProtonAPIEnable</shortDescription>
+        <value>FALSE</value>
+    </labels>
+    <labels>
+        <fullName>ProtonApiTokenEndPoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ProtonApiTokenEndPoint</shortDescription>
+        <value>https://api-auth.safexpress.com/oauth2/token</value>
+    </labels>
+    <labels>
+        <fullName>ProtonCaseUpdateApiEndPoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ProtonCaseUpdateApiEndPoint</shortDescription>
+        <value>https://apigateway.safexpress.com/safeutil-sfdc/propel-util-api/secured-prope/api/v1/sales-force/updateDataBySfdcCaseNo</value>
+    </labels>
+    <labels>
+        <fullName>ProtonCaseUpdateApiPassword</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ProtonCaseUpdateApiPassword</shortDescription>
+        <value>5mrv1ggkga8n65kmbbe7bh5n0e12045u8punentojb6k6sm3mhv</value>
+    </labels>
+    <labels>
+        <fullName>ProtonCaseUpdateApiUsername</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ProtonCaseUpdateApiUsername</shortDescription>
+        <value>4s5jam251fn3il0dgijqeiiovs</value>
+    </labels>
+    <labels>
+        <fullName>RENEWAL_INITIATED_BY</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Renewal Initiated By</shortDescription>
+        <value>INDRA JAIN-05296</value>
+    </labels>
+    <labels>
+        <fullName>RETAIL_RTGS_NEFT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Retail Claims (RTGS/NEFT)</shortDescription>
+        <value>005OX00000olKJWYA2</value>
+    </labels>
+    <labels>
+        <fullName>RM_BDM</fullName>
+        <categories>Revenue Management BDM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RM_BDM</shortDescription>
+        <value>0057F0000064OgfQAE</value>
+    </labels>
+    <labels>
+        <fullName>Renewal_quotes</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Renewal quotes</shortDescription>
+        <value>005C5000000KpheIAC</value>
+    </labels>
+    <labels>
+        <fullName>SETTLEMENT_EMAIL_CC_ADDRESS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Settlement email cc Address</shortDescription>
+        <value>soumitra.pramanik@safexpress.com</value>
+    </labels>
+    <labels>
+        <fullName>SETTLEMENT_EMAIL_SENDER_ADDRESS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Settlement email Address</shortDescription>
+        <value>noreply@safexpress.com</value>
+    </labels>
+    <labels>
+        <fullName>SFX_MD_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SFX MD Name</shortDescription>
+        <value>Rubal Jain-70002</value>
+    </labels>
+    <labels>
+        <fullName>SMS_API_Key</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SMS API Key</shortDescription>
+        <value>9BE0FJBsn73AClWPG9ysl35AWsQYYuZv5dZtpPVN</value>
+    </labels>
+    <labels>
+        <fullName>SMS_API_Messages</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SMS API Messages</shortDescription>
+        <value>Thank%20you%20for%20contacting%20Safexpress.%20For%20further%20information,%20please%20visit%20our%20website%20www.safexpress.com%20or%20email%20us%20at%20info@safexpress.com</value>
+    </labels>
+    <labels>
+        <fullName>SMS_API_Parameter_1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SMS API Parameter-1</shortDescription>
+        <value>receipientno=</value>
+    </labels>
+    <labels>
+        <fullName>SMS_API_Parameter_2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SMS API Parameter-2</shortDescription>
+        <value>&amp;msgtxt=</value>
+    </labels>
+    <labels>
+        <fullName>SMS_End_Point</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SMS End Point</shortDescription>
+        <value>https://api.safexpress.com/salesforce/sendsms?</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Data_API_Endpoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Data API Endpoint</shortDescription>
+        <value>https://dgapi-prod.safexpress.com/propel-util-api/secured-propel/api/v1/report/sales-report</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Data_API_Password</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Data API Password</shortDescription>
+        <value>d0d307ba-b733-407b-a124-1ad14d099f30</value>
+    </labels>
+    <labels>
+        <fullName>Sales_Data_API_Username</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Data API Username</shortDescription>
+        <value>salesforce</value>
+    </labels>
+    <labels>
+        <fullName>SendQuoteSenderEmailId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SendQuoteSenderEmailId</shortDescription>
+        <value>proposal@safexpress.com</value>
+    </labels>
+    <labels>
+        <fullName>Sharing_PropelI_Time_Stamp</fullName>
+        <categories>BatchPropelIAccountSharing Class</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sharing PropelI Time Stamp</shortDescription>
+        <value>LAST_N_DAYS:365</value>
+    </labels>
+    <labels>
+        <fullName>Sharing_Row_Cause</fullName>
+        <categories>Using in trg_AccountTeamHelper</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sharing Row Cause</shortDescription>
+        <value>Owner,Team,Rule,ImplicitParent</value>
+    </labels>
+    <labels>
+        <fullName>Sharing_Time_Stamp</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sharing Time Stamp</shortDescription>
+        <value>LAST_N_DAYS:7</value>
+    </labels>
+    <labels>
+        <fullName>Support_Case_Flow_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Support Case Flow Name</shortDescription>
+        <value>Create_Case_Safex</value>
+    </labels>
+    <labels>
+        <fullName>TestSwitch</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TestSwitch</shortDescription>
+        <value>On</value>
+    </labels>
+    <labels>
+        <fullName>TriggerSwitch</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TriggerSwitch</shortDescription>
+        <value>On</value>
+    </labels>
+    <labels>
+        <fullName>UploadMSAEndPoint</fullName>
+        <categories>clsPullPropelISFX.pullMSARecords</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UploadMSAEndPoint</shortDescription>
+        <value>https://apigateway.safexpress.com/cc/v1/sfi/cc/msaDetails/sfxcode?sfxCode=</value>
+    </labels>
+    <labels>
+        <fullName>UploadSFXEndPoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UploadSFXEndPoint</shortDescription>
+        <value>https://apigateway.safexpress.com/sfdc/v3/sfi/cc/sfx?sfxCode=</value>
+    </labels>
+    <labels>
+        <fullName>UserDetailsModifyMessage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UserDetailsModifyMessage</shortDescription>
+        <value>Please reach out to the admin team to make any changes in user details.</value>
+    </labels>
+    <labels>
+        <fullName>X_API_Key</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>X-API-Key</shortDescription>
+        <value>NsgDiyaube5kURRzN5Ial85xr6NvkNbV59yXpC7v</value>
+    </labels>
+    <labels>
+        <fullName>X_Content_Type_Options</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>X-Content-Type-Options</shortDescription>
+        <value>nosniff</value>
+    </labels>
+    <labels>
+        <fullName>X_Frame_Options</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>X-Frame-Options</shortDescription>
+        <value>SAMEORIGIN</value>
+    </labels>
+    <labels>
+        <fullName>X_XSS_Protection</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>X-XSS-Protection</shortDescription>
+        <value>1; mode=block</value>
+    </labels>
+    <labels>
+        <fullName>bdmpropeli</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>bdmpropeli</shortDescription>
+        <value>0052y000001FZ38AAG</value>
+    </labels>
+    <labels>
+        <fullName>branchMasterUserId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>branchMasterUserId</shortDescription>
+        <value>0057F000002y4xPQAQ</value>
+    </labels>
+    <labels>
+        <fullName>chirag_email</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>chirag email</shortDescription>
+        <value>chirag.malik@safexpress.com</value>
+    </labels>
+    <labels>
+        <fullName>grant_type</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>grant type</shortDescription>
+        <value>client_credentials</value>
+    </labels>
+</CustomLabels>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_to_be_Provisional_on_case_create</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND ((ISNEW()|| ISCHANGED( Status__c )), (RecordType.DeveloperName = &apos;Credit_Debit_Note&apos;|| RecordType.DeveloperName = &apos;Claim_Issues&apos;),!ISPICKVAL(Status__c ,&apos;Provisional&apos;), Total_Waybill_No__c = 0,AND($Profile.Name &lt;&gt; &apos;Regional Finance Head&apos;,$Profile.Name &lt;&gt; &apos;Revenue Management&apos;,$Profile.Name &lt;&gt; &apos;System Administrator&apos;) )</errorConditionFormula>
+    <errorDisplayField>Status__c</errorDisplayField>
+    <errorMessage>Status should not be changed until the waybill details are added</errorMessage>
+</ValidationRule>

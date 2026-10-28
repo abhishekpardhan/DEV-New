@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Quote_On_Existing_New_Opportuni</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISNEW(),
+NOT( ISBLANK( Opportunity__c ) ),
+ISPICKVAL( Opportunity__r.Customer_Type__c , &quot;Existing-New&quot; ),
+NOT( Opportunity__r.Quote_To_be_sent__c )
+)</errorConditionFormula>
+    <errorMessage>Quote To Be Sent must be checked for adding a quote</errorMessage>
+</ValidationRule>

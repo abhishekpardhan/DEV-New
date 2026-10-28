@@ -1,0 +1,51 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "city" : {
+      "title" : "City",
+      "description" : "City of the pincode. Populated only when Pincode Status is SERVICEABLE.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "district" : {
+      "title" : "District",
+      "description" : "District of the pincode. Populated only when Pincode Status is SERVICEABLE.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "locationCard" : {
+      "title" : "Location Card",
+      "description" : "Location details shown to the customer as a map card. Populated only when Pincode Status is SERVICEABLE.",
+      "lightning:type" : "@apexClassType/c__AgentforcePincodeLocationCard",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "pincodeStatus" : {
+      "title" : "Pincode Status",
+      "description" : "Result of the pincode check. SERVICEABLE = valid 6-digit pincode where service is available. INVALID_FORMAT = not exactly 6 digits or contains non-numeric characters. NOT_SERVICEABLE = valid format but service is not available. ERROR = the check could not be completed.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "state" : {
+      "title" : "State",
+      "description" : "State of the pincode. Populated only when Pincode Status is SERVICEABLE.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SFX__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ParentId != null &amp;&amp; Parent.ParentId != null &amp;&amp; Parent.Parent.ParentId != null &amp;&amp; Parent.Parent.Parent.SFX_Code__c != null,Parent.Parent.Parent.SFX_Code__c,
+IF(ParentId != null &amp;&amp; Parent.ParentId != null &amp;&amp; Parent.Parent.SFX_Code__c != null, Parent.Parent.SFX_Code__c,
+IF(ParentId != null &amp;&amp; Parent.SFX_Code__c != null, Parent.SFX_Code__c,
+SFX_Code__c
+)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>SFX</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

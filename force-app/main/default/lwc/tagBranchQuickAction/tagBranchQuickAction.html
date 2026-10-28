@@ -1,0 +1,82 @@
+<template>
+    <lightning-card title="Tag Booking Branch">
+        <div class="slds-p-around_medium">
+
+            <!-- Show Currently Tagged Branch -->
+            <template if:true={existingBranchName}>
+                <div class="slds-m-bottom_small">
+                    <strong>Currently Tagged:</strong> {existingBranchName}
+                </div>
+            </template>
+
+            <!-- Search Input -->
+            <lightning-input
+                type="search"
+                label="Search Booking Branch"
+                value={searchKey}
+                onchange={handleSearchKeyChange}
+                onfocus={handleSearchFocus}
+                placeholder="Enter branch name..."
+                class="slds-m-bottom_small">
+            </lightning-input>
+
+            <!-- Error / No Results -->
+            <template if:true={showError}>
+                <div class="slds-text-color_error slds-m-top_small">
+                    <h6>No Booking Branch Found</h6>
+                </div>
+            </template>
+
+            <!-- Branch List -->
+            <template if:false={showError}>
+                <template if:true={branches.length}>
+                    <div class="slds-scrollable_y slds-box slds-m-top_small" style="max-height: 200px;">
+                        <ul class="slds-list_dotted">
+                            <template for:each={branches} for:item="branch">
+                                <li key={branch.Id} class="slds-m-vertical_x-small">
+                                    <a href="javascript:void(0);"
+                                       data-id={branch.Id}
+                                       onclick={handleSelectBranch}>
+                                        {branch.Name}
+                                    </a>
+                                </li>
+                            </template>
+                        </ul>
+                    </div>
+                </template>
+            </template>
+
+            <!-- Buttons -->
+            <div class="slds-m-top_medium slds-grid slds-grid_align-spread">
+                <div>
+                    <template if:true={showAssignedBranchBtn}>
+                        <lightning-button
+                            label="Associate Branch"
+                            variant="brand"
+                            onclick={handleAssociate}
+                            class="slds-m-right_small">
+                        </lightning-button>
+                    </template>
+
+                    <lightning-button
+                        label="Cancel"
+                        variant="neutral"
+                        onclick={handleCancel}
+                        class="slds-m-right_small">
+                    </lightning-button>
+                </div>
+
+                <template if:true={existingBranchName}>
+                    <div>
+                        <lightning-button
+                            label="Remove Tag"
+                            variant="destructive"
+                            onclick={handleRemoveTag}
+                            if:false={isBranchSelectedFromList}>  <!-- Hide Remove Tag if branch selected -->
+                        </lightning-button>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </lightning-card>
+</template>

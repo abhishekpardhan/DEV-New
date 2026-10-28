@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Requires_Journey__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates whether a Journey is required before this Task can be completed.</description>
+    <inlineHelpText>Check this box if a Journey must be associated before completing the Task.</inlineHelpText>
+    <label>Requires Journey</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

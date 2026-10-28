@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WayBill_Check_On_Complaint</fullName>
+    <active>true</active>
+    <description>WayBill number is required for complaint type cases.</description>
+    <errorConditionFormula>AND(
+NOT($Setup.Custom_Validation_Exception_Setting__c.Bypass_Validation_Rules__c),				
+AND(
+TEXT(Origin) != &apos;WhatsApp&apos;, 
+TEXT(Origin) != &apos;WEB&apos;
+),
+TEXT(Case_Nature__c) = &apos;Complaint&apos;,
+OR(ISBLANK(WaybillNo__c),ISNULL(WaybillNo__c)),
+OR(TEXT(Case_Type__c) =&apos;Service Issue&apos;,
+TEXT(Case_Type__c) =&apos;Escalation&apos;,
+TEXT(Case_Type__c) =&apos;Freight Dispute&apos;
+)
+)</errorConditionFormula>
+    <errorMessage>Waybill Number is mandatory for complaint cases with the given case type.</errorMessage>
+</ValidationRule>

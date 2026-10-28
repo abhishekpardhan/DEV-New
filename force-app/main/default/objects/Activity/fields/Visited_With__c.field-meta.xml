@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Visited_With__c</fullName>
+    <label>Visited With</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BRM</fullName>
+                <default>false</default>
+                <label>BRM</label>
+            </value>
+            <value>
+                <fullName>AREA MANAGER</fullName>
+                <default>false</default>
+                <label>AREA MANAGER</label>
+            </value>
+            <value>
+                <fullName>REGIONAL MANAGER</fullName>
+                <default>false</default>
+                <label>REGIONAL MANAGER</label>
+            </value>
+            <value>
+                <fullName>NEW SALES MANAGER</fullName>
+                <default>false</default>
+                <label>NEW SALES MANAGER</label>
+            </value>
+            <value>
+                <fullName>VIRTUALLY</fullName>
+                <default>false</default>
+                <label>VIRTUALLY</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

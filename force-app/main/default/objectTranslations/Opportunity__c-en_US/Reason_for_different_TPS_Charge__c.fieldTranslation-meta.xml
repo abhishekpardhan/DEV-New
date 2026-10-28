@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Reason for different &apos;TPS&apos; Charge? (If Applicable) --></help>
+    <label><!-- Reason for different &apos;TPS&apos; Charge? --></label>
+    <name>Reason_for_different_TPS_Charge__c</name>
+</CustomFieldTranslation>

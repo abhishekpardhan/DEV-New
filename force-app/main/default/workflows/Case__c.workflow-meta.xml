@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>AM_Approval</fullName>
+        <field>Assigned_To__c</field>
+        <name>AM Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_By_AM</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved By AM</literalValue>
+        <name>Approved By AM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_by_AM_v3</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved By AM</literalValue>
+        <name>Approved by AM v3</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_by_CO</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved by CO</literalValue>
+        <name>Approved by CO</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_by_claim_dept</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved by Claim Dept</literalValue>
+        <name>Approved by claim dept</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_by_claim_dept1</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved by Claim Dept</literalValue>
+        <name>Approved by claim dept</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_by_claim_dept2</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved by Claim Dept</literalValue>
+        <name>Approved by claim dept</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>AssiAssignedToAftergnedToAfterCOApproval</fullName>
+        <field>Assigned_To__c</field>
+        <lookupValue>vandana.vashishtha@safexpress.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>AssignedToAfterCOApproval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>AssignedTo</fullName>
+        <field>Assigned_To__c</field>
+        <lookupValue>yogesh.jain@safexpress.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>AssignedTo</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Assigned_to_CO</fullName>
+        <description>After approval by AM it should assigned to Mr. Yogesh jain</description>
+        <field>Case_Assigned__c</field>
+        <lookupValue>yogesh.jain@safexpress.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>Assigned to CO</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Assigned_to_CO_FIN</fullName>
+        <description>Assigned to Co</description>
+        <field>Case_Assigned__c</field>
+        <lookupValue>yogesh.jain@safexpress.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>Assigned to CO FIN</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Assigned_to_Co_Dashboard</fullName>
+        <field>Assigned_To__c</field>
+        <lookupValue>shantanu.maheshwari@safexpress.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>Assigned to Co-Dashboard</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Assigned_to_IT</fullName>
+        <field>Assigned_To__c</field>
+        <lookupValue>ashish.rana@safexpress.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>Assigned to IT</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Fielc8</fullName>
+        <field>Customer_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Fielc8</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Field4</fullName>
+        <field>Customer_Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Field4</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Fieldc1</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved By AM</literalValue>
+        <name>Fieldc1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Fieldc3</fullName>
+        <field>Customer_Approval_Status__c</field>
+        <literalValue>Submitted for Approval</literalValue>
+        <name>Fieldc3</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Fieldc5</fullName>
+        <field>Customer_Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Fieldc5</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Fieldc6</fullName>
+        <field>Customer_Status__c</field>
+        <literalValue>In development</literalValue>
+        <name>Fieldc6</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pending_from_Claim_Dept</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved By AM</literalValue>
+        <name>Pending from Claim Dept</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pending_from_Claim_Deptv2</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Pending from Claim Dept.</literalValue>
+        <name>Pending from Claim Dept</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejected_by_AM</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved By AM</literalValue>
+        <name>Rejected by AM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejected_by_CO</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected by CO</literalValue>
+        <name>Rejected_by_CO</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejected_by_Claim_Dept</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected by Claim Dept</literalValue>
+        <name>Rejected by Claim Dept</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejected_by_Claim_Dept2</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected by Claim Dept</literalValue>
+        <name>Rejected by Claim Dept</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_to_Rejected</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Status to Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_to_Rejectedv2</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Status to Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Rejected</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected By AM</literalValue>
+        <name>Update Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>auto_approve_status</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Auto-approved</literalValue>
+        <name>auto approve status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>finalApproval</fullName>
+        <field>Assigned_To__c</field>
+        <lookupValue>vandana.vashishtha@safexpress.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>finalApproval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>pending_from_AM_v3</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected By AM</literalValue>
+        <name>pending from AM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>rework</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>rework</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>updateApprovalStatus</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved by CCD</literalValue>
+        <name>updateApprovalStatus</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_Approved</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved By AM</literalValue>
+        <name>update Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_approval_status</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Pending from AM</literalValue>
+        <name>update approval status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_approval_status1</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Pending from AM</literalValue>
+        <name>update approval status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

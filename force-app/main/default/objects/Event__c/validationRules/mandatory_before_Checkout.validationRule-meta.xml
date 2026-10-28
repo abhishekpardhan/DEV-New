@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>mandatory_before_Checkout</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF ( Remarks__c= &quot;Auto-Checked Out Event&quot;,
+					AND(
+  NOT(ISNEW()),
+  NOT(ISCHANGED(CheckIn_Date__c)),
+  NOT(ISCHANGED(CheckIn_Address__c)),
+  NOT(ISBLANK(CheckIn_Date__c)),
+  NOT(ISBLANK(CheckIn_Address__c)),
+  ISBLANK(Remarks__c),
+  NOT(Name = &quot;System Event&quot;)
+), 
+			AND(
+  NOT(ISNEW()),
+  NOT(ISCHANGED(CheckIn_Date__c)),
+  NOT(ISCHANGED(CheckIn_Address__c)),
+  NOT(ISBLANK(CheckIn_Date__c)),
+  NOT(ISBLANK(CheckIn_Address__c)),
+  OR(ISBLANK(Activities_to_be_Performed__c), ISBLANK(Remarks__c)),
+  NOT(Name = &quot;System Event&quot;)
+))</errorConditionFormula>
+    <errorMessage>Please fill the recap of meeting and activities to be performed to save the record.</errorMessage>
+</ValidationRule>

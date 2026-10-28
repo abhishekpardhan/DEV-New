@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Propel_I</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.RECORDTYPE</columns>
+    <columns>Request_Number__c</columns>
+    <columns>Booking_Request_Type_Id__c</columns>
+    <columns>Booking_Status__c</columns>
+    <columns>Booking_Channel__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.Booking_Request</value>
+    </filters>
+    <filters>
+        <field>Pre_Booking_Id__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>Propel I</label>
+</ListView>

@@ -1,0 +1,168 @@
+<template>
+    <div class="sfx-card">
+        <!-- Header -->
+        <div class="sfx-header">
+            <img src={logoUrl} alt="Safexpress" class="sfx-logo" />
+            <h2 class="sfx-title">Post Delivery Complaint</h2>
+        </div>
+
+        <div class="sfx-body">
+            <!-- ================= FORM VIEW ================= -->
+            <template lwc:if={showForm}>
+                <p class="sfx-instruction">
+                    Please share your details along with Images or PDF to raise a complaint
+                </p>
+
+                <div class="sfx-field">
+                    <lightning-input
+                        data-field="waybill"
+                        type="text"
+                        label="Waybill Number"
+                        placeholder="12-digit waybill number"
+                        value={waybill}
+                        required
+                        max-length="14"
+                        pattern="[0-9 ]{12,14}"
+                        message-when-pattern-mismatch="Please enter your 12-digit waybill number."
+                        disabled={isBusy}
+                        onchange={handleInputChange}>
+                    </lightning-input>
+                </div>
+
+                <div class="sfx-field">
+                    <lightning-input
+                        data-field="mobile"
+                        type="tel"
+                        label="Mobile Number"
+                        placeholder="10-digit mobile number"
+                        value={mobile}
+                        required
+                        max-length="10"
+                        pattern="[0-9]{10}"
+                        message-when-pattern-mismatch="Please enter a valid 10-digit mobile number."
+                        disabled={isBusy}
+                        onchange={handleInputChange}>
+                    </lightning-input>
+                </div>
+
+                <div class="sfx-field">
+                    <lightning-input
+                        data-field="email"
+                        type="email"
+                        label="Email ID"
+                        placeholder="name@example.com"
+                        value={email}
+                        required
+                        message-when-type-mismatch="Please enter a valid email address."
+                        disabled={isBusy}
+                        onchange={handleInputChange}>
+                    </lightning-input>
+                </div>
+
+                <div class="sfx-field">
+                    <lightning-input
+                        type="file"
+                        label="Supporting Documents (PNG, JPEG or PDF)"
+                        accept=".jpg,.jpeg,.png,.pdf,image/png,image/jpeg,application/pdf"
+                        multiple
+                        required
+                        disabled={isBusy}
+                        onchange={handleFileChange}>
+                    </lightning-input>
+                    <p class="sfx-hint">Photos are compressed automatically. PDFs up to 2 MB each.</p>
+                </div>
+
+                <template lwc:if={hasFiles}>
+                    <div class="sfx-file-list">
+                        <template for:each={files} for:item="file">
+                            <div key={file.id} class="sfx-file-item">
+                                <lightning-icon icon-name={file.icon} size="x-small" class="sfx-file-icon"></lightning-icon>
+                                <span class="sfx-file-name" title={file.name}>{file.name}</span>
+                                <span class="sfx-file-size">{file.sizeLabel}</span>
+                                <button
+                                    type="button"
+                                    class="sfx-remove-btn"
+                                    title="Remove file"
+                                    data-id={file.id}
+                                    disabled={isBusy}
+                                    onclick={handleRemoveFile}>
+                                    ✕
+                                </button>
+                            </div>
+                        </template>
+                    </div>
+                </template>
+
+                <template lwc:if={errorMessage}>
+                    <div class="sfx-error" role="alert">{errorMessage}</div>
+                </template>
+
+                <template lwc:if={isBusy}>
+                    <div class="sfx-progress">
+                        <span class="sfx-spinner"></span>
+                        <span>{progressText}</span>
+                    </div>
+                </template>
+
+                <div class="sfx-button-container">
+                    <button
+                        type="button"
+                        class="sfx-upload-btn"
+                        disabled={isSubmitDisabled}
+                        onclick={handleSubmit}>
+                        Submit Complaint
+                    </button>
+                </div>
+            </template>
+
+            <!-- ================= RESULT VIEW ================= -->
+            <template lwc:else>
+                <div class="sfx-result">
+                    <lightning-icon
+                        icon-name={resultIcon}
+                        variant={resultVariant}
+                        size="medium"
+                        class="sfx-result-icon">
+                    </lightning-icon>
+                    <p class="sfx-result-message">{result.message}</p>
+
+                    <div class="sfx-details">
+                        <template lwc:if={result.caseNumber}>
+                            <div class="sfx-detail-row">
+                                <span class="sfx-detail-label">Case Number</span>
+                                <span class="sfx-detail-value">{result.caseNumber}</span>
+                            </div>
+                        </template>
+                        <div class="sfx-detail-row">
+                            <span class="sfx-detail-label">Waybill Number</span>
+                            <span class="sfx-detail-value">{result.waybillFormatted}</span>
+                        </div>
+                        <template lwc:if={result.caseStatus}>
+                            <div class="sfx-detail-row">
+                                <span class="sfx-detail-label">Status</span>
+                                <span class="sfx-detail-value">{result.caseStatus}</span>
+                            </div>
+                        </template>
+                        <template lwc:if={result.createdOn}>
+                            <div class="sfx-detail-row">
+                                <span class="sfx-detail-label">Created On</span>
+                                <span class="sfx-detail-value">{result.createdOn}</span>
+                            </div>
+                        </template>
+                        <template lwc:if={hasFilesAttached}>
+                            <div class="sfx-detail-row">
+                                <span class="sfx-detail-label">Proof Files</span>
+                                <span class="sfx-detail-value">{result.filesAttached}</span>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </template>
+        </div>
+
+        <!-- Footer -->
+        <div class="sfx-footer">
+            <span>Distribution Redefined</span>
+        </div>
+    </div>
+</template>

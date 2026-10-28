@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MessagingChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <automatedResponses>
+        <autoResponseContentType>TextResponse</autoResponseContentType>
+        <response>Safexpert 𝘩𝘢𝘴 𝘫𝘰𝘪𝘯𝘦𝘥 𝘵𝘩𝘦 𝘊𝘰𝘯𝘷𝘦𝘳𝘴𝘢𝘵𝘪𝘰𝘯.</response>
+        <type>AgentEngagedResponse</type>
+    </automatedResponses>
+    <automatedResponses>
+        <autoResponseContentType>TextResponse</autoResponseContentType>
+        <response>Safexpert 𝘩𝘢𝘴 𝘦𝘯𝘥𝘦𝘥 𝘵𝘩𝘦 𝘊𝘰𝘯𝘷𝘦𝘳𝘴𝘢𝘵𝘪𝘰𝘯.</response>
+        <type>AgentEndEngagementResponse</type>
+    </automatedResponses>
+    <automatedResponses>
+        <autoResponseContentType>TextResponse</autoResponseContentType>
+        <language>en_US</language>
+        <response>You have ended the chat session. If you need further assistance, just type ‘Hi’ to start again!</response>
+        <type>OptOutConfirmation</type>
+    </automatedResponses>
+    <automatedResponses>
+        <autoResponseContentType>TextResponse</autoResponseContentType>
+        <language>en_US</language>
+        <response>Text STOP to opt out of further messages.</response>
+        <type>HelpResponse</type>
+    </automatedResponses>
+    <channelUsages>
+        <channelConsentType>ImplicitOptIn</channelConsentType>
+        <deploymentType>DigitalEngagementConversation</deploymentType>
+    </channelUsages>
+    <countryCode>US</countryCode>
+    <externalAccountId>550508944813489</externalAccountId>
+    <masterLabel>+91 97170 33113</masterLabel>
+    <messagingChannelType>WhatsApp</messagingChannelType>
+    <messagingKeywords>
+        <keyword>cancel</keyword>
+        <keyword>end</keyword>
+        <keyword>quit</keyword>
+        <keyword>stop</keyword>
+        <keyword>stopall</keyword>
+        <keyword>unsubscribe</keyword>
+        <keywordType>OptOut</keywordType>
+        <language>en_US</language>
+    </messagingKeywords>
+    <messagingKeywords>
+        <keyword>help</keyword>
+        <keywordType>Help</keywordType>
+        <language>en_US</language>
+    </messagingKeywords>
+    <platformKey>558587690668544</platformKey>
+    <sessionHandlerFlow>Route_to_Safexpress_Enhanced_AutoBot</sessionHandlerFlow>
+    <sessionHandlerQueue>Safex_Chatbot</sessionHandlerQueue>
+    <sessionHandlerType>Flow</sessionHandlerType>
+</MessagingChannel>

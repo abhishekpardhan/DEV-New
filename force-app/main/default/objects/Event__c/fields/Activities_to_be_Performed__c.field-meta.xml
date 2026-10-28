@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Activities_to_be_Performed__c</fullName>
+    <label>Activities Performed</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Event_Purpose__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Admin Issue Resolution</fullName>
+                <default>false</default>
+                <label>Admin Issue Resolution</label>
+            </value>
+            <value>
+                <fullName>Admin Issues and Branch Audit</fullName>
+                <default>false</default>
+                <label>Admin Issues and Branch Audit</label>
+            </value>
+            <value>
+                <fullName>Area Manager Review</fullName>
+                <default>false</default>
+                <label>Area Manager Review</label>
+            </value>
+            <value>
+                <fullName>Area office</fullName>
+                <default>false</default>
+                <label>Area office</label>
+            </value>
+            <value>
+                <fullName>ARM Associate Meeting</fullName>
+                <default>false</default>
+                <label>ARM Associate Meeting</label>
+            </value>
+            <value>
+                <fullName>Bank Visit</fullName>
+                <default>false</default>
+                <label>Bank Visit</label>
+            </value>
+            <value>
+                <fullName>BDM Review</fullName>
+                <default>false</default>
+                <label>BDM Review</label>
+            </value>
+            <value>
+                <fullName>BIR</fullName>
+                <default>false</default>
+                <label>BIR</label>
+            </value>
+            <value>
+                <fullName>Branch</fullName>
+                <default>false</default>
+                <label>Branch</label>
+            </value>
+            <value>
+                <fullName>Branch Audit</fullName>
+                <default>false</default>
+                <label>Branch Audit</label>
+            </value>
+            <value>
+                <fullName>BRM Associate Meeting</fullName>
+                <default>false</default>
+                <label>BRM Associate Meeting</label>
+            </value>
+            <value>
+                <fullName>Business Review</fullName>
+                <default>false</default>
+                <label>Business Review</label>
+            </value>
+            <value>
+                <fullName>Business Revival</fullName>
+                <default>false</default>
+                <label>Business Revival</label>
+            </value>
+            <value>
+                <fullName>Campus Visit</fullName>
+                <default>false</default>
+                <label>Campus Visit</label>
+            </value>
+            <value>
+                <fullName>Claim Resolution</fullName>
+                <default>false</default>
+                <label>Claim Resolution</label>
+            </value>
+            <value>
+                <fullName>Cluster Visit</fullName>
+                <default>false</default>
+                <label>Cluster Visit</label>
+            </value>
+            <value>
+                <fullName>Collection</fullName>
+                <default>false</default>
+                <label>Collection</label>
+            </value>
+            <value>
+                <fullName>Conference</fullName>
+                <default>false</default>
+                <label>Conference</label>
+            </value>
+            <value>
+                <fullName>Consignee Application</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Consignee Application</label>
+            </value>
+            <value>
+                <fullName>Consignee Visit</fullName>
+                <default>false</default>
+                <label>Consignee Visit</label>
+            </value>
+            <value>
+                <fullName>Contract Renewal</fullName>
+                <default>false</default>
+                <label>Contract Renewal</label>
+            </value>
+            <value>
+                <fullName>Contract Signing</fullName>
+                <default>false</default>
+                <label>Contract Signing</label>
+            </value>
+            <value>
+                <fullName>Corporate Leader Meeting</fullName>
+                <default>false</default>
+                <label>Corporate Leader Meeting</label>
+            </value>
+            <value>
+                <fullName>Corporate Meeting</fullName>
+                <default>false</default>
+                <label>Corporate Meeting</label>
+            </value>
+            <value>
+                <fullName>Damage</fullName>
+                <default>false</default>
+                <label>Damage</label>
+            </value>
+            <value>
+                <fullName>DRM Associate Meeting</fullName>
+                <default>false</default>
+                <label>DRM Associate Meeting</label>
+            </value>
+            <value>
+                <fullName>Freight Dispute</fullName>
+                <default>false</default>
+                <label>Freight Dispute</label>
+            </value>
+            <value>
+                <fullName>Govt Authority Visit</fullName>
+                <default>false</default>
+                <label>Govt Authority Visit</label>
+            </value>
+            <value>
+                <fullName>Green Truck Associate Meeting</fullName>
+                <default>false</default>
+                <label>Green Truck Associate Meeting</label>
+            </value>
+            <value>
+                <fullName>Home</fullName>
+                <default>false</default>
+                <label>Home</label>
+            </value>
+            <value>
+                <fullName>Hotel</fullName>
+                <default>false</default>
+                <label>Hotel</label>
+            </value>
+            <value>
+                <fullName>Incident Spot Visit</fullName>
+                <default>false</default>
+                <label>Incident Spot Visit</label>
+            </value>
+            <value>
+                <fullName>Institution Visit</fullName>
+                <default>false</default>
+                <label>Institution Visit</label>
+            </value>
+            <value>
+                <fullName>Interview</fullName>
+                <default>false</default>
+                <label>Interview</label>
+            </value>
+            <value>
+                <fullName>Labour Associate Meeting</fullName>
+                <default>false</default>
+                <label>Labour Associate Meeting</label>
+            </value>
+            <value>
+                <fullName>Late Delivery</fullName>
+                <default>false</default>
+                <label>Late Delivery</label>
+            </value>
+            <value>
+                <fullName>Marketing Event</fullName>
+                <default>false</default>
+                <label>Marketing Event</label>
+            </value>
+            <value>
+                <fullName>Meeting with Landlord</fullName>
+                <default>false</default>
+                <label>Meeting Landlord</label>
+            </value>
+            <value>
+                <fullName>Mis-behaviour</fullName>
+                <default>false</default>
+                <label>Mis-behaviour</label>
+            </value>
+            <value>
+                <fullName>Negotiation</fullName>
+                <default>false</default>
+                <label>Negotiation</label>
+            </value>
+            <value>
+                <fullName>New Associate Interview</fullName>
+                <default>false</default>
+                <label>New Associate Interview</label>
+            </value>
+            <value>
+                <fullName>New Business</fullName>
+                <default>false</default>
+                <label>New Business</label>
+            </value>
+            <value>
+                <fullName>New Warehouse</fullName>
+                <default>false</default>
+                <label>New Warehouse</label>
+            </value>
+            <value>
+                <fullName>No Meeting Done</fullName>
+                <default>false</default>
+                <label>No Meeting Done</label>
+            </value>
+            <value>
+                <fullName>NRM Associate Meeting</fullName>
+                <default>false</default>
+                <label>NRM Associate Meeting</label>
+            </value>
+            <value>
+                <fullName>Office Search</fullName>
+                <default>false</default>
+                <label>Office Search</label>
+            </value>
+            <value>
+                <fullName>Onboarding</fullName>
+                <default>false</default>
+                <label>Onboarding</label>
+            </value>
+            <value>
+                <fullName>Operation Analysis</fullName>
+                <default>false</default>
+                <label>Operation Analysis</label>
+            </value>
+            <value>
+                <fullName>Operation Review</fullName>
+                <default>false</default>
+                <label>Operation Review</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+            <value>
+                <fullName>Outstanding Review</fullName>
+                <default>false</default>
+                <label>Outstanding Review</label>
+            </value>
+            <value>
+                <fullName>Price Revision</fullName>
+                <default>false</default>
+                <label>Price Revision</label>
+            </value>
+            <value>
+                <fullName>Promotional Campaign</fullName>
+                <default>false</default>
+                <label>Promotional Campaign</label>
+            </value>
+            <value>
+                <fullName>Promotional Gifting</fullName>
+                <default>false</default>
+                <label>Promotional Gifting</label>
+            </value>
+            <value>
+                <fullName>Prospecting</fullName>
+                <default>false</default>
+                <label>Prospecting</label>
+            </value>
+            <value>
+                <fullName>Regional Manager Review</fullName>
+                <default>false</default>
+                <label>Regional Manager Review</label>
+            </value>
+            <value>
+                <fullName>Regional Office</fullName>
+                <default>false</default>
+                <label>Regional Office</label>
+            </value>
+            <value>
+                <fullName>Relationship Building</fullName>
+                <default>false</default>
+                <label>Relationship Building</label>
+            </value>
+            <value>
+                <fullName>Retail Business Discussion</fullName>
+                <default>false</default>
+                <label>Retail Business Discussion</label>
+            </value>
+            <value>
+                <fullName>RFQ Meeting</fullName>
+                <default>false</default>
+                <label>RFQ Meeting</label>
+            </value>
+            <value>
+                <fullName>Safe Air</fullName>
+                <default>false</default>
+                <label>Safe Air</label>
+            </value>
+            <value>
+                <fullName>Safexpress Mobile App</fullName>
+                <default>false</default>
+                <label>Safexpress Mobile App</label>
+            </value>
+            <value>
+                <fullName>Service and Business Review</fullName>
+                <default>false</default>
+                <label>Service and Business Review</label>
+            </value>
+            <value>
+                <fullName>Shortage</fullName>
+                <default>false</default>
+                <label>Shortage</label>
+            </value>
+            <value>
+                <fullName>Special Delivery Requirement.</fullName>
+                <default>false</default>
+                <label>Special Delivery Requirement.</label>
+            </value>
+            <value>
+                <fullName>Submission</fullName>
+                <default>false</default>
+                <label>Submission</label>
+            </value>
+            <value>
+                <fullName>Trade Fair Visit</fullName>
+                <default>false</default>
+                <label>Trade Fair Visit</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>Warehouse Visit</fullName>
+                <default>false</default>
+                <label>Warehouse Visit</label>
+            </value>
+            <value>
+                <fullName>Weight Volume %</fullName>
+                <default>false</default>
+                <label>Weight Volume %</label>
+            </value>
+            <value>
+                <fullName>Weight Volume Discussion</fullName>
+                <default>false</default>
+                <label>Weight Volume Discussion</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Existing Customer Meeting</controllingFieldValue>
+            <valueName>BIR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Existing Customer Meeting</controllingFieldValue>
+            <valueName>Business Revival</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Existing Customer Meeting</controllingFieldValue>
+            <valueName>Claim Resolution</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Existing Customer Meeting</controllingFieldValue>
+            <controllingFieldValue>Retail Customer Meeting</controllingFieldValue>
+            <valueName>Collection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Existing Customer Meeting</controllingFieldValue>
+            <valueName>Contract Renewal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Existing Customer Meeting</controllingFieldValue>
+            <controllingFieldValue>Administrative Work</controllingFieldValue>
+            <controllingFieldValue>Associate Meeting</controllingFieldValue>
+            <controllingFieldValue>New Customer Meeting</controllingFieldValue>
+            <controllingFieldValue>Branch Visit</controllingFieldValue>
+            <controllingFieldValue>Incident Spot Visit</controllingFieldValue>
+            <controllingFieldValue>Internal Team Meeting</controllingFieldValue>
+            <controllingFieldValue>Marketing/Promotion</controllingFieldValue>
+            <controllingFieldValue>Retail Customer Meeting</controllingFieldValue>
+            <controllingFieldValue>Return to Location</controllingFieldValue>
+            <controllingFieldValue>Inbound Customer Visit</controllingFieldValue>
+            <valueName>No Meeting Done</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Existing Customer Meeting</controllingFieldValue>
+            <controllingFieldValue>New Customer Meeting</controllingFieldValue>
+            <valueName>Onboarding</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Existing Customer Meeting</controllingFieldValue>
+            <controllingFieldValue>Branch Visit</controllingFieldValue>
+            <valueName>Outstanding Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Existing Customer Meeting</controllingFieldValue>
+            <valueName>Price Revision</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Existing Customer Meeting</controllingFieldValue>
+            <controllingFieldValue>New Customer Meeting</controllingFieldValue>
+            <controllingFieldValue>Retail Customer Meeting</controllingFieldValue>
+            <valueName>Promotional Gifting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Existing Customer Meeting</controllingFieldValue>
+            <valueName>Relationship Building</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Existing Customer Meeting</controllingFieldValue>
+            <controllingFieldValue>New Customer Meeting</controllingFieldValue>
+            <valueName>RFQ Meeting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Existing Customer Meeting</controllingFieldValue>
+            <valueName>Safe Air</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Existing Customer Meeting</controllingFieldValue>
+            <controllingFieldValue>New Customer Meeting</controllingFieldValue>
+            <controllingFieldValue>Retail Customer Meeting</controllingFieldValue>
+            <controllingFieldValue>Inbound Customer Visit</controllingFieldValue>
+            <valueName>Safexpress Mobile App</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Existing Customer Meeting</controllingFieldValue>
+            <valueName>Service and Business Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Existing Customer Meeting</controllingFieldValue>
+            <valueName>Submission</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Existing Customer Meeting</controllingFieldValue>
+            <controllingFieldValue>Internal Team Meeting</controllingFieldValue>
+            <valueName>Training</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Existing Customer Meeting</controllingFieldValue>
+            <valueName>Warehouse Visit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Existing Customer Meeting</controllingFieldValue>
+            <valueName>Weight Volume %</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative Work</controllingFieldValue>
+            <valueName>Bank Visit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative Work</controllingFieldValue>
+            <valueName>Govt Authority Visit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative Work</controllingFieldValue>
+            <valueName>Interview</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative Work</controllingFieldValue>
+            <valueName>Meeting with Landlord</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative Work</controllingFieldValue>
+            <valueName>New Warehouse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrative Work</controllingFieldValue>
+            <valueName>Office Search</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Associate Meeting</controllingFieldValue>
+            <valueName>ARM Associate Meeting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Associate Meeting</controllingFieldValue>
+            <valueName>BRM Associate Meeting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Associate Meeting</controllingFieldValue>
+            <valueName>DRM Associate Meeting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Associate Meeting</controllingFieldValue>
+            <valueName>Green Truck Associate Meeting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Associate Meeting</controllingFieldValue>
+            <valueName>Labour Associate Meeting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Associate Meeting</controllingFieldValue>
+            <valueName>New Associate Interview</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Associate Meeting</controllingFieldValue>
+            <valueName>NRM Associate Meeting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Customer Meeting</controllingFieldValue>
+            <valueName>Contract Signing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Customer Meeting</controllingFieldValue>
+            <valueName>Negotiation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Customer Meeting</controllingFieldValue>
+            <valueName>Operation Analysis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Customer Meeting</controllingFieldValue>
+            <valueName>Prospecting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Branch Visit</controllingFieldValue>
+            <valueName>Admin Issue Resolution</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Branch Visit</controllingFieldValue>
+            <valueName>Branch Audit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Branch Visit</controllingFieldValue>
+            <valueName>Business Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Branch Visit</controllingFieldValue>
+            <controllingFieldValue>Internal Team Meeting</controllingFieldValue>
+            <valueName>Operation Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Branch Visit</controllingFieldValue>
+            <valueName>Promotional Campaign</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Branch Visit</controllingFieldValue>
+            <valueName>Weight Volume Discussion</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Incident Spot Visit</controllingFieldValue>
+            <valueName>Incident Spot Visit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internal Team Meeting</controllingFieldValue>
+            <valueName>Area Manager Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internal Team Meeting</controllingFieldValue>
+            <valueName>BDM Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internal Team Meeting</controllingFieldValue>
+            <valueName>Corporate Leader Meeting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internal Team Meeting</controllingFieldValue>
+            <valueName>Corporate Meeting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internal Team Meeting</controllingFieldValue>
+            <valueName>Regional Manager Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketing/Promotion</controllingFieldValue>
+            <valueName>Cluster Visit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketing/Promotion</controllingFieldValue>
+            <valueName>Conference</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketing/Promotion</controllingFieldValue>
+            <valueName>Institution Visit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketing/Promotion</controllingFieldValue>
+            <valueName>Marketing Event</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketing/Promotion</controllingFieldValue>
+            <valueName>Trade Fair Visit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retail Customer Meeting</controllingFieldValue>
+            <valueName>Campus Visit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retail Customer Meeting</controllingFieldValue>
+            <valueName>Consignee Visit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retail Customer Meeting</controllingFieldValue>
+            <valueName>Retail Business Discussion</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Return to Location</controllingFieldValue>
+            <valueName>Area office</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Return to Location</controllingFieldValue>
+            <valueName>Branch</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Return to Location</controllingFieldValue>
+            <valueName>Home</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Return to Location</controllingFieldValue>
+            <valueName>Hotel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Return to Location</controllingFieldValue>
+            <valueName>Others</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Return to Location</controllingFieldValue>
+            <valueName>Regional Office</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Inbound Customer Visit</controllingFieldValue>
+            <valueName>Damage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Inbound Customer Visit</controllingFieldValue>
+            <valueName>Freight Dispute</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Inbound Customer Visit</controllingFieldValue>
+            <valueName>Late Delivery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Inbound Customer Visit</controllingFieldValue>
+            <valueName>Mis-behaviour</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Inbound Customer Visit</controllingFieldValue>
+            <valueName>New Business</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Inbound Customer Visit</controllingFieldValue>
+            <valueName>Shortage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Inbound Customer Visit</controllingFieldValue>
+            <valueName>Special Delivery Requirement.</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

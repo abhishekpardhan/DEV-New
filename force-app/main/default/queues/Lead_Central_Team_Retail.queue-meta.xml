@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesIncludeBosses>true</doesIncludeBosses>
+    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <email>prabhsimran.singh@pwc.com</email>
+    <name>Lead Central Team (Retail)</name>
+    <queueMembers>
+        <roles>
+            <role>Central_Team_Retail_L1</role>
+        </roles>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Lead__c</sobjectType>
+    </queueSobject>
+</Queue>

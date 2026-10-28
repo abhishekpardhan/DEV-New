@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Sales_Yield_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+
+ISPICKVAL( Type__c , &quot;New Sales&quot;), 
+
+ISNULL(Yield__c)
+)</errorConditionFormula>
+    <errorDisplayField>Yield__c</errorDisplayField>
+    <errorMessage>Please fill Yield.</errorMessage>
+</ValidationRule>

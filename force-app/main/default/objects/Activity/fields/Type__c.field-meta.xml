@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <label>Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>BDM - WORK FROM OFFICE</fullName>
+                <default>false</default>
+                <label>BDM - WORK FROM OFFICE</label>
+            </value>
+            <value>
+                <fullName>BILL COLLECTION</fullName>
+                <default>false</default>
+                <label>BILL COLLECTION</label>
+            </value>
+            <value>
+                <fullName>BILL SUBMISSION</fullName>
+                <default>false</default>
+                <label>BILL SUBMISSION</label>
+            </value>
+            <value>
+                <fullName>BIR</fullName>
+                <default>false</default>
+                <label>BIR</label>
+            </value>
+            <value>
+                <fullName>BRANCH VISIT</fullName>
+                <default>false</default>
+                <label>BRANCH VISIT</label>
+            </value>
+            <value>
+                <fullName>CHQ DISHONOR</fullName>
+                <default>false</default>
+                <label>CHQ DISHONOR</label>
+            </value>
+            <value>
+                <fullName>Claim</fullName>
+                <default>false</default>
+                <label>CLAIM</label>
+            </value>
+            <value>
+                <fullName>CONSIGNEE RECOMMENDATION LETTERS</fullName>
+                <default>false</default>
+                <label>CONSIGNEE RECOMMENDATION LETTERS</label>
+            </value>
+            <value>
+                <fullName>CONSIGNEE SALES LEAD</fullName>
+                <default>false</default>
+                <label>CONSIGNEE SALES LEAD</label>
+            </value>
+            <value>
+                <fullName>CONSIGNEE VISITED</fullName>
+                <default>false</default>
+                <label>CONSIGNEE VISITED</label>
+            </value>
+            <value>
+                <fullName>CORPORATE TASK</fullName>
+                <default>false</default>
+                <label>CORPORATE TASK</label>
+            </value>
+            <value>
+                <fullName>CUSTOMER VISIT</fullName>
+                <default>false</default>
+                <label>CUSTOMER VISIT</label>
+            </value>
+            <value>
+                <fullName>CUSTOMER VISIT - EXISTING</fullName>
+                <default>false</default>
+                <label>CUSTOMER VISIT - EXISTING</label>
+            </value>
+            <value>
+                <fullName>CUSTOMER VISIT - NEW</fullName>
+                <default>false</default>
+                <label>CUSTOMER VISIT - NEW</label>
+            </value>
+            <value>
+                <fullName>CUSTOMER WAREHOUSE VISIT</fullName>
+                <default>false</default>
+                <label>CUSTOMER WAREHOUSE VISIT</label>
+            </value>
+            <value>
+                <fullName>DOD/DACC CANCELLATION</fullName>
+                <default>false</default>
+                <label>DOD/DACC CANCELLATION</label>
+            </value>
+            <value>
+                <fullName>EXTENDED CODE - NEGATIVE SALE</fullName>
+                <default>false</default>
+                <label>EXTENDED CODE - NEGATIVE SALE</label>
+            </value>
+            <value>
+                <fullName>EXTENDED CODE - ZERO SALE</fullName>
+                <default>false</default>
+                <label>EXTENDED CODE - ZERO SALE</label>
+            </value>
+            <value>
+                <fullName>INCIDENT</fullName>
+                <default>false</default>
+                <label>INCIDENT</label>
+            </value>
+            <value>
+                <fullName>INCIDENT AT 3PL HUB</fullName>
+                <default>false</default>
+                <label>INCIDENT AT 3PL HUB</label>
+            </value>
+            <value>
+                <fullName>IN-HOUSE BIZ/ SUPPORT  ACTIVITIES</fullName>
+                <default>false</default>
+                <label>IN-HOUSE BIZ/ SUPPORT  ACTIVITIES</label>
+            </value>
+            <value>
+                <fullName>INTERNAL MEETING</fullName>
+                <default>false</default>
+                <label>INTERNAL MEETING</label>
+            </value>
+            <value>
+                <fullName>NEGATIVE SALE</fullName>
+                <default>false</default>
+                <label>NEGATIVE SALE</label>
+            </value>
+            <value>
+                <fullName>NEW SALES</fullName>
+                <default>false</default>
+                <label>NEW SALES</label>
+            </value>
+            <value>
+                <fullName>NORMAL VISIT &amp; ICM CUSTOMER CAMPAIGN</fullName>
+                <default>false</default>
+                <label>NORMAL VISIT &amp; ICM CUSTOMER CAMPAIGN</label>
+            </value>
+            <value>
+                <fullName>ONBOARDING</fullName>
+                <default>false</default>
+                <label>ONBOARDING</label>
+            </value>
+            <value>
+                <fullName>PRICING</fullName>
+                <default>false</default>
+                <label>PRICING</label>
+            </value>
+            <value>
+                <fullName>PROMOTIONAL ACTIVITY/ CAMPAIGN</fullName>
+                <default>false</default>
+                <label>PROMOTIONAL ACTIVITY/ CAMPAIGN</label>
+            </value>
+            <value>
+                <fullName>RENEWEL ACCOUNT</fullName>
+                <default>false</default>
+                <label>RENEWAL ACCOUNT</label>
+            </value>
+            <value>
+                <fullName>SALESFORCE</fullName>
+                <default>false</default>
+                <label>SALESFORCE</label>
+            </value>
+            <value>
+                <fullName>SHORT/EXCESS</fullName>
+                <default>false</default>
+                <label>SHORT/EXCESS</label>
+            </value>
+            <value>
+                <fullName>TOUR</fullName>
+                <default>false</default>
+                <label>TOUR</label>
+            </value>
+            <value>
+                <fullName>TRAINING</fullName>
+                <default>false</default>
+                <label>TRAINING</label>
+            </value>
+            <value>
+                <fullName>VISIT TO BRANCH</fullName>
+                <default>false</default>
+                <label>VISIT TO BRANCH</label>
+            </value>
+            <value>
+                <fullName>VISIT TO EVENT</fullName>
+                <default>false</default>
+                <label>VISIT TO EVENT</label>
+            </value>
+            <value>
+                <fullName>VISIT TO GOVT. AUTHORITY.</fullName>
+                <default>false</default>
+                <label>VISIT TO GOVT. AUTHORITY.</label>
+            </value>
+            <value>
+                <fullName>VISIT TO INCIDENT</fullName>
+                <default>false</default>
+                <label>VISIT TO INCIDENT</label>
+            </value>
+            <value>
+                <fullName>VISIT TO INSTITUTION</fullName>
+                <default>false</default>
+                <label>VISIT TO INSTITUTION</label>
+            </value>
+            <value>
+                <fullName>ZERO BILLING</fullName>
+                <default>false</default>
+                <label>ZERO BILLING</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

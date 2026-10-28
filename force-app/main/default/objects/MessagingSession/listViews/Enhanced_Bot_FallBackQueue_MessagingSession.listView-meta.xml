@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Enhanced_Bot_FallBackQueue_MessagingSession</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Enhanced Bot FallBackQueue</label>
+    <queue>Enhanced_Bot_FallBackQueue</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

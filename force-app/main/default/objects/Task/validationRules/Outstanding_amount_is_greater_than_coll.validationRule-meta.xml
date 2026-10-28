@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Outstanding_amount_is_greater_than_coll</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ !ISCHANGED(OwnerId),
+ RecordType.DeveloperName  = &quot;Collection&quot;,
+ ISCHANGED(Collected_Amount__c),
+  Collected_Amount__c &lt;  Outstanding_Amount__c,
+ ISPICKVAL( Payment_Remaining__c ,&quot;&quot;),
+NOT($Profile.Name = &apos;Portfolio Management&apos;)
+)</errorConditionFormula>
+    <errorDisplayField>Payment_Remaining__c</errorDisplayField>
+    <errorMessage>Please select payment remaining field value.</errorMessage>
+</ValidationRule>

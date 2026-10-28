@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Used to keep the values of Portfolio type related to portfolio management functionality.</description>
+    <label>Portfolio Type</label>
+    <pluralLabel>Portfolio Type</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

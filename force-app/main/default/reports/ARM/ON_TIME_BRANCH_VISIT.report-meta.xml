@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>User.Event__c$CreatedById$Name</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Unique</aggregateTypes>
+        <field>User.Event__c$CreatedById$Branch__c</field>
+    </columns>
+    <columns>
+        <field>User.Event__c$CreatedById$Event_Purpose__c</field>
+    </columns>
+    <columns>
+        <field>User$Account</field>
+    </columns>
+    <columns>
+        <field>User*User$Area__c</field>
+    </columns>
+    <columns>
+        <field>User.Event__c$CreatedById$CheckIn_Date__c</field>
+    </columns>
+    <columns>
+        <field>User.Event__c$CreatedById$CheckOut_Date__c</field>
+    </columns>
+    <columns>
+        <field>User.Event__c$CreatedById$CheckIn_Address__c</field>
+    </columns>
+    <columns>
+        <field>User.Event__c$CreatedById$CheckOut_Address__c</field>
+    </columns>
+    <columns>
+        <field>User.Event__c$CreatedById$CheckIn_Location__c</field>
+    </columns>
+    <columns>
+        <field>User.Event__c$CreatedById$CheckOut_Location__c</field>
+    </columns>
+    <columns>
+        <field>User.Event__c$CreatedById$Contact__c</field>
+    </columns>
+    <columns>
+        <field>User.Event__c$CreatedById$Remarks__c</field>
+    </columns>
+    <currency>INR</currency>
+    <customDetailFormulas>
+        <calculatedFormula>IF(
+    ISBLANK(Event__c.CheckIn_Date__c),
+    &quot;-&quot;,
+    IF(
+        AND(
+            HOUR(TIMEVALUE(Event__c.CheckIn_Date__c)) &gt;= 1,
+            HOUR(TIMEVALUE(Event__c.CheckIn_Date__c)) &lt;= 3
+        ),
+        &quot;On Time&quot;,
+        &quot;Delay&quot;
+    )
+)</calculatedFormula>
+        <dataType>Text</dataType>
+        <developerName>CDF1</developerName>
+        <label>On time</label>
+        <scale>2</scale>
+    </customDetailFormulas>
+    <description>On TIME ARM Visit Report - Yesterday, Today and Tomorrow
+IF(
+    ISBLANK(Event__c.CheckIn_Date__c),
+    &quot;-&quot;,
+    IF(
+        AND(
+            HOUR(TIMEVALUE(Event__c.CheckIn_Date__c)) &gt;= 1,
+            HOUR(TIMEVALUE(Event__c.CheckIn_Date__c)) &lt;= 3</description>
+    <filter>
+        <booleanFilter>1 AND 2 AND 3 AND (4 OR 5 OR 6) AND 7 AND 8</booleanFilter>
+        <criteriaItems>
+            <column>User*User$Area__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>North,South,East,West,Central</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User*User$Area__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>,Delhi,Mumbai,Chennai,Bangalore,Hyderabad,Pune,Ahmedabad</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User*User$Designation__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Area Manager</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Event__c$CreatedById$CheckIn_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>YESTERDAY</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Event__c$CreatedById$CheckIn_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>TODAY</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Event__c$CreatedById$Start__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>TOMORROW</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Event__c$CreatedById$Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>System Event</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Event__c$CreatedById$Branch__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>User.Event__c$CreatedById$Owner</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>User*User$Region__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CDF1</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>ON TIME BRANCH VISIT</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>USERS_AND_EVENT_NEW__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>User$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

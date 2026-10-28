@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>user will get Notified about new task in slack</description>
+        <name>Assigned_Task_Notification_to_user_in_Slack</name>
+        <label>Assigned Task Notification to user in Slack</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>custom__Assigned_task_to_user</actionName>
+        <actionType>sendNotification</actionType>
+        <connector>
+            <targetReference>Email_Gate</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>recipientIds</name>
+            <value>
+                <elementReference>TaskOwnerIds</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+                <inputConfiguratorMode>Resource</inputConfiguratorMode>
+            </value>
+        </inputParameters>
+        <nameSegment>custom__Assigned_task_to_user</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_Email_Action_1</name>
+        <label>Send Email Action 1</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>recipientAddresses</name>
+            <value>
+                <collectionElements>
+                    <elementReference>$Record.Submitted_To__r.Email</elementReference>
+                </collectionElements>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>ccAddresses</name>
+            <value>
+                <collectionElements>
+                    <elementReference>$Record.Owner:User.Email</elementReference>
+                </collectionElements>
+                <collectionElements>
+                    <elementReference>ccEmails</elementReference>
+                </collectionElements>
+                <collectionElements>
+                    <elementReference>$User.Email</elementReference>
+                </collectionElements>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <inputConfiguratorMode>Custom</inputConfiguratorMode>
+                <stringValue>CurrentUser</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>composeEmailContent</name>
+            <value>
+                <stringValue>True</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Safexpress Welcomes You!! - {!$Record.Account.Name}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <inputConfiguratorMode>Custom</inputConfiguratorMode>
+                <stringValue>&lt;p&gt;Dear Patron&lt;/p&gt;&lt;p&gt;Greetings from Safexpress!!&lt;br&gt;&lt;br&gt;We sincerely thank you for the business opportunity extended to us by {!$Record.Account.Parent.Name}. We truly value your trust in us and look forward to building a strong, long-term partnership that supports mutual growth and success.&lt;br&gt;&lt;br&gt;To ensure we understand your requirements thoroughly and deliver services that meet your expectations, Mr. {!nameWithoutCode} will be your {!getDesignation}. He will serve as your primary point of contact for:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Ongoing coordination and communication&lt;/li&gt;&lt;li&gt;Business enhancement initiatives&lt;/li&gt;&lt;li&gt;Service delivery and performance review&lt;/li&gt;&lt;li&gt;Resolution of any concerns that may arise&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Mr. {!nameWithoutCode} will reach out to you shortly to initiate discussions and align on the next steps. For your convenience, please find below our Escalation Matrix, which can be referred to in case of any urgency or unresolved matters.&lt;br&gt;&lt;br&gt;Escalation Matrix Table:&lt;/p&gt;
+&lt;table border=&quot;1&quot; cellpadding=&quot;5&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot; 
+       style=&quot;border-collapse: collapse; font-family: Arial; font-size: 13px;&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&quot;background-color: #00B050; color: #FFFFFF;&quot;&gt;
+      &lt;th style=&quot;border: 1px solid #cccccc;&quot;&gt;Name&lt;/th&gt;
+      &lt;th style=&quot;border: 1px solid #cccccc;&quot;&gt;Designation&lt;/th&gt;
+      &lt;th style=&quot;border: 1px solid #cccccc;&quot;&gt;Contact Number&lt;/th&gt;
+      &lt;th style=&quot;border: 1px solid #cccccc;&quot;&gt;Email ID&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    {!finalTable}
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;/p&gt;&lt;p&gt;Once again, we thank you for your trust and partnership. We look forward to a successful association with Safexpress Pvt. Ltd.&lt;br&gt;&lt;br&gt;Best Regards,&lt;br&gt;Safexpress Onboarding Team</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+        <versionString>2.0.1</versionString>
+    </actionCalls>
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>assign_Profile_Id</name>
+        <label>assign Profile Id</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>amProfileId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>loop.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>loop</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>collect Task owner Ids to pass into the custom notification in Input</description>
+        <name>collect_Task_owner_Ids</name>
+        <label>collect Task owner Ids</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>TaskOwnerIds</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assigned_Task_Notification_to_user_in_Slack</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Copy_1_of_assign_Profile_Id</name>
+        <label>Copy 1 of assign Profile Id</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>rmProfileId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>loop.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>loop</targetReference>
+        </connector>
+    </assignments>
+    <customErrors>
+        <name>add_Error_Message</name>
+        <label>add Error Message</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <customErrorMessages>
+            <errorMessage>Please tag a contact to this task before Sending Email.</errorMessage>
+            <fieldSelection>Send_Email__c</fieldSelection>
+            <isFieldError>true</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>Copy_1_of_add_Error_Message</name>
+        <label>Copy 1 of add Error Message</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <customErrorMessages>
+            <errorMessage>Email cannot be sent for a completed onboarding task</errorMessage>
+            <fieldSelection>Send_Email__c</fieldSelection>
+            <isFieldError>true</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>Error_Message</name>
+        <label>Error Message</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <customErrorMessages>
+            <errorMessage>Tagged Contact is not Active.</errorMessage>
+            <fieldSelection>Send_Email__c</fieldSelection>
+            <isFieldError>true</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <decisions>
+        <name>check_Assighnee_profile</name>
+        <label>check Assighnee profile</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Send_Email_Action_1</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>if_Not_RM_Not_Am</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>getAssignee.ProfileId</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>rmProfileId</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>getAssignee.ProfileId</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>amProfileId</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>get_manager_s_Manager</targetReference>
+            </connector>
+            <label>if Not RM Not Am</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>check_Profile</name>
+        <label>check Profile</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Copy_1_of_assign_Profile_Id</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>If_AM</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>loop.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Area Manager</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>assign_Profile_Id</targetReference>
+            </connector>
+            <label>If AM</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Related_Contact</name>
+        <label>Check Related Contact</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Check_Related_Contact_is_Active</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>No_Contact_Tagged</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Submitted_To__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Send_Email__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>add_Error_Message</targetReference>
+            </connector>
+            <label>No Contact Tagged</label>
+        </rules>
+        <rules>
+            <name>task_Completed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Completed</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Send_Email__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_add_Error_Message</targetReference>
+            </connector>
+            <label>task Completed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Related_Contact_is_Active</name>
+        <label>Check Related Contact is Active</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Get_Profile_Area_Manager</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Not_active</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Submitted_To__r.Is_Active__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Send_Email__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Error_Message</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Not active</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Send the onboarding email only when Send_Email__c has just become true (restores V19 behaviour).</description>
+        <name>Email_Gate</name>
+        <label>Email Gate</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>No Email</defaultConnectorLabel>
+        <rules>
+            <name>Send_Email_Requested</name>
+            <conditionLogic>1 AND (2 OR 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Send_Email__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Send_Email__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Send_Email__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_Related_Contact</targetReference>
+            </connector>
+            <label>Send Email Requested</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Fire the assigned-task Slack notification only when the Task is newly created or its Owner changes.</description>
+        <name>Notify_Gate</name>
+        <label>Notify Gate</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Email_Gate</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Notification</defaultConnectorLabel>
+        <rules>
+            <name>Notify_on_create_or_owner_change</name>
+            <conditionLogic>1 OR 2 OR 3</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record__Prior</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior</leftValueReference>
+                <operator>IsBlank</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.OwnerId</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.OwnerId</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>collect_Task_owner_Ids</targetReference>
+            </connector>
+            <label>Notify on create or owner change</label>
+        </rules>
+    </decisions>
+    <description>Send onboarding email and Task notification to the task assigned to in Slack</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>assigneefullName</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Owner:User.FirstName} &amp; &quot; &quot; &amp; {!$Record.Owner:User.LastName}</expression>
+    </formulas>
+    <formulas>
+        <name>ccEmails</name>
+        <dataType>String</dataType>
+        <expression>IF(
+  AND(
+    NOT(ISBLANK({!get_assignee_s_manager.Email})),
+    NOT(CONTAINS({!get_assignee_s_manager.Name}, {!$Label.SFX_MD_Name}))
+  ),
+  {!get_assignee_s_manager.Email},
+  &quot;&quot;
+)
+&amp;
+IF(
+  AND(
+    NOT(ISBLANK({!get_manager_s_Manager.Email})),
+    NOT(CONTAINS({!get_manager_s_Manager.Name}, {!$Label.SFX_MD_Name}))
+  ),
+  IF(
+    AND(
+      NOT(ISBLANK({!get_assignee_s_manager.Email})),
+      NOT(CONTAINS({!get_assignee_s_manager.Name}, {!$Label.SFX_MD_Name})) 
+    ),
+    &quot;,&quot; &amp; {!get_manager_s_Manager.Email},
+    {!get_manager_s_Manager.Email}
+  ),
+  &quot;&quot;
+)
+&amp;
+IF(
+  NOT(ISBLANK({!GetLocalNam.BDMPropelI__r.Email})),
+  IF(
+    OR(
+      AND(
+        NOT(ISBLANK({!get_assignee_s_manager.Email})),
+        NOT(CONTAINS({!get_assignee_s_manager.Name}, {!$Label.SFX_MD_Name}))
+      ),
+      AND(
+        NOT(ISBLANK({!get_manager_s_Manager.Email})),
+        NOT(CONTAINS({!get_manager_s_Manager.Name}, {!$Label.SFX_MD_Name}))
+      )
+    ),
+    &quot;,&quot; &amp; {!GetLocalNam.BDMPropelI__r.Email},
+    {!GetLocalNam.BDMPropelI__r.Email}
+  ),
+  &quot;&quot;
+)</expression>
+    </formulas>
+    <formulas>
+        <name>finalTable</name>
+        <dataType>String</dataType>
+        <expression>/* Row 1: Assignee */
+IF(
+    NOT(ISBLANK({!getAssignee.Name})),
+    &quot;&lt;tr&gt;&lt;td&gt;&quot; &amp; {!getAssignee.Name} &amp;
+    &quot;&lt;/td&gt;&lt;td&gt;&quot; &amp;
+        IF(
+            {!getAssignee.Profile.Id} = {!rmProfileId},
+            &quot;Regional Manager&quot;,
+            IF(
+                {!getAssignee.Profile.Id} = {!amProfileId},
+                &quot;Area Manager&quot;,
+                &quot;Territory Manager&quot;
+            )
+        ) &amp;
+    &quot;&lt;/td&gt;&lt;td&gt;&quot; &amp; {!getAssignee.MobilePhone} &amp;
+    &quot;&lt;/td&gt;&lt;td&gt;&lt;a href=&apos;mailto:&quot; &amp; {!getAssignee.Email} &amp; &quot;&apos;&gt;&quot; &amp; {!getAssignee.Email} &amp; &quot;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&quot;,
+    &quot;&quot;
+)
+
+/* If assignee is RM, stop here (no Row 2 or 3) */
+&amp;
+IF(
+    {!getAssignee.Profile.Id} = {!rmProfileId},
+    &quot;&quot;,
+
+    /* Row 2: Assignee&apos;s Manager */
+    IF(
+        OR(
+            ISBLANK({!get_assignee_s_manager.Name}),
+            {!get_assignee_s_manager.Name} = {!$Label.SFX_MD_Name}
+        ),
+        &quot;&quot;,
+        &quot;&lt;tr&gt;&lt;td&gt;&quot; &amp; {!get_assignee_s_manager.Name} &amp; &quot;&lt;/td&gt;&lt;td&gt;&quot; &amp;
+            IF(
+                {!getAssignee.Profile.Id} = {!amProfileId},
+                &quot;Regional Manager&quot;,
+                &quot;Area Manager&quot;
+            ) &amp;
+        &quot;&lt;/td&gt;&lt;td&gt;&quot; &amp; {!get_assignee_s_manager.MobilePhone} &amp;
+        &quot;&lt;/td&gt;&lt;td&gt;&lt;a href=&apos;mailto:&quot; &amp; {!get_assignee_s_manager.Email} &amp; &quot;&apos;&gt;&quot; &amp; {!get_assignee_s_manager.Email} &amp; &quot;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&quot;
+    )
+)
+
+/* Row 3: Manager’s Manager — show only when present and assignee is not AM/RM */
+&amp;
+IF(
+    OR(
+        ISBLANK({!get_manager_s_Manager.Name}),
+        {!get_manager_s_Manager.Name} = {!$Label.SFX_MD_Name},
+        {!getAssignee.Profile.Id} = {!amProfileId},
+        {!getAssignee.Profile.Id} = {!rmProfileId}
+    ),
+    &quot;&quot;,
+    &quot;&lt;tr&gt;&lt;td&gt;&quot; &amp; {!get_manager_s_Manager.Name} &amp; &quot;&lt;/td&gt;&lt;td&gt;Regional Manager&lt;/td&gt;&lt;td&gt;&quot; &amp;
+        {!get_manager_s_Manager.MobilePhone} &amp;
+    &quot;&lt;/td&gt;&lt;td&gt;&lt;a href=&apos;mailto:&quot; &amp; {!get_manager_s_Manager.Email} &amp; &quot;&apos;&gt;&quot; &amp; {!get_manager_s_Manager.Email} &amp; &quot;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&quot;
+)</expression>
+    </formulas>
+    <formulas>
+        <name>getDesignation</name>
+        <dataType>String</dataType>
+        <expression>IF(
+    {!getAssignee.Profile.Id} = {!rmProfileId},
+    &quot;Regional Manager&quot;,
+    IF(
+        {!getAssignee.Profile.Id} = {!amProfileId},
+        &quot;Area Manager&quot;,
+        &quot;Territory Manager&quot;
+    )
+)</expression>
+    </formulas>
+    <formulas>
+        <name>nameWithoutCode</name>
+        <dataType>String</dataType>
+        <expression>IF(
+  CONTAINS({!assigneefullName}, &quot;-&quot;),
+  LEFT({!assigneefullName}, FIND(&quot;-&quot;, {!assigneefullName}) - 1),
+  {!assigneefullName}
+)</expression>
+    </formulas>
+    <interviewLabel>Send Onboarding Emails {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Send Onboarding Email</label>
+    <loops>
+        <name>loop</name>
+        <label>loop</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <collectionReference>Get_Profile_Area_Manager</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>check_Profile</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>GetLocalNam</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>get_assignee_s_manager</name>
+        <label>get assignee’s manager</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>check_Assighnee_profile</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Owner:User.ManagerId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>User</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>ManagerId</queriedFields>
+        <queriedFields>Email</queriedFields>
+        <queriedFields>Name</queriedFields>
+        <queriedFields>Phone</queriedFields>
+        <queriedFields>ProfileId</queriedFields>
+        <queriedFields>MobilePhone</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>get_manager_s_Manager</name>
+        <label>get manager&apos;s Manager</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Send_Email_Action_1</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>get_assignee_s_manager.ManagerId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>User</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>ManagerId</queriedFields>
+        <queriedFields>Email</queriedFields>
+        <queriedFields>Name</queriedFields>
+        <queriedFields>Phone</queriedFields>
+        <queriedFields>MobilePhone</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Profile_Area_Manager</name>
+        <label>Get Profile Area Manager</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>loop</targetReference>
+        </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Area Manager</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Regional Manager</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <limit>
+            <numberValue>2.0</numberValue>
+        </limit>
+        <object>Profile</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Name</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>getAssignee</name>
+        <label>getAssignee</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>get_assignee_s_manager</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>User</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Email</queriedFields>
+        <queriedFields>Name</queriedFields>
+        <queriedFields>Phone</queriedFields>
+        <queriedFields>ProfileId</queriedFields>
+        <queriedFields>MobilePhone</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>GetLocalNam</name>
+        <label>GetLocalNam</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>getAssignee</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Account__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Account.ParentId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>National2__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Account_Team__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Notify_Gate</targetReference>
+        </connector>
+        <object>Task</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>amProfileId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>rmProfileId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>New Tasks Task Owner Ids</description>
+        <name>TaskOwnerIds</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

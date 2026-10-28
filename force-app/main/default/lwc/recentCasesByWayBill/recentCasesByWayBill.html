@@ -1,0 +1,29 @@
+<!-- 
+File Name          : recentCasesByWayBill
+Description        : This Component is used in the new Case Flow as an embedded component to show case list
+Author             : Deepak 
+Last Modified Date : 13/09/2021
+Last Modified By   :
+Modification Logs  
+Ver           Date              Author                Modification
+=====================================================================
+1.0         13/09/2021        Deepak                Initial Version
+-->
+<!-- sldsValidatorIgnore -->
+<template>
+        <div if:true={isSpinnerShow} id='spinner-info-section' class="slds-text-align_center slds-var-p-around_medium">
+                <lightning-spinner class="slds-split-view_container slds-p-top--large" variant="brand"
+                        alternative-text="Loading" size="small"></lightning-spinner>
+        </div>
+        <div id="table-section" if:false={isSpinnerShow}>
+                <h3 class="slds-p-bottom--x-small slds-text-heading_label-normal">Showing {recordLimit} Recent Cases
+                        With Waybill #{wayBillNumber}</h3>
+                <div if:true={caseData} style="height: 300px;">
+                        <lightning-datatable key-field="id" hide-checkbox-column data={caseData} columns={columns}>
+                        </lightning-datatable>
+                </div>
+                <div if:false={caseData} class="slds-text-align--center slds-text-color_destructive">
+                        No Case Found, Please Close.
+                </div>
+        </div>
+</template>

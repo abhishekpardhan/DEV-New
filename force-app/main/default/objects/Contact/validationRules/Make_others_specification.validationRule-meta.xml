@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Make_others_specification</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL( Designation__c , &apos;Others&apos;) &amp;&amp; ISBLANK( If_Others_Please_Specify__c)</errorConditionFormula>
+    <errorDisplayField>If_Others_Please_Specify__c</errorDisplayField>
+    <errorMessage>Please fill the information.</errorMessage>
+</ValidationRule>

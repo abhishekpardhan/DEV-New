@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Regional Retail Manager --></label>
+    <name>Regional_Retail_Manager__c</name>
+    <relationshipLabel><!-- Quotes (Regional Retail Manager) --></relationshipLabel>
+</CustomFieldTranslation>

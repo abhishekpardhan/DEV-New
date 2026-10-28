@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approval_Status__c</fullName>
+    <label>Approval Status</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pending from RM</fullName>
+                <default>false</default>
+                <label>Pending from RM</label>
+            </value>
+            <value>
+                <fullName>Pending from Corporate Head Credit/Retail</fullName>
+                <default>false</default>
+                <label>Pending from Corporate Head Credit/Retail</label>
+            </value>
+            <value>
+                <fullName>Rejected By RM</fullName>
+                <default>false</default>
+                <label>Rejected By RM</label>
+            </value>
+            <value>
+                <fullName>Rejected By Corporate Head Credit/Retail</fullName>
+                <default>false</default>
+                <label>Rejected By Corporate Head Credit/Retail</label>
+            </value>
+            <value>
+                <fullName>Approved By Corporate Head Credit/Retail</fullName>
+                <default>false</default>
+                <label>Approved By Corporate Head Credit/Retail</label>
+            </value>
+            <value>
+                <fullName>Approved By CCD</fullName>
+                <default>false</default>
+                <label>Approved By CCD</label>
+            </value>
+            <value>
+                <fullName>Rejected By CCD</fullName>
+                <default>false</default>
+                <label>Rejected By CCD</label>
+            </value>
+            <value>
+                <fullName>Pending From CCD</fullName>
+                <default>false</default>
+                <label>Pending From CCD</label>
+            </value>
+            <value>
+                <fullName>Submitted for Approval</fullName>
+                <default>false</default>
+                <label>Submitted for Approval</label>
+            </value>
+            <value>
+                <fullName>Approved by Regional Retail Head</fullName>
+                <default>false</default>
+                <label>Approved by Regional Retail Head</label>
+            </value>
+            <value>
+                <fullName>Rejected by Regional Retail Head</fullName>
+                <default>false</default>
+                <label>Rejected by Regional Retail Head</label>
+            </value>
+            <value>
+                <fullName>Pending with Regional Retail Head</fullName>
+                <default>false</default>
+                <label>Pending with Regional Retail Head</label>
+            </value>
+            <value>
+                <fullName>Not Submitted for Approval</fullName>
+                <default>false</default>
+                <label>Not Submitted for Approval</label>
+            </value>
+            <value>
+                <fullName>Approved By NAM1</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Approved By NAM1</label>
+            </value>
+            <value>
+                <fullName>Approved By Qrm</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Approved By Qrm</label>
+            </value>
+            <value>
+                <fullName>Approved By VP</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Approved By VP</label>
+            </value>
+            <value>
+                <fullName>Deffered</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Deffered</label>
+            </value>
+            <value>
+                <fullName>Pending From NAM1</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pending From NAM1</label>
+            </value>
+            <value>
+                <fullName>Pending From Qrm</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pending From Qrm</label>
+            </value>
+            <value>
+                <fullName>Pending for Review</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pending for Review</label>
+            </value>
+            <value>
+                <fullName>Pending from AM</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pending from AM</label>
+            </value>
+            <value>
+                <fullName>Pending from NSM</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pending from NSM</label>
+            </value>
+            <value>
+                <fullName>Pending from VP</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pending from VP</label>
+            </value>
+            <value>
+                <fullName>Pending with Quotation Team</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pending with Quotation Team</label>
+            </value>
+            <value>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Rejected</label>
+            </value>
+            <value>
+                <fullName>Rejected By AM</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Rejected By AM</label>
+            </value>
+            <value>
+                <fullName>Rejected By NAM1</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Rejected By NAM1</label>
+            </value>
+            <value>
+                <fullName>Rejected By Qrm</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Rejected By Qrm</label>
+            </value>
+            <value>
+                <fullName>Rejected By VP</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Rejected By VP</label>
+            </value>
+            <value>
+                <fullName>Resend To Central Quotation Team</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Resend To Central Quotation Team</label>
+            </value>
+            <value>
+                <fullName>Sent to Customer</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sent to Customer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

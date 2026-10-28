@@ -1,0 +1,758 @@
+<!--
+ * Description		:		Future calss for calling google Distance Metrix API wile event CheckIn
+ * Created By       :       Shubham Girdhar
+ * Created Date     :       10th july, 2019
+ * Release          :       17th july, 2019
+ * Last Modified on :       4th September, 2023
+ * Jira Ticket      :       https://safexpress.atlassian.net/browse/SD-403
+ -->
+ <aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" controller="PropelI_PortfolioMgnmt_Controller" >
+    <aura:handler name="init" value="{!this}" action="{!c.doinit}"/>
+    <aura:attribute name="lstDepartment" type="String[]"/>
+    <aura:attribute name="lstusers" type="object[]"/>
+    <aura:attribute name="SearchBy" type="String[]"/>
+    <aura:attribute name="PortfolioType" type="String[]"/>
+    <aura:attribute name="Userdetail" type="object"/>
+    <aura:attribute name="WrapperList" type="PropelI_PortfolioMgnmt_Controller.wrap_MSAPortfolioRlNAN[]"/>
+    <aura:attribute name="WrapperListExisting" type="PropelI_PortfolioMgnmt_Controller.wrap_MSAPortfolioRlNAN[]"/>
+    <aura:attribute name="SubWrapperList" type="PropelI_PortfolioMgnmt_Controller.wrap_SCMSA[]"/>
+    <aura:attribute name="SubWrapperListExisting" type="PropelI_PortfolioMgnmt_Controller.wrap_SCMSA[]"/>
+    <aura:attribute name="SearchedValue" type="string"/>
+    <aura:attribute name="SelectedSearchBy" type="string"/>
+    <aura:attribute name="SelectedPorfolioType" type="string"/>
+    <aura:attribute name="Relationship" type="Boolean" default="true"/>
+    <aura:attribute name="Submission" type="Boolean" default="false"/>
+    <aura:attribute name="mapRelationship" type="Map" default="{}"/>
+    <aura:attribute name="mapCCD" type="Map" default="{}"/>
+    <aura:attribute name="mapNAM" type="Map" default="{}"/>
+    <aura:attribute name="mapQRM" type="Map" default="{}"/>
+    <aura:attribute name="mapRM" type="Map" default="{}"/>
+    <aura:attribute name="mapCRS" type="Map" default="{}"/>
+    <aura:attribute name="mapSubmission" type="Map" default="{}"/>
+    <aura:attribute name="mapCollection" type="Map" default="{}"/>
+    <aura:attribute name="SearchBtn" type="Boolean" default="true"/>
+    <aura:attribute name="noResultExistRelExi" type="Boolean" default="false"/>
+    <aura:attribute name="noResultExistSubExi" type="Boolean" default="false"/>
+    <aura:attribute name="noResultExistRelNew" type="Boolean" default="false"/>
+    <aura:handler event="aura:waiting" action="{!c.showSpinner}"/>
+    <aura:handler event="aura:doneWaiting" action="{!c.hideSpinner}"/>
+    <aura:attribute name="spinner" type="boolean" default="FALSE"/>
+    
+    <aura:attribute name="pageSize" type="Integer" default="10"/> 
+    <aura:attribute name="page" type="Integer" default="1"/> 
+    <aura:attribute name="totalPages" type="Integer" default="0"/> 
+    <aura:attribute name="startIdx" type="Integer" default="0"/> 
+    <aura:attribute name="endIdx" type="Integer" default="0"/> 
+    <aura:attribute name="totalRecords" type="Integer" default="0"/>
+
+    <aura:attribute name="isNext" type="boolean"/> 
+    <aura:attribute name="isPrev" type="boolean"/> 
+    
+	<aura:attribute name="pageSizeSubCol" type="Integer" default="10"/> 
+    <aura:attribute name="pageSubCol" type="Integer" default="1"/> 
+    <aura:attribute name="totalPagesSubCol" type="Integer" default="0"/> 
+    <aura:attribute name="startIdxSubCol" type="Integer" default="0"/> 
+    <aura:attribute name="endIdxSubCol" type="Integer" default="0"/> 
+    <aura:attribute name="totalRecordsSubCol" type="Integer" default="0"/> 
+    
+    <aura:attribute name="isNextSubCol" type="boolean"/> 
+    <aura:attribute name="isPrevSubCol" type="boolean"/> 
+    
+    <!-- Component Heading -->    
+    
+    <!-- Start Spinner -->
+    <aura:if isTrue="{!v.spinner}">
+        <div aura:id="spinnerId" class="slds-spinner_container">
+            <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                <span class="slds-assistive-text">Loading...</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </aura:if>
+    <!-- End Spinner -->
+    
+    <!-- Start Spinner -->
+    <div style="background-color:White; border-radius:.55rem;width: 1240px;">
+        <div class="slds-page-header" style="border-radius: .55rem;">
+            <div class="slds-media">
+                <div class="slds-media__body ">
+                    <lightning:icon iconName="standard:event" alternativeText="Portfolio Management" title="Portfolio Management" class="slds-float_left"/>
+                    <h1 class="slds-page-header__title slds-text-heading_medium slds-truncate slds-align-middl slds-p-left_small " title="Portfolio Management"><strong>Propel-I Portfolio Management</strong></h1>
+                </div>
+                <!--Portfolio report button added by Shubham Girdhar-->
+                <a class="slds-button slds-button_brand" href="http://analytics.safexpress.com/spotfire" target="_blank">Portfolio Report</a>
+                
+            </div>
+        </div>
+        
+        <div class="slds-form slds-form_compound" >
+            <!-- Start of Page UI : Main div -->
+            <div class="slds-form-element__group">
+                <!-- Start of Filter 1st row -->
+                <div class="slds-form-element__row slds-align_absolute-center"> 
+                    <div class="slds-form-element slds-size--1-of-2" style="width:25%;margin-top: 10px;">                        
+                        <label class="slds-form-element__label"  for="input-id-01" style="font-size: 15px;">
+                            <abbr class="slds-required" title="required">*</abbr><strong>Department</strong></label>
+                        <div class="slds-form-element__control">
+                            <ui:inputSelect class="slds-input" aura:id="dept" change="{!c.department}">
+                                <ui:inputSelectOption text="" label="Select Department" value="true"/>
+                                <aura:iteration items="{!v.lstDepartment}" var="dep">
+                                    <ui:inputSelectOption text="{!dep}" label="{!dep}" />
+                                </aura:iteration>
+                            </ui:inputSelect>
+                        </div>
+                    </div>
+                    <div class="slds-form-element slds-size--1-of-2" style="width:25%;margin-top: 10px;">                        
+                        <label class="slds-form-element__label" for="input-id-01" style="font-size: 15px;">
+                            <abbr class="slds-required" title="required">*</abbr><strong>User</strong></label>
+                        <div class="slds-form-element__control">
+                            <ui:inputSelect class="slds-input" aura:id="username" change="{!c.userselect}">
+                                <ui:inputSelectOption text="" label="Select User" value="true"/>
+                                <aura:iteration items="{!v.lstusers}" var="u">                            
+                                    <ui:inputSelectOption text="{!u.Id}" label="{!u.Name+' ('+u.AD_Id__c+')'}" />
+                                </aura:iteration>
+                            </ui:inputSelect>
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- End of Filter 1st row -->
+                
+                <!-- Start of Filter 2nd row -->
+                <div class="slds-form-element__row slds-align_absolute-center"> 
+                    <div class="slds-form-element slds-size--1-of-4" style="margin-left: 73px;margin-top: 10px;">                        
+                        <label class="slds-form-element__label"  for="input-id-01" style="font-size: 15px;">
+                            <!-- <abbr class="slds-required" title="required">*</abbr> -->
+                            <strong>Search By</strong>
+                        </label> 
+                        <div class="slds-form-element__control">
+                            <ui:inputSelect class="slds-input" aura:id="searchBy" change="{!c.SearchBy}">
+                                <ui:inputSelectOption text="" label="None" value="true"/>
+                                <aura:iteration items="{!v.SearchBy}" var="dep">
+                                    <ui:inputSelectOption text="{!dep}" label="{!dep}" />
+                                </aura:iteration>
+                            </ui:inputSelect>
+                        </div> 
+                    </div>
+                    <div class="slds-form-element slds-size--1-of-4" style="width:29%;margin-top: 10px;">                        
+                        <label class="slds-form-element__label"  for="input-id-01" style="font-size: 15px;">
+                            <!-- <abbr class="slds-required" title="required">*</abbr> -->
+                            <strong>Search Here</strong>
+                        </label>
+                        <label class="slds-form-element__label"  for="input-id-01" style="font-size: 13px;">
+                            (Upto 10 comma separated values)
+                        </label>
+                        <div class="slds-form-element__control">
+                            <ui:inputText placeholder="Insert MSA/SFX/Rate Card" class="slds-input" aura:id="searcHere" change="{!c.SearchHere}"/>
+                        </div>
+                    </div>
+                    <div class="slds-form-element slds-size--1-of-4" style="width:20%;margin-top: 10px;">                        
+                        <label class="slds-form-element__label" for="input-id-01" style="font-size: 15px;">
+                            <!-- <abbr class="slds-required" title="required">*</abbr> -->
+                            <strong>Portfolio Type</strong>
+                        </label>
+                        <div class="slds-form-element__control">
+                            <ui:inputSelect class="slds-input" aura:id="PortfolioType" change="{!c.portfolioType}">
+                                <aura:iteration items="{!v.PortfolioType}" var="por">                            
+                                    <ui:inputSelectOption text="{!por}" label="{!por}"/>
+                                </aura:iteration>
+                            </ui:inputSelect>
+                        </div>
+                    </div>
+                    
+                    <div class="slds-form-element slds-size--1-of-4" style="width:20%; margin-top:33px">  
+                        <lightning:button  variant="brand" label="Search" title="Brand action" onclick="{! c.Search }" disabled="{!v.SearchBtn}"/>
+                    </div>
+                </div>
+                <!-- End of Filter 2nd row -->
+                <br/>
+                
+                <!-- Start of User information bar -->
+                <div style="width:100%; padding:0 2% 0 2%;">
+                    <div  class="slds-card" style="height:25px;">
+                        <div style="height:25px">
+                            <div style="padding: 2px 0px 0px 40px; font-size:1.0em; width:33%; float:left ">
+                                <b style="float:left">Name: &nbsp;&nbsp;</b><p>{!v.Userdetail.Name}</p>
+                            </div>
+                            <div style="padding: 2px 0px 0px 80px; font-size:1.0em; width:33%; float:left ">
+                                <b style="float:left">Contact No.:&nbsp;&nbsp;</b><p>{!v.Userdetail.MobilePhone}</p>
+                            </div>
+                            <div style="padding: 2px 0px 0px 65px; font-size:1.0em; width:33%; float:left ">
+                                <b style="float:left">Email:&nbsp;&nbsp;</b><p>{!v.Userdetail.Email}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of User information bar -->
+                <br/>
+               
+                
+                
+                <!--View One-->
+                <aura:if isTrue="{!v.Relationship}"> 
+                    <div class="slds-p-horizontal_large">
+                        <!--Table start here-->
+                        <!-- Existing table -->
+                        <div style="width:100%">
+                            <h2 style="font-weight:bold;font-size: 20px; width:50%; float:left">New Customers</h2>
+                        </div>
+                        <table class="slds-table slds-table--bordered slds-table_striped">
+                            <thead>
+                                <tr class="slds-text-title--caps">
+                                    <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                                        <span class="slds-truncate" title="Name">Customer Details</span>      
+                                    </th>
+                                    <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                                        <span class="slds-truncate" title="Name">SFX</span>      
+                                    </th>
+                                    <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                                        <span class="slds-truncate" title="Name">RC</span>      
+                                    </th>
+                                    <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                                        <span class="slds-truncate" title="Name">Billing level</span>      
+                                    </th>
+                                    <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                                        <span class="slds-truncate" title="Name">Relationship</span>      
+                                    </th>
+                                    <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                                        <span class="slds-truncate" title="Name">CCD</span>      
+                                    </th>
+                                    <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                                        <span class="slds-truncate" title="Name">NAM</span>      
+                                    </th>
+                                    <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                                        <span class="slds-truncate" title="Name">QRM</span>      
+                                    </th>
+                                    <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                                        <span class="slds-truncate" title="Name">RM</span>      
+                                    </th>
+                                    <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                                        <span class="slds-truncate" title="Name">CRS</span>      
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                        <div style= "height:10px"></div>
+                        <aura:iteration items="{!v.WrapperList}" var="rel">
+                            <lightning:accordion aura:id="accordion" class="" allowMultipleSectionsOpen="true" >
+                                <!-- Section A -->
+                                <lightning:accordionSection name="{!rel.MSA}" label="{!rel.MSA+':'+rel.Name}">
+                                    <aura:set attribute="actions"> 
+                                        <div class="" style="margin-right:20%">{!rel.Billing_Level}</div>
+                                        <div class="slds-grid slds-wrap" style="width: 40.5%;">
+                                            <div class="slds-col" style="margin-left: 3%;">
+                                                <ui:inputCheckbox class="green-checkbox uiInput uiInputCheckbox uiInput--default uiInput--checkbox"  name="{!rel.MSA}"  aura:id="CCD"  value="{!rel.CCD}" change="{!c.checkCode}" disabled="{!and(rel.isSelfCCDAssigned == false,rel.isCCDAssigned == true)}"/> <!-- onchange="{!c.checkCode}" -->
+                                            </div>
+                                            <div class="slds-col" style="margin-left: 1%;">
+                                                <ui:inputCheckbox class="green-checkbox uiInput uiInputCheckbox uiInput--default uiInput--checkbox" name="{!rel.MSA}" aura:id="NAM" value="{!rel.NAM}" change="{!c.checkCode}" disabled="{!and(rel.isNAMSelfAsgnd == false,rel.isNamAssigned == true)}" />
+                                            </div>
+                                            <div class="slds-col" style="margin-left: 2%;">
+                                                <ui:inputCheckbox class="green-checkbox uiInput uiInputCheckbox uiInput--default uiInput--checkbox"  name="{!rel.MSA}" aura:id="QRM" value="{!rel.QRM}" change="{!c.checkCode}" disabled="{!and(rel.isSelfQRMAssigned == false,rel.isQRMAssigned == true)}" />
+                                            </div>
+                                            <div class="slds-col">
+                                                <ui:inputCheckbox class="green-checkbox uiInput uiInputCheckbox uiInput--default uiInput--checkbox"  name="{!rel.MSA}" aura:id="RM" value="{!rel.RM}" change="{!c.checkCode}" disabled="{!and(rel.isSelfRMAssigned == false,rel.isRMAssigned == true)}" />
+                                            </div>
+                                            <div class="slds-col " style="margin-right: -3%;">
+                                                <ui:inputCheckbox class="green-checkbox uiInput uiInputCheckbox uiInput--default uiInput--checkbox" name="{!rel.MSA}" aura:id="CRS" value="{!rel.CRS}" change="{!c.checkCode}" disabled="{!and(rel.isSelfCRSAssigned == false,rel.isCRSAssigned == true)}" />
+                                            </div>
+                                        </div>
+                                    </aura:set>
+                                    <aura:set attribute="body">
+                                        <!--Section B-->
+                                        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1" >
+                                            <aura:iteration items="{!rel.lstSFXRCBranches}" var="sfx">
+                                                <lightning:accordion aura:id="accordion" class="" allowMultipleSectionsOpen="true" >
+                                                    <div  class="slds-card" style="width: 1145px;">
+                                                        <lightning:accordionSection name="{!sfx.SFX}" class="slds-m-left_xx-large sfxrelationship" label="{!sfx.SFX}">
+                                                            <aura:set attribute="body">
+                                                                <!--Section C-->
+                                                                <aura:iteration items="{!sfx.lstRT_BranchesPortfolios}" var="ratecard">
+                                                                    <div  class="slds-card" style="margin-top: 0px; width:100%">
+                                                                        <div style="margin-left:5%; width:32%;float:left;">
+                                                                            {!ratecard.RTBranchesCode}
+                                                                        </div>
+                                                                        <div style="margin-left:56px; float:left">
+                                                                            <ui:inputCheckbox class="slds-m-right_xx-large green-checkbox" name="{!ratecard.RTBranchesCode+':@'+ ratecard.assignedBranchId + ':' + sfx.SFX+':'+rel.MSA+':'+ratecard.branchId}" 
+                                                                                              aura:id="Relationship" value="{!ratecard.Relationship}" change="{!c.checkCode}" 
+                                                                                              disabled="{!and(ratecard.isRlAssigned == false,ratecard.isRelAssigned == true)}" />
+                                                                            <!--{!ratecard.BillingById+':'+sfx.SFX +':'+rel.MSA}
+                                                                                {!ratecard.RTBranchesCode+':'+sfx.SFX+':'+rel.MSA}-->
+                                                                        </div>
+                                                                        <br/>
+                                                                    </div>
+                                                                </aura:iteration> 
+                                                            </aura:set>
+                                                        </lightning:accordionSection>
+                                                    </div>
+                                                </lightning:accordion>
+                                            </aura:iteration>
+                                        </div>
+                                    </aura:set>
+                                </lightning:accordionSection>
+                            </lightning:accordion>
+                        </aura:iteration>
+                        <br/>
+                        <br/>
+                        
+                        <!--Existing Customer for Relationship/National -->
+                        <div style="width:100%">
+                            <h2 style="font-weight:bold;font-size: 20px; width:50%; float:left">Existing Customers</h2>
+                        </div>
+                        <table class="slds-table slds-table--bordered slds-table_striped">
+                            <thead>
+                                <tr class="slds-text-title--caps">
+                                    <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                                        <span class="slds-truncate" title="Name">Customer Details</span>      
+                                    </th>
+                                    <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                                        <span class="slds-truncate" title="Name">SFX</span>      
+                                    </th>
+                                    <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                                        <span class="slds-truncate" title="Name">RC</span>      
+                                    </th>
+                                    <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                                        <span class="slds-truncate" title="Name">Billing level</span>      
+                                    </th>
+                                    <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                                        <span class="slds-truncate" title="Name">Relationship</span>      
+                                    </th>
+                                    <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                                        <span class="slds-truncate" title="Name">CCD</span>      
+                                    </th>
+                                    <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                                        <span class="slds-truncate" title="Name">NAM</span>      
+                                    </th>
+                                    <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                                        <span class="slds-truncate" title="Name">QRM</span>      
+                                    </th>
+                                    <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                                        <span class="slds-truncate" title="Name">RM</span>      
+                                    </th>
+                                    <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                                        <span class="slds-truncate" title="Name">CRS</span>      
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                        <div style= "height:10px"></div>
+                        <!--Section A-->
+                        <div>
+                            <div class="slds-scrollable_y" style="max-height:225px;">
+                                <aura:iteration items="{!v.WrapperListExisting}" var="rel">
+                                    <lightning:accordion aura:id="accordion" class="" allowMultipleSectionsOpen="true" >
+                                        <lightning:accordionSection name="{!rel.MSA}" label="{!rel.MSA+':'+rel.Name}">
+                                            <aura:set attribute="actions"> 
+                                                <div class="" style="margin-right:20%">{!rel.Billing_Level}</div>
+                                                <div class="slds-grid slds-wrap" style="width: 38.5%;">
+                                                    <div class="slds-col">
+                                                        <ui:inputCheckbox class="green-checkbox uiInput uiInputCheckbox uiInput--default uiInput--checkbox" name="{!rel.MSA +':'+ rel.MSA}"  aura:id="CCD"  value="{!rel.CCD}" change="{!c.checkCode}" disabled="{!and(rel.isSelfCCDAssigned == false,rel.isCCDAssigned == true)}" />  <!-- onchange="{!c.checkCode}" -->
+                                                    </div>
+                                                    <div class="slds-col" style="margin-left: 1%;">
+                                                        <ui:inputCheckbox class="green-checkbox uiInput uiInputCheckbox uiInput--default uiInput--checkbox" name="{!rel.MSA}" aura:id="NAM" value="{!rel.NAM}" change="{!c.checkCode}" disabled="{!and(rel.isNAMSelfAsgnd == false,rel.isNamAssigned == true)}" />    
+                                                    </div>
+                                                    <div class="slds-col" style="margin-left: 3%;">
+                                                        <ui:inputCheckbox class="green-checkbox uiInput uiInputCheckbox uiInput--default uiInput--checkbox" name="{!rel.MSA}" aura:id="QRM" value="{!rel.QRM}" change="{!c.checkCode}" disabled="{!and(rel.isSelfQRMAssigned == false,rel.isQRMAssigned == true)}" />
+                                                    </div>
+                                                    <div class="slds-col">
+                                                        <ui:inputCheckbox class="green-checkbox uiInput uiInputCheckbox uiInput--default uiInput--checkbox" name="{!rel.MSA}" aura:id="RM" value="{!rel.RM}" change="{!c.checkCode}" disabled="{!and(rel.isSelfRMAssigned == false,rel.isRMAssigned == true)}" />
+                                                    </div>
+                                                    <div class="slds-col" style="margin-right: -6%;">
+                                                        <ui:inputCheckbox class="green-checkbox uiInput uiInputCheckbox uiInput--default uiInput--checkbox" name="{!rel.MSA}" aura:id="CRS" value="{!rel.CRS}" change="{!c.checkCode}" disabled="{!and(rel.isSelfCRSAssigned == false,rel.isCRSAssigned == true)}" />
+                                                    </div>
+                                                </div>
+                                            </aura:set>
+                                            <aura:set attribute="body">
+                                                <!--Section B-->
+                                                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1" >
+                                                    <aura:iteration items="{!rel.lstSFXRCBranches}" var="sfx">
+                                                        <lightning:accordion aura:id="accordion" class="" allowMultipleSectionsOpen="true" >
+                                                            <div  class="slds-card" style="width: 1136px;">
+                                                                <lightning:accordionSection name="{!sfx.SFX}" class="slds-m-left_xx-large slds-p-left_xx-large sfxExsRelationship" label="{!sfx.SFX}">
+                                                                    <aura:set attribute="body">
+                                                                        <!--Section C-->
+                                                                        <aura:iteration items="{!sfx.lstRT_BranchesPortfolios}" var="ratecard">
+                                                                            <div  class="slds-card" style="margin-top: 0px; width:100%">
+                                                                                <div style="margin-left:6%; width:30%;float:left;">
+                                                                                    {!ratecard.RTBranchesCode}
+                                                                                </div>
+                                                                                <div style="margin-left:7%; width:20%; float:left">
+                                                                                    <ui:inputCheckbox class="slds-m-right_xx-large green-checkbox" 
+                                                                                                      name="{!ratecard.RTBranchesCode+':@'+ ratecard.assignedBranchId + ':' + sfx.SFX+':'+rel.MSA+':'+ratecard.branchId}"
+                                                                                                      aura:id="Relationship" 
+                                                                                                      value="{!ratecard.Relationship}" 
+                                                                                                      change="{!c.checkCode}"  
+                                                                                                      disabled="{!and(ratecard.isRlAssigned == false,ratecard.isRelAssigned == true)}" />
+                                                                                </div>
+                                                                                <br/>
+                                                                            </div>
+                                                                        </aura:iteration> 
+                                                                    </aura:set>
+                                                                </lightning:accordionSection>
+                                                            </div>
+                                                        </lightning:accordion>
+                                                    </aura:iteration>
+                                                </div>
+                                            </aura:set>
+                                        </lightning:accordionSection>
+                                    </lightning:accordion>
+                                </aura:iteration>
+                            </div>
+                        </div>
+                        <div class="slds-grid slds-wrap" style="float: right;margin-top: 2rem;">  
+                            <aura:if isTrue="{!and((v.WrapperListExisting.length > 0), v.Relationship)}">
+                                <p >(page {! v.page} of {!v.totalPages}) | showing {! v.startIdx} to {!v.endIdx} of {!v.totalRecords}</p>
+                                <lightning:buttonIcon iconName="utility:jump_to_left" variant="bare" size="large" onclick="{! c.moveFirst }" disabled="{!v.isPrev}" title="First Page" />
+                                <lightning:buttonIcon iconName="utility:chevronleft" variant="bare" size="large" onclick="{! c.prevClick }" disabled="{!v.isPrev}" title="Prev" />
+                                <lightning:buttonIcon iconName="utility:chevronright" variant="bare" size="large" onclick="{! c.nextClick }" disabled="{!v.isNext}" title="Next" />
+                                <lightning:buttonIcon iconName="utility:jump_to_right" variant="bare" size="large" onclick="{! c.moveLast }" disabled="{!v.isNext}" title="Last Page" />
+                            </aura:if>
+                        </div>
+                        <br/>
+                        <br/>
+                        
+                        <aura:if isTrue="{!and((v.WrapperListExisting.length > 0), v.Relationship)}">
+                            <div align="center" style="margin-left: 300px;">
+                                <lightning:button label="Assign" variant="brand" onclick="{!c.handleAssign}"/>
+                            </div>
+                            <aura:set attribute="else">
+                                <div align="center" style="">
+                                    <lightning:button label="Assign" variant="brand" onclick="{!c.handleAssign}"/>
+                                </div>
+                            </aura:set>
+                        </aura:if>
+                        <br/>
+                    </div>  
+                </aura:if>
+                
+                <!--View Two Submittion/Collection-->
+                <aura:if isTrue="{!v.Submission}"> 
+                    <div class="slds-p-horizontal_large">
+                        <!--Table start here-->
+                        <!-- Existing table -->
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_12-of-12"><h2 style="font-weight:bold;font-size: 20px; width:50%; float:left">New Customers</h2></div>
+                        </div>
+                        <table class="slds-table slds-table--bordered slds-grid slds-wrap" style="width: 0%;margin-left: 1.5%;">
+                            <thead>
+                                <div class="slds-card" style="width: 114%;margin-left: -2%;padding: 7px 0px 0px 0px;background-color: #f3f3f3;">
+                                    <tr class="slds-text-title--caps">
+                                        &nbsp;
+                                        <th scope="col" style="font-weight:bold; " class="slds-cell-wrap">
+                                            <span class="slds-truncate" title="Name">CUSTOMER DETAILS</span>      
+                                        </th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                                        <th scope="col" style="font-weight:bold;" class="slds-cell-wrap">
+                                            <span class="slds-truncate" title="Name">BOOKING BRANCH</span>      
+                                        </th>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <th scope="col" style="font-weight:bold;" class="slds-cell-wrap">
+                                            <span class="slds-truncate" title="Name">Submission Branch</span>      
+                                        </th>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <th scope="col" style="font-weight:bold;" class="slds-cell-wrap">
+                                            <span class="slds-truncate" title="Name">Collection Branch</span>      
+                                        </th>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <th scope="col" style="font-weight:bold;" class="slds-cell-wrap">
+                                            <span class="slds-truncate" title="Name">Submission</span>      
+                                        </th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <th scope="col" style="font-weight:bold;" class="slds-cell-wrap">
+                                            <span class="slds-truncate" title="Name">Collection</span>      
+                                        </th>
+                                    </tr>
+                                </div>
+                            </thead> 
+                            
+                            <!--Section A-->
+                            <tbody>
+                                <div class="slds-grid slds-wrap" style="margin-left: -16px;margin-top: 5px;width: 1185px;">
+                                    <div class="slds-col slds-size_12-of-12">
+                                        <aura:iteration items="{!v.SubWrapperList}" var="rel">
+                                            <lightning:accordion aura:id="accordion" class="" allowMultipleSectionsOpen="true" >
+                                                <div class="">
+                                                    <lightning:accordionSection name="A" label="{!rel.MSA+':'+rel.Name}">
+                                                        <aura:set attribute="body">
+                                                            <!--Section B-->
+                                                            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1" >
+                                                                <aura:iteration items="{!rel.lstwrap_SCSFX}" var="sfx">
+                                                                    <div class="slds-grid slds-wrap">
+                                                                        <div class="slds-col slds-size_12-of-12">
+                                                                            <lightning:accordion aura:id="accordion" class="slds-size_3-of-3" allowMultipleSectionsOpen="true" >
+                                                                                <div class="slds-card" style="width: 1145px;">
+                                                                                    <lightning:accordionSection name="A" class="slds-p-left_xx-large" label="{!sfx.SFX +':'+sfx.Billing_level}">  <!-- !sfx.Billing_level-->
+                                                                                        <!--  {!sfx.SFX} -->
+                                                                                        <aura:set attribute="body">
+                                                                                            <!--Section C-->
+                                                                                            <div class="slds-card" style="margin-left: 19%;">
+                                                                                                <aura:iteration items="{!sfx.lstwrap_SCMapping}" var="ratecard">
+                                                                                                    <tr class="slds-hint-parent">
+                                                                                                        <td scope="row" class="slds-cell-wrap">
+                                                                                                            <div class="slds-truncate slds-align_absolute-center" style="width: 205px;padding: 0px 0px 4px 0px;">{!ratecard.BookingBranch}</div>
+                                                                                                        </td>
+                                                                                                        <td scope="row" class="slds-cell-wrap">
+                                                                                                            <div class="slds-truncate slds-align_absolute-center" style="width: 220px;padding: 0px 0px 4px 0px;">{!ratecard.SubmissionBranch}</div>
+                                                                                                        </td>
+                                                                                                        <td scope="row" class="slds-cell-wrap">
+                                                                                                            <div class="slds-truncate slds-align_absolute-center" style="width: 200px;padding: 0px 0px 4px 0px;">{!ratecard.CollectionBranch}</div>
+                                                                                                        </td>
+                                                                                                        <td scope="row" class="slds-cell-wrap">
+                                                                                                            <div class="slds-truncate slds-align_absolute-center" style="width: 105px;">
+                                                                                                                <ui:inputCheckbox labelClass="{!ratecard.SubmissionBranch+'::'+sfx.SFX +'::'+rel.MSA}" class="green-checkbox" name="{!ratecard.BillingById+':'+sfx.SFX +':'+rel.MSA}" 
+                                                                                                                                   
+                                                                                                                                  aura:id="Submission" value="{!ratecard.isSubSelfAssigned}" change="{!c.checkCode}" 
+                                                                                                                                  disabled="{!and(ratecard.isSubSelfAssigned == false,ratecard.isSubmissionAssigned == true)}" />
+                                                                                                            </div>
+                                                                                                        </td>
+                                                                                                        <td scope="row" class="slds-cell-wrap slds-align_absolute-center">
+                                                                                                            <div class="slds-truncate slds-align_absolute-center" style="width: 97px;padding: 9px;">
+                                                                                                                <ui:inputCheckbox labelClass="{!ratecard.CollectionBranch+'::'+sfx.SFX +'::'+rel.MSA}" class="green-checkbox" name="{!ratecard.BillingById+':'+sfx.SFX +':'+rel.MSA}" aura:id="Collection" 
+                                                                                                                                  value="{!ratecard.isCollSelfAssigned}" change="{!c.checkCode}" disabled="{!and(ratecard.isCollSelfAssigned == false,ratecard.isCollectionAssigned == true)}" />
+                                                                                                            </div>
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                </aura:iteration>
+                                                                                                <!--Rate Card Itration-->
+                                                                                                <aura:iteration items="{!sfx.lstwrap_SCBranches}" var="ratecard1">
+                                                                                                    <lightning:accordion aura:id="accordion" class="slds-size_3-of-3" allowMultipleSectionsOpen="true" >
+                                                                                                        <div class="slds-card" style="margin-left: -23%;">
+                                                                                                            <lightning:accordionSection name="A" class="slds-m-left_x-large" label="{!ratecard1.Service+':'+ratecard1.RateCard}"> 
+                                                                                                                <aura:set attribute="actions"> 
+                                                                                                                    <!-- {!ratecard.RateCard} -->
+                                                                                                                    <!--{!ratecard.BookingBranch} <br/>{!ratecard.CollectionBranch} -->
+                                                                                                                </aura:set>
+                                                                                                                <aura:set attribute="body">
+                                                                                                                    <div class="slds-card" style="margin-left: 175px;width: 85%;">
+                                                                                                                        <aura:iteration items="{!ratecard1.lstWrapSCMapping}" var="maping">
+                                                                                                                            <tr class="slds-hint-parent">
+                                                                                                                                <!-- <td scope="row" class="slds-cell-wrap">
+                                                                                                                                     <div class="slds-truncate">{!maping.Billing_Level__c}</div>
+                                                                                                                                </td> -->
+                                                                                                                                <td scope="row" class="slds-cell-wrap">
+                                                                                                                                    <div class="slds-truncate slds-align_absolute-center" style="width: 170px;padding: 0px 0px 4px 20px;">{!maping.BookingBranch}</div>
+                                                                                                                                </td>
+                                                                                                                                <td scope="row" class="slds-cell-wrap">
+                                                                                                                                    <div class="slds-truncate slds-align_absolute-center" style="width: 245px;padding: 0px 0px 4px 15px;">{!maping.SubmissionBranch}</div>
+                                                                                                                                </td>
+                                                                                                                                <td scope="row" class="slds-cell-wrap">
+                                                                                                                                    <div class="slds-truncate slds-align_absolute-center" style="width: 175px;padding: 0px 15px 4px 0px;">{!maping.CollectionBranch}</div>
+                                                                                                                                </td>
+                                                                                                                                <td scope="row" class="slds-cell-wrap">
+                                                                                                                                    <div class="slds-truncate slds-align_absolute-center" style="width: 120px;">
+                                                                                                                                        <ui:inputCheckbox class="green-checkbox" name="{!maping.BillingById+':'+ratecard1.RateCard+':'+sfx.SFX +':'+rel.MSA}" aura:id="Submission" value="{!maping.isSubSelfAssigned}" change="{!c.checkCode}" disabled="{!and(maping.isSubSelfAssigned == false,maping.isSubmissionAssigned == true)}" />
+                                                                                                                                    </div>
+                                                                                                                                </td>
+                                                                                                                                <td scope="row" class="slds-cell-wrap slds-align_absolute-center">
+                                                                                                                                    <div class="slds-truncate slds-align_absolute-center" style="width: 85px;padding: 9px;">
+                                                                                                                                        <ui:inputCheckbox class="green-checkbox" name="{!maping.BillingById+':'+ratecard1.RateCard+':'+sfx.SFX +':'+rel.MSA}" aura:id="Collection" value="{!maping.isCollSelfAssigned}" change="{!c.checkCode}" disabled="{!and(maping.isCollSelfAssigned == false,maping.isCollectionAssigned == true)}" />
+                                                                                                                                    </div>
+                                                                                                                                </td>
+                                                                                                                            </tr>
+                                                                                                                        </aura:iteration> 
+                                                                                                                    </div>
+                                                                                                                </aura:set> 
+                                                                                                            </lightning:accordionSection>
+                                                                                                        </div>
+                                                                                                    </lightning:accordion> 
+                                                                                                </aura:iteration>
+                                                                                            </div>
+                                                                                        </aura:set>
+                                                                                    </lightning:accordionSection>
+                                                                                </div>
+                                                                            </lightning:accordion>
+                                                                        </div>
+                                                                    </div>
+                                                                </aura:iteration>
+                                                            </div>
+                                                        </aura:set>
+                                                    </lightning:accordionSection>
+                                                </div>
+                                            </lightning:accordion>
+                                        </aura:iteration>
+                                    </div>
+                                </div>
+                            </tbody>
+                        </table>
+                        <!-- </div>-->
+                        <br/>
+                        <br/>
+                        
+                        <!--Existing Customer-->
+                        <div style="width:100%">
+                            <!--<aura:if isTrue="{!not(empty(v.SubWrapperListExisting))}">-->
+                            <!--<div class="slds-p-horizontal_large">-->
+                            <div class="slds-grid slds-wrap">
+                                <div class="slds-col slds-size_12-of-12"><h2 style="font-weight:bold;font-size: 20px; width:50%; float:left">Existing Customers</h2></div>
+                            </div>
+                            <table class="slds-table slds-table--bordered slds-grid slds-wrap" style="width: 0%;margin-left: 1.5%;">
+                                <thead>
+                                    <div class="slds-card" style="width: 114%;margin-left: -2%;padding: 7px 0px 0px 0px;background-color: #f3f3f3;">
+                                        <tr class="slds-text-title--caps">
+                                            &nbsp;
+                                            <th scope="col" style="font-weight:bold; " class="slds-cell-wrap">
+                                                <span class="slds-truncate" title="Name">CUSTOMER DETAILS</span>      
+                                            </th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                                            <th scope="col" style="font-weight:bold;" class="slds-cell-wrap">
+                                                <span class="slds-truncate" title="Name">BOOKING BRANCH</span>      
+                                            </th>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <th scope="col" style="font-weight:bold;" class="slds-cell-wrap">
+                                                <span class="slds-truncate" title="Name">Submission Branch</span>      
+                                            </th>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <th scope="col" style="font-weight:bold;" class="slds-cell-wrap">
+                                                <span class="slds-truncate" title="Name">Collection Branch</span>      
+                                            </th>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <th scope="col" style="font-weight:bold;" class="slds-cell-wrap">
+                                                <span class="slds-truncate" title="Name">Submission</span>      
+                                            </th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <th scope="col" style="font-weight:bold;" class="slds-cell-wrap">
+                                                <span class="slds-truncate" title="Name">Collection</span>      
+                                            </th>
+                                        </tr>
+                                    </div>
+                                </thead>
+                                <tbody>
+                                    <!--Section A-->
+                                    <div class="slds-scrollable_y" style="max-height:225px;width: 1190px;margin-left: -20px;">
+                                        <div class="slds-grid slds-wrap" style="margin-left: 2px;margin-top: 6px;width: 100%;">
+                                            <div class="slds-col slds-size_12-of-12">
+                                                <aura:iteration items="{!v.SubWrapperListExisting}" var="rel">
+                                                    <lightning:accordion aura:id="accordion" class="" allowMultipleSectionsOpen="true" >
+                                                        <div class="slds-grid slds-wrap">
+                                                            <lightning:accordionSection name="A" label="{!rel.MSA+':'+rel.Name}">
+                                                                <aura:set attribute="actions">
+                                                                </aura:set>
+                                                                <aura:set attribute="body">
+                                                                    <!--Section B-->
+                                                                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1" >
+                                                                        <aura:iteration items="{!rel.lstwrap_SCSFX}" var="sfx">
+                                                                            <div class="slds-grid slds-wrap">
+                                                                                <div class="slds-col slds-size_12-of-12">
+                                                                                    <lightning:accordion aura:id="accordion" class="slds-size_3-of-3" allowMultipleSectionsOpen="true" >
+                                                                                        <div  class="slds-card" style="width: 1145px;">
+                                                                                            <lightning:accordionSection name="A" class="slds-m-left_xx-large" label="{!sfx.SFX +':'+sfx.Billing_level}">  <!-- !sfx.Billing_level-->
+                                                                                                <aura:set attribute="actions">
+                                                                                                    <!--  {!sfx.SFX} -->
+                                                                                                </aura:set>
+                                                                                                <aura:set attribute="body">
+                                                                                                    <!--Section C-->
+                                                                                                    <div class="slds-card" style="margin-left: 137px;">
+                                                                                                        <aura:iteration items="{!sfx.lstwrap_SCMapping}" var="ratecard">
+                                                                                                            <tr class="slds-hint-parent">
+                                                                                                                <td scope="row" class="slds-cell-wrap">
+                                                                                                                    <div class="slds-truncate slds-align_absolute-center" style="width: 220px;margin-left: 69px;padding: 0px 0px 4px 10px;">{!ratecard.BookingBranch}</div>
+                                                                                                                </td>
+                                                                                                                <td scope="row" class="slds-cell-wrap">
+                                                                                                                    <div class="slds-truncate slds-align_absolute-center" style="width: 205px;padding: 0px 10px 4px 0px;">{!ratecard.SubmissionBranch}</div>
+                                                                                                                </td>
+                                                                                                                <td scope="row" class="slds-cell-wrap">
+                                                                                                                    <div class="slds-truncate slds-align_absolute-center" style="width: 200px;padding: 0px 20px 4px 0px;">{!ratecard.CollectionBranch}</div>
+                                                                                                                </td>
+                                                                                                                <td scope="row" class="slds-cell-wrap">
+                                                                                                                    <div class="slds-truncate slds-align_absolute-center" style="width: 97px;">
+                                                                                                                        <ui:inputCheckbox class="green-checkbox" name="{!ratecard.BillingById+':'+sfx.SFX +':'+rel.MSA}" aura:id="Submission" value="{!ratecard.isSubSelfAssigned}" change="{!c.checkCode}" disabled="{!and(ratecard.isSubSelfAssigned == false,ratecard.isSubmissionAssigned == true)}" />
+                                                                                                                    </div>
+                                                                                                                </td>
+                                                                                                                <td scope="row" class="slds-cell-wrap slds-align_absolute-center">
+                                                                                                                    <div class="slds-truncate slds-align_absolute-center" style="width: 105px;padding: 9px;">
+                                                                                                                        <ui:inputCheckbox class="green-checkbox" name="{!ratecard.BillingById+':'+sfx.SFX +':'+rel.MSA}" aura:id="Collection" value="{!ratecard.isCollSelfAssigned}" change="{!c.checkCode}" disabled="{!and(ratecard.isCollSelfAssigned == false,ratecard.isCollectionAssigned == true)}" />
+                                                                                                                    </div>
+                                                                                                                </td>
+                                                                                                            </tr>
+                                                                                                        </aura:iteration> 
+                                                                                                        
+                                                                                                        <!--Rate Card Itration-->
+                                                                                                        <aura:iteration items="{!sfx.lstwrap_SCBranches}" var="ratecard1">
+                                                                                                            <lightning:accordion aura:id="accordion" class="slds-size_3-of-3" allowMultipleSectionsOpen="true" >
+                                                                                                                <div class="slds-card" style="margin-left: -135px;">
+                                                                                                                    <lightning:accordionSection name="A" class="slds-m-left_x-large" label="{!ratecard1.Service+':'+ratecard1.RateCard}">
+                                                                                                                        <aura:set attribute="actions">
+                                                                                                                        </aura:set>
+                                                                                                                        <aura:set attribute="body">
+                                                                                                                            <div class="slds-card " style="margin-left: 190px;width: 85%;">
+                                                                                                                                <aura:iteration items="{!ratecard1.lstWrapSCMapping}" var="maping">
+                                                                                                                                    <tr class="slds-hint-parent">
+                                                                                                                                        <!-- <td scope="row" class="slds-cell-wrap">
+                                                                                                                                                      <div class="slds-truncate">{!maping.Billing_Level__c}</div>
+                                                                                                                                                    </td> -->
+                                                                                                                                        <td scope="row" class="slds-cell-wrap">
+                                                                                                                                            <div class="slds-truncate slds-align_absolute-center" style="width: 175px;padding: 0px 0px 4px 0px;">{!maping.BookingBranch}</div>
+                                                                                                                                        </td>
+                                                                                                                                        <td scope="row" class="slds-cell-wrap">
+                                                                                                                                            <div class="slds-truncate slds-align_absolute-center" style="width: 212px;padding: 0px 0px 4px 0px;">{!maping.SubmissionBranch}</div>
+                                                                                                                                        </td>
+                                                                                                                                        <td scope="row" class="slds-cell-wrap">
+                                                                                                                                            <div class="slds-truncate slds-align_absolute-center" style="width: 188px;padding: 0px 0px 4px 0px;">{!maping.CollectionBranch}</div>
+                                                                                                                                        </td>
+                                                                                                                                        <td scope="row" class="slds-cell-wrap">
+                                                                                                                                            <div class="slds-truncate slds-align_absolute-center" style="width: 120px;padding: 0px 0px 4px 0px;">
+                                                                                                                                                <ui:inputCheckbox class="green-checkbox" name="{!maping.BillingById+':'+ratecard1.RateCard+':'+sfx.SFX +':'+rel.MSA}" aura:id="Submission" value="{!maping.isSubSelfAssigned}" change="{!c.checkCode}" disabled="{!and(maping.isSubSelfAssigned == false,maping.isSubmissionAssigned == true)}" />
+                                                                                                                                            </div>
+                                                                                                                                        </td>
+                                                                                                                                        <td scope="row" class="slds-cell-wrap slds-align_absolute-center">
+                                                                                                                                            <div class="slds-truncate slds-align_absolute-center" style="width: 85px;padding: 9px;">
+                                                                                                                                                <ui:inputCheckbox class="green-checkbox" name="{!maping.BillingById+':'+ratecard1.RateCard+':'+sfx.SFX +':'+rel.MSA}" aura:id="Collection" value="{!maping.isCollSelfAssigned}" change="{!c.checkCode}" disabled="{!and(maping.isCollSelfAssigned == false,maping.isCollectionAssigned == true)}" />
+                                                                                                                                            </div>
+                                                                                                                                        </td>
+                                                                                                                                    </tr>
+                                                                                                                                </aura:iteration> 
+                                                                                                                            </div>
+                                                                                                                        </aura:set> 
+                                                                                                                    </lightning:accordionSection>
+                                                                                                                </div>
+                                                                                                            </lightning:accordion>
+                                                                                                        </aura:iteration>
+                                                                                                    </div>
+                                                                                                </aura:set>
+                                                                                            </lightning:accordionSection>
+                                                                                        </div>
+                                                                                    </lightning:accordion>
+                                                                                </div>
+                                                                            </div>
+                                                                        </aura:iteration>
+                                                                    </div>
+                                                                </aura:set>
+                                                            </lightning:accordionSection>
+                                                        </div>
+                                                    </lightning:accordion>
+                                                </aura:iteration>
+                                                <aura:set attribute="else">
+                                                    <p style="font-weight:bold;font-size: 16px; width:50%; float:left; color:#0b7450">There is no Existing Customers found for the selected user.</p>
+                                                </aura:set>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </tbody>
+                            </table>
+                            <div class="slds-grid slds-wrap" style="float: right;margin-top: 2rem;">  
+                                <aura:if isTrue="{!and((v.SubWrapperListExisting.length > 0), v.Submission)}">
+                                    <p>(page {! v.pageSubCol} of {!v.totalPagesSubCol}) | showing {! v.startIdxSubCol} to {!v.endIdxSubCol} of {!v.totalRecordsSubCol}</p>
+                                    <lightning:buttonIcon iconName="utility:jump_to_left" variant="bare" size="large" onclick="{! c.moveFirst }" disabled="{!v.isPrevSubCol}" title="First Page" />
+                                    <lightning:buttonIcon iconName="utility:chevronleft" variant="bare" size="large" onclick="{! c.prevClick }" disabled="{!v.isPrevSubCol}" title="Prev" />
+                                    <lightning:buttonIcon iconName="utility:chevronright" variant="bare" size="large" onclick="{! c.nextClick }" disabled="{!v.isNextSubCol}" title="Next" />
+                                    <lightning:buttonIcon iconName="utility:jump_to_right" variant="bare" size="large" onclick="{! c.moveLast }" disabled="{!v.isNextSubCol}" title="Last Page" />
+                                </aura:if>
+                            </div>
+                            <br/>
+                            <br/>
+                            <aura:if isTrue="{!and((v.SubWrapperListExisting.length > 0), v.Submission)}">
+                                <div align="center" style="margin-left: 300px;">
+                                    <lightning:button label="Assign" variant="brand" onclick="{!c.handleAssign}"/>
+                                </div>
+                                <aura:set attribute="else">
+                                    <div align="center" style="">
+                                        <lightning:button label="Assign" variant="brand" onclick="{!c.handleAssign}"/>
+                                    </div>
+                                </aura:set>
+                            </aura:if>
+                        </div>
+                        <!--</aura:if>-->
+                    </div>
+                    <br/>
+                </aura:if>
+            </div>
+            <!-- End of Page UI : Main div -->
+        </div>
+    </div>
+</aura:component>

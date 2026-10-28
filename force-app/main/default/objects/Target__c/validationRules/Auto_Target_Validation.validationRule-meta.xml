@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Auto_Target_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(AND(NOT(IsAutoCreated__c),
+OR(ISPICKVAL(Level__c, &quot;Area Level&quot;), ISPICKVAL(Level__c, &quot;BDM Level&quot;))
+),
+AND(IsAutoCreated__c,
+OR(ISPICKVAL(Level__c, &quot;Corporate Level&quot;), ISPICKVAL(Level__c, &quot;Region Level&quot;))
+))</errorConditionFormula>
+    <errorDisplayField>Level__c</errorDisplayField>
+    <errorMessage>You can not create target for Area Level and BDM Level manually.</errorMessage>
+</ValidationRule>

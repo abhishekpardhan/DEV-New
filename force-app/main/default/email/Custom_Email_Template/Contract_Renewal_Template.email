@@ -1,0 +1,22 @@
+Dear  localNam,<br><br>
+
+This is a reminder that the below contract is scheduled to end on {!Contract__c.Contract_End_Date__c}.<br><br>
+
+<b>Contract Details</b><br><br>
+
+Contract Name: contractLink<br>
+Contract End Date: {!Contract__c.Contract_End_Date__c}<br>
+MSA Code: msaCode<br><br>
+
+<b>Account (MSA)</b><br>
+msaAccountName<br><br>
+
+<b>Linked SFX Accounts</b><br>
+SFXCodeTable<br><br>
+
+Kindly review the contract and initiate the renewal process to ensure business continuity across the MSA and all associated SFX accounts.<br><br>
+
+Please take the necessary action before the end date to avoid service or revenue disruption.<br><br>
+
+Regards,<br>
+Team Safexpress

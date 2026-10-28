@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type --></label>
+    <name>Type__c</name>
+    <picklistValues>
+        <masterLabel>Conveyance</masterLabel>
+        <translation><!-- Conveyance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Food Expenses</masterLabel>
+        <translation><!-- Food Expenses --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hotel Expenses</masterLabel>
+        <translation><!-- Hotel Expenses --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Local Conveyance</masterLabel>
+        <translation><!-- Local Conveyance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Taxi &amp; Car Expense</masterLabel>
+        <translation><!-- Taxi &amp; Car Expense --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ticket - Air</masterLabel>
+        <translation><!-- Ticket - Air --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ticket - Train/Other</masterLabel>
+        <translation><!-- Ticket - Train/Other --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

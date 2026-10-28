@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Remarks_validation_on_Insert</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISNEW() &amp;&amp; !ISBLANK( Remarks__c ) &amp;&amp;
+NOT(Last_Updated_By_Flow__c)&amp;&amp; ISCHANGED(Last_Updated_By_Flow__c) = FALSE</errorConditionFormula>
+    <errorDisplayField>Remarks__c</errorDisplayField>
+    <errorMessage>You Can&apos;t enter this value while creating a new record.</errorMessage>
+</ValidationRule>

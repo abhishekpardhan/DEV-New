@@ -1,0 +1,93 @@
+<template>
+    <template if:true={isInitialized}>
+    <!--show Spinner-->
+    <template if:true={isLoading}>
+        <div class="spinner-backdrop">
+            <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+        </div>
+    </template>
+
+    <!--completed screen-->
+    <template if:true={isCompleted}>
+            <div class="slds-text-color_error slds-text-title_bold slds-m-top_medium">
+            {successMessage}
+        </div>
+    </template>
+
+    <!--input field for searching new owners...-->
+    <template if:false={isCompleted}>
+        <div class="slds-text-heading_medium slds-m-bottom_medium">
+            Reassign Task Owner
+        </div>
+        <div class="slds-combobox_container" style="position: relative;">
+            <lightning-input
+                type="search"
+                label={label}
+                value={selectedUserName}
+                placeholder={placeholder}
+                onchange={handleSearch}
+                message-when-value-missing="Please fill this field"
+                required
+                class="user-input"
+                onfocus={showDropdown}>
+            </lightning-input>
+
+            <!-- Clear button -->
+            <template if:true={selectedUserName}>
+                <lightning-button-icon 
+                    icon-name="utility:close" 
+                    alternative-text="Clear"
+                    onclick={clearSelection}
+                    variant="bare"
+                    class="slds-input__icon slds-input__icon_right slds-button_icon"
+                    style="position: absolute; top: 36px; right: 12px;">
+                </lightning-button-icon>
+            </template>
+
+            <!-- Dropdown -->
+            <template if:true={showResults}>
+                 <div class="lookup-dropdown slds-box slds-m-top_x-small">
+                    <template if:true={taskUsers}>
+                        <ul class="slds-listbox slds-listbox_vertical" role="listbox">
+                            <template for:each={taskUsers} for:item="taskUsers">
+                                <li key={taskUsers.Id} class="slds-listbox__item">
+                                    <div 
+                                        class="slds-listbox__option slds-p-around_x-small"
+                                        role="option"
+                                        data-user-id={taskUsers.Name}
+                                        onclick={handleSelect}
+                                        >
+                                        <lightning-icon 
+                                            icon-name="standard:user" 
+                                            size="small"
+                                            alternative-text="User"
+                                            class="slds-icon slds-icon_small slds-icon-text-default">
+                                        </lightning-icon>
+                                      &nbsp;&nbsp;
+                                        <span class="slds-media__body">
+                                        <span class="slds-truncate">{taskUsers.Name}</span>
+                                    </span>
+                                    </div>
+                                </li>
+                            </template>
+                        </ul>
+                    </template>
+                    <template if:true={noResults}>
+                        <div class="slds-p-around_x-small slds-text-color_weak">No results found</div>
+                    </template>
+                </div>
+            </template>
+        </div>
+    
+
+    <!--Save button-->
+   <div class="slds-p-top_medium slds-text-align_right">
+        <lightning-button
+            label="Save"
+            variant="brand"
+            onclick={handleSave}>
+        </lightning-button>
+    </div>
+    </template >
+  </template>
+</template>

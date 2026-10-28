@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>Edit</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Target Executive</name>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>Head_First_Mile_Sales_Management</parentRole>
+</Role>

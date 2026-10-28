@@ -1,0 +1,109 @@
+<!-- Location -->
+<aura:component implements="force:lightningQuickAction,force:hasRecordId" controller="Geolocation">
+    <aura:attribute name="recordId" type="Id"/>
+    <aura:attribute name="lat" type="Decimal" />
+    <aura:attribute name="long" type="Decimal" />
+    <aura:attribute name="listTaskWrapper" type="List" />
+    <aura:attribute name="Spinner" type="boolean" default="false"/>
+    <aura:attribute name="isDisabled" type="boolean" default="false"/>
+    <aura:attribute name="TaskExist" type="boolean" default="false"/>
+    <aura:handler name="init" action="{!c.checkOut}" value="{!this}"/>
+    <aura:attribute name="errorMessage" type="boolean" default="false"/>
+    <aura:attribute name="message" type="String"/>
+    <!--<aura:handler event="aura:waiting" action="{!c.showSpinner}"/>
+    <aura:handler event="aura:doneWaiting" action="{!c.hideSpinner}"/> -->
+    <aura:if isTrue="{!v.Spinner}">
+        <div aura:id="spinnerId" class="slds-spinner_container">
+            <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                <span class="slds-assistive-text">Loading...</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </aura:if>
+    <aura:if isTrue="{!v.isDisabled}">
+        <div align="center">
+            <h1>Are You Sure you want to checkOut.</h1>
+            <lightning:button label="Yes" onclick="{!c.chekbtn}" variant="brand"/> 
+        </div>
+    </aura:if>
+    <div class="slds-m-around_xx-large" >
+        <aura:if isTrue="{!v.TaskExist}" >
+            <!--###### MODAL BOX Start######--> 
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container" style = "width:100%">
+                    <!-- ###### MODAL BOX HEADER Start ######-->
+                    <header class="slds-modal__header">
+                        <lightning:buttonIcon iconName="utility:close"
+                                              onclick="{! c.closeModel }"
+                                              alternativeText="close"
+                                              variant="bare-inverse"
+                                              class="slds-modal__close"/>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Task</h2>
+                    </header>
+                    <!--###### MODAL BOX BODY Part Start######-->
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1" >
+                        <div class="slds-scrollable_x">
+                            <aura:if isTrue="{!v.errorMessage}" >
+                                <h2  Style="color:red;font-family:-webkit-pictograph;text-align:center;" class="slds-text-heading_medium slds-hyphenate">Error : {!v.message}</h2>
+                            </aura:if>
+                            <!-- Task table ends --> 
+                            <table class="slds-table slds-table--bordered slds-table_striped" >
+                                <thead>
+                                    <tr class="slds-text-title--caps">
+                                        <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                                            <span class="slds-truncate" title="Name">select</span>      
+                                        </th>
+                                        <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                                            <span class="slds-truncate" title="Name">Subject</span>      
+                                        </th>
+                                        <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                                            <span class="slds-truncate" title="Name">Record Type</span>      
+                                        </th>
+                                        <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                                            <span class="slds-truncate" title="Name">Type</span>      
+                                        </th>
+                                        <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                                            <span class="slds-truncate" title="Name">Sub Type</span>      
+                                        </th>
+                                        <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                                            <span class="slds-truncate" title="Name">Remarks</span>      
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <aura:iteration items="{!v.listTaskWrapper}" var="taskWrapper">
+                                        <tr>
+                                            <td scope="row" class="slds-cell-wrap slds-truncate" ><ui:inputCheckbox value="{!taskWrapper.isSelected}"/></td>
+                                            <td scope="row" class="slds-cell-wrap slds-truncate" >
+                                                <a href="{!'/one/one.app?#/sObject/'+ taskWrapper.objTask.Id + '/view'}" target="_new">{!taskWrapper.objTask.Subject}</a></td>
+                                            <td scope="row" class="slds-cell-wrap slds-truncate" >{!taskWrapper.objTask.RecordType.Name}</td>
+                                            <td scope="row" class="slds-cell-wrap slds-truncate" >{!taskWrapper.objTask.Type__c}</td>
+                                            <td scope="row" class="slds-cell-wrap slds-truncate" >{!taskWrapper.objTask.Purpose__c}</td>
+                                            
+                                            <td scope="row" class="slds-cell-wrap slds-truncate" ><ui:inputtextarea value="{!taskWrapper.remarks}"></ui:inputtextarea></td>
+                                        </tr>
+                                    </aura:iteration>
+                                </tbody>
+                            </table>
+                            <!-- Task table ends --> 
+                        </div>
+                    </div>
+                    <!--###### MODAL BOX FOOTER Part Start ######-->
+                    <footer class="slds-modal__footer">
+                        <lightning:button variant="neutral" 
+                                          label="Cancel"
+                                          title="Cancel"
+                                          onclick="{! c.closeModel }"/>
+                        <lightning:button variant="brand" 
+                                          label="Save"
+                                          title="Save"
+                                          onclick="{!c.saveModal}"/>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+            <!--###### MODAL BOX Part END Here ######-->
+        </aura:if>
+    </div>
+</aura:component>

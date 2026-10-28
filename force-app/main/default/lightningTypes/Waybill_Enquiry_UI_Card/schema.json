@@ -1,0 +1,5 @@
+{
+  "description" : "This is updated Lightening type",
+  "lightning:type" : "@apexClassType/c__SafexpressWaybillEnquiryCard",
+  "title" : "Waybill Enquiry UI Card"
+}

@@ -1,0 +1,1103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Account_Credit_1</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Read</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <label>Account Credit 1</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_1</role>
+        </sharedTo>
+        <booleanFilter>2 AND  4 AND (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>ANDHRA PRADESH - TELANGANA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>SFX Customer</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Account_Credit_10</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Read</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <label>Account Credit 10</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_MHG</role>
+        </sharedTo>
+        <booleanFilter>2 AND  4 AND (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>MAHARASHTRA - GOA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>SFX Customer</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Account_Credit_11</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Read</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <label>Account Credit 11</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_MUM</role>
+        </sharedTo>
+        <booleanFilter>2 AND  4 AND (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>MUMBAI</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>SFX Customer</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Account_Credit_12</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Read</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <label>Account Credit 12</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_NRE</role>
+        </sharedTo>
+        <booleanFilter>2 AND 4 AND  (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>NORTH EAST</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>SFX Customer</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Account_Credit_13</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Read</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <label>Account Credit 13</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_PBC</role>
+        </sharedTo>
+        <booleanFilter>2 AND 4 AND  (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>PUNJAB - CHANDIGARH</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>SFX Customer</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Account_Credit_14</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Read</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <label>Account Credit 14</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_RJN</role>
+        </sharedTo>
+        <booleanFilter>2 AND 4 AND  (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>RAJASTHAN</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>SFX Customer</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Account_Credit_15</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Read</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <label>Account Credit 15</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_TNP</role>
+        </sharedTo>
+        <booleanFilter>2 AND 4 AND (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>TAMILNADU - PUDUCHERRY</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>SFX Customer</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Account_Credit_16</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Read</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <label>Account Credit 16</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_UPR</role>
+        </sharedTo>
+        <booleanFilter>2 AND 4 AND (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>UTTAR PRADESH</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>SFX Customer</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Account_Credit_17</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Read</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <label>Account Credit 17</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_UKH</role>
+        </sharedTo>
+        <booleanFilter>2 AND 4 AND (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>UTTARAKHAND</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>SFX Customer</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Account_Credit_18</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Read</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <label>Account Credit 18</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_WBS</role>
+        </sharedTo>
+        <booleanFilter>2 AND 4 AND (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>WEST BENGAL - SIKKIM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>SFX Customer</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Account_Credit_2</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Read</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <label>Account Credit 2</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_2</role>
+        </sharedTo>
+        <booleanFilter>2 AND  4 AND (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>BIHAR - JHARKHAND - ODISHA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>SFX Customer</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Account_Credit_3</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Read</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <label>Account Credit 3</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_DLI</role>
+        </sharedTo>
+        <booleanFilter>2 AND 4 AND (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>DELHI</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>SFX Customer</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Account_Credit_4</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Read</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <label>Account Credit 4</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_GJT</role>
+        </sharedTo>
+        <booleanFilter>2 AND 4 AND (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>GUJARAT</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>SFX Customer</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Account_Credit_5</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Read</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <label>Account Credit 5</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_HRN</role>
+        </sharedTo>
+        <booleanFilter>2 AND  4 AND (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>HARYANA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>SFX Customer</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Account_Credit_6</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Read</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <label>Account Credit 6</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_JKH</role>
+        </sharedTo>
+        <booleanFilter>2 AND  4 AND (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>JAMMU KASHMIR - HIMACHAL PRADESH</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>SFX Customer</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Account_Credit_7</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Read</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <label>Account Credit 7</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_KTK</role>
+        </sharedTo>
+        <booleanFilter>2 AND  4 AND (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>KARNATAKA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>SFX Customer</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Account_Credit_8</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Read</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <label>Account Credit 8</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_KRL</role>
+        </sharedTo>
+        <booleanFilter>2 AND  4 AND (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>KERALAM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>SFX Customer</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Account_Credit_9</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Read</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <label>Account Credit 9</label>
+        <sharedTo>
+            <role>Regional_New_Sales_Manager_MPC</role>
+        </sharedTo>
+        <booleanFilter>2 AND 4 AND  (1 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>MADHYA PRADESH - CHHATTISGARH</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>SFX Customer</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Account_new_sales_head_cooperate</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Account new sales head cooperate</label>
+        <sharedTo>
+            <role>New_Sales_Head_Corporate1</role>
+        </sharedTo>
+        <booleanFilter>(1 OR 2 OR 3) AND 4</booleanFilter>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Transportation+3PL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>3PL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>SFX Customer</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Alliance_Partner_Management</fullName>
+        <accessLevel>Read</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Alliance Partner Management</label>
+        <sharedTo>
+            <group>Alliance_Partner_Management</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Vertical__c</field>
+            <operation>equals</operation>
+            <value>ALLIANCE PARTNER MANAGEMENT</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CCD_SFX_Account</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Edit</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>CCD_SFX_Account</label>
+        <sharedTo>
+            <role>Corporate_BDM_L1_CCD</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>SFX Customer</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>SFX</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Lead_Account_visiblity_to_all</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Edit</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Edit</opportunityAccessLevel>
+        </accountSettings>
+        <label>Lead Account visiblity to all</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>equals</operation>
+            <value>LEAD ACCOUNT</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>NON_PRC_PICKUP</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>NON PRC PICKUP</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>equals</operation>
+            <value>NON PRC PICKUP ACCOUNT</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Parent_account_visible_to_all_user</fullName>
+        <accessLevel>Read</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Parent account visible to all user</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Prospect Customer</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Propel_account_sharing</fullName>
+        <accessLevel>Read</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>Propel account sharing</description>
+        <label>Propel account sharing</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+        <criteriaItems>
+            <field>Is_Propel_Account__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Safexperience_head_visibility</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Safexperience head visibility</label>
+        <sharedTo>
+            <role>Call_Center_Head</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>PRC Customer,SFX Customer</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>VH_APPARELS_LIFESTYLE</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>VH APPARELS &amp; LIFESTYLE</label>
+        <sharedTo>
+            <group>VH_APPARELS_LIFESTYLE</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Vertical__c</field>
+            <operation>equals</operation>
+            <value>APPARELS &amp; LIFESTYLE</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>VH_AUTOMOTIVE</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>VH AUTOMOTIVE</label>
+        <sharedTo>
+            <group>VH_AUTOMOTIVE</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Vertical__c</field>
+            <operation>equals</operation>
+            <value>AUTOMOTIVE</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>VH_Engineering_Electrical_Hardware</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>VH Engineering &amp; Electrical Hardware</label>
+        <sharedTo>
+            <group>VH_Engineering_Electrical_Hardware</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Vertical__c</field>
+            <operation>equals</operation>
+            <value>Engineering &amp; Electrical Hardware</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>VH_FMCG_CONSUMER_GOODS</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>VH FMCG/CONSUMER GOODS</label>
+        <sharedTo>
+            <group>VH_FMCG_CONSUMER_GOODS</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Vertical__c</field>
+            <operation>equals</operation>
+            <value>FMCG/CONSUMER GOODS</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>VH_HEALTHCARE</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>VH HEALTHCARE</label>
+        <sharedTo>
+            <group>VH_HEALTHCARE</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Vertical__c</field>
+            <operation>equals</operation>
+            <value>HEALTHCARE</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>VH_HI_TECH</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>VH HI TECH</label>
+        <sharedTo>
+            <group>VH_HI_TECH</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Vertical__c</field>
+            <operation>equals</operation>
+            <value>HI TECH</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>VH_Institutional</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>VH Institutional</label>
+        <sharedTo>
+            <group>VH_Institutional</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Vertical__c</field>
+            <operation>equals</operation>
+            <value>Institutional</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>VH_Publishing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>VH Publishing</label>
+        <sharedTo>
+            <group>VH_Publishing</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Vertical__c</field>
+            <operation>equals</operation>
+            <value>Publishing</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>VH_Retail_Campus_2_Home</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>VH Retail Campus 2 Home</label>
+        <sharedTo>
+            <group>VH_Retail_Campus_2_Home</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Vertical__c</field>
+            <operation>equals</operation>
+            <value>Retail Special Services</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Sub__c</field>
+            <operation>equals</operation>
+            <value>CAMPUS 2 HOME</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>VH_Retail_Commodity_Express</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>VH Retail Commodity Express</label>
+        <sharedTo>
+            <group>VH_Retail_Commodity_Express</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Vertical__c</field>
+            <operation>equals</operation>
+            <value>Retail Special Services</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Sub__c</field>
+            <operation>equals</operation>
+            <value>COMMODITY EXPRESS</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>VH_Retail_Easy_2_Move</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>VH Retail Easy 2 Move</label>
+        <sharedTo>
+            <group>VH_Retail_Easy_2_Move</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Vertical__c</field>
+            <operation>equals</operation>
+            <value>Retail Special Services</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Sub__c</field>
+            <operation>equals</operation>
+            <value>EASY 2 MOVE</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>VH_Retail_SAFEHOME</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>VH Retail SAFEHOME</label>
+        <sharedTo>
+            <group>VH_Retail_SAFEHOME</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Vertical__c</field>
+            <operation>equals</operation>
+            <value>Retail Special Services</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Sub__c</field>
+            <operation>equals</operation>
+            <value>SAFEHOME</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>VH_Retail_SAINIK_EXPRESS</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>VH Retail SAINIK EXPRESS</label>
+        <sharedTo>
+            <group>VH_Retail_SAINIK_EXPRESS</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Vertical__c</field>
+            <operation>equals</operation>
+            <value>Retail Special Services</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Sub__c</field>
+            <operation>equals</operation>
+            <value>SAINIK EXPRESS</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>VH_Retail_Safe_Returns</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>VH Retail Safe Returns</label>
+        <sharedTo>
+            <group>VH_Retail_Safe_Returns</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Vertical__c</field>
+            <operation>equals</operation>
+            <value>Retail Special Services</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Sub__c</field>
+            <operation>equals</operation>
+            <value>Safe Returns</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

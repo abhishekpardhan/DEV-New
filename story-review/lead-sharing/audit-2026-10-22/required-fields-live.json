@@ -1,0 +1,42 @@
+﻿{
+  "status": 0,
+  "result": {
+    "records": [
+      {
+        "attributes": {
+          "type": "EntityParticle",
+          "url": "/services/data/v68.0/tooling/sobjects/EntityParticle/Lead.00NC1000004czEi"
+        },
+        "QualifiedApiName": "Assign_to_Central_Desk__c",
+        "DataType": "boolean"
+      },
+      {
+        "attributes": {
+          "type": "EntityParticle",
+          "url": "/services/data/v68.0/tooling/sobjects/EntityParticle/Lead.00NC1000004czEw"
+        },
+        "QualifiedApiName": "Region__c",
+        "DataType": "picklist"
+      },
+      {
+        "attributes": {
+          "type": "EntityParticle",
+          "url": "/services/data/v68.0/tooling/sobjects/EntityParticle/Lead.00NC1000004czF0"
+        },
+        "QualifiedApiName": "Vertical__c",
+        "DataType": "picklist"
+      },
+      {
+        "attributes": {
+          "type": "EntityParticle",
+          "url": "/services/data/v68.0/tooling/sobjects/EntityParticle/Lead.00NC1000004czF4"
+        },
+        "QualifiedApiName": "Sub_Vertical__c",
+        "DataType": "picklist"
+      }
+    ],
+    "totalSize": 4,
+    "done": true
+  },
+  "warnings": []
+}

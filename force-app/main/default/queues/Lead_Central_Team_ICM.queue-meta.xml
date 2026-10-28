@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesIncludeBosses>true</doesIncludeBosses>
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Lead Central Team (ICM)</name>
+    <queueSobject>
+        <sobjectType>Lead__c</sobjectType>
+    </queueSobject>
+</Queue>

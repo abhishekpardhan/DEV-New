@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Approval Status --></label>
+    <name>Approval_Status__c</name>
+    <picklistValues>
+        <masterLabel>Approved</masterLabel>
+        <translation><!-- Approved --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pending for Approval</masterLabel>
+        <translation><!-- Pending for Approval --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reassigned to BDM</masterLabel>
+        <translation><!-- Reassigned to BDM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reassigned to Central Team</masterLabel>
+        <translation><!-- Reassigned to Central Team --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rejected</masterLabel>
+        <translation><!-- Rejected --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

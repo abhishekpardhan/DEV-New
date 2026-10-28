@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_completed_tasks_from_editing</fullName>
+    <active>false</active>
+    <description>A new validation rule is created to replace this Task_LockonCompletion</description>
+    <errorConditionFormula>AND(
+OR(
+AND(
+NOT(ISCHANGED(Status)),
+ISPICKVAL(Status, &apos;Completed&apos;)
+),
+AND(
+ISCHANGED(Status),
+ISPICKVAL(PRIORVALUE(Status), &apos;Completed&apos;)
+)
+),
+NOT($Profile.Name = &apos;System Administrator&apos;),
+NOT($Profile.Name = &apos;Service Cloud - Call Centre Head&apos;),
+NOT($Profile.Name = &apos;Service Cloud - Executive&apos;),
+NOT($Profile.Name = &apos;Service Cloud - Team Lead&apos;),
+NOT($Profile.Name = &apos;Corporate Salesforce Team&apos;),
+NOT($Permission.Business_admin_permission),
+NOT($Permission.Skip_Validation_Rule),
+NOT(isNEW())
+)</errorConditionFormula>
+    <errorMessage>Completed tasks cannot be modified.</errorMessage>
+</ValidationRule>

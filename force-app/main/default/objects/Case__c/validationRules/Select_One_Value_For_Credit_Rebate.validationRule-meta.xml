@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Select_One_Value_For_Credit_Rebate</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISPICKVAL(Case_Typee__c, &quot;Credit Rebate&quot;),
+    OR(
+        AND(
+            PICKLISTCOUNT(Case_Type__c) &gt; 1,
+            NOT(INCLUDES(Case_Type__c, &quot;Weight difference&quot;))
+        ),
+        AND(
+            INCLUDES(Case_Type__c, &quot;Weight difference&quot;),
+            OR(
+                INCLUDES(Case_Type__c, &quot;Shortage/Damage&quot;),
+                INCLUDES(Case_Type__c, &quot;Rate Difference&quot;)
+            )
+        )
+    )
+)</errorConditionFormula>
+    <errorDisplayField>Case_Type__c</errorDisplayField>
+    <errorMessage>For Credit Rebate, select only one Case Sub Type. Only Late Delivery and Weight Difference can be selected together.</errorMessage>
+</ValidationRule>

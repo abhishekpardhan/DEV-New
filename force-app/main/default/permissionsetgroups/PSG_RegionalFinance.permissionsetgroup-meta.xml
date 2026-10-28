@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Regional Finance permission set group.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>PSG_RegionalFinance</label>
+    <permissionSets>PS_RegionalFinance</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

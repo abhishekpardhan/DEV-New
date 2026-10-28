@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Reason --></label>
+    <name>Reason__c</name>
+    <picklistValues>
+        <masterLabel>Customer not available</masterLabel>
+        <translation><!-- Customer not available --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Last meeting continue</masterLabel>
+        <translation><!-- Last meeting continue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Others</masterLabel>
+        <translation><!-- Others --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Personal Urgent Work</masterLabel>
+        <translation><!-- Personal Urgent Work --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

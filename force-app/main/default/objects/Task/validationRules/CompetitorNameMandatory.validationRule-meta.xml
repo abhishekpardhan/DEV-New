@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CompetitorNameMandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(Has_customer_engaged_with_competitor__c, &quot;Yes&quot;),
+ISBLANK(Competitor_Involved_Name__c),
+				ISBLANK(Reason_for_Engagement__c)
+)</errorConditionFormula>
+    <errorMessage>Please provide &apos;Competitors Name&apos; and &apos;Reason for Engagement&apos;</errorMessage>
+</ValidationRule>

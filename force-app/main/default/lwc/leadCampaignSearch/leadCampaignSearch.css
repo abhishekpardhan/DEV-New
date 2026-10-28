@@ -1,0 +1,18 @@
+.card-container {
+    display: flex;
+    flex-direction: column;
+    height: 600px; /* Set desired card height */
+}
+
+.card-body {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 1rem;
+}
+
+.card-footer {
+    padding: 1rem;
+    border-top: 1px solid #d8dde6;
+    background-color: white;
+    text-align: right;
+}

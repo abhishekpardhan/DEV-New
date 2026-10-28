@@ -1,0 +1,175 @@
+﻿{
+  "status": 0,
+  "result": {
+    "records": [
+      {
+        "attributes": {
+          "type": "Group",
+          "url": "/services/data/v68.0/sobjects/Group/00G7F000002u0wYUAQ"
+        },
+        "Id": "00G7F000002u0wYUAQ",
+        "DeveloperName": "VH_Engineering_Electrical_Hardware",
+        "Name": "VH Engineering & Electrical Hardware",
+        "Type": "Regular",
+        "DoesIncludeBosses": true
+      },
+      {
+        "attributes": {
+          "type": "Group",
+          "url": "/services/data/v68.0/sobjects/Group/00G7F000002u0whUAA"
+        },
+        "Id": "00G7F000002u0whUAA",
+        "DeveloperName": "VH_Retail_SAFEHOME",
+        "Name": "VH Retail SAFEHOME",
+        "Type": "Regular",
+        "DoesIncludeBosses": true
+      },
+      {
+        "attributes": {
+          "type": "Group",
+          "url": "/services/data/v68.0/sobjects/Group/00G7F000002u0weUAA"
+        },
+        "Id": "00G7F000002u0weUAA",
+        "DeveloperName": "VH_Retail_Campus_2_Home",
+        "Name": "VH Retail Campus 2 Home",
+        "Type": "Regular",
+        "DoesIncludeBosses": true
+      },
+      {
+        "attributes": {
+          "type": "Group",
+          "url": "/services/data/v68.0/sobjects/Group/00G7F000002u0wdUAA"
+        },
+        "Id": "00G7F000002u0wdUAA",
+        "DeveloperName": "VH_Publishing",
+        "Name": "VH Publishing",
+        "Type": "Regular",
+        "DoesIncludeBosses": true
+      },
+      {
+        "attributes": {
+          "type": "Group",
+          "url": "/services/data/v68.0/sobjects/Group/00G7F000002u0wjUAA"
+        },
+        "Id": "00G7F000002u0wjUAA",
+        "DeveloperName": "VH_Retail_Safe_Returns",
+        "Name": "VH Retail Safe Returns",
+        "Type": "Regular",
+        "DoesIncludeBosses": true
+      },
+      {
+        "attributes": {
+          "type": "Group",
+          "url": "/services/data/v68.0/sobjects/Group/00G7F000002u0wWUAQ"
+        },
+        "Id": "00G7F000002u0wWUAQ",
+        "DeveloperName": "VH_APPARELS_LIFESTYLE",
+        "Name": "VH APPARELS & LIFESTYLE",
+        "Type": "Regular",
+        "DoesIncludeBosses": true
+      },
+      {
+        "attributes": {
+          "type": "Group",
+          "url": "/services/data/v68.0/sobjects/Group/00G7F000002u0wbUAA"
+        },
+        "Id": "00G7F000002u0wbUAA",
+        "DeveloperName": "VH_HI_TECH",
+        "Name": "VH HI TECH",
+        "Type": "Regular",
+        "DoesIncludeBosses": true
+      },
+      {
+        "attributes": {
+          "type": "Group",
+          "url": "/services/data/v68.0/sobjects/Group/00G7F000002u0wgUAA"
+        },
+        "Id": "00G7F000002u0wgUAA",
+        "DeveloperName": "VH_Retail_Easy_2_Move",
+        "Name": "VH Retail Easy 2 Move",
+        "Type": "Regular",
+        "DoesIncludeBosses": true
+      },
+      {
+        "attributes": {
+          "type": "Group",
+          "url": "/services/data/v68.0/sobjects/Group/00G7F000002u0wZUAQ"
+        },
+        "Id": "00G7F000002u0wZUAQ",
+        "DeveloperName": "VH_FMCG_CONSUMER_GOODS",
+        "Name": "VH FMCG/CONSUMER GOODS",
+        "Type": "Regular",
+        "DoesIncludeBosses": true
+      },
+      {
+        "attributes": {
+          "type": "Group",
+          "url": "/services/data/v68.0/sobjects/Group/00G7F000002u0waUAA"
+        },
+        "Id": "00G7F000002u0waUAA",
+        "DeveloperName": "VH_HEALTHCARE",
+        "Name": "VH HEALTHCARE",
+        "Type": "Regular",
+        "DoesIncludeBosses": true
+      },
+      {
+        "attributes": {
+          "type": "Group",
+          "url": "/services/data/v68.0/sobjects/Group/00G7F000002u0wiUAA"
+        },
+        "Id": "00G7F000002u0wiUAA",
+        "DeveloperName": "VH_Retail_SAINIK_EXPRESS",
+        "Name": "VH Retail SAINIK EXPRESS",
+        "Type": "Regular",
+        "DoesIncludeBosses": true
+      },
+      {
+        "attributes": {
+          "type": "Group",
+          "url": "/services/data/v68.0/sobjects/Group/00G7F000002u0wcUAA"
+        },
+        "Id": "00G7F000002u0wcUAA",
+        "DeveloperName": "VH_Institutional",
+        "Name": "VH Institutional",
+        "Type": "Regular",
+        "DoesIncludeBosses": true
+      },
+      {
+        "attributes": {
+          "type": "Group",
+          "url": "/services/data/v68.0/sobjects/Group/00G7F000002u0wfUAA"
+        },
+        "Id": "00G7F000002u0wfUAA",
+        "DeveloperName": "VH_Retail_Commodity_Express",
+        "Name": "VH Retail Commodity Express",
+        "Type": "Regular",
+        "DoesIncludeBosses": true
+      },
+      {
+        "attributes": {
+          "type": "Group",
+          "url": "/services/data/v68.0/sobjects/Group/00G7F000002u0wXUAQ"
+        },
+        "Id": "00G7F000002u0wXUAQ",
+        "DeveloperName": "VH_AUTOMOTIVE",
+        "Name": "VH AUTOMOTIVE",
+        "Type": "Regular",
+        "DoesIncludeBosses": true
+      },
+      {
+        "attributes": {
+          "type": "Group",
+          "url": "/services/data/v68.0/sobjects/Group/00GOX0000011ROz2AM"
+        },
+        "Id": "00GOX0000011ROz2AM",
+        "DeveloperName": "Alliance_Partner_Management",
+        "Name": "Alliance Partner Management",
+        "Type": "Regular",
+        "DoesIncludeBosses": true
+      }
+    ],
+    "totalSize": 15,
+    "done": true
+  },
+  "warnings": []
+}

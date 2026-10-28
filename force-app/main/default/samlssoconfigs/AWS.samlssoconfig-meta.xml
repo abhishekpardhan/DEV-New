@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SamlSsoConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <identityLocation>SubjectNameId</identityLocation>
+    <identityMapping>FederationId</identityMapping>
+    <issuer>https://portal.sso.ap-south-1.amazonaws.com/saml/assertion/MDY2NDY5MzYwMTA4X2lucy1jNWUzZWJkODY3YzdmODA1</issuer>
+    <loginUrl>https://portal.sso.ap-south-1.amazonaws.com/saml/assertion/MDY2NDY5MzYwMTA4X2lucy1jNWUzZWJkODY3YzdmODA1</loginUrl>
+    <logoutUrl>https://portal.sso.ap-south-1.amazonaws.com/saml/logout/MDY2NDY5MzYwMTA4X2lucy1jNWUzZWJkODY3YzdmODA1</logoutUrl>
+    <name>Login through AWS</name>
+    <oauthTokenEndpoint>https://safeforce1--dev.sandbox.my.salesforce.com/services/oauth2/token?so=00DC1000005VGon</oauthTokenEndpoint>
+    <redirectBinding>false</redirectBinding>
+    <requestSignatureMethod>1</requestSignatureMethod>
+    <requestSigningCertId>0P12y000001Oizu</requestSigningCertId>
+    <salesforceLoginUrl>https://safeforce1--dev.sandbox.my.salesforce.com?so=00DC1000005VGon</salesforceLoginUrl>
+    <samlEntityId>https://portal.sso.ap-south-1.amazonaws.com/saml/assertion/MDY2NDY5MzYwMTA4X2lucy1jNWUzZWJkODY3YzdmODA1</samlEntityId>
+    <samlVersion>SAML2_0</samlVersion>
+    <useConfigRequestMethod>true</useConfigRequestMethod>
+    <useSameDigestAlgoForSigning>false</useSameDigestAlgoForSigning>
+    <userProvisioning>false</userProvisioning>
+    <validationCert>MIIDAzCCAeugAwIBAgIBATANBgkqhkiG9w0BAQsFADBFMRYwFAYDVQQDDA1hbWF6b25hd3MuY29tMQ0wCwYDVQQLDARJREFTMQ8wDQYDVQQKDAZBbWF6b24xCzAJBgNVBAYTAlVTMB4XDTIxMDkwNzA3MzQyM1oXDTI2MDkwNzA3MzQyM1owRTEWMBQGA1UEAwwNYW1hem9uYXdzLmNvbTENMAsGA1UECwwESURBUzEPMA0GA1UECgwGQW1hem9uMQswCQYDVQQGEwJVUzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKKnPZRk3nM0F2sILg7dpsZJCEhOYDwcAGr4QDGfUHOZo0Bu2i906qoHBZFmu+1LHStt55xuJ1bF/fh3hpZTA52UZt5z7FI/XeMgYFAK42z1e7bq6IpS93cUmVXfb9LJwi8iTARTZVlNTtTexXSOTts5t0LJUvXOuCX93ilceItcpBavmqkhe13kNWHIZak4Ir5tOWwBJge3iFeB+46WqkV6I5+5D20dSzdv1pEax900Gss+jMS/9gjBcJf26XWWYv2RWjF/X1XaM3wMYMNij95K47VgwWECnBARDU/VVzDSSIF2oIsY6W/r/QQlYCFZyhA/XYbOdA0XJUiHsCsA5LUCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAD7PrOxFD+ptDL2s+sRoKXffv6tlks8JAaJ7lVERNBCHOGJ3GCwbvJ5R5lxFfvMUNbAFwDno0buJndpjpYZLUhqj83UlTTVixYpbGiUD+evQbTDrsteBFemctbQPK22OWz/SmREhUBVJNz4kpkvYYm+oIPv4cpGIg/SiGNM1cyTnaBdgRYCJ3Yend5dsTLglO46Q6n5KGipwFmvH5DSD3XiUCFBal+wIaRHCj0vx0C9LfgzIuLJskrB3P1iSTHO8SvPajjS7OiYbqMlpFsW2IvNk1Ko+TDumMGYd56kw62BCy6b213+eGqB/3Lo3bbpDbWg8XoWQHsYpWwa//bvi5yA==</validationCert>
+</SamlSsoConfig>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_Unlock_Remarks_Rejected_Journey</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT(IsVRBypassed__c),
+
+    NOT(
+        OR(
+            $Profile.Name = &quot;System Administrator&quot;,
+            $Profile.Name = &quot;Read Only&quot;,
+            $Profile.Name = &quot;Corporate salesforce team&quot;
+        )
+    ),
+
+    NOT(ISBLANK(Journey__c)),
+
+    OR(
+        ISPICKVAL(Journey__r.Approval_Status__c, &quot;Rejected by Manager&quot;),
+        ISPICKVAL(Journey__r.Approval_Status__c, &quot;Rejected by RM&quot;)
+    ),
+
+    OR(
+
+        /* Only Event Owner can edit Remarks */
+        AND(
+            ISCHANGED(Remarks__c),
+            $User.Id &lt;&gt; OwnerId
+        ),
+
+        /* Nobody can edit these fields */
+        ISCHANGED(Name),
+        ISCHANGED(Account__c),
+        ISCHANGED(Contact__c),
+        ISCHANGED(Activities_to_be_Performed__c)
+    )
+)</errorConditionFormula>
+    <errorMessage>Only Event Creator can edit Recap of Meeting Field rest fields are non editable</errorMessage>
+</ValidationRule>

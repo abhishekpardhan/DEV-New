@@ -1,0 +1,2099 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>AGARTALA</fullName>
+        <default>false</default>
+        <label>AGARTALA</label>
+    </customValue>
+    <customValue>
+        <fullName>AGRA</fullName>
+        <default>false</default>
+        <label>AGRA</label>
+    </customValue>
+    <customValue>
+        <fullName>AHMEDABAD</fullName>
+        <default>false</default>
+        <label>AHMEDABAD</label>
+    </customValue>
+    <customValue>
+        <fullName>AHMEDABAD CITY</fullName>
+        <default>false</default>
+        <label>AHMEDABAD CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>AHMEDNAGAR</fullName>
+        <default>false</default>
+        <label>AHMEDNAGAR</label>
+    </customValue>
+    <customValue>
+        <fullName>AIZWAL</fullName>
+        <default>false</default>
+        <label>AIZAWL</label>
+    </customValue>
+    <customValue>
+        <fullName>ALIGARH</fullName>
+        <default>false</default>
+        <label>ALIGARH</label>
+    </customValue>
+    <customValue>
+        <fullName>ALWAR</fullName>
+        <default>false</default>
+        <label>ALWAR</label>
+    </customValue>
+    <customValue>
+        <fullName>AMBALA</fullName>
+        <default>false</default>
+        <label>AMBALA</label>
+    </customValue>
+    <customValue>
+        <fullName>AMBALA CITY</fullName>
+        <default>false</default>
+        <label>AMBALA CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>AMRITSAR</fullName>
+        <default>false</default>
+        <label>AMRITSAR</label>
+    </customValue>
+    <customValue>
+        <fullName>ANDHRA PRADESH CENTRAL</fullName>
+        <default>false</default>
+        <label>ANDHRA PRADESH CENTRAL</label>
+    </customValue>
+    <customValue>
+        <fullName>ANDHRA PRADESH EAST</fullName>
+        <default>false</default>
+        <label>ANDHRA PRADESH EAST</label>
+    </customValue>
+    <customValue>
+        <fullName>ANDHRA PRADESH WEST</fullName>
+        <default>false</default>
+        <label>ANDHRA PRADESH WEST</label>
+    </customValue>
+    <customValue>
+        <fullName>AP SCU001</fullName>
+        <default>false</default>
+        <label>AP SCU001</label>
+    </customValue>
+    <customValue>
+        <fullName>ATTIBELE</fullName>
+        <default>false</default>
+        <label>ATTIBELE</label>
+    </customValue>
+    <customValue>
+        <fullName>AURANGABAD</fullName>
+        <default>false</default>
+        <label>AURANGABAD</label>
+    </customValue>
+    <customValue>
+        <fullName>AURANGABAD CITY</fullName>
+        <default>false</default>
+        <label>AURANGABAD CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>BADDI</fullName>
+        <default>false</default>
+        <label>BADDI</label>
+    </customValue>
+    <customValue>
+        <fullName>BAHADURGARH</fullName>
+        <default>false</default>
+        <label>BAHADURGARH</label>
+    </customValue>
+    <customValue>
+        <fullName>BANGALORE</fullName>
+        <default>false</default>
+        <label>BANGALORE</label>
+    </customValue>
+    <customValue>
+        <fullName>BANGALORE CITY</fullName>
+        <default>false</default>
+        <label>BANGALORE CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>BANGALORE DELIVERY</fullName>
+        <default>false</default>
+        <label>BANGALORE DELIVERY</label>
+    </customValue>
+    <customValue>
+        <fullName>BANGALORE NORTH</fullName>
+        <default>false</default>
+        <label>BANGALORE NORTH</label>
+    </customValue>
+    <customValue>
+        <fullName>BANGALORE SCS</fullName>
+        <default>false</default>
+        <label>BANGALORE SCS</label>
+    </customValue>
+    <customValue>
+        <fullName>BANGALORE SOUTH</fullName>
+        <default>false</default>
+        <label>BANGALORE SOUTH</label>
+    </customValue>
+    <customValue>
+        <fullName>BARASAT</fullName>
+        <default>false</default>
+        <label>BARASAT</label>
+    </customValue>
+    <customValue>
+        <fullName>BAREILLY</fullName>
+        <default>false</default>
+        <label>BAREILLY</label>
+    </customValue>
+    <customValue>
+        <fullName>BARODA</fullName>
+        <default>false</default>
+        <label>BARODA</label>
+    </customValue>
+    <customValue>
+        <fullName>BARODA CITY</fullName>
+        <default>false</default>
+        <label>BARODA CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>BAWAL</fullName>
+        <default>false</default>
+        <label>BAWAL</label>
+    </customValue>
+    <customValue>
+        <fullName>BELGAUM</fullName>
+        <default>false</default>
+        <label>BELGAUM</label>
+    </customValue>
+    <customValue>
+        <fullName>BERHAMPUR</fullName>
+        <default>false</default>
+        <label>BERHAMPUR</label>
+    </customValue>
+    <customValue>
+        <fullName>BHAGALPUR</fullName>
+        <default>false</default>
+        <label>BHAGALPUR</label>
+    </customValue>
+    <customValue>
+        <fullName>BHAYLA</fullName>
+        <default>false</default>
+        <label>BHAYLA</label>
+    </customValue>
+    <customValue>
+        <fullName>BHILAI</fullName>
+        <default>false</default>
+        <label>BHILAI</label>
+    </customValue>
+    <customValue>
+        <fullName>BHIWADI</fullName>
+        <default>false</default>
+        <label>BHIWADI</label>
+    </customValue>
+    <customValue>
+        <fullName>BHIWANDI</fullName>
+        <default>false</default>
+        <label>BHIWANDI</label>
+    </customValue>
+    <customValue>
+        <fullName>BHIWANDI CITY</fullName>
+        <default>false</default>
+        <label>BHIWANDI CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>BHOPAL</fullName>
+        <default>false</default>
+        <label>BHOPAL</label>
+    </customValue>
+    <customValue>
+        <fullName>BHUBANESHWAR</fullName>
+        <default>false</default>
+        <label>BHUBANESHWAR</label>
+    </customValue>
+    <customValue>
+        <fullName>BHUBANESHWAR CITY</fullName>
+        <default>false</default>
+        <label>BHUBANESHWAR CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>BIHAR CENTRAL</fullName>
+        <default>false</default>
+        <label>BIHAR CENTRAL</label>
+    </customValue>
+    <customValue>
+        <fullName>BIHAR EAST</fullName>
+        <default>false</default>
+        <label>BIHAR EAST</label>
+    </customValue>
+    <customValue>
+        <fullName>BIHAR NORTH</fullName>
+        <default>false</default>
+        <label>BIHAR NORTH</label>
+    </customValue>
+    <customValue>
+        <fullName>BIHAR SOUTH</fullName>
+        <default>false</default>
+        <label>BIHAR SOUTH</label>
+    </customValue>
+    <customValue>
+        <fullName>BILASPUR (CG)</fullName>
+        <default>false</default>
+        <label>BILASPUR (CG)</label>
+    </customValue>
+    <customValue>
+        <fullName>BINOLA</fullName>
+        <default>false</default>
+        <label>BINOLA</label>
+    </customValue>
+    <customValue>
+        <fullName>BINOLA 1</fullName>
+        <default>false</default>
+        <label>BINOLA 1</label>
+    </customValue>
+    <customValue>
+        <fullName>BONGAIGAON</fullName>
+        <default>false</default>
+        <label>BONGAIGAON</label>
+    </customValue>
+    <customValue>
+        <fullName>CALICUT</fullName>
+        <default>false</default>
+        <label>CALICUT</label>
+    </customValue>
+    <customValue>
+        <fullName>CHANDIGARH</fullName>
+        <default>false</default>
+        <label>CHANDIGARH</label>
+    </customValue>
+    <customValue>
+        <fullName>CHANDWAJI</fullName>
+        <default>false</default>
+        <label>CHANDWAJI</label>
+    </customValue>
+    <customValue>
+        <fullName>CHANGODAR</fullName>
+        <default>false</default>
+        <label>CHANGODAR</label>
+    </customValue>
+    <customValue>
+        <fullName>CHEMBUR</fullName>
+        <default>false</default>
+        <label>CHEMBUR</label>
+    </customValue>
+    <customValue>
+        <fullName>CHENNAI</fullName>
+        <default>false</default>
+        <label>CHENNAI</label>
+    </customValue>
+    <customValue>
+        <fullName>CHENNAI CENTRAL</fullName>
+        <default>false</default>
+        <label>CHENNAI CENTRAL</label>
+    </customValue>
+    <customValue>
+        <fullName>CHENNAI CITY</fullName>
+        <default>false</default>
+        <label>CHENNAI CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>CHENNAI NORTH</fullName>
+        <default>false</default>
+        <label>CHENNAI NORTH</label>
+    </customValue>
+    <customValue>
+        <fullName>CHENNAI SCS</fullName>
+        <default>false</default>
+        <label>CHENNAI SCS</label>
+    </customValue>
+    <customValue>
+        <fullName>CHENNAI SOUTH</fullName>
+        <default>false</default>
+        <label>CHENNAI SOUTH</label>
+    </customValue>
+    <customValue>
+        <fullName>CHENNAI WEST</fullName>
+        <default>false</default>
+        <label>CHENNAI WEST</label>
+    </customValue>
+    <customValue>
+        <fullName>CHHATTISGARH CENTRAL</fullName>
+        <default>false</default>
+        <label>CHHATTISGARH CENTRAL</label>
+    </customValue>
+    <customValue>
+        <fullName>COCHIN</fullName>
+        <default>false</default>
+        <label>COCHIN</label>
+    </customValue>
+    <customValue>
+        <fullName>COCHIN CITY</fullName>
+        <default>false</default>
+        <label>COCHIN CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>COIMBATORE</fullName>
+        <default>false</default>
+        <label>COIMBATORE</label>
+    </customValue>
+    <customValue>
+        <fullName>COIMBATORE CITY</fullName>
+        <default>false</default>
+        <label>COIMBATORE CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>CORPORATE OFFICE</fullName>
+        <default>false</default>
+        <label>CORPORATE OFFICE</label>
+    </customValue>
+    <customValue>
+        <fullName>CUTTACK</fullName>
+        <default>false</default>
+        <label>CUTTACK</label>
+    </customValue>
+    <customValue>
+        <fullName>DADRA AND NAGAR HAVELI</fullName>
+        <default>false</default>
+        <label>DADRA AND NAGAR HAVELI</label>
+    </customValue>
+    <customValue>
+        <fullName>Dadri</fullName>
+        <default>false</default>
+        <label>Dadri</label>
+    </customValue>
+    <customValue>
+        <fullName>DAMAN</fullName>
+        <default>false</default>
+        <label>DAMAN</label>
+    </customValue>
+    <customValue>
+        <fullName>DEHRADUN</fullName>
+        <default>false</default>
+        <label>DEHRADUN</label>
+    </customValue>
+    <customValue>
+        <fullName>DELHI</fullName>
+        <default>false</default>
+        <label>DELHI</label>
+    </customValue>
+    <customValue>
+        <fullName>DELHI CENTRAL</fullName>
+        <default>false</default>
+        <label>DELHI CENTRAL</label>
+    </customValue>
+    <customValue>
+        <fullName>DELHI EAST</fullName>
+        <default>false</default>
+        <label>DELHI EAST</label>
+    </customValue>
+    <customValue>
+        <fullName>DELHI NCR HUB</fullName>
+        <default>false</default>
+        <label>DELHI NCR HUB</label>
+    </customValue>
+    <customValue>
+        <fullName>DELHI NORTH</fullName>
+        <default>false</default>
+        <label>DELHI NORTH</label>
+    </customValue>
+    <customValue>
+        <fullName>DELHI SAM PLUS</fullName>
+        <default>false</default>
+        <label>DELHI SAM PLUS</label>
+    </customValue>
+    <customValue>
+        <fullName>DELHI SAM PLUS 2</fullName>
+        <default>false</default>
+        <label>DELHI SAM PLUS 2</label>
+    </customValue>
+    <customValue>
+        <fullName>DELHI SCS</fullName>
+        <default>false</default>
+        <label>DELHI SCS</label>
+    </customValue>
+    <customValue>
+        <fullName>DELHI SOUTH</fullName>
+        <default>false</default>
+        <label>DELHI SOUTH</label>
+    </customValue>
+    <customValue>
+        <fullName>DELHI SOUTH WEST</fullName>
+        <default>false</default>
+        <label>DELHI SOUTH WEST</label>
+    </customValue>
+    <customValue>
+        <fullName>DELHI WEST</fullName>
+        <default>false</default>
+        <label>DELHI WEST</label>
+    </customValue>
+    <customValue>
+        <fullName>DEWAS</fullName>
+        <default>false</default>
+        <label>DEWAS</label>
+    </customValue>
+    <customValue>
+        <fullName>DHANBAD</fullName>
+        <default>false</default>
+        <label>DHANBAD</label>
+    </customValue>
+    <customValue>
+        <fullName>DHULE HUB</fullName>
+        <default>false</default>
+        <label>DHULE HUB</label>
+    </customValue>
+    <customValue>
+        <fullName>DIMAPUR</fullName>
+        <default>false</default>
+        <label>DIMAPUR</label>
+    </customValue>
+    <customValue>
+        <fullName>DL AQUALITE</fullName>
+        <default>false</default>
+        <label>DL AQUALITE</label>
+    </customValue>
+    <customValue>
+        <fullName>DL MINDA</fullName>
+        <default>false</default>
+        <label>DL MINDA</label>
+    </customValue>
+    <customValue>
+        <fullName>DL RELAXO</fullName>
+        <default>false</default>
+        <label>DL RELAXO</label>
+    </customValue>
+    <customValue>
+        <fullName>DOBBASPET</fullName>
+        <default>false</default>
+        <label>DOBBASPET</label>
+    </customValue>
+    <customValue>
+        <fullName>DODA</fullName>
+        <default>false</default>
+        <label>DODA</label>
+    </customValue>
+    <customValue>
+        <fullName>DURGAPUR</fullName>
+        <default>false</default>
+        <label>DURGAPUR</label>
+    </customValue>
+    <customValue>
+        <fullName>ERODE</fullName>
+        <default>false</default>
+        <label>ERODE</label>
+    </customValue>
+    <customValue>
+        <fullName>FARIDABAD</fullName>
+        <default>false</default>
+        <label>FARIDABAD</label>
+    </customValue>
+    <customValue>
+        <fullName>FARIDABAD CITY</fullName>
+        <default>false</default>
+        <label>FARIDABAD CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>FARRUKHNAGAR</fullName>
+        <default>false</default>
+        <label>FARRUKHNAGAR</label>
+    </customValue>
+    <customValue>
+        <fullName>GANDHIDHAM</fullName>
+        <default>false</default>
+        <label>GANDHIDHAM</label>
+    </customValue>
+    <customValue>
+        <fullName>GHAZIABAD</fullName>
+        <default>false</default>
+        <label>GHAZIABAD</label>
+    </customValue>
+    <customValue>
+        <fullName>GORAKHPUR</fullName>
+        <default>false</default>
+        <label>GORAKHPUR</label>
+    </customValue>
+    <customValue>
+        <fullName>GOREGAON</fullName>
+        <default>false</default>
+        <label>GOREGAON</label>
+    </customValue>
+    <customValue>
+        <fullName>Greater Howrah</fullName>
+        <default>false</default>
+        <label>Greater Howrah</label>
+    </customValue>
+    <customValue>
+        <fullName>GREATER JAIPUR</fullName>
+        <default>false</default>
+        <label>GREATER JAIPUR</label>
+    </customValue>
+    <customValue>
+        <fullName>GREATER MUMBAI</fullName>
+        <default>false</default>
+        <label>GREATER MUMBAI</label>
+    </customValue>
+    <customValue>
+        <fullName>GREATER MUMBAI CITY</fullName>
+        <default>false</default>
+        <label>GREATER MUMBAI CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>GREATER NAGPUR</fullName>
+        <default>false</default>
+        <label>GREATER NAGPUR</label>
+    </customValue>
+    <customValue>
+        <fullName>GREATER NOIDA</fullName>
+        <default>false</default>
+        <label>GREATER NOIDA</label>
+    </customValue>
+    <customValue>
+        <fullName>GUJARAT CENTRAL</fullName>
+        <default>false</default>
+        <label>GUJARAT CENTRAL</label>
+    </customValue>
+    <customValue>
+        <fullName>GUJARAT EAST</fullName>
+        <default>false</default>
+        <label>GUJARAT EAST</label>
+    </customValue>
+    <customValue>
+        <fullName>GUJARAT NORTH</fullName>
+        <default>false</default>
+        <label>GUJARAT NORTH</label>
+    </customValue>
+    <customValue>
+        <fullName>GUJARAT-NORTH</fullName>
+        <default>false</default>
+        <label>GUJARAT-NORTH</label>
+    </customValue>
+    <customValue>
+        <fullName>GUJARAT SOUTH</fullName>
+        <default>false</default>
+        <label>GUJARAT SOUTH</label>
+    </customValue>
+    <customValue>
+        <fullName>GUJARAT SOUTH EAST</fullName>
+        <default>false</default>
+        <label>GUJARAT SOUTH EAST</label>
+    </customValue>
+    <customValue>
+        <fullName>GUJARAT WEST</fullName>
+        <default>false</default>
+        <label>GUJARAT WEST</label>
+    </customValue>
+    <customValue>
+        <fullName>GURGAON</fullName>
+        <default>false</default>
+        <label>GURGAON</label>
+    </customValue>
+    <customValue>
+        <fullName>GURGAON CITY</fullName>
+        <default>false</default>
+        <label>GURGAON CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>GUWAHATI</fullName>
+        <default>false</default>
+        <label>GUWAHATI</label>
+    </customValue>
+    <customValue>
+        <fullName>GUWAHATI CITY</fullName>
+        <default>false</default>
+        <label>GUWAHATI CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>GWALIOR</fullName>
+        <default>false</default>
+        <label>GWALIOR</label>
+    </customValue>
+    <customValue>
+        <fullName>HARIDWAR</fullName>
+        <default>false</default>
+        <label>HARIDWAR</label>
+    </customValue>
+    <customValue>
+        <fullName>HARYANA NORTH</fullName>
+        <default>false</default>
+        <label>HARYANA NORTH</label>
+    </customValue>
+    <customValue>
+        <fullName>HARYANA RO</fullName>
+        <default>false</default>
+        <label>HARYANA RO</label>
+    </customValue>
+    <customValue>
+        <fullName>HARYANA SOUTH</fullName>
+        <default>false</default>
+        <label>HARYANA SOUTH</label>
+    </customValue>
+    <customValue>
+        <fullName>HARYANA SOUTH HUB</fullName>
+        <default>false</default>
+        <label>HARYANA SOUTH HUB</label>
+    </customValue>
+    <customValue>
+        <fullName>HARYANA WEST</fullName>
+        <default>false</default>
+        <label>HARYANA WEST</label>
+    </customValue>
+    <customValue>
+        <fullName>HARYANA WEST NH10</fullName>
+        <default>false</default>
+        <label>HARYANA WEST NH10</label>
+    </customValue>
+    <customValue>
+        <fullName>HISSAR</fullName>
+        <default>false</default>
+        <label>HISSAR</label>
+    </customValue>
+    <customValue>
+        <fullName>HOOGHLY</fullName>
+        <default>false</default>
+        <label>HOOGHLY</label>
+    </customValue>
+    <customValue>
+        <fullName>HOSHIARPUR</fullName>
+        <default>false</default>
+        <label>HOSHIARPUR</label>
+    </customValue>
+    <customValue>
+        <fullName>HOSUR</fullName>
+        <default>false</default>
+        <label>HOSUR</label>
+    </customValue>
+    <customValue>
+        <fullName>HOWRAH</fullName>
+        <default>false</default>
+        <label>HOWRAH</label>
+    </customValue>
+    <customValue>
+        <fullName>HP CENTRAL</fullName>
+        <default>false</default>
+        <label>HP CENTRAL</label>
+    </customValue>
+    <customValue>
+        <fullName>HP NORTH</fullName>
+        <default>false</default>
+        <label>HP NORTH</label>
+    </customValue>
+    <customValue>
+        <fullName>HP SOUTH</fullName>
+        <default>false</default>
+        <label>HP SOUTH</label>
+    </customValue>
+    <customValue>
+        <fullName>HR BENETTON</fullName>
+        <default>false</default>
+        <label>HR BENETTON</label>
+    </customValue>
+    <customValue>
+        <fullName>HR SAM-001</fullName>
+        <default>false</default>
+        <label>HR SAM-001</label>
+    </customValue>
+    <customValue>
+        <fullName>HR SCU003</fullName>
+        <default>false</default>
+        <label>HR SCU003</label>
+    </customValue>
+    <customValue>
+        <fullName>HUBLI</fullName>
+        <default>false</default>
+        <label>HUBLI</label>
+    </customValue>
+    <customValue>
+        <fullName>HUBLI CITY</fullName>
+        <default>false</default>
+        <label>HUBLI CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>HYDERABAD</fullName>
+        <default>false</default>
+        <label>HYDERABAD</label>
+    </customValue>
+    <customValue>
+        <fullName>HYDERABAD CITY</fullName>
+        <default>false</default>
+        <label>HYDERABAD CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>HYDERABAD HITEC CITY</fullName>
+        <default>false</default>
+        <label>HYDERABAD HITEC CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>Hyderabad North</fullName>
+        <default>false</default>
+        <label>Hyderabad North</label>
+    </customValue>
+    <customValue>
+        <fullName>IMPHAL</fullName>
+        <default>false</default>
+        <label>IMPHAL</label>
+    </customValue>
+    <customValue>
+        <fullName>INDORE</fullName>
+        <default>false</default>
+        <label>INDORE</label>
+    </customValue>
+    <customValue>
+        <fullName>INDORE CITY</fullName>
+        <default>false</default>
+        <label>INDORE CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>ITANAGAR</fullName>
+        <default>false</default>
+        <label>ITANAGAR</label>
+    </customValue>
+    <customValue>
+        <fullName>J&amp;K CENTRAL</fullName>
+        <default>false</default>
+        <label>J&amp;K CENTRAL</label>
+    </customValue>
+    <customValue>
+        <fullName>JABALPUR</fullName>
+        <default>false</default>
+        <label>JABALPUR</label>
+    </customValue>
+    <customValue>
+        <fullName>JAIPUR</fullName>
+        <default>false</default>
+        <label>JAIPUR</label>
+    </customValue>
+    <customValue>
+        <fullName>JAIPUR CITY</fullName>
+        <default>false</default>
+        <label>JAIPUR CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>JALANDHAR</fullName>
+        <default>false</default>
+        <label>JALANDHAR</label>
+    </customValue>
+    <customValue>
+        <fullName>JAMMU</fullName>
+        <default>false</default>
+        <label>JAMMU</label>
+    </customValue>
+    <customValue>
+        <fullName>JAMNAGAR</fullName>
+        <default>false</default>
+        <label>JAMNAGAR</label>
+    </customValue>
+    <customValue>
+        <fullName>JAMSHEDPUR</fullName>
+        <default>false</default>
+        <label>JAMSHEDPUR</label>
+    </customValue>
+    <customValue>
+        <fullName>JAMSHEDPUR CITY</fullName>
+        <default>false</default>
+        <label>JAMSHEDPUR CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>Jhajjar</fullName>
+        <default>false</default>
+        <label>JHAJJAR</label>
+    </customValue>
+    <customValue>
+        <fullName>JHANSI</fullName>
+        <default>false</default>
+        <label>JHANSI</label>
+    </customValue>
+    <customValue>
+        <fullName>JHARKHAND CENTRAL</fullName>
+        <default>false</default>
+        <label>JHARKHAND CENTRAL</label>
+    </customValue>
+    <customValue>
+        <fullName>JODHPUR</fullName>
+        <default>false</default>
+        <label>JODHPUR</label>
+    </customValue>
+    <customValue>
+        <fullName>JORHAT</fullName>
+        <default>false</default>
+        <label>JORHAT</label>
+    </customValue>
+    <customValue>
+        <fullName>KALAMBOLI</fullName>
+        <default>false</default>
+        <label>KALAMBOLI</label>
+    </customValue>
+    <customValue>
+        <fullName>KANPUR</fullName>
+        <default>false</default>
+        <label>KANPUR</label>
+    </customValue>
+    <customValue>
+        <fullName>KANPUR CITY</fullName>
+        <default>false</default>
+        <label>KANPUR CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>KARNAL</fullName>
+        <default>false</default>
+        <label>KARNAL</label>
+    </customValue>
+    <customValue>
+        <fullName>KARNATAKA CENTRAL</fullName>
+        <default>false</default>
+        <label>KARNATAKA CENTRAL</label>
+    </customValue>
+    <customValue>
+        <fullName>KARNATAKA EAST</fullName>
+        <default>false</default>
+        <label>KARNATAKA EAST</label>
+    </customValue>
+    <customValue>
+        <fullName>KARNATAKA NORTH</fullName>
+        <default>false</default>
+        <label>KARNATAKA NORTH</label>
+    </customValue>
+    <customValue>
+        <fullName>KARNATAKA NORTH WEST</fullName>
+        <default>false</default>
+        <label>KARNATAKA NORTH WEST</label>
+    </customValue>
+    <customValue>
+        <fullName>KARNATAKA SOUTH</fullName>
+        <default>false</default>
+        <label>KARNATAKA SOUTH</label>
+    </customValue>
+    <customValue>
+        <fullName>KARNATAKA WEST</fullName>
+        <default>false</default>
+        <label>KARNATAKA WEST</label>
+    </customValue>
+    <customValue>
+        <fullName>KERALAM CENTRAL</fullName>
+        <default>false</default>
+        <label>KERALAM CENTRAL</label>
+    </customValue>
+    <customValue>
+        <fullName>KERALA NORTH</fullName>
+        <default>false</default>
+        <label>KERALA NORTH</label>
+    </customValue>
+    <customValue>
+        <fullName>KERALA SOUTH</fullName>
+        <default>false</default>
+        <label>KERALA SOUTH</label>
+    </customValue>
+    <customValue>
+        <fullName>KHARAGPUR</fullName>
+        <default>false</default>
+        <label>KHARAGPUR</label>
+    </customValue>
+    <customValue>
+        <fullName>KOLHAPUR</fullName>
+        <default>false</default>
+        <label>KOLHAPUR</label>
+    </customValue>
+    <customValue>
+        <fullName>KOLKATA</fullName>
+        <default>false</default>
+        <label>KOLKATA</label>
+    </customValue>
+    <customValue>
+        <fullName>KOLKATA CITY</fullName>
+        <default>false</default>
+        <label>KOLKATA CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>Kolkata Dankuni</fullName>
+        <default>false</default>
+        <label>Kolkata Dankuni</label>
+    </customValue>
+    <customValue>
+        <fullName>KOLKATA OUTBOUND</fullName>
+        <default>false</default>
+        <label>KOLKATA OUTBOUND</label>
+    </customValue>
+    <customValue>
+        <fullName>KOLKATA SCS</fullName>
+        <default>false</default>
+        <label>KOLKATA SCS</label>
+    </customValue>
+    <customValue>
+        <fullName>KOLKATA SOUTH</fullName>
+        <default>false</default>
+        <label>KOLKATA SOUTH</label>
+    </customValue>
+    <customValue>
+        <fullName>KOLLAM</fullName>
+        <default>false</default>
+        <label>KOLLAM</label>
+    </customValue>
+    <customValue>
+        <fullName>KOTA</fullName>
+        <default>false</default>
+        <label>KOTA</label>
+    </customValue>
+    <customValue>
+        <fullName>LADAKH CENTRAL</fullName>
+        <default>false</default>
+        <label>LADAKH CENTRAL</label>
+    </customValue>
+    <customValue>
+        <fullName>LUCKNOW</fullName>
+        <default>false</default>
+        <label>LUCKNOW</label>
+    </customValue>
+    <customValue>
+        <fullName>LUCKNOW CITY</fullName>
+        <default>false</default>
+        <label>LUCKNOW CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>LUDHIANA</fullName>
+        <default>false</default>
+        <label>LUDHIANA</label>
+    </customValue>
+    <customValue>
+        <fullName>LUDHIANA CITY</fullName>
+        <default>false</default>
+        <label>LUDHIANA CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>MADURAI</fullName>
+        <default>false</default>
+        <label>MADURAI</label>
+    </customValue>
+    <customValue>
+        <fullName>MAHARASHTRA CENTRAL</fullName>
+        <default>false</default>
+        <label>MAHARASHTRA CENTRAL</label>
+    </customValue>
+    <customValue>
+        <fullName>MAHARASHTRA EAST</fullName>
+        <default>false</default>
+        <label>MAHARASHTRA EAST</label>
+    </customValue>
+    <customValue>
+        <fullName>MAHARASHTRA NORTH</fullName>
+        <default>false</default>
+        <label>MAHARASHTRA NORTH</label>
+    </customValue>
+    <customValue>
+        <fullName>MAHARASHTRA SOUTH</fullName>
+        <default>false</default>
+        <label>MAHARASHTRA SOUTH</label>
+    </customValue>
+    <customValue>
+        <fullName>MAHARASHTRA SOUTH EAST</fullName>
+        <default>false</default>
+        <label>MAHARASHTRA SOUTH EAST</label>
+    </customValue>
+    <customValue>
+        <fullName>MAHARASTRA CENTRAL</fullName>
+        <default>false</default>
+        <label>MAHARASTRA CENTRAL</label>
+    </customValue>
+    <customValue>
+        <fullName>MALAPPURAM</fullName>
+        <default>false</default>
+        <label>MALAPPURAM</label>
+    </customValue>
+    <customValue>
+        <fullName>MALDA</fullName>
+        <default>false</default>
+        <label>MALDA</label>
+    </customValue>
+    <customValue>
+        <fullName>MANESAR</fullName>
+        <default>false</default>
+        <label>MANESAR</label>
+    </customValue>
+    <customValue>
+        <fullName>MANGALORE</fullName>
+        <default>false</default>
+        <label>MANGALORE</label>
+    </customValue>
+    <customValue>
+        <fullName>MARAIMALAI NAGAR</fullName>
+        <default>false</default>
+        <label>MARAIMALAI NAGAR</label>
+    </customValue>
+    <customValue>
+        <fullName>MAUNATH BHANJAN</fullName>
+        <default>false</default>
+        <label>MAUNATH BHANJAN</label>
+    </customValue>
+    <customValue>
+        <fullName>MCU0002</fullName>
+        <default>false</default>
+        <label>MCU0002</label>
+    </customValue>
+    <customValue>
+        <fullName>MEERUT</fullName>
+        <default>false</default>
+        <label>MEERUT</label>
+    </customValue>
+    <customValue>
+        <fullName>MH MAHINDRA</fullName>
+        <default>false</default>
+        <label>MH MAHINDRA</label>
+    </customValue>
+    <customValue>
+        <fullName>MH SCU002</fullName>
+        <default>false</default>
+        <label>MH SCU002</label>
+    </customValue>
+    <customValue>
+        <fullName>MH SYSKA</fullName>
+        <default>false</default>
+        <label>MH SYSKA</label>
+    </customValue>
+    <customValue>
+        <fullName>MOHALI</fullName>
+        <default>false</default>
+        <label>MOHALI</label>
+    </customValue>
+    <customValue>
+        <fullName>MOHAN NAGAR</fullName>
+        <default>false</default>
+        <label>MOHAN NAGAR</label>
+    </customValue>
+    <customValue>
+        <fullName>MP CENTRAL</fullName>
+        <default>false</default>
+        <label>MP CENTRAL</label>
+    </customValue>
+    <customValue>
+        <fullName>MP EAST</fullName>
+        <default>false</default>
+        <label>MP EAST</label>
+    </customValue>
+    <customValue>
+        <fullName>MP NORTH</fullName>
+        <default>false</default>
+        <label>MP NORTH</label>
+    </customValue>
+    <customValue>
+        <fullName>MP SOUTH</fullName>
+        <default>false</default>
+        <label>MP SOUTH</label>
+    </customValue>
+    <customValue>
+        <fullName>MU GODREJ</fullName>
+        <default>false</default>
+        <label>MU GODREJ</label>
+    </customValue>
+    <customValue>
+        <fullName>MUMBAI CENTRAL</fullName>
+        <default>false</default>
+        <label>MUMBAI CENTRAL</label>
+    </customValue>
+    <customValue>
+        <fullName>MUMBAI CITY</fullName>
+        <default>false</default>
+        <label>MUMBAI CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>MUMBAI CITY SOUTH</fullName>
+        <default>false</default>
+        <label>MUMBAI CITY SOUTH</label>
+    </customValue>
+    <customValue>
+        <fullName>MUMBAI NORTH</fullName>
+        <default>false</default>
+        <label>MUMBAI NORTH</label>
+    </customValue>
+    <customValue>
+        <fullName>MUMBAI SAM PLUS</fullName>
+        <default>false</default>
+        <label>MUMBAI SAM PLUS</label>
+    </customValue>
+    <customValue>
+        <fullName>MUMBAI SCS</fullName>
+        <default>false</default>
+        <label>MUMBAI SCS</label>
+    </customValue>
+    <customValue>
+        <fullName>MUMBAI SOUTH</fullName>
+        <default>false</default>
+        <label>MUMBAI SOUTH</label>
+    </customValue>
+    <customValue>
+        <fullName>MU POLYCAB</fullName>
+        <default>false</default>
+        <label>MU POLYCAB</label>
+    </customValue>
+    <customValue>
+        <fullName>MU SCHAEFFLER</fullName>
+        <default>false</default>
+        <label>MU SCHAEFFLER</label>
+    </customValue>
+    <customValue>
+        <fullName>MUZAFFARPUR</fullName>
+        <default>false</default>
+        <label>MUZAFFARPUR</label>
+    </customValue>
+    <customValue>
+        <fullName>MYSORE</fullName>
+        <default>false</default>
+        <label>MYSORE</label>
+    </customValue>
+    <customValue>
+        <fullName>NAGPUR</fullName>
+        <default>false</default>
+        <label>NAGPUR</label>
+    </customValue>
+    <customValue>
+        <fullName>NAGPUR CITY</fullName>
+        <default>false</default>
+        <label>NAGPUR CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>NASIK</fullName>
+        <default>false</default>
+        <label>NASIK</label>
+    </customValue>
+    <customValue>
+        <fullName>NAVI MUMBAI</fullName>
+        <default>false</default>
+        <label>NAVI MUMBAI</label>
+    </customValue>
+    <customValue>
+        <fullName>NAVI MUMBAI CITY</fullName>
+        <default>false</default>
+        <label>NAVI MUMBAI CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>NCR HUB</fullName>
+        <default>false</default>
+        <label>NCR HUB</label>
+    </customValue>
+    <customValue>
+        <fullName>NCR LOGISTICS PARK</fullName>
+        <default>false</default>
+        <label>NCR LOGISTICS PARK</label>
+    </customValue>
+    <customValue>
+        <fullName>NCR SCS</fullName>
+        <default>false</default>
+        <label>NCR SCS</label>
+    </customValue>
+    <customValue>
+        <fullName>NEEMRANA</fullName>
+        <default>false</default>
+        <label>NEEMRANA</label>
+    </customValue>
+    <customValue>
+        <fullName>NELAMANGALA</fullName>
+        <default>false</default>
+        <label>NELAMANGALA</label>
+    </customValue>
+    <customValue>
+        <fullName>NELAMANGALA CITY</fullName>
+        <default>false</default>
+        <label>NELAMANGALA CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>NELLORE</fullName>
+        <default>false</default>
+        <label>NELLORE</label>
+    </customValue>
+    <customValue>
+        <fullName>New Delhi Central</fullName>
+        <default>false</default>
+        <label>New Delhi Central</label>
+    </customValue>
+    <customValue>
+        <fullName>NOIDA</fullName>
+        <default>false</default>
+        <label>NOIDA</label>
+    </customValue>
+    <customValue>
+        <fullName>NOIDA SAM PLUS</fullName>
+        <default>false</default>
+        <label>NOIDA SAM PLUS</label>
+    </customValue>
+    <customValue>
+        <fullName>NOIDA SCS</fullName>
+        <default>false</default>
+        <label>NOIDA SCS</label>
+    </customValue>
+    <customValue>
+        <fullName>NORTH-EAST NORTH</fullName>
+        <default>false</default>
+        <label>NORTH-EAST NORTH</label>
+    </customValue>
+    <customValue>
+        <fullName>NORTH-EAST SOUTH</fullName>
+        <default>false</default>
+        <label>NORTH-EAST SOUTH</label>
+    </customValue>
+    <customValue>
+        <fullName>ODISHA EAST</fullName>
+        <default>false</default>
+        <label>ODISHA EAST</label>
+    </customValue>
+    <customValue>
+        <fullName>ODISHA SOUTH</fullName>
+        <default>false</default>
+        <label>ODISHA SOUTH</label>
+    </customValue>
+    <customValue>
+        <fullName>ODISHA WEST</fullName>
+        <default>false</default>
+        <label>ODISHA WEST</label>
+    </customValue>
+    <customValue>
+        <fullName>ORISSA CENTRAL</fullName>
+        <default>false</default>
+        <label>ORISSA CENTRAL</label>
+    </customValue>
+    <customValue>
+        <fullName>PALAKKAD</fullName>
+        <default>false</default>
+        <label>PALAKKAD</label>
+    </customValue>
+    <customValue>
+        <fullName>PALGHAR</fullName>
+        <default>false</default>
+        <label>PALGHAR</label>
+    </customValue>
+    <customValue>
+        <fullName>PALWAL SAM PLUS</fullName>
+        <default>false</default>
+        <label>PALWAL SAM PLUS</label>
+    </customValue>
+    <customValue>
+        <fullName>PANIPAT</fullName>
+        <default>false</default>
+        <label>PANIPAT</label>
+    </customValue>
+    <customValue>
+        <fullName>PANJIM</fullName>
+        <default>false</default>
+        <label>PANJIM</label>
+    </customValue>
+    <customValue>
+        <fullName>PATANCHERU</fullName>
+        <default>false</default>
+        <label>PATANCHERU</label>
+    </customValue>
+    <customValue>
+        <fullName>PATAUDI BILASPUR</fullName>
+        <default>false</default>
+        <label>PATAUDI BILASPUR</label>
+    </customValue>
+    <customValue>
+        <fullName>PATIALA</fullName>
+        <default>false</default>
+        <label>PATIALA</label>
+    </customValue>
+    <customValue>
+        <fullName>PATNA</fullName>
+        <default>false</default>
+        <label>PATNA</label>
+    </customValue>
+    <customValue>
+        <fullName>PATNA CITY</fullName>
+        <default>false</default>
+        <label>PATNA CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>PHALTAN</fullName>
+        <default>false</default>
+        <label>PHALTAN</label>
+    </customValue>
+    <customValue>
+        <fullName>PHURSUNGI</fullName>
+        <default>false</default>
+        <label>PHURSUNGI</label>
+    </customValue>
+    <customValue>
+        <fullName>PITHAMPUR</fullName>
+        <default>false</default>
+        <label>PITHAMPUR</label>
+    </customValue>
+    <customValue>
+        <fullName>PONDICHERRY</fullName>
+        <default>false</default>
+        <label>PONDICHERRY</label>
+    </customValue>
+    <customValue>
+        <fullName>PRAYAGRAJ</fullName>
+        <default>false</default>
+        <label>PRAYAGRAJ</label>
+    </customValue>
+    <customValue>
+        <fullName>PUNE</fullName>
+        <default>false</default>
+        <label>PUNE</label>
+    </customValue>
+    <customValue>
+        <fullName>PUNE CHAKAN</fullName>
+        <default>false</default>
+        <label>PUNE CHAKAN</label>
+    </customValue>
+    <customValue>
+        <fullName>PUNE CITY</fullName>
+        <default>false</default>
+        <label>PUNE CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>PUNE RANJANGAON</fullName>
+        <default>false</default>
+        <label>PUNE RANJANGAON</label>
+    </customValue>
+    <customValue>
+        <fullName>PUNE RANJANGAON CITY</fullName>
+        <default>false</default>
+        <label>PUNE RANJANGAON CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>PUNE SCS</fullName>
+        <default>false</default>
+        <label>PUNE SCS</label>
+    </customValue>
+    <customValue>
+        <fullName>PUNE TATHAWADE</fullName>
+        <default>false</default>
+        <label>PUNE TATHAWADE</label>
+    </customValue>
+    <customValue>
+        <fullName>PUNE THATHWADE</fullName>
+        <default>false</default>
+        <label>PUNE THATHWADE</label>
+    </customValue>
+    <customValue>
+        <fullName>PUNE VADGAON</fullName>
+        <default>false</default>
+        <label>PUNE VADGAON</label>
+    </customValue>
+    <customValue>
+        <fullName>PUNE WAGHOLI</fullName>
+        <default>false</default>
+        <label>PUNE WAGHOLI</label>
+    </customValue>
+    <customValue>
+        <fullName>PUNJAB HUB</fullName>
+        <default>false</default>
+        <label>PUNJAB HUB</label>
+    </customValue>
+    <customValue>
+        <fullName>PUNJAB NORTH</fullName>
+        <default>false</default>
+        <label>PUNJAB NORTH</label>
+    </customValue>
+    <customValue>
+        <fullName>PUNJAB SOUTH</fullName>
+        <default>false</default>
+        <label>PUNJAB SOUTH</label>
+    </customValue>
+    <customValue>
+        <fullName>PUNJAB WEST</fullName>
+        <default>false</default>
+        <label>PUNJAB WEST</label>
+    </customValue>
+    <customValue>
+        <fullName>PURNIA</fullName>
+        <default>false</default>
+        <label>PURNIA</label>
+    </customValue>
+    <customValue>
+        <fullName>RAIGARH</fullName>
+        <default>false</default>
+        <label>RAIGARH</label>
+    </customValue>
+    <customValue>
+        <fullName>RAIPUR</fullName>
+        <default>false</default>
+        <label>RAIPUR</label>
+    </customValue>
+    <customValue>
+        <fullName>RAIPUR CITY</fullName>
+        <default>false</default>
+        <label>RAIPUR CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>RAJAHMUNDRY</fullName>
+        <default>false</default>
+        <label>RAJAHMUNDRY</label>
+    </customValue>
+    <customValue>
+        <fullName>RAJASTHAN CENTRAL</fullName>
+        <default>false</default>
+        <label>RAJASTHAN CENTRAL</label>
+    </customValue>
+    <customValue>
+        <fullName>RAJASTHAN EAST</fullName>
+        <default>false</default>
+        <label>RAJASTHAN EAST</label>
+    </customValue>
+    <customValue>
+        <fullName>RAJASTHAN NORTH</fullName>
+        <default>false</default>
+        <label>RAJASTHAN NORTH</label>
+    </customValue>
+    <customValue>
+        <fullName>RAJASTHAN SOUTH</fullName>
+        <default>false</default>
+        <label>RAJASTHAN SOUTH</label>
+    </customValue>
+    <customValue>
+        <fullName>RAJASTHAN WEST</fullName>
+        <default>false</default>
+        <label>RAJASTHAN WEST</label>
+    </customValue>
+    <customValue>
+        <fullName>RAJKOT</fullName>
+        <default>false</default>
+        <label>RAJKOT</label>
+    </customValue>
+    <customValue>
+        <fullName>RAJPURA</fullName>
+        <default>false</default>
+        <label>RAJPURA</label>
+    </customValue>
+    <customValue>
+        <fullName>RANCHI CITY</fullName>
+        <default>false</default>
+        <label>RANCHI CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>RANGPOO</fullName>
+        <default>false</default>
+        <label>RANGPO</label>
+    </customValue>
+    <customValue>
+        <fullName>RJ SCU001</fullName>
+        <default>false</default>
+        <label>RJ SCU001</label>
+    </customValue>
+    <customValue>
+        <fullName>RJ SCU002</fullName>
+        <default>false</default>
+        <label>RJ SCU002</label>
+    </customValue>
+    <customValue>
+        <fullName>ROURKELA</fullName>
+        <default>false</default>
+        <label>ROURKELA</label>
+    </customValue>
+    <customValue>
+        <fullName>RUDRAPUR</fullName>
+        <default>false</default>
+        <label>RUDRAPUR</label>
+    </customValue>
+    <customValue>
+        <fullName>SAHIBABAD</fullName>
+        <default>false</default>
+        <label>SAHIBABAD</label>
+    </customValue>
+    <customValue>
+        <fullName>SALEM</fullName>
+        <default>false</default>
+        <label>SALEM</label>
+    </customValue>
+    <customValue>
+        <fullName>SALEM CITY</fullName>
+        <default>false</default>
+        <label>SALEM CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>SAM - AQUALITE</fullName>
+        <default>false</default>
+        <label>SAM - AQUALITE</label>
+    </customValue>
+    <customValue>
+        <fullName>SAMBALPUR</fullName>
+        <default>false</default>
+        <label>SAMBALPUR</label>
+    </customValue>
+    <customValue>
+        <fullName>SAM - DL RELAXO</fullName>
+        <default>false</default>
+        <label>SAM - DL RELAXO</label>
+    </customValue>
+    <customValue>
+        <fullName>SAM - HR BENETTON</fullName>
+        <default>false</default>
+        <label>SAM - HR BENETTON</label>
+    </customValue>
+    <customValue>
+        <fullName>SAM - KA HIMALYA</fullName>
+        <default>false</default>
+        <label>SAM - KA HIMALYA</label>
+    </customValue>
+    <customValue>
+        <fullName>SAM - MH SYSKA</fullName>
+        <default>false</default>
+        <label>SAM - MH SYSKA</label>
+    </customValue>
+    <customValue>
+        <fullName>SAM - MINDA</fullName>
+        <default>false</default>
+        <label>SAM - MINDA</label>
+    </customValue>
+    <customValue>
+        <fullName>SAM - MU GODREJ</fullName>
+        <default>false</default>
+        <label>SAM - MU GODREJ</label>
+    </customValue>
+    <customValue>
+        <fullName>SAM - MU POLYCAB</fullName>
+        <default>false</default>
+        <label>SAM - MU POLYCAB</label>
+    </customValue>
+    <customValue>
+        <fullName>SAM - MU SCHAEFFLER</fullName>
+        <default>false</default>
+        <label>SAM - MU SCHAEFFLER</label>
+    </customValue>
+    <customValue>
+        <fullName>SAM - RJ MAHINDRA</fullName>
+        <default>false</default>
+        <label>SAM - RJ MAHINDRA</label>
+    </customValue>
+    <customValue>
+        <fullName>SAM - TN TIDC</fullName>
+        <default>false</default>
+        <label>SAM - TN TIDC</label>
+    </customValue>
+    <customValue>
+        <fullName>SAM - UP MANKIND</fullName>
+        <default>false</default>
+        <label>SAM - UP MANKIND</label>
+    </customValue>
+    <customValue>
+        <fullName>SAM - WB TATA MOTOR</fullName>
+        <default>false</default>
+        <label>SAM - WB TATA MOTOR</label>
+    </customValue>
+    <customValue>
+        <fullName>SANAND</fullName>
+        <default>false</default>
+        <label>SANAND</label>
+    </customValue>
+    <customValue>
+        <fullName>SANGANER</fullName>
+        <default>false</default>
+        <label>SANGANER</label>
+    </customValue>
+    <customValue>
+        <fullName>SECUNDERABAD</fullName>
+        <default>false</default>
+        <label>SECUNDERABAD</label>
+    </customValue>
+    <customValue>
+        <fullName>SHAMSHABAD</fullName>
+        <default>false</default>
+        <label>SHAMSHABAD</label>
+    </customValue>
+    <customValue>
+        <fullName>SHILLONG</fullName>
+        <default>false</default>
+        <label>SHILLONG</label>
+    </customValue>
+    <customValue>
+        <fullName>SHIMOGA</fullName>
+        <default>false</default>
+        <label>SHIMOGA</label>
+    </customValue>
+    <customValue>
+        <fullName>SIKKIM CENTRAL</fullName>
+        <default>false</default>
+        <label>SIKKIM CENTRAL</label>
+    </customValue>
+    <customValue>
+        <fullName>SIKKIM - WB NORTH</fullName>
+        <default>false</default>
+        <label>SIKKIM - WB NORTH</label>
+    </customValue>
+    <customValue>
+        <fullName>SILCHAR</fullName>
+        <default>false</default>
+        <label>SILCHAR</label>
+    </customValue>
+    <customValue>
+        <fullName>SILIGURI</fullName>
+        <default>false</default>
+        <label>SILIGURI</label>
+    </customValue>
+    <customValue>
+        <fullName>SOLAPUR</fullName>
+        <default>false</default>
+        <label>SOLAPUR</label>
+    </customValue>
+    <customValue>
+        <fullName>SONEPAT</fullName>
+        <default>false</default>
+        <label>SONEPAT</label>
+    </customValue>
+    <customValue>
+        <fullName>SONEPAT CITY</fullName>
+        <default>false</default>
+        <label>SONIPAT CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>SRI CITY</fullName>
+        <default>false</default>
+        <label>SRI CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>SRINAGAR</fullName>
+        <default>false</default>
+        <label>SRINAGAR</label>
+    </customValue>
+    <customValue>
+        <fullName>SRIPERUMBUDUR</fullName>
+        <default>false</default>
+        <label>SRIPERUMBUDUR</label>
+    </customValue>
+    <customValue>
+        <fullName>SURAT</fullName>
+        <default>false</default>
+        <label>SURAT</label>
+    </customValue>
+    <customValue>
+        <fullName>TAMIL NADU CENTRAL</fullName>
+        <default>false</default>
+        <label>TAMIL NADU CENTRAL</label>
+    </customValue>
+    <customValue>
+        <fullName>TAMIL NADU EAST</fullName>
+        <default>false</default>
+        <label>TAMIL NADU EAST</label>
+    </customValue>
+    <customValue>
+        <fullName>TAMIL NADU SOUTH</fullName>
+        <default>false</default>
+        <label>TAMIL NADU SOUTH</label>
+    </customValue>
+    <customValue>
+        <fullName>TAURU</fullName>
+        <default>false</default>
+        <label>TAURU</label>
+    </customValue>
+    <customValue>
+        <fullName>TAURU CITY</fullName>
+        <default>false</default>
+        <label>TAURU CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>TELENGANA CENTRAL</fullName>
+        <default>false</default>
+        <label>TELENGANA CENTRAL</label>
+    </customValue>
+    <customValue>
+        <fullName>TELENGANA EAST</fullName>
+        <default>false</default>
+        <label>TELENGANA EAST</label>
+    </customValue>
+    <customValue>
+        <fullName>TELENGANA WEST</fullName>
+        <default>false</default>
+        <label>TELENGANA WEST</label>
+    </customValue>
+    <customValue>
+        <fullName>THANE</fullName>
+        <default>false</default>
+        <label>THANE</label>
+    </customValue>
+    <customValue>
+        <fullName>THRISSUR</fullName>
+        <default>false</default>
+        <label>THRISSUR</label>
+    </customValue>
+    <customValue>
+        <fullName>TINSUKIA</fullName>
+        <default>false</default>
+        <label>TINSUKIA</label>
+    </customValue>
+    <customValue>
+        <fullName>TIRUNELVELI</fullName>
+        <default>false</default>
+        <label>TIRUNELVELI</label>
+    </customValue>
+    <customValue>
+        <fullName>TIRUPATI</fullName>
+        <default>false</default>
+        <label>TIRUPATI</label>
+    </customValue>
+    <customValue>
+        <fullName>TIRUPUR</fullName>
+        <default>false</default>
+        <label>TIRUPUR</label>
+    </customValue>
+    <customValue>
+        <fullName>TIRUVALLUR CITY</fullName>
+        <default>false</default>
+        <label>TIRUVALLUR CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>TN SCU001</fullName>
+        <default>false</default>
+        <label>TN SCU001</label>
+    </customValue>
+    <customValue>
+        <fullName>TRICHY</fullName>
+        <default>false</default>
+        <label>TRICHY</label>
+    </customValue>
+    <customValue>
+        <fullName>TRIVENDRUM</fullName>
+        <default>false</default>
+        <label>TRIVENDRUM</label>
+    </customValue>
+    <customValue>
+        <fullName>TUMKUR</fullName>
+        <default>false</default>
+        <label>TUMKUR</label>
+    </customValue>
+    <customValue>
+        <fullName>UDAIPUR</fullName>
+        <default>false</default>
+        <label>UDAIPUR</label>
+    </customValue>
+    <customValue>
+        <fullName>UNA</fullName>
+        <default>false</default>
+        <label>UNA</label>
+    </customValue>
+    <customValue>
+        <fullName>UNNAO</fullName>
+        <default>false</default>
+        <label>UNNAO</label>
+    </customValue>
+    <customValue>
+        <fullName>UP BORDER</fullName>
+        <default>false</default>
+        <label>UP BORDER</label>
+    </customValue>
+    <customValue>
+        <fullName>UP CENTRAL</fullName>
+        <default>false</default>
+        <label>UP CENTRAL</label>
+    </customValue>
+    <customValue>
+        <fullName>UP EAST</fullName>
+        <default>false</default>
+        <label>UP EAST</label>
+    </customValue>
+    <customValue>
+        <fullName>UP MANKIND</fullName>
+        <default>false</default>
+        <label>UP MANKIND</label>
+    </customValue>
+    <customValue>
+        <fullName>UP NORTH</fullName>
+        <default>false</default>
+        <label>UP NORTH</label>
+    </customValue>
+    <customValue>
+        <fullName>UP-SAM</fullName>
+        <default>false</default>
+        <label>UP-SAM</label>
+    </customValue>
+    <customValue>
+        <fullName>UP SAMSUNG</fullName>
+        <default>false</default>
+        <label>UP SAMSUNG</label>
+    </customValue>
+    <customValue>
+        <fullName>UP SCU002</fullName>
+        <default>false</default>
+        <label>UP SCU002</label>
+    </customValue>
+    <customValue>
+        <fullName>UP SCU005</fullName>
+        <default>false</default>
+        <label>UP SCU005</label>
+    </customValue>
+    <customValue>
+        <fullName>UP SOUTH</fullName>
+        <default>false</default>
+        <label>UP SOUTH</label>
+    </customValue>
+    <customValue>
+        <fullName>UP SOUTH CENTRAL</fullName>
+        <default>false</default>
+        <label>UP SOUTH CENTRAL</label>
+    </customValue>
+    <customValue>
+        <fullName>UP SOUTH EAST</fullName>
+        <default>false</default>
+        <label>UP SOUTH EAST</label>
+    </customValue>
+    <customValue>
+        <fullName>UP SOUTH WEST</fullName>
+        <default>false</default>
+        <label>UP SOUTH WEST</label>
+    </customValue>
+    <customValue>
+        <fullName>UP WEST</fullName>
+        <default>false</default>
+        <label>UP WEST</label>
+    </customValue>
+    <customValue>
+        <fullName>UP WEST HUB</fullName>
+        <default>false</default>
+        <label>UP WEST HUB</label>
+    </customValue>
+    <customValue>
+        <fullName>UP WEST NORTH</fullName>
+        <default>false</default>
+        <label>UP WEST NORTH</label>
+    </customValue>
+    <customValue>
+        <fullName>UTTARAKHAND</fullName>
+        <default>false</default>
+        <label>UTTARAKHAND</label>
+    </customValue>
+    <customValue>
+        <fullName>UTTARAKHAND EAST</fullName>
+        <default>false</default>
+        <label>UTTARAKHAND EAST</label>
+    </customValue>
+    <customValue>
+        <fullName>UTTARAKHAND WEST</fullName>
+        <default>false</default>
+        <label>UTTARAKHAND WEST</label>
+    </customValue>
+    <customValue>
+        <fullName>UTTRAKHAND CENTRAL</fullName>
+        <default>false</default>
+        <label>UTTRAKHAND CENTRAL</label>
+    </customValue>
+    <customValue>
+        <fullName>VADODARA CITY</fullName>
+        <default>false</default>
+        <label>VADODARA CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>VAPI</fullName>
+        <default>false</default>
+        <label>VAPI</label>
+    </customValue>
+    <customValue>
+        <fullName>VAPI CITY</fullName>
+        <default>false</default>
+        <label>VAPI CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>VARANASI</fullName>
+        <default>false</default>
+        <label>VARANASI</label>
+    </customValue>
+    <customValue>
+        <fullName>VASAI</fullName>
+        <default>false</default>
+        <label>VASAI</label>
+    </customValue>
+    <customValue>
+        <fullName>VASHI</fullName>
+        <default>false</default>
+        <label>VASHI</label>
+    </customValue>
+    <customValue>
+        <fullName>VIJAYAWADA</fullName>
+        <default>false</default>
+        <label>VIJAYAWADA</label>
+    </customValue>
+    <customValue>
+        <fullName>VIJAYAWADA CITY</fullName>
+        <default>false</default>
+        <label>VIJAYAWADA CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>VISHAKHAPATNAM</fullName>
+        <default>false</default>
+        <label>VISHAKHAPATNAM</label>
+    </customValue>
+    <customValue>
+        <fullName>VITHALAPUR</fullName>
+        <default>false</default>
+        <label>VITHALAPUR</label>
+    </customValue>
+    <customValue>
+        <fullName>WB CENTRAL</fullName>
+        <default>false</default>
+        <label>WB CENTRAL</label>
+    </customValue>
+    <customValue>
+        <fullName>WB NORTH</fullName>
+        <default>false</default>
+        <label>WB NORTH</label>
+    </customValue>
+    <customValue>
+        <fullName>WB SCU001</fullName>
+        <default>false</default>
+        <label>WB SCU001</label>
+    </customValue>
+    <customValue>
+        <fullName>WB SOUTH</fullName>
+        <default>false</default>
+        <label>WB SOUTH</label>
+    </customValue>
+    <customValue>
+        <fullName>WB WEST</fullName>
+        <default>false</default>
+        <label>WB WEST</label>
+    </customValue>
+    <customValue>
+        <fullName>WB-West</fullName>
+        <default>false</default>
+        <label>WB-West</label>
+    </customValue>
+    <customValue>
+        <fullName>WHITEFIELD</fullName>
+        <default>false</default>
+        <label>WHITEFIELD</label>
+    </customValue>
+    <customValue>
+        <fullName>ZIRAKPUR</fullName>
+        <default>false</default>
+        <label>ZIRAKPUR</label>
+    </customValue>
+    <customValue>
+        <fullName>NASHIK</fullName>
+        <default>false</default>
+        <label>NASHIK</label>
+    </customValue>
+    <customValue>
+        <fullName>KOCHI CITY</fullName>
+        <default>false</default>
+        <label>KOCHI CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>BENGALURU NORTH</fullName>
+        <default>false</default>
+        <label>BENGALURU NORTH</label>
+    </customValue>
+    <customValue>
+        <fullName>HUBBALLI CITY</fullName>
+        <default>false</default>
+        <label>HUBBALLI CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>GURUGRAM</fullName>
+        <default>false</default>
+        <label>GURUGRAM</label>
+    </customValue>
+    <customValue>
+        <fullName>GURUGRAM CITY</fullName>
+        <default>false</default>
+        <label>GURUGRAM CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>BENGALURU</fullName>
+        <default>false</default>
+        <label>BENGALURU</label>
+    </customValue>
+    <customValue>
+        <fullName>KOCHI</fullName>
+        <default>false</default>
+        <label>KOCHI</label>
+    </customValue>
+    <customValue>
+        <fullName>BRAHMAPUR</fullName>
+        <default>false</default>
+        <label>BRAHMAPUR</label>
+    </customValue>
+    <customValue>
+        <fullName>CHHATRAPATI SAMBHAJINAGAR CITY</fullName>
+        <default>false</default>
+        <label>CHHATRAPATI SAMBHAJINAGAR CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>KOZHIKODE</fullName>
+        <default>false</default>
+        <label>KOZHIKODE</label>
+    </customValue>
+    <customValue>
+        <fullName>THIRUVANANTHAPURAM</fullName>
+        <default>false</default>
+        <label>THIRUVANANTHAPURAM</label>
+    </customValue>
+    <customValue>
+        <fullName>BENGALURU SOUTH</fullName>
+        <default>false</default>
+        <label>BENGALURU SOUTH</label>
+    </customValue>
+    <customValue>
+        <fullName>MANGALURU</fullName>
+        <default>false</default>
+        <label>MANGALURU</label>
+    </customValue>
+    <customValue>
+        <fullName>BENGALURU CITY</fullName>
+        <default>false</default>
+        <label>BENGALURU CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>PUDUCHERRY</fullName>
+        <default>false</default>
+        <label>PUDUCHERRY</label>
+    </customValue>
+    <customValue>
+        <fullName>MYSURU</fullName>
+        <default>false</default>
+        <label>MYSURU</label>
+    </customValue>
+    <customValue>
+        <fullName>TUMAKURU</fullName>
+        <default>false</default>
+        <label>TUMAKURU</label>
+    </customValue>
+    <customValue>
+        <fullName>BELAGAVI</fullName>
+        <default>false</default>
+        <label>BELAGAVI</label>
+    </customValue>
+    <customValue>
+        <fullName>BHUBANESWAR CITY</fullName>
+        <default>false</default>
+        <label>BHUBANESWAR CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>VISAKHAPATNAM</fullName>
+        <default>false</default>
+        <label>VISAKHAPATNAM</label>
+    </customValue>
+    <customValue>
+        <fullName>SHIVAMOGGA</fullName>
+        <default>false</default>
+        <label>SHIVAMOGGA</label>
+    </customValue>
+    <customValue>
+        <fullName>MURSHIDABAD</fullName>
+        <default>false</default>
+        <label>MURSHIDABAD</label>
+    </customValue>
+    <customValue>
+        <fullName>JABALPUR CITY</fullName>
+        <default>false</default>
+        <label>JABALPUR CITY</label>
+    </customValue>
+    <customValue>
+        <fullName>BATHINDA</fullName>
+        <default>false</default>
+        <label>BATHINDA</label>
+    </customValue>
+    <customValue>
+        <fullName>HISAR</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>HISAR</label>
+    </customValue>
+    <customValue>
+        <fullName>BHATINDA</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>BHATINDA</label>
+    </customValue>
+    <customValue>
+        <fullName>RJ MAHINDRA</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>RJ MAHINDRA</label>
+    </customValue>
+    <customValue>
+        <fullName>GREATER BANGALORE</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>GREATER BANGALORE</label>
+    </customValue>
+    <masterLabel>Area</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

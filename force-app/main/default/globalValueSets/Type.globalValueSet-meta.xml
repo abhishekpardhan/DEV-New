@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>CREDIT+RETAIL</fullName>
+        <default>true</default>
+        <label>CREDIT+RETAIL</label>
+    </customValue>
+    <customValue>
+        <fullName>Credit</fullName>
+        <default>false</default>
+        <label>Credit</label>
+    </customValue>
+    <customValue>
+        <fullName>Retail</fullName>
+        <default>false</default>
+        <label>Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>3PL</fullName>
+        <default>false</default>
+        <label>3PL</label>
+    </customValue>
+    <customValue>
+        <fullName>Transportation+3PL</fullName>
+        <default>false</default>
+        <label>Transportation+3PL</label>
+    </customValue>
+    <customValue>
+        <fullName>Meeting with Management</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Meeting with Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Pickup Request</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Pickup Request</label>
+    </customValue>
+    <customValue>
+        <fullName>Others</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Others</label>
+    </customValue>
+    <customValue>
+        <fullName>Prospective Oubound Customer for Retail</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prospective Oubound Customer for Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>Prospective Outbound Customer for Contract</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prospective Outbound Customer for Contract</label>
+    </customValue>
+    <customValue>
+        <fullName>Prospective Customer for  Inbound</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prospective Customer for  Inbound</label>
+    </customValue>
+    <customValue>
+        <fullName>PRC</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>PRC</label>
+    </customValue>
+    <customValue>
+        <fullName>Service provider - Route Vehicle Vendor</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Service provider - Route Vehicle Vendor</label>
+    </customValue>
+    <customValue>
+        <fullName>Service provider - Pickup / Delivery Associate</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Service provider - Pickup / Delivery Associate</label>
+    </customValue>
+    <customValue>
+        <fullName>Service provider - Products supplier</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Service provider - Products supplier</label>
+    </customValue>
+    <customValue>
+        <fullName>Service provider - Contractual Job work ( Construction etc)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Service provider - Contractual Job work ( Construction etc)</label>
+    </customValue>
+    <customValue>
+        <fullName>Other service provider ( IT, HR, Security, Real Estate)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other service provider ( IT, HR, Security, Real Estate)</label>
+    </customValue>
+    <customValue>
+        <fullName>Influencer for Business or PR ( eg Professor, Govt official )</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Influencer for Business or PR ( eg Professor, Govt official )</label>
+    </customValue>
+    <customValue>
+        <fullName>Prospective Customer for 3PL, Projects etc.</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prospective Customer for 3PL, Projects etc.</label>
+    </customValue>
+    <customValue>
+        <fullName>FTL</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>FTL</label>
+    </customValue>
+    <customValue>
+        <fullName>ICM</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>ICM</label>
+    </customValue>
+    <customValue>
+        <fullName>Prospective Booking Associate</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prospective Booking Associate</label>
+    </customValue>
+    <customValue>
+        <fullName>Prospective Delivery Associate</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prospective Delivery Associate</label>
+    </customValue>
+    <masterLabel>Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

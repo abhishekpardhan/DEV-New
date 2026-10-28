@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Category__c</fullName>
+    <label>Customer Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>A PLUS</fullName>
+                <default>false</default>
+                <label>A PLUS</label>
+            </value>
+            <value>
+                <fullName>AA PLUS</fullName>
+                <default>false</default>
+                <label>AA PLUS</label>
+            </value>
+            <value>
+                <fullName>AAA PLUS</fullName>
+                <default>false</default>
+                <label>AAA PLUS</label>
+            </value>
+            <value>
+                <fullName>NA PLUS</fullName>
+                <default>false</default>
+                <label>NA PLUS</label>
+            </value>
+            <value>
+                <fullName>ATPL</fullName>
+                <default>false</default>
+                <label>ATPL</label>
+            </value>
+            <value>
+                <fullName>A PLUS WMS</fullName>
+                <default>false</default>
+                <label>A PLUS WMS</label>
+            </value>
+            <value>
+                <fullName>A PLUS INB</fullName>
+                <default>false</default>
+                <label>A PLUS INB</label>
+            </value>
+            <value>
+                <fullName>A PLUS PRJ</fullName>
+                <default>false</default>
+                <label>A PLUS PRJ</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

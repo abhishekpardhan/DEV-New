@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Subcategory__c</fullName>
+    <label>Retail Sub Vertical</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Product_Category__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Makhana</fullName>
+                <default>false</default>
+                <label>Makhana</label>
+            </value>
+            <value>
+                <fullName>Cashew</fullName>
+                <default>false</default>
+                <label>Cashew</label>
+            </value>
+            <value>
+                <fullName>Supari</fullName>
+                <default>false</default>
+                <label>Supari</label>
+            </value>
+            <value>
+                <fullName>Jeera</fullName>
+                <default>false</default>
+                <label>Jeera</label>
+            </value>
+            <value>
+                <fullName>Saunf</fullName>
+                <default>false</default>
+                <label>Saunf</label>
+            </value>
+            <value>
+                <fullName>Isabgol</fullName>
+                <default>false</default>
+                <label>Isabgol</label>
+            </value>
+            <value>
+                <fullName>Almond</fullName>
+                <default>false</default>
+                <label>Almond</label>
+            </value>
+            <value>
+                <fullName>Walnut</fullName>
+                <default>false</default>
+                <label>Walnut</label>
+            </value>
+            <value>
+                <fullName>Chilli</fullName>
+                <default>false</default>
+                <label>Chilli</label>
+            </value>
+            <value>
+                <fullName>Turmeric</fullName>
+                <default>false</default>
+                <label>Turmeric</label>
+            </value>
+            <value>
+                <fullName>Black Pepper</fullName>
+                <default>false</default>
+                <label>Black Pepper</label>
+            </value>
+            <value>
+                <fullName>Cardamom</fullName>
+                <default>false</default>
+                <label>Cardamom</label>
+            </value>
+            <value>
+                <fullName>Kopra</fullName>
+                <default>false</default>
+                <label>Kopra</label>
+            </value>
+            <value>
+                <fullName>Tea</fullName>
+                <default>false</default>
+                <label>Tea</label>
+            </value>
+            <value>
+                <fullName>Spices</fullName>
+                <default>false</default>
+                <label>Spices</label>
+            </value>
+            <value>
+                <fullName>Dry Fruit</fullName>
+                <default>false</default>
+                <label>Dry Fruit</label>
+            </value>
+            <value>
+                <fullName>Seeds</fullName>
+                <default>false</default>
+                <label>Seeds</label>
+            </value>
+            <value>
+                <fullName>Herbs</fullName>
+                <default>false</default>
+                <label>Herbs</label>
+            </value>
+            <value>
+                <fullName>Coffee</fullName>
+                <default>false</default>
+                <label>Coffee</label>
+            </value>
+            <value>
+                <fullName>Campus2Home</fullName>
+                <default>false</default>
+                <label>Campus2Home</label>
+            </value>
+            <value>
+                <fullName>Easy2Move</fullName>
+                <default>false</default>
+                <label>Easy2Move</label>
+            </value>
+            <value>
+                <fullName>SainikXpress</fullName>
+                <default>false</default>
+                <label>SainikXpress</label>
+            </value>
+            <value>
+                <fullName>BikeXpress</fullName>
+                <default>false</default>
+                <label>BikeXpress</label>
+            </value>
+            <value>
+                <fullName>SafeRelocation</fullName>
+                <default>false</default>
+                <label>SafeRelocation</label>
+            </value>
+            <value>
+                <fullName>Readymade Garment</fullName>
+                <default>false</default>
+                <label>Readymade Garment</label>
+            </value>
+            <value>
+                <fullName>Textile and Fabric</fullName>
+                <default>false</default>
+                <label>Textile and Fabric</label>
+            </value>
+            <value>
+                <fullName>Handloom</fullName>
+                <default>false</default>
+                <label>Handloom</label>
+            </value>
+            <value>
+                <fullName>Hosiery</fullName>
+                <default>false</default>
+                <label>Hosiery</label>
+            </value>
+            <value>
+                <fullName>Saree and Suit piece</fullName>
+                <default>false</default>
+                <label>Saree and Suit piece</label>
+            </value>
+            <value>
+                <fullName>Engineering product</fullName>
+                <default>false</default>
+                <label>Engineering product</label>
+            </value>
+            <value>
+                <fullName>Furniture</fullName>
+                <default>false</default>
+                <label>Furniture</label>
+            </value>
+            <value>
+                <fullName>Pharma</fullName>
+                <default>false</default>
+                <label>Pharma</label>
+            </value>
+            <value>
+                <fullName>Food Product</fullName>
+                <default>false</default>
+                <label>Food Product</label>
+            </value>
+            <value>
+                <fullName>Handicraft</fullName>
+                <default>false</default>
+                <label>Handicraft</label>
+            </value>
+            <value>
+                <fullName>Books</fullName>
+                <default>false</default>
+                <label>Books</label>
+            </value>
+            <value>
+                <fullName>Sports Goods</fullName>
+                <default>false</default>
+                <label>Sports Goods</label>
+            </value>
+            <value>
+                <fullName>Footwear</fullName>
+                <default>false</default>
+                <label>Footwear</label>
+            </value>
+            <value>
+                <fullName>FMCG</fullName>
+                <default>false</default>
+                <label>FMCG</label>
+            </value>
+            <value>
+                <fullName>Electronic product</fullName>
+                <default>false</default>
+                <label>Electronic product</label>
+            </value>
+            <value>
+                <fullName>Electrical and appliances</fullName>
+                <default>false</default>
+                <label>Electrical and appliances</label>
+            </value>
+            <value>
+                <fullName>Metal Products</fullName>
+                <default>false</default>
+                <label>Metal Products</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Agri Commodity</controllingFieldValue>
+            <valueName>Makhana</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agri Commodity</controllingFieldValue>
+            <valueName>Cashew</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agri Commodity</controllingFieldValue>
+            <valueName>Supari</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agri Commodity</controllingFieldValue>
+            <valueName>Jeera</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agri Commodity</controllingFieldValue>
+            <valueName>Saunf</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agri Commodity</controllingFieldValue>
+            <valueName>Isabgol</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agri Commodity</controllingFieldValue>
+            <valueName>Almond</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agri Commodity</controllingFieldValue>
+            <valueName>Walnut</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agri Commodity</controllingFieldValue>
+            <valueName>Chilli</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agri Commodity</controllingFieldValue>
+            <valueName>Turmeric</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agri Commodity</controllingFieldValue>
+            <valueName>Black Pepper</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agri Commodity</controllingFieldValue>
+            <valueName>Cardamom</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agri Commodity</controllingFieldValue>
+            <valueName>Kopra</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agri Commodity</controllingFieldValue>
+            <valueName>Tea</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agri Commodity</controllingFieldValue>
+            <valueName>Spices</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agri Commodity</controllingFieldValue>
+            <valueName>Dry Fruit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agri Commodity</controllingFieldValue>
+            <valueName>Seeds</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agri Commodity</controllingFieldValue>
+            <valueName>Herbs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agri Commodity</controllingFieldValue>
+            <valueName>Coffee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>C2C</controllingFieldValue>
+            <valueName>Campus2Home</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>C2C</controllingFieldValue>
+            <valueName>Easy2Move</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>C2C</controllingFieldValue>
+            <valueName>SainikXpress</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>C2C</controllingFieldValue>
+            <valueName>BikeXpress</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>C2C</controllingFieldValue>
+            <valueName>SafeRelocation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Apparel and Textile</controllingFieldValue>
+            <valueName>Readymade Garment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Apparel and Textile</controllingFieldValue>
+            <valueName>Textile and Fabric</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Apparel and Textile</controllingFieldValue>
+            <valueName>Handloom</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Apparel and Textile</controllingFieldValue>
+            <valueName>Hosiery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Apparel and Textile</controllingFieldValue>
+            <valueName>Saree and Suit piece</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrial and Cottage</controllingFieldValue>
+            <valueName>Engineering product</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrial and Cottage</controllingFieldValue>
+            <valueName>Furniture</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrial and Cottage</controllingFieldValue>
+            <valueName>Pharma</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrial and Cottage</controllingFieldValue>
+            <valueName>Food Product</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrial and Cottage</controllingFieldValue>
+            <valueName>Handicraft</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrial and Cottage</controllingFieldValue>
+            <valueName>Books</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrial and Cottage</controllingFieldValue>
+            <valueName>Sports Goods</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrial and Cottage</controllingFieldValue>
+            <valueName>Footwear</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrial and Cottage</controllingFieldValue>
+            <valueName>FMCG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrial and Cottage</controllingFieldValue>
+            <valueName>Electronic product</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrial and Cottage</controllingFieldValue>
+            <valueName>Electrical and appliances</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrial and Cottage</controllingFieldValue>
+            <valueName>Metal Products</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <valueName>Others</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Qrm__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Value is coming from user where role is &apos;Qrm&apos;</description>
+    <label>Qrm</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Quotes5</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

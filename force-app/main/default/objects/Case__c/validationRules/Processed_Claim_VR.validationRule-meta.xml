@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Processed_Claim_VR</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+
+/* Validation 1 : Restricted users cannot move to Claim Processed */
+AND(
+
+    NOT(
+        OR(
+            $Permission.Claim_user_permission_set,
+            $Profile.Name = &quot;System Administrator&quot;,
+            $Profile.Name = &quot;Corporate salesforce team&quot;,
+            $Profile.Name = &quot;Read Only&quot;
+        )
+    ),
+
+    ISCHANGED(Status__c),
+    ISPICKVAL(Status__c, &quot;Claim Processed&quot;)
+)
+
+)</errorConditionFormula>
+    <errorMessage>You are not authorized to change the status to Claim Processed.</errorMessage>
+</ValidationRule>

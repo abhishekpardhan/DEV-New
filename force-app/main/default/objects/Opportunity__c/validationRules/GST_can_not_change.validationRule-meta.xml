@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GST_can_not_change</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(
+ 
+
+AND(
+   $Profile.Name != &apos;Corporate salesforce team&apos;,
+    ISCHANGED( GST_Number__c),
+    NOT(ISBLANK( PRIORVALUE(GST_Number__c) ))
+),
+True,
+False
+
+)</errorConditionFormula>
+    <errorDisplayField>GST_Number__c</errorDisplayField>
+    <errorMessage>You are not allowed to update GST number</errorMessage>
+</ValidationRule>

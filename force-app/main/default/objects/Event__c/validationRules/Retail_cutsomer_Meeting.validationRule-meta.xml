@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Retail_cutsomer_Meeting</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISPICKVAL(Event_Purpose__c , &apos;Retail Customer Meeting&apos;),NOT(Name = &quot;System Event&quot;), AND(ISBLANK(Lead__c),
+ISBLANK(Campaign__c) ,
+ISBLANK(Contact__c)))</errorConditionFormula>
+    <errorMessage>Please check if either Campaign or Lead or Contact are filled</errorMessage>
+</ValidationRule>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Checks for open escalation cases or creates a new one and generates card output.</description>
+    <developerName>Process_Post_Delivery_Escalation</developerName>
+    <invocationTarget>SafexpressPostDeliveryStatusAction</invocationTarget>
+    <invocationTargetType>apex</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <localDeveloperName>Process_Post_Delivery_Escalation</localDeveloperName>
+    <masterLabel>Process Post Delivery Escalation Chat Agent</masterLabel>
+</GenAiFunction>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Consignor MSA Cust Id --></label>
+    <name>Consignor_MSA_Cust_Id__c</name>
+</CustomFieldTranslation>

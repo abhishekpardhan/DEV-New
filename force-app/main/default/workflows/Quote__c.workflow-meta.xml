@@ -1,0 +1,874 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Email_sent_to_Regional_NSM_after_quote_sent_to_customer_new</fullName>
+        <description>Email sent to Regional NSM after quote sent to customer_new</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Regional_Sales_Manager__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderAddress>proposal@safexpress.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Lightning_Quote_Mandatory_Files/Quote_Send_To_Customer</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_to_be_send_to_retail_quotation</fullName>
+        <description>Email to be send to retail quotation</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>sandeep.gupta@safexpress.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>proposal@safexpress.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Lightning_Quote_Mandatory_Files/Email_to_send_to_central_team_for_quote_creation</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_to_send_to_central_credit_team_for_quote_creation_after_final_approval</fullName>
+        <description>Email to send to central credit team for quote creation after final approval</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Central_Quotation_Team_Credit</recipient>
+            <type>role</type>
+        </recipients>
+        <senderAddress>proposal@safexpress.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Lightning_Quote_Mandatory_Files/Email_to_send_to_central_team_for_quote_creation</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_email_to_Central_quote_team_for_reverification_quote</fullName>
+        <description>Send email to Central quote team for reverification quote</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Central_Quotation_Team_Credit</recipient>
+            <type>role</type>
+        </recipients>
+        <senderAddress>proposal@safexpress.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Lightning_Quote_Mandatory_Files/Quote_Resend_Email_to_Central_Team</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>AM_Approval</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Pending from NSM</literalValue>
+        <name>AM Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approve_by_RM</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Pending From CCD</literalValue>
+        <name>Approve by RM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_by_CCD</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved By CCD</literalValue>
+        <name>Approved by CCD</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_by_NSM</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Pending from RM</literalValue>
+        <name>Approved by NSM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_by_New_sales_head</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved By Corporate Head Credit/Retail</literalValue>
+        <name>Approved by New sales head</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_by_New_sales_head1</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved By Corporate Head Credit/Retail</literalValue>
+        <name>Approved by New sales head1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_by_New_sales_head2</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved By Corporate Head Credit/Retail</literalValue>
+        <name>Approved by New sales head</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_by_RM</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Pending from Corporate Head Credit/Retail</literalValue>
+        <name>Approved by RM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_by_RM1</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Pending from Corporate Head Credit/Retail</literalValue>
+        <name>Approved by RM1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_by_RRM</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Pending from RM</literalValue>
+        <name>Approved by RRM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_by_VP</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved By VP</literalValue>
+        <name>Approved by VP</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Date_Time</fullName>
+        <field>Approval_submit__c</field>
+        <formula>NOW()</formula>
+        <name>Date/Time</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Field_Update2</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Pending From Qrm</literalValue>
+        <name>Field Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Field_Update3</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected By NAM1</literalValue>
+        <name>Field Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Field_Update4</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved By Qrm</literalValue>
+        <name>Field Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Field_Update6</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected By Qrm</literalValue>
+        <name>Field Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Field_Update_12</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected By RM</literalValue>
+        <name>Field Update 12</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Field_Update_14</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved By CCD</literalValue>
+        <name>Field Update 14</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Field_Update_22</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Pending From CCD</literalValue>
+        <name>Field Update 22</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Field_Update_quote_attached</fullName>
+        <field>Quote_Attached__c</field>
+        <literalValue>0</literalValue>
+        <name>Field Update quote attached false</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Field_update1</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Pending From Qrm</literalValue>
+        <name>Field update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Field_update11</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Submitted for Approval</literalValue>
+        <name>Field update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Field_update_15</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected By CCD</literalValue>
+        <name>Field update 15</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Field_update_true</fullName>
+        <field>QuoteNameAUtomation__c</field>
+        <literalValue>0</literalValue>
+        <name>Field update true</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Field_update_true1</fullName>
+        <field>QuoteNameAUtomation__c</field>
+        <literalValue>0</literalValue>
+        <name>Field update true</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pending_with_Quotation_team1</fullName>
+        <field>Status__c</field>
+        <literalValue>Pending with Quotation Team</literalValue>
+        <name>Pending with Quotation team1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pending_with_Quotation_team2</fullName>
+        <field>Status__c</field>
+        <literalValue>Pending with Quotation Team</literalValue>
+        <name>Pending with Quotation team2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Quote_Name_Capital</fullName>
+        <field>Name</field>
+        <formula>Opportunity__r.Name &amp; &apos; - &apos;  &amp; UPPER(Name)</formula>
+        <name>Quote Name Capital</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Recordtype_update</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Layout_after_approval_Action</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Recordtype update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RejectedBy_RM</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected By RM</literalValue>
+        <name>RejectedBy RM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejected_By_RM11</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected By RM</literalValue>
+        <name>Rejected By RM11</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejected_by_CCD</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected By CCD</literalValue>
+        <name>Rejected by CCD</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejected_by_NSM</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected By NSM</literalValue>
+        <name>Rejected by NSM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejected_by_New_sales_head</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected By Corporate Head Credit/Retail</literalValue>
+        <name>Rejected by New sales head</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejected_by_New_sales_head1</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected By Corporate Head Credit/Retail</literalValue>
+        <name>Rejected by New sales head1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejected_by_New_sales_head2</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected By Corporate Head Credit/Retail</literalValue>
+        <name>Rejected by New sales head</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejected_by_RM</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected By RM</literalValue>
+        <name>Rejected by RM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejected_by_RRM</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected by Regional Retail Head</literalValue>
+        <name>Rejected by RRM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejected_by_RRM1</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected by Regional Retail Head</literalValue>
+        <name>Rejected by RRM1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejected_by_VP</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected By VP</literalValue>
+        <name>Rejected by VP</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Remove_Resend_Checkbox</fullName>
+        <field>Resend_to_Central_Team__c</field>
+        <literalValue>0</literalValue>
+        <name>Remove Resend Checkbox</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Resend_To_Central_Team_Updatee</fullName>
+        <field>Status__c</field>
+        <literalValue>Resent To Central Quotation Team</literalValue>
+        <name>Resend To Central Team Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Change02</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Status Change02</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Rejected_by_AM</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected By AM</literalValue>
+        <name>Status Rejected by AM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_update_quotation_team</fullName>
+        <field>Status__c</field>
+        <literalValue>Pending with Quotation Team</literalValue>
+        <name>Status update quotation team</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Sttaus</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Sttaus</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Submit_for_ApprovalRRM</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Pending with Regional Retail Head</literalValue>
+        <name>Submit for ApprovalRRM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Submit_for_approval</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Submitted for Approval</literalValue>
+        <name>Submit for approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Submit_for_approvals</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Submitted for Approval</literalValue>
+        <name>Submit for approvals</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Approved_by_AM</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved By RM</literalValue>
+        <name>Update Approved by AM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Date_Time</fullName>
+        <field>Approval_submit__c</field>
+        <formula>NOW()</formula>
+        <name>Update Date Time</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Negotiation_Stage</fullName>
+        <field>Stage__c</field>
+        <literalValue>Negotiation</literalValue>
+        <name>Update Negotiation Stage</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+        <targetObject>Opportunity__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status01</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Status01</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status1</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Status1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status11</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Status11</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status11_1</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Status11.1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status12</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Status12</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status13</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Status13</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Time</fullName>
+        <field>Time_Frame__c</field>
+        <literalValue>24 Hours</literalValue>
+        <name>Update Time</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Time_Frame_24</fullName>
+        <field>Time_Frame__c</field>
+        <literalValue>24 Hours</literalValue>
+        <name>Update Time Frame 24</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Time_Frame_none</fullName>
+        <field>Time_Frame__c</field>
+        <name>Update Time Frame none</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_field</fullName>
+        <field>Time_Frame__c</field>
+        <literalValue>24 Hours</literalValue>
+        <name>Update field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_pending_for_review_statuss</fullName>
+        <field>Status__c</field>
+        <literalValue>Pending for Review</literalValue>
+        <name>Update pending for review status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_recordtype</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Approval_Process_record_type</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Update recordtype</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_recordtypes</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Approval_Process_record_type</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Update recordtypes</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>dasd</fullName>
+        <field>Time__c</field>
+        <formula>10</formula>
+        <name>dasd</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>f</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>f</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>f_u</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>f u</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>field_update</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>field update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>field_updateAUtomation</fullName>
+        <field>QuoteNameAUtomation__c</field>
+        <literalValue>1</literalValue>
+        <name>field update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>recordtype_change</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Layout_after_approval_Action</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>recordtype change</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>status_update</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>status update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_back_recordtype</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Layout_after_approval_Action</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>update back recordtype</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_back_recordtype1</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Layout_after_approval_Action</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>update back recordtype1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_quotation_stage</fullName>
+        <field>Stage__c</field>
+        <literalValue>Quotation</literalValue>
+        <name>update quotation stage</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+        <targetObject>Opportunity__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_recordtype4</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Layout_after_approval_Action</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>update recordtype4</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Opportunity Quotation stage</fullName>
+        <actions>
+            <name>update_quotation_stage</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity__c.Total_Quotation__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Quote negotiation stage</fullName>
+        <actions>
+            <name>Update_Negotiation_Stage</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity__c.Total_Quotation__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity__c.Stage__c</field>
+            <operation>notEqual</operation>
+            <value>Negotiation</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <tasks>
+        <fullName>Opportunity_Type_Existing</fullName>
+        <assignedTo>arvind.tiwari@safexpress.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>30</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Quote__c.CreatedDate</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Opportunity Type Existing</subject>
+    </tasks>
+</Workflow>

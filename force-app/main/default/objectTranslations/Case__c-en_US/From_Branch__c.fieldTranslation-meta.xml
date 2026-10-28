@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- From Branch --></label>
+    <name>From_Branch__c</name>
+    <relationshipLabel><!-- Cases (Branch Master) --></relationshipLabel>
+</CustomFieldTranslation>

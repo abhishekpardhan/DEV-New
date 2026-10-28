@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Claim Understanding --></label>
+    <name>Claim_Understanding__c</name>
+    <picklistValues>
+        <masterLabel>Carriers Risk</masterLabel>
+        <translation><!-- Carriers Risk --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Owners Risk</masterLabel>
+        <translation><!-- Owners Risk --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Owners Risk with Excess Clause</masterLabel>
+        <translation><!-- Owners Risk with Excess Clause --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

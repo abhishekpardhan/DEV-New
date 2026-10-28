@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Email (info)</fullName>
+        <default>false</default>
+        <label>Email (info)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Toll Free</fullName>
+        <default>false</default>
+        <label>Toll Free</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ChatBot</fullName>
+        <default>false</default>
+        <label>ChatBot</label>
+    </standardValue>
+    <standardValue>
+        <fullName>WhatsApp</fullName>
+        <default>false</default>
+        <label>WhatsApp</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Partner Portal</fullName>
+        <default>false</default>
+        <label>Partner Portal</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Salesforce</fullName>
+        <default>false</default>
+        <label>Salesforce</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Social Media</fullName>
+        <default>false</default>
+        <label>Social Media</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Twitter</fullName>
+        <default>false</default>
+        <label>Twitter</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Facebook</fullName>
+        <default>false</default>
+        <label>Facebook</label>
+    </standardValue>
+    <standardValue>
+        <fullName>YouTube</fullName>
+        <default>false</default>
+        <label>YouTube</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Instagram</fullName>
+        <default>false</default>
+        <label>Instagram</label>
+    </standardValue>
+    <standardValue>
+        <fullName>WEB</fullName>
+        <default>false</default>
+        <label>WEB</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email (pickup)</fullName>
+        <default>false</default>
+        <label>Email (pickup)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MOBILE</fullName>
+        <default>false</default>
+        <label>MOBILE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>API</fullName>
+        <default>false</default>
+        <label>API</label>
+    </standardValue>
+    <standardValue>
+        <fullName>REVERSE PICKUP</fullName>
+        <default>false</default>
+        <label>REVERSE PICKUP</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OUTBOUND</fullName>
+        <default>false</default>
+        <label>OUTBOUND</label>
+    </standardValue>
+    <standardValue>
+        <fullName>WEB SITE</fullName>
+        <default>false</default>
+        <label>WEB SITE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EMAIL</fullName>
+        <default>false</default>
+        <label>EMAIL</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CHAT</fullName>
+        <default>false</default>
+        <label>CHAT</label>
+    </standardValue>
+    <standardValue>
+        <fullName>IConnect</fullName>
+        <default>false</default>
+        <label>IConnect</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Digispace</fullName>
+        <default>false</default>
+        <label>Digispace</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ENTERPRISE APP</fullName>
+        <default>false</default>
+        <label>ENTERPRISE APP</label>
+    </standardValue>
+</StandardValueSet>

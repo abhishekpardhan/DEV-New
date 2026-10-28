@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type --></label>
+    <name>Type__c</name>
+    <picklistValues>
+        <masterLabel>Commandments</masterLabel>
+        <translation><!-- Commandments --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Safextension</masterLabel>
+        <translation><!-- Safextension --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Special Destinations</masterLabel>
+        <translation><!-- Special Destinations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>State Surcharge</masterLabel>
+        <translation><!-- State Surcharge --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Zone Prices</masterLabel>
+        <translation><!-- Zone Prices --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

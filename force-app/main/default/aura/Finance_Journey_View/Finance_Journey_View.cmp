@@ -1,0 +1,737 @@
+<!--
+    @Description          : Component for finance department to create Users invoice and sent it to fusion
+    * @Author             : Shubham 
+    * @Group              : Safexpress
+    * @Last Modified By   : Shubham
+    * @Last Modified On   : 17-Feb-21
+    * @Modification Log   :
+    *==============================================================================
+    * Ver         Date                     Author                    Modification
+    *==============================================================================
+    * 1.0        17-Feb-21                Shubham                   Initial Version
+    * 2.0        13-Jan-22                Shubham                   Added New Features(User heighligt, live API call)
+-->
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" controller="Finance_Journey_View_Controller" >
+<aura:handler name="init" action="{!c.doInit}" value="{!this}"/>  
+<aura:attribute name="Region" type="List"/>
+<aura:attribute name="RegionSelected" type="String"/>
+<aura:attribute name="UserList" type="List"/>
+<aura:attribute name="UserListid" type="List"/>
+<aura:attribute name="SelectedUser" type="String"/>
+<aura:attribute name="SelectedUsername" type="String"/>
+<aura:attribute name="SelectedId" type="String"/>
+<aura:attribute name="EndDate" type="Date"/>
+<aura:attribute name="MaxDate" type="Date"/>
+<aura:attribute name="MinDate" type="Date"/>
+<aura:attribute name="Month" type="Date"/>
+<aura:attribute name="JourneyList" type="List"/>
+<aura:attribute name="JourneyList1" type="List"/>
+<aura:attribute name="Userdetail" type="object"/>
+<aura:attribute name="openJourney" type="Boolean" default="false"/>
+<aura:attribute name="openExpence" type="Boolean" default="false"/>
+<aura:attribute name="EventList" type="List"/>
+<aura:attribute name="ExList" type="List"/>
+<aura:attribute name="ApprovalHistory" type="List"/>
+<aura:attribute name="TotalJourneyCon" type="Integer"/>
+<aura:attribute name="TotalDistanceCon" type="Decimal"/>
+<aura:attribute name="TotalAmountCon" type="Decimal"/>
+<aura:attribute name="ApprovedAmountCon" type="Decimal"/>
+<aura:attribute name="ApprovedAmountTra" type="Decimal"/>
+<aura:attribute name="TotalApprovedAmountCon" type="Decimal"/>
+<aura:attribute name="TotalEventCon" type="Decimal" default="0" />
+<aura:attribute name="TotalJourneyTra" type="Integer"/>
+<aura:attribute name="TotalDistanceTra" type="Decimal"/>
+<aura:attribute name="TotalAmountTra" type="Decimal"/>
+<aura:attribute name="TotalEventTra" type="Decimal" default="0" />
+<aura:attribute name="Remark" type="String"/>
+<aura:attribute name="ApprovedAmount" type="integer" default="0"/>
+<aura:attribute name="SelectedJourney" type="Id"/>
+<aura:attribute name="SelectedExpence" type="Id"/>
+<aura:attribute name="journeyDetail" type="object"/>
+<aura:attribute name="ExpenceDetail" type="object"/>
+<aura:attribute name="userMap" type="object"/>
+<aura:attribute name="keyList" type="List"/>
+     <aura:handler event="aura:waiting" action="{!c.showSpinner}"/>
+    <aura:handler event="aura:doneWaiting" action="{!c.hideSpinner}"/>
+    <aura:attribute name="spinner" type="boolean" default="FALSE"/>
+
+         <!--Loader-->
+     <aura:if isTrue="{!v.spinner}">
+        <div aura:id="spinnerId" class="slds-spinner_container">
+            <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                <span class="slds-assistive-text">Loading...</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </aura:if>
+<!--Componenet-->    
+<div style="background-color:White; border-radius:.55rem;">
+    <!--Header-->
+    <div class="slds-page-header" style="border-radius: .55rem;">
+        <div class="slds-media">
+            <div class="slds-media__body slds-show" aura:id="NormalHeading">
+                <lightning:icon iconName="custom:custom31" alternativeText="Journey" title="Journey" class="slds-float_left"/>
+                
+                <h1 class="slds-page-header__title slds-text-heading_large slds-truncate slds-align-middl slds-p-left_small " title="Journey"><strong>Journey</strong></h1>
+            </div>             
+            <div style="float:right;" aura:id="Idbtn" class="slds-show">
+                <div aura:id="hideThis" style="display:block;">
+                <lightning:button variant="brand" label="Search by Emp Id" disabled="{}" title="Team Journey" onclick="{!c.searchrsn}"/> 
+            </div>
+            </div>
+
+            <div style="float:right;" aura:id="Regionbtn" class="slds-hide">
+                <div aura:id="hideThis" style="display:block;">
+                <lightning:button variant="brand" label="Search by Region" disabled="{}" title="My Journey" onclick="{!c.searchid}"/>
+            </div>
+            </div>
+</div>
+</div>
+    <!--Body-->
+    <!--Search through region-->
+    <div class="slds-show" aura:id="Regionsrc">
+    <div class="slds-form-element__row slds-align_absolute-center"> 
+         <div class="slds-form-element slds-size-1-of-3">
+         <div class="slds-align_absolute-center">
+                <lightning:select name="mySelect1" label="Select a region" value="{!v.RegionSelected}" aura:id="User" onchange="{!c.LoadJourney}">
+                  <option value="">Select a region</option>
+                    <aura:iteration items="{!v.Region}" var="reg">
+                     <!--<option text="{!reg}">{!reg}</option> -->
+                      <option value="{!reg}">{!reg}</option>  
+                       </aura:iteration>
+                       </lightning:select>   
+            </div>
+        </div>
+        <div class="slds-form-element slds-size-1-of-3">
+            <div class="slds-align_absolute-center">
+                 <!--  <lightning:select name="mySelect1" label="Select a Month" aura:id="User" onchange="{!c.selectUser}">
+                     <option value="">Select a Month</option>
+                       <aura:iteration items="{!v.Users}" var="User">
+                           <option value="{!User.Id}">{!User.Name}</option>  
+                          </aura:iteration>
+                          </lightning:select> 
+                        -->
+  <lightning:input type="month" class="slds-float_left" label="Select Month" name="input1" value="{!v.Month}"  placeholder="Enter Start Date" title="Enter Start Date" min="{!v.MinDate}" max="{!v.MaxDate}" onchange="{!c.LoadJourney}" />   
+               </div>
+           </div>
+        <div class="slds-form-element slds-size-1-of-3">
+         <div class="slds-align_absolute-center">
+           <lightning:select name="mySelect1" label="Select User" value="{!v.SelectedUsername}" aura:id="User" onchange="{!c.selectUser}">
+               <option value="">Select a User</option> 
+               <!--  <aura:iteration items="{!v.UserList}" var="User">
+                      <option value="{!User.Id}">{!User.Name}</option>  
+                     </aura:iteration> -->
+               <aura:iteration items="{!v.userMap}" var="Us" indexVar = "key">
+           <option class="{!Us.value ? 'my-class-color' : 'my-class-nun' }" value="{!Us.key}"> {!Us.key} </option> 
+                   </aura:iteration>
+                 </lightning:select> 
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <!--Search through id-->
+    <div class="slds-hide" aura:id="Idsrc">
+    <div class="slds-form-element__row slds-align_absolute-center "> 
+        <div class="slds-form-element slds-size-1-of-2">
+         <div class="slds-align_absolute-center">
+         <!--   <lightning:select name="mySelect1" label="Select User" value="{!v.SelectedUser}" aura:id="User" onchange="{!c.selectMonth}">
+                <option value="">Select a Id</option>
+                  <aura:iteration items="{!v.UserListid}" var="User">
+                      <option value="{!User.Id}">{!User.AD_Id__c}</option>  
+                     </aura:iteration>
+                     </lightning:select>   
+                    -->
+                    <lightning:input  name="input1" label="Select User" value="{!v.SelectedId}" aura:id="User" maxlength="5" onchange="{!c.searchUser}"/>
+                    </div>
+        </div>
+        <div class="slds-form-element slds-size-1-of-2">
+            <div class="slds-align_absolute-center">
+                 <!--  <lightning:select name="mySelect1" label="Select a Month" aura:id="User" onchange="{!c.selectUser}">
+                     <option value="">Select a Month</option>
+                       <aura:iteration items="{!v.Users}" var="User">
+                           <option value="{!User.Id}">{!User.Name}</option>  
+                          </aura:iteration>
+                          </lightning:select> 
+                        -->
+                        <lightning:input type="month" class="slds-float_left" label="Select Month" name="input1" value="{!v.Month}"  placeholder="Enter Start Date" title="Enter Start Date" min="{!v.MinDate}" max="{!v.MaxDate}" onchange="{!c.LoadJourney}" />   
+               </div>
+           </div>
+    </div>
+    </div>
+    
+    <br/>
+    <div style="width:100%; padding:0 2% 0 2%;">
+        <div  class="slds-card" style="height:100px;">
+            <div style="height:25px">
+<div style="padding: 0px 0px 0px 10px; font-size:1.0em; width:33%; float:left ">
+    <b style="float:left">Name:&nbsp;&nbsp;</b><p>{!v.Userdetail.Name}</p>
+                        </div>
+                <div style="padding: 0px 0px 0px 10px; font-size:1.0em; width:33%; float:left ">
+                           <b style="float:left">Contact No.:&nbsp;&nbsp;</b><p>{!v.Userdetail.MobilePhone}</p>
+                        </div>
+                <div style="padding: 0px 0px 0px 10px; font-size:1.0em; width:33%; float:left ">
+                           <b style="float:left">Email:&nbsp;&nbsp;</b><p>{!v.Userdetail.Email}</p>
+                        </div>
+            </div>
+            <div style="height:25px">
+<div style="padding: 0px 0px 0px 10px; font-size:1.0em; width:33%; float:left ">
+                            <b style="float:left">Designation:&nbsp;&nbsp;</b><p>{!v.Userdetail.Designation__c}</p>
+                        </div>
+                <div style="padding: 0px 0px 0px 10px; font-size:1.0em; width:33%; float:left ">
+                            <b style="float:left">Department:&nbsp;&nbsp; </b><p>{!v.Userdetail.Department}</p>
+                        </div>
+                <div style="padding: 0px 0px 0px 10px; font-size:1.0em; width:33%; float:left ">
+                            <b style="float:left">E.Code:&nbsp;&nbsp;</b><p>{!v.Userdetail.AD_Id__c}</p>
+                        </div>
+            </div>
+            <div style="height:25px">
+<div style="padding: 0px 0px 0px 10px; font-size:1.0em; width:33%; float:left ">
+                      
+                            <b style="float:left">Location:&nbsp;&nbsp;</b><p>{!v.Userdetail.Area__c}</p>
+                        </div>
+                <div style="padding: 0px 0px 0px 10px; font-size:1.0em; width:33%; float:left ">
+                           
+                            <b style="float:left">Period:&nbsp;&nbsp;</b><p>{!v.Month}</p>
+                        </div>
+                <div style="padding: 0px 0px 0px 10px; font-size:1.0em; width:33%; float:left ">
+                            
+                            <b style="float:left">Mode:&nbsp;&nbsp;</b><p>{!v.Userdetail.Journey_Type__c}</p>
+                        </div>
+            </div>
+            <div style="height:25px">
+<div style="padding: 0px 0px 0px 10px; font-size:1.0em; width:33%; float:left ">
+                      
+                            <b style="float:left">Supplier No:&nbsp;&nbsp;</b><p>{!v.Userdetail.Supplier_Num__c}</p>
+                        </div>
+                <div style="padding: 0px 0px 0px 10px; font-size:1.0em; width:33%; float:left ">
+                           
+                            <b style="float:left">Supplier Site:&nbsp;&nbsp;</b><p>{!v.Userdetail.Supplier_Site_Code__c}</p>
+                        </div>
+                <div style="padding: 0px 0px 0px 10px; font-size:1.0em; width:33%; float:left ">
+                           
+                            <b style="float:left">Supplier Status:&nbsp;&nbsp;</b><p>{!v.Userdetail.Supplier__c}</p>
+                        </div>
+                <!--  <div style="padding: 0px 0px 0px 10px; font-size:1.0em; width:33%; float:left ">
+                            
+                            <b style="float:left">Mode:&nbsp;&nbsp;</b><p>{!v.Userdetail.Journey_Type__c}</p>
+                        </div> -->
+            </div>
+        </div>
+    </div>
+    <br/>
+    
+    <!--Table-->
+    <lightning:tabset selectedTabId="">
+        <lightning:tab label="Conveyance" id="one">
+         <div style="width:100%; padding:0 2% 0 2%;">
+<!--Heading-->
+<div class="" style="height:10px;">
+    <div style="padding: 5px 0px 0px 30px; font-size:1.5em; width:18%; float:left ">
+        <b>Total Journeys:{!v.TotalJourneyCon}</b>
+    </div>
+    <div style="padding: 5px 0px 0px 0px; font-size:1.5em; width:16%; float:left ">
+            <b>Total Events:{!v.TotalEventCon}</b>
+            
+        </div>
+        <div style="padding: 5px 0px 0px 0px; font-size:1.5em; width:23%; float:left ">
+                <b>Total Amount:{!v.TotalAmountCon} Rs</b>
+            </div>
+    <div style="padding: 5px 0px 0px 0px; font-size:1.5em; width:25%; float:left ">
+                <b>Approved Amount:{!v.ApprovedAmountCon} Rs</b>
+            </div>
+            <div style="padding: 5px 0px 0px 0px; font-size:1.5em; width:18%; float:left ">
+                    <b>Total Distance:{!v.TotalDistanceCon} KM</b>
+                </div>
+</div>
+<!--Heading End-->
+<br/>
+<br/>
+    
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+            <thead>
+        <tr class="slds-line-height_reset">
+        <th class="" scope="col">
+        <div class="slds-truncate" title="Opportunity Name">Journey</div>
+        </th>
+        <th class="" scope="col">
+        <div class="slds-truncate" title="Account Name">Date</div>
+        </th>
+        <th class="" scope="col">
+        <div class="slds-truncate" title="Close Date">Mode</div>
+        </th>
+        <th class="" scope="col">
+        <div class="slds-truncate" title="Stage">K.M.</div>
+        </th>
+        <th class="" scope="col">
+        <div class="slds-truncate" title="Confidence">K.M. Amount</div>
+        </th>
+        <th class="" scope="col">
+        <div class="slds-truncate" title="Amount">Expense</div>
+        </th>
+        <th class="" scope="col">
+            <div class="slds-truncate" title="Contact">Approved By<br/>Manager</div>
+        </th>
+        <th class="" scope="col">
+            <div class="slds-truncate" title="Contact">Approved By<br/>Finance</div>
+            </th>
+            <th class="" scope="col">
+                <div class="slds-truncate" title="Contact">Journey<br/>Remark</div>
+                </th>
+            <th class="" scope="col">
+                <div class="slds-truncate" title="Contact">Finance<br/>Remark</div>
+                </th>
+        </tr>
+        </thead>
+        <tbody>
+            <aura:iteration items="{!v.JourneyList}" var="jor">
+            <tr class="slds-hint-parent">
+                <th data-label="Opportunity Name" scope="row">
+                <div class="slds-truncate" title="{!jor.Name}">
+                <a href="javascript:void(0);" tabindex="-1" Name="{!jor.Id}" onclick="{!c.opentab}">{!jor.Name}</a>
+           <!--     <lightning:buttonIcon iconName="utility:new_window" aura:id="button3" value="{!jor.Id}" variant="bare" onclick="{!c.openOnWindow3}" alternativeText="Open in new Window" title="Open in new Window" /> -->
+                  <button type="button" class="slds-button" iconName="utility:new_window" onclick="{!c.openOnWindow3}" id="{!jor.Id}">&nbsp;&nbsp;↗</button>
+                    </div>
+                </th>
+                <td data-label="Account Name">
+                <div class="slds-truncate" title="{!jor.Journey_Date__c}">{!jor.Journey_Date__c}</div>
+                </td>
+                <td data-label="Close Date">
+                <div class="slds-truncate" title="{!jor.Mode_of_transport__c}">{!jor.Mode_of_transport__c}</div>
+                </td>
+                <td data-label="Prospecting">
+                <div class="slds-truncate" title="{!jor.Journey_KM__c}">{!jor.Journey_KM__c}</div>
+                </td>
+                <td data-label="Confidence">
+                <div class="slds-truncate" title="{!jor.Journey_Amount__c}">{!jor.Journey_Amount__c}</div>
+                </td>
+                <td data-label="Amount">
+                <div class="slds-truncate" title="{!jor.Manual_Expense_Amount__c}">{!jor.Manual_Expense_Amount__c}</div>
+                </td>
+                <td data-label="Contact">
+                <div class="slds-truncate" title="{!jor.Final_Amount__c}">{!jor.Final_Amount__c}</div>
+                </td>
+                <td data-label="Contact">
+                    <div class="slds-truncate" title="{!jor.Approved_Final_Amount__c}">{!jor.Approved_Final_Amount__c}</div>
+                    </td>
+                    <td data-label="Contact">
+                        <div class="slds-truncate" title="jrogers@cloudhub.com">{!jor.Remarks__c}</div>
+                        </td>
+                <td data-label="Contact">
+                        <div class="slds-truncate" style="overflow-x:auto" title="jrogers@cloudhub.com">{!jor.Finance_Remark__c}</div>
+                        </td>
+                </tr>
+            </aura:iteration>
+        </tbody>
+        </table>
+             <br/>
+             <aura:if isTrue="{!v.Userdetail.Supplier__c == 'Active'}">
+                 <lightning:button variant="brand" label="Create Invoice" title="Brand action" onclick="{!c.createTravelInvoice}"/>  
+                 <aura:set attribute="else">
+                     <lightning:button variant="brand" label="Create Invoice" title="Brand action" disabled = "true"/>  
+                 </aura:set>
+             </aura:if> 
+             
+    </div>
+        </lightning:tab>
+        <lightning:tab label="Travel" id="two">
+           <div style="width:100%; padding:0 2% 0 2%;">
+    <!--Heading-->
+<div class="" style="height:10px;">
+    <div style="padding: 5px 0px 0px 30px; font-size:1.5em; width:18%; float:left ">
+        <b>Total Journeys:{!v.TotalJourneyTra}</b>
+    </div>
+    <div style="padding: 5px 0px 0px 0px; font-size:1.5em; width:16%; float:left ">
+            <b>Total Events:{!v.TotalEventTra}</b>
+        </div>
+        <div style="padding: 5px 0px 0px 0px; font-size:1.5em; width:23%; float:left ">
+                <b>Total Amount:{!v.TotalAmountTra} Rs</b>
+            </div>
+    <div style="padding: 5px 0px 0px 0px; font-size:1.5em; width:25%; float:left ">
+                <b>Approved Amount:{!v.ApprovedAmountTra} Rs</b>
+            </div>
+            <div style="padding: 5px 0px 0px 0px; font-size:1.5em; width:18%; float:left ">
+                    <b>Total Distance:{!v.TotalDistanceTra} KM</b>
+                </div>
+</div>
+<!--Heading End-->
+<br/>
+<br/>
+            
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+            <thead>
+        <tr class="slds-line-height_reset">
+        <th class="" scope="col">
+        <div class="slds-truncate" title="Opportunity Name">Journey</div>
+        </th>
+        <th class="" scope="col">
+        <div class="slds-truncate" title="Account Name">Date</div>
+        </th>
+        <th class="" scope="col">
+        <div class="slds-truncate" title="Close Date">Mode</div>
+        </th>
+        <th class="" scope="col">
+        <div class="slds-truncate" title="Stage">K.M.</div>
+        </th>
+        <th class="" scope="col">
+        <div class="slds-truncate" title="Confidence">K.M. Amount</div>
+        </th>
+        <th class="" scope="col">
+        <div class="slds-truncate" title="Amount">Expence</div>
+        </th>
+        <th class="" scope="col">
+            <div class="slds-truncate" title="Contact">Approved By<br/>Manager</div>
+        </th>
+        <th class="" scope="col">
+            <div class="slds-truncate" title="Contact">Approved By<br/>Finance</div>
+            </th>
+            <th class="" scope="col">
+                <div class="slds-truncate" title="Contact">Journey<br/>Remark</div>
+            </th>
+            <th class="" scope="col">
+                <div class="slds-truncate" title="Contact">Finance<br/>Remark</div>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+            <aura:iteration items="{!v.JourneyList1}" var="jor">
+            <tr class="slds-hint-parent">
+                <th data-label="Opportunity Name" scope="row">
+                <div class="slds-truncate" title="Cloudhub + Anypoint Connectors">
+                <!-- <a href="javascript:void(0);" tabindex="-1">{!jor.Name}</a> -->
+                <a href="javascript:void(0);" tabindex="-1" Name="{!jor.Id}" onclick="{!c.opentab}">{!jor.Name}</a> 
+            <!--    <lightning:buttonIcon iconName="utility:new_window" aura:id="button1" value="{!jor.Id}" variant="bare" onclick="{!c.openOnWindow}" alternativeText="Open in new Window" title="Open in new Window" /> -->
+               <button type="button" class="slds-button" iconName="utility:new_window" onclick="{!c.openOnWindow3}" id="{!jor.Id}">&nbsp;&nbsp;↗</button>  
+                    </div>
+                </th>
+                <td data-label="Account Name">
+                <div class="slds-truncate" title="{!jor.Journey_Date__c}">{!jor.Journey_Date__c}</div>
+                </td>
+                <td data-label="Close Date">
+                <div class="slds-truncate" title="{!jor.Mode_of_transport__c}">{!jor.Mode_of_transport__c}</div>
+                </td>
+                <td data-label="Prospecting">
+                <div class="slds-truncate" title="{!jor.Journey_KM__c}">{!jor.Journey_KM__c}</div>
+                </td>
+                <td data-label="Confidence">
+                <div class="slds-truncate" title="{!jor.Journey_Amount__c}">{!jor.Journey_Amount__c}</div>
+                </td>
+                <td data-label="Amount">
+                <div class="slds-truncate" title="{!jor.Manual_Expense_Amount__c}">{!jor.Manual_Expense_Amount__c}</div>
+                </td>
+                <td data-label="Contact">
+                <div class="slds-truncate" title="{!jor.Final_Amount__c}">{!jor.Final_Amount__c}</div>
+                </td>
+                <td data-label="Contact">
+                    <div class="slds-truncate" title="{!jor.Approved_Final_Amount__c}">{!jor.Approved_Final_Amount__c}</div>
+                    </td>
+                    <td data-label="Contact">
+                        <div class="slds-truncate" title="{!jor.Finance_Remark__c}">{!jor.Remarks__c}</div>
+                        </td>
+                <td data-label="Contact" style="overflow: hidden">
+                        <div class="slds-truncate" style="overflow-x:auto" title="{!jor.Finance_Remark__c}">{!jor.Finance_Remark__c}</div>
+                        </td>
+                </tr>
+            </aura:iteration>
+        </tbody>
+        </table>
+               <br/>
+             <lightning:button variant="brand" label="Create Invoice Travel" title="Brand action" onclick="{!c.createInvoice}"/>
+    </div>
+        </lightning:tab>
+    </lightning:tabset>
+</div>
+
+<!--journey record tab-->
+<aura:if isTrue="{!v.openJourney}">
+<div>
+<section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_small" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1">
+    <div class="slds-modal__container">
+        <header class="slds-modal__header">
+            <!--  <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">
+                
+                <span class="slds-assistive-text">Close</span>
+            </button> -->
+            <lightning:buttonIcon iconName="utility:close"
+                                            onclick="{!c.closeExpense}"
+                                            alternativeText="close"
+                                            variant="bare-inverse"
+                                            class="slds-modal__close"/>
+            <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Journey</h2>
+        </header>
+        <div style="background-color: white; max-height: 1150px; overflow-y: scroll;">
+            <br/>
+            <div style="width:100%; padding:0 2% 0 2%;">
+            <div  class="slds-card" style="height:50px;">
+            <div style="height:25px">
+<div style="padding: 0px 0px 0px 10px; font-size:1.0em; width:33%; float:left ">
+                <b style="float:left">Journey: &nbsp;&nbsp;</b><p>{!v.journeyDetail.Name}</p>
+                        </div>
+                <div style="padding: 0px 0px 0px 10px; font-size:1.0em; width:33%; float:left ">
+                           <b style="float:left">Total Distance:&nbsp;&nbsp;</b><p>{!v.journeyDetail.Journey_KM__c} KM</p>
+                        </div>
+                <div style="padding: 0px 0px 0px 10px; font-size:1.0em; width:33%; float:left ">
+                           <b style="float:left">Distance Amount:&nbsp;&nbsp;</b><p>{!v.journeyDetail.Journey_Amount__c} Rs</p>
+                        </div>
+            </div>
+            <div style="height:25px">
+<div style="padding: 0px 0px 0px 10px; font-size:1.0em; width:33%; float:left ">
+                            <b style="float:left">Manual Expense:&nbsp;&nbsp;</b><p>{!v.journeyDetail.Manual_Expense_Amount__c} Rs</p>
+                        </div>
+                <div style="padding: 0px 0px 0px 10px; font-size:1.0em; width:33%; float:left ">
+                            <b style="float:left">Approved By Manager:&nbsp;&nbsp; </b><p>{!v.journeyDetail.Final_Amount__c} Rs</p>
+                        </div>
+                <div style="padding: 0px 0px 0px 10px; font-size:1.0em; width:33%; float:left ">
+                            <b style="float:left">Mode of transport:&nbsp;&nbsp;</b><p>{!v.journeyDetail.Mode_of_transport__c}</p>
+                        </div>
+            </div>
+        </div>
+            <br/>
+                <div style="float:left; font-size:15px; padding-top: 5px;"> <b>Journey Remark:</b> {!v.journeyDetail.Remarks__c}</div>
+                            <br/>
+                            <br/>
+            <b style="Font-size:20px">Events</b>
+<!-- <div style="max-height: 150px; overflow-y: scroll;"> -->
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                <thead>
+                    <tr class="slds-line-height_reset">
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Name">Name</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Status">Status</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Purpose">Purpose</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Distance">Distance</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Campaign">Virtual<br/>Meeting</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Remarks">Remarks</div>
+                        </th>
+                     <!--   <th class="" scope="col">
+                            <div class="slds-truncate" title="Contact">Contact</div>
+                        </th> -->
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <aura:iteration items="{!v.EventList}" var="Eve">
+                        <tr class="slds-hint-parent">
+                            <th data-label="Opportunity Name" scope="row">
+                                <div class="slds-truncate"  title="{!Eve.Name}">
+                                    <a href="javascript:void(0);" tabindex="-1" Name="{!Eve.Id}" onclick="{!c.openOnNewWindow}">{!Eve.Name}</a>
+
+                                </div>
+                            </th>
+                            <td data-label="Account Name">
+                                <div class="slds-truncate" title="{!Eve.Status__c}">{!Eve.Status__c}</div>
+                            </td>
+                            <td data-label="Close Date">
+                                <div class="slds-truncate" title="{!Eve.Event_Purpose__c}">{!Eve.Event_Purpose__c}</div>
+                            </td>
+                            <td data-label="Prospecting">
+                                <div class="slds-truncate" title="{!Eve.Distance__c}">{!Eve.Distance__c}</div>
+                            </td>
+                            <td data-label="Confidence">
+                                <div class="slds-truncate" title="{!Eve.Campaign__c}">{!Eve.Virtual_Meeting__c}</div>
+                            </td>
+                            <td data-label="Amount">
+                                <div class="slds-truncate slds-form-element slds-size--1-of-12 td-fixed-width" title="{!Eve.Time_Spent_Auto__c}">
+                                    </div>
+                            <div class="slds-cell-wrap">
+                            {!Eve.Remarks__c}
+                                </div>
+                            </td>
+                    <!--        <td data-label="Amount">
+                                <div class="slds-truncate" title="{!Eve.Contact__c}">{!Eve.Contact__r.Name}</div>
+                            </td> -->
+                        </tr>
+                    </aura:iteration>
+                </tbody>
+            </table>
+              <!--  </div> -->
+            <br/> 
+            <!--Expense Items View Table-->
+            <div style="width: 100%;">
+            <b style="Font-size:20px; float:left">Expense Items</b>
+            </div>
+        <br/>
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered" max-column-width="50px">
+                <thead>
+                    <tr class="slds-line-height_reset">
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Name">Name</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Amount">Amount</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Bill Number">Bill Number</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Expense Type">Expense Type</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="GST No.">GST No.</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Check-In Date" >Approved Amount</div>
+                        </th>
+                      <!--  <th class="" scope="col">
+                            <div class="slds-truncate" title="Check-Out Date">Upload/Delete/View Files</div>
+                        </th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <aura:iteration items="{!v.ExList}" var="Ex">
+                        <tr class="slds-hint-parent">
+                            <th data-label="Opportunity Name" scope="row">
+                                <div class="slds-truncate" title="{!Ex.Name}">
+                                    <a href="javascript:void(0);" tabindex="-1" Name="{!Ex.Id}" onclick="{!c.opentab1}">{!Ex.Name}</a>
+                              <!--      <lightning:buttonIcon iconName="utility:new_window" aura:id="button2" value="{!Ex.Id}" variant="bare" onclick="{!c.openOnWindow1}" alternativeText="Open in new Window" title="Open in new Window" /> -->
+                                <button type="button" class="slds-button" iconName="utility:new_window" onclick="{!c.openOnWindow3}" id="{!Ex.Id}">&nbsp;&nbsp;↗</button>
+                                </div>
+                            </th>
+                            <td data-label="Account Name">
+                                <div class="slds-truncate" title="{!Ex.Amount__c}">{!Ex.Amount__c}</div>
+                            </td>
+                            <td data-label="Close Date">
+                                <div class="slds-truncate" title="{!Ex.Bill_Number__c}">{!Ex.Bill_Number__c}</div>
+                            </td>
+                            <td data-label="Prospecting">
+                                <div class="slds-truncate" title="{!Ex.Expense_Type__c}">{!Ex.Expense_Type__c}</div>
+                            </td>
+                            <td data-label="Prospecting">
+                                <div class="slds-truncate" title="{!Ex.GST_No__c}">{!Ex.GST_No__c}</div>
+                            </td>
+                            <td data-label="Confidence" style="max-width: 130px">
+                                <div class="slds-truncate" title="{!Ex.Approved_Amount__c}">{!Ex.Approved_Amount__c}</div>
+                            </td>
+                         <!--   <td data-label="Amount">
+                                 <button name="" class="slds-button">
+                                        <span data-value="{!Ex.Id}"  onclick="{!c.dothis}">
+                                              <lightning:icon iconName="action:add_file" size="xx-small"/>
+                                        </span>
+                                    </button>
+                            </td>  -->
+                        </tr>
+                        <br/>
+                    </aura:iteration>
+                </tbody>
+            </table>
+                <!--Approval History View Table-->
+           
+            <br/>     
+
+<div class="slds-grid slds-wrap" >
+    <div class="slds-col slds-size_1-of-4 slds-align_absolute-center"> 
+            <lightning:input class="form-field" name="" aura:id="approvedExpense" type="number" readonly="true" value="{!v.journeyDetail.Approved_Expense_Amount__c}" placeholder="{!v.journeyDetail.Approved_Journey_Amount__c}" label="Approved Expense Amount"/>
+            </div>
+    <div class="slds-col slds-size_1-of-4 slds-align_absolute-center"> 
+            <lightning:input class="form-field" name="" aura:id="approved" type="number" step="0.01" value="{!v.journeyDetail.Approved_Journey_Amount__c}" placeholder="{!v.journeyDetail.Approved_Journey_Amount__c}" label="Approved journey Amount"/> <!--{!v.journeyDetail.Approved_Amount__c}-->
+            </div>
+    <div class="slds-col slds-size_1-of-4 slds-align_absolute-center">
+                <lightning:input class="form-field" name="input7" aura:id="remark" value="{!v.journeyDetail.Finance_Remark__c}" placeholder="Remark" required="false" label="Remark"/>                        
+        </div>
+        <div class="slds-col slds-size_1-of-4 slds-align_absolute-center">
+                <lightning:input class="form-field" name="input6" aura:id="" readonly="true" value="{!v.journeyDetail.Approved_Final_Amount__c}" placeholder="" required="false" title="To pe be paid" label="Final Amount"/>                        
+        </div>
+</div>
+<br/>
+<br/>
+</div>
+</div>
+        <footer class="slds-modal__footer">
+            <lightning:button variant="neutral" 
+                                        label="Close"
+                                        title="Close"
+                                        onclick="{!c.closeExpense}"/>
+                                        <lightning:button variant="Brand" 
+                                        label="Update"
+                                        title="Update"
+                                        onclick="{!c.updateJourney}"/>
+<!-- <button class="slds-button slds-button_brand">Save</button> -->
+        </footer>
+    </div>
+</section>
+      <div class="slds-backdrop slds-backdrop_open"></div> 
+</div>
+</aura:if>
+    
+    
+<!--Expence item tab-->
+    <aura:if isTrue="{!v.openExpence}">
+<div>
+<section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_small" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1">
+    <div class="slds-modal__container">
+        <header class="slds-modal__header">
+            <!--  <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">
+                
+                <span class="slds-assistive-text">Close</span>
+            </button> -->
+            <lightning:buttonIcon iconName="utility:close"
+                                            onclick="{!c.closeExpense1}"
+                                            alternativeText="close"
+                                            variant="bare-inverse"
+                                            class="slds-modal__close"/>
+            <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Expense</h2>
+        </header>
+        <div style="background-color: white;" >
+            <br/>
+            <div style="width:100%; padding:0 2% 0 2%;">
+            <div  class="slds-card" style="height:50px;">
+            <div style="height:25px">
+<div style="padding: 0px 0px 0px 10px; font-size:1.0em; width:33%; float:left ">
+                <b style="float:left">Name: &nbsp;&nbsp;</b><p>{!v.ExpenceDetail.Name}</p>
+                        </div>
+                <div style="padding: 0px 0px 0px 10px; font-size:1.0em; width:33%; float:left ">
+                           <b style="float:left">Amount:&nbsp;&nbsp;</b><p>{!v.ExpenceDetail.Amount__c}</p>
+                        </div>
+                <div style="padding: 0px 0px 0px 10px; font-size:1.0em; width:33%; float:left ">
+                           <b style="float:left">Bill Number:&nbsp;&nbsp;</b><p>{!v.ExpenceDetail.Bill_Number__c}</p>
+                        </div>
+            </div>
+            <div style="height:25px">
+<div style="padding: 0px 0px 0px 10px; font-size:1.0em; width:33%; float:left ">
+                            <b style="float:left">Expense Type:&nbsp;&nbsp;</b><p>{!v.ExpenceDetail.Expense_Type__c}</p>
+                        </div>
+                <div style="padding: 0px 0px 0px 10px; font-size:1.0em; width:33%; float:left ">
+                            <b style="float:left">GST No.:&nbsp;&nbsp; </b><p>{!v.ExpenceDetail.GST_No__c}</p>
+                        </div>
+                <div style="padding: 0px 0px 0px 10px; font-size:1.0em; width:33%; float:left ">
+                   <div style = "float:left">
+                    <b style="float:left">Approved Amount:&nbsp;&nbsp;</b> <p><lightning:input style="float:left; width:100px" class="form-field" name="" aura:id="approvedExpence" type="number" value="{!v.ExpenceDetail.Approved_Amount__c}" placeholder="{!v.ExpenceDetail.Approved_Amount__c}" label="	"/></p>
+                    <!-- <p>{!v.journeyDetail.Mode_of_transport__c}</p> -->
+                        </div>
+                    </div>
+            </div>
+        </div>
+            <br/>
+            
+            
+</div>
+</div>
+        <footer class="slds-modal__footer">
+            <lightning:button variant="neutral" 
+                                        label="Close"
+                                        title="Close"
+                                        onclick="{!c.closeExpense1}"/>
+                                        <lightning:button variant="Brand" 
+                                        label="Update"
+                                        title="Update"
+                                        onclick="{!c.updateExpence}"/>
+<!-- <button class="slds-button slds-button_brand">Save</button> -->
+        </footer>
+    </div>
+</section>
+    <div class="slds-backdrop1 slds-backdrop_open"></div>        
+</div>
+</aura:if>
+
+</aura:component>

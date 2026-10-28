@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Typee__c</fullName>
+    <label>Access Type</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Air Business</fullName>
+                <default>false</default>
+                <label>Air Business</label>
+            </value>
+            <value>
+                <fullName>Any Misc.</fullName>
+                <default>false</default>
+                <label>Any Misc.</label>
+            </value>
+            <value>
+                <fullName>API Integration Required</fullName>
+                <default>false</default>
+                <label>API Integration Required</label>
+            </value>
+            <value>
+                <fullName>Balance Confirmation/No Dues Certificate/Ledger</fullName>
+                <default>false</default>
+                <label>Balance Confirmation/No Dues Certificate/Ledger</label>
+            </value>
+            <value>
+                <fullName>Base location/Collection Location/Bill Submission Location change</fullName>
+                <default>false</default>
+                <label>Base location/Collection Location/Bill Submission Location change</label>
+            </value>
+            <value>
+                <fullName>Bill Dispatch</fullName>
+                <default>false</default>
+                <label>Bill Dispatch</label>
+            </value>
+            <value>
+                <fullName>Bill Generation requirement</fullName>
+                <default>false</default>
+                <label>Bill Generation requirement</label>
+            </value>
+            <value>
+                <fullName>Business Support</fullName>
+                <default>false</default>
+                <label>Business Support</label>
+            </value>
+            <value>
+                <fullName>Change Collector in Retail</fullName>
+                <default>false</default>
+                <label>Change Collector in Retail</label>
+            </value>
+            <value>
+                <fullName>Change Request</fullName>
+                <default>false</default>
+                <label>Change Request</label>
+            </value>
+            <value>
+                <fullName>Claim Issues</fullName>
+                <default>false</default>
+                <label>Claim Issues</label>
+            </value>
+            <value>
+                <fullName>Credit Code Management</fullName>
+                <default>false</default>
+                <label>Credit Code Management</label>
+            </value>
+            <value>
+                <fullName>Credit Note</fullName>
+                <default>false</default>
+                <label>Credit Note</label>
+            </value>
+            <value>
+                <fullName>Customer Portal request</fullName>
+                <default>false</default>
+                <label>Customer Portal request</label>
+            </value>
+            <value>
+                <fullName>Dashboard/Spotfire</fullName>
+                <default>false</default>
+                <label>Dashboard/Spotfire</label>
+            </value>
+            <value>
+                <fullName>Debit Note/Allied Bill</fullName>
+                <default>false</default>
+                <label>Debit Note/Allied Bill</label>
+            </value>
+            <value>
+                <fullName>Digital Collection &amp; Receipting issue</fullName>
+                <default>false</default>
+                <label>Digital Collection &amp; Receipting issue</label>
+            </value>
+            <value>
+                <fullName>Freight MIS requirement</fullName>
+                <default>false</default>
+                <label>Freight MIS requirement</label>
+            </value>
+            <value>
+                <fullName>GST Issue</fullName>
+                <default>false</default>
+                <label>GST Issue</label>
+            </value>
+            <value>
+                <fullName>Meeting Request</fullName>
+                <default>false</default>
+                <label>Meeting Request</label>
+            </value>
+            <value>
+                <fullName>Misc Income( Credit )</fullName>
+                <default>false</default>
+                <label>Misc Income( Credit )</label>
+            </value>
+            <value>
+                <fullName>Misc Income (Retail)</fullName>
+                <default>false</default>
+                <label>Misc Income (Retail)</label>
+            </value>
+            <value>
+                <fullName>Monthly Closure Support</fullName>
+                <default>false</default>
+                <label>Monthly Closure Support</label>
+            </value>
+            <value>
+                <fullName>Operation Issues</fullName>
+                <default>false</default>
+                <label>Operation Issues</label>
+            </value>
+            <value>
+                <fullName>Paid Rebate Advise</fullName>
+                <default>false</default>
+                <label>Paid Rebate Advise</label>
+            </value>
+            <value>
+                <fullName>POD requirement/CD requirement</fullName>
+                <default>false</default>
+                <label>POD requirement/CD requirement</label>
+            </value>
+            <value>
+                <fullName>POD Viewer/Invoice</fullName>
+                <default>false</default>
+                <label>POD Viewer/Invoice</label>
+            </value>
+            <value>
+                <fullName>Pricing</fullName>
+                <default>false</default>
+                <label>Pricing</label>
+            </value>
+            <value>
+                <fullName>Rate issue - Retail</fullName>
+                <default>false</default>
+                <label>Rate issue - Retail</label>
+            </value>
+            <value>
+                <fullName>Reciept cancellation( Credit)</fullName>
+                <default>false</default>
+                <label>Reciept cancellation( Credit)</label>
+            </value>
+            <value>
+                <fullName>Reciept cancellation( Retail)</fullName>
+                <default>false</default>
+                <label>Reciept cancellation( Retail)</label>
+            </value>
+            <value>
+                <fullName>Refund to Customer</fullName>
+                <default>false</default>
+                <label>Refund to Customer</label>
+            </value>
+            <value>
+                <fullName>Retail Allied bill</fullName>
+                <default>false</default>
+                <label>Retail Allied bill</label>
+            </value>
+            <value>
+                <fullName>Retail GST Invoice</fullName>
+                <default>false</default>
+                <label>Retail GST Invoice</label>
+            </value>
+            <value>
+                <fullName>Revised Bill</fullName>
+                <default>false</default>
+                <label>Revised Bill</label>
+            </value>
+            <value>
+                <fullName>RFQ Support</fullName>
+                <default>false</default>
+                <label>RFQ Support</label>
+            </value>
+            <value>
+                <fullName>To pay Debit Advise</fullName>
+                <default>false</default>
+                <label>To pay Debit Advise</label>
+            </value>
+            <value>
+                <fullName>To pay rebate Advise</fullName>
+                <default>false</default>
+                <label>To pay rebate Advise</label>
+            </value>
+            <value>
+                <fullName>Topay to Credit conversion</fullName>
+                <default>false</default>
+                <label>Topay to Credit conversion</label>
+            </value>
+            <value>
+                <fullName>Branch Transfer</fullName>
+                <default>false</default>
+                <label>Branch Transfer</label>
+            </value>
+            <value>
+                <fullName>Paid Credit Note</fullName>
+                <default>false</default>
+                <label>Paid Credit Note</label>
+            </value>
+            <value>
+                <fullName>Topay Credit Note</fullName>
+                <default>false</default>
+                <label>Topay Credit Note</label>
+            </value>
+            <value>
+                <fullName>Credit Rebate</fullName>
+                <default>false</default>
+                <label>Credit Rebate</label>
+            </value>
+            <value>
+                <fullName>Special Delivery</fullName>
+                <default>false</default>
+                <label>Special Delivery</label>
+            </value>
+            <value>
+                <fullName>Commercial Credit Note</fullName>
+                <default>false</default>
+                <label>Commercial Credit Note</label>
+            </value>
+            <value>
+                <fullName>Corporate Credit Case</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Corporate Credit Case</label>
+            </value>
+            <value>
+                <fullName>Discount On Topay</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Discount On Topay</label>
+            </value>
+            <value>
+                <fullName>Paid Collection Issue</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Paid Collection Issue</label>
+            </value>
+            <value>
+                <fullName>Paid Invoice</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Paid Invoice</label>
+            </value>
+            <value>
+                <fullName>Paid Rebate Advice</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Paid Rebate Advice</label>
+            </value>
+            <value>
+                <fullName>RTGS form/Bank statement</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>RTGS form/Bank statement</label>
+            </value>
+            <value>
+                <fullName>To Pay delivery issue due to freight</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>To Pay delivery issue due to freight</label>
+            </value>
+            <value>
+                <fullName>To Pay invoice</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>To Pay invoice</label>
+            </value>
+            <value>
+                <fullName>To pay Collection issue</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>To pay Collection issue</label>
+            </value>
+            <value>
+                <fullName>ToPay Undelivered waybill Issues</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>ToPay Undelivered waybill Issues</label>
+            </value>
+            <value>
+                <fullName>Waybill Edit</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Waybill Edit</label>
+            </value>
+            <value>
+                <fullName>Wrong Cheque No Mentioned or document upload</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Wrong Cheque No Mentioned or document upload</label>
+            </value>
+            <value>
+                <fullName>Wrong bank account selected</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Wrong bank account selected</label>
+            </value>
+            <value>
+                <fullName>Wrong waybill / Bill Apply</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Wrong waybill / Bill Apply</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

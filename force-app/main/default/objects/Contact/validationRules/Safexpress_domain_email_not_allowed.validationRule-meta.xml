@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Safexpress_domain_email_not_allowed</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;, $Profile.Name &lt;&gt; &quot;Corporate salesforce team&quot;,$Profile.Name &lt;&gt; &quot;Read Only&quot;,
+
+
+CONTAINS(Email, &quot;@safexpress.com&quot;))</errorConditionFormula>
+    <errorMessage>Email address of Safexpress not allowed</errorMessage>
+</ValidationRule>

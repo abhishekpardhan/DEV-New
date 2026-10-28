@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs> 
+        <targetConfig targets="lightning__FlowScreen">
+            <!-- Input Variables for Flow Screen -->
+            <property name="isOutputFieldsDisabled" label="Output Fields Disabled" type="Boolean" default="true" role="inputOnly" />  
+            <property name="caseType" label="Case Type" type="String" role="inputOnly"/> 
+            <property name="recordLimit" label="Recent Cases Limit" type="String" role="inputOnly" default="2"/> 
+            
+            <!-- Output Variables for Flow Screen -->
+            <property name="wayBillNumber" label="WayBill Number" type="String" role="outputOnly"/> 
+            <property name="WaybillStatus" label="Waybill Status" type="String"  role="outputOnly" />
+            <property name="edd" label="EDD" type="Date" role="outputOnly" />
+            <property name="fromBranch" label="From Branch" type="String"  role="outputOnly" /> 
+            <property name="toBranch" label="To Branch" type="String"  role="outputOnly" />
+            <property name="pickUpDate" label="PickUp Date" type="Date"  role="outputOnly" />
+            <property name="modeOfPayment" label="Mode Of Payment" type="String"  role="outputOnly" />
+            <property name="modeOfDispatch" label="Mode Of Dispatch" type="String"  role="outputOnly" />
+            <property name="freight" label="freight" type="String"  role="outputOnly" />
+            <property name="consignorName" label="Consignor Name" type="String"  role="outputOnly" /> 
+            <property name="ConsigneeName" label="Consignee Name" type="String"  role="outputOnly" /> 
+            <property name="dod_Dacc" label="DOD/DACC" type="String"  role="outputOnly" />
+
+            <property name="subType" label="Sub Type Based on WayBill" type="String" role="outputOnly"/> 
+
+
+            
+    
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

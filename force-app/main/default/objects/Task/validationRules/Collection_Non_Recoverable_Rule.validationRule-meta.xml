@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Collection_Non_Recoverable_Rule</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(
+	AND(     !ISCHANGED( OwnerId ), 
+		RecordType.DeveloperName = &apos;Collection&apos;,
+		NOT($Permission.Skip_Validation_Rule),
+		ISPICKVAL(Payment_Remaining__c, &apos;Non-Recoverable&apos;), 
+		ISNULL(TEXT(non_recoverable_reason__c)), NOT($Profile.Name =&apos;Integration User&apos;),NOT($Profile.Name = &apos;Portfolio Management&apos;)
+	),
+	True,
+	False
+)</errorConditionFormula>
+    <errorMessage>Please fill the non recoverable reason.</errorMessage>
+</ValidationRule>

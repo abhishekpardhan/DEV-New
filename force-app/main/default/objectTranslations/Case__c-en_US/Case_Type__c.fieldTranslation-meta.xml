@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Case Sub Types --></label>
+    <name>Case_Type__c</name>
+    <picklistValues>
+        <masterLabel>AD-HOC Commercial Change</masterLabel>
+        <translation><!-- AD-HOC Commercial Change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Account Modification</masterLabel>
+        <translation><!-- Account Modification --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Address Change</masterLabel>
+        <translation><!-- Address Change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Adjusted through Commission</masterLabel>
+        <translation><!-- Adjusted through Commission --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Allied Bill Generated</masterLabel>
+        <translation><!-- Allied Bill Generated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Annual Hike</masterLabel>
+        <translation><!-- Annual Hike --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Annual Hike deduction</masterLabel>
+        <translation><!-- Annual Hike deduction --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Associate Behaviour</masterLabel>
+        <translation><!-- Associate Behaviour --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Associate Left</masterLabel>
+        <translation><!-- Associate Left --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BAR Request</masterLabel>
+        <translation><!-- BAR Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Guarantee</masterLabel>
+        <translation><!-- Bank Guarantee --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Base Location</masterLabel>
+        <translation><!-- Base Location --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bill date Change</masterLabel>
+        <translation><!-- Bill date Change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Billing address &amp; Billing GST change</masterLabel>
+        <translation><!-- Billing address &amp; Billing GST change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Branch Transfer</masterLabel>
+        <translation><!-- Branch Transfer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Branch Type Change</masterLabel>
+        <translation><!-- Branch Type Change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Business promotion related expenses</masterLabel>
+        <translation><!-- Business promotion related expenses --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cancellation of complete Bill</masterLabel>
+        <translation><!-- Cancellation of complete Bill --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cheque Bounce</masterLabel>
+        <translation><!-- Cheque Bounce --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Claim</masterLabel>
+        <translation><!-- Claim --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Code Branch Transfer</masterLabel>
+        <translation><!-- Code Branch Transfer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Code Closure</masterLabel>
+        <translation><!-- Code Closure --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Code Clousre</masterLabel>
+        <translation><!-- Code Clousre --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Code Extension</masterLabel>
+        <translation><!-- Code Extension --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Collector Branch</masterLabel>
+        <translation><!-- Collector Branch --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Commercial updated</masterLabel>
+        <translation><!-- Commercial updated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Consignor Name Update</masterLabel>
+        <translation><!-- Consignor Name Update --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Consignor/Consignee Address Correction</masterLabel>
+        <translation><!-- Consignor/Consignee Address Correction --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Consignor/Consignee Name Correction</masterLabel>
+        <translation><!-- Consignor/Consignee Name Correction --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contractual requirement</masterLabel>
+        <translation><!-- Contractual requirement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer Invoice Viewer</masterLabel>
+        <translation><!-- Customer Invoice Viewer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer Name change</masterLabel>
+        <translation><!-- Customer Name change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer Portal Issue</masterLabel>
+        <translation><!-- Customer Portal Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer Requested</masterLabel>
+        <translation><!-- Customer Requested --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer Shifted</masterLabel>
+        <translation><!-- Customer Shifted --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer request</masterLabel>
+        <translation><!-- Customer request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DOD/DACC</masterLabel>
+        <translation><!-- DOD/DACC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Damage/Shortage Delivery</masterLabel>
+        <translation><!-- Damage/Shortage Delivery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dashboard ( Spotfire )</masterLabel>
+        <translation><!-- Dashboard ( Spotfire ) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Delivery Challan Acknowledgement</masterLabel>
+        <translation><!-- Delivery Challan Acknowledgement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Delivery without SNSD</masterLabel>
+        <translation><!-- Delivery without SNSD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Direct POD to Corporate Office</masterLabel>
+        <translation><!-- Direct POD to Corporate Office --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Discount Allowed (Approved From Corporate)</masterLabel>
+        <translation><!-- Discount Allowed (Approved From Corporate) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Discounts</masterLabel>
+        <translation><!-- Discounts --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Distance Issue</masterLabel>
+        <translation><!-- Distance Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Draft Vetting</masterLabel>
+        <translation><!-- Draft Vetting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Duplicate Receipt</masterLabel>
+        <translation><!-- Duplicate Receipt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EMD</masterLabel>
+        <translation><!-- EMD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Escalation</masterLabel>
+        <translation><!-- Escalation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FOC Booking</masterLabel>
+        <translation><!-- FOC Booking --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FOC Waybill</masterLabel>
+        <translation><!-- FOC Waybill --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Freight Dispute</masterLabel>
+        <translation><!-- Freight Dispute --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fuel Surcharge</masterLabel>
+        <translation><!-- Fuel Surcharge --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fuel surcharge deduction</masterLabel>
+        <translation><!-- Fuel surcharge deduction --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GST No. Correction</masterLabel>
+        <translation><!-- GST No. Correction --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GSTN no Change</masterLabel>
+        <translation><!-- GSTN no Change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Green Surcharge</masterLabel>
+        <translation><!-- Green Surcharge --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Grievance</masterLabel>
+        <translation><!-- Grievance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Impact Analysis</masterLabel>
+        <translation><!-- Impact Analysis --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incorrect invoice value entry</masterLabel>
+        <translation><!-- Incorrect invoice value entry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Indeminity Bond</masterLabel>
+        <translation><!-- Indeminity Bond --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Late Delivery</masterLabel>
+        <translation><!-- Late Delivery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MCC</masterLabel>
+        <translation><!-- MCC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Manage Invoice</masterLabel>
+        <translation><!-- Manage Invoice --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Minimum Waybill Charge deduction</masterLabel>
+        <translation><!-- Minimum Waybill Charge deduction --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Misbehavior / Misconduct (ARM/BRM/DRM)</masterLabel>
+        <translation><!-- Misbehavior / Misconduct (ARM/BRM/DRM) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Month Closing</masterLabel>
+        <translation><!-- Month Closing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Name change</masterLabel>
+        <translation><!-- Name change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Associate</masterLabel>
+        <translation><!-- New Associate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Pickup</masterLabel>
+        <translation><!-- New Pickup --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New SFX Code</masterLabel>
+        <translation><!-- New SFX Code --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New SFX Code Required</masterLabel>
+        <translation><!-- New SFX Code Required --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New To-Pay Code</masterLabel>
+        <translation><!-- New To-Pay Code --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Non-Delivery</masterLabel>
+        <translation><!-- Non-Delivery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Deposit in bank</masterLabel>
+        <translation><!-- Not Deposit in bank --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Others</masterLabel>
+        <translation><!-- Others --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>POD Viewer</masterLabel>
+        <translation><!-- POD Viewer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Payment follow up</masterLabel>
+        <translation><!-- Payment follow up --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pick-up Timing Issue</masterLabel>
+        <translation><!-- Pick-up Timing Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pickup Address update</masterLabel>
+        <translation><!-- Pickup Address update --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pickup Issue</masterLabel>
+        <translation><!-- Pickup Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pricing change AAA+</masterLabel>
+        <translation><!-- Pricing change AAA+ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Promotion Expense</masterLabel>
+        <translation><!-- Promotion Expense --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Propel , CRM, Spotfire related</masterLabel>
+        <translation><!-- Propel , CRM, Spotfire related --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RFQ/ Tender</masterLabel>
+        <translation><!-- RFQ/ Tender --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rate Difference</masterLabel>
+        <translation><!-- Rate Difference --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rate Simulation</masterLabel>
+        <translation><!-- Rate Simulation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rebook on Higher Freight</masterLabel>
+        <translation><!-- Rebook on Higher Freight --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Refund Cheque Request</masterLabel>
+        <translation><!-- Refund Cheque Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Revised bill</masterLabel>
+        <translation><!-- Revised bill --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STC</masterLabel>
+        <translation><!-- STC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Safextension Charge</masterLabel>
+        <translation><!-- Safextension Charge --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Safextension Charge deduction</masterLabel>
+        <translation><!-- Safextension Charge deduction --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Security Deposit</masterLabel>
+        <translation><!-- Security Deposit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Seizure / Sale tax issues / RTO detention / Accident</masterLabel>
+        <translation><!-- Seizure / Sale tax issues / RTO detention / Accident --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Service Issue</masterLabel>
+        <translation><!-- Service Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Short Delivery( Box )</masterLabel>
+        <translation><!-- Short Delivery( Box ) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Short Delivery( Pieces )</masterLabel>
+        <translation><!-- Short Delivery( Pieces ) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shortage/Damage</masterLabel>
+        <translation><!-- Shortage/Damage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sister Concern Code</masterLabel>
+        <translation><!-- Sister Concern Code --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Special / Turnover discount</masterLabel>
+        <translation><!-- Special / Turnover discount --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>State Surcharge deduction</masterLabel>
+        <translation><!-- State Surcharge deduction --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Submission Branch</masterLabel>
+        <translation><!-- Submission Branch --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TPSC Not paid by Customer</masterLabel>
+        <translation><!-- TPSC Not paid by Customer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Template Required</masterLabel>
+        <translation><!-- Template Required --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>To Pay service Charge</masterLabel>
+        <translation><!-- To Pay service Charge --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>To-Pay Code requirement</masterLabel>
+        <translation><!-- To-Pay Code requirement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Undelivered</masterLabel>
+        <translation><!-- Undelivered --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VMI</masterLabel>
+        <translation><!-- VMI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Value Surcharge deduction.</masterLabel>
+        <translation><!-- Value Surcharge deduction. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vendor Registration</masterLabel>
+        <translation><!-- Vendor Registration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Waybill Destination Change</masterLabel>
+        <translation><!-- Waybill Destination Change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Waybill Edit</masterLabel>
+        <translation><!-- Waybill Edit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Weight difference</masterLabel>
+        <translation><!-- Weight difference --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wrong Amount or TDS/ GST</masterLabel>
+        <translation><!-- Wrong Amount or TDS/ GST --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wrong Branch selected</masterLabel>
+        <translation><!-- Wrong Branch selected --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wrong Cheque upload</masterLabel>
+        <translation><!-- Wrong Cheque upload --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wrong Delivery</masterLabel>
+        <translation><!-- Wrong Delivery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wrong Mode(Paid / To-Pay / Credit)</masterLabel>
+        <translation><!-- Wrong Mode(Paid / To-Pay / Credit) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wrong Type (Cash/ Cheque/ EFT)</masterLabel>
+        <translation><!-- Wrong Type (Cash/ Cheque/ EFT) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wrong billing. Wrong pincode entered</masterLabel>
+        <translation><!-- Wrong billing. Wrong pincode entered --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wrong charges applied</masterLabel>
+        <translation><!-- Wrong charges applied --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wrong waybill / Bill Apply</masterLabel>
+        <translation><!-- Wrong waybill / Bill Apply --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wrong waybill entry/ Code entry</masterLabel>
+        <translation><!-- Wrong waybill entry/ Code entry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Zero -Billing  AAA+</masterLabel>
+        <translation><!-- Zero -Billing  AAA+ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>wrong Cheque No Mentioned</masterLabel>
+        <translation><!-- wrong Cheque No Mentioned --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Booking Branch --></label>
+    <name>BookingBranch__c</name>
+    <relationshipLabel><!-- Support Cases --></relationshipLabel>
+</CustomFieldTranslation>

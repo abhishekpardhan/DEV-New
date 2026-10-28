@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Sub_Type__c</fullName>
+    <label>Case Sub Type</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Customer_Case_Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>LR/Waybill Creation</fullName>
+                <default>false</default>
+                <label>LR/Waybill Creation</label>
+            </value>
+            <value>
+                <fullName>Waybill Tracking API</fullName>
+                <default>false</default>
+                <label>Waybill Tracking API</label>
+            </value>
+            <value>
+                <fullName>With Tech Team</fullName>
+                <default>false</default>
+                <label>With Tech Team</label>
+            </value>
+            <value>
+                <fullName>With Tech Leadership</fullName>
+                <default>false</default>
+                <label>With Tech Leadership</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+            <value>
+                <fullName>E-POD API</fullName>
+                <default>false</default>
+                <label>E-POD API</label>
+            </value>
+            <value>
+                <fullName>Waybill Creation API</fullName>
+                <default>false</default>
+                <label>Waybill Creation API</label>
+            </value>
+            <value>
+                <fullName>Create Consignor/Consignee API</fullName>
+                <default>false</default>
+                <label>Create Consignor/Consignee API</label>
+            </value>
+            <value>
+                <fullName>One Scan Pickup</fullName>
+                <default>false</default>
+                <label>One Scan Pickup</label>
+            </value>
+            <value>
+                <fullName>A2A Pickup API</fullName>
+                <default>false</default>
+                <label>A2A Pickup API</label>
+            </value>
+            <value>
+                <fullName>POD Access</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>POD Access</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>API Integration Required</controllingFieldValue>
+            <valueName>LR/Waybill Creation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>API Integration Required</controllingFieldValue>
+            <valueName>Waybill Tracking API</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>API Integration Required</controllingFieldValue>
+            <valueName>Others</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>API Integration Required</controllingFieldValue>
+            <valueName>E-POD API</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>API Integration Required</controllingFieldValue>
+            <valueName>Waybill Creation API</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>API Integration Required</controllingFieldValue>
+            <valueName>Create Consignor/Consignee API</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>API Integration Required</controllingFieldValue>
+            <valueName>One Scan Pickup</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>API Integration Required</controllingFieldValue>
+            <valueName>A2A Pickup API</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Meeting Request</controllingFieldValue>
+            <valueName>With Tech Team</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Meeting Request</controllingFieldValue>
+            <valueName>With Tech Leadership</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

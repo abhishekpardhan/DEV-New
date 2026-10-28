@@ -1,0 +1,214 @@
+<template>
+    <div class=" slds-p-around_small slds-m-around_small dark-border-soft rounded">
+    <lightning-card >
+        <template if:true={recordId} >
+        <lightning-layout slot="title" vertical-align="center" >
+            <lightning-layout-item size="auto">
+                <lightning-icon
+                    icon-name="utility:upload"
+                    size="small"
+                    alternative-text="Upload">
+                </lightning-icon>
+            </lightning-layout-item>
+
+            <lightning-layout-item padding="horizontal-small">
+                <h2 class="slds-card__header-title slds-truncate">
+                    Waybill Excel Upload
+                </h2>
+                <lightning-formatted-text
+                    class="slds-text-body_small slds-text-color_weak"
+                    value="Prepare your file using the template, then upload to review and insert valid rows.">
+                </lightning-formatted-text>
+            </lightning-layout-item>
+        </lightning-layout>
+
+        <lightning-layout slot="actions" horizontal-align="end">
+            <lightning-layout-item>
+                <lightning-button
+                    icon-name="utility:copy"
+                    label="Copy Template"
+                    title="Copy tab-delimited template"
+                    onclick={handleCopyTemplate}>
+                </lightning-button>
+            </lightning-layout-item>
+
+            <lightning-layout-item padding="horizontal-small">
+                <lightning-button
+                    variant="brand"
+                    icon-name="utility:download"
+                    label="Download Template"
+                    title="Download Excel template"
+                    onclick={handleDownloadTemplate}>
+                </lightning-button>
+            </lightning-layout-item>
+
+            <lightning-layout-item>
+                <template if:true={allowedReasons}>
+                    <lightning-helptext
+                        content={dynamicHelptextContent}>
+                    </lightning-helptext>
+                </template>
+            </lightning-layout-item>
+        </lightning-layout>
+
+        <!-- INFO TEXT -->
+        <lightning-layout class="slds-p-horizontal_small slds-p-bottom_small">
+            <lightning-layout-item>
+                <template if:true={allowedReasons}>
+                    <lightning-formatted-text
+                        class="slds-text-body_small slds-text-color_weak"
+                        value={dynamicHelptextContent}>
+                    </lightning-formatted-text>
+                </template>
+            </lightning-layout-item>
+        </lightning-layout>
+
+        <!-- FILE UPLOAD -->
+        <lightning-layout class="slds-p-around_small">
+            <lightning-layout-item size="12">
+                <lightning-input
+                    label="Upload Excel"
+                    type="file"
+                    accept=".xls,.xlsx"
+                    message-when-bad-input="Please select a valid Excel file (.xls or .xlsx)."
+                    onchange={handleUpload}>
+                </lightning-input>
+
+                <lightning-formatted-text
+                    class="slds-text-body_small slds-text-color_weak slds-m-top_x-small"
+                    value="File must contain headers: Name (12 digits), Amount__c, Reason__c, Remarks__c.">
+                </lightning-formatted-text>
+            </lightning-layout-item>
+        </lightning-layout>
+        
+       
+        </template>
+    </lightning-card>
+     </div>
+
+    <!-- SPINNER -->
+    <template lwc:if={isLoading}>
+        <div class="spinner-overlay">
+            <lightning-spinner
+                alternative-text="Processing"
+                size="medium">
+            </lightning-spinner>
+        </div>
+    </template>
+
+    <!-- MODAL -->
+    <template lwc:if={showModal}>
+        <section
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="waybillModalTitle"
+            class="slds-modal slds-fade-in-open">
+
+            <div class="slds-modal__container custom-modal-width">
+                <!-- MODAL HEADER -->
+                <header class="slds-modal__header">
+                    <lightning-layout vertical-align="center" horizontal-align="spread">
+                        <lightning-layout-item>
+                            <span class="slds-text-title_caps slds-truncate">
+                                Case Name: {caseName}
+                            </span>
+                        </lightning-layout-item>
+
+                        <lightning-layout-item>
+                            <h2
+                                id="waybillModalTitle"
+                                class="slds-text-heading_medium">
+                                Waybill Upload Review
+                            </h2>
+                            <lightning-formatted-text
+                                class="slds-text-body_small slds-text-color_weak"
+                                value="Valid shows only fresh records. Duplicates show existing data.">
+                            </lightning-formatted-text>
+                        </lightning-layout-item>
+
+                        <lightning-layout-item></lightning-layout-item>
+                    </lightning-layout>
+                </header>
+
+                <!-- MODAL BODY -->
+                <div class="slds-modal__content slds-p-around_medium modal-content-scroll">
+
+                    <!-- VALID ROWS -->
+                    <template if:true={hasNonDuplicateData}>
+                        <lightning-card>
+                            <lightning-layout slot="title" vertical-align="center">
+                                <lightning-layout-item>
+                                    <lightning-icon
+                                        icon-name="utility:success"
+                                        size="x-small">
+                                    </lightning-icon>
+                                </lightning-layout-item>
+                                <lightning-layout-item padding="horizontal-small">
+                                    Valid Rows ({nonDuplicateData.length})
+                                </lightning-layout-item>
+                            </lightning-layout>
+
+                            <div style={datatableStyleNonDuplicate}>
+                                <lightning-datatable
+                                    key-field="rowId"
+                                    data={nonDuplicateData}
+                                    columns={modalColumns}
+                                    hide-checkbox-column>
+                                </lightning-datatable>
+                            </div>
+                        </lightning-card>
+                    </template>
+
+                    <!-- DUPLICATE ROWS -->
+                    <template if:true={hasDuplicateData}>
+                        <lightning-card class="slds-m-top_medium">
+                            <lightning-layout slot="title" vertical-align="center">
+                                <lightning-layout-item>
+                                    <lightning-icon
+                                        icon-name="utility:warning"
+                                        size="x-small">
+                                    </lightning-icon>
+                                </lightning-layout-item>
+                                <lightning-layout-item padding="horizontal-small">
+                                    Duplicate Rows ({filteredDuplicateData.length})
+                                </lightning-layout-item>
+                            </lightning-layout>
+
+                            <div style={datatableStyleDuplicate}>
+                                <lightning-datatable
+                                    key-field="rowId"
+                                    data={filteredDuplicateData}
+                                    columns={modalColumns}
+                                    hide-checkbox-column>
+                                </lightning-datatable>
+                            </div>
+                        </lightning-card>
+                    </template>
+                </div>
+
+                <!-- MODAL FOOTER -->
+                <footer class="slds-modal__footer">
+                    <lightning-layout horizontal-align="end">
+                        <lightning-layout-item padding="horizontal-small">
+                            <lightning-button
+                                variant="neutral"
+                                label="Cancel"
+                                onclick={handleCancel}>
+                            </lightning-button>
+                        </lightning-layout-item>
+
+                        <lightning-layout-item>
+                            <lightning-button
+                                variant="brand"
+                                label="Insert"
+                                disabled={noDataToInsert}
+                                onclick={handleInsert}>
+                            </lightning-button>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>

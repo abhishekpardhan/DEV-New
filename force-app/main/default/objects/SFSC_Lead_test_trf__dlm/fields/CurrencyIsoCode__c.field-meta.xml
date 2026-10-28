@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CurrencyIsoCode__c</fullName>
+    <label>Lead Currency</label>
+    <length>60</length>
+    <mktDataModelFieldAttributes>
+        <definitionCreationType>Transform</definitionCreationType>
+        <isDynamicLookup>false</isDynamicLookup>
+        <labelOverride>Lead Currency</labelOverride>
+        <masterLabel>Lead Currency</masterLabel>
+        <refAttrDeveloperName>CurrencyIsoCode_Transform</refAttrDeveloperName>
+        <usageTag>None</usageTag>
+    </mktDataModelFieldAttributes>
+    <required>false</required>
+    <type>Text</type>
+</CustomField>

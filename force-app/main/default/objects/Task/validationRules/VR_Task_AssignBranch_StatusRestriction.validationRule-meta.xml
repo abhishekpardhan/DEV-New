@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_Task_AssignBranch_StatusRestriction</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT(ISNEW()),
+ISCHANGED(Status),
+
+Account.RecordType.DeveloperName = &quot;Assign_Branch&quot;,
+
+BEGINS(Subject, &quot;Code Blocked&quot;),
+$Profile.Name &lt;&gt; &quot;Corporate Salesforce Team&quot;,
+$Profile.Name &lt;&gt; &quot;Read Only&quot;,
+    $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+
+$Profile.Name &lt;&gt; &quot;Integration User&quot;,
+
+NOT(
+AND(
+ISPICKVAL(PRIORVALUE(Status), &quot;Open&quot;),
+ISPICKVAL(Status, &quot;In Progress&quot;)
+)
+)
+)</errorConditionFormula>
+    <errorDisplayField>Status</errorDisplayField>
+    <errorMessage>You are not authorized to manually complete this task. Hold Tasks can only be completed automatically by the system.</errorMessage>
+</ValidationRule>

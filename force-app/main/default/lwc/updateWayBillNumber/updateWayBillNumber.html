@@ -1,0 +1,50 @@
+<!-- 
+    File Name          : wayBillSearch
+    Description        : This Component is is used to search waybill information and show in the page
+    Author             : Deepak 
+    Last Modified Date : 6/7/2021
+    Last Modified By   :
+    Modification Logs  
+    Ver           Date              Author                Modification
+    =====================================================================
+    1.0         6/7/2021         Deepak                Initial Version
+
+-->
+<!-- sldsValidatorIgnore -->
+<template>
+    <!-- Spinner Section -->
+    
+    <lightning-card title="Update Waybill Number" icon-name="custom:custom18">
+        <div if:true={isSpinnerShow}> 
+            <lightning-spinner alternative-text="Loading" variant="brand" size="small"></lightning-spinner>
+        </div>
+        <div id="card-body" class="slds-border_top slds-var-p-horizontal_xx-small">
+            <!-- Input and Search Section -->
+            <lightning-layout multiple-rows="true" vertical-align="end" horizontal-align="slds-grid_align-center">
+                 
+                <lightning-layout-item size="12" small-device-size="12" medium-device-size="8" large-device-size="12" padding="around-small">                     
+                    <div class="slds-form-element__control">
+                        <lightning-input type="text"  value={waybill} label="Enter Waybill Number"  max-length="15" onchange={handleWayBillNumberChange} ></lightning-input>
+                    </div>
+                </lightning-layout-item>
+                <template if:true={errorMassage} >
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" padding="around-small">
+                        <div class="slds-required" if:true={errorMassage}>{errorMassage}</div>
+                    </lightning-layout-item>
+                </template>
+                <lightning-layout-item size="12" small-device-size="12" medium-device-size="4" large-device-size="12" padding="around-small">
+                    <div class="slds-form-element__control">
+                        <lightning-button label="Update" disabled={isUpdateDisabled} variant="brand" onclick={handleUpdateWayBillNumber}></lightning-button>
+                    </div>
+                </lightning-layout-item>
+                
+                 
+            </lightning-layout>
+        </div> 
+    
+
+    
+
+</lightning-card>
+
+</template>

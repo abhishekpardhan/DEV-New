@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Branch_mandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(ISNEW(),ISCHANGED(Activity__c))&amp;&amp; Text(Activity__c) = &apos;Branch Visit&apos; &amp;&amp; ISBLANK(Branch__c)</errorConditionFormula>
+    <errorDisplayField>Branch__c</errorDisplayField>
+    <errorMessage>Please fill Branch.</errorMessage>
+</ValidationRule>

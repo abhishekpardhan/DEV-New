@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Opportunity</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Opportunities</value>
+    </caseValues>
+    <layouts>
+        <layout>Copy Opportunity Layout</layout>
+        <sections>
+            <label><!-- Address Information --></label>
+            <section>Address Information</section>
+        </sections>
+        <sections>
+            <label><!-- Competition Detail --></label>
+            <section>Competition Detail</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Potential Detail --></label>
+            <section>Potential Detail</section>
+        </sections>
+        <sections>
+            <label><!-- Spend on logistics in Last FY --></label>
+            <section>Spend on logistics in Last FY</section>
+        </sections>
+        <sections>
+            <label><!-- Supply Chain Map (No. of locations - All India) --></label>
+            <section>Supply Chain Map (No. of locations - All India)</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Opportunity Layout</layout>
+        <sections>
+            <label><!-- Address Information --></label>
+            <section>Address Information</section>
+        </sections>
+        <sections>
+            <label><!-- Competition Detail --></label>
+            <section>Competition Detail</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Potential Detail --></label>
+            <section>Potential Detail</section>
+        </sections>
+        <sections>
+            <label><!-- Spend on logistics in Last FY --></label>
+            <section>Spend on logistics in Last FY</section>
+        </sections>
+        <sections>
+            <label><!-- Supply Chain Map (No. of locations - All India) --></label>
+            <section>Supply Chain Map (No. of locations - All India)</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Add Opportunity Team --></label>
+        <name>Add_Opportunity_Team</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please enter any of the one Monthly Potential(Air,Surface,3PL). --></errorMessage>
+        <name>Any_Potential_mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You are not authorized to create anywhere to anywhere business type opportunity. --></errorMessage>
+        <name>BuisnessTypeRule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- lease enter only character values. --></errorMessage>
+        <name>Contact_Person_Name_should_be_character</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Contract is not tagged to make it Closed/Won --></errorMessage>
+        <name>Contract_is_not_tagged</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Empty this field For the current Status. --></errorMessage>
+        <name>Deferred_Till_Remove</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter the Deferred Till date. --></errorMessage>
+        <name>Deferred_till_mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Fill Existing Customer Details --></errorMessage>
+        <name>Existing_Customer_Details_Mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter correct GST Number. --></errorMessage>
+        <name>GST_Number_Format_Check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter GST Number. --></errorMessage>
+        <name>GST_Number_mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You are not allowed to change the GST number after new stage. --></errorMessage>
+        <name>GST_Update_Rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You are not allowed to update GST number --></errorMessage>
+        <name>GST_can_not_change</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Fill the field --></errorMessage>
+        <name>If_Other_Please_Specify_mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You are not authorized to create Retail Customer Type opportunity. --></errorMessage>
+        <name>Lock_Retail_Opportunity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Lost Reason is mandatory. --></errorMessage>
+        <name>Lost_Reason_to_be_mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Customer Type cannot be Changed. --></errorMessage>
+        <name>Opportunity_Cannot_be_changed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This Opportunity is locked as it has been marked Closed Won. Please contact the Corporate Business Admin for changes. --></errorMessage>
+        <name>Opportunity_Closed_Won</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Opportunity Name is not editable! --></errorMessage>
+        <name>Opportunity_Name_No_Editable</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You don&apos;t have permission to change the Owner. --></errorMessage>
+        <name>Opportunity_Owner_Read_Only</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You Can&apos;t Change the Status after Closed Won. --></errorMessage>
+        <name>Opportunity_is_closed_won</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter correct PAN number --></errorMessage>
+        <name>PAN_No_Format_Check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Fill PAN No. --></errorMessage>
+        <name>PAN_No_Mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select present or future date. --></errorMessage>
+        <name>Past_Date_not_allowed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Opportunity can only be marked as &apos;Closed Lost&apos; if the associated Quote is in &apos;Deferred&apos; or &apos;Rejected.&apos; Please update the Quote status before proceeding. --></errorMessage>
+        <name>Rule_to_mark_Closed_Lost</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Opportunity can only be marked as &apos;Closed Won&apos; if the associated Quote is in &apos;Sent to Customer.&apos; Please update the Quote status before proceeding. --></errorMessage>
+        <name>Rule_to_mark_Closed_Won</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Opportunity cannot be marked as &apos;Closed Won&apos; or &apos;Closed Lost&apos; while the Quote is in &apos;Active,&apos; &apos;Pending with Quotation Team,&apos; &apos;Pending for Review,&apos; or &apos;Resent to Central Quotation Team. --></errorMessage>
+        <name>Rule_to_mark_Closed_Won_And_Closed_Lost</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Fill SFX Account. --></errorMessage>
+        <name>SFX_Code_Mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Pickup Pin Code Should be 6 Digits. --></errorMessage>
+        <name>Shipping_Pincode_Should_be_6_Digits</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter correct TAN Number. --></errorMessage>
+        <name>TAN_Number_Format_Check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Fill TAN No. --></errorMessage>
+        <name>TAN_no_Mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot update MSA for Renewal Opportunity. --></errorMessage>
+        <name>Update_Account_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Opportunity Type and Business Type can only be modified by authorized corporate teams when the Opportunity Status is Active. --></errorMessage>
+        <name>VR_Opportunity_Lock_Type_Business</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- &quot;Quote To Be Sent must be checked for adding a quote.&quot; --></errorMessage>
+        <name>VR_Opportunity_Validate_Quote</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Billing Pin Code Should be 6 Digits --></errorMessage>
+        <name>Zip_Code_should_be_10_Digits</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Opportunity cannot be created for Propel type account --></errorMessage>
+        <name>opp_cannot_be_created_on_propel_acct</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,2239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Booking_Request</fullName>
+    <active>true</active>
+    <businessProcess>RequestProcess</businessProcess>
+    <compactLayoutAssignment>Safex_Compact</compactLayoutAssignment>
+    <label>Booking Request</label>
+    <picklistValues>
+        <picklist>Area__c</picklist>
+        <values>
+            <fullName>A1</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Booking_Status__c</picklist>
+        <values>
+            <fullName>2629</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2630</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2632</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2633</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2638</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Box_Drop_Time__c</picklist>
+        <values>
+            <fullName>02%3A00 PM - 04%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>04%3A00 PM - 06%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>06%3A00 PM - 08 %3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>08%3A00 AM - 10%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10%3A00 AM - 12%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12%3A00 PM - 02%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Business_Type__c</picklist>
+        <values>
+            <fullName>Credit-Outbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RETAIL-NON PRC</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cancel_Reason__c</picklist>
+        <values>
+            <fullName>CANCELLED - MATERIAL REFUSED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CONSIGNOR IS NOT AWARE%2F NO PICKUP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CONTACT NUMBER NOT VALID%2FSWITCHED OFF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DUPLICATE TOKEN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NO RESPONSE ON CALL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NO RESPONSE ON CALL FOR  3 DAYS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SERVICE NOT REQUIRED NOW %2F CANCELLED BY CUSTOMER</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Case_Nature__c</picklist>
+        <values>
+            <fullName>Complaint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Case_Type__c</picklist>
+        <values>
+            <fullName>Booking Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Change Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>POD</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Change_Requester__c</picklist>
+        <values>
+            <fullName>Consignee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consignor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Consignee_Country__c</picklist>
+        <values>
+            <fullName>IN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INDIA</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Consignee_State__c</picklist>
+        <values>
+            <fullName>ANDAMAN AND NICOBAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Andaman %26 Nicobar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Andhra Pradesh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arunachal Pradesh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bihar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chandigarh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chhattisgarh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DAMAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DAMAN AND DIU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dadra And Nagar Haveli</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Daman %26 Diu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delhi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Goa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gujarat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Haryana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Himachal Pradesh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JAMMU AND KASHMIR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jammu %26 Kashmir</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jharkhand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Karnataka</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kerala</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LADAKH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LAKSHADWEEP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Madhya Pradesh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maharashtra</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manipur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meghalaya</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mizoram</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mumbai</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nagaland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orissa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PONDICHERY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Puducherry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Punjab</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rajasthan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sikkim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tamil Nadu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telangana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tripura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uttar Pradesh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uttarakhand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West Bengal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Consignor_Country__c</picklist>
+        <values>
+            <fullName>IN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INDIA</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Consignor_State__c</picklist>
+        <values>
+            <fullName>ANDAMAN AND NICOBAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Andaman %26 Nicobar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Andhra Pradesh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arunachal Pradesh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bihar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chandigarh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chhattisgarh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DAMAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DAMAN AND DIU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dadra And Nagar Haveli</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Daman %26 Diu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delhi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Goa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gujarat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Haryana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Himachal Pradesh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JAMMU AND KASHMIR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jammu %26 Kashmir</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jharkhand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Karnataka</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kerala</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LADAKH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LAKSHADWEEP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Madhya Pradesh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maharashtra</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manipur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meghalaya</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mizoram</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mumbai</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nagaland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orissa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PONDICHERY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Puducherry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Punjab</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rajasthan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sikkim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tamil Nadu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telangana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tripura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uttar Pradesh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uttarakhand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West Bengal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Customer_Type__c</picklist>
+        <values>
+            <fullName>3PL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CREDIT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CREDIT%2BRETAIL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FTL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PRC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRANSPORTATION%2B3PL</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Delay_Reason__c</picklist>
+        <values>
+            <fullName>R1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>R2</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Destination_Country__c</picklist>
+        <values>
+            <fullName>IN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INDIA</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Destination_State__c</picklist>
+        <values>
+            <fullName>ANDAMAN AND NICOBAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Andaman %26 Nicobar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Andhra Pradesh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arunachal Pradesh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bihar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chandigarh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chhattisgarh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DAMAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DAMAN AND DIU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dadra And Nagar Haveli</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Daman %26 Diu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delhi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Goa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gujarat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Haryana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Himachal Pradesh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JAMMU AND KASHMIR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jammu %26 Kashmir</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jharkhand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Karnataka</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kerala</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LADAKH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LAKSHADWEEP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Madhya Pradesh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maharashtra</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manipur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meghalaya</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mizoram</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mumbai</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nagaland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orissa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PONDICHERY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Puducherry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Punjab</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rajasthan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sikkim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tamil Nadu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telangana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tripura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uttar Pradesh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uttarakhand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West Bengal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Gateway__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Impact__c</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Issue_Type__c</picklist>
+        <values>
+            <fullName>AddressChange</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DODCancellation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rebooking</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Main_Category__c</picklist>
+        <values>
+            <fullName>CustomerEscalation</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mode_Of_Payment__c</picklist>
+        <values>
+            <fullName>Credit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>To Pay</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>OTRS_Request_Status__c</picklist>
+        <values>
+            <fullName>Close Successful</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>ChatBot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Digispace</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email %28info%29</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Email %28pickup%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IConnect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner Portal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salesforce</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Toll Free</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WEB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WhatsApp</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin_Country__c</picklist>
+        <values>
+            <fullName>IN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INDIA</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin_State__c</picklist>
+        <values>
+            <fullName>ANDAMAN AND NICOBAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Andaman %26 Nicobar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Andhra Pradesh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arunachal Pradesh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bihar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chandigarh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chhattisgarh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DAMAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DAMAN AND DIU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dadra And Nagar Haveli</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Daman %26 Diu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delhi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Goa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gujarat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Haryana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Himachal Pradesh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JAMMU AND KASHMIR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jammu %26 Kashmir</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jharkhand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Karnataka</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kerala</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LADAKH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LAKSHADWEEP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Madhya Pradesh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maharashtra</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manipur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meghalaya</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mizoram</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mumbai</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nagaland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orissa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PONDICHERY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Puducherry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Punjab</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rajasthan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sikkim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tamil Nadu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telangana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tripura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uttar Pradesh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uttarakhand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West Bengal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PickUp_Time__c</picklist>
+        <values>
+            <fullName>02%3A00 PM - 04%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>04%3A00 PM - 06%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>06%3A00 PM - 08 %3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>08%3A00 AM - 10%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10%3A00 AM - 12%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12%3A00 PM - 02%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Preferred_CallBack_Time__c</picklist>
+        <values>
+            <fullName>02%3A00 PM - 04%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>04%3A00 PM - 06%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>06%3A00 PM - 08 %3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>08%3A00 AM - 10%3A00 AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10%3A00 AM - 12%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12%3A00 PM - 02%3A00 PM</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product_Type__c</picklist>
+        <values>
+            <fullName>A%2FC PARTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ACCESSORIES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AGARBATTI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AGATE STONE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AGRO PRODUCTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AJWAIN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ALMOND</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AMAZON FC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANCHOR AND DRILL BIT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANCHOR AND TOOLS 119</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APM HOUSEHOLD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ARMS AND AMMUNITION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ARTIFICIAL JEWELLERY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AUTO PARTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AXLE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AYURVEDIC MEDICINE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AYURVEDIC PRODUCT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BADI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAMBOO STICK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BANDAGE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BANGLES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BARREL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BATTERY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BEAN BAG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BEARING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BEARING PARTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BEDSHEET</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BELLS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BIDI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BIKEXPRESS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BLACK PEPPER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BLANKETS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BOOKS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASS PRODUCTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRASSWARE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRUSH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BULK DRUGS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BULK DRY FRUITS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CABLE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CABLE DRUM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CAMPUS2HOME BOOKING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CARDAMOM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CARPET</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CARRY BAGS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CASHEW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CASTINGS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CATING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHAPPALS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHIESEL%2CANCHOR AND TOOLS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHIKAN CLOTHINGS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHIKANKARI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHILLED ROLL METAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CIGARETTES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CLOTH BALE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COCOON</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COCOONS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COFFEE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COILS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COIR PRODUCT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COLOUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COMPUTER GOODS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COPPER WIRE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COSMETICS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COTTON THREAD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COUPLING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CRANKSHAFTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CRUCIBLE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CUTTING BLADE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CYCLE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CYCLE PARTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Condoms and Contraceptives%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DISPLAY ITEM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DRUM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DRY FRUITS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EASY2MOVE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ELECTRICAL EQUIPMENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ELECTRICALS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ELECTRONIC EQUIPMENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FABRIC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FAST MOVING CONSUMER GOODS FMCG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FASTNERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FISH NET</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOOTWEAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FORGINGS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FURNITURE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GAS STOVE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GENERAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GENSET PARTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GHUNGROO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GIFT ITEM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GREAR BOX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GREASE AND OIL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GUN PARTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HANDICRAFT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HANDLOOM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HANDLOOM FABRIC PRODUCTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HANDMADE PAPER AND PAPER PRODUCTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HEAVY MACHINERY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HELMET</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HERBS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOSIERY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOUSEHOLD GOODS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IMITATION JEWELLERY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IMPORTED HOUSEHOLD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INSULATOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ISABGOL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JASDAN HANDICRAFT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JEERA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JUTE PRODUCTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JUTI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KATTHA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KHADI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KITCHENWARE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KOPRA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LAC BANGLES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LADIES SUIT CLOTH UNSTICHED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LAMINATES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LARGE CARDAMOM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LEATHER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LEATHER PRODUCT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LIQUID CHEMICAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LIQUOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LOCKS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LUBRICANTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MACHINERY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MACHINERY PARTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MAKHANA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MEDICAL EQUIPMENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>METAL HARDWARE PRODUCTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MINERALS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MINRAL BOARD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MOSQUITO NET</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MOTOR PARTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MOULDS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MUSICAL INSTRUMENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NUTBOLT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OLD CLOTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PACKED FOOD PRODUCT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PACKED FOODS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PACKING MATERIAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PACKING STRIPES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAINT BRUSH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAPAD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PESTICIDES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PHARMACEUTICALS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PHOTO COPIER MACHINE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PICKLE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PISTON</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PLASTIC BAGS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PLASTIC ITEM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PLY BOARD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>POLY FILM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>POLY ROLLER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PRECIOUS GEMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PRECIOUS METAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PRECISION EQUIPMENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PRINTED MATERIAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PRINTED STATIONARY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PROMOTIONAL ITEM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUMP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RAISIN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RAKHI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RAKHI PROJEC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RAW SILK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>READY MADE GARMENT RMG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REPAIR TOOLS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RETAIL PROJECTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RICE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RIM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RMG %26 ACCESSORIES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RUBBER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RUBBER PRODUCTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAFE RETURN FURNITURE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAFE RETURN MAKHANA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAFE RETURN RMG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAFEHOME</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAFERELOCATION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAFEXPRESS FAMILY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAINIK EXPRESS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SANITARY PADS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAREE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAUNF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SCIENTIFIC EQUIPMENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SCREW AND WASHER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEALENT AND TOOLS 00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEALENT%2CANCHOR%2CTOOLS 01</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEEDS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SHAWL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SHEETS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SHIRTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SHWALS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SILK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SILK YARN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SOAP STONE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SODI BLANKET</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SPARE PARTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SPICES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SPORTS GOODS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STAMPING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STATIONERY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SUIT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SUPARI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SURGICAL COTTON</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SWEETS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Safe Returns</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TABLET</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TAX FREE BOOKS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TEA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TELECOMMUNICATION EQUIPMENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TERACOTA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TEXTILE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>THOMAS MACHINE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TIMBER PRODUCTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TISSUE PAPER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TOBACO PRODUCTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TOILETRIES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TOOLS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TOWEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UTENSILS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VALVE %26 FASTENER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WALL CLOCK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WALNUT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WEIGHING SCALE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WOOD PRODUCTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WOOLEN GARMENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WOOLEN GOODS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZIP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>Complex functionality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Instructions not clear</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User didn%27t attend training</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Region__c</picklist>
+        <values>
+            <fullName>E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>W</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Request_Type__c</picklist>
+        <values>
+            <fullName>Enquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Feedback</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grievances</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Response_Mode__c</picklist>
+        <values>
+            <fullName>Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SMS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Service_Region__c</picklist>
+        <values>
+            <fullName>Corporate Office</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Service__c</picklist>
+        <values>
+            <fullName>Counter to Door</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Counter to Hub</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Door to Door</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Door to Hub</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_Category__c</picklist>
+        <values>
+            <fullName>DeliveryProcessRequest</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_Type__c</picklist>
+        <values>
+            <fullName>Bike Express</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit- Inbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit- Outbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail- C2H</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail- E2M</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail- PRC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail- Sanik Express</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail-Non-PRC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reverse Inbound- Credit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reverse Inbound- Retail-Non-PRC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reverse Inbound- Retail-PRC</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Transport_Mode_Clone__c</picklist>
+        <values>
+            <fullName>Air</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surface</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Transport_Mode__c</picklist>
+        <values>
+            <fullName>Air</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surface</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Booking Request</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>WayBill_Status__c</picklist>
+        <values>
+            <fullName>Not Delivered</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waybill Delivered</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

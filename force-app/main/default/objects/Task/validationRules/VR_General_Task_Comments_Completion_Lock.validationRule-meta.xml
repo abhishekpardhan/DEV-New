@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_General_Task_Comments_Completion_Lock</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  /* Fire only on existing records */
+  NOT(ISNEW()),
+
+  /* Scope to General Task record type only */
+  RecordType.DeveloperName = &quot;General&quot;,
+
+  /* Fire only when Comments (Description) changes */
+  ISCHANGED(Description),
+
+  /* Block everyone after completion */
+  OR(
+    ISPICKVAL(Status, &quot;Completed&quot;),
+    ISPICKVAL(PRIORVALUE(Status), &quot;Completed&quot;)
+  )
+)</errorConditionFormula>
+    <errorDisplayField>Description</errorDisplayField>
+    <errorMessage>Comments cannot be edited once the task is Completed.</errorMessage>
+</ValidationRule>

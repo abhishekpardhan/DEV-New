@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DigitalExperienceConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>ESW_Demo_Agent_Chat_Sahay_1791368944126</label>
+    <site>
+        <urlPathPrefix>ESWDemoAgentChatSahay1791368944126</urlPathPrefix>
+    </site>
+    <space>site/ESW_Demo_Agent_Chat_Sahay_17913689441261</space>
+</DigitalExperienceConfig>

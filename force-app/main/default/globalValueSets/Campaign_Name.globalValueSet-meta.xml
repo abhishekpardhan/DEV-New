@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>6TH FOOD &amp; GROCERY FORUM INDIA</fullName>
+        <default>false</default>
+        <label>6TH FOOD &amp; GROCERY FORUM INDIA</label>
+    </customValue>
+    <customValue>
+        <fullName>8TH NORTH EAST BUSINESS SUMMIT</fullName>
+        <default>false</default>
+        <label>8TH NORTH EAST BUSINESS SUMMIT</label>
+    </customValue>
+    <customValue>
+        <fullName>ASIA MANUFACTURING &amp; SUPPLY CHAIN SUMMIT 2014</fullName>
+        <default>false</default>
+        <label>ASIA MANUFACTURING &amp; SUPPLY CHAIN SUMMIT 2014</label>
+    </customValue>
+    <customValue>
+        <fullName>ASIA MANUFACTURING SUMMIT 2013</fullName>
+        <default>false</default>
+        <label>ASIA MANUFACTURING SUMMIT 2013</label>
+    </customValue>
+    <customValue>
+        <fullName>ASIA MANUFACTURING SUPPLY CHAIN SUMMIT 2016</fullName>
+        <default>false</default>
+        <label>ASIA MANUFACTURING SUPPLY CHAIN SUMMIT 2016</label>
+    </customValue>
+    <customValue>
+        <fullName>ASIA RETAIL CONGRESS</fullName>
+        <default>false</default>
+        <label>ASIA RETAIL CONGRESS</label>
+    </customValue>
+    <customValue>
+        <fullName>ASIA RETAIL CONGRESS-2014</fullName>
+        <default>false</default>
+        <label>ASIA RETAIL CONGRESS-2014</label>
+    </customValue>
+    <customValue>
+        <fullName>AUTO COMPONENT SHOW-2014</fullName>
+        <default>false</default>
+        <label>AUTO COMPONENT SHOW-2014</label>
+    </customValue>
+    <customValue>
+        <fullName>AUTO EXPO-2014</fullName>
+        <default>false</default>
+        <label>AUTO EXPO-2014</label>
+    </customValue>
+    <customValue>
+        <fullName>AUTO SCM CHENNAI</fullName>
+        <default>false</default>
+        <label>AUTO SCM CHENNAI</label>
+    </customValue>
+    <customValue>
+        <fullName>AUTO SCM PUNE-2014</fullName>
+        <default>false</default>
+        <label>AUTO SCM PUNE-2014</label>
+    </customValue>
+    <customValue>
+        <fullName>BOOK FAIR</fullName>
+        <default>false</default>
+        <label>BOOK FAIR</label>
+    </customValue>
+    <customValue>
+        <fullName>BOOKS &amp; PERIODICALS (PART II) 2016</fullName>
+        <default>false</default>
+        <label>BOOKS &amp; PERIODICALS (PART II) 2016</label>
+    </customValue>
+    <customValue>
+        <fullName>Books &amp; Periodicals NCR</fullName>
+        <default>false</default>
+        <label>Books &amp; Periodicals NCR</label>
+    </customValue>
+    <customValue>
+        <fullName>BWC-2013</fullName>
+        <default>false</default>
+        <label>BWC-2013</label>
+    </customValue>
+    <customValue>
+        <fullName>CII BUILDING WAREHOUSING COMPETITIVENESS-2015</fullName>
+        <default>false</default>
+        <label>CII BUILDING WAREHOUSING COMPETITIVENESS-2015</label>
+    </customValue>
+    <customValue>
+        <fullName>CII CARGO SUMMIT-2014</fullName>
+        <default>false</default>
+        <label>CII CARGO SUMMIT-2014</label>
+    </customValue>
+    <customValue>
+        <fullName>CII CONSUMER FAIR-2014</fullName>
+        <default>false</default>
+        <label>CII CONSUMER FAIR-2014</label>
+    </customValue>
+    <customValue>
+        <fullName>CII INDUSTRAIL EXPO HARIDWAR</fullName>
+        <default>false</default>
+        <label>CII INDUSTRAIL EXPO HARIDWAR</label>
+    </customValue>
+    <customValue>
+        <fullName>CII INDUSTRIAL EXPO HARIDWAR 2013</fullName>
+        <default>false</default>
+        <label>CII INDUSTRIAL EXPO HARIDWAR 2013</label>
+    </customValue>
+    <customValue>
+        <fullName>CII LOGISTICS 2013</fullName>
+        <default>false</default>
+        <label>CII LOGISTICS 2013</label>
+    </customValue>
+    <customValue>
+        <fullName>CII-NEXT GENERATION SUPPLY CHAIN-2014</fullName>
+        <default>false</default>
+        <label>CII-NEXT GENERATION SUPPLY CHAIN-2014</label>
+    </customValue>
+    <customValue>
+        <fullName>CII ROLE OF TECHNOLOGY &amp; LOGISTICS IN SCM</fullName>
+        <default>false</default>
+        <label>CII ROLE OF TECHNOLOGY &amp; LOGISTICS IN SCM</label>
+    </customValue>
+    <customValue>
+        <fullName>CII ROLE OF TECHNOLOGY IN LOGISTICS AND SUPPLY CHAIN SUMMIT</fullName>
+        <default>false</default>
+        <label>CII ROLE OF TECHNOLOGY IN LOGISTICS AND SUPPLY CHAIN SUMMIT</label>
+    </customValue>
+    <customValue>
+        <fullName>CII SUPPLY CHAIN 2020</fullName>
+        <default>false</default>
+        <label>CII SUPPLY CHAIN 2020</label>
+    </customValue>
+    <customValue>
+        <fullName>CSCMP-2014</fullName>
+        <default>false</default>
+        <label>CSCMP-2014</label>
+    </customValue>
+    <customValue>
+        <fullName>CSR LIVEWEEK-2013</fullName>
+        <default>false</default>
+        <label>CSR LIVEWEEK-2013</label>
+    </customValue>
+    <customValue>
+        <fullName>DELHI BOOK FAIR 2012</fullName>
+        <default>false</default>
+        <label>DELHI BOOK FAIR 2012</label>
+    </customValue>
+    <customValue>
+        <fullName>eDM</fullName>
+        <default>false</default>
+        <label>eDM</label>
+    </customValue>
+    <customValue>
+        <fullName>ELECRAMA-1-2014</fullName>
+        <default>false</default>
+        <label>ELECRAMA-1-2014</label>
+    </customValue>
+    <customValue>
+        <fullName>ELECRAMA-2-2014</fullName>
+        <default>false</default>
+        <label>ELECRAMA-2-2014</label>
+    </customValue>
+    <customValue>
+        <fullName>ELSC MUMBAI 2013</fullName>
+        <default>false</default>
+        <label>ELSC MUMBAI 2013</label>
+    </customValue>
+    <customValue>
+        <fullName>ENGG. EXPO-LUDHIANA-2013</fullName>
+        <default>false</default>
+        <label>ENGG. EXPO-LUDHIANA-2013</label>
+    </customValue>
+    <customValue>
+        <fullName>E-TAILING INDIA SUMMIT-2013</fullName>
+        <default>false</default>
+        <label>E-TAILING INDIA SUMMIT-2013</label>
+    </customValue>
+    <customValue>
+        <fullName>Fastener Fair 2017</fullName>
+        <default>false</default>
+        <label>Fastener Fair 2017</label>
+    </customValue>
+    <customValue>
+        <fullName>FOOD &amp; GROCERY FORUM-2014</fullName>
+        <default>false</default>
+        <label>FOOD &amp; GROCERY FORUM-2014</label>
+    </customValue>
+    <customValue>
+        <fullName>FOOD FORUM 2012</fullName>
+        <default>false</default>
+        <label>FOOD FORUM 2012</label>
+    </customValue>
+    <customValue>
+        <fullName>Food Forum 2018</fullName>
+        <default>false</default>
+        <label>Food Forum 2018</label>
+    </customValue>
+    <customValue>
+        <fullName>FRANCHISE INDIA 2012</fullName>
+        <default>false</default>
+        <label>FRANCHISE INDIA 2012</label>
+    </customValue>
+    <customValue>
+        <fullName>FRANCHISE INDIA 2014</fullName>
+        <default>false</default>
+        <label>FRANCHISE INDIA 2014</label>
+    </customValue>
+    <customValue>
+        <fullName>GARMENT FAIR 2012</fullName>
+        <default>false</default>
+        <label>GARMENT FAIR 2012</label>
+    </customValue>
+    <customValue>
+        <fullName>GREEN EVENT</fullName>
+        <default>false</default>
+        <label>GREEN EVENT</label>
+    </customValue>
+    <customValue>
+        <fullName>IMTEX 2013</fullName>
+        <default>false</default>
+        <label>IMTEX 2013</label>
+    </customValue>
+    <customValue>
+        <fullName>IMTOS, DELHI</fullName>
+        <default>false</default>
+        <label>IMTOS, DELHI</label>
+    </customValue>
+    <customValue>
+        <fullName>INDIA BRAND CONGRESS 2012</fullName>
+        <default>false</default>
+        <label>INDIA BRAND CONGRESS 2012</label>
+    </customValue>
+    <customValue>
+        <fullName>INDIA FASHION FORUM 2013</fullName>
+        <default>false</default>
+        <label>INDIA FASHION FORUM 2013</label>
+    </customValue>
+    <customValue>
+        <fullName>INDIA FASHION FORUM-2014</fullName>
+        <default>false</default>
+        <label>INDIA FASHION FORUM-2014</label>
+    </customValue>
+    <customValue>
+        <fullName>INDIA HEALTH SUMMIT 2012</fullName>
+        <default>false</default>
+        <label>INDIA HEALTH SUMMIT 2012</label>
+    </customValue>
+    <customValue>
+        <fullName>India Integrated transport &amp; logistics Summit 2017</fullName>
+        <default>false</default>
+        <label>India Integrated transport &amp; logistics Summit 2017</label>
+    </customValue>
+    <customValue>
+        <fullName>INDIA LOGISTICS &amp; WAREHOUSING SHOW 2013</fullName>
+        <default>false</default>
+        <label>INDIA LOGISTICS &amp; WAREHOUSING SHOW 2013</label>
+    </customValue>
+    <customValue>
+        <fullName>INDIA LOGISTICS EXPO-2016</fullName>
+        <default>false</default>
+        <label>INDIA LOGISTICS EXPO-2016</label>
+    </customValue>
+    <customValue>
+        <fullName>INDIAN RETAIL CONGRESS-2014</fullName>
+        <default>false</default>
+        <label>INDIAN RETAIL CONGRESS-2014</label>
+    </customValue>
+    <customValue>
+        <fullName>INDIAN RETAIL FORUM-2013</fullName>
+        <default>false</default>
+        <label>INDIAN RETAIL FORUM-2013</label>
+    </customValue>
+    <customValue>
+        <fullName>INDIAN SUPPLY CHAIN &amp; EXCELLENCE AWARDS 2013</fullName>
+        <default>false</default>
+        <label>INDIAN SUPPLY CHAIN &amp; EXCELLENCE AWARDS 2013</label>
+    </customValue>
+    <customValue>
+        <fullName>INDIAN SUPPLY CHAIN &amp; LOGISTICS SUMMIT 2014</fullName>
+        <default>false</default>
+        <label>INDIAN SUPPLY CHAIN &amp; LOGISTICS SUMMIT 2014</label>
+    </customValue>
+    <customValue>
+        <fullName>INDIA RETAIL FORUM 2012</fullName>
+        <default>false</default>
+        <label>INDIA RETAIL FORUM 2012</label>
+    </customValue>
+    <customValue>
+        <fullName>INDIA STRATEGY FORUM 2012</fullName>
+        <default>false</default>
+        <label>INDIA STRATEGY FORUM 2012</label>
+    </customValue>
+    <customValue>
+        <fullName>INDIA WAREHOUSING &amp; LOGISTICS SHOW, 2012</fullName>
+        <default>false</default>
+        <label>INDIA WAREHOUSING &amp; LOGISTICS SHOW, 2012</label>
+    </customValue>
+    <customValue>
+        <fullName>INDUSTRIAL EXPO-JAIPUR-2014</fullName>
+        <default>false</default>
+        <label>INDUSTRIAL EXPO-JAIPUR-2014</label>
+    </customValue>
+    <customValue>
+        <fullName>INDUSTRIAL EXPO JAMSHEDPUR</fullName>
+        <default>false</default>
+        <label>INDUSTRIAL EXPO JAMSHEDPUR</label>
+    </customValue>
+    <customValue>
+        <fullName>INDUSTRIAL EXPO LUDHIANA</fullName>
+        <default>false</default>
+        <label>INDUSTRIAL EXPO LUDHIANA</label>
+    </customValue>
+    <customValue>
+        <fullName>INTEX 2013</fullName>
+        <default>false</default>
+        <label>INTEX 2013</label>
+    </customValue>
+    <customValue>
+        <fullName>J&amp;K EMPORIUM</fullName>
+        <default>false</default>
+        <label>J&amp;K EMPORIUM</label>
+    </customValue>
+    <customValue>
+        <fullName>JAMSHEDPUR INDUSTRIAL EXPO 2013</fullName>
+        <default>false</default>
+        <label>JAMSHEDPUR INDUSTRIAL EXPO 2013</label>
+    </customValue>
+    <customValue>
+        <fullName>KHADI , SILK FAIR</fullName>
+        <default>false</default>
+        <label>KHADI , SILK FAIR</label>
+    </customValue>
+    <customValue>
+        <fullName>LEATHER FAIR 2013</fullName>
+        <default>false</default>
+        <label>LEATHER FAIR 2013</label>
+    </customValue>
+    <customValue>
+        <fullName>MUST WIN</fullName>
+        <default>false</default>
+        <label>MUST WIN</label>
+    </customValue>
+    <customValue>
+        <fullName>NORTH EAST BUSINESS SUMMIT-2013</fullName>
+        <default>false</default>
+        <label>NORTH EAST BUSINESS SUMMIT-2013</label>
+    </customValue>
+    <customValue>
+        <fullName>NORTH EAST WAREHOUSING CONCLAVE-2013</fullName>
+        <default>false</default>
+        <label>NORTH EAST WAREHOUSING CONCLAVE-2013</label>
+    </customValue>
+    <customValue>
+        <fullName>RETAIL &amp; COVENIENCE EXPO</fullName>
+        <default>false</default>
+        <label>RETAIL &amp; COVENIENCE EXPO</label>
+    </customValue>
+    <customValue>
+        <fullName>SERVJAN HATHKARGA HASTSHILP KALYAN SAMITI ROORKEE</fullName>
+        <default>false</default>
+        <label>SERVJAN HATHKARGA HASTSHILP KALYAN SAMITI ROORKEE</label>
+    </customValue>
+    <customValue>
+        <fullName>SIAM</fullName>
+        <default>false</default>
+        <label>SIAM</label>
+    </customValue>
+    <customValue>
+        <fullName>TOOLS + HARDWARE INDIA</fullName>
+        <default>false</default>
+        <label>TOOLS + HARDWARE INDIA</label>
+    </customValue>
+    <customValue>
+        <fullName>TOY BIZ 2013</fullName>
+        <default>false</default>
+        <label>TOY BIZ 2013</label>
+    </customValue>
+    <customValue>
+        <fullName>TOY BIZ INTERNATIONAL</fullName>
+        <default>false</default>
+        <label>TOY BIZ INTERNATIONAL</label>
+    </customValue>
+    <customValue>
+        <fullName>TOY FAIR 2012</fullName>
+        <default>false</default>
+        <label>TOY FAIR 2012</label>
+    </customValue>
+    <customValue>
+        <fullName>WORLD BOOK FAIR 2013</fullName>
+        <default>false</default>
+        <label>WORLD BOOK FAIR 2013</label>
+    </customValue>
+    <customValue>
+        <fullName>WORLD BOOK FAIR-2014</fullName>
+        <default>false</default>
+        <label>WORLD BOOK FAIR-2014</label>
+    </customValue>
+    <customValue>
+        <fullName>Zero Billing</fullName>
+        <default>false</default>
+        <label>Zero Billing</label>
+    </customValue>
+    <customValue>
+        <fullName>OTHERS</fullName>
+        <default>false</default>
+        <label>OTHERS</label>
+    </customValue>
+    <masterLabel>Campaign Name</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

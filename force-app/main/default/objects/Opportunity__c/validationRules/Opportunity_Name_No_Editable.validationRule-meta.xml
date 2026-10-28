@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Name_No_Editable</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISCHANGED(Name), NOT(OR($Profile.Name == &apos;System Administrator&apos; ,$Profile.Name == &apos;Integration User&apos;,
+ $Profile.Name == &apos;Platform Integration User&apos; ,
+$Profile.Name == &apos;Central Corporate Team&apos;,
+$Profile.Name == &apos;Corporate salesforce team&apos;,
+$Profile.Name == &apos;Read Only&apos;,
+$Profile.Name == &apos;Central Quotation Team(Retail)&apos;)))</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>Opportunity Name is not editable!</errorMessage>
+</ValidationRule>

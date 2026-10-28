@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Type__c</fullName>
+    <label>Case Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Case_Nature__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Booking Request</fullName>
+                <default>false</default>
+                <label>Booking Request</label>
+            </value>
+            <value>
+                <fullName>POD</fullName>
+                <default>false</default>
+                <label>POD</label>
+            </value>
+            <value>
+                <fullName>Change Request</fullName>
+                <default>false</default>
+                <label>Change Request</label>
+            </value>
+            <value>
+                <fullName>Service Issue</fullName>
+                <default>false</default>
+                <label>Service Issue</label>
+            </value>
+            <value>
+                <fullName>General Enquiry</fullName>
+                <default>false</default>
+                <label>General Enquiry</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Escalation</fullName>
+                <default>false</default>
+                <label>Escalation</label>
+            </value>
+            <value>
+                <fullName>Freight Dispute</fullName>
+                <default>false</default>
+                <label>Freight Dispute</label>
+            </value>
+            <value>
+                <fullName>Pickup Issue</fullName>
+                <default>false</default>
+                <label>Pickup Issue</label>
+            </value>
+            <value>
+                <fullName>Feedback</fullName>
+                <default>false</default>
+                <label>Feedback</label>
+            </value>
+            <value>
+                <fullName>Waybill Enquiry</fullName>
+                <default>false</default>
+                <label>Waybill Enquiry</label>
+            </value>
+            <value>
+                <fullName>Claim Enquiry</fullName>
+                <default>false</default>
+                <label>Claim Enquiry</label>
+            </value>
+            <value>
+                <fullName>Business Enquiry (B2B)</fullName>
+                <default>false</default>
+                <label>Business Enquiry (B2B)</label>
+            </value>
+            <value>
+                <fullName>Associate Enquiry</fullName>
+                <default>false</default>
+                <label>Associate Enquiry</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Complaint</controllingFieldValue>
+            <valueName>Service Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Complaint</controllingFieldValue>
+            <valueName>Escalation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Complaint</controllingFieldValue>
+            <valueName>Freight Dispute</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Complaint</controllingFieldValue>
+            <valueName>Pickup Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Complaint</controllingFieldValue>
+            <valueName>Feedback</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Enquiry</controllingFieldValue>
+            <valueName>General Enquiry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Enquiry</controllingFieldValue>
+            <valueName>Waybill Enquiry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Enquiry</controllingFieldValue>
+            <valueName>Claim Enquiry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Enquiry</controllingFieldValue>
+            <valueName>Business Enquiry (B2B)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Enquiry</controllingFieldValue>
+            <valueName>Associate Enquiry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Request</controllingFieldValue>
+            <valueName>Booking Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change Request</controllingFieldValue>
+            <valueName>Change Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POD</controllingFieldValue>
+            <valueName>POD</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

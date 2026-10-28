@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Case Type --></label>
+    <name>Case_Type__c</name>
+    <picklistValues>
+        <masterLabel>Associate Enquiry</masterLabel>
+        <translation><!-- Associate Enquiry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Booking Request</masterLabel>
+        <translation><!-- Booking Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Business Enquiry (B2B)</masterLabel>
+        <translation><!-- Business Enquiry (B2B) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Change Request</masterLabel>
+        <translation><!-- Change Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Claim Enquiry</masterLabel>
+        <translation><!-- Claim Enquiry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Escalation</masterLabel>
+        <translation><!-- Escalation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Feedback</masterLabel>
+        <translation><!-- Feedback --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Freight Dispute</masterLabel>
+        <translation><!-- Freight Dispute --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>General Enquiry</masterLabel>
+        <translation><!-- General Enquiry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>POD</masterLabel>
+        <translation><!-- POD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pickup Issue</masterLabel>
+        <translation><!-- Pickup Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Service Issue</masterLabel>
+        <translation><!-- Service Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Waybill Enquiry</masterLabel>
+        <translation><!-- Waybill Enquiry --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

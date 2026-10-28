@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>ANDHRA PRADESH - TELANGANA</fullName>
+        <default>false</default>
+        <label>ANDHRA PRADESH - TELANGANA</label>
+    </customValue>
+    <customValue>
+        <fullName>BIHAR - JHARKHAND - ODISHA</fullName>
+        <default>false</default>
+        <label>BIHAR - JHARKHAND - ODISHA</label>
+    </customValue>
+    <customValue>
+        <fullName>DELHI</fullName>
+        <default>false</default>
+        <label>DELHI</label>
+    </customValue>
+    <customValue>
+        <fullName>GUJARAT</fullName>
+        <default>false</default>
+        <label>GUJARAT</label>
+    </customValue>
+    <customValue>
+        <fullName>HARYANA</fullName>
+        <default>false</default>
+        <label>HARYANA</label>
+    </customValue>
+    <customValue>
+        <fullName>KARNATAKA</fullName>
+        <default>false</default>
+        <label>KARNATAKA</label>
+    </customValue>
+    <customValue>
+        <fullName>KERALAM</fullName>
+        <default>false</default>
+        <label>KERALAM</label>
+    </customValue>
+    <customValue>
+        <fullName>MADHYA PRADESH - CHHATTISGARH</fullName>
+        <default>false</default>
+        <label>MADHYA PRADESH - CHHATTISGARH</label>
+    </customValue>
+    <customValue>
+        <fullName>MAHARASHTRA - GOA</fullName>
+        <default>false</default>
+        <label>MAHARASHTRA - GOA</label>
+    </customValue>
+    <customValue>
+        <fullName>MUMBAI</fullName>
+        <default>false</default>
+        <label>MUMBAI</label>
+    </customValue>
+    <customValue>
+        <fullName>NORTH EAST</fullName>
+        <default>false</default>
+        <label>NORTH EAST</label>
+    </customValue>
+    <customValue>
+        <fullName>PUNJAB - CHANDIGARH</fullName>
+        <default>false</default>
+        <label>PUNJAB - CHANDIGARH</label>
+    </customValue>
+    <customValue>
+        <fullName>RAJASTHAN</fullName>
+        <default>false</default>
+        <label>RAJASTHAN</label>
+    </customValue>
+    <customValue>
+        <fullName>TAMILNADU - PUDUCHERRY</fullName>
+        <default>false</default>
+        <label>TAMILNADU - PUDUCHERRY</label>
+    </customValue>
+    <customValue>
+        <fullName>UTTAR PRADESH</fullName>
+        <default>false</default>
+        <label>UTTAR PRADESH</label>
+    </customValue>
+    <customValue>
+        <fullName>UTTARAKHAND</fullName>
+        <default>false</default>
+        <label>UTTARAKHAND</label>
+    </customValue>
+    <customValue>
+        <fullName>WEST BENGAL - SIKKIM</fullName>
+        <default>false</default>
+        <label>WEST BENGAL - SIKKIM</label>
+    </customValue>
+    <customValue>
+        <fullName>CORPORATE OFFICE</fullName>
+        <default>false</default>
+        <label>CORPORATE OFFICE</label>
+    </customValue>
+    <customValue>
+        <fullName>JK - HP - LADAKH</fullName>
+        <default>false</default>
+        <label>JK - HP - LADAKH</label>
+    </customValue>
+    <customValue>
+        <fullName>Region 1</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Region 1</label>
+    </customValue>
+    <customValue>
+        <fullName>Region 2</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Region 2</label>
+    </customValue>
+    <customValue>
+        <fullName>Region 3</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Region 3</label>
+    </customValue>
+    <customValue>
+        <fullName>JAMMU KASHMIR - HIMACHAL PRADESH</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>JAMMU KASHMIR - HIMACHAL PRADESH</label>
+    </customValue>
+    <masterLabel>Region</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

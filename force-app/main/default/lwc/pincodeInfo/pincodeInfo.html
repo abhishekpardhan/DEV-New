@@ -1,0 +1,18 @@
+<template>
+    <lightning-layout multiple-rows>
+        <lightning-layout-item size="12"  small-device-size="12" medium-device-size="6" large-device-size="6" >
+        <div style="margin-right: 20px;" class="slds-form-element__control">
+            <div class="custom-input">
+                <lightning-input type="text" max-length="6" label={pincodeLabel} value={inputPinCode} required="true" onchange={handlePincodeChange}></lightning-input>
+                <lightning-spinner if:true={isSpinnerShow} variant="brand" alternative-text="Loading" size="small"></lightning-spinner>
+            </div>
+            <div class="slds-required" if:true={errorMassage}>{errorMassage}</div>
+        </div>
+        </lightning-layout-item>    
+        <lightning-layout-item size="12"  small-device-size="12" medium-device-size="6" large-device-size="6" >
+        <div  class="slds-form-element__control">
+            <lightning-input type="text" value={completeAddress} label={addressLabel} disabled></lightning-input>
+        </div>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

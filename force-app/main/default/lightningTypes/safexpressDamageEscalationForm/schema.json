@@ -1,0 +1,5 @@
+{
+  "title" : "Safexpress Damage Escalation Form",
+  "description" : "Collects waybill, mobile, email and proof of damage for post-delivery complaints.",
+  "lightning:type" : "@apexClassType/c__SafexpressDamageEscalationForm"
+}

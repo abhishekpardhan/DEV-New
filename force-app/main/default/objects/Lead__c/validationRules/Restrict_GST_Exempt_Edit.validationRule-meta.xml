@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_GST_Exempt_Edit</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISCHANGED(GST_Exempted__c),
+    NOT(
+        OR(
+            AND(
+                RecordType.Name = &quot;Retail Lead&quot;,
+                OR(
+                    $User.Id = OwnerId,
+                    $Profile.Name = &quot;Central Quotation Team (Credit)&quot;,
+                    $Profile.Name = &quot;Corporate salesforce team&quot;,
+                    $Profile.Name = &quot;New Sales Head Corporate&quot;,
+                    $Profile.Name = &quot;Read Only&quot;,
+                    $Profile.Name = &quot;System Administrator&quot;
+                )
+            ),
+            
+            AND(
+               RecordType.Name = &quot;Credit Lead&quot;,
+                OR(
+                    $Profile.Name = &quot;Central Quotation Team (Credit)&quot;,
+                    $Profile.Name = &quot;Corporate salesforce team&quot;,
+                    $Profile.Name = &quot;New Sales Head Corporate&quot;,
+                    $Profile.Name = &quot;Read Only&quot;,
+                    $Profile.Name = &quot;System Administrator&quot;
+                )
+            )
+        )
+    )
+)</errorConditionFormula>
+    <errorDisplayField>GST_Exempted__c</errorDisplayField>
+    <errorMessage>You can’t edit GST Exempt.</errorMessage>
+</ValidationRule>

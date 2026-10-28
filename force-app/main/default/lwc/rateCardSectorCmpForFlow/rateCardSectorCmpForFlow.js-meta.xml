@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs> 
+        <targetConfig targets="lightning__FlowScreen">
+            <!--  Variables for Flow Screen -->
+            <property name="modeOfTransPort" label="Mode of transport" type="String" /> 
+            <property name="prcId" label="PRC Id" type="String" /> 
+            <property name="sfxId" label="SFX Id " type="String"   />
+            <property name="rateCardName" label="Rate Card " type="String" />
+            <property name="displayText" label="Rate Card Display Name" type="String" />
+
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

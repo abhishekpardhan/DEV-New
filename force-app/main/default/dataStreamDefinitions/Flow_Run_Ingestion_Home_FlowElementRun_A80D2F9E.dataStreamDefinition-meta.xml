@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataStreamDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <areHeadersIncludedInFile>false</areHeadersIncludedInFile>
+    <bulkIngest>false</bulkIngest>
+    <creationType>Custom</creationType>
+    <dataConnector>Flow_Run_Ingestion_Home_ca6a01cf_17ae_439f_b6fd_6c5e1c27ae6d</dataConnector>
+    <dataConnectorType>IngestApi</dataConnectorType>
+    <dataExtractMethods>FULL_REFRESH</dataExtractMethods>
+    <dataPlatformDataSetItemName>INGESTAPI</dataPlatformDataSetItemName>
+    <dataSource>Flow_Run_Ingestion_Home_ca6a01cf_17ae_439f_b6fd_6c5e1c27ae6d</dataSource>
+    <isLimitedToNewFiles>false</isLimitedToNewFiles>
+    <isMissingFileFailure>false</isMissingFileFailure>
+    <masterLabel>Flow_Run_Ingestion_Home-FlowElementRun</masterLabel>
+    <mktDataLakeObject>Flow_Run_Ingestion_Home_FlowEle_A80D2F9E__dll</mktDataLakeObject>
+    <mktDataTranObject>Flow_Run_Ingestion_Home_FlowEle_A80D2F9E</mktDataTranObject>
+</DataStreamDefinition>

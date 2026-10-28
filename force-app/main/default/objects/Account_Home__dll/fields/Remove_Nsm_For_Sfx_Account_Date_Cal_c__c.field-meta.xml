@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Remove_Nsm_For_Sfx_Account_Date_Cal_c__c</fullName>
+    <label>Remove Nsm For Sfx Account Date Cal</label>
+    <mktDataLakeFieldAttributes>
+        <definitionCreationType>Standard</definitionCreationType>
+        <externalName>Remove_Nsm_For_Sfx_Account_Date_Cal_c</externalName>
+        <isEventDate>false</isEventDate>
+        <isInternalOrganization>false</isInternalOrganization>
+        <isRecordModified>false</isRecordModified>
+        <usageTag>NONE</usageTag>
+    </mktDataLakeFieldAttributes>
+    <required>false</required>
+    <type>Date</type>
+</CustomField>

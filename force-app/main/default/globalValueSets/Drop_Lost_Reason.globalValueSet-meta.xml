@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Customer Not Interested</fullName>
+        <default>false</default>
+        <label>Customer Not Interested</label>
+    </customValue>
+    <customValue>
+        <fullName>Duplicate Lead</fullName>
+        <default>false</default>
+        <label>Duplicate Lead</label>
+    </customValue>
+    <customValue>
+        <fullName>Existing Customer</fullName>
+        <default>false</default>
+        <label>Existing Customer</label>
+    </customValue>
+    <customValue>
+        <fullName>FTL Customer</fullName>
+        <default>false</default>
+        <label>FTL Customer</label>
+    </customValue>
+    <customValue>
+        <fullName>Irrelevant Lead</fullName>
+        <default>false</default>
+        <label>Irrelevant Lead</label>
+    </customValue>
+    <customValue>
+        <fullName>Low Potential</fullName>
+        <default>false</default>
+        <label>Low Potential</label>
+    </customValue>
+    <customValue>
+        <fullName>No Response</fullName>
+        <default>false</default>
+        <label>No Response</label>
+    </customValue>
+    <customValue>
+        <fullName>Not Servicable</fullName>
+        <default>false</default>
+        <label>Not Servicable</label>
+    </customValue>
+    <customValue>
+        <fullName>Retail Lead</fullName>
+        <default>false</default>
+        <label>Retail Lead</label>
+    </customValue>
+    <customValue>
+        <fullName>Rate Issue</fullName>
+        <default>false</default>
+        <label>Rate Issue</label>
+    </customValue>
+    <customValue>
+        <fullName>Within City Distribution</fullName>
+        <default>false</default>
+        <label>Within City Distribution</label>
+    </customValue>
+    <customValue>
+        <fullName>Others</fullName>
+        <default>false</default>
+        <label>Others</label>
+    </customValue>
+    <customValue>
+        <fullName>FTL</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>FTL</label>
+    </customValue>
+    <customValue>
+        <fullName>PAID</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>PAID</label>
+    </customValue>
+    <customValue>
+        <fullName>NOT SERVICEABLE</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>NOT SERVICEABLE</label>
+    </customValue>
+    <customValue>
+        <fullName>Rate Mismatch</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Rate Mismatch</label>
+    </customValue>
+    <customValue>
+        <fullName>ALREADY IN PIPELINE</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>ALREADY IN PIPELINE</label>
+    </customValue>
+    <customValue>
+        <fullName>B2C</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>B2C</label>
+    </customValue>
+    <customValue>
+        <fullName>BUSINESS CLOSED</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>BUSINESS CLOSED</label>
+    </customValue>
+    <customValue>
+        <fullName>TO PAY CUSTOMER</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>TO PAY CUSTOMER</label>
+    </customValue>
+    <masterLabel>Drop/Lost Reason</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

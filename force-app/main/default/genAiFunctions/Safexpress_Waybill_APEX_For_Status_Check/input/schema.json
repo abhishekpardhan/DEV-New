@@ -1,0 +1,14 @@
+{
+  "required" : [ "waybillNumber" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "waybillNumber" : {
+      "title" : "Waybill Number",
+      "description" : "This is the input provided by the user",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

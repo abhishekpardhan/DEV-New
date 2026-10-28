@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_field_Renewel_Account_Not_Select</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(RecordType.Name = &apos;General&apos;, ISPICKVAL(Type__c,&apos;RENEWEL ACCOUNT&apos;) , OR(AND(ISNEW(),Automation__c = False),ISCHANGED(Type__c)))</errorConditionFormula>
+    <errorDisplayField>Type__c</errorDisplayField>
+    <errorMessage>You have no permission to select this value.For more Information,Please contact your Administrator.</errorMessage>
+</ValidationRule>

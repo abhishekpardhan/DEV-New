@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Pan No. is mandatory for submitting an opportunity for approval. --></help>
+    <label><!-- PAN No --></label>
+    <name>PAN_No__c</name>
+</CustomFieldTranslation>

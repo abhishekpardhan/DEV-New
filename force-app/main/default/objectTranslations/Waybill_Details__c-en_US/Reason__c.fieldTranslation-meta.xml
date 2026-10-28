@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Reason --></label>
+    <name>Reason__c</name>
+    <picklistValues>
+        <masterLabel>Disagreement in Commercials</masterLabel>
+        <translation><!-- Disagreement in Commercials --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incorrect Billing</masterLabel>
+        <translation><!-- Incorrect Billing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Late Delivery Deduction</masterLabel>
+        <translation><!-- Late Delivery Deduction --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>One time Settlement</masterLabel>
+        <translation><!-- One time Settlement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>POD Issue</masterLabel>
+        <translation><!-- POD Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Safextension Charge</masterLabel>
+        <translation><!-- Safextension Charge --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Safextension Charge deduction</masterLabel>
+        <translation><!-- Safextension Charge deduction --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shortage and Damage</masterLabel>
+        <translation><!-- Shortage and Damage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Volume Discount</masterLabel>
+        <translation><!-- Volume Discount --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Weight difference</masterLabel>
+        <translation><!-- Weight difference --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wrong Booking</masterLabel>
+        <translation><!-- Wrong Booking --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wrong waybill/Bill Apply</masterLabel>
+        <translation><!-- Wrong waybill/Bill Apply --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

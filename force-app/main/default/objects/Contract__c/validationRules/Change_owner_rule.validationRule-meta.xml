@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Change_owner_rule</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+!$Permission.Skip_Validation_Rule,
+ISCHANGED(OwnerId)
+)</errorConditionFormula>
+    <errorMessage>You are not allowed to change owner</errorMessage>
+</ValidationRule>

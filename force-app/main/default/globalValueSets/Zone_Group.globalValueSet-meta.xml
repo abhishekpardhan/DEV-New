@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>North One</fullName>
+        <default>false</default>
+        <label>North One</label>
+    </customValue>
+    <customValue>
+        <fullName>North Two</fullName>
+        <default>false</default>
+        <label>North Two</label>
+    </customValue>
+    <customValue>
+        <fullName>East</fullName>
+        <default>false</default>
+        <label>East</label>
+    </customValue>
+    <customValue>
+        <fullName>North East</fullName>
+        <default>false</default>
+        <label>North East</label>
+    </customValue>
+    <customValue>
+        <fullName>West One</fullName>
+        <default>false</default>
+        <label>West One</label>
+    </customValue>
+    <customValue>
+        <fullName>West Two</fullName>
+        <default>false</default>
+        <label>West Two</label>
+    </customValue>
+    <customValue>
+        <fullName>South One</fullName>
+        <default>false</default>
+        <label>South One</label>
+    </customValue>
+    <customValue>
+        <fullName>South Two</fullName>
+        <default>false</default>
+        <label>South Two</label>
+    </customValue>
+    <customValue>
+        <fullName>Central</fullName>
+        <default>false</default>
+        <label>Central</label>
+    </customValue>
+    <masterLabel>Zone Group</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

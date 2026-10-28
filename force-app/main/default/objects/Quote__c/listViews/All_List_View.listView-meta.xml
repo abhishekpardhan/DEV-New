@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_List_View</fullName>
+    <columns>NAME</columns>
+    <columns>Approval_Status__c</columns>
+    <columns>Status__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>Sub_Reason__c</columns>
+    <columns>Opportunity__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Approved_By_SH_Manually__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Sent to Customer</value>
+    </filters>
+    <label>All List View</label>
+</ListView>

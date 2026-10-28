@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Mandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+OR ( 
+$RecordType.Name = &quot;SFX Customer&quot;, 
+$RecordType.Name = &quot;PRC Customer&quot;), 
+ISBLANK( Opportunity__c ))</errorConditionFormula>
+    <errorDisplayField>Opportunity__c</errorDisplayField>
+    <errorMessage>Opportunity is mandatory to save the record.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Cases</label>
+    <protected>false</protected>
+    <values>
+        <field>FieldApiName__c</field>
+        <value xsi:type="xsd:string">Approval_Status__c</value>
+    </values>
+    <values>
+        <field>ObjectName__c</field>
+        <value xsi:type="xsd:string">Case__c</value>
+    </values>
+    <values>
+        <field>Operator__c</field>
+        <value xsi:type="xsd:string">2</value>
+    </values>
+    <values>
+        <field>SkipPermissions__c</field>
+        <value xsi:type="xsd:string">Business_admin_permission,Transfer_Admin_Permission,Revenue_Management,Regional_Finance_Head,Corporate_Salesforce_Team,CCD_Users</value>
+    </values>
+    <values>
+        <field>SkipRoles__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Values__c</field>
+        <value xsi:type="xsd:string">Pending from AM,Approved By AM,Approved by Claim Dept,Auto-approved,Approved by CO,Approved by CCD,Pending from Claim Dept.</value>
+    </values>
+</CustomMetadata>

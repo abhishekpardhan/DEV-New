@@ -1,0 +1,11 @@
+.slds-carousel__panel{
+
+    width: 950px;
+	height: 300px;
+}
+.slds-carousel__image img{ 
+    height:200px!important;
+}
+.slds-carousel__indicators {
+    z-index: 999!important;
+}

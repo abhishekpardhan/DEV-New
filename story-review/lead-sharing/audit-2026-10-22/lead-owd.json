@@ -1,0 +1,19 @@
+﻿{
+  "status": 0,
+  "result": {
+    "records": [
+      {
+        "attributes": {
+          "type": "EntityDefinition",
+          "url": "/services/data/v68.0/tooling/sobjects/EntityDefinition/Lead"
+        },
+        "QualifiedApiName": "Lead",
+        "InternalSharingModel": "Private",
+        "ExternalSharingModel": "Private"
+      }
+    ],
+    "totalSize": 1,
+    "done": true
+  },
+  "warnings": []
+}

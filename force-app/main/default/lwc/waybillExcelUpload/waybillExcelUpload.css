@@ -1,0 +1,63 @@
+/* Modal width */
+.custom-modal-width {
+    width: 85% !important; /* Wider than default */
+    max-width: 95%;
+}
+
+/* Modal content scroll if too tall */
+.modal-content-scroll {
+    max-height: 70vh; /* Limit modal height */
+    overflow-y: auto;
+}
+
+/* Datatable dynamic height */
+.dynamic-height-datatable {
+    overflow-y: auto;
+}
+
+/* Ensure datatable scrolls nicely within set height */
+.dynamic-height-datatable .slds-table {
+    display: block;
+}
+
+/* Error text (keep SLDS color) */
+.slds-text-color_error {
+    color: #c23934;
+}
+
+/* Full-card spinner overlay */
+.spinner-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10000; /* Higher than SLDS modal (9000) */
+    background: rgba(255, 255, 255, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: all;
+}
+
+/* When inside modal, ensure overlay stays within modal container if needed */
+.slds-modal .spinner-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+/* Optional: tighten card spacing for nested cards in modal */
+.slds-modal .slds-card {
+    border: none;
+    box-shadow: none;
+}
+
+.dark-border {
+    border: 1px solid #000000; /* pure black */
+}
+
+.dark-border-soft {
+    border: 1px solid #2e2e2e; /* Salesforce-friendly dark */
+}
+
+.rounded {
+    border-radius: 0.25rem;
+}

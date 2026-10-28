@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shipping_Postal_Code</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(!ISBLANK( ShippingPostalCode ),NOT(REGEX(ShippingPostalCode, &quot;\\d{6}&quot;)))</errorConditionFormula>
+    <errorDisplayField>ShippingPostalCode</errorDisplayField>
+    <errorMessage>Mailing Pin Code Should be 6 Digits.</errorMessage>
+</ValidationRule>

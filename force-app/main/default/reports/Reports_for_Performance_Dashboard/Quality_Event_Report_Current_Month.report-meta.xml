@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>VerticalColumn</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>User.Event__c$CreatedById$Owner</groupingColumn>
+        <location>CHART_BOTTOM</location>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>User.Event__c$CreatedById$Event_Purpose__c</field>
+    </columns>
+    <columns>
+        <field>User*User$Designation__c</field>
+    </columns>
+    <columns>
+        <field>User$Department</field>
+    </columns>
+    <columns>
+        <field>User*User$Area__c</field>
+    </columns>
+    <columns>
+        <field>User*User$Region__c</field>
+    </columns>
+    <columns>
+        <field>User.Event__c$CreatedById$Name</field>
+    </columns>
+    <columns>
+        <field>User.Event__c$CreatedById$CheckIn_Date__c</field>
+    </columns>
+    <columns>
+        <field>User.Event__c$CreatedById$CheckOut_Date__c</field>
+    </columns>
+    <columns>
+        <field>User.Event__c$CreatedById$CheckIn_Address__c</field>
+    </columns>
+    <columns>
+        <field>User.Event__c$CreatedById$CheckOut_Address__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>User.Event__c$CreatedById$Is_Claim__c</field>
+    </columns>
+    <columns>
+        <field>User.Event__c$CreatedById$Account__c</field>
+    </columns>
+    <columns>
+        <field>User.Event__c$CreatedById$Remarks__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>User.Event__c$CreatedById$Recap_Character_Count__c</field>
+    </columns>
+    <columns>
+        <field>User.Event__c$CreatedById$Time_Spent_Auto__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>User.Event__c$CreatedById$Distance__c</field>
+    </columns>
+    <columns>
+        <field>User.Event__c$CreatedById$Activities_to_be_Performed__c</field>
+    </columns>
+    <columns>
+        <field>User.Event__c$CreatedById$CheckIn_Location__c</field>
+    </columns>
+    <columns>
+        <field>User.Event__c$CreatedById$CheckOut_Location__c</field>
+    </columns>
+    <columns>
+        <field>CDF1</field>
+    </columns>
+    <columns>
+        <field>CDF2</field>
+    </columns>
+    <currency>INR</currency>
+    <customDetailFormulas>
+        <calculatedFormula>IF(
+
+/* All conditions are valid */
+
+AND(
+
+(
+IF(
+CONTAINS(Event__c.Time_Spent_Auto__c,&quot;h&quot;),
+VALUE(TRIM(LEFT(Event__c.Time_Spent_Auto__c,FIND(&quot;h&quot;,Event__c.Time_Spent_Auto__c)-1)))*60,
+0
+)
++
+IF(
+CONTAINS(Event__c.Time_Spent_Auto__c,&quot;m&quot;),
+VALUE(TRIM(MID(Event__c.Time_Spent_Auto__c,FIND(&quot;h&quot;,Event__c.Time_Spent_Auto__c)+1,FIND(&quot;m&quot;,Event__c.Time_Spent_Auto__c)-FIND(&quot;h&quot;,Event__c.Time_Spent_Auto__c)-1))),
+0
+)
+)&gt;=15,
+
+ABS(
+VALUE(LEFT(Event__c.CheckIn_Location__c,FIND(&quot;,&quot;,Event__c.CheckIn_Location__c)-1))
+-
+VALUE(LEFT(Event__c.CheckOut_Location__c,FIND(&quot;,&quot;,Event__c.CheckOut_Location__c)-1))
+)&lt;=0.009,
+
+ABS(
+VALUE(MID(Event__c.CheckIn_Location__c,FIND(&quot;,&quot;,Event__c.CheckIn_Location__c)+1,20))
+-
+VALUE(MID(Event__c.CheckOut_Location__c,FIND(&quot;,&quot;,Event__c.CheckOut_Location__c)+1,20))
+)&lt;=0.012,
+
+AND(
+HOUR(TIMEVALUE(Event__c.CheckIn_Date__c+(5.5/24)))&gt;=8,
+HOUR(TIMEVALUE(Event__c.CheckIn_Date__c+(5.5/24)))&lt;20
+),
+
+Event__c.Recap_Character_Count__c&gt;=150
+
+),
+
+&quot;&quot;,
+
+/* Failure Reasons */
+
+IF(
+(
+IF(
+CONTAINS(Event__c.Time_Spent_Auto__c,&quot;h&quot;),
+VALUE(TRIM(LEFT(Event__c.Time_Spent_Auto__c,FIND(&quot;h&quot;,Event__c.Time_Spent_Auto__c)-1)))*60,
+0
+)
++
+IF(
+CONTAINS(Event__c.Time_Spent_Auto__c,&quot;m&quot;),
+VALUE(TRIM(MID(Event__c.Time_Spent_Auto__c,FIND(&quot;h&quot;,Event__c.Time_Spent_Auto__c)+1,FIND(&quot;m&quot;,Event__c.Time_Spent_Auto__c)-FIND(&quot;h&quot;,Event__c.Time_Spent_Auto__c)-1))),
+0
+)
+)&lt;15,
+&quot;Invalid Time Spent, &quot;,
+&quot;&quot;
+)
+
+&amp;
+
+IF(
+OR(
+ABS(
+VALUE(LEFT(Event__c.CheckIn_Location__c,FIND(&quot;,&quot;,Event__c.CheckIn_Location__c)-1))
+-
+VALUE(LEFT(Event__c.CheckOut_Location__c,FIND(&quot;,&quot;,Event__c.CheckOut_Location__c)-1))
+)&gt;0.009,
+
+ABS(
+VALUE(MID(Event__c.CheckIn_Location__c,FIND(&quot;,&quot;,Event__c.CheckIn_Location__c)+1,20))
+-
+VALUE(MID(Event__c.CheckOut_Location__c,FIND(&quot;,&quot;,Event__c.CheckOut_Location__c)+1,20))
+)&gt;0.012
+),
+&quot;Invalid Location, &quot;,
+&quot;&quot;
+)
+
+&amp;
+
+IF(
+OR(
+HOUR(TIMEVALUE(Event__c.CheckIn_Date__c+(5.5/24)))&lt;8,
+HOUR(TIMEVALUE(Event__c.CheckIn_Date__c+(5.5/24)))&gt;=20
+),
+&quot;Outside Office Hours, &quot;,
+&quot;&quot;
+)
+
+&amp;
+
+IF(
+Event__c.Recap_Character_Count__c&lt;150,
+&quot;Invalid Remarks&quot;,
+&quot;&quot;
+)
+
+)</calculatedFormula>
+        <dataType>Text</dataType>
+        <developerName>CDF2</developerName>
+        <label>Quality Failure Reason</label>
+        <scale>2</scale>
+    </customDetailFormulas>
+    <customDetailFormulas>
+        <calculatedFormula>IF(
+AND(
+
+/* Time Spent &gt;= 15 Minutes */
+
+(
+IF(
+CONTAINS(Event__c.Time_Spent_Auto__c,&quot;h&quot;),
+VALUE(
+TRIM(
+LEFT(
+Event__c.Time_Spent_Auto__c,
+FIND(&quot;h&quot;,Event__c.Time_Spent_Auto__c)-1
+)
+)
+)*60,
+0
+)
++
+IF(
+CONTAINS(Event__c.Time_Spent_Auto__c,&quot;m&quot;),
+VALUE(
+TRIM(
+MID(
+Event__c.Time_Spent_Auto__c,
+FIND(&quot;h&quot;,Event__c.Time_Spent_Auto__c)+1,
+FIND(&quot;m&quot;,Event__c.Time_Spent_Auto__c)-FIND(&quot;h&quot;,Event__c.Time_Spent_Auto__c)-1
+)
+)
+),
+0
+)
+)&gt;=15,
+
+/* Location within 1 KM */
+
+AND(
+ABS(
+VALUE(
+LEFT(
+Event__c.CheckIn_Location__c,
+FIND(&quot;,&quot;,Event__c.CheckIn_Location__c)-1
+)
+)
+-
+VALUE(
+LEFT(
+Event__c.CheckOut_Location__c,
+FIND(&quot;,&quot;,Event__c.CheckOut_Location__c)-1
+)
+)
+)&lt;=0.009,
+
+ABS(
+VALUE(
+MID(
+Event__c.CheckIn_Location__c,
+FIND(&quot;,&quot;,Event__c.CheckIn_Location__c)+1,
+20
+)
+)
+-
+VALUE(
+MID(
+Event__c.CheckOut_Location__c,
+FIND(&quot;,&quot;,Event__c.CheckOut_Location__c)+1,
+20
+)
+)
+)&lt;=0.012
+),
+
+/* Check-in During Office Hours */
+
+AND(
+HOUR(TIMEVALUE(Event__c.CheckIn_Date__c + (5.5/24)))&gt;=8,
+HOUR(TIMEVALUE(Event__c.CheckIn_Date__c + (5.5/24)))&lt;20
+),
+
+/* Recap Character Count */
+
+Event__c.Recap_Character_Count__c &gt;= 150
+
+),
+
+&quot;Yes&quot;,
+&quot;No&quot;
+)</calculatedFormula>
+        <dataType>Text</dataType>
+        <developerName>CDF1</developerName>
+        <label>Quality Event</label>
+        <scale>2</scale>
+    </customDetailFormulas>
+    <description>Used in Monthly Performance Dashboard</description>
+    <filter>
+        <criteriaItems>
+            <column>User.Event__c$CreatedById$Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>System Event</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Event__c$CreatedById$Event_Purpose__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Return to Location</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Event__c$CreatedById$Account__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CDF1</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Yes</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>User.Event__c$CreatedById$Owner</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>User.Event__c$CreatedById$Journey__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Quality Event Report - Current Month</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>USERS_AND_EVENT_NEW__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>User.Event__c$CreatedById$CheckIn_Date__c</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

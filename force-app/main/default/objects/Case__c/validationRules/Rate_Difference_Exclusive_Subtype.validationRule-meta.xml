@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rate_Difference_Exclusive_Subtype</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    RecordType.DeveloperName = &quot;Credit_Debit_Note&quot;,
+    ISPICKVAL(Case_Typee__c, &quot;Credit Rebate&quot;),
+    INCLUDES(Case_Type__c, &quot;Rate Difference&quot;),
+    PICKLISTCOUNT(Case_Type__c) &gt; 1
+)</errorConditionFormula>
+    <errorDisplayField>Case_Type__c</errorDisplayField>
+    <errorMessage>Rate Difference cannot be selected with any other Case Sub Type.</errorMessage>
+</ValidationRule>

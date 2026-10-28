@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <applicationVisibilities>
+        <application>standard__DigitalWallet</application>
+        <visible>true</visible>
+    </applicationVisibilities>
+    <description>Allows users to view contract consumption data and digital wallet metrics.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>PSG_Wallet_Monitor</label>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewConsumption</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewLicenseUtilization</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewRoles</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewSetup</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewSetupAuditTrail</name>
+    </userPermissions>
+</PermissionSet>

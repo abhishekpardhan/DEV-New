@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Cancel Reason --></label>
+    <name>Cancel_Reason__c</name>
+    <picklistValues>
+        <masterLabel>CANCELLED - MATERIAL REFUSED</masterLabel>
+        <translation><!-- CANCELLED - MATERIAL REFUSED --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CONSIGNOR IS NOT AWARE/ NO PICKUP</masterLabel>
+        <translation><!-- CONSIGNOR IS NOT AWARE/ NO PICKUP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CONTACT NUMBER NOT VALID/SWITCHED OFF</masterLabel>
+        <translation><!-- CONTACT NUMBER NOT VALID/SWITCHED OFF --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DUPLICATE TOKEN</masterLabel>
+        <translation><!-- DUPLICATE TOKEN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NO RESPONSE ON CALL</masterLabel>
+        <translation><!-- NO RESPONSE ON CALL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NO RESPONSE ON CALL FOR  3 DAYS</masterLabel>
+        <translation><!-- NO RESPONSE ON CALL FOR  3 DAYS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SERVICE NOT REQUIRED NOW / CANCELLED BY CUSTOMER</masterLabel>
+        <translation><!-- SERVICE NOT REQUIRED NOW / CANCELLED BY CUSTOMER --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

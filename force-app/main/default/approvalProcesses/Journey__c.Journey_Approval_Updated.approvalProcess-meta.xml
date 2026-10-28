@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Owner</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>field_udate</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <type>userHierarchyField</type>
+            </approver>
+        </assignedApprover>
+        <entryCriteria>
+            <criteriaItems>
+                <field>User.Manager</field>
+                <operation>notEqual</operation>
+                <value>Rubal Jain-70002</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>ApproveRecord</ifCriteriaNotMet>
+        <label>Step 1</label>
+        <name>Step_1</name>
+        <rejectionActions>
+            <action>
+                <name>Field_update</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <booleanFilter>(1 OR 2 OR 3) AND 4 AND (5 OR 6 OR 7 OR 8 OR 9 OR 10 OR 11 OR 12 OR 13 OR 14 OR 15 OR 16 OR 17 OR 18 OR 19 OR 20 OR 21 OR 22 OR 23) AND 24 AND 25</booleanFilter>
+        <criteriaItems>
+            <field>Journey__c.Final_Amount__c</field>
+            <operation>greaterThan</operation>
+            <value>INR 0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Journey__c.Journey_KM__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Journey__c.Actual_KM__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Manager</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Profile</field>
+            <operation>equals</operation>
+            <value>Area Manager</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Profile</field>
+            <operation>equals</operation>
+            <value>3PL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Profile</field>
+            <operation>equals</operation>
+            <value>Marketing</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Profile</field>
+            <operation>equals</operation>
+            <value>Central Quotation Team(Credit)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Profile</field>
+            <operation>equals</operation>
+            <value>Central Corporate Team</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Profile</field>
+            <operation>equals</operation>
+            <value>Central Quotation Team(Retail)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Profile</field>
+            <operation>equals</operation>
+            <value>Claim User Profile</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Profile</field>
+            <operation>equals</operation>
+            <value>Conveyance Team</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Profile</field>
+            <operation>equals</operation>
+            <value>Revenue Management</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Profile</field>
+            <operation>equals</operation>
+            <value>Onboarding Team</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Profile</field>
+            <operation>equals</operation>
+            <value>Regional Finance Head</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Profile</field>
+            <operation>equals</operation>
+            <value>Regional New Sales Manager</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Profile</field>
+            <operation>equals</operation>
+            <value>Regional Retail Manager</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Profile</field>
+            <operation>equals</operation>
+            <value>Regional Manager</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Profile</field>
+            <operation>equals</operation>
+            <value>Safexperience Center Head</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Profile</field>
+            <operation>equals</operation>
+            <value>New Sales Head Corporate</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Profile</field>
+            <operation>equals</operation>
+            <value>Retail Head Corporate</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Profile</field>
+            <operation>equals</operation>
+            <value>System Administrator</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Profile</field>
+            <operation>equals</operation>
+            <value>Regional National Sales Manager</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Journey__c.Approval_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Not to be Claimed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Journey__c.Is_Valid_For_Approval__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Auto_approved_by_CMD</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Is_Locked_False</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Record_type_update_journey</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Is_locked_true</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>record_type_update</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>submit_for_app</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Journey Approval  Updated</label>
+    <nextAutomatedApprover>
+        <useApproverFieldOfRecordOwner>false</useApproverFieldOfRecordOwner>
+        <userHierarchyField>Manager</userHierarchyField>
+    </nextAutomatedApprover>
+    <processOrder>3</processOrder>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

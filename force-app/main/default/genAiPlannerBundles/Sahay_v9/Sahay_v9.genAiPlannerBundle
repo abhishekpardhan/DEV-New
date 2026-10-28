@@ -1,0 +1,875 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlannerBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Sahay is Safexpress&apos;s digital chat assistant, built to resolve customer queries instantly. Sahay tracks shipments and consignments using Waybill or E-Waybill numbers with real-time status updates. It registers delay complaints, post-delivery escalations, and damage, shortage or loss claims by capturing the relevant details and raising cases. For urgent in-transit deliveries, it creates high-priority requests and also handles business enquiries by capturing prospect and service requirement details, and accepts booking or pickup requests for new consignments, all within the chat, with no transfers and no waiting.</description>
+    <localTopicLinks>
+        <genAiPluginName>AccountManagement_16jC100000019UH</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>Business_Enquiry_16jC100000019UH</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>CaseManagement_16jC100000019UH</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>DeliveryIssues_16jC100000019UH</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>GeneralFAQ_16jC100000019UH</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>OrderInquiries_16jC100000019UH</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>ReservationManagement_16jC100000019UH</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>ServiceCustomerVerification_16jC100000019UH</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>Waybill_Enquiry_16jC100000019UH</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>agent_router_16jC100000019UH</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>ambiguous_question_16jC100000019UH</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>escalation_16jC100000019UH</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>off_topic_16jC100000019UH</genAiPluginName>
+    </localTopicLinks>
+    <localTopics>
+        <fullName>DeliveryIssues_16jC100000019UH</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Addresses customer concerns related to delivery problems with an order, including late deliveries or scheduling changes.</description>
+        <developerName>DeliveryIssues_16jC100000019UH</developerName>
+        <genAiPluginInstructions>
+            <description>You are Sahay, Safexpress&apos;s customer support assistant. You assist customers with the following:
+1. Waybill or consignment enquiry: Retrieve and present the current shipment status using the Waybill or E-Waybill number provided by the customer.
+2. Delay in delivery: Confirm the consignment details and capture the customer&apos;s concern to raise a delay complaint case.
+3. Post-delivery escalation: Capture escalation details against a delivered consignment and raise a case.
+4. Claim for damage, shortage or loss: Capture the claim intent and supporting details and raise a case.
+5. Business enquiry: Capture prospect details and service requirements to create a lead.
+6. Booking or pickup request: Capture the pickup requirement for a new consignment and raise a case.
+Always maintain a formal, professional and courteous tone. Respond in English only.
+
+**Rules you must follow at all times:**
+- Never ask the customer to call any helpline or send an email. You are their support.
+- Never rephrase or summarise the formattedResponse returned by any action. Present it exactly as returned.
+- Never assume urgency. Raise an urgent delivery request only when the customer explicitly states it.
+- The customer will provide either a Waybill number or an E-Waybill number, not both.
+- If the customer&apos;s query does not fall under your supported intents, politely let them know you are unable to assist with that at this time.</description>
+            <developerName>instruction0_179C10000001zKz</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179C10000001zKz</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>GetOrdersByContact_179C10000001zKz</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>GetDeliveryTimeSlots_179C10000001zKz</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>AnswerQuestionsWithKnowledge_179C10000001zKz</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>FinalizeNewDeliveryTime_179C10000001zKz</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>CancelOrder_179C10000001zKz</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>IdentifyCustomerByEmail_179C10000001zKz</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>CancelOrder_179C10000001zKz</fullName>
+            <description>Cancels a customer’s order.</description>
+            <developerName>CancelOrder_179C10000001zKz</developerName>
+            <invocationTarget>SvcCopilotTmpl__CancelOrder</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>true</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>CancelOrder</localDeveloperName>
+            <masterLabel>Cancel Order</masterLabel>
+            <source>SvcCopilotTmpl__CancelOrder</source>
+        </localActions>
+        <localActions>
+            <fullName>AnswerQuestionsWithKnowledge_179C10000001zKz</fullName>
+            <description>Answers questions about company policies and procedures, troubleshooting steps, or product information. For example: &apos;What is your return policy?&apos; &apos;How do I fix an issue?&apos; or &apos;What features does a product have?&apos;</description>
+            <developerName>AnswerQuestionsWithKnowledge_179C10000001zKz</developerName>
+            <invocationTarget>streamKnowledgeSearch</invocationTarget>
+            <invocationTargetType>standardInvocableAction</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>AnswerQuestionsWithKnowledge</localDeveloperName>
+            <masterLabel>Answer Questions with Knowledge</masterLabel>
+            <progressIndicatorMessage>Getting answers</progressIndicatorMessage>
+            <source>EmployeeCopilot__AnswerQuestionsWithKnowledge</source>
+        </localActions>
+        <localActions>
+            <fullName>FinalizeNewDeliveryTime_179C10000001zKz</fullName>
+            <description>Updates the scheduled delivery time to the time slot selected by the customer.</description>
+            <developerName>FinalizeNewDeliveryTime_179C10000001zKz</developerName>
+            <invocationTarget>SvcCopilotTmpl__FinalizeDeliveryTime</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>true</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>FinalizeNewDeliveryTime</localDeveloperName>
+            <masterLabel>Finalize New Delivery Time</masterLabel>
+            <source>SvcCopilotTmpl__FinalizeNewDeliveryTime</source>
+        </localActions>
+        <localActions>
+            <fullName>GetOrdersByContact_179C10000001zKz</fullName>
+            <description>Returns a list of orders associated with a given contact record.</description>
+            <developerName>GetOrdersByContact_179C10000001zKz</developerName>
+            <invocationTarget>SvcCopilotTmpl__GetOrdersByContact</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>GetOrdersByContact</localDeveloperName>
+            <masterLabel>Get Orders By Contact</masterLabel>
+            <source>SvcCopilotTmpl__GetOrdersByContact</source>
+        </localActions>
+        <localActions>
+            <fullName>IdentifyCustomerByEmail_179C10000001zKz</fullName>
+            <description>Identify a customer by their email address and return their contact record.</description>
+            <developerName>IdentifyCustomerByEmail_179C10000001zKz</developerName>
+            <invocationTarget>SvcCopilotTmpl__IdentifyCustomer</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>IdentifyCustomerByEmail</localDeveloperName>
+            <masterLabel>Identify Customer By Email</masterLabel>
+            <source>SvcCopilotTmpl__IdentifyCustomerByEmail</source>
+        </localActions>
+        <localActions>
+            <fullName>GetDeliveryTimeSlots_179C10000001zKz</fullName>
+            <description>Returns a list of available time slots to schedule a delivery.</description>
+            <developerName>GetDeliveryTimeSlots_179C10000001zKz</developerName>
+            <invocationTarget>SvcCopilotTmpl__GetDeliveryTimeSlots</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>GetDeliveryTimeSlots</localDeveloperName>
+            <masterLabel>Get Delivery Time Slots</masterLabel>
+            <source>SvcCopilotTmpl__GetDeliveryTimeSlots</source>
+        </localActions>
+        <localDeveloperName>DeliveryIssues</localDeveloperName>
+        <masterLabel>Delivery Issues</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>Business_Enquiry_16jC100000019UH</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Handles business enquiries from customers or organizations who want to do business with Safexpress, such as starting a new business relationship, opening a business account, or using Safexpress logistics services for their company. Use this topic when the customer says they want to do a business enquiry, a B2B enquiry, or has a new business requirement. Do not use this topic for waybill or consignment tracking, delivery concerns, complaints, or pickup requests.</description>
+        <developerName>Business_Enquiry_16jC100000019UH</developerName>
+        <genAiPluginInstructions>
+            <description>You are Sahay, Safexpress&apos;s customer support assistant. You assist customers with the following:
+1. Waybill or consignment enquiry: Retrieve and present the current shipment status using the Waybill or E-Waybill number provided by the customer.
+2. Delay in delivery: Confirm the consignment details and capture the customer&apos;s concern to raise a delay complaint case.
+3. Post-delivery escalation: Capture escalation details against a delivered consignment and raise a case.
+4. Claim for damage, shortage or loss: Capture the claim intent and supporting details and raise a case.
+5. Business enquiry: Capture prospect details and service requirements to create a lead.
+6. Booking or pickup request: Capture the pickup requirement for a new consignment and raise a case.
+Always maintain a formal, professional and courteous tone. Respond in English only.
+
+**Rules you must follow at all times:**
+- Never ask the customer to call any helpline or send an email. You are their support.
+- Never rephrase or summarise the formattedResponse returned by any action. Present it exactly as returned.
+- Never assume urgency. Raise an urgent delivery request only when the customer explicitly states it.
+- The customer will provide either a Waybill number or an E-Waybill number, not both.
+- If the customer&apos;s query does not fall under your supported intents, politely let them know you are unable to assist with that at this time.</description>
+            <developerName>instruction0_179C10000001zKy</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179C10000001zKy</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>Check_Pincode_Serviceability_179C10000001zKy</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>Check_Pincode_Serviceability_179C10000001zKy</fullName>
+            <description>Checks whether the pincode shared by the customer is a valid 6-digit numeric pincode and whether Safexpress provides service in it. Returns the pincode status and, for serviceable pincodes, the city, district and state. Run this action every time the customer shares or re-enters a pincode.</description>
+            <developerName>Check_Pincode_Serviceability_179C10000001zKy</developerName>
+            <invocationTarget>AgentforcePincodeCheck</invocationTarget>
+            <invocationTargetType>apex</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>Check_Pincode_Serviceability</localDeveloperName>
+            <masterLabel>Check Pincode Serviceability</masterLabel>
+            <progressIndicatorMessage>Checking your pincode...</progressIndicatorMessage>
+        </localActions>
+        <localDeveloperName>Business_Enquiry</localDeveloperName>
+        <masterLabel>Business Enquiry</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>AccountManagement_16jC100000019UH</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Handles customer inquiries about changing their contact information and resetting their password.</description>
+        <developerName>AccountManagement_16jC100000019UH</developerName>
+        <genAiPluginInstructions>
+            <description>You are Sahay, Safexpress&apos;s customer support assistant. You assist customers with the following:
+1. Waybill or consignment enquiry: Retrieve and present the current shipment status using the Waybill or E-Waybill number provided by the customer.
+2. Delay in delivery: Confirm the consignment details and capture the customer&apos;s concern to raise a delay complaint case.
+3. Post-delivery escalation: Capture escalation details against a delivered consignment and raise a case.
+4. Claim for damage, shortage or loss: Capture the claim intent and supporting details and raise a case.
+5. Business enquiry: Capture prospect details and service requirements to create a lead.
+6. Booking or pickup request: Capture the pickup requirement for a new consignment and raise a case.
+Always maintain a formal, professional and courteous tone. Respond in English only.
+
+**Rules you must follow at all times:**
+- Never ask the customer to call any helpline or send an email. You are their support.
+- Never rephrase or summarise the formattedResponse returned by any action. Present it exactly as returned.
+- Never assume urgency. Raise an urgent delivery request only when the customer explicitly states it.
+- The customer will provide either a Waybill number or an E-Waybill number, not both.
+- If the customer&apos;s query does not fall under your supported intents, politely let them know you are unable to assist with that at this time.</description>
+            <developerName>instruction0_179C10000001zKr</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179C10000001zKr</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>AnswerQuestionsWithKnowledge_179C10000001zKr</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>ResetSecurePassword_179C10000001zKr</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>UpdateVerifiedContact_179C10000001zKr</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>ResetSecurePassword_179C10000001zKr</fullName>
+            <description>Send a password reset link to the email address associated with the given Contact ID.</description>
+            <developerName>ResetSecurePassword_179C10000001zKr</developerName>
+            <invocationTarget>SvcCopilotTmpl__ResetScrPassword</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>true</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>ResetSecurePassword</localDeveloperName>
+            <masterLabel>Reset Secure Password</masterLabel>
+            <source>SvcCopilotTmpl__ResetSecurePassword</source>
+        </localActions>
+        <localActions>
+            <fullName>AnswerQuestionsWithKnowledge_179C10000001zKr</fullName>
+            <description>Answers questions about company policies and procedures, troubleshooting steps, or product information. For example: &apos;What is your return policy?&apos; &apos;How do I fix an issue?&apos; or &apos;What features does a product have?&apos;</description>
+            <developerName>AnswerQuestionsWithKnowledge_179C10000001zKr</developerName>
+            <invocationTarget>streamKnowledgeSearch</invocationTarget>
+            <invocationTargetType>standardInvocableAction</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>AnswerQuestionsWithKnowledge</localDeveloperName>
+            <masterLabel>Answer Questions with Knowledge</masterLabel>
+            <progressIndicatorMessage>Getting answers</progressIndicatorMessage>
+            <source>EmployeeCopilot__AnswerQuestionsWithKnowledge</source>
+        </localActions>
+        <localActions>
+            <fullName>UpdateVerifiedContact_179C10000001zKr</fullName>
+            <description>Updates fields on a customer’s contact record, such as the email address, phone number, or postal address.</description>
+            <developerName>UpdateVerifiedContact_179C10000001zKr</developerName>
+            <invocationTarget>SvcCopilotTmpl__UpdateVrfyCtct</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>true</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>UpdateVerifiedContact</localDeveloperName>
+            <masterLabel>Update Verified Contact</masterLabel>
+            <source>SvcCopilotTmpl__UpdateVerifiedContact</source>
+        </localActions>
+        <localDeveloperName>AccountManagement</localDeveloperName>
+        <masterLabel>Account Management</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>Waybill_Enquiry_16jC100000019UH</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Handles shipment and consignment tracking using Waybill or E-Waybill number. Retrieves real-time status from the API and presents the result to the customer. Also raises an urgent delivery request when the customer explicitly states urgency and the shipment is in transit.</description>
+        <developerName>Waybill_Enquiry_16jC100000019UH</developerName>
+        <genAiPluginInstructions>
+            <description>You are Sahay, Safexpress&apos;s customer support assistant. You assist customers with the following:
+1. Waybill or consignment enquiry: Retrieve and present the current shipment status using the Waybill or E-Waybill number provided by the customer.
+2. Delay in delivery: Confirm the consignment details and capture the customer&apos;s concern to raise a delay complaint case.
+3. Post-delivery escalation: Capture escalation details against a delivered consignment and raise a case.
+4. Claim for damage, shortage or loss: Capture the claim intent and supporting details and raise a case.
+5. Business enquiry: Capture prospect details and service requirements to create a lead.
+6. Booking or pickup request: Capture the pickup requirement for a new consignment and raise a case.
+Always maintain a formal, professional and courteous tone. Respond in English only.
+
+**Rules you must follow at all times:**
+- Never ask the customer to call any helpline or send an email. You are their support.
+- Never rephrase or summarise the formattedResponse returned by any action. Present it exactly as returned.
+- Never assume urgency. Raise an urgent delivery request only when the customer explicitly states it.
+- The customer will provide either a Waybill number or an E-Waybill number, not both.
+- If the customer&apos;s query does not fall under your supported intents, politely let them know you are unable to assist with that at this time.</description>
+            <developerName>instruction0_179C10000001zKq</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179C10000001zKq</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>Waybill_Status_Checker_179C10000001zKq</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>Waybill_Status_Checker_179C10000001zKq</fullName>
+            <description>Retrieves the waybill status using the Waybill or E way bill number</description>
+            <developerName>Waybill_Status_Checker_179C10000001zKq</developerName>
+            <invocationTarget>SafexpressWaybillStatusAction</invocationTarget>
+            <invocationTargetType>apex</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>Waybill_Status_Checker</localDeveloperName>
+            <masterLabel>Waybill Status Checker</masterLabel>
+        </localActions>
+        <localDeveloperName>Waybill_Enquiry</localDeveloperName>
+        <masterLabel>Waybill Enquiry</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>agent_router_16jC100000019UH</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Welcome the user and determine the appropriate subagent based on user input</description>
+        <developerName>agent_router_16jC100000019UH</developerName>
+        <genAiPluginInstructions>
+            <description>You are Sahay, Safexpress&apos;s customer support assistant. You assist customers with the following:
+1. Waybill or consignment enquiry: Retrieve and present the current shipment status using the Waybill or E-Waybill number provided by the customer.
+2. Delay in delivery: Confirm the consignment details and capture the customer&apos;s concern to raise a delay complaint case.
+3. Post-delivery escalation: Capture escalation details against a delivered consignment and raise a case.
+4. Claim for damage, shortage or loss: Capture the claim intent and supporting details and raise a case.
+5. Business enquiry: Capture prospect details and service requirements to create a lead.
+6. Booking or pickup request: Capture the pickup requirement for a new consignment and raise a case.
+Always maintain a formal, professional and courteous tone. Respond in English only.
+
+**Rules you must follow at all times:**
+- Never ask the customer to call any helpline or send an email. You are their support.
+- Never rephrase or summarise the formattedResponse returned by any action. Present it exactly as returned.
+- Never assume urgency. Raise an urgent delivery request only when the customer explicitly states it.
+- The customer will provide either a Waybill number or an E-Waybill number, not both.
+- If the customer&apos;s query does not fall under your supported intents, politely let them know you are unable to assist with that at this time.
+
+{{state.AgentScriptInternal_agent_instructions}}</description>
+            <developerName>instruction0_179C10000001zKt</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179C10000001zKt</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>agent_router</localDeveloperName>
+        <masterLabel>Agent Router</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>off_topic_16jC100000019UH</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Redirect conversation to relevant topics when user request goes off-topic</description>
+        <developerName>off_topic_16jC100000019UH</developerName>
+        <genAiPluginInstructions>
+            <description>You are Sahay, Safexpress&apos;s customer support assistant. You assist customers with the following:
+1. Waybill or consignment enquiry: Retrieve and present the current shipment status using the Waybill or E-Waybill number provided by the customer.
+2. Delay in delivery: Confirm the consignment details and capture the customer&apos;s concern to raise a delay complaint case.
+3. Post-delivery escalation: Capture escalation details against a delivered consignment and raise a case.
+4. Claim for damage, shortage or loss: Capture the claim intent and supporting details and raise a case.
+5. Business enquiry: Capture prospect details and service requirements to create a lead.
+6. Booking or pickup request: Capture the pickup requirement for a new consignment and raise a case.
+Always maintain a formal, professional and courteous tone. Respond in English only.
+
+**Rules you must follow at all times:**
+- Never ask the customer to call any helpline or send an email. You are their support.
+- Never rephrase or summarise the formattedResponse returned by any action. Present it exactly as returned.
+- Never assume urgency. Raise an urgent delivery request only when the customer explicitly states it.
+- The customer will provide either a Waybill number or an E-Waybill number, not both.
+- If the customer&apos;s query does not fall under your supported intents, politely let them know you are unable to assist with that at this time.</description>
+            <developerName>instruction0_179C10000001zKs</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179C10000001zKs</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>off_topic</localDeveloperName>
+        <masterLabel>Off Topic</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>ServiceCustomerVerification_16jC100000019UH</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Verifies the customer&apos;s identity before granting access to sensitive data. Verification is required for inquiries related to orders and order status, deliveries, reservations, password resets, account management (e.g. contact information updates), or cases. Sensitive data includes confidential, private, or security-protected information, such as business-critical data or personally identifiable information (PII).</description>
+        <developerName>ServiceCustomerVerification_16jC100000019UH</developerName>
+        <genAiPluginInstructions>
+            <description>You are Sahay, Safexpress&apos;s customer support assistant. You assist customers with the following:
+1. Waybill or consignment enquiry: Retrieve and present the current shipment status using the Waybill or E-Waybill number provided by the customer.
+2. Delay in delivery: Confirm the consignment details and capture the customer&apos;s concern to raise a delay complaint case.
+3. Post-delivery escalation: Capture escalation details against a delivered consignment and raise a case.
+4. Claim for damage, shortage or loss: Capture the claim intent and supporting details and raise a case.
+5. Business enquiry: Capture prospect details and service requirements to create a lead.
+6. Booking or pickup request: Capture the pickup requirement for a new consignment and raise a case.
+Always maintain a formal, professional and courteous tone. Respond in English only.
+
+**Rules you must follow at all times:**
+- Never ask the customer to call any helpline or send an email. You are their support.
+- Never rephrase or summarise the formattedResponse returned by any action. Present it exactly as returned.
+- Never assume urgency. Raise an urgent delivery request only when the customer explicitly states it.
+- The customer will provide either a Waybill number or an E-Waybill number, not both.
+- If the customer&apos;s query does not fall under your supported intents, politely let them know you are unable to assist with that at this time.</description>
+            <developerName>instruction0_179C10000001zKv</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179C10000001zKv</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>VerifyCustomer_179C10000001zKv</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>SendEmailVerificationCode_179C10000001zKv</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>SendEmailVerificationCode_179C10000001zKv</fullName>
+            <description>Sends a generated verification code to the user’s email address.</description>
+            <developerName>SendEmailVerificationCode_179C10000001zKv</developerName>
+            <invocationTarget>SvcCopilotTmpl__SendVerificationCode</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>SendEmailVerificationCode</localDeveloperName>
+            <masterLabel>Send Email with Verification Code</masterLabel>
+            <source>SvcCopilotTmpl__SendEmailVerificationCode</source>
+        </localActions>
+        <localActions>
+            <fullName>VerifyCustomer_179C10000001zKv</fullName>
+            <description>Verifies whether the verification code entered by the user matches the code sent to the user&apos;s email address.</description>
+            <developerName>VerifyCustomer_179C10000001zKv</developerName>
+            <invocationTarget>SvcCopilotTmpl__VerifyCode</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>VerifyCustomer</localDeveloperName>
+            <masterLabel>Verify Customer</masterLabel>
+            <source>SvcCopilotTmpl__VerifyCustomer</source>
+        </localActions>
+        <localDeveloperName>ServiceCustomerVerification</localDeveloperName>
+        <masterLabel>Service Customer Verification</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>ReservationManagement_16jC100000019UH</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Handles requests to create new reservations for customers at their desired time slots.</description>
+        <developerName>ReservationManagement_16jC100000019UH</developerName>
+        <genAiPluginInstructions>
+            <description>You are Sahay, Safexpress&apos;s customer support assistant. You assist customers with the following:
+1. Waybill or consignment enquiry: Retrieve and present the current shipment status using the Waybill or E-Waybill number provided by the customer.
+2. Delay in delivery: Confirm the consignment details and capture the customer&apos;s concern to raise a delay complaint case.
+3. Post-delivery escalation: Capture escalation details against a delivered consignment and raise a case.
+4. Claim for damage, shortage or loss: Capture the claim intent and supporting details and raise a case.
+5. Business enquiry: Capture prospect details and service requirements to create a lead.
+6. Booking or pickup request: Capture the pickup requirement for a new consignment and raise a case.
+Always maintain a formal, professional and courteous tone. Respond in English only.
+
+**Rules you must follow at all times:**
+- Never ask the customer to call any helpline or send an email. You are their support.
+- Never rephrase or summarise the formattedResponse returned by any action. Present it exactly as returned.
+- Never assume urgency. Raise an urgent delivery request only when the customer explicitly states it.
+- The customer will provide either a Waybill number or an E-Waybill number, not both.
+- If the customer&apos;s query does not fall under your supported intents, politely let them know you are unable to assist with that at this time.</description>
+            <developerName>instruction0_179C10000001zKu</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179C10000001zKu</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>GetReservationTimeSlots_179C10000001zKu</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>AnswerQuestionsWithKnowledge_179C10000001zKu</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>IdentifyCustomerByEmail_179C10000001zKu</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>FinalizeReservation_179C10000001zKu</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>FinalizeReservation_179C10000001zKu</fullName>
+            <description>Books and finalizes a reservation for the time designated by the customer.</description>
+            <developerName>FinalizeReservation_179C10000001zKu</developerName>
+            <invocationTarget>SvcCopilotTmpl__FinalizeReservation</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>true</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>FinalizeReservation</localDeveloperName>
+            <masterLabel>Finalize Reservation</masterLabel>
+            <source>SvcCopilotTmpl__FinalizeReservation</source>
+        </localActions>
+        <localActions>
+            <fullName>IdentifyCustomerByEmail_179C10000001zKu</fullName>
+            <description>Identify a customer by their email address and return their contact record.</description>
+            <developerName>IdentifyCustomerByEmail_179C10000001zKu</developerName>
+            <invocationTarget>SvcCopilotTmpl__IdentifyCustomer</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>IdentifyCustomerByEmail</localDeveloperName>
+            <masterLabel>Identify Customer By Email</masterLabel>
+            <source>SvcCopilotTmpl__IdentifyCustomerByEmail</source>
+        </localActions>
+        <localActions>
+            <fullName>AnswerQuestionsWithKnowledge_179C10000001zKu</fullName>
+            <description>Answers questions about company policies and procedures, troubleshooting steps, or product information. For example: &apos;What is your return policy?&apos; &apos;How do I fix an issue?&apos; or &apos;What features does a product have?&apos;</description>
+            <developerName>AnswerQuestionsWithKnowledge_179C10000001zKu</developerName>
+            <invocationTarget>streamKnowledgeSearch</invocationTarget>
+            <invocationTargetType>standardInvocableAction</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>AnswerQuestionsWithKnowledge</localDeveloperName>
+            <masterLabel>Answer Questions with Knowledge</masterLabel>
+            <progressIndicatorMessage>Getting answers</progressIndicatorMessage>
+            <source>EmployeeCopilot__AnswerQuestionsWithKnowledge</source>
+        </localActions>
+        <localActions>
+            <fullName>GetReservationTimeSlots_179C10000001zKu</fullName>
+            <description>Returns a list of available time slots for the date specified by the customer.</description>
+            <developerName>GetReservationTimeSlots_179C10000001zKu</developerName>
+            <invocationTarget>SvcCopilotTmpl__GetAvailableTimeSlots</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>GetReservationTimeSlots</localDeveloperName>
+            <masterLabel>Get Reservation Time Slots</masterLabel>
+            <source>SvcCopilotTmpl__GetReservationTimeSlots</source>
+        </localActions>
+        <localDeveloperName>ReservationManagement</localDeveloperName>
+        <masterLabel>Reservation Management</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>CaseManagement_16jC100000019UH</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Handles customer inquiries and actions related to support cases, including providing case information, updating existing cases, and creating new cases.</description>
+        <developerName>CaseManagement_16jC100000019UH</developerName>
+        <genAiPluginInstructions>
+            <description>You are Sahay, Safexpress&apos;s customer support assistant. You assist customers with the following:
+1. Waybill or consignment enquiry: Retrieve and present the current shipment status using the Waybill or E-Waybill number provided by the customer.
+2. Delay in delivery: Confirm the consignment details and capture the customer&apos;s concern to raise a delay complaint case.
+3. Post-delivery escalation: Capture escalation details against a delivered consignment and raise a case.
+4. Claim for damage, shortage or loss: Capture the claim intent and supporting details and raise a case.
+5. Business enquiry: Capture prospect details and service requirements to create a lead.
+6. Booking or pickup request: Capture the pickup requirement for a new consignment and raise a case.
+Always maintain a formal, professional and courteous tone. Respond in English only.
+
+**Rules you must follow at all times:**
+- Never ask the customer to call any helpline or send an email. You are their support.
+- Never rephrase or summarise the formattedResponse returned by any action. Present it exactly as returned.
+- Never assume urgency. Raise an urgent delivery request only when the customer explicitly states it.
+- The customer will provide either a Waybill number or an E-Waybill number, not both.
+- If the customer&apos;s query does not fall under your supported intents, politely let them know you are unable to assist with that at this time.</description>
+            <developerName>instruction0_179C10000001zKx</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179C10000001zKx</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>AnswerQuestionsWithKnowledge_179C10000001zKx</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>CreateCaseEnhancedData_179C10000001zKx</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>GetCaseByVerifiedCaseNumber_179C10000001zKx</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>AddCaseComment_179C10000001zKx</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>GetCasesForVerifiedContact_179C10000001zKx</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>AnswerQuestionsWithKnowledge_179C10000001zKx</fullName>
+            <description>Answers questions about company policies and procedures, troubleshooting steps, or product information. For example: &apos;What is your return policy?&apos; &apos;How do I fix an issue?&apos; or &apos;What features does a product have?&apos;</description>
+            <developerName>AnswerQuestionsWithKnowledge_179C10000001zKx</developerName>
+            <invocationTarget>streamKnowledgeSearch</invocationTarget>
+            <invocationTargetType>standardInvocableAction</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>AnswerQuestionsWithKnowledge</localDeveloperName>
+            <masterLabel>Answer Questions with Knowledge</masterLabel>
+            <progressIndicatorMessage>Getting answers</progressIndicatorMessage>
+            <source>EmployeeCopilot__AnswerQuestionsWithKnowledge</source>
+        </localActions>
+        <localActions>
+            <fullName>CreateCaseEnhancedData_179C10000001zKx</fullName>
+            <description>Create a case for the customer that&apos;s transferred from the AI agent to a service rep. The case includes all information gathered from the customer, a summary of the progress made by the AI agent, a link to the conversation, and any attachments.</description>
+            <developerName>CreateCaseEnhancedData_179C10000001zKx</developerName>
+            <invocationTarget>SvcCopilotTmpl__CreateCaseEnhancedData</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>true</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>CreateCaseEnhancedData</localDeveloperName>
+            <masterLabel>Create Case with Enhanced Data</masterLabel>
+            <source>SvcCopilotTmpl__CreateCaseEnhancedData</source>
+        </localActions>
+        <localActions>
+            <fullName>AddCaseComment_179C10000001zKx</fullName>
+            <description>Let a customer add a comment to an existing case.</description>
+            <developerName>AddCaseComment_179C10000001zKx</developerName>
+            <invocationTarget>SvcCopilotTmpl__AddCaseComment</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>true</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>AddCaseComment</localDeveloperName>
+            <masterLabel>Add Case Comment</masterLabel>
+            <source>SvcCopilotTmpl__AddCaseComment</source>
+        </localActions>
+        <localActions>
+            <fullName>GetCasesForVerifiedContact_179C10000001zKx</fullName>
+            <description>Returns a list of cases related to a given Contact ID.</description>
+            <developerName>GetCasesForVerifiedContact_179C10000001zKx</developerName>
+            <invocationTarget>SvcCopilotTmpl__GetCasesVrfyCtct</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>GetCasesForVerifiedContact</localDeveloperName>
+            <masterLabel>Get Cases For Verified Contact</masterLabel>
+            <source>SvcCopilotTmpl__GetCasesForVerifiedContact</source>
+        </localActions>
+        <localActions>
+            <fullName>GetCaseByVerifiedCaseNumber_179C10000001zKx</fullName>
+            <description>Returns a case associated with a given contact ID and case number.</description>
+            <developerName>GetCaseByVerifiedCaseNumber_179C10000001zKx</developerName>
+            <invocationTarget>SvcCopilotTmpl__GetCaseByVrfyCaseNbr</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>GetCaseByVerifiedCaseNumber</localDeveloperName>
+            <masterLabel>Get Case By Verified Case Number</masterLabel>
+            <source>SvcCopilotTmpl__GetCaseByVerifiedCaseNumber</source>
+        </localActions>
+        <localDeveloperName>CaseManagement</localDeveloperName>
+        <masterLabel>Case Management</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>escalation_16jC100000019UH</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Handles requests from users who want to transfer or escalate their conversation to a live human agent.</description>
+        <developerName>escalation_16jC100000019UH</developerName>
+        <genAiPluginInstructions>
+            <description>You are Sahay, Safexpress&apos;s customer support assistant. You assist customers with the following:
+1. Waybill or consignment enquiry: Retrieve and present the current shipment status using the Waybill or E-Waybill number provided by the customer.
+2. Delay in delivery: Confirm the consignment details and capture the customer&apos;s concern to raise a delay complaint case.
+3. Post-delivery escalation: Capture escalation details against a delivered consignment and raise a case.
+4. Claim for damage, shortage or loss: Capture the claim intent and supporting details and raise a case.
+5. Business enquiry: Capture prospect details and service requirements to create a lead.
+6. Booking or pickup request: Capture the pickup requirement for a new consignment and raise a case.
+Always maintain a formal, professional and courteous tone. Respond in English only.
+
+**Rules you must follow at all times:**
+- Never ask the customer to call any helpline or send an email. You are their support.
+- Never rephrase or summarise the formattedResponse returned by any action. Present it exactly as returned.
+- Never assume urgency. Raise an urgent delivery request only when the customer explicitly states it.
+- The customer will provide either a Waybill number or an E-Waybill number, not both.
+- If the customer&apos;s query does not fall under your supported intents, politely let them know you are unable to assist with that at this time.</description>
+            <developerName>instruction0_179C10000001zKw</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179C10000001zKw</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>escalation</localDeveloperName>
+        <masterLabel>Escalation</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>ambiguous_question_16jC100000019UH</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Redirect conversation to relevant topics when user request is too ambiguous</description>
+        <developerName>ambiguous_question_16jC100000019UH</developerName>
+        <genAiPluginInstructions>
+            <description>You are Sahay, Safexpress&apos;s customer support assistant. You assist customers with the following:
+1. Waybill or consignment enquiry: Retrieve and present the current shipment status using the Waybill or E-Waybill number provided by the customer.
+2. Delay in delivery: Confirm the consignment details and capture the customer&apos;s concern to raise a delay complaint case.
+3. Post-delivery escalation: Capture escalation details against a delivered consignment and raise a case.
+4. Claim for damage, shortage or loss: Capture the claim intent and supporting details and raise a case.
+5. Business enquiry: Capture prospect details and service requirements to create a lead.
+6. Booking or pickup request: Capture the pickup requirement for a new consignment and raise a case.
+Always maintain a formal, professional and courteous tone. Respond in English only.
+
+**Rules you must follow at all times:**
+- Never ask the customer to call any helpline or send an email. You are their support.
+- Never rephrase or summarise the formattedResponse returned by any action. Present it exactly as returned.
+- Never assume urgency. Raise an urgent delivery request only when the customer explicitly states it.
+- The customer will provide either a Waybill number or an E-Waybill number, not both.
+- If the customer&apos;s query does not fall under your supported intents, politely let them know you are unable to assist with that at this time.</description>
+            <developerName>instruction0_179C10000001zKn</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179C10000001zKn</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>ambiguous_question</localDeveloperName>
+        <masterLabel>Ambiguous Question</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>GeneralFAQ_16jC100000019UH</fullName>
+        <canEscalate>false</canEscalate>
+        <description>This subagent is for helping answer customer&apos;s questions by searching through the knowledge articles and providing information from those articles. The questions can be about the company and its products, policies or business procedures</description>
+        <developerName>GeneralFAQ_16jC100000019UH</developerName>
+        <genAiPluginInstructions>
+            <description>You are Sahay, Safexpress&apos;s customer support assistant. You assist customers with the following:
+1. Waybill or consignment enquiry: Retrieve and present the current shipment status using the Waybill or E-Waybill number provided by the customer.
+2. Delay in delivery: Confirm the consignment details and capture the customer&apos;s concern to raise a delay complaint case.
+3. Post-delivery escalation: Capture escalation details against a delivered consignment and raise a case.
+4. Claim for damage, shortage or loss: Capture the claim intent and supporting details and raise a case.
+5. Business enquiry: Capture prospect details and service requirements to create a lead.
+6. Booking or pickup request: Capture the pickup requirement for a new consignment and raise a case.
+Always maintain a formal, professional and courteous tone. Respond in English only.
+
+**Rules you must follow at all times:**
+- Never ask the customer to call any helpline or send an email. You are their support.
+- Never rephrase or summarise the formattedResponse returned by any action. Present it exactly as returned.
+- Never assume urgency. Raise an urgent delivery request only when the customer explicitly states it.
+- The customer will provide either a Waybill number or an E-Waybill number, not both.
+- If the customer&apos;s query does not fall under your supported intents, politely let them know you are unable to assist with that at this time.</description>
+            <developerName>instruction0_179C10000001zKp</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179C10000001zKp</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>AnswerQuestionsWithKnowledge_179C10000001zKp</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>AnswerQuestionsWithKnowledge_179C10000001zKp</fullName>
+            <description>Answers questions about company policies and procedures, troubleshooting steps, or product information. For example: &apos;What is your return policy?&apos; &apos;How do I fix an issue?&apos; or &apos;What features does a product have?&apos;</description>
+            <developerName>AnswerQuestionsWithKnowledge_179C10000001zKp</developerName>
+            <invocationTarget>streamKnowledgeSearch</invocationTarget>
+            <invocationTargetType>standardInvocableAction</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>AnswerQuestionsWithKnowledge</localDeveloperName>
+            <masterLabel>Answer Questions with Knowledge</masterLabel>
+            <progressIndicatorMessage>Getting answers</progressIndicatorMessage>
+            <source>EmployeeCopilot__AnswerQuestionsWithKnowledge</source>
+        </localActions>
+        <localDeveloperName>GeneralFAQ</localDeveloperName>
+        <masterLabel>General FAQ</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>OrderInquiries_16jC100000019UH</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Handles questions related to a user’s order, order status, or order updates.</description>
+        <developerName>OrderInquiries_16jC100000019UH</developerName>
+        <genAiPluginInstructions>
+            <description>You are Sahay, Safexpress&apos;s customer support assistant. You assist customers with the following:
+1. Waybill or consignment enquiry: Retrieve and present the current shipment status using the Waybill or E-Waybill number provided by the customer.
+2. Delay in delivery: Confirm the consignment details and capture the customer&apos;s concern to raise a delay complaint case.
+3. Post-delivery escalation: Capture escalation details against a delivered consignment and raise a case.
+4. Claim for damage, shortage or loss: Capture the claim intent and supporting details and raise a case.
+5. Business enquiry: Capture prospect details and service requirements to create a lead.
+6. Booking or pickup request: Capture the pickup requirement for a new consignment and raise a case.
+Always maintain a formal, professional and courteous tone. Respond in English only.
+
+**Rules you must follow at all times:**
+- Never ask the customer to call any helpline or send an email. You are their support.
+- Never rephrase or summarise the formattedResponse returned by any action. Present it exactly as returned.
+- Never assume urgency. Raise an urgent delivery request only when the customer explicitly states it.
+- The customer will provide either a Waybill number or an E-Waybill number, not both.
+- If the customer&apos;s query does not fall under your supported intents, politely let them know you are unable to assist with that at this time.</description>
+            <developerName>instruction0_179C10000001zKo</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179C10000001zKo</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>AnswerQuestionsWithKnowledge_179C10000001zKo</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>IdentifyCustomerByEmail_179C10000001zKo</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>CancelOrder_179C10000001zKo</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>GetOrdersByContact_179C10000001zKo</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>GetOrderByOrderNumber_179C10000001zKo</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>AnswerQuestionsWithKnowledge_179C10000001zKo</fullName>
+            <description>Answers questions about company policies and procedures, troubleshooting steps, or product information. For example: &apos;What is your return policy?&apos; &apos;How do I fix an issue?&apos; or &apos;What features does a product have?&apos;</description>
+            <developerName>AnswerQuestionsWithKnowledge_179C10000001zKo</developerName>
+            <invocationTarget>streamKnowledgeSearch</invocationTarget>
+            <invocationTargetType>standardInvocableAction</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>AnswerQuestionsWithKnowledge</localDeveloperName>
+            <masterLabel>Answer Questions with Knowledge</masterLabel>
+            <progressIndicatorMessage>Getting answers</progressIndicatorMessage>
+            <source>EmployeeCopilot__AnswerQuestionsWithKnowledge</source>
+        </localActions>
+        <localActions>
+            <fullName>CancelOrder_179C10000001zKo</fullName>
+            <description>Cancels a customer’s order.</description>
+            <developerName>CancelOrder_179C10000001zKo</developerName>
+            <invocationTarget>SvcCopilotTmpl__CancelOrder</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>true</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>CancelOrder</localDeveloperName>
+            <masterLabel>Cancel Order</masterLabel>
+            <source>SvcCopilotTmpl__CancelOrder</source>
+        </localActions>
+        <localActions>
+            <fullName>GetOrderByOrderNumber_179C10000001zKo</fullName>
+            <description>Returns the order information associated with a given contact ID and order number.</description>
+            <developerName>GetOrderByOrderNumber_179C10000001zKo</developerName>
+            <invocationTarget>SvcCopilotTmpl__GetOrderByOrderNumber</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>GetOrderByOrderNumber</localDeveloperName>
+            <masterLabel>Get Order By Order Number</masterLabel>
+            <source>SvcCopilotTmpl__GetOrderByOrderNumber</source>
+        </localActions>
+        <localActions>
+            <fullName>IdentifyCustomerByEmail_179C10000001zKo</fullName>
+            <description>Identify a customer by their email address and return their contact record.</description>
+            <developerName>IdentifyCustomerByEmail_179C10000001zKo</developerName>
+            <invocationTarget>SvcCopilotTmpl__IdentifyCustomer</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>IdentifyCustomerByEmail</localDeveloperName>
+            <masterLabel>Identify Customer By Email</masterLabel>
+            <source>SvcCopilotTmpl__IdentifyCustomerByEmail</source>
+        </localActions>
+        <localActions>
+            <fullName>GetOrdersByContact_179C10000001zKo</fullName>
+            <description>Returns a list of orders associated with a given contact record.</description>
+            <developerName>GetOrdersByContact_179C10000001zKo</developerName>
+            <invocationTarget>SvcCopilotTmpl__GetOrdersByContact</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>GetOrdersByContact</localDeveloperName>
+            <masterLabel>Get Orders By Contact</masterLabel>
+            <source>SvcCopilotTmpl__GetOrdersByContact</source>
+        </localActions>
+        <localDeveloperName>OrderInquiries</localDeveloperName>
+        <masterLabel>Order Inquiries</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <masterLabel>Sahay</masterLabel>
+    <plannerType>Atlas__ConcurrentMultiAgentOrchestration</plannerType>
+</GenAiPlannerBundle>

@@ -1,0 +1,208 @@
+﻿{
+  "status": 0,
+  "result": {
+    "records": [
+      {
+        "attributes": {
+          "type": "Group",
+          "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoDMAU"
+        },
+        "Id": "00GC10000040QoDMAU",
+        "DeveloperName": "SG_RGN_APT_RM",
+        "Name": "SG_RGN_APT_RM",
+        "Type": "Regular",
+        "DoesIncludeBosses": true
+      },
+      {
+        "attributes": {
+          "type": "Group",
+          "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoEMAU"
+        },
+        "Id": "00GC10000040QoEMAU",
+        "DeveloperName": "SG_RGN_BJO_RM",
+        "Name": "SG_RGN_BJO_RM",
+        "Type": "Regular",
+        "DoesIncludeBosses": true
+      },
+      {
+        "attributes": {
+          "type": "Group",
+          "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoFMAU"
+        },
+        "Id": "00GC10000040QoFMAU",
+        "DeveloperName": "SG_RGN_DLI_RM",
+        "Name": "SG_RGN_DLI_RM",
+        "Type": "Regular",
+        "DoesIncludeBosses": true
+      },
+      {
+        "attributes": {
+          "type": "Group",
+          "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoGMAU"
+        },
+        "Id": "00GC10000040QoGMAU",
+        "DeveloperName": "SG_RGN_GJT_RM",
+        "Name": "SG_RGN_GJT_RM",
+        "Type": "Regular",
+        "DoesIncludeBosses": true
+      },
+      {
+        "attributes": {
+          "type": "Group",
+          "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoHMAU"
+        },
+        "Id": "00GC10000040QoHMAU",
+        "DeveloperName": "SG_RGN_HRN_RM",
+        "Name": "SG_RGN_HRN_RM",
+        "Type": "Regular",
+        "DoesIncludeBosses": true
+      },
+      {
+        "attributes": {
+          "type": "Group",
+          "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoIMAU"
+        },
+        "Id": "00GC10000040QoIMAU",
+        "DeveloperName": "SG_RGN_JKH_RM",
+        "Name": "SG_RGN_JKH_RM",
+        "Type": "Regular",
+        "DoesIncludeBosses": true
+      },
+      {
+        "attributes": {
+          "type": "Group",
+          "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoJMAU"
+        },
+        "Id": "00GC10000040QoJMAU",
+        "DeveloperName": "SG_RGN_KRL_RM",
+        "Name": "SG_RGN_KRL_RM",
+        "Type": "Regular",
+        "DoesIncludeBosses": true
+      },
+      {
+        "attributes": {
+          "type": "Group",
+          "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoKMAU"
+        },
+        "Id": "00GC10000040QoKMAU",
+        "DeveloperName": "SG_RGN_KTK_RM",
+        "Name": "SG_RGN_KTK_RM",
+        "Type": "Regular",
+        "DoesIncludeBosses": true
+      },
+      {
+        "attributes": {
+          "type": "Group",
+          "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoLMAU"
+        },
+        "Id": "00GC10000040QoLMAU",
+        "DeveloperName": "SG_RGN_MHG_RM",
+        "Name": "SG_RGN_MHG_RM",
+        "Type": "Regular",
+        "DoesIncludeBosses": true
+      },
+      {
+        "attributes": {
+          "type": "Group",
+          "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoMMAU"
+        },
+        "Id": "00GC10000040QoMMAU",
+        "DeveloperName": "SG_RGN_MPC_RM",
+        "Name": "SG_RGN_MPC_RM",
+        "Type": "Regular",
+        "DoesIncludeBosses": true
+      },
+      {
+        "attributes": {
+          "type": "Group",
+          "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoNMAU"
+        },
+        "Id": "00GC10000040QoNMAU",
+        "DeveloperName": "SG_RGN_MUM_RM",
+        "Name": "SG_RGN_MUM_RM",
+        "Type": "Regular",
+        "DoesIncludeBosses": true
+      },
+      {
+        "attributes": {
+          "type": "Group",
+          "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoOMAU"
+        },
+        "Id": "00GC10000040QoOMAU",
+        "DeveloperName": "SG_RGN_NRE_RM",
+        "Name": "SG_RGN_NRE_RM",
+        "Type": "Regular",
+        "DoesIncludeBosses": true
+      },
+      {
+        "attributes": {
+          "type": "Group",
+          "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoPMAU"
+        },
+        "Id": "00GC10000040QoPMAU",
+        "DeveloperName": "SG_RGN_PBC_RM",
+        "Name": "SG_RGN_PBC_RM",
+        "Type": "Regular",
+        "DoesIncludeBosses": true
+      },
+      {
+        "attributes": {
+          "type": "Group",
+          "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoQMAU"
+        },
+        "Id": "00GC10000040QoQMAU",
+        "DeveloperName": "SG_RGN_RJN_RM",
+        "Name": "SG_RGN_RJN_RM",
+        "Type": "Regular",
+        "DoesIncludeBosses": true
+      },
+      {
+        "attributes": {
+          "type": "Group",
+          "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoRMAU"
+        },
+        "Id": "00GC10000040QoRMAU",
+        "DeveloperName": "SG_RGN_TNP_RM",
+        "Name": "SG_RGN_TNP_RM",
+        "Type": "Regular",
+        "DoesIncludeBosses": true
+      },
+      {
+        "attributes": {
+          "type": "Group",
+          "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoSMAU"
+        },
+        "Id": "00GC10000040QoSMAU",
+        "DeveloperName": "SG_RGN_UKH_RM",
+        "Name": "SG_RGN_UKH_RM",
+        "Type": "Regular",
+        "DoesIncludeBosses": true
+      },
+      {
+        "attributes": {
+          "type": "Group",
+          "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoTMAU"
+        },
+        "Id": "00GC10000040QoTMAU",
+        "DeveloperName": "SG_RGN_UPR_RM",
+        "Name": "SG_RGN_UPR_RM",
+        "Type": "Regular",
+        "DoesIncludeBosses": true
+      },
+      {
+        "attributes": {
+          "type": "Group",
+          "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoUMAU"
+        },
+        "Id": "00GC10000040QoUMAU",
+        "DeveloperName": "SG_RGN_WBS_RM",
+        "Name": "SG_RGN_WBS_RM",
+        "Type": "Regular",
+        "DoesIncludeBosses": true
+      }
+    ],
+    "totalSize": 18,
+    "done": true
+  },
+  "warnings": []
+}

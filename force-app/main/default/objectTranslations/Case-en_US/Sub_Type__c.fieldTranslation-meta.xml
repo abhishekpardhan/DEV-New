@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Sub Type --></label>
+    <name>Sub_Type__c</name>
+    <picklistValues>
+        <masterLabel>3PL</masterLabel>
+        <translation><!-- 3PL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>3PL and Distribution</masterLabel>
+        <translation><!-- 3PL and Distribution --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Address Change</masterLabel>
+        <translation><!-- Address Change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bike Express</masterLabel>
+        <translation><!-- Bike Express --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Booking branch</masterLabel>
+        <translation><!-- Booking branch --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Booking not done</masterLabel>
+        <translation><!-- Booking not done --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Branch / Office / Staff</masterLabel>
+        <translation><!-- Branch / Office / Staff --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CREDIT+RETAIL</masterLabel>
+        <translation><!-- CREDIT+RETAIL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Consignee Change</masterLabel>
+        <translation><!-- Consignee Change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Credit</masterLabel>
+        <translation><!-- Credit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Credit- Inbound</masterLabel>
+        <translation><!-- Credit- Inbound --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Credit- Outbound</masterLabel>
+        <translation><!-- Credit- Outbound --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DOD_DOC Cancellation</masterLabel>
+        <translation><!-- DOD_DOC Cancellation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Damage</masterLabel>
+        <translation><!-- Damage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Delay in delivery</masterLabel>
+        <translation><!-- Delay in delivery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Delivery branch</masterLabel>
+        <translation><!-- Delivery branch --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Delivery not done</masterLabel>
+        <translation><!-- Delivery not done --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Distribution</masterLabel>
+        <translation><!-- Distribution --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FTL</masterLabel>
+        <translation><!-- FTL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GSTIN Change</masterLabel>
+        <translation><!-- GSTIN Change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Interchange</masterLabel>
+        <translation><!-- Interchange --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MOP Change</masterLabel>
+        <translation><!-- MOP Change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Others</masterLabel>
+        <translation><!-- Others --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>POD Credit</masterLabel>
+        <translation><!-- POD Credit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>POD Retail</masterLabel>
+        <translation><!-- POD Retail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pilferred</masterLabel>
+        <translation><!-- Pilferred --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pincode Change</masterLabel>
+        <translation><!-- Pincode Change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Products &amp; Services</masterLabel>
+        <translation><!-- Products &amp; Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Re-Booking</masterLabel>
+        <translation><!-- Re-Booking --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Re-Routing</masterLabel>
+        <translation><!-- Re-Routing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Refund</masterLabel>
+        <translation><!-- Refund --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Request for HUB Div</masterLabel>
+        <translation><!-- Request for HUB Div --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Retail</masterLabel>
+        <translation><!-- Retail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Retail- C2H</masterLabel>
+        <translation><!-- Retail- C2H --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Retail- E2M</masterLabel>
+        <translation><!-- Retail- E2M --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Retail- PRC</masterLabel>
+        <translation><!-- Retail- PRC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Retail- Sanik Express</masterLabel>
+        <translation><!-- Retail- Sanik Express --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Retail-Non-PRC</masterLabel>
+        <translation><!-- Retail-Non-PRC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reverse Inbound- Credit</masterLabel>
+        <translation><!-- Reverse Inbound- Credit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reverse Inbound- Retail-Non-PRC</masterLabel>
+        <translation><!-- Reverse Inbound- Retail-Non-PRC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reverse Inbound- Retail-PRC</masterLabel>
+        <translation><!-- Reverse Inbound- Retail-PRC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Route vehicle</masterLabel>
+        <translation><!-- Route vehicle --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Service Failure</masterLabel>
+        <translation><!-- Service Failure --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shipment On Hold</masterLabel>
+        <translation><!-- Shipment On Hold --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shipment Re-Booking</masterLabel>
+        <translation><!-- Shipment Re-Booking --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shipment Status</masterLabel>
+        <translation><!-- Shipment Status --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Short / Part Shipment</masterLabel>
+        <translation><!-- Short / Part Shipment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Status</masterLabel>
+        <translation><!-- Status --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Transportation+3PL</masterLabel>
+        <translation><!-- Transportation+3PL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wrong Behaviours</masterLabel>
+        <translation><!-- Wrong Behaviours --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wrong Delivery</masterLabel>
+        <translation><!-- Wrong Delivery --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>is_Assign_Branch_Duplicate__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is taken to supress duplicate branch record to come in the active code report.</description>
+    <label>is Assign Branch Duplicate</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

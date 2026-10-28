@@ -1,0 +1,39 @@
+<!-- 
+    File Name          : wayBillModal
+    Description        : This Component is is Child component and to show the freight calculator and way bill track table from the bew Case Page.
+    Author             : Deepak 
+    Last Modified Date : 27/7/2021
+    Last Modified By   :
+    Modification Logs  
+    Ver           Date              Author                Modification
+    =====================================================================
+    1.0          27/7/2021         Deepak                Initial Version
+
+-->
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnoreNextLine -->
+<template>
+    <div class="slds-modal slds-fade-in-open slds-backdrop slds-modal--large">
+        <div class="slds-modal__container">
+            <!-- HEADER Section-->
+            <div class="slds-modal__header">
+                <lightning-button-icon icon-name="utility:close" alternative-text="Close this window" size="large"
+                    variant="bare-inverse" onclick={closeModal} class="slds-modal__close">
+                </lightning-button-icon>
+                <h2>{headerText}</h2>
+            </div>
+            <!--Body Section-->
+
+            <div class="slds-modal__content slds-var-p-around_medium" if:false ={isTrackHistory}>
+                <c-recent-cases-by-way-bill way-bill-number={wayBillNumber} record-limit={recordLimit}></c-recent-cases-by-way-bill>
+            </div>
+            <div class="slds-modal__content slds-var-p-around_medium" if:true ={isTrackHistory}>
+                <c-way-bill-track-table track-data={trackData} ></c-way-bill-track-table>
+            </div>  
+            <!--Footer Section-->
+            <div class="slds-modal__footer">
+                <lightning-button label="Close" variant="brand" onclick={closeModal}></lightning-button>
+            </div>
+        </div>
+    </div>
+</template>

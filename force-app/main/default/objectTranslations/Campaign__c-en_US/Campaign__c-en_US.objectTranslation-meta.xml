@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Campaign</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Campaigns</value>
+    </caseValues>
+    <layouts>
+        <layout>Campaign Layout</layout>
+        <sections>
+            <label><!-- Campaign Address --></label>
+            <section>Campaign Address</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Hide Campaign Field Layout</layout>
+        <sections>
+            <label><!-- Campaign Address --></label>
+            <section>Campaign Address</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Existing Leads --></label>
+        <name>Existing_Leads</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Campaign Name is not editable! --></errorMessage>
+        <name>Campaign_name</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Campaign end date must be within 7 days or equal to 7 days from start date. --></errorMessage>
+        <name>EndDateLessOrEqualTo7Days</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- End Date Should be after Start Date. --></errorMessage>
+        <name>End_Date_After_Start_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Valid Upto  should not be more than 90 days from start date and must be a future date --></errorMessage>
+        <name>Expire_On_after_end_date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Pin Code Should be 6 Digits. --></errorMessage>
+        <name>Pin_code_should_be_6_digit</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select Reason. --></errorMessage>
+        <name>Reason_Mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill future date. --></errorMessage>
+        <name>Start_date_future</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Campaign “Valid for lead generation” must not be more than 3 days from end date. --></errorMessage>
+        <name>Valid_for_lead_generation</name>
+    </validationRules>
+</CustomObjectTranslation>

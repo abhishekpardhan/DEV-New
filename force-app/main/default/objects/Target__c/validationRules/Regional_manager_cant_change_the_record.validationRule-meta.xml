@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Regional_manager_cant_change_the_record</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(RecordType.DeveloperName =&apos;Region&apos; , $Profile.Name =&apos;Regional Manager&apos;)</errorConditionFormula>
+    <errorMessage>You are not able to edit this record.For further Information please ask your administrator.</errorMessage>
+</ValidationRule>

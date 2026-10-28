@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Others_reason_mandatory_for_collection</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+!ISCHANGED(OwnerId),
+ISPICKVAL( non_recoverable_reason__c ,&apos;Others&apos;),
+ISBLANK( If_Others_Please_Specify__c ),
+NOT($Profile.Name = &apos;Portfolio Management&apos;)
+)</errorConditionFormula>
+    <errorDisplayField>If_Others_Please_Specify__c</errorDisplayField>
+    <errorMessage>Please specify If Non recoverable reason is selected as &apos;Others&apos;</errorMessage>
+</ValidationRule>

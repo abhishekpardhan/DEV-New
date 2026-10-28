@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>BLUEDART</fullName>
+        <default>false</default>
+        <label>BLUEDART</label>
+    </customValue>
+    <customValue>
+        <fullName>DELHIVERY</fullName>
+        <default>false</default>
+        <label>DELHIVERY</label>
+    </customValue>
+    <customValue>
+        <fullName>DTDC</fullName>
+        <default>false</default>
+        <label>DTDC</label>
+    </customValue>
+    <customValue>
+        <fullName>FUTURE LOGISTICS</fullName>
+        <default>false</default>
+        <label>FUTURE LOGISTICS</label>
+    </customValue>
+    <customValue>
+        <fullName>GATI</fullName>
+        <default>false</default>
+        <label>GATI</label>
+    </customValue>
+    <customValue>
+        <fullName>LOCAL TRANSPORTER</fullName>
+        <default>false</default>
+        <label>LOCAL TRANSPORTER</label>
+    </customValue>
+    <customValue>
+        <fullName>MAHINDRA LOGISTICS</fullName>
+        <default>false</default>
+        <label>MAHINDRA LOGISTICS</label>
+    </customValue>
+    <customValue>
+        <fullName>NITCO</fullName>
+        <default>false</default>
+        <label>NITCO</label>
+    </customValue>
+    <customValue>
+        <fullName>OM LOGISTICS</fullName>
+        <default>false</default>
+        <label>OM LOGISTICS</label>
+    </customValue>
+    <customValue>
+        <fullName>OTHERS</fullName>
+        <default>false</default>
+        <label>OTHERS</label>
+    </customValue>
+    <customValue>
+        <fullName>RAHUL CARGO</fullName>
+        <default>false</default>
+        <label>RAHUL CARGO</label>
+    </customValue>
+    <customValue>
+        <fullName>VRL</fullName>
+        <default>false</default>
+        <label>VRL</label>
+    </customValue>
+    <customValue>
+        <fullName>V-TRANS</fullName>
+        <default>false</default>
+        <label>V-TRANS</label>
+    </customValue>
+    <customValue>
+        <fullName>V-XPRESS</fullName>
+        <default>false</default>
+        <label>V-XPRESS</label>
+    </customValue>
+    <customValue>
+        <fullName>XPRESSBEES</fullName>
+        <default>false</default>
+        <label>XPRESSBEES</label>
+    </customValue>
+    <customValue>
+        <fullName>NONE</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>NONE</label>
+    </customValue>
+    <customValue>
+        <fullName>TCI XPS</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>TCI XPS</label>
+    </customValue>
+    <customValue>
+        <fullName>TCI</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>TCI</label>
+    </customValue>
+    <customValue>
+        <fullName>STARTREK</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>STARTREK</label>
+    </customValue>
+    <customValue>
+        <fullName>QUICK N SAFE</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>QUICK N SAFE</label>
+    </customValue>
+    <customValue>
+        <fullName>FLYWHEEL</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>FLYWHEEL</label>
+    </customValue>
+    <customValue>
+        <fullName>FIRST FLIGHT</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>FIRST FLIGHT</label>
+    </customValue>
+    <customValue>
+        <fullName>FEDEX</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>FEDEX</label>
+    </customValue>
+    <masterLabel>Competition</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

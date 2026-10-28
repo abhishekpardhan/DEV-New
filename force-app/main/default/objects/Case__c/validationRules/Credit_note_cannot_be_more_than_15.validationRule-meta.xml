@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_note_cannot_be_more_than_15</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(RecordType.DeveloperName = &apos;Credit_Debit_Note&apos; , OR(ISNEW(),ISCHANGED(Credit_Debit_note_number__c)),
+AND(!ISBLANK(Credit_Debit_note_number__c),OR(
+LEN( Credit_Debit_note_number__c) &lt;= 11 ,
+LEN( Credit_Debit_note_number__c) = 13,
+LEN( Credit_Debit_note_number__c) = 14,
+LEN( Credit_Debit_note_number__c) &gt;= 16
+)
+))</errorConditionFormula>
+    <errorDisplayField>Credit_Debit_note_number__c</errorDisplayField>
+    <errorMessage>Credit/Debit note number Should be 12 and 15 digits.</errorMessage>
+</ValidationRule>

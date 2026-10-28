@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Quote</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Quotes</value>
+    </caseValues>
+    <layouts>
+        <layout>Approval Process layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Central Retail Team Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Central Team Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Deferred Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Layout after approval Action</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Quote(Above BDM) Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Quote(BDM) Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Create/Edit/View Quotation --></label>
+        <name>Quotation</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Reject/Defer Quote --></label>
+        <name>Reject_Deffer_Quote</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Remarks --></label>
+        <name>Remarks</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Send Quote To Central Team --></label>
+        <name>Send_Quote_To_Central_Team</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Send Quote To Customer --></label>
+        <name>Send_Quote_To_Customer</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Send Quote To Customer --></label>
+        <name>Send_To_Customer</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Approval Process record type --></label>
+        <name>Approval_Process_record_type</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Deferred Recordtype --></label>
+        <name>Deferred_Recordtype</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Layout after approval Action --></label>
+        <name>Layout_after_approval_Action</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- New Quote --></label>
+        <name>New_Quote</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- The quote is Locked since the Opportunity is Closed Won. --></errorMessage>
+        <name>CannotEditQuote</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Can only update Status to &apos;Deferred&apos; if quote is approved. --></errorMessage>
+        <name>Cannot_Modify_Fields_if_Deferred</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Quote Name is not editable! --></errorMessage>
+        <name>Quote_Name_No_Editable</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Quote To Be Sent must be checked for adding a quote --></errorMessage>
+        <name>Validate_Quote_On_Existing_New_Opportuni</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can&apos;t modify this record. --></errorMessage>
+        <name>quote_deferred_validation</name>
+    </validationRules>
+    <workflowTasks>
+        <name>Opportunity_Type_Existing</name>
+        <subject><!-- Opportunity Type Existing --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

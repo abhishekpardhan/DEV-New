@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Retail Sub Vertical --></label>
+    <name>Product_Subcategory__c</name>
+    <picklistValues>
+        <masterLabel>Almond</masterLabel>
+        <translation><!-- Almond --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BikeXpress</masterLabel>
+        <translation><!-- BikeXpress --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Black Pepper</masterLabel>
+        <translation><!-- Black Pepper --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Books</masterLabel>
+        <translation><!-- Books --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Campus2Home</masterLabel>
+        <translation><!-- Campus2Home --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cardamom</masterLabel>
+        <translation><!-- Cardamom --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cashew</masterLabel>
+        <translation><!-- Cashew --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Chilli</masterLabel>
+        <translation><!-- Chilli --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Coffee</masterLabel>
+        <translation><!-- Coffee --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dry Fruit</masterLabel>
+        <translation><!-- Dry Fruit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Easy2Move</masterLabel>
+        <translation><!-- Easy2Move --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Electrical and appliances</masterLabel>
+        <translation><!-- Electrical and appliances --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Electronic product</masterLabel>
+        <translation><!-- Electronic product --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Engineering product</masterLabel>
+        <translation><!-- Engineering product --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FMCG</masterLabel>
+        <translation><!-- FMCG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Food Product</masterLabel>
+        <translation><!-- Food Product --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Footwear</masterLabel>
+        <translation><!-- Footwear --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Furniture</masterLabel>
+        <translation><!-- Furniture --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Handicraft</masterLabel>
+        <translation><!-- Handicraft --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Handloom</masterLabel>
+        <translation><!-- Handloom --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Herbs</masterLabel>
+        <translation><!-- Herbs --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hosiery</masterLabel>
+        <translation><!-- Hosiery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Isabgol</masterLabel>
+        <translation><!-- Isabgol --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jeera</masterLabel>
+        <translation><!-- Jeera --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kopra</masterLabel>
+        <translation><!-- Kopra --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Makhana</masterLabel>
+        <translation><!-- Makhana --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Metal Products</masterLabel>
+        <translation><!-- Metal Products --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Others</masterLabel>
+        <translation><!-- Others --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pharma</masterLabel>
+        <translation><!-- Pharma --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Readymade Garment</masterLabel>
+        <translation><!-- Readymade Garment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SafeRelocation</masterLabel>
+        <translation><!-- SafeRelocation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SainikXpress</masterLabel>
+        <translation><!-- SainikXpress --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Saree and Suit piece</masterLabel>
+        <translation><!-- Saree and Suit piece --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Saunf</masterLabel>
+        <translation><!-- Saunf --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Seeds</masterLabel>
+        <translation><!-- Seeds --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Spices</masterLabel>
+        <translation><!-- Spices --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sports Goods</masterLabel>
+        <translation><!-- Sports Goods --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Supari</masterLabel>
+        <translation><!-- Supari --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tea</masterLabel>
+        <translation><!-- Tea --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Textile and Fabric</masterLabel>
+        <translation><!-- Textile and Fabric --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Turmeric</masterLabel>
+        <translation><!-- Turmeric --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Walnut</masterLabel>
+        <translation><!-- Walnut --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

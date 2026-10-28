@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Event Purpose --></label>
+    <name>Event_Purpose__c</name>
+    <picklistValues>
+        <masterLabel>Administrative Work</masterLabel>
+        <translation><!-- Administrative Work --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Associate Meeting</masterLabel>
+        <translation><!-- Associate Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Branch Visit</masterLabel>
+        <translation><!-- Branch Visit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Existing Customer Meeting</masterLabel>
+        <translation><!-- Existing Customer Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inbound Customer Meeting</masterLabel>
+        <translation><!-- Inbound Customer Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incident Spot Visit</masterLabel>
+        <translation><!-- Incident Spot Visit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Internal Team Meeting</masterLabel>
+        <translation><!-- Internal Team Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing/Promotion</masterLabel>
+        <translation><!-- Marketing/Promotion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Customer Meeting</masterLabel>
+        <translation><!-- New Customer Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Retail Customer Meeting</masterLabel>
+        <translation><!-- Retail Customer Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Return to Location</masterLabel>
+        <translation><!-- Return to Location --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

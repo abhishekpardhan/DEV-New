@@ -1,0 +1,49 @@
+{
+  "required" : [ "caseNature", "caseType", "subtype", "waybillNumber" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "caseNature" : {
+      "title" : "Case Nature",
+      "description" : "The nature of the escalation case. Typically set to 'Complaint' when logging post-delivery issues like damaged goods or shortages.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "caseType" : {
+      "title" : "Case Type",
+      "description" : "The classification type of the case being created or searched. Typically set to 'Complaint'.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "customerEmail" : {
+      "title" : "Customer Email",
+      "description" : "The email address supplied by the customer for receiving escalation case updates and communication.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "customerMobile" : {
+      "title" : "Customer Mobile",
+      "description" : "The mobile phone number supplied by the customer for contact and SMS updates regarding the escalation case.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "subtype" : {
+      "title" : "Subtype",
+      "description" : "The specific customer complaint or issue category regarding the delivered shipment (e.g., Material Damaged, Short Delivery, Delay, Delivery Staff Behaviour).",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "waybillNumber" : {
+      "title" : "Waybill Number",
+      "description" : "The 12-digit Safexpress waybill or consignment tracking number provided by the customer for checking status or logging an escalation.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

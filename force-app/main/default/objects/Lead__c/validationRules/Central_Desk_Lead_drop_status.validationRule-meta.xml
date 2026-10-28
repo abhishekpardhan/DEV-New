@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Central_Desk_Lead_drop_status</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND($Profile.Name &lt;&gt;&apos;Central Corporate Team&apos;, ISPICKVAL(Status__c, &apos;Dropped by Central desk&apos;))</errorConditionFormula>
+    <errorDisplayField>Status__c</errorDisplayField>
+    <errorMessage>Only Central Desk can use this status</errorMessage>
+</ValidationRule>

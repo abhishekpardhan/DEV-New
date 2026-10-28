@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Collection_Recoverable_Rule</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(
+AND(
+!IsChanged(OwnerId),
+RecordType.DeveloperName = &apos;Collection&apos;,
+NOT($Permission.Skip_Validation_Rule),
+ISPICKVAL(Payment_Remaining__c, &apos;Recoverable&apos;),
+OR(
+Remaining_Payment_Tentative_Date__c &lt;= TODAY(),
+ISNULL(TEXT(Payment_By__c)),
+ISNULL(Collectable_Amount__c)
+),NOT($Profile.Name =&apos;Integration User&apos;),
+NOT($Profile.Name = &apos;Portfolio Management&apos;)
+),
+True,
+False
+)</errorConditionFormula>
+    <errorMessage>Please check Tentative Date OR Payment By OR Collectable amount</errorMessage>
+</ValidationRule>

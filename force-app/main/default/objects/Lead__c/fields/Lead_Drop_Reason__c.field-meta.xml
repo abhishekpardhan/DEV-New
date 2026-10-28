@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Drop_Reason__c</fullName>
+    <label>Lead Drop Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Status__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Drop_Lost_Reason</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Dropped by Central desk</controllingFieldValue>
+            <controllingFieldValue>Dropped</controllingFieldValue>
+            <valueName>Customer Not Interested</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dropped by Central desk</controllingFieldValue>
+            <controllingFieldValue>Dropped</controllingFieldValue>
+            <valueName>Duplicate Lead</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dropped by Central desk</controllingFieldValue>
+            <controllingFieldValue>Dropped</controllingFieldValue>
+            <valueName>Existing Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dropped by Central desk</controllingFieldValue>
+            <controllingFieldValue>Dropped</controllingFieldValue>
+            <valueName>FTL Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dropped by Central desk</controllingFieldValue>
+            <controllingFieldValue>Dropped</controllingFieldValue>
+            <valueName>Irrelevant Lead</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dropped by Central desk</controllingFieldValue>
+            <controllingFieldValue>Dropped</controllingFieldValue>
+            <valueName>Low Potential</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dropped by Central desk</controllingFieldValue>
+            <controllingFieldValue>Dropped</controllingFieldValue>
+            <valueName>No Response</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dropped by Central desk</controllingFieldValue>
+            <controllingFieldValue>Dropped</controllingFieldValue>
+            <valueName>Not Servicable</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dropped by Central desk</controllingFieldValue>
+            <controllingFieldValue>Dropped</controllingFieldValue>
+            <valueName>Retail Lead</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dropped by Central desk</controllingFieldValue>
+            <controllingFieldValue>Dropped</controllingFieldValue>
+            <valueName>Rate Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dropped by Central desk</controllingFieldValue>
+            <controllingFieldValue>Dropped</controllingFieldValue>
+            <valueName>Within City Distribution</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dropped by Central desk</controllingFieldValue>
+            <controllingFieldValue>Dropped</controllingFieldValue>
+            <valueName>Others</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

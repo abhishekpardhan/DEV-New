@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>invoice_mandate</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(OR( ISPICKVAL( Case_Typee__c , &apos;Credit Note&apos;),ISPICKVAL( Case_Typee__c , &apos;Commercial Credit Note&apos;), ISPICKVAL(Case_Typee__c , &apos;Revised Bill&apos;), ISPICKVAL(Case_Typee__c , &apos;Base location/Collection Location/Bill Submission Location change&apos;), ISPICKVAL(Case_Typee__c , &apos;GST Issue&apos;), ISPICKVAL(Case_Typee__c , &apos;Bill Dispatch&apos;), ISPICKVAL(Case_Typee__c , &apos;POD requirement/CD requirement&apos;), ISPICKVAL(Case_Typee__c , &apos;Freight MIS requirement&apos;), ISPICKVAL(Case_Typee__c , &apos;Debit Note/Allied Bill&apos;)), ISBLANK(Invoice__c ),ISPICKVAL(Account__r.Type__c, &apos;Credit&apos;))</errorConditionFormula>
+    <errorDisplayField>Invoice__c</errorDisplayField>
+    <errorMessage>Please fill the invoice number</errorMessage>
+</ValidationRule>

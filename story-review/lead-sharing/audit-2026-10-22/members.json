@@ -1,0 +1,1178 @@
+﻿{
+  "status": 0,
+  "result": {
+    "records": [
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuxIAE"
+        },
+        "Id": "011C10000063ZuxIAE",
+        "GroupId": "00GC10000040QoUMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoUMAU"
+          },
+          "DeveloperName": "SG_RGN_WBS_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3SHUA0"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuwIAE"
+        },
+        "Id": "011C10000063ZuwIAE",
+        "GroupId": "00GC10000040QoUMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoUMAU"
+          },
+          "DeveloperName": "SG_RGN_WBS_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3StUAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuyIAE"
+        },
+        "Id": "011C10000063ZuyIAE",
+        "GroupId": "00GC10000040QoUMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoUMAU"
+          },
+          "DeveloperName": "SG_RGN_WBS_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3TVUA0"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuzIAE"
+        },
+        "Id": "011C10000063ZuzIAE",
+        "GroupId": "00GC10000040QoUMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoUMAU"
+          },
+          "DeveloperName": "SG_RGN_WBS_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3U7UAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuBIAU"
+        },
+        "Id": "011C10000063ZuBIAU",
+        "GroupId": "00GC10000040QoIMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoIMAU"
+          },
+          "DeveloperName": "SG_RGN_JKH_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3RtUAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuAIAU"
+        },
+        "Id": "011C10000063ZuAIAU",
+        "GroupId": "00GC10000040QoIMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoIMAU"
+          },
+          "DeveloperName": "SG_RGN_JKH_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3SVUA0"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuCIAU"
+        },
+        "Id": "011C10000063ZuCIAU",
+        "GroupId": "00GC10000040QoIMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoIMAU"
+          },
+          "DeveloperName": "SG_RGN_JKH_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3T7UAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuDIAU"
+        },
+        "Id": "011C10000063ZuDIAU",
+        "GroupId": "00GC10000040QoIMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoIMAU"
+          },
+          "DeveloperName": "SG_RGN_JKH_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3TjUAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZtrIAE"
+        },
+        "Id": "011C10000063ZtrIAE",
+        "GroupId": "00GC10000040QoDMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoDMAU"
+          },
+          "DeveloperName": "SG_RGN_APT_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3RhUAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZtqIAE"
+        },
+        "Id": "011C10000063ZtqIAE",
+        "GroupId": "00GC10000040QoDMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoDMAU"
+          },
+          "DeveloperName": "SG_RGN_APT_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3SJUA0"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZtsIAE"
+        },
+        "Id": "011C10000063ZtsIAE",
+        "GroupId": "00GC10000040QoDMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoDMAU"
+          },
+          "DeveloperName": "SG_RGN_APT_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3SvUAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZttIAE"
+        },
+        "Id": "011C10000063ZttIAE",
+        "GroupId": "00GC10000040QoDMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoDMAU"
+          },
+          "DeveloperName": "SG_RGN_APT_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3TXUA0"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuRIAU"
+        },
+        "Id": "011C10000063ZuRIAU",
+        "GroupId": "00GC10000040QoMMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoMMAU"
+          },
+          "DeveloperName": "SG_RGN_MPC_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3S1UAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuQIAU"
+        },
+        "Id": "011C10000063ZuQIAU",
+        "GroupId": "00GC10000040QoMMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoMMAU"
+          },
+          "DeveloperName": "SG_RGN_MPC_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3SdUAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuSIAU"
+        },
+        "Id": "011C10000063ZuSIAU",
+        "GroupId": "00GC10000040QoMMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoMMAU"
+          },
+          "DeveloperName": "SG_RGN_MPC_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3TFUA0"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuTIAU"
+        },
+        "Id": "011C10000063ZuTIAU",
+        "GroupId": "00GC10000040QoMMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoMMAU"
+          },
+          "DeveloperName": "SG_RGN_MPC_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3TrUAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuZIAU"
+        },
+        "Id": "011C10000063ZuZIAU",
+        "GroupId": "00GC10000040QoOMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoOMAU"
+          },
+          "DeveloperName": "SG_RGN_NRE_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3S5UAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuYIAU"
+        },
+        "Id": "011C10000063ZuYIAU",
+        "GroupId": "00GC10000040QoOMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoOMAU"
+          },
+          "DeveloperName": "SG_RGN_NRE_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3ShUAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuaIAE"
+        },
+        "Id": "011C10000063ZuaIAE",
+        "GroupId": "00GC10000040QoOMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoOMAU"
+          },
+          "DeveloperName": "SG_RGN_NRE_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3TJUA0"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZubIAE"
+        },
+        "Id": "011C10000063ZubIAE",
+        "GroupId": "00GC10000040QoOMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoOMAU"
+          },
+          "DeveloperName": "SG_RGN_NRE_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3TvUAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZtvIAE"
+        },
+        "Id": "011C10000063ZtvIAE",
+        "GroupId": "00GC10000040QoEMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoEMAU"
+          },
+          "DeveloperName": "SG_RGN_BJO_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3RjUAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZtuIAE"
+        },
+        "Id": "011C10000063ZtuIAE",
+        "GroupId": "00GC10000040QoEMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoEMAU"
+          },
+          "DeveloperName": "SG_RGN_BJO_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3SLUA0"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZtwIAE"
+        },
+        "Id": "011C10000063ZtwIAE",
+        "GroupId": "00GC10000040QoEMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoEMAU"
+          },
+          "DeveloperName": "SG_RGN_BJO_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3SxUAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZtxIAE"
+        },
+        "Id": "011C10000063ZtxIAE",
+        "GroupId": "00GC10000040QoEMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoEMAU"
+          },
+          "DeveloperName": "SG_RGN_BJO_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3TZUA0"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZupIAE"
+        },
+        "Id": "011C10000063ZupIAE",
+        "GroupId": "00GC10000040QoSMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoSMAU"
+          },
+          "DeveloperName": "SG_RGN_UKH_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3SDUA0"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuoIAE"
+        },
+        "Id": "011C10000063ZuoIAE",
+        "GroupId": "00GC10000040QoSMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoSMAU"
+          },
+          "DeveloperName": "SG_RGN_UKH_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3SpUAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuqIAE"
+        },
+        "Id": "011C10000063ZuqIAE",
+        "GroupId": "00GC10000040QoSMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoSMAU"
+          },
+          "DeveloperName": "SG_RGN_UKH_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3TRUA0"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZurIAE"
+        },
+        "Id": "011C10000063ZurIAE",
+        "GroupId": "00GC10000040QoSMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoSMAU"
+          },
+          "DeveloperName": "SG_RGN_UKH_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3U3UAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063Zu3IAE"
+        },
+        "Id": "011C10000063Zu3IAE",
+        "GroupId": "00GC10000040QoGMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoGMAU"
+          },
+          "DeveloperName": "SG_RGN_GJT_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3RpUAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063Zu2IAE"
+        },
+        "Id": "011C10000063Zu2IAE",
+        "GroupId": "00GC10000040QoGMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoGMAU"
+          },
+          "DeveloperName": "SG_RGN_GJT_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3SRUA0"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063Zu4IAE"
+        },
+        "Id": "011C10000063Zu4IAE",
+        "GroupId": "00GC10000040QoGMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoGMAU"
+          },
+          "DeveloperName": "SG_RGN_GJT_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3T3UAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063Zu5IAE"
+        },
+        "Id": "011C10000063Zu5IAE",
+        "GroupId": "00GC10000040QoGMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoGMAU"
+          },
+          "DeveloperName": "SG_RGN_GJT_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3TfUAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZtzIAE"
+        },
+        "Id": "011C10000063ZtzIAE",
+        "GroupId": "00GC10000040QoFMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoFMAU"
+          },
+          "DeveloperName": "SG_RGN_DLI_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3RnUAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZtyIAE"
+        },
+        "Id": "011C10000063ZtyIAE",
+        "GroupId": "00GC10000040QoFMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoFMAU"
+          },
+          "DeveloperName": "SG_RGN_DLI_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3SPUA0"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063Zu0IAE"
+        },
+        "Id": "011C10000063Zu0IAE",
+        "GroupId": "00GC10000040QoFMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoFMAU"
+          },
+          "DeveloperName": "SG_RGN_DLI_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3T1UAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063Zu1IAE"
+        },
+        "Id": "011C10000063Zu1IAE",
+        "GroupId": "00GC10000040QoFMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoFMAU"
+          },
+          "DeveloperName": "SG_RGN_DLI_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3TdUAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuhIAE"
+        },
+        "Id": "011C10000063ZuhIAE",
+        "GroupId": "00GC10000040QoQMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoQMAU"
+          },
+          "DeveloperName": "SG_RGN_RJN_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3S9UAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZugIAE"
+        },
+        "Id": "011C10000063ZugIAE",
+        "GroupId": "00GC10000040QoQMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoQMAU"
+          },
+          "DeveloperName": "SG_RGN_RJN_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3SlUAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuiIAE"
+        },
+        "Id": "011C10000063ZuiIAE",
+        "GroupId": "00GC10000040QoQMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoQMAU"
+          },
+          "DeveloperName": "SG_RGN_RJN_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3TNUA0"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZujIAE"
+        },
+        "Id": "011C10000063ZujIAE",
+        "GroupId": "00GC10000040QoQMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoQMAU"
+          },
+          "DeveloperName": "SG_RGN_RJN_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3TzUAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZudIAE"
+        },
+        "Id": "011C10000063ZudIAE",
+        "GroupId": "00GC10000040QoPMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoPMAU"
+          },
+          "DeveloperName": "SG_RGN_PBC_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3S7UAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZucIAE"
+        },
+        "Id": "011C10000063ZucIAE",
+        "GroupId": "00GC10000040QoPMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoPMAU"
+          },
+          "DeveloperName": "SG_RGN_PBC_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3SjUAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZueIAE"
+        },
+        "Id": "011C10000063ZueIAE",
+        "GroupId": "00GC10000040QoPMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoPMAU"
+          },
+          "DeveloperName": "SG_RGN_PBC_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3TLUA0"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZufIAE"
+        },
+        "Id": "011C10000063ZufIAE",
+        "GroupId": "00GC10000040QoPMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoPMAU"
+          },
+          "DeveloperName": "SG_RGN_PBC_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3TxUAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZutIAE"
+        },
+        "Id": "011C10000063ZutIAE",
+        "GroupId": "00GC10000040QoTMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoTMAU"
+          },
+          "DeveloperName": "SG_RGN_UPR_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3SFUA0"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZusIAE"
+        },
+        "Id": "011C10000063ZusIAE",
+        "GroupId": "00GC10000040QoTMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoTMAU"
+          },
+          "DeveloperName": "SG_RGN_UPR_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3SrUAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuuIAE"
+        },
+        "Id": "011C10000063ZuuIAE",
+        "GroupId": "00GC10000040QoTMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoTMAU"
+          },
+          "DeveloperName": "SG_RGN_UPR_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3TTUA0"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuvIAE"
+        },
+        "Id": "011C10000063ZuvIAE",
+        "GroupId": "00GC10000040QoTMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoTMAU"
+          },
+          "DeveloperName": "SG_RGN_UPR_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3U5UAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZulIAE"
+        },
+        "Id": "011C10000063ZulIAE",
+        "GroupId": "00GC10000040QoRMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoRMAU"
+          },
+          "DeveloperName": "SG_RGN_TNP_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3SBUA0"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZukIAE"
+        },
+        "Id": "011C10000063ZukIAE",
+        "GroupId": "00GC10000040QoRMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoRMAU"
+          },
+          "DeveloperName": "SG_RGN_TNP_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3SnUAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZumIAE"
+        },
+        "Id": "011C10000063ZumIAE",
+        "GroupId": "00GC10000040QoRMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoRMAU"
+          },
+          "DeveloperName": "SG_RGN_TNP_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3TPUA0"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZunIAE"
+        },
+        "Id": "011C10000063ZunIAE",
+        "GroupId": "00GC10000040QoRMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoRMAU"
+          },
+          "DeveloperName": "SG_RGN_TNP_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3U1UAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuNIAU"
+        },
+        "Id": "011C10000063ZuNIAU",
+        "GroupId": "00GC10000040QoLMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoLMAU"
+          },
+          "DeveloperName": "SG_RGN_MHG_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3RzUAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuMIAU"
+        },
+        "Id": "011C10000063ZuMIAU",
+        "GroupId": "00GC10000040QoLMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoLMAU"
+          },
+          "DeveloperName": "SG_RGN_MHG_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3SbUAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuOIAU"
+        },
+        "Id": "011C10000063ZuOIAU",
+        "GroupId": "00GC10000040QoLMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoLMAU"
+          },
+          "DeveloperName": "SG_RGN_MHG_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3TDUA0"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuPIAU"
+        },
+        "Id": "011C10000063ZuPIAU",
+        "GroupId": "00GC10000040QoLMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoLMAU"
+          },
+          "DeveloperName": "SG_RGN_MHG_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3TpUAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuFIAU"
+        },
+        "Id": "011C10000063ZuFIAU",
+        "GroupId": "00GC10000040QoJMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoJMAU"
+          },
+          "DeveloperName": "SG_RGN_KRL_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3RvUAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuEIAU"
+        },
+        "Id": "011C10000063ZuEIAU",
+        "GroupId": "00GC10000040QoJMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoJMAU"
+          },
+          "DeveloperName": "SG_RGN_KRL_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3SXUA0"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuGIAU"
+        },
+        "Id": "011C10000063ZuGIAU",
+        "GroupId": "00GC10000040QoJMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoJMAU"
+          },
+          "DeveloperName": "SG_RGN_KRL_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3T9UAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuHIAU"
+        },
+        "Id": "011C10000063ZuHIAU",
+        "GroupId": "00GC10000040QoJMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoJMAU"
+          },
+          "DeveloperName": "SG_RGN_KRL_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3TlUAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuVIAU"
+        },
+        "Id": "011C10000063ZuVIAU",
+        "GroupId": "00GC10000040QoNMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoNMAU"
+          },
+          "DeveloperName": "SG_RGN_MUM_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3S3UAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuUIAU"
+        },
+        "Id": "011C10000063ZuUIAU",
+        "GroupId": "00GC10000040QoNMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoNMAU"
+          },
+          "DeveloperName": "SG_RGN_MUM_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3SfUAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuWIAU"
+        },
+        "Id": "011C10000063ZuWIAU",
+        "GroupId": "00GC10000040QoNMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoNMAU"
+          },
+          "DeveloperName": "SG_RGN_MUM_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3THUA0"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuXIAU"
+        },
+        "Id": "011C10000063ZuXIAU",
+        "GroupId": "00GC10000040QoNMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoNMAU"
+          },
+          "DeveloperName": "SG_RGN_MUM_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3TtUAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063Zu7IAE"
+        },
+        "Id": "011C10000063Zu7IAE",
+        "GroupId": "00GC10000040QoHMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoHMAU"
+          },
+          "DeveloperName": "SG_RGN_HRN_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3RrUAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063Zu6IAE"
+        },
+        "Id": "011C10000063Zu6IAE",
+        "GroupId": "00GC10000040QoHMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoHMAU"
+          },
+          "DeveloperName": "SG_RGN_HRN_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3STUA0"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063Zu8IAE"
+        },
+        "Id": "011C10000063Zu8IAE",
+        "GroupId": "00GC10000040QoHMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoHMAU"
+          },
+          "DeveloperName": "SG_RGN_HRN_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3T5UAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063Zu9IAE"
+        },
+        "Id": "011C10000063Zu9IAE",
+        "GroupId": "00GC10000040QoHMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoHMAU"
+          },
+          "DeveloperName": "SG_RGN_HRN_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3ThUAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuJIAU"
+        },
+        "Id": "011C10000063ZuJIAU",
+        "GroupId": "00GC10000040QoKMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoKMAU"
+          },
+          "DeveloperName": "SG_RGN_KTK_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3RxUAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuIIAU"
+        },
+        "Id": "011C10000063ZuIIAU",
+        "GroupId": "00GC10000040QoKMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoKMAU"
+          },
+          "DeveloperName": "SG_RGN_KTK_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3SZUA0"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuKIAU"
+        },
+        "Id": "011C10000063ZuKIAU",
+        "GroupId": "00GC10000040QoKMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoKMAU"
+          },
+          "DeveloperName": "SG_RGN_KTK_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3TBUA0"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011C10000063ZuLIAU"
+        },
+        "Id": "011C10000063ZuLIAU",
+        "GroupId": "00GC10000040QoKMAU",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GC10000040QoKMAU"
+          },
+          "DeveloperName": "SG_RGN_KTK_RM"
+        },
+        "UserOrGroupId": "00G7F000002X3TnUAK"
+      },
+      {
+        "attributes": {
+          "type": "GroupMember",
+          "url": "/services/data/v68.0/sobjects/GroupMember/011OX0000011fjhYAA"
+        },
+        "Id": "011OX0000011fjhYAA",
+        "GroupId": "00GOX0000011ROz2AM",
+        "Group": {
+          "attributes": {
+            "type": "Group",
+            "url": "/services/data/v68.0/sobjects/Group/00GOX0000011ROz2AM"
+          },
+          "DeveloperName": "Alliance_Partner_Management"
+        },
+        "UserOrGroupId": "005OX00000DmTMpYAN"
+      }
+    ],
+    "totalSize": 73,
+    "done": true
+  },
+  "warnings": []
+}

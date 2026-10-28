@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Type__c</fullName>
+    <label>Business Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Sub_Type__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>RETAIL-NON PRC</fullName>
+                <default>false</default>
+                <label>RETAIL-NON PRC</label>
+            </value>
+            <value>
+                <fullName>Credit-Outbound</fullName>
+                <default>false</default>
+                <label>Credit-Outbound</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Delivery not done</controllingFieldValue>
+            <controllingFieldValue>Credit</controllingFieldValue>
+            <controllingFieldValue>Interchange</controllingFieldValue>
+            <controllingFieldValue>Delay in delivery</controllingFieldValue>
+            <controllingFieldValue>Damage</controllingFieldValue>
+            <controllingFieldValue>FTL</controllingFieldValue>
+            <controllingFieldValue>Booking not done</controllingFieldValue>
+            <controllingFieldValue>CREDIT+RETAIL</controllingFieldValue>
+            <controllingFieldValue>Retail- E2M</controllingFieldValue>
+            <controllingFieldValue>Bike Express</controllingFieldValue>
+            <controllingFieldValue>Retail- Sanik Express</controllingFieldValue>
+            <controllingFieldValue>Branch / Office / Staff</controllingFieldValue>
+            <controllingFieldValue>Reverse Inbound- Retail-Non-PRC</controllingFieldValue>
+            <controllingFieldValue>Distribution</controllingFieldValue>
+            <controllingFieldValue>Consignee Change</controllingFieldValue>
+            <controllingFieldValue>3PL</controllingFieldValue>
+            <controllingFieldValue>MOP Change</controllingFieldValue>
+            <controllingFieldValue>GSTIN Change</controllingFieldValue>
+            <controllingFieldValue>Address Change</controllingFieldValue>
+            <controllingFieldValue>DOD_DOC Cancellation</controllingFieldValue>
+            <controllingFieldValue>Retail-Non-PRC</controllingFieldValue>
+            <controllingFieldValue>Retail- C2H</controllingFieldValue>
+            <controllingFieldValue>3PL and Distribution</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <valueName>RETAIL-NON PRC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit- Outbound</controllingFieldValue>
+            <valueName>Credit-Outbound</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

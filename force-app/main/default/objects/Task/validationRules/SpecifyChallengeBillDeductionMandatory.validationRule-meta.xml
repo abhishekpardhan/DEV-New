@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SpecifyChallengeBillDeductionMandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(Any_Deduction_in_Bill__c, &quot;Yes&quot;),
+ISBLANK(Specify_Challenges_Bill_Deduction__c)
+)</errorConditionFormula>
+    <errorMessage>Reason for Deduction if Any Deduction in Bill</errorMessage>
+</ValidationRule>

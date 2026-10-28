@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CallBack_Time</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT( ISNULL(Preferred_CallBack_Date__c )),
+
+ISBLANK( TEXT(Preferred_CallBack_Time__c)))</errorConditionFormula>
+    <errorDisplayField>Preferred_CallBack_Time__c</errorDisplayField>
+    <errorMessage>Please Fill CallBack Time</errorMessage>
+</ValidationRule>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>after_check_out_subject_cant_change</fullName>
+    <active>false</active>
+    <errorConditionFormula>ISCHANGED(Name) &amp;&amp; RecordType.DeveloperName = &apos;New Event&apos; &amp;&amp; !ISBLANK(CheckOut_Date__c )</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>After checkout ,you can&apos;t change the Subject.</errorMessage>
+</ValidationRule>

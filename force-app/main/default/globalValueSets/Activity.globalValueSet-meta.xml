@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Bdm - Work From Office</fullName>
+        <default>false</default>
+        <label>Bdm - Work From Office</label>
+    </customValue>
+    <customValue>
+        <fullName>Branch Visit</fullName>
+        <default>false</default>
+        <label>Branch Visit</label>
+    </customValue>
+    <customValue>
+        <fullName>Chq Dishonor</fullName>
+        <default>false</default>
+        <label>Chq Dishonor</label>
+    </customValue>
+    <customValue>
+        <fullName>Consignee Recommendation Letters</fullName>
+        <default>false</default>
+        <label>Consignee Recommendation Letters</label>
+    </customValue>
+    <customValue>
+        <fullName>Consignee Sales Lead</fullName>
+        <default>false</default>
+        <label>Consignee Sales Lead</label>
+    </customValue>
+    <customValue>
+        <fullName>Consignee Visited</fullName>
+        <default>false</default>
+        <label>Consignee Visited</label>
+    </customValue>
+    <customValue>
+        <fullName>Contract Renewal</fullName>
+        <default>false</default>
+        <label>Contract Renewal</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate Task</fullName>
+        <default>false</default>
+        <label>Corporate Task</label>
+    </customValue>
+    <customValue>
+        <fullName>Customer Visit - Existing</fullName>
+        <default>false</default>
+        <label>Customer Visit - Existing</label>
+    </customValue>
+    <customValue>
+        <fullName>Customer Visit - New</fullName>
+        <default>false</default>
+        <label>Customer Visit - New</label>
+    </customValue>
+    <customValue>
+        <fullName>Customer Warehouse Visit</fullName>
+        <default>false</default>
+        <label>Customer Warehouse Visit</label>
+    </customValue>
+    <customValue>
+        <fullName>Dod/Dacc Cancellation</fullName>
+        <default>false</default>
+        <label>Dod/Dacc Cancellation</label>
+    </customValue>
+    <customValue>
+        <fullName>General</fullName>
+        <default>false</default>
+        <label>General</label>
+    </customValue>
+    <customValue>
+        <fullName>Incident At 3Pl Hub</fullName>
+        <default>false</default>
+        <label>Incident At 3Pl Hub</label>
+    </customValue>
+    <customValue>
+        <fullName>In-House Biz/ Support  Activities</fullName>
+        <default>false</default>
+        <label>In-House Biz/ Support  Activities</label>
+    </customValue>
+    <customValue>
+        <fullName>Internal Meeting</fullName>
+        <default>false</default>
+        <label>Internal Meeting</label>
+    </customValue>
+    <customValue>
+        <fullName>Normal Visit &amp; Icm Customer Campaign</fullName>
+        <default>false</default>
+        <label>Normal Visit &amp; Icm Customer Campaign</label>
+    </customValue>
+    <customValue>
+        <fullName>Others</fullName>
+        <default>false</default>
+        <label>Others</label>
+    </customValue>
+    <customValue>
+        <fullName>Promotional Activity/ Campaign</fullName>
+        <default>false</default>
+        <label>Promotional Activity/ Campaign</label>
+    </customValue>
+    <customValue>
+        <fullName>Short/Excess</fullName>
+        <default>false</default>
+        <label>Short/Excess</label>
+    </customValue>
+    <customValue>
+        <fullName>Training</fullName>
+        <default>false</default>
+        <label>Training</label>
+    </customValue>
+    <customValue>
+        <fullName>Visit To Govt. Authority.</fullName>
+        <default>false</default>
+        <label>Visit To Govt. Authority.</label>
+    </customValue>
+    <customValue>
+        <fullName>Visit To Incident</fullName>
+        <default>false</default>
+        <label>Visit To Incident</label>
+    </customValue>
+    <customValue>
+        <fullName>Visit To Institution</fullName>
+        <default>false</default>
+        <label>Visit To Institution</label>
+    </customValue>
+    <customValue>
+        <fullName>Virtual Meeting with Customer</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Virtual Meeting with Customer</label>
+    </customValue>
+    <customValue>
+        <fullName>Visit To Event</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Visit To Event</label>
+    </customValue>
+    <customValue>
+        <fullName>Visit To Branch</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Visit To Branch</label>
+    </customValue>
+    <customValue>
+        <fullName>Tour</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Tour</label>
+    </customValue>
+    <customValue>
+        <fullName>New Sales</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>New Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>Incident</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Incident</label>
+    </customValue>
+    <customValue>
+        <fullName>Customer Visit</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Customer Visit</label>
+    </customValue>
+    <customValue>
+        <fullName>Bill Submission</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Bill Submission</label>
+    </customValue>
+    <customValue>
+        <fullName>Bill Collection</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Bill Collection</label>
+    </customValue>
+    <masterLabel>Activity</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

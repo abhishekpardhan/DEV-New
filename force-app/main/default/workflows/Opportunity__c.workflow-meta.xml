@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Send_Email_To_Account_PRC</fullName>
+        <description>Send Email To Account PRC</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>kunal.kumar2@safexpress.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>proposal@safexpress.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Lightning_Quote_Mandatory_Files/Send_Account_Link_to_Finance_And_Qrm</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Email_To_Retail_Manager</fullName>
+        <description>Send Email To Retail Manager</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>kunal.kumar2@safexpress.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>proposal@safexpress.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Lightning_Quote_Mandatory_Files/Send_Account_Link_to_Finance_And_Qrm</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Email_to_Account_Qrm</fullName>
+        <description>Send Email to Account Qrm</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Qrm_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <recipient>sunil.dubey1@safexpress.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Lightning_Quote_Mandatory_Files/Send_Account_Link_to_Finance_And_Qrm</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_email_to_Account_Finance</fullName>
+        <description>Send email to Account Finance</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Finance_Executive_Credit</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Lightning_Quote_Mandatory_Files/Send_Account_Link_to_Finance_And_Qrm</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Approval_Status_Update_1</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Approval Status Update 1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_Status_Update_2</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Approval Status Update 2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_status_update</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Pending for Approval</literalValue>
+        <name>Approval status update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Closed_date_update</fullName>
+        <field>Close_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Closed date update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Field_Assigned_Update_opp</fullName>
+        <field>Assignment_Date__c</field>
+        <formula>NOW()</formula>
+        <name>Field Assigned Update opp</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Opp_Status</fullName>
+        <field>Stage__c</field>
+        <literalValue>Active</literalValue>
+        <name>Opp Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Opp_Status_update_to_Active</fullName>
+        <field>Stage__c</field>
+        <literalValue>Active</literalValue>
+        <name>Opp Status update to Active</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Opportunity_Approved_By_CCD</fullName>
+        <field>Approval_Status_For_Existing_SFX__c</field>
+        <literalValue>Approved By CCD</literalValue>
+        <name>Opportunity Approved By CCD</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Opportunity_Approved_By_RM</fullName>
+        <field>Approval_Status_For_Existing_SFX__c</field>
+        <literalValue>Approved By RM</literalValue>
+        <name>Opportunity Approved By RM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Opportunity_Name_Capital</fullName>
+        <field>Name</field>
+        <formula>UPPER(Name)</formula>
+        <name>Opportunity Name Capital</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Opportunity_Rejected_By_CCD</fullName>
+        <field>Approval_Status_For_Existing_SFX__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Opportunity Rejected By CCD</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Opportunity_Rejected_By_RM</fullName>
+        <field>Approval_Status_For_Existing_SFX__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Opportunity Rejected By RM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>StatusClosedWon</fullName>
+        <field>Stage__c</field>
+        <literalValue>Closed Won</literalValue>
+        <name>StatusClosedWon</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_to_submit_for_approval</fullName>
+        <field>Approval_Status_For_Existing_SFX__c</field>
+        <literalValue>Submitted for approval</literalValue>
+        <name>Update Status to submit for approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>email</fullName>
+        <field>Shipping_Street__c</field>
+        <formula>&apos;test execution process&apos;</formula>
+        <name>email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>updateCloseddate</fullName>
+        <field>Close_Date__c</field>
+        <formula>today()</formula>
+        <name>updateCloseddate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Closed Date update</fullName>
+        <actions>
+            <name>Closed_date_update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>AND( OR(ISNEW(), ISCHANGED(Stage__c)) ,OR(ISPICKVAL(Stage__c,&apos;Closed Lost&apos;) ,ISPICKVAL(Stage__c,&apos;Closed Won&apos;)))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Opportunity Assigned Date</fullName>
+        <actions>
+            <name>Field_Assigned_Update_opp</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>OR(ISNEW(),ISCHANGED(OwnerId))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Opportunity Name Capital</fullName>
+        <actions>
+            <name>Opportunity_Name_Capital</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity__c.Name</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Opportunity Status Active</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity__c.Passive_Till__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Opp_Status</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Opportunity__c.Passive_Till__c</offsetFromField>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+</Workflow>

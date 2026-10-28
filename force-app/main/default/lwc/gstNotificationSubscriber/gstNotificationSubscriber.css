@@ -1,0 +1,7 @@
+.custom-container{
+	color : black;
+}
+.error-text {
+    color: #c23934; /* Salesforce error red */
+    font-weight: 400;
+}

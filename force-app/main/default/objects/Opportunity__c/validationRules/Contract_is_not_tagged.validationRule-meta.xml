@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_is_not_tagged</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF( ISCHANGED( Stage__c ) &amp;&amp; TEXT(Stage__c) = &quot;Closed Won&quot; &amp;&amp; Contract__c = null,
+true,
+false
+)</errorConditionFormula>
+    <errorMessage>Contract is not tagged to make it Closed/Won</errorMessage>
+</ValidationRule>

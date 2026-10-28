@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assighn_Last_Quote_Sent_Date</name>
+        <label>Assighn Last Quote Sent Date</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>lastQuoteSentDate</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Opportunity_Records_of_Sent_to_customer</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Copy_1_of_Assighn_Last_Quote_Sent_Date</name>
+        <label>Copy 1 of Assighn Last Quote Sent Date</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>lastQuoteSentDate</assignToReference>
+            <operator>Assign</operator>
+        </assignmentItems>
+        <connector>
+            <targetReference>Opportunity_Records_of_Sent_to_customer</targetReference>
+        </connector>
+    </assignments>
+    <customErrors>
+        <name>show_Erorr</name>
+        <label>show Erorr</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <customErrorMessages>
+            <errorMessage>{!errorMessage}</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <decisions>
+        <name>check_if_Last_Quote_Sent_date_is_not_null</name>
+        <label>check if Last Quote Sent date is not null</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Opportunity_not_null</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Opportunity__r.Last_Quote_Sent_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_Assighn_Last_Quote_Sent_Date</targetReference>
+            </connector>
+            <label>Opportunity not null</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>check_If_Quote_Sent</name>
+        <label>check If Quote Sent</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Quote_to_Sent</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>lastQuoteSentDate</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Quote_sent_Date</targetReference>
+            </connector>
+            <label>Quote to Sent</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checking if the Flow is running on Create or Update</description>
+        <name>CreateorUpdate</name>
+        <label>CreateorUpdate</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>isCreate</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>isCreateOrUpdate</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>isCreate</label>
+        </rules>
+        <rules>
+            <name>isupdate</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>isCreateOrUpdate</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update</targetReference>
+            </connector>
+            <label>isupdate</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checking for the active flow</description>
+        <name>isFlowActive</name>
+        <label>isFlowActive</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Active</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>OrgSettings.Is_active__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CreateorUpdate</targetReference>
+            </connector>
+            <label>Active</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>using a decision element to find if status on Quote is Sent To Customer or not</description>
+        <name>Update</name>
+        <label>Update</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Sent_To_cusotmer</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>OrgSettings.Is_active__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Sent to Customer</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assighn_Last_Quote_Sent_Date</targetReference>
+            </connector>
+            <label>Sent To cusotmer</label>
+        </rules>
+        <rules>
+            <name>if_not_sent_to_cusotmer</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Sent to Customer</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>check_if_Last_Quote_Sent_date_is_not_null</targetReference>
+            </connector>
+            <label>if not sent to cusotmer</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>errorMessage</name>
+        <dataType>String</dataType>
+        <expression>IF(
+  CONTAINS({!$Flow.FaultMessage}, &apos;You can look up ExceptionCode&apos;),
+  LEFT(
+    {!$Flow.FaultMessage},
+    FIND(&apos;You can look up ExceptionCode&apos;, {!$Flow.FaultMessage}) - 1
+  ),
+  $Flow.FaultMessage
+)</expression>
+    </formulas>
+    <formulas>
+        <name>isCreateOrUpdate</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <formulas>
+        <name>TimeStamp</name>
+        <dataType>DateTime</dataType>
+        <expression>IF(
+  AND(
+    ISPICKVAL($Record.Status__c, &quot;Sent to customer&quot;),
+    OR(
+      ISBLANK($Record__Prior.Id),                                      /* handles creates */
+      NOT(ISPICKVAL($Record__Prior.Status__c, &quot;Sent to customer&quot;))     /* handles updates */
+    ),
+    ISBLANK($Record.Quote_Sent_Date__c)
+  ),
+  $Flow.CurrentDateTime,
+  $Record.Quote_Sent_Date__c
+)</expression>
+    </formulas>
+    <interviewLabel>Quote_RTF_After_Save {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Quote_RTF_After_Save</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>using Org Setting Custom Meta Data</description>
+        <name>OrgSettings</name>
+        <label>OrgSettings</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>isFlowActive</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Label</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Flow</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Org_Setting__mdt</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Is_active__c</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Update Opportunity Records when the Status on Quote is &quot;Sent to customer&apos;</description>
+        <name>Opportunity_Records_of_Sent_to_customer</name>
+        <label>Opportunity Records of Sent to customer</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>check_If_Quote_Sent</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>show_Erorr</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Opportunity__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Last_Quote_Sent_Date__c</field>
+            <value>
+                <elementReference>lastQuoteSentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Opportunity__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Updating the Quote Sent Date</description>
+        <name>Update_Quote_sent_Date</name>
+        <label>Update Quote sent Date</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>show_Erorr</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>Quote_Sent_Date__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>OrgSettings</targetReference>
+        </connector>
+        <object>Quote__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>lastQuoteSentDate</name>
+        <dataType>DateTime</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

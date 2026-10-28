@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This is used for when stage of opportunity is closed won</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Send Account Link to Finance And Qrm</name>
+    <style>none</style>
+    <subject>Create/Renew Customer Code for {!Opportunity__c.Account__c}</subject>
+    <textOnly>Dear Team,
+
+Opportunity Type: {!Opportunity__c.Customer_Type__c}. Please create/renew customer code for {!Opportunity__c.Account__c} as per the details attached.
+
+Account Id  :  {!Opportunity__c.AccId__c}
+Opportunity Id  :  {!Opportunity__c.Opportunity_Id__c}
+
+Please log in to salesforce using url: https://safeforce1.force.com
+After logged in please click the link to access record:  {!Opportunity__c.Account_URL__c}{!Opportunity__c.AccountId__c}
+
+Regards,
+{!Opportunity__c.OwnerFullName}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

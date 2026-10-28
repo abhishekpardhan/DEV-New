@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Owner_Read_Only</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND($Profile.Name=&apos;BDM&apos;,ISCHANGED(OwnerId), NOT($Permission.Transfer_Admin_Permission))</errorConditionFormula>
+    <errorMessage>You don&apos;t have permission to change the Owner.</errorMessage>
+</ValidationRule>

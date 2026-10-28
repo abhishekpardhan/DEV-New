@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Block_Safexpress_Email</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT(ISBLANK(Email)),
+    REGEX(
+        LOWER(Email),
+        &quot;^[a-z0-9._%+-]+@safexpress\\.com$&quot;
+    )
+)</errorConditionFormula>
+    <errorDisplayField>Email</errorDisplayField>
+    <errorMessage>Safexpress email addresses are not allowed.</errorMessage>
+</ValidationRule>

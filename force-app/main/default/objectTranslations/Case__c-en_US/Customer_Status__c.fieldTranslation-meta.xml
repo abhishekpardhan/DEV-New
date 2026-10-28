@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Status --></label>
+    <name>Customer_Status__c</name>
+    <picklistValues>
+        <masterLabel>Business to Initiate</masterLabel>
+        <translation><!-- Business to Initiate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Closed (with no Action)</masterLabel>
+        <translation><!-- Closed (with no Action) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Completed API Request</masterLabel>
+        <translation><!-- Completed API Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Completed Portal development</masterLabel>
+        <translation><!-- Completed Portal development --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Considered for Development</masterLabel>
+        <translation><!-- Considered for Development --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In progress</masterLabel>
+        <translation><!-- In progress --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Meeting Done</masterLabel>
+        <translation><!-- Meeting Done --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>On hold</masterLabel>
+        <translation><!-- On hold --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Open</masterLabel>
+        <translation><!-- Open --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rejected</masterLabel>
+        <translation><!-- Rejected --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

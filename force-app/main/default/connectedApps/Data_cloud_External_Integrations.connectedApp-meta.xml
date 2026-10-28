@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>vaibhav.markale@safexpress.com</contactEmail>
+    <contactPhone>08463815493</contactPhone>
+    <label>Data cloud External Integrations</label>
+    <oauthConfig>
+        <callbackUrl>https://oauth.pstmn.io/v1/callback
+http://localhost:55555/Callback
+http://localhost:55556/Callback
+http://localhost:55557/Callback
+http://localhost:55558/Callback
+http://localhost:55559/Callback</callbackUrl>
+        <consumerKey>3MVG9gl7ph1Px3YbTMAO1AdXbDKCw8uudZCooYRhyYUo_YyOOUL6r5aWoJKS7bw09r9kJoDb.wf0B70eYM.0N</consumerKey>
+        <isAdminApproved>true</isAdminApproved>
+        <isClientCredentialEnabled>true</isClientCredentialEnabled>
+        <isCodeCredentialEnabled>false</isCodeCredentialEnabled>
+        <isCodeCredentialPostOnly>false</isCodeCredentialPostOnly>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isNamedUserJwtEnabled>false</isNamedUserJwtEnabled>
+        <isPkceRequired>true</isPkceRequired>
+        <isRefreshTokenRotationEnabled>true</isRefreshTokenRotationEnabled>
+        <isSecretRequiredForRefreshToken>true</isSecretRequiredForRefreshToken>
+        <isSecretRequiredForTokenExchange>false</isSecretRequiredForTokenExchange>
+        <isTokenExchangeEnabled>false</isTokenExchangeEnabled>
+        <scopes>Api</scopes>
+        <scopes>Web</scopes>
+        <scopes>RefreshToken</scopes>
+        <scopes>CDPIngest</scopes>
+        <scopes>CDPProfile</scopes>
+        <scopes>CDPQuery</scopes>
+        <scopes>CDP</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>BYPASS</ipRelaxation>
+        <isTokenExchangeFlowEnabled>false</isTokenExchangeFlowEnabled>
+        <refreshTokenPolicy>zero</refreshTokenPolicy>
+    </oauthPolicy>
+    <profileName>System Administrator</profileName>
+</ConnectedApp>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CollectableAmountMandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(
+    AND(
+        NOT(IsVRBypassed__c),
+        !ISCHANGED(OwnerId),
+        NOT($Profile.Name = &apos;Portfolio Management&apos;),
+        NOT($Profile.Name = &apos;Integration User&apos;),
+        !ISPICKVAL(Status,&apos;Cancelled&apos;),
+        !ISPICKVAL(Payment_Remaining__c,&apos;Recoverable&apos;),
+        !ISNEW(),
+        ISBLANK(Collectable_Amount__c),
+        RecordType.Name = &apos;Collection&apos;
+    ),
+    TRUE,
+    FALSE
+)</errorConditionFormula>
+    <errorMessage>Collectable Amount is Mandatory.</errorMessage>
+</ValidationRule>

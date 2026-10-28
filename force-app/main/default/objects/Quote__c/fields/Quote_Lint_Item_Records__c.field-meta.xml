@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quote_Lint_Item_Records__c</fullName>
+    <description>count of quote lint item records will use in backend.</description>
+    <label>Quote Lint Item Records</label>
+    <summaryForeignKey>Quote_Line_Item__c.Quote__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

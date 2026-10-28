@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parent_Account_Should_Be_null</fullName>
+    <active>true</active>
+    <errorConditionFormula>And(RecordType.Name =&apos;Prospect Customer&apos;,!ISBLANK(ParentId))</errorConditionFormula>
+    <errorDisplayField>ParentId</errorDisplayField>
+    <errorMessage>You can&apos;t add a Parent Account to a Prospect.</errorMessage>
+</ValidationRule>

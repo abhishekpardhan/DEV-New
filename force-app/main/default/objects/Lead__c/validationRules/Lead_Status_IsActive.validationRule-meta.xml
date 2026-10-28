@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Status_IsActive</fullName>
+    <active>true</active>
+    <description>Newly created lead status should be active always.</description>
+    <errorConditionFormula>AND(
+ISNEW(),
+!IsVRBypassed__c,
+OR(
+$RecordType.DeveloperName = &quot;Retail_Lead&quot;,
+$RecordType.DeveloperName = &quot;Credit_Lead&quot;
+),
+NOT(ISPICKVAL(Status__c, &quot;Active&quot;)
+))</errorConditionFormula>
+    <errorDisplayField>Status__c</errorDisplayField>
+    <errorMessage>Status should be Active only.</errorMessage>
+</ValidationRule>

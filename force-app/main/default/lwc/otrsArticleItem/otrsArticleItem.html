@@ -1,0 +1,67 @@
+<!-- 
+    File Name          : otrsArticleItem 
+    Description        : This Component is a child component to shoe the Article details
+    Author             : Deepak 
+    Last Modified Date : 29/7/2021
+    Last Modified By   :
+    Modification Logs  
+    Ver           Date              Author                Modification
+    =====================================================================
+    1.0          29/7/2021         Deepak                Initial Version
+
+-->
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-layout multiple-rows="true" class="article-item" if:true={article}>
+        <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6">
+            <div class="slds-form-element slds-border_bottom slds-var-m-around_xx-small"><span
+                    class="slds-form-element__label">Form
+                </span>
+                <div class="slds-form-element__control"><span class="slds-form-element__static">
+                        <p>
+                            <lightning-formatted-text value={article.From} linkify></lightning-formatted-text>
+                        </p>
+                    </span></div>
+            </div>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6">
+            <div class="slds-form-element slds-border_bottom slds-var-m-around_xx-small"><span
+                    class="slds-form-element__label">To</span>
+                <div class="slds-form-element__control"><span class="slds-form-element__static">
+                        <p>
+                            <lightning-formatted-text value={article.To} linkify></lightning-formatted-text>
+                        </p>
+                    </span></div>
+            </div>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12">
+            <div class="slds-form-element slds-border_bottom slds-var-m-around_xx-small"><span
+                    class="slds-form-element__label">Subject</span>
+                <div class="slds-form-element__control"><span class="slds-form-element__static">
+                        <p>
+                            <lightning-formatted-text value={article.Subject}></lightning-formatted-text>
+                        </p>
+                    </span></div>
+            </div>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12">
+            <div class="slds-form-element slds-border_bottom slds-var-m-around_xx-small"><span
+                    class="slds-form-element__label">Body</span>
+                <div class="slds-form-element__control"><span class="slds-form-element__static">
+                        <div style="max-height: 120px; overflow: auto;">
+                            <lightning-formatted-rich-text value={article.Body}></lightning-formatted-rich-text>
+                        </div>
+                    </span></div>
+            </div>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"> 
+            <div class="slds-form-element slds-border_bottom slds-var-m-around_xx-small"><span class="slds-form-element__label">Attachments ({article.Attachment.length})</span>
+                <template if:true={article.Attachment} for:each={article.Attachment} for:item="attachment" for:index="index">
+                    <div key={attachment.AttachmentId} style="max-height: 120px; overflow: auto;">
+                        <lightning-button variant="base" data-name={attachment} value={attachment}  label={attachment.FileName} title="Download" onclick={handleClick}></lightning-button>
+                    </div>
+                </template>
+            </div>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

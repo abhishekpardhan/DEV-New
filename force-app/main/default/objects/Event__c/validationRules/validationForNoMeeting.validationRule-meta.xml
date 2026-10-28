@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>validationForNoMeeting</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+   INCLUDES(Activities_to_be_Performed__c, &quot;No Meeting Done&quot;), 
+   TEXT(PICKLISTCOUNT(Activities_to_be_Performed__c)) &gt; &quot;1&quot;
+)</errorConditionFormula>
+    <errorMessage>If &quot;No Meeting Done&quot; then other Activities Performed cannot be selected</errorMessage>
+</ValidationRule>

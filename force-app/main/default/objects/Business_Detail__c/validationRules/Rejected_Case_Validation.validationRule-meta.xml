@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rejected_Case_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(Case__r.Status__c , &quot;Rejected&quot;),
+    NOT(
+        OR(
+            $Profile.Name = &quot;System Administrator&quot;,
+            $Profile.Name = &quot;Read Only&quot;
+        )
+    )
+)</errorConditionFormula>
+    <errorMessage>Record cannot be created or modified because the related Case is Rejected.</errorMessage>
+</ValidationRule>

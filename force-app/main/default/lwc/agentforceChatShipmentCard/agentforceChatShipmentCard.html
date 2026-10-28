@@ -1,0 +1,58 @@
+<template>
+    <lightning-card icon-name="standard:shipment" class="shipment-card-container">
+        <span class="shipmentTitle">Waybill Tracking Status</span>
+        
+        <!-- Shipment Cards List / Single Payload -->
+        <div class="shipment-list-container">
+            <template for:each={shipmentData} for:item="shipment">
+                <div key={shipment.caseNumber} class="shipment-card">
+                    
+                    <!-- Header Section -->
+                    <div class="shipment-info" style={shipment.headerStyle}>
+                        <h2 class="shipment-id">{shipment.headerTitle}</h2>
+                    </div>
+
+                    <!-- Main Status & Event Date -->
+                    <div class="status-details">
+                        <div class="status">
+                            <strong>Status: {shipment.currentStatus}</strong>
+                        </div>
+                        <div class="event-date">
+                            Last Event: {shipment.lastEventDate}
+                        </div>
+                    </div>
+
+                    <!-- Timeline / Delivery Info -->
+                    <div class="shipment-timeline">
+                        <div class="timeline">
+                            <div class="time-point expected">
+                                <span>Expected Delivery: {shipment.expectedDeliveryDate}</span>
+                            </div>
+                            <div class="time-point actual">
+                                <span>Actual Delivery: {shipment.actualDeliveryDate}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Route & Branch Info -->
+                    <div class="additional-info">
+                        <div class="booking-branch">
+                            <lightning-icon icon-name="utility:checkin" size="small"></lightning-icon>
+                            <span>Booking Branch: {shipment.bookingBranch}</span>
+                        </div>
+                        <div class="delivery-city">
+                            <lightning-icon icon-name="utility:location" size="small"></lightning-icon>
+                            <span>Destination: {shipment.deliveryCity}</span>
+                        </div>
+                    </div>
+
+                    <!-- Footer Note -->
+                    <div class="card-footer">
+                        <span>{shipment.footerNote}</span>
+                    </div>
+
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

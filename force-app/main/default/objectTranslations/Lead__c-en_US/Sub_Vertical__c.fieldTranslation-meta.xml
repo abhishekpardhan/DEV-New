@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Sub Vertical --></label>
+    <name>Sub_Vertical__c</name>
+    <picklistValues>
+        <masterLabel>AGARBATTI</masterLabel>
+        <translation><!-- AGARBATTI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ARMS n AMMUNITIONS</masterLabel>
+        <translation><!-- ARMS n AMMUNITIONS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ARTIFICIAL JEWELLERY /ACCESSORIES</masterLabel>
+        <translation><!-- ARTIFICIAL JEWELLERY /ACCESSORIES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AUTO ACCESSORIES</masterLabel>
+        <translation><!-- AUTO ACCESSORIES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AUTO BATTERY</masterLabel>
+        <translation><!-- AUTO BATTERY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AUTO COMPONENTS</masterLabel>
+        <translation><!-- AUTO COMPONENTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AUTO PAINTS</masterLabel>
+        <translation><!-- AUTO PAINTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AUTO SPARE PARTS(FOR DISTRIBUTION)</masterLabel>
+        <translation><!-- AUTO SPARE PARTS(FOR DISTRIBUTION) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AUTO TYRES</masterLabel>
+        <translation><!-- AUTO TYRES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AYURVEDIC MEDICINE</masterLabel>
+        <translation><!-- AYURVEDIC MEDICINE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BANKS</masterLabel>
+        <translation><!-- BANKS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BLANKETS/QUILT</masterLabel>
+        <translation><!-- BLANKETS/QUILT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BUILDING MATERIAL</masterLabel>
+        <translation><!-- BUILDING MATERIAL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BULK DRUGS</masterLabel>
+        <translation><!-- BULK DRUGS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CAMPUS 2 HOME</masterLabel>
+        <translation><!-- CAMPUS 2 HOME --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CHEMICALS</masterLabel>
+        <translation><!-- CHEMICALS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CHIKAN CLOTHING</masterLabel>
+        <translation><!-- CHIKAN CLOTHING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>COACHING CENTRES</masterLabel>
+        <translation><!-- COACHING CENTRES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>COLLEGE/UNIVERSITY</masterLabel>
+        <translation><!-- COLLEGE/UNIVERSITY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>COMMODITY EXPRESS</masterLabel>
+        <translation><!-- COMMODITY EXPRESS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CONSUMER ELECTRONICS</masterLabel>
+        <translation><!-- CONSUMER ELECTRONICS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>COSMETICS PRODUCTS</masterLabel>
+        <translation><!-- COSMETICS PRODUCTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>COURIER</masterLabel>
+        <translation><!-- COURIER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>E-COMMERCE</masterLabel>
+        <translation><!-- E-COMMERCE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EASY 2 MOVE</masterLabel>
+        <translation><!-- EASY 2 MOVE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ELECTRICAL</masterLabel>
+        <translation><!-- ELECTRICAL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EVENT MANAGEMENT</masterLabel>
+        <translation><!-- EVENT MANAGEMENT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FABRIC</masterLabel>
+        <translation><!-- FABRIC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FINANCIAL INSTITUTIONS</masterLabel>
+        <translation><!-- FINANCIAL INSTITUTIONS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FMCG-FOOD</masterLabel>
+        <translation><!-- FMCG-FOOD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FMCG-NON FOOD</masterLabel>
+        <translation><!-- FMCG-NON FOOD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FOOTWEAR</masterLabel>
+        <translation><!-- FOOTWEAR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FREIGHT FORWARDING</masterLabel>
+        <translation><!-- FREIGHT FORWARDING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GENSET</masterLabel>
+        <translation><!-- GENSET --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GIFT ITEMS</masterLabel>
+        <translation><!-- GIFT ITEMS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HANDLOOM/ HANDICRAFTS</masterLabel>
+        <translation><!-- HANDLOOM/ HANDICRAFTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HARDWARE</masterLabel>
+        <translation><!-- HARDWARE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HOME APPLIANCES</masterLabel>
+        <translation><!-- HOME APPLIANCES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HOME DECOR</masterLabel>
+        <translation><!-- HOME DECOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HOSIERY</masterLabel>
+        <translation><!-- HOSIERY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INDUSTRIAL EQUIPMENT</masterLabel>
+        <translation><!-- INDUSTRIAL EQUIPMENT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INDUSTRY ASSOCIATIONS</masterLabel>
+        <translation><!-- INDUSTRY ASSOCIATIONS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INSURANCE</masterLabel>
+        <translation><!-- INSURANCE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IT</masterLabel>
+        <translation><!-- IT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IT INSTITUTES</masterLabel>
+        <translation><!-- IT INSTITUTES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>JUTE PRODUCTS</masterLabel>
+        <translation><!-- JUTE PRODUCTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>KHADI</masterLabel>
+        <translation><!-- KHADI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>KNITWEAR</masterLabel>
+        <translation><!-- KNITWEAR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LEATHER ACCESSORIES</masterLabel>
+        <translation><!-- LEATHER ACCESSORIES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LOGISTICS</masterLabel>
+        <translation><!-- LOGISTICS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MEDICAL EQUIPMENTS</masterLabel>
+        <translation><!-- MEDICAL EQUIPMENTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MOBILE PHONES/ACCESSORIES</masterLabel>
+        <translation><!-- MOBILE PHONES/ACCESSORIES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OFFICE AUTOMATION</masterLabel>
+        <translation><!-- OFFICE AUTOMATION --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PACKAGING</masterLabel>
+        <translation><!-- PACKAGING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PERFUMERY</masterLabel>
+        <translation><!-- PERFUMERY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PHARMACEUTICALS</masterLabel>
+        <translation><!-- PHARMACEUTICALS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PRE-SCHOOLS</masterLabel>
+        <translation><!-- PRE-SCHOOLS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PRINTING PRESS</masterLabel>
+        <translation><!-- PRINTING PRESS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PROMOTIONAL MATERIAL</masterLabel>
+        <translation><!-- PROMOTIONAL MATERIAL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PUBLISHING HOUSES</masterLabel>
+        <translation><!-- PUBLISHING HOUSES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PUMPS</masterLabel>
+        <translation><!-- PUMPS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>READYMADE GARMENTS</masterLabel>
+        <translation><!-- READYMADE GARMENTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RETAIL CHAIN</masterLabel>
+        <translation><!-- RETAIL CHAIN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SAFE RETURNS (Exhibition)</masterLabel>
+        <translation><!-- SAFE RETURNS (Exhibition) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SAFE RETURNS(Retails Stores)</masterLabel>
+        <translation><!-- SAFE RETURNS(Retails Stores) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SAFEHOME</masterLabel>
+        <translation><!-- SAFEHOME --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SAINIK EXPRESS</masterLabel>
+        <translation><!-- SAINIK EXPRESS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SAREES</masterLabel>
+        <translation><!-- SAREES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SCIENTIFIC EQUIPMENTS</masterLabel>
+        <translation><!-- SCIENTIFIC EQUIPMENTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SECURITY SYSTEMS</masterLabel>
+        <translation><!-- SECURITY SYSTEMS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SPORTS/TOYS</masterLabel>
+        <translation><!-- SPORTS/TOYS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STATIONARY</masterLabel>
+        <translation><!-- STATIONARY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SURGICAL GOODS</masterLabel>
+        <translation><!-- SURGICAL GOODS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TELECOM EQUIPMENT</masterLabel>
+        <translation><!-- TELECOM EQUIPMENT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TOOLS AND SPARES</masterLabel>
+        <translation><!-- TOOLS AND SPARES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WAREHOUSING</masterLabel>
+        <translation><!-- WAREHOUSING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WHITE GOODS</masterLabel>
+        <translation><!-- WHITE GOODS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WOOLLEN</masterLabel>
+        <translation><!-- WOOLLEN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>YARN</masterLabel>
+        <translation><!-- YARN --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

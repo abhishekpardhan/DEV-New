@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>User_profile__c</fullName>
+    <label>User profile</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Include Profile</fullName>
+                <default>false</default>
+                <label>Include Profile</label>
+            </value>
+            <value>
+                <fullName>Exclude Profile</fullName>
+                <default>false</default>
+                <label>Exclude Profile</label>
+            </value>
+            <value>
+                <fullName>All Profile</fullName>
+                <default>false</default>
+                <label>All Profile</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

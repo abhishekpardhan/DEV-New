@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>HorizontalBar</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>Activity.Remaining_Payment_Tentative_Date__c</groupingColumn>
+        <location>CHART_BOTTOM</location>
+        <showAxisLabels>false</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>true</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>CDF1</field>
+    </columns>
+    <columns>
+        <field>Activity.Type__c</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>WHAT_NAME</field>
+    </columns>
+    <columns>
+        <field>Activity.Invoice_date__c</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>COMPLETED_DATE_TIME</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE</field>
+    </columns>
+    <columns>
+        <field>Activity.Account_Name__c</field>
+    </columns>
+    <currency>INR</currency>
+    <customDetailFormulas>
+        <calculatedFormula>IF(
+  ISBLANK(Activity.Remaining_Payment_Tentative_Date__c),
+  &quot;Unplanned&quot;,
+  IF(
+    ISBLANK(COMPLETED_DATE_TIME),
+    &quot;Uncollected&quot;,
+    IF(
+      AND(
+        MONTH(DATEVALUE(COMPLETED_DATE_TIME)) = MONTH(Activity.Remaining_Payment_Tentative_Date__c),
+        YEAR(DATEVALUE(COMPLETED_DATE_TIME)) = YEAR(Activity.Remaining_Payment_Tentative_Date__c)
+      ),
+      &quot;As Projected &quot;,
+      IF(
+        DATEVALUE(COMPLETED_DATE_TIME) &lt; 
+        DATE(YEAR(Activity.Remaining_Payment_Tentative_Date__c), MONTH(Activity.Remaining_Payment_Tentative_Date__c), 1),
+        &quot;Before Projected Month&quot;,
+        &quot;After Projected Month&quot;
+      )
+    )
+  )
+)</calculatedFormula>
+        <dataType>Text</dataType>
+        <developerName>CDF2</developerName>
+        <label>Projected</label>
+        <scale>2</scale>
+    </customDetailFormulas>
+    <customDetailFormulas>
+        <calculatedFormula>IF(
+  ISBLANK(Activity.Remaining_Payment_Tentative_Date__c),
+  &quot;Unplanned&quot;,
+  IF(
+    ABS(
+      DATEVALUE(COMPLETED_DATE_TIME) - 
+      Activity.Remaining_Payment_Tentative_Date__c
+    ) &lt;= 4,
+    &quot;On Time&quot;,
+    &quot;Delay&quot;
+  )
+)</calculatedFormula>
+        <dataType>Text</dataType>
+        <developerName>CDF1</developerName>
+        <label>On Time</label>
+        <scale>2</scale>
+    </customDetailFormulas>
+    <filter>
+        <booleanFilter>1 AND 2 AND 3 AND 4</booleanFilter>
+        <criteriaItems>
+            <column>TASK</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>STATUS</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Open,In Progress,Completed,Reopen</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>RECORDTYPE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Task.Collection</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Activity.Remaining_Payment_Tentative_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>1/1/2026</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>CDF2</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>MonthInYear</dateGranularity>
+        <field>Activity.Remaining_Payment_Tentative_Date__c</field>
+        <sortOrder>Desc</sortOrder>
+    </groupingsDown>
+    <name>Projected Bills - 2026_matrix</name>
+    <params>
+        <name>closed</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>type</name>
+        <value>te</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Activity</reportType>
+    <scope>team</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

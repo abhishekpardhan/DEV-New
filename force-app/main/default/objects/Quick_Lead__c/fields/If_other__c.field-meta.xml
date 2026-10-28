@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>If_other__c</fullName>
+    <inlineHelpText>This field needs to be populated if you have selected &quot;Others&quot; in Enquiry Type</inlineHelpText>
+    <label>Share Details</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

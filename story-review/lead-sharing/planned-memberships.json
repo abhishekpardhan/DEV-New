@@ -1,0 +1,650 @@
+﻿[
+    {
+        "RegionCode":  "APT",
+        "PublicGroupAPIName":  "SG_RGN_APT_RM",
+        "RoleType":  "Regional Manager",
+        "RoleDeveloperName":  "Regional_Manager_1",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Manager_1.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "APT",
+        "PublicGroupAPIName":  "SG_RGN_APT_RM",
+        "RoleType":  "Regional ICM Manager",
+        "RoleDeveloperName":  "Regional_ICM_Manager_1",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_ICM_Manager_1.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "APT",
+        "PublicGroupAPIName":  "SG_RGN_APT_RM",
+        "RoleType":  "Regional New Sales Manager",
+        "RoleDeveloperName":  "Regional_New_Sales_Manager_1",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_New_Sales_Manager_1.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "APT",
+        "PublicGroupAPIName":  "SG_RGN_APT_RM",
+        "RoleType":  "Regional Retail Manager",
+        "RoleDeveloperName":  "Regional_Retail_Manager_1",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Retail_Manager_1.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "BJO",
+        "PublicGroupAPIName":  "SG_RGN_BJO_RM",
+        "RoleType":  "Regional Manager",
+        "RoleDeveloperName":  "Regional_Manager_2",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Manager_2.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "BJO",
+        "PublicGroupAPIName":  "SG_RGN_BJO_RM",
+        "RoleType":  "Regional ICM Manager",
+        "RoleDeveloperName":  "Regional_ICM_Manager_2",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_ICM_Manager_2.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "BJO",
+        "PublicGroupAPIName":  "SG_RGN_BJO_RM",
+        "RoleType":  "Regional New Sales Manager",
+        "RoleDeveloperName":  "Regional_New_Sales_Manager_2",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_New_Sales_Manager_2.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "BJO",
+        "PublicGroupAPIName":  "SG_RGN_BJO_RM",
+        "RoleType":  "Regional Retail Manager",
+        "RoleDeveloperName":  "Regional_Retail_Manager_2",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Retail_Manager_2.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "DLI",
+        "PublicGroupAPIName":  "SG_RGN_DLI_RM",
+        "RoleType":  "Regional Manager",
+        "RoleDeveloperName":  "Regional_Manager_DLI",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Manager_DLI.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "DLI",
+        "PublicGroupAPIName":  "SG_RGN_DLI_RM",
+        "RoleType":  "Regional ICM Manager",
+        "RoleDeveloperName":  "Regional_ICM_Manager_DLI",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_ICM_Manager_DLI.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "DLI",
+        "PublicGroupAPIName":  "SG_RGN_DLI_RM",
+        "RoleType":  "Regional New Sales Manager",
+        "RoleDeveloperName":  "Regional_New_Sales_Manager_DLI",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_New_Sales_Manager_DLI.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "DLI",
+        "PublicGroupAPIName":  "SG_RGN_DLI_RM",
+        "RoleType":  "Regional Retail Manager",
+        "RoleDeveloperName":  "Regional_Retail_Manager_DLI",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Retail_Manager_DLI.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "GJT",
+        "PublicGroupAPIName":  "SG_RGN_GJT_RM",
+        "RoleType":  "Regional Manager",
+        "RoleDeveloperName":  "Regional_Manager_GJT",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Manager_GJT.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "GJT",
+        "PublicGroupAPIName":  "SG_RGN_GJT_RM",
+        "RoleType":  "Regional ICM Manager",
+        "RoleDeveloperName":  "Regional_ICM_Manager_GJT",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_ICM_Manager_GJT.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "GJT",
+        "PublicGroupAPIName":  "SG_RGN_GJT_RM",
+        "RoleType":  "Regional New Sales Manager",
+        "RoleDeveloperName":  "Regional_New_Sales_Manager_GJT",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_New_Sales_Manager_GJT.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "GJT",
+        "PublicGroupAPIName":  "SG_RGN_GJT_RM",
+        "RoleType":  "Regional Retail Manager",
+        "RoleDeveloperName":  "Regional_Retail_Manager_GJT",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Retail_Manager_GJT.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "HRN",
+        "PublicGroupAPIName":  "SG_RGN_HRN_RM",
+        "RoleType":  "Regional Manager",
+        "RoleDeveloperName":  "Regional_Manager_HRN",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Manager_HRN.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "HRN",
+        "PublicGroupAPIName":  "SG_RGN_HRN_RM",
+        "RoleType":  "Regional ICM Manager",
+        "RoleDeveloperName":  "Regional_ICM_Manager_HRN",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_ICM_Manager_HRN.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "HRN",
+        "PublicGroupAPIName":  "SG_RGN_HRN_RM",
+        "RoleType":  "Regional New Sales Manager",
+        "RoleDeveloperName":  "Regional_New_Sales_Manager_HRN",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_New_Sales_Manager_HRN.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "HRN",
+        "PublicGroupAPIName":  "SG_RGN_HRN_RM",
+        "RoleType":  "Regional Retail Manager",
+        "RoleDeveloperName":  "Regional_Retail_Manager_HRN",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Retail_Manager_HRN.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "JKH",
+        "PublicGroupAPIName":  "SG_RGN_JKH_RM",
+        "RoleType":  "Regional Manager",
+        "RoleDeveloperName":  "Regional_Manager_JKH",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Manager_JKH.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "JKH",
+        "PublicGroupAPIName":  "SG_RGN_JKH_RM",
+        "RoleType":  "Regional ICM Manager",
+        "RoleDeveloperName":  "Regional_ICM_Manager_JKH",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_ICM_Manager_JKH.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "JKH",
+        "PublicGroupAPIName":  "SG_RGN_JKH_RM",
+        "RoleType":  "Regional New Sales Manager",
+        "RoleDeveloperName":  "Regional_New_Sales_Manager_JKH",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_New_Sales_Manager_JKH.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "JKH",
+        "PublicGroupAPIName":  "SG_RGN_JKH_RM",
+        "RoleType":  "Regional Retail Manager",
+        "RoleDeveloperName":  "Regional_Retail_Manager_JKH",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Retail_Manager_JKH.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "KRL",
+        "PublicGroupAPIName":  "SG_RGN_KRL_RM",
+        "RoleType":  "Regional Manager",
+        "RoleDeveloperName":  "Regional_Manager_KRL",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Manager_KRL.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "KRL",
+        "PublicGroupAPIName":  "SG_RGN_KRL_RM",
+        "RoleType":  "Regional ICM Manager",
+        "RoleDeveloperName":  "Regional_ICM_Manager_KRL",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_ICM_Manager_KRL.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "KRL",
+        "PublicGroupAPIName":  "SG_RGN_KRL_RM",
+        "RoleType":  "Regional New Sales Manager",
+        "RoleDeveloperName":  "Regional_New_Sales_Manager_KRL",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_New_Sales_Manager_KRL.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "KRL",
+        "PublicGroupAPIName":  "SG_RGN_KRL_RM",
+        "RoleType":  "Regional Retail Manager",
+        "RoleDeveloperName":  "Regional_Retail_Manager_KRL",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Retail_Manager_KRL.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "KTK",
+        "PublicGroupAPIName":  "SG_RGN_KTK_RM",
+        "RoleType":  "Regional Manager",
+        "RoleDeveloperName":  "Regional_Manager_KTK",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Manager_KTK.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "KTK",
+        "PublicGroupAPIName":  "SG_RGN_KTK_RM",
+        "RoleType":  "Regional ICM Manager",
+        "RoleDeveloperName":  "Regional_ICM_Manager_KTK",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_ICM_Manager_KTK.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "KTK",
+        "PublicGroupAPIName":  "SG_RGN_KTK_RM",
+        "RoleType":  "Regional New Sales Manager",
+        "RoleDeveloperName":  "Regional_New_Sales_Manager_KTK",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_New_Sales_Manager_KTK.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "KTK",
+        "PublicGroupAPIName":  "SG_RGN_KTK_RM",
+        "RoleType":  "Regional Retail Manager",
+        "RoleDeveloperName":  "Regional_Retail_Manager_KTK",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Retail_Manager_KTK.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "MHG",
+        "PublicGroupAPIName":  "SG_RGN_MHG_RM",
+        "RoleType":  "Regional Manager",
+        "RoleDeveloperName":  "Regional_Manager_MHG",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Manager_MHG.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "MHG",
+        "PublicGroupAPIName":  "SG_RGN_MHG_RM",
+        "RoleType":  "Regional ICM Manager",
+        "RoleDeveloperName":  "Regional_ICM_Manager_MHG",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_ICM_Manager_MHG.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "MHG",
+        "PublicGroupAPIName":  "SG_RGN_MHG_RM",
+        "RoleType":  "Regional New Sales Manager",
+        "RoleDeveloperName":  "Regional_New_Sales_Manager_MHG",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_New_Sales_Manager_MHG.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "MHG",
+        "PublicGroupAPIName":  "SG_RGN_MHG_RM",
+        "RoleType":  "Regional Retail Manager",
+        "RoleDeveloperName":  "Regional_Retail_Manager_MHG",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Retail_Manager_MHG.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "MPC",
+        "PublicGroupAPIName":  "SG_RGN_MPC_RM",
+        "RoleType":  "Regional Manager",
+        "RoleDeveloperName":  "Regional_Manager_MPC",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Manager_MPC.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "MPC",
+        "PublicGroupAPIName":  "SG_RGN_MPC_RM",
+        "RoleType":  "Regional ICM Manager",
+        "RoleDeveloperName":  "Regional_ICM_Manager_MPC",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_ICM_Manager_MPC.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "MPC",
+        "PublicGroupAPIName":  "SG_RGN_MPC_RM",
+        "RoleType":  "Regional New Sales Manager",
+        "RoleDeveloperName":  "Regional_New_Sales_Manager_MPC",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_New_Sales_Manager_MPC.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "MPC",
+        "PublicGroupAPIName":  "SG_RGN_MPC_RM",
+        "RoleType":  "Regional Retail Manager",
+        "RoleDeveloperName":  "Regional_Retail_Manager_MPC",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Retail_Manager_MPC.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "MUM",
+        "PublicGroupAPIName":  "SG_RGN_MUM_RM",
+        "RoleType":  "Regional Manager",
+        "RoleDeveloperName":  "Regional_Manager_MUM",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Manager_MUM.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "MUM",
+        "PublicGroupAPIName":  "SG_RGN_MUM_RM",
+        "RoleType":  "Regional ICM Manager",
+        "RoleDeveloperName":  "Regional_ICM_Manager_MUM",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_ICM_Manager_MUM.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "MUM",
+        "PublicGroupAPIName":  "SG_RGN_MUM_RM",
+        "RoleType":  "Regional New Sales Manager",
+        "RoleDeveloperName":  "Regional_New_Sales_Manager_MUM",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_New_Sales_Manager_MUM.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "MUM",
+        "PublicGroupAPIName":  "SG_RGN_MUM_RM",
+        "RoleType":  "Regional Retail Manager",
+        "RoleDeveloperName":  "Regional_Retail_Manager_MUM",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Retail_Manager_MUM.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "NRE",
+        "PublicGroupAPIName":  "SG_RGN_NRE_RM",
+        "RoleType":  "Regional Manager",
+        "RoleDeveloperName":  "Regional_Manager_NRE",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Manager_NRE.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "NRE",
+        "PublicGroupAPIName":  "SG_RGN_NRE_RM",
+        "RoleType":  "Regional ICM Manager",
+        "RoleDeveloperName":  "Regional_ICM_Manager_NRE",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_ICM_Manager_NRE.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "NRE",
+        "PublicGroupAPIName":  "SG_RGN_NRE_RM",
+        "RoleType":  "Regional New Sales Manager",
+        "RoleDeveloperName":  "Regional_New_Sales_Manager_NRE",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_New_Sales_Manager_NRE.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "NRE",
+        "PublicGroupAPIName":  "SG_RGN_NRE_RM",
+        "RoleType":  "Regional Retail Manager",
+        "RoleDeveloperName":  "Regional_Retail_Manager_NRE",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Retail_Manager_NRE.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "PBC",
+        "PublicGroupAPIName":  "SG_RGN_PBC_RM",
+        "RoleType":  "Regional Manager",
+        "RoleDeveloperName":  "Regional_Manager_PBC",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Manager_PBC.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "PBC",
+        "PublicGroupAPIName":  "SG_RGN_PBC_RM",
+        "RoleType":  "Regional ICM Manager",
+        "RoleDeveloperName":  "Regional_ICM_Manager_PBC",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_ICM_Manager_PBC.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "PBC",
+        "PublicGroupAPIName":  "SG_RGN_PBC_RM",
+        "RoleType":  "Regional New Sales Manager",
+        "RoleDeveloperName":  "Regional_New_Sales_Manager_PBC",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_New_Sales_Manager_PBC.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "PBC",
+        "PublicGroupAPIName":  "SG_RGN_PBC_RM",
+        "RoleType":  "Regional Retail Manager",
+        "RoleDeveloperName":  "Regional_Retail_Manager_PBC",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Retail_Manager_PBC.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "RJN",
+        "PublicGroupAPIName":  "SG_RGN_RJN_RM",
+        "RoleType":  "Regional Manager",
+        "RoleDeveloperName":  "Regional_Manager_RJN",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Manager_RJN.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "RJN",
+        "PublicGroupAPIName":  "SG_RGN_RJN_RM",
+        "RoleType":  "Regional ICM Manager",
+        "RoleDeveloperName":  "Regional_ICM_Manager_RJN",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_ICM_Manager_RJN.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "RJN",
+        "PublicGroupAPIName":  "SG_RGN_RJN_RM",
+        "RoleType":  "Regional New Sales Manager",
+        "RoleDeveloperName":  "Regional_New_Sales_Manager_RJN",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_New_Sales_Manager_RJN.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "RJN",
+        "PublicGroupAPIName":  "SG_RGN_RJN_RM",
+        "RoleType":  "Regional Retail Manager",
+        "RoleDeveloperName":  "Regional_Retail_Manager_RJN",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Retail_Manager_RJN.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "TNP",
+        "PublicGroupAPIName":  "SG_RGN_TNP_RM",
+        "RoleType":  "Regional Manager",
+        "RoleDeveloperName":  "Regional_Manager_TNP",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Manager_TNP.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "TNP",
+        "PublicGroupAPIName":  "SG_RGN_TNP_RM",
+        "RoleType":  "Regional ICM Manager",
+        "RoleDeveloperName":  "Regional_ICM_Manager_TNP",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_ICM_Manager_TNP.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "TNP",
+        "PublicGroupAPIName":  "SG_RGN_TNP_RM",
+        "RoleType":  "Regional New Sales Manager",
+        "RoleDeveloperName":  "Regional_New_Sales_Manager_TNP",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_New_Sales_Manager_TNP.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "TNP",
+        "PublicGroupAPIName":  "SG_RGN_TNP_RM",
+        "RoleType":  "Regional Retail Manager",
+        "RoleDeveloperName":  "Regional_Retail_Manager_TNP",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Retail_Manager_TNP.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "UKH",
+        "PublicGroupAPIName":  "SG_RGN_UKH_RM",
+        "RoleType":  "Regional Manager",
+        "RoleDeveloperName":  "Regional_Manager_UKH",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Manager_UKH.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "UKH",
+        "PublicGroupAPIName":  "SG_RGN_UKH_RM",
+        "RoleType":  "Regional ICM Manager",
+        "RoleDeveloperName":  "Regional_ICM_Manager_UKH",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_ICM_Manager_UKH.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "UKH",
+        "PublicGroupAPIName":  "SG_RGN_UKH_RM",
+        "RoleType":  "Regional New Sales Manager",
+        "RoleDeveloperName":  "Regional_New_Sales_Manager_UKH",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_New_Sales_Manager_UKH.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "UKH",
+        "PublicGroupAPIName":  "SG_RGN_UKH_RM",
+        "RoleType":  "Regional Retail Manager",
+        "RoleDeveloperName":  "Regional_Retail_Manager_UKH",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Retail_Manager_UKH.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "UPR",
+        "PublicGroupAPIName":  "SG_RGN_UPR_RM",
+        "RoleType":  "Regional Manager",
+        "RoleDeveloperName":  "Regional_Manager_UPR",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Manager_UPR.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "UPR",
+        "PublicGroupAPIName":  "SG_RGN_UPR_RM",
+        "RoleType":  "Regional ICM Manager",
+        "RoleDeveloperName":  "Regional_ICM_Manager_UPR",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_ICM_Manager_UPR.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "UPR",
+        "PublicGroupAPIName":  "SG_RGN_UPR_RM",
+        "RoleType":  "Regional New Sales Manager",
+        "RoleDeveloperName":  "Regional_New_Sales_Manager_UPR",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_New_Sales_Manager_UPR.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "UPR",
+        "PublicGroupAPIName":  "SG_RGN_UPR_RM",
+        "RoleType":  "Regional Retail Manager",
+        "RoleDeveloperName":  "Regional_Retail_Manager_UPR",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Retail_Manager_UPR.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "WBS",
+        "PublicGroupAPIName":  "SG_RGN_WBS_RM",
+        "RoleType":  "Regional Manager",
+        "RoleDeveloperName":  "Regional_Manager_WBS",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Manager_WBS.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "WBS",
+        "PublicGroupAPIName":  "SG_RGN_WBS_RM",
+        "RoleType":  "Regional ICM Manager",
+        "RoleDeveloperName":  "Regional_ICM_Manager_WBS",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_ICM_Manager_WBS.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "WBS",
+        "PublicGroupAPIName":  "SG_RGN_WBS_RM",
+        "RoleType":  "Regional New Sales Manager",
+        "RoleDeveloperName":  "Regional_New_Sales_Manager_WBS",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_New_Sales_Manager_WBS.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    },
+    {
+        "RegionCode":  "WBS",
+        "PublicGroupAPIName":  "SG_RGN_WBS_RM",
+        "RoleType":  "Regional Retail Manager",
+        "RoleDeveloperName":  "Regional_Retail_Manager_WBS",
+        "MembershipType":  "Role",
+        "VerifiedSource":  "C:\\Users\\80629\\Downloads\\SF2\\DEV@New\\force-app\\main\\default\\roles\\Regional_Retail_Manager_WBS.role-meta.xml",
+        "Status":  "VERIFIED role identity locally; BLOCKED membership: not supported by Group Metadata API"
+    }
+]

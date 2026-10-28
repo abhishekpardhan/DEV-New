@@ -1,0 +1,120 @@
+:host {
+    display: block;
+    font-family: -apple-system, BlinkMacSystemFont, "Salesforce Sans", "Segoe UI", Roboto, sans-serif;
+}
+
+.sfx-card {
+    max-width: 380px;
+    margin: 0.5rem 0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+}
+
+/* Header Section */
+.sfx-header {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    gap: 0.75rem;
+    background-color: #1e7a34;
+}
+
+.sfx-logo {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.sfx-title {
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0;
+}
+
+/* Body Section */
+.sfx-body {
+    padding: 1rem;
+    background-color: #ffffff;
+}
+
+.sfx-instruction {
+    font-size: 0.75rem;
+    color: #333333;
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+.sfx-file-list {
+    margin: 0.75rem 0;
+    max-height: 100px;
+    overflow-y: auto;
+    border: 1px dashed #dddbda;
+    padding: 0.5rem;
+    border-radius: 4px;
+    background-color: #fafaf9;
+}
+
+.sfx-file-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.75rem;
+    color: #1a1a1a;
+    padding: 2px 0;
+}
+
+/* Center Upload Button */
+.sfx-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.sfx-upload-btn {
+    background-color: #1e7a34;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s;
+}
+
+.sfx-upload-btn:hover:not(:disabled) {
+    background-color: #155724;
+}
+
+.sfx-upload-btn:disabled {
+    background-color: #c9c7c5;
+    cursor: not-allowed;
+}
+
+/* Success State */
+.sfx-success-container {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.sfx-success-text {
+    font-size: 0.8125rem;
+    color: #1e7a34;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Footer Section */
+.sfx-footer {
+    background-color: #1a1a1a;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.6875rem;
+    color: #ffffff;
+    font-weight: 600;
+    text-align: center;
+}

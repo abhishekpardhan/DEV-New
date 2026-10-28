@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Modify_Fields_if_Deferred</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (!ISNEW(), ISPICKVAL(Approval_Status__c, &apos;Approved By Corporate Head Credit/Retail&apos;) , OR (ISCHANGED(Qrm__c), ISCHANGED(RM__c), ISCHANGED (Remarks__c)), OR(NOT(ISPICKVAL (Status__c, &apos;Deferred&apos;)), NOT(ISPICKVAL (Status__c, &apos;Pending with Quotation Team&apos;)), NOT(ISPICKVAL (Status__c, &apos;Sent to Customer&apos;))))</errorConditionFormula>
+    <errorMessage>Can only update Status to &apos;Deferred&apos; if quote is approved.</errorMessage>
+</ValidationRule>

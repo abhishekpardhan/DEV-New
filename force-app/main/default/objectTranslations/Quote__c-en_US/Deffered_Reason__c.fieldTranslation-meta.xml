@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Deferred Reason --></label>
+    <name>Deffered_Reason__c</name>
+    <picklistValues>
+        <masterLabel>Any Deduction Clause not acceptable</masterLabel>
+        <translation><!-- Any Deduction Clause not acceptable --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Any other reasons</masterLabel>
+        <translation><!-- Any other reasons --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Price Not acceptable</masterLabel>
+        <translation><!-- Price Not acceptable --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Product Not acceptable</masterLabel>
+        <translation><!-- Product Not acceptable --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quotation expiry</masterLabel>
+        <translation><!-- Quotation expiry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Terms &amp; Conditions not acceptable</masterLabel>
+        <translation><!-- Terms &amp; Conditions not acceptable --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

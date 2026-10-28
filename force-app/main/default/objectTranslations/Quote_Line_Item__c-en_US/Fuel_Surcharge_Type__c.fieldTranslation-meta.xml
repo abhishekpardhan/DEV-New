@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Fuel Surcharge Type --></label>
+    <name>Fuel_Surcharge_Type__c</name>
+    <picklistValues>
+        <masterLabel>Basic</masterLabel>
+        <translation><!-- Basic --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Total</masterLabel>
+        <translation><!-- Total --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

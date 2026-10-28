@@ -1,0 +1,46 @@
+﻿{
+  "status": 0,
+  "result": {
+    "records": [
+      {
+        "attributes": {
+          "type": "AppTabMember",
+          "url": "/services/data/v68.0/sobjects/AppTabMember/06mC10000018nKjIAI-home"
+        },
+        "AppDefinitionId": "06mC10000018nKjIAI",
+        "TabDefinitionId": "home",
+        "SortOrder": 0
+      },
+      {
+        "attributes": {
+          "type": "AppTabMember",
+          "url": "/services/data/v68.0/sobjects/AppTabMember/06mC10000018nKjIAI-Campaign"
+        },
+        "AppDefinitionId": "06mC10000018nKjIAI",
+        "TabDefinitionId": "Campaign",
+        "SortOrder": 1
+      },
+      {
+        "attributes": {
+          "type": "AppTabMember",
+          "url": "/services/data/v68.0/sobjects/AppTabMember/06mC10000018nKjIAI-Lead"
+        },
+        "AppDefinitionId": "06mC10000018nKjIAI",
+        "TabDefinitionId": "Lead",
+        "SortOrder": 2
+      },
+      {
+        "attributes": {
+          "type": "AppTabMember",
+          "url": "/services/data/v68.0/sobjects/AppTabMember/06mC10000018nKjIAI-Opportunity"
+        },
+        "AppDefinitionId": "06mC10000018nKjIAI",
+        "TabDefinitionId": "Opportunity",
+        "SortOrder": 3
+      }
+    ],
+    "totalSize": 4,
+    "done": true
+  },
+  "warnings": []
+}

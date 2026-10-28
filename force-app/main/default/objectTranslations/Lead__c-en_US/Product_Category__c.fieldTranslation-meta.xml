@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Retail Vertical --></label>
+    <name>Product_Category__c</name>
+    <picklistValues>
+        <masterLabel>Agri Commodity</masterLabel>
+        <translation><!-- Agri Commodity --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Apparel and Textile</masterLabel>
+        <translation><!-- Apparel and Textile --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C2C</masterLabel>
+        <translation><!-- C2C --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Industrial and Cottage</masterLabel>
+        <translation><!-- Industrial and Cottage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Others</masterLabel>
+        <translation><!-- Others --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

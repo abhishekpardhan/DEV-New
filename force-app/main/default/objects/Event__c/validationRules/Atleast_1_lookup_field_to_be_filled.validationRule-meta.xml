@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Atleast_1_lookup_field_to_be_filled</fullName>
+    <active>false</active>
+    <errorConditionFormula>(if(ISBLANK(Campaign__c),0,1) +
+if(ISBLANK(Account__c),0,1) +
+if(ISBLANK(Lead__c),0,1) +
+if(ISBLANK(Opportunity__c),0,1) +
+if(ISBLANK(TEXT(Activity__c)),0,1)) &gt; 1</errorConditionFormula>
+    <errorMessage>Only One can be selected at one time : Campaign,Account,Opportunity,Lead,Activity.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Status__c</fullName>
+    <label>Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Customer_Case_Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>In progress</fullName>
+                <default>false</default>
+                <label>In progress</label>
+            </value>
+            <value>
+                <fullName>In development</fullName>
+                <default>false</default>
+                <label>Considered for Development</label>
+            </value>
+            <value>
+                <fullName>Business to Initiate</fullName>
+                <default>false</default>
+                <label>Business to Initiate</label>
+            </value>
+            <value>
+                <fullName>On hold</fullName>
+                <default>false</default>
+                <label>On hold</label>
+            </value>
+            <value>
+                <fullName>Closed (with no Action)</fullName>
+                <default>false</default>
+                <label>Closed (with no Action)</label>
+            </value>
+            <value>
+                <fullName>Completed API Request</fullName>
+                <default>false</default>
+                <label>Completed API Request</label>
+            </value>
+            <value>
+                <fullName>Open</fullName>
+                <default>false</default>
+                <label>Open</label>
+            </value>
+            <value>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+                <label>Rejected</label>
+            </value>
+            <value>
+                <fullName>Completed Portal development</fullName>
+                <default>false</default>
+                <label>Completed Portal development</label>
+            </value>
+            <value>
+                <fullName>Meeting Done</fullName>
+                <default>false</default>
+                <label>Meeting Done</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>API Integration Required</controllingFieldValue>
+            <controllingFieldValue>Customer Portal Request</controllingFieldValue>
+            <valueName>In progress</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>API Integration Required</controllingFieldValue>
+            <controllingFieldValue>Customer Portal Request</controllingFieldValue>
+            <valueName>In development</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>API Integration Required</controllingFieldValue>
+            <controllingFieldValue>Customer Portal Request</controllingFieldValue>
+            <controllingFieldValue>Meeting Request</controllingFieldValue>
+            <valueName>On hold</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>API Integration Required</controllingFieldValue>
+            <controllingFieldValue>Customer Portal Request</controllingFieldValue>
+            <controllingFieldValue>Meeting Request</controllingFieldValue>
+            <valueName>Closed (with no Action)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>API Integration Required</controllingFieldValue>
+            <valueName>Completed API Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>API Integration Required</controllingFieldValue>
+            <controllingFieldValue>Customer Portal Request</controllingFieldValue>
+            <controllingFieldValue>Meeting Request</controllingFieldValue>
+            <valueName>Open</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Portal Request</controllingFieldValue>
+            <valueName>Completed Portal development</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Meeting Request</controllingFieldValue>
+            <valueName>Business to Initiate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Meeting Request</controllingFieldValue>
+            <valueName>Meeting Done</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

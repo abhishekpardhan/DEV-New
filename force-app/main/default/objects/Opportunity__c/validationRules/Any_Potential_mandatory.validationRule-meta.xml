@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Any_Potential_mandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(
+$Permission.Skip_Validation_Rule ,
+false,
+IF(
+ AND(ISNEW(), Is_Converted__c =true),
+ false, 
+ AND(OR(ISBLANK(X3PL_Potential__c),X3PL_Potential__c&lt;=0), OR(ISBLANK(Monthly_Potential_Air__c ),Monthly_Potential_Air__c &lt;=0), OR(ISBLANK(Monthly_Potential_Surface__c),  Monthly_Potential_Surface__c &lt;=0))
+)
+)</errorConditionFormula>
+    <errorMessage>Please enter any of the one Monthly Potential(Air,Surface,3PL).</errorMessage>
+</ValidationRule>

@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Remarks_Edit</fullName>
+    <active>true</active>
+    <label>Remarks Edit</label>
+    <picklistValues>
+        <picklist>Activities_to_be_Performed__c</picklist>
+        <values>
+            <fullName>ARM Associate Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Admin Issue Resolution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Admin Issues and Branch Audit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Area Manager Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Area office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BDM Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BIR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRM Associate Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bank Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Branch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Branch Audit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Revival</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Campus Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Claim Resolution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cluster Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Collection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conference</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consignee Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract Renewal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract Signing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate Leader Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DRM Associate Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Damage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Freight Dispute</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Govt Authority Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Green Truck Associate Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hotel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incident Spot Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Institution Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interview</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Labour Associate Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Late Delivery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting with Landlord</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mis-behaviour</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NRM Associate Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Negotiation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Associate Interview</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Warehouse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Meeting Done</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Office Search</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Onboarding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operation Analysis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operation Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Others</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outstanding Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Price Revision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Promotional Campaign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Promotional Gifting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospecting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RFQ Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Regional Manager Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Regional Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Relationship Building</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail Business Discussion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Safe Air</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Safexpress Mobile App</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service and Business Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shortage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Special Delivery Requirement%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submission</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Fair Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warehouse Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Weight Volume %25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Weight Volume Discussion</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Activity__c</picklist>
+        <values>
+            <fullName>Bdm - Work From Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Branch Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chq Dishonor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consignee Recommendation Letters</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consignee Sales Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consignee Visited</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract Renewal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate Task</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Visit - Existing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Visit - New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Warehouse Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dod%2FDacc Cancellation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-House Biz%2F Support%C2%A0 Activities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incident At 3Pl Hub</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Normal Visit %26 Icm Customer Campaign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Others</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Promotional Activity%2F Campaign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Short%2FExcess</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visit To Govt%2E Authority%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visit To Incident</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visit To Institution</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Event_Purpose__c</picklist>
+        <values>
+            <fullName>Administrative Work</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Associate Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Branch Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing Customer Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound Customer Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incident Spot Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal Team Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing%2FPromotion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Customer Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail Customer Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Return to Location</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason__c</picklist>
+        <values>
+            <fullName>Customer not available</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Last meeting continue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Others</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal Urgent Work</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

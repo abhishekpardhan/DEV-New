@@ -1,0 +1,9 @@
+Hi Team,
+
+Please verify the quote again for discrepancies.
+
+Please log in to salesforce using url: https://safeforce1.force.com
+After logged in please click the link to access record: {!Quote__c.Instance_url__c}{!Quote__c.Id}
+
+Thanks,
+{!Quote__c.CreatedBy}

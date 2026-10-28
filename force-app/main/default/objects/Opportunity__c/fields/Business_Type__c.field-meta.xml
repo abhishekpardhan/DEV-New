@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Type__c</fullName>
+    <label>Business Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Customer_Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Outbound</fullName>
+                <default>false</default>
+                <label>Outbound</label>
+            </value>
+            <value>
+                <fullName>Inbound</fullName>
+                <default>false</default>
+                <label>Inbound</label>
+            </value>
+            <value>
+                <fullName>ANYWHERE TO ANYWHERE</fullName>
+                <default>false</default>
+                <label>ANYWHERE TO ANYWHERE</label>
+            </value>
+            <value>
+                <fullName>New code</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>New code</label>
+            </value>
+            <value>
+                <fullName>To-Pay</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>To-Pay</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Existing-New</controllingFieldValue>
+            <valueName>Outbound</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Existing-New</controllingFieldValue>
+            <valueName>Inbound</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Existing-New</controllingFieldValue>
+            <valueName>ANYWHERE TO ANYWHERE</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

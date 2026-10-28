@@ -1,0 +1,27 @@
+<apex:page showHeader="false" sidebar="false" controller="CustomLoginController">
+<apex:stylesheet value="{!URLFOR($Resource.SLDS, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+<!-- Import the Design System style sheet-->
+<apex:slds />
+<html>
+<body style="background-color:#F4F6F9;">
+<div class="slds-grid slds-wrap" style="height:200px;">
+<div class="slds-col slds-size--1-of-1" align="center">
+<span>
+<br/>
+<apex:image id="theImage" value="{!$Resource.Safexpress_Logo}" width="250" height="200" alt="Description of image here"/>
+<br/>
+</span>
+</div><!-- col1 image div ends -->
+
+
+<div class="slds-col slds-size--1-of-1" align="center">
+<span>
+    <p style="color:red;font-size:20px;"><b>Unauthorised Access</b></p>
+
+</span>
+
+</div><!-- col2 fields div ends-->
+</div><!-- Grid div ends-->
+</body>
+</html>
+</apex:page>

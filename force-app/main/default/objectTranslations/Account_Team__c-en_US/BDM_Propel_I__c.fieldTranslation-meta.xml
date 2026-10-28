@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Test --></label>
+    <name>BDM_Propel_I__c</name>
+    <relationshipLabel><!-- Account Teams (BDM(Propel-I)) --></relationshipLabel>
+</CustomFieldTranslation>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mode_of_transportation_cannot_be_changed</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISCHANGED(Mode_of_transport__c), OR(!ISBLANK( CheckIn_Date__c ),!ISBLANK(CheckOut_Date__c)),
+NOT(Last_Updated_By_Flow__c), ISCHANGED(Last_Updated_By_Flow__c) = FALSE)</errorConditionFormula>
+    <errorDisplayField>Mode_of_transport__c</errorDisplayField>
+    <errorMessage>Mode of Transport cannot be changed after the Journey has been checked in</errorMessage>
+</ValidationRule>

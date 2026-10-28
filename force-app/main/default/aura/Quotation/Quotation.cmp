@@ -1,0 +1,744 @@
+<aura:component implements="force:lightningQuickAction,force:hasRecordId" controller="QuotationController">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, Initial-scale=1"/>
+    </head>
+    <aura:attribute name="recordId" type="Id"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doinit}"/>
+    <aura:attribute name="showStateTable" type="boolean" default="false"/>
+    <aura:attribute name="showModal" type="boolean" default="false"/>
+    <aura:attribute name="showSpecialTable" type="boolean" default="false"/>
+    <aura:attribute name="showCustomStateSur" type="boolean" default="false"/>
+    <aura:attribute name="lstWrapper" type="List" />
+    <aura:attribute name="lstCommandment" type="List" />
+    <aura:attribute name="specialValues" type="List" />
+    <aura:attribute name="safextension" type="List" />
+    <aura:attribute name="lstStateSurcharge" type="List" />
+    <aura:handler event="aura:waiting" action="{!c.showSpinner}"/>
+    <aura:handler event="aura:doneWaiting" action="{!c.hideSpinner}"/>
+    <aura:attribute name="Spinner" type="boolean" default="false"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="enableEdit" type="boolean" default="false"/>
+    <aura:attribute name="disableEdit" type="boolean" default="false"/>
+    <aura:attribute name="showSurchargebutton" type="boolean" default="false"/>
+    <aura:attribute name="showSurchargeTable" type="boolean" default="false"/>
+    <aura:attribute name="safextType" type="String" default="Safextension Zone" />
+    <aura:attribute name="lstStates" type="List"/>
+    <aura:attribute name="lstStatesSurcharge" type="List"/>
+    <aura:attribute name="lstCity" type="List"/>
+    <aura:attribute name="Dependency" type="Map"/>
+    <ltng:require styles="{!$Resource.Popup}" />
+    
+    <aura:attribute name="specialSurface" type="integer" default="0"/>
+    <aura:attribute name="specialAir" type="integer" default="0"/>
+    <aura:attribute name="specialCity" type="string" default="Select City"/>
+    <aura:attribute name="specialState" type="string" default="Select State"/>
+    <aura:attribute name="isUpdateSpecDest" type="boolean" default="false"/>
+    <aura:attribute name="specialDesIndex" type="integer"/>
+    
+    <aura:attribute name="stateSurchSurface" type="integer" default="0"/>
+    <aura:attribute name="stateSurchAir" type="integer" default="0"/>
+    <aura:attribute name="stateSurch" type="string"/>
+    <aura:attribute name="stateSurchDescription" type="string"/>
+    <aura:attribute name="isUpdatestateSurch" type="boolean" default="false"/>
+    <aura:attribute name="stateSurchIndex" type="integer"/>
+    
+    <aura:attribute name="quoteExState" type="string" default="Select State"/>
+    <aura:attribute name="isReadOnly" type="boolean" default="false"/>
+    
+    <aura:attribute name="lstToBeDelete" type="List" />
+    
+    <!-- Added By Shubham @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- 'parentId' Aura Attribute for store the Id for Parent Record where we are attach our file --> 
+    <aura:attribute name="parentId" type="Id"  />
+    <!-- 'fileName' attribute for display the selected file name --> 
+    <aura:attribute name="fileName" type="String" default="No File Selected.." />
+<!-- <aura:handler name="init" value="{!this}" action="{!c.doinit}"/> -->    
+       <!-- Added By Shubham @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    
+    <div aura:id="thecontainer" class="thecontainer" id="thecontainer">
+        <div role="dialog" tabindex="-1" aria-labelledby="header43" class="slds-modal slds-fade-in-open slds-modal--large" >
+            <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                    <button class="slds-button slds-modal__close closeIcon slds-button_icon-bare slds-button_icon-inverse" title="Close" onclick="{!c.closeQuotationModel}">
+                        <lightning:icon iconName="utility:close" size="small" alternativeText="Close"
+                                        class="slds-button__icon slds-icon_small slds-button_icon-inverse"/>
+                        
+                    </button>
+                    <h2 id="header43" class="slds-text-heading--medium">Create Quotation</h2>
+                </div>
+                
+                
+                
+                
+                <div class="slds-modal__content slds-p-top--x-large slds-p-around--medium" aura:id="modalbody" id="modalbody">                              
+                    
+                    <!-- component goes here -->        
+                    <aura:if isTrue="{!v.Spinner}">
+                        <div aura:id="spinnerId" class="slds-spinner_container">
+                            <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                                <span class="slds-assistive-text">Loading</span>
+                                <div class="slds-spinner__dot-a"></div>
+                                <div class="slds-spinner__dot-b"></div>
+                            </div>
+                        </div>
+                        
+                    </aura:if>  
+                    <div class="slds-scrollable_x">
+                        
+                        <form class="slds-form--inline">                
+                            <div class="slds-form-element">
+                                <label class="slds-form-element__label" for="name">Select Ex State</label>  <!-- disabled="{!v.disableEdit}" -->
+                                <div class="slds-form-element__control" style="width:160px;"> 
+                                    <ui:inputSelect class="slds-input" aura:id="Ex_State" change="{!c.clickExState}" value="{!v.quoteExState}" disabled="{!v.isReadOnly}">        
+                                        <ui:inputSelectOption label="Select State" value="true"/>
+                                        <aura:iteration items="{!v.lstStates}" var="l">
+                                            <ui:inputSelectOption label="{!l}" text="{!l}"/>
+                                        </aura:iteration>
+                                    </ui:inputSelect>
+                                </div>         
+                            </div>
+                            
+                            <div class="slds-form-element">
+                                <label class="slds-form-element__label" for="email">Fuel Index</label>
+                                <div class="slds-form-element__control">
+                                    <ui:inputNumber class="slds-input" disabled="true" value="{!$Label.c.Fuel_Index}"/>
+                                </div>
+                            </div>
+                            
+                            <div class="slds-form-element">
+                                <label class="slds-form-element__label" for="email">GST Applicable</label>
+                                <div class="slds-form-element__control">
+                                    <ui:inputSelect class="slds-input" disabled="{!v.isReadOnly}">        
+                                        <ui:inputSelectOption label="Yes" text="Yes" value="true"/>       
+                                        <ui:inputSelectOption label="No" text="No"/>        
+                                    </ui:inputSelect>
+                                </div>
+                            </div>
+                        </form>        
+                        
+                        <aura:if isTrue="{!v.showStateTable}">
+                            <lightning:card title="Zone Prices">            
+                                <!--<div style="width:80px;">
+                <ui:inputSelect class="slds-input" aura:id="surfaceprice" change="{!c.surfacepriceChange}">
+                    <ui:inputSelectOption label="Min" text="Min"/>
+                    <ui:inputSelectOption label="Avg" text="Avg"/>
+                    <ui:inputSelectOption label="Max" text="Max" value="true"/>
+                </ui:inputSelect>
+            </div>-->
+                                <!--<aura:if isTrue="{!v.enableEdit}">-->
+                                <lightning:button label="Add Special Destination" onclick="{!c.showModal}" disabled="{!v.isReadOnly}"/>
+                                <!--</aura:if>-->
+                            </lightning:card>
+                            <table class="slds-table slds-table--bordered slds-table_striped">
+                                <thead>
+                                    <tr class="slds-text-title--caps">
+                                        <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                                            <span class="slds-truncate" title="Name">Zone</span>      
+                                        </th>
+                                        <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                                            <span class="slds-truncate" title="Name">States</span>      
+                                        </th>
+                                        <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                                            <span class="slds-truncate" title="Name">Surface Price</span>
+                                            <!--<div style="width:80px;">
+                            <ui:inputSelect class="slds-input" aura:id="surfaceprice" change="{!c.surfacepriceChange}">
+                                <ui:inputSelectOption label="Min" text="Min"/>
+                                <ui:inputSelectOption label="Avg" text="Avg"/>
+                                <ui:inputSelectOption label="Max" text="Max" value="true"/>
+                            </ui:inputSelect>
+                        </div>-->
+                                        </th>
+                                        <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                                            <span class="slds-truncate" title="Name">Air Price</span>
+                                            <!--<div style="width:80px;">
+                            <ui:inputSelect class="slds-input" aura:id="airprice" change="{!c.airpriceChange}">
+                                <ui:inputSelectOption label="Min" text="Min"/>
+                                <ui:inputSelectOption label="Avg" text="Avg"/>
+                                <ui:inputSelectOption label="Max" text="Max" value="true"/>
+                            </ui:inputSelect>
+                        </div>-->
+                                        </th>
+                                        <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                                            <span class="slds-truncate" title="Name">Yield Surface</span>      
+                                        </th>
+                                        <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                                            <span class="slds-truncate" title="Name">Yield Air</span>      
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <aura:iteration items="{!v.lstWrapper}" var="l">
+                                        <tr>
+                                            <td scope="row" class="slds-cell-wrap slds-truncate" >{!l.Zone}</td>
+                                            <td scope="row" class="slds-cell-wrap slds-truncate" >{!l.State}</td>
+                                            <td scope="row" class="slds-cell-wrap slds-truncate" >
+                                                <!--<input type="number" class="slds-input" value="{!l.SurfacePrice}" id="{!'S'+l.Zone}"/>-->
+                                                <ui:inputNumber class="slds-input" value="{!l.SurfacePrice}" disabled="{!v.isReadOnly}"/>
+                                            </td>
+                                            <td scope="row" class="slds-cell-wrap slds-truncate" >
+                                                <!--<input type="number" class="slds-input" value="{!l.AirPrice}" id="{!'A'+l.Zone}"/>-->
+                                                <ui:inputNumber class="slds-input" value="{!l.AirPrice}" disabled="{!v.isReadOnly}"/>
+                                            </td>
+                                            <td scope="row" class="slds-cell-wrap slds-truncate" >
+                                                <!--<output type="number" class="slds-input" id="{!'YS'+l.Zone}"/>-->
+                                                <ui:inputNumber class="slds-input" value="{!l.YieldSurface}" disabled="true"/>
+                                            </td>
+                                            <td scope="row" class="slds-cell-wrap slds-truncate" >
+                                                <!--<output type="number" class="slds-input" id="{!'YA'+l.Zone}"/>-->
+                                                <ui:inputNumber class="slds-input" value="{!l.YieldAir}" disabled="true"/>
+                                            </td>
+                                        </tr>
+                                    </aura:iteration>
+                                </tbody>
+                            </table>
+                            
+                            <!-- state table ends -->    
+                        </aura:if>
+                        <br/>
+                        
+                        <!-- special destination table starts -->
+                        <aura:if isTrue="{!v.showSpecialTable}">
+                            <lightning:card title="Special Destinations">
+                                <table class="slds-table slds-table--bordered slds-table_striped" width="100%">
+                                    <thead>
+                                        <tr class="slds-text-title--caps">
+                                            <th scope="col" style="font-weight:bold;" width= "8%">
+                                                <span class="slds-truncate" title="S.No" >S.No</span>
+                                            </th>
+                                            <th scope="col" style="font-weight:bold;" width= "14%">
+                                                <span class="slds-truncate" title="Name">State                                                                                                                   
+                                                </span>      
+                                            </th>
+                                            <th scope="col" style="font-weight:bold;" width= "14%">
+                                                <span class="slds-truncate" title="Name">City                            
+                                                </span>      
+                                            </th>
+                                            <th scope="col" style="font-weight:bold;" width= "14%">
+                                                <span class="slds-truncate" title="Name">Surface Price</span>
+                                            </th>
+                                            <th scope="col" style="font-weight:bold;" width= "14%">
+                                                <span class="slds-truncate" title="Name">Air Price</span>
+                                            </th>
+                                            <th scope="col" style="font-weight:bold;" width= "14%">
+                                                <span class="slds-truncate" title="Name">Yield Surface</span>      
+                                            </th>
+                                            <th scope="col" style="font-weight:bold;" width= "14%">
+                                                <span class="slds-truncate" title="Name">Yield Air</span>      
+                                            </th>
+                                            <th scope="col" style="font-weight:bold;" width= "8%">
+                                                
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="table1">
+                                        <aura:iteration items="{!v.specialValues}" var="s" indexVar="rowIndex">
+                                            <tr>
+                                                <td>
+                                                    {!rowIndex + 1}
+                                                </td>
+                                                <td>
+                                                    {!s.State}
+                                                </td>
+                                                <td>
+                                                    {!s.City}
+                                                </td>
+                                                <td>
+                                                    <ui:inputNumber class="slds-input" value="{!s.SurfacePrice}" disabled="{!v.isReadOnly}"/>
+                                                </td>
+                                                <td>
+                                                    <ui:inputNumber class="slds-input" value="{!s.AirPrice}" disabled="{!v.isReadOnly}"/>
+                                                </td>
+                                                <td>
+                                                    <ui:inputNumber class="slds-input" value="{!s.YieldSurface}" disabled="true"/>
+                                                </td>
+                                                <td>
+                                                    <ui:inputNumber class="slds-input" value="{!s.YieldAir}" disabled="true"/>
+                                                </td>
+                                                <td>
+                                                    <a onclick="{!c.editSpecialDest}" data-value="{!rowIndex}" class="slds-button slds-button_neutral" disabled="{!v.isReadOnly}">
+                                                        Edit
+                                                    </a>&nbsp;
+                                                    <a onclick="{!c.removeSpecialDest}" data-value="{!rowIndex}" class="slds-button slds-button_text-destructive" disabled="{!v.isReadOnly}">
+                                                        Remove
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            
+                                        </aura:iteration>    
+                                    </tbody>
+                                </table>
+                            </lightning:card>
+                        </aura:if>
+                        
+                        <!-- special destination table ends -->
+                        
+                        
+                        <!-- Safextension table starts -->
+                        
+                        <lightning:card title="Safextension">
+                            
+                            <div style="width:100px;">
+                                <ui:inputSelect class="slds-input" aura:id="safext" change="{!c.clicksafext}" disabled="{!v.isReadOnly}">                                                         
+                                    <ui:inputSelectOption label="Group" text="Group" value="true" />
+                                    <ui:inputSelectOption label="Zone" text="Zone" />
+                                    
+                                </ui:inputSelect>
+                            </div>
+                            <table class="slds-table slds-table--bordered slds-table_striped">
+                                <thead>
+                                    <tr class="slds-text-title--caps">
+                                        <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                                            <span class="slds-truncate" title="Name">{!v.safextType}                                                                                                                   
+                                            </span>      
+                                        </th>
+                                        <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                                            <span class="slds-truncate" title="Name">Rate                            
+                                            </span>      
+                                        </th>
+                                        <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                                            <span class="slds-truncate" title="Name">Minimum Freight                            
+                                            </span>      
+                                        </th>                    
+                                    </tr>                
+                                </thead>
+                                
+                                <tbody>
+                                    <aura:iteration items="{!v.safextension}" var="l">
+                                        <tr>                        
+                                            <td scope="row" class="slds-cell-wrap slds-truncate" >{!l.Name}</td>
+                                            <td scope="row" class="slds-cell-wrap slds-truncate" >
+                                                <ui:inputNumber class="slds-input" value="{!l.Rate}" disabled="{!v.isReadOnly}"/></td>
+                                            <td scope="row" class="slds-cell-wrap slds-truncate" >
+                                                <ui:inputNumber class="slds-input" value="{!l.MinimumFrt}" disabled="{!v.isReadOnly}"/></td>
+                                        </tr>
+                                    </aura:iteration>
+                                </tbody>
+                                
+                            </table>
+                        </lightning:card>
+                        <!-- Safextension table ends -->
+                        
+                        
+                        <!-- commandments table starts -->
+                        
+                        <lightning:card title="Commandments">
+                            <!--<lightning:datatable
+                             aura:id="accountDataTable"
+                             columns="{! v.columns }"
+                             data="{! v.lstCommandment }"
+                             keyField="Id"
+                             onsave ="{!c.onSave}"
+                             hideCheckboxColumn="true"
+                             onrowaction="{! c.handleRowAction }" />-->
+                            
+                            <table class="slds-table slds-table--bordered slds-table_striped">
+                                <thead>
+                                    <tr class="slds-text-title--caps">
+                                        <!--<th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                                            <span class="slds-truncate" title="Name">Applicable                                
+                                            </span>      
+                                        </th> -->
+                                        <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                                            <span class="slds-truncate" title="Name">Commandment                                                                                                                   
+                                            </span>      
+                                        </th>
+                                        <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                                            <span class="slds-truncate" title="Name">Surface</span> <!--SD-426-->
+                                        </th>
+                                        <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                                            <span class="slds-truncate" title="Name">Air</span> <!--SD-426-->
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <aura:iteration items="{!v.lstCommandment}" var="s" indexVar="i">
+                                        <tr>
+                                            <!--<td>
+                                               <ui:inputCheckbox value="{!s.check}" disabled="{!v.isReadOnly}"/>
+                                            </td> -->
+                                            <td>
+                                                {!s.Name}
+                                                <div style="width:100px;">
+                                                    <aura:if isTrue="{!(v.disableEdit) ? s.Name == 'FUEL SURCHARGE (%AGE)' : s.Name == 'Fuel Surcharge (%age)'}">
+                                                        <ui:inputSelect class="slds-input" aura:id="fuelsurDropdown" value="{!s.fuelSurchargeType}" disabled="{!v.isReadOnly}">                                
+                                                            <ui:inputSelectOption label="Total" text="Total" value="true"/>
+                                                            <ui:inputSelectOption label="Basic" text="Basic"/>
+                                                        </ui:inputSelect>
+                                                    </aura:if>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <aura:if isTrue="{! (v.disableEdit) ? s.Name == 'ZERO ROUND OFF' : s.Name == 'Zero Round Off'}"> 
+                                                    <ui:inputSelect class="slds-input" aura:id="{!'S'+s.Name}" value="{!s.surfaceZeroRoundOff}" disabled="{!v.isReadOnly}">                                
+                                                        <ui:inputSelectOption label="Yes" text="Yes"/>
+                                                        <ui:inputSelectOption label="No" text="No" value="true"/>
+                                                    </ui:inputSelect>
+                                                    <aura:set attribute="else">
+                                                        <aura:if isTrue="{!s.Name == 'FLFC'}">
+                                                            <div class="slds-grid slds-gutters">
+                                                                <div class="slds-col slds-size_1-of-2">
+                                                                    <div style="padding-left: 5%;">Rs.</div>
+                                                                    <div>
+                                                                        <ui:inputNumber class="slds-input" value="{!s.surfaceRs}" aura:id="{!'S'+s.Name+'Rs.'}" disabled="{!v.isReadOnly}"/>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="slds-col slds-size_1-of-2">
+                                                                    <div style="padding-left: 5%;">%age</div>
+                                                                    <div>
+                                                                        <ui:inputNumber class="slds-input" value="{!s.surfacePercentage}" aura:id="{!'S'+s.Name+'%age1'}" disabled="{!v.isReadOnly}"/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <aura:set attribute="else">
+                                                                <aura:if isTrue="{!(v.disableEdit) ? s.Name == 'VALUE SURCHARGE' : s.Name == 'Value Surcharge'}">
+                                                                    <div class="slds-grid slds-gutters">
+                                                                        <div class="slds-col slds-size_1-of-3">
+                                                                            <div style="padding-left: 3%;">Invoice</div>
+                                                                            <div>
+                                                                                <ui:inputNumber class="slds-input" value="{!s.surfaceInvoice}" aura:id="{!'S'+s.Name+'Inv'}" disabled="{!v.isReadOnly}"/>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="slds-col slds-size_1-of-3">
+                                                                            <div style="padding-left: 3%;">Rs</div>
+                                                                            <div>
+                                                                                <ui:inputNumber class="slds-input" value="{!s.surfaceMin}" aura:id="{!'S'+s.Name+'Min.'}" disabled="{!v.isReadOnly}"/>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="slds-col slds-size_1-of-3">
+                                                                            <div style="padding-left: 3%;">%age</div>
+                                                                            <div>
+                                                                                <ui:inputNumber class="slds-input" value="{!s.surfacePercentage}" aura:id="{!'S'+s.Name+'%age'}" disabled="{!v.isReadOnly}"/>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <aura:set attribute="else">
+                                                                        <ui:inputNumber class="slds-input" value="{!s.SurfacePrice}" aura:id="{!'S'+s.Name}" disabled="{!v.isReadOnly}"/>
+                                                                        <!-- <input type="number" class="slds-input" value="{!s.SurfacePrice}" id="{!'S'+s.Name}" disabled="{!v.isReadOnly}"/> -->
+                                                                    </aura:set>
+                                                                </aura:if>
+                                                            </aura:set>
+                                                            
+                                                        </aura:if>
+                                                    </aura:set>
+                                                </aura:if>
+                                                
+                                                
+                                                <!--<ui:inputNumber class="slds-input" value="{!s.SurfacePrice}" aura:id="{!s.Name}"/>-->
+                                            </td>
+                                            <td>
+                                                <aura:if isTrue="{!(v.disableEdit) ? s.Name == 'ZERO ROUND OFF' : s.Name == 'Zero Round Off'}">
+                                                    <ui:inputSelect class="slds-input" aura:id="{!'A'+s.Name}" value="{!s.airZeroRoundOff}" disabled="{!v.isReadOnly}">                                
+                                                        <ui:inputSelectOption label="Yes" text="Yes"/>
+                                                        <ui:inputSelectOption label="No" text="No" value="true"/>
+                                                    </ui:inputSelect>
+                                                    <aura:set attribute="else">
+                                                        <aura:if isTrue="{!s.Name == 'FLFC'}">
+                                                            <div class="slds-grid slds-gutters">
+                                                                <div class="slds-col slds-size_1-of-2">
+                                                                    <div style="padding-left: 5%;">Rs.</div>
+                                                                    <div>
+                                                                        <ui:inputNumber class="slds-input" value="{!s.airRs}" aura:id="{!'A'+s.Name+'Rs.'}" disabled="{!v.isReadOnly}"/>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="slds-col slds-size_1-of-2">
+                                                                    <div style="padding-left: 5%;">%age</div>
+                                                                    <div>
+                                                                        <ui:inputNumber class="slds-input" value="{!s.airPercentage}" aura:id="{!'A'+s.Name+'%age1'}" disabled="{!v.isReadOnly}"/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <aura:set attribute="else">
+                                                                <aura:if isTrue="{!(v.disableEdit) ? s.Name == 'VALUE SURCHARGE' : s.Name == 'Value Surcharge'}">
+                                                                    <div class="slds-grid slds-gutters">
+                                                                        <div class="slds-col slds-size_1-of-3">
+                                                                            <div style="padding-left: 3%;">Invoice</div>
+                                                                            <div>
+                                                                                <ui:inputNumber class="slds-input" value="{!s.airInvoice}" aura:id="{!'A'+s.Name+'Inv'}" disabled="{!v.isReadOnly}"/>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="slds-col slds-size_1-of-3">
+                                                                            <div style="padding-left: 3%;">Rs</div>
+                                                                            <div>
+                                                                                <ui:inputNumber class="slds-input" value="{!s.airMin}" aura:id="{!'A'+s.Name+'Min.'}" disabled="{!v.isReadOnly}"/>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="slds-col slds-size_1-of-3">
+                                                                            <div style="padding-left: 3%;">%age</div>
+                                                                            <div>
+                                                                                <ui:inputNumber class="slds-input" value="{!s.airPercentage}" aura:id="{!'A'+s.Name+'%age'}" disabled="{!v.isReadOnly}"/>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <aura:set attribute="else">
+                                                                        <ui:inputNumber class="slds-input" value="{!s.AirPrice}" aura:id="{!'A'+s.Name}" disabled="{!v.isReadOnly}"/>
+                                                                    </aura:set>
+                                                                </aura:if>
+                                                            </aura:set>
+                                                        </aura:if>
+                                                    </aura:set>
+                                                </aura:if>
+                                                
+                                                <!--<ui:inputNumber class="slds-input" value="{!s.AirPrice}" aura:id="{!'minchargeair'+i}"/>-->
+                                            </td>
+                                        </tr>
+                                        
+                                    </aura:iteration>    
+                                </tbody>
+                            </table>
+                            
+                            
+                        </lightning:card>
+                        
+                        <!-- commandments table ends -->
+                        
+                        <!-- State Surcharge table starts -->
+                        <lightning:card title="State Surcharge">
+                            
+                            <div style="width:100px;"><ui:inputSelect class="slds-input" aura:id="statesurcharge" change="{!c.stateSurcharge}" disabled="{!v.isReadOnly}">                                
+                                <ui:inputSelectOption label="Yes" text="Yes"/>
+                                <ui:inputSelectOption label="No" text="No" value="true" />                                
+                                </ui:inputSelect>
+                                <aura:if isTrue="{!v.showSurchargebutton}">
+                                    <lightning:button label="Add" onclick="{!c.openSurchargeModal}" disabled="{!v.isReadOnly}"/>
+                                </aura:if>
+                            </div>
+                            
+                            <aura:if isTrue="{!v.showSurchargeTable}">        
+                                <table class="slds-table slds-table--bordered slds-table_striped" width="100%">
+                                    <thead>
+                                        <tr class="slds-text-title--caps">
+                                            <th scope="col" style="font-weight:bold;" width= "8%">
+                                                <span class="slds-truncate" title="S.No" >S.No</span>
+                                            </th>
+                                            <th scope="col" style="font-weight:bold;" max-width= "40%" width="20%;">
+                                                <span class="slds-truncate" title="Name">State                                                                                                                   
+                                                </span>      
+                                            </th>
+                                            <!--<th scope="col" style="font-weight:bold;" width= "8%">
+                                                <span class="slds-truncate" title="Name">Description                       
+                                                </span>      
+                                            </th>-->
+                                            <th scope="col" style="font-weight:bold;" width= "8%">
+                                                <span class="slds-truncate" title="Name">Surface Price</span>
+                                            </th>
+                                            <th scope="col" style="font-weight:bold;" width= "8%">
+                                                <span class="slds-truncate" title="Name">Air Price</span>
+                                            </th>
+                                            <th scope="col" style="font-weight:bold;" max-width= "20%" width="8%;">
+                                                &nbsp;
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="table1">
+                                        <aura:iteration items="{!v.lstStateSurcharge}" var="s" indexVar="rowIndex">
+                                            <tr>
+                                                <td class="slds-cell-wrap slds-truncate">
+                                                    {!rowIndex + 1}
+                                                </td>
+                                                <td class="slds-cell-wrap slds-truncate">
+                                                    <span class="slds-cell-wrap slds-truncate">{!s.State}</span>
+                                                </td>
+                                                <!--<td class="slds-cell-wrap slds-truncate">
+                                                    {!s.stateSurDescription}
+                                                </td>--> 
+                                                <td class="slds-cell-wrap slds-truncate">
+                                                    {!s.SurfacePrice}
+                                                </td>
+                                                <td class="slds-cell-wrap slds-truncate"> 
+                                                    {!s.AirPrice}
+                                                </td>
+                                                <td >
+                                                    <a onclick="{!c.editStateSurcharge}" data-value="{!rowIndex}" class="slds-button slds-button_neutral" disabled="{!v.isReadOnly}">
+                                                        Edit
+                                                    </a>&nbsp;
+                                                    <a onclick="{!c.removeStateSurcharge}" data-value="{!rowIndex}" class="slds-button slds-button_text-destructive" disabled="{!v.isReadOnly}">
+                                                        Remove
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            
+                                        </aura:iteration>    
+                                    </tbody>
+                                </table>        
+                            </aura:if>
+                            
+                            
+                            
+                            <aura:if isTrue="{!v.showCustomStateSur}">
+                                
+                                <!--modal starts -->
+                                <!--###### MODAL BOX Start From Here ######--> 
+                                <div role="dialog" tabindex="-1" aria-labelledby="header99" class="slds-modal slds-fade-in-open ">
+                                    <div class="slds-modal__container">
+                                        <!-- ###### MODAL BOX HEADER Part Start From Here ######-->
+                                        <div class="slds-modal__header">
+                                            <button class="slds-button slds-modal__close slds-button--icon-inverse" title="Close" onclick="{!c.closeModel}">
+                                                X
+                                                <span class="slds-assistive-text">Close</span>
+                                            </button>
+                                            <h2 id="header99" class="slds-text-heading--medium">State Surcharge</h2>
+                                        </div>
+                                        <!--###### MODAL BOX BODY Part Start From Here ######-->
+                                        <div class="slds-modal__content slds-p-around--medium">
+                                            
+                                            <div class="slds-form--compound">
+                                                <!-- 1 row starts -->
+                                                <div class="form-element__group">
+                                                    <div class="slds-form-element__row">
+                                                        <div class="slds-form-element slds-size--1-of-2">
+                                                            <label class="slds-form-element__label" for="input-01">
+                                                                Select State
+                                                            </label>
+                                                            <ui:inputSelect multiple="true" class="multiple slds-input" aura:id="surchargeState" value="{!v.stateSurch}"> <!-- change="{!c.onMultiSelectChange}" -->
+                                                                <aura:iteration items="{!v.lstStatesSurcharge}" var="l">
+                                                                    <ui:inputSelectOption text="{!l}" label="{!l}"/>      
+                                                                </aura:iteration>
+                                                            </ui:inputSelect>
+                                                        </div>                                    
+                                                        <div class="slds-form-element slds-size--1-of-2">
+                                                            <label class="slds-form-element__label" for="input-02">Select Surcharge Type</label>
+                                                            <ui:inputSelect class="slds-input" aura:id="InputSelectMultiple"
+                                                                            change="{!c.onMultiSelectChange}">
+                                                                <ui:inputSelectOption text="Per KG Surcharge"/>
+                                                            </ui:inputSelect>
+                                                        </div>
+                                                    </div>
+                                                    <!-- 1 row ends -->
+                                                  
+                                                    <div class="slds-form-element__row">
+                                                        <div class="slds-form-element slds-size--1-of-2">
+                                                            <label class="slds-form-element__label" for="input-01">
+                                                                Surface Price
+                                                            </label>
+                                                            <ui:inputNumber class="slds-input" aura:id="surchargeSurface" value="{!v.stateSurchSurface}"/>
+                                                        </div>
+                                                        <div class="slds-form-element slds-size--1-of-2">
+                                                            <label class="slds-form-element__label" for="input-02">Air Price</label>
+                                                            <ui:inputNumber class="slds-input" aura:id="surchargeAir" value="{!v.stateSurchAir}"/>
+                                                        </div>
+                                                    </div>
+                                                    <!-- 3 row ends -->
+                                                    
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <!--###### MODAL BOX FOOTER Part Start From Here ######-->
+                                        <div class="slds-modal__footer">
+                                            <button class="slds-button slds-button--neutral" onclick="{!c.closeModel}" disabled="{!v.isReadOnly}">Cancel</button>
+                                            <button class="slds-button slds-button--brand" onclick="{!c.addStateSurcharge}" disabled="{!v.isReadOnly}">Save</button>
+                           
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-backdrop slds-backdrop--open"></div>
+                                <!--###### MODAL BOX Part END Here ######-->
+                                
+                                
+                                <!-- modal ends -->
+                                
+                            </aura:if>
+                            
+                        </lightning:card>
+                        <!-- State Surcharge table ends -->
+                        
+                        <!-- special destination model starts-->
+                        <aura:if isTrue="{!v.showModal}">
+                            <!--modal starts -->
+                            <!--###### MODAL BOX Start From Here ######--> 
+                            <div role="dialog" tabindex="-1" aria-labelledby="header99" class="slds-modal slds-fade-in-open ">
+                                <div class="slds-modal__container">
+                                    <!-- ###### MODAL BOX HEADER Part Start From Here ######-->
+                                    <div class="slds-modal__header">
+                                        <button class="slds-button slds-modal__close slds-button--icon-inverse" title="Close" onclick="{!c.closeModel}">
+                                            X
+                                            <span class="slds-assistive-text">Close</span>
+                                        </button>
+                                        <h2 id="header99" class="slds-text-heading--medium">Add Special Destination</h2>
+                                    </div>
+                                    <!--###### MODAL BOX BODY Part Start From Here ######-->
+                                    <div class="slds-modal__content slds-p-around--medium">
+                                        
+                                        <table class="slds-table slds-table--bordered slds-table_striped">
+                                            <thead>
+                                                <tr class="slds-text-title--caps">
+                                                    <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                                                        <span class="slds-truncate" title="Name">State                                                                                                                   
+                                                        </span>      
+                                                    </th>
+                                                    <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                                                        <span class="slds-truncate" title="Name">City                            
+                                                        </span>      
+                                                    </th>
+                                                    <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                                                        <span class="slds-truncate" title="Name">Surface Price</span>
+                                                    </th>
+                                                    <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                                                        <span class="slds-truncate" title="Name">Air Price</span>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                
+                                                <tr>
+                                                    <td>
+                                                        <ui:inputSelect class="slds-input" aura:id="specialState" change="{!c.specialdeststate}" value="{!v.specialState}">
+                                                            <ui:inputSelectOption label="Select State" text="" value="true"/>
+                                                            <aura:iteration items="{!v.lstStates}" var="l">
+                                                                <ui:inputSelectOption label="{!l}" text="{!l}"/>
+                                                            </aura:iteration>
+                                                        </ui:inputSelect>
+                                                        
+                                                        
+                                                    </td>
+                                                    <td>
+                                                        <ui:inputSelect class="slds-input" aura:id="specialCity" value="{!v.specialCity}">
+                                                            <ui:inputSelectOption label="Select City" text="" value="true"/>
+                                                            <aura:iteration items="{!v.lstCity}" var="l">
+                                                                <ui:inputSelectOption label="{!l}" text="{!l}"/>
+                                                            </aura:iteration>                                
+                                                        </ui:inputSelect>
+                                                    </td>
+                                                    <td>
+                                                        <ui:inputNumber class="slds-input" aura:id="specialSurface" value="{!v.specialSurface}"/>
+                                                    </td>
+                                                    <td>
+                                                        <ui:inputNumber class="slds-input" aura:id="specialAir" value="{!v.specialAir}"/>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>              
+                                        
+                                    </div>
+                                    <!--###### MODAL BOX FOOTER Part Start From Here ######-->
+                                    <div class="slds-modal__footer">
+                                        <button class="slds-button slds-button--neutral" onclick="{!c.closeModel}" >Cancel</button>
+                                        <button class="slds-button slds-button--brand" onclick="{!c.addSpecialDest}">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-backdrop slds-backdrop--open"></div>
+                            <!--###### MODAL BOX Part END Here ######-->
+                            
+                            
+                            <!-- modal ends -->
+                        </aura:if>
+                        <!-- special destination model starts-->
+                        <lightning:button label="Calculate Yield" onclick="{!c.calculateYield}" disabled="{!v.isReadOnly}"/>
+                        <lightning:button label="Submit" onclick="{!c.save}" disabled="{!v.isReadOnly}"/>
+                       
+                        <p style="color:red; float:right; font-size:8px" >*FLFC, MCC CHARGES, DOD/DACC/HUB DELIVERY CHARGES, HANDLING CHARGES, GREEN SURCHARGE, VOLUME WEIGHT PER CFT,<br/> ZERO ROUND OFF, MIN. CHARGEABLE WT /PKG FOR MULTIPLE PKGS doesn't have any effect on Yield Calculation.</p> 
+                        <!-- component ends here -->
+                    </div>
+                </div><!-- modal -->
+                <div class="slds-modal__footer">
+                    <!-- Footer elements, if required -->
+                </div>
+            </div>
+        </div>
+        <div class="slds-backdrop slds-backdrop--open"></div>
+    </div>                
+</aura:component>

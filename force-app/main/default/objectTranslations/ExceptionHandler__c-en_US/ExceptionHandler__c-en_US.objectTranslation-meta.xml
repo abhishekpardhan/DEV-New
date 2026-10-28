@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>ExceptionHandler</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>ExceptionHandlers</value>
+    </caseValues>
+    <layouts>
+        <layout>API log</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Record details --></label>
+            <section>Record details</section>
+        </sections>
+        <sections>
+            <label><!-- Request &amp; Response --></label>
+            <section>Request &amp; Response</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>ExceptionHandler Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- API Log --></label>
+        <name>API_Log</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

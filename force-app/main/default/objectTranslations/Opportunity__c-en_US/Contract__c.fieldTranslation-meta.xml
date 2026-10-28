@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Contract tagging is mandatory for submitting an opportunity for approval. --></help>
+    <label><!-- Contract --></label>
+    <lookupFilter>
+        <errorMessage><!-- Contract Record is not complete. Ensure Contract Copy is upload --></errorMessage>
+    </lookupFilter>
+    <name>Contract__c</name>
+    <relationshipLabel><!-- Opportunities --></relationshipLabel>
+</CustomFieldTranslation>

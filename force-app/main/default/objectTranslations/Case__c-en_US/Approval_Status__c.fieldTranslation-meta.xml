@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Approval Status --></label>
+    <name>Approval_Status__c</name>
+    <picklistValues>
+        <masterLabel>Approved By AM</masterLabel>
+        <translation><!-- Approved By AM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Approved by CCD</masterLabel>
+        <translation><!-- Approved by CCD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Approved by CO</masterLabel>
+        <translation><!-- Approved by CO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Approved by Claim Dept</masterLabel>
+        <translation><!-- Approved by Claim Dept --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Auto-approved</masterLabel>
+        <translation><!-- Auto-approved --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Submitted for Approval</masterLabel>
+        <translation><!-- Not Submitted for Approval --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pending from AM</masterLabel>
+        <translation><!-- Pending from AM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pending from Claim Dept.</masterLabel>
+        <translation><!-- Pending from Claim Dept. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rejected</masterLabel>
+        <translation><!-- Rejected --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rejected By AM</masterLabel>
+        <translation><!-- Rejected By AM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rejected by CO</masterLabel>
+        <translation><!-- Rejected by CO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rejected by Claim Dept</masterLabel>
+        <translation><!-- Rejected by Claim Dept --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

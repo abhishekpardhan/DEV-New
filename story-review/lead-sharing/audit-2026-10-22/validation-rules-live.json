@@ -1,0 +1,80 @@
+﻿{
+  "status": 0,
+  "result": {
+    "records": [
+      {
+        "attributes": {
+          "type": "ValidationRule",
+          "url": "/services/data/v68.0/tooling/sobjects/ValidationRule/03dC1000000SwU5IAK"
+        },
+        "Id": "03dC1000000SwU5IAK",
+        "ValidationName": "Lead_Core_Mandatory_Fields",
+        "Active": true,
+        "ErrorMessage": "Mobile, Email, Street, City, State, and Postal Code are required."
+      },
+      {
+        "attributes": {
+          "type": "ValidationRule",
+          "url": "/services/data/v68.0/tooling/sobjects/ValidationRule/03dC1000000SwXJIA0"
+        },
+        "Id": "03dC1000000SwXJIA0",
+        "ValidationName": "Please_Specify_Required",
+        "Active": false,
+        "ErrorMessage": "Please Specify is required when Lead Drop Reason is Other."
+      },
+      {
+        "attributes": {
+          "type": "ValidationRule",
+          "url": "/services/data/v68.0/tooling/sobjects/ValidationRule/03dC1000000SwYvIAK"
+        },
+        "Id": "03dC1000000SwYvIAK",
+        "ValidationName": "GSTIN_Format_Validation",
+        "Active": true,
+        "ErrorMessage": "Enter a valid 15-character GST Number."
+      },
+      {
+        "attributes": {
+          "type": "ValidationRule",
+          "url": "/services/data/v68.0/tooling/sobjects/ValidationRule/03dC1000000Swc9IAC"
+        },
+        "Id": "03dC1000000Swc9IAC",
+        "ValidationName": "Validate_Pincode",
+        "Active": true,
+        "ErrorMessage": "Enter a valid 6-digit Pincode."
+      },
+      {
+        "attributes": {
+          "type": "ValidationRule",
+          "url": "/services/data/v68.0/tooling/sobjects/ValidationRule/03dC1000000SwdlIAC"
+        },
+        "Id": "03dC1000000SwdlIAC",
+        "ValidationName": "Lead_Drop_Reason_Required",
+        "Active": true,
+        "ErrorMessage": "Select a valid Lead Drop Reason and specify the reason when \"Others\" is selected."
+      },
+      {
+        "attributes": {
+          "type": "ValidationRule",
+          "url": "/services/data/v68.0/tooling/sobjects/ValidationRule/03dC1000000TAs1IAG"
+        },
+        "Id": "03dC1000000TAs1IAG",
+        "ValidationName": "Block_Safexpress_Email",
+        "Active": true,
+        "ErrorMessage": "Safexpress email addresses are not allowed."
+      },
+      {
+        "attributes": {
+          "type": "ValidationRule",
+          "url": "/services/data/v68.0/tooling/sobjects/ValidationRule/03dC1000000U55VIAS"
+        },
+        "Id": "03dC1000000U55VIAS",
+        "ValidationName": "Mobile_No_should_be_in_10_digit",
+        "Active": true,
+        "ErrorMessage": "Mobile No should be in 10 digit"
+      }
+    ],
+    "totalSize": 7,
+    "done": true
+  },
+  "warnings": []
+}

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Send_Email_to_finance</name>
+        <label>Send Email to finance</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <actionName>Opportunity__c.Send_email_to_Account_Finance</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Opportunity__c.Send_email_to_Account_Finance</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_Email_to_PRC</name>
+        <label>Send Email to PRC</label>
+        <locationX>842</locationX>
+        <locationY>431</locationY>
+        <actionName>Opportunity__c.Send_Email_To_Account_PRC</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Opportunity__c.Send_Email_To_Account_PRC</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_Email_To_Qrm</name>
+        <label>Send Email To Qrm</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <actionName>Opportunity__c.Send_Email_to_Account_Qrm</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Opportunity__c.Send_Email_to_Account_Qrm</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_email_to_retail_manager</name>
+        <label>Send email to retail manager</label>
+        <locationX>578</locationX>
+        <locationY>431</locationY>
+        <actionName>Opportunity__c.Send_Email_To_Retail_Manager</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Opportunity__c.Send_Email_To_Retail_Manager</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <apiVersion>63.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Check_for_email_sent</name>
+        <label>Check for email sent</label>
+        <locationX>578</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Check_Finance</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>checkFinance</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Email_to_finance</targetReference>
+            </connector>
+            <label>Check Finance</label>
+        </rules>
+        <rules>
+            <name>Check_QRM</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>checkQRM</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Email_To_Qrm</targetReference>
+            </connector>
+            <label>Check QRM</label>
+        </rules>
+        <rules>
+            <name>Check_Retail</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>checkRetail</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_email_to_retail_manager</targetReference>
+            </connector>
+            <label>Check Retail</label>
+        </rules>
+        <rules>
+            <name>Check_PRC</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>checkPRC</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Email_to_PRC</targetReference>
+            </connector>
+            <label>Check PRC</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>checkFinance</name>
+        <dataType>Boolean</dataType>
+        <expression>AND(
+OR(ISNEW(),ISCHANGED({!$Record.Stage__c})),
+ISPICKVAL({!$Record.Stage__c} , &apos;Closed Won&apos;),
+OR
+(ISPICKVAL({!$Record.Customer_Type__c}, &apos;New Opportunity&apos;),
+ISPICKVAL({!$Record.Customer_Type__c}, &apos;Existing-New&apos;)),
+!ISPICKVAL({!$Record.Type__c} ,&apos;Retail&apos;),
+!ISPICKVAL({!$Record.Type__c} ,&apos;PRC&apos;))</expression>
+    </formulas>
+    <formulas>
+        <name>checkPRC</name>
+        <dataType>Boolean</dataType>
+        <expression>AND(
+OR(ISNEW(),ISCHANGED({!$Record.Stage__c})),
+ISPICKVAL({!$Record.Stage__c} , &apos;Closed Won&apos;),
+OR
+(ISPICKVAL({!$Record.Customer_Type__c} , &apos;New Opportunity&apos;),
+ISPICKVAL({!$Record.Customer_Type__c} , &apos;Existing-New&apos;)),
+ISPICKVAL({!$Record.Type__c} ,&apos;PRC&apos;))</expression>
+    </formulas>
+    <formulas>
+        <name>checkQRM</name>
+        <dataType>Boolean</dataType>
+        <expression>AND(!ISBLANK({!$Record.Qrm_Email__c}) ,OR(ISNEW(),ISCHANGED({!$Record.Stage__c})) ,ISPICKVAL({!$Record.Stage__c} , &apos;Closed Won&apos;),ISPICKVAL({!$Record.Customer_Type__c} , &apos;Renewal Opportunity&apos;))</expression>
+    </formulas>
+    <formulas>
+        <name>checkRetail</name>
+        <dataType>Boolean</dataType>
+        <expression>AND(
+OR(ISNEW(),ISCHANGED({!$Record.Stage__c})),
+ISPICKVAL({!$Record.Stage__c} , &apos;Closed Won&apos;),
+OR
+(ISPICKVAL({!$Record.Customer_Type__c} , &apos;New Opportunity&apos;),
+ISPICKVAL({!$Record.Customer_Type__c} , &apos;Existing-New&apos;)),
+ISPICKVAL({!$Record.Type__c} ,&apos;Retail&apos;))</expression>
+    </formulas>
+    <interviewLabel>Send Account Link To Finance/Retail And NAm3 Updated F1 {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Send Account Link To Finance/Retail And NAm3 Updated F1</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>452</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_for_email_sent</targetReference>
+        </connector>
+        <object>Opportunity__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

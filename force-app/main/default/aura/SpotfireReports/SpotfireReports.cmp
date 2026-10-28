@@ -1,0 +1,46 @@
+<!-- Location -->
+<aura:component implements="force:appHostable" controller="SportFireReports">
+    <aura:attribute name="wrapperReportLinks" type="List" />
+    <aura:attribute name="linkExist" type="boolean" default="true"/>
+    <aura:attribute name="errorMessage" type="String" default=""/>
+    <aura:attribute name="error" type="boolean" default="false"/>
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+    <!-- Component Heading -->    
+    <div style="background-color:white">
+        <div class="slds-page-header">
+            <div class="slds-media">
+                <div class="slds-media__body">
+                    <h1 class="slds-page-header__title slds-truncate slds-align-middle" title="Report Links">Report Links</h1>
+                    <!--                <p class="slds-text-body_small slds-line-height_reset">Portfolio</p>-->
+                </div>
+            </div>
+        </div>  
+        <!-- Heading finished -->  
+        <!-- Report table ends --> 
+   		<table class="slds-table slds-table--bordered slds-table_striped">
+            <thead>
+                <tr class="slds-text-title--caps">
+                    <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                        <span class="slds-truncate" title="Name">Sr No.</span>      
+                    </th>
+                    <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                        <span class="slds-truncate" title="Name">Report Link</span>      
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                 <aura:if isTrue="{!v.error}">
+                    <tr><span style="color:red;font-size:20px;">{!v.errorMessage}</span></tr>
+                </aura:if> 
+                <aura:iteration items="{!v.wrapperReportLinks}" var="wrp">
+                    <tr>
+                        <td scope="row" class="slds-cell-wrap slds-truncate" >{!wrp.srNo}</td>
+                        <td scope="row" class="slds-cell-wrap slds-truncate" >
+                            <a href="{!wrp.objSGroup.Report_Link__c}" target="_new">{!wrp.objSGroup.Name}</a></td>
+                    </tr>
+                </aura:iteration>
+            </tbody>
+        </table>
+        <!-- Report table ends --> 
+    </div>
+</aura:component>

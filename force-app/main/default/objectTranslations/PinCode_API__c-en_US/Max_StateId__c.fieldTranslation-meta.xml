@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Max StateId --></label>
+    <name>Max_StateId__c</name>
+</CustomFieldTranslation>

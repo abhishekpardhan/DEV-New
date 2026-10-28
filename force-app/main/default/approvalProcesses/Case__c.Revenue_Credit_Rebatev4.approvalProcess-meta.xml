@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <type>creator</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Account__c</field>
+        <field>Approval_Status__c</field>
+        <field>Case_Typee__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Pending_from_Claim_Dept</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <type>userHierarchyField</type>
+            </approver>
+        </assignedApprover>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Case__c.Task_Amount__c</field>
+                <operation>lessThan</operation>
+                <value>50000</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case__c.Case_Type__c</field>
+                <operation>includes</operation>
+                <value>Late Delivery,Weight difference</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>User.Profile</field>
+                <operation>notEqual</operation>
+                <value>Regional Finance Head</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>AM Approval</label>
+        <name>AM_Approval</name>
+        <rejectionActions>
+            <action>
+                <name>Status_to_Rejected</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>Update_Rejected</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Pending_from_Claim_Deptv2</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <type>userHierarchyField</type>
+            </approver>
+        </assignedApprover>
+        <entryCriteria>
+            <booleanFilter>(1 AND 2  AND 4) OR (3 AND 6 AND 4 AND 5)</booleanFilter>
+            <criteriaItems>
+                <field>Case__c.Task_Amount__c</field>
+                <operation>greaterOrEqual</operation>
+                <value>50000</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case__c.Case_Type__c</field>
+                <operation>includes</operation>
+                <value>Late Delivery,Weight difference</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case__c.Case_Type__c</field>
+                <operation>excludes</operation>
+                <value>Late Delivery</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>User.Profile</field>
+                <operation>notEqual</operation>
+                <value>Regional Finance Head</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case__c.Case_Type__c</field>
+                <operation>notEqual</operation>
+                <value>Rate Difference</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case__c.Case_Type__c</field>
+                <operation>excludes</operation>
+                <value>Weight difference</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>AM Approval</label>
+        <name>AM_Approval_2</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>Rejected_by_AM</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>Status_to_Rejectedv2</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Approved_By_AM</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <type>userHierarchyField</type>
+            </approver>
+        </assignedApprover>
+        <description>AM Approval in case of Credit Rebate (Rate Difference) case Any Claim amount</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Case__c.Case_Typee__c</field>
+                <operation>equals</operation>
+                <value>Credit Rebate</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case__c.Case_Type__c</field>
+                <operation>equals</operation>
+                <value>Rate Difference</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>User.Profile</field>
+                <operation>notEqual</operation>
+                <value>Regional Finance Head</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>AM Approval Rate Difference</label>
+        <name>AM_Approval_Rate_Difference</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>Rejected_by_AM</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Approved_by_claim_dept</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>soumitra.pramanik@safexpress.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Case__c.Case_Type__c</field>
+                <operation>excludes</operation>
+                <value>Late Delivery</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case__c.Case_Type__c</field>
+                <operation>notEqual</operation>
+                <value>Rate Difference</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case__c.Case_Type__c</field>
+                <operation>excludes</operation>
+                <value>Weight difference</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Claim Approval</label>
+        <name>Claim_Approval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>Rejected_by_Claim_Dept</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Approved_by_claim_dept2</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>sachin.gupta1@safexpress.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Case__c.Case_Type__c</field>
+                <operation>includes</operation>
+                <value>Late Delivery,Weight difference</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case__c.Task_Amount__c</field>
+                <operation>greaterOrEqual</operation>
+                <value>50000</value>
+            </criteriaItems>
+        </entryCriteria>
+        <label>Claim Approval</label>
+        <name>Claim_Approval2</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>Rejected_by_Claim_Dept2</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <booleanFilter>1 AND 2  AND 4 AND 5 AND 7 AND (3 OR 6)</booleanFilter>
+        <criteriaItems>
+            <field>Case__c.RecordType</field>
+            <operation>equals</operation>
+            <value>Revenue Management Case</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case__c.Approval_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Approved By AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case__c.Total_Waybill_No__c</field>
+            <operation>notEqual</operation>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case__c.Case_Type__c</field>
+            <operation>includes</operation>
+            <value>Shortage/Damage,Late Delivery,Rate Difference,Weight difference</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Profile</field>
+            <operation>equals</operation>
+            <value>Regional Finance Head</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case__c.Case_Typee__c</field>
+            <operation>equals</operation>
+            <value>Credit Rebate</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>rework</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>update_approval_status</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Revenue Credit Rebate</label>
+    <nextAutomatedApprover>
+        <useApproverFieldOfRecordOwner>false</useApproverFieldOfRecordOwner>
+        <userHierarchyField>Manager</userHierarchyField>
+    </nextAutomatedApprover>
+    <processOrder>10</processOrder>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

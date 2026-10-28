@@ -1,0 +1,14 @@
+{
+  "required" : [ "pincode" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "pincode" : {
+      "title" : "Pincode",
+      "description" : "The pincode shared by the customer, exactly as entered.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

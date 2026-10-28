@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Custom setting to exclude users, profiles, hierarchies from validations, trigger executions, workflows, process builders etc.</description>
+    <enableFeeds>false</enableFeeds>
+    <label>Custom Validation Exception Setting</label>
+    <visibility>Public</visibility>
+</CustomObject>

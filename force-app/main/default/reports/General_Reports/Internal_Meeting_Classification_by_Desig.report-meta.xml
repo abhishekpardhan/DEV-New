@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>User$Name</field>
+    </columns>
+    <columns>
+        <field>User$Department</field>
+    </columns>
+    <columns>
+        <field>User*User$Area__c</field>
+    </columns>
+    <columns>
+        <field>User*User$Region__c</field>
+    </columns>
+    <currency>INR</currency>
+    <description>Report Used for Driving Salesforce Adaption</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>User*User$Designation__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Internal Meeting Classification by Desig</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>USERS_AND_EVENT_NEW__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>User$LastLoginDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

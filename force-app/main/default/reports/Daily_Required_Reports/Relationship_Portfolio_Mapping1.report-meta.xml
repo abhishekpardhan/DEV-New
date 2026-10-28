@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account_Team__c$Account__c.MSA__c</field>
+    </columns>
+    <columns>
+        <field>Account_Team__c$Account__c.Parent.Parent.Name</field>
+    </columns>
+    <columns>
+        <field>Account_Team__c$Account__c</field>
+    </columns>
+    <columns>
+        <field>Account_Team__c$PropelI_BDM_Mapping__c.Booking_Branch__c</field>
+    </columns>
+    <columns>
+        <field>Account_Team__c$Id</field>
+    </columns>
+    <columns>
+        <field>Account_Team__c$LastModifiedDate</field>
+    </columns>
+    <currency>INR</currency>
+    <description>Used for Daily Data Creation</description>
+    <filter>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <criteriaItems>
+            <column>Account_Team__c$RecordType</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Account_Team__c.PropelI_Account_Team</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account_Team__c$Relationship__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account_Team__c$BDMPropelI__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Relationship Portfolio Mapping</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Account_with_BDM__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <sortColumn>Account_Team__c$Account__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Account_Team__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

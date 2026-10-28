@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_List_View</fullName>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Contact__c</columns>
+    <columns>Distance__c</columns>
+    <columns>End__c</columns>
+    <columns>Activity__c</columns>
+    <columns>Status__c</columns>
+    <columns>Start__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>CheckIn_Address__c</columns>
+    <columns>CheckOut_Address__c</columns>
+    <columns>Branch__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Event_Purpose__c</field>
+        <operation>equals</operation>
+        <value>Retail Customer Meeting</value>
+    </filters>
+    <label>All List View</label>
+</ListView>

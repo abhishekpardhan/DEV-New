@@ -1,0 +1,17 @@
+Dear Sir,
+<br/>
+<br/>
+Please find details of a potential customer who has requirement of Full Truck Load services.
+<br/>
+Do contact the customer and take it forward.
+<br/>
+Lead Name : {!Lead__c.Name}
+<br/>
+Please log in to salesforce using url: https://safeforce1.force.com
+<br/>
+After logged in please click the link to access record: "Record link".{!Lead__c.Instance_Url__c}{!Lead__c.Id}
+<br>
+<br>
+Regards,
+<br/>
+Safexpress Central Team

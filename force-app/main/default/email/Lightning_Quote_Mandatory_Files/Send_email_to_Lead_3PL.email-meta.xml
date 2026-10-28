@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Send email to Lead 3PL</name>
+    <style>none</style>
+    <subject>New Lead - 3PL</subject>
+    <textOnly>Dear Sir,
+
+Please find details of a potential customer who has requirement of Full Truck Load services.
+Do contact the customer and take it forward.
+Lead Name : {!Lead__c.Name}
+Please log in to salesforce using url: https://safeforce1.force.com
+After logged in please click the link to access record: &quot;Record link&quot;.{!Lead__c.Instance_Url__c}{!Lead__c.Id}
+
+Regards,
+Safexpress Central Team</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

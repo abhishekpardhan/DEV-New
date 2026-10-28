@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This permission set is built to use all the permissions related to agentforce use cases to be built for SF 2.0 project</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>SF 2.0 Agentforce Master Permission Set</label>
+</PermissionSet>

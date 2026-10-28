@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Edit_Permission_for_CCD_Cases</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    RecordType.DeveloperName = &apos;Corporate_Credit_Case&apos;,
+    ISPICKVAL(Approval_Status__c , &apos;Approved By AM&apos;),
+    NOT(ISCHANGED(Approval_Status__c)),
+    OR(
+        CreatedBy.Profile.Name = &apos;BDM&apos;,
+        CreatedBy.Profile.Name = &apos;Area Manager&apos;
+    ),
+    $Profile.Name &lt;&gt; &apos;CCD&apos;,
+    $Profile.Name &lt;&gt; &apos;System Administrator&apos;,
+    $Profile.Name &lt;&gt; &apos;Read Only&apos;
+)</errorConditionFormula>
+    <errorMessage>User cannot edit the record</errorMessage>
+</ValidationRule>

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Operation_Issues</fullName>
+    <active>true</active>
+    <label>Operation Issues</label>
+    <picklistValues>
+        <picklist>Approval_Status__c</picklist>
+        <values>
+            <fullName>Approved By AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Submitted for Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending from AM</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Case_Raised_By__c</picklist>
+        <values>
+            <fullName>Consignee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consignor</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Case_Sub_Type__c</picklist>
+        <values>
+            <fullName>LR%2FWaybill Creation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Others</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waybill Tracking API</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>With Tech Leadership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>With Tech Team</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Case_Type__c</picklist>
+        <values>
+            <fullName>17</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>19</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>37</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>38</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Annual Hike</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fuel Surcharge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Safextension Charge</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Case_Typee__c</picklist>
+        <values>
+            <fullName>Operation Issues</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Claim_Type__c</picklist>
+        <values>
+            <fullName>COF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cheque</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Claim_Understanding__c</picklist>
+        <values>
+            <fullName>Carriers Risk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Owners Risk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Owners Risk with Excess Clause</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Customer_Approval_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Submitted for Approval</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted for Approval</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Customer_Case_Type__c</picklist>
+        <values>
+            <fullName>API Integration Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Portal Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting Request</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Customer_Status__c</picklist>
+        <values>
+            <fullName>Business to Initiate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed %28with no Action%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed API Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed Portal development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting Done</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On hold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Customer_Type__c</picklist>
+        <values>
+            <fullName>Credit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Deactivate__c</picklist>
+        <values>
+            <fullName>Activate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deactivate</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Iconnect_Role__c</picklist>
+        <values>
+            <fullName>Admin role</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard role</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Related_to__c</picklist>
+        <values>
+            <fullName>Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Requested_By__c</picklist>
+        <values>
+            <fullName>Customer Requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Self Initiated</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seek more details</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Supporting_Documents__c</picklist>
+        <values>
+            <fullName>Cancelled Cheque</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Claim Letter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer%27s Email Copy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invoice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>POD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Passbook Copy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Photos of Damage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Survey Report</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

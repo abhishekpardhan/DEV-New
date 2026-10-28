@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>For_CaseIsNull</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISBLANK(Case__c),
+    NOT(ISBLANK(Opportunity__c)),
+    Opportunity__r.Account__c &lt;&gt; Account__c
+    
+)</errorConditionFormula>
+    <errorMessage>Opportunity and Account mismatch.</errorMessage>
+</ValidationRule>

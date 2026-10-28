@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Owner</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>field_udate</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <type>userHierarchyField</type>
+            </approver>
+        </assignedApprover>
+        <label>Step 1</label>
+        <name>Step_1</name>
+        <rejectionActions>
+            <action>
+                <name>Field_update</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <booleanFilter>(1 OR 2 OR 3) AND 4 AND (5 OR 6 OR 7)</booleanFilter>
+        <criteriaItems>
+            <field>Journey__c.Final_Amount__c</field>
+            <operation>greaterThan</operation>
+            <value>INR 0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Journey__c.Journey_KM__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Journey__c.Actual_KM__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Manager</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Profile</field>
+            <operation>equals</operation>
+            <value>Area Manager</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Profile</field>
+            <operation>equals</operation>
+            <value>Regional New Sales Manager</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Profile</field>
+            <operation>equals</operation>
+            <value>Regional Retail Manager</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Is_Locked_False</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Record_type_update_journey</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Is_locked_true</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>record_type_update</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>submit_for_app</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Journey Approval</label>
+    <nextAutomatedApprover>
+        <useApproverFieldOfRecordOwner>false</useApproverFieldOfRecordOwner>
+        <userHierarchyField>Manager</userHierarchyField>
+    </nextAutomatedApprover>
+    <processOrder>1</processOrder>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

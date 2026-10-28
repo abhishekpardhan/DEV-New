@@ -1,0 +1,23 @@
+<!-- 
+    File Name          : wayBillTrackTable
+    Description        : This Component is used show the waybill history on table format
+    Author             : Deepak 
+    Last Modified Date : 20/7/2021
+    Last Modified By   :
+    Modification Logs  
+    Ver           Date              Author                Modification
+    =====================================================================
+    1.0         20/7/2021        Deepak                Initial Version
+
+-->
+<!-- sldsValidatorIgnore -->
+<template>
+    <div id="table-section" >
+        <h3 class="slds-section-title--divider">Track History</h3>
+        <div style="height: 300px;"> 
+            <lightning-datatable key-field="eventDate" hide-checkbox-column data={trackData} 
+            columns={trackColumns} >
+            </lightning-datatable>
+        </div>
+    </div>
+</template>

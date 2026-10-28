@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_for_different_TPS_Charge__c</fullName>
+    <inlineHelpText>Reason for different &apos;TPS&apos; Charge? (If Applicable)</inlineHelpText>
+    <label>Reason for different &apos;TPS&apos; Charge?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

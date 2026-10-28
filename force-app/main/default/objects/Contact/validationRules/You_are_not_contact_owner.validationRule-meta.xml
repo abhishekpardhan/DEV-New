@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>You_are_not_contact_owner</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(!$Permission.Service_Cloud_Exception ,
+$Profile.Name &lt;&gt; &apos;System Administrator&apos;,
+$Profile.Name &lt;&gt; &apos;Corporate salesforce team&apos;,
+$Profile.Name &lt;&gt; &apos;Onboarding Team&apos;,
+$Profile.Name &lt;&gt; &apos;Read Only&apos;,
+
+(NOT(ISCHANGED(Last_Event__c))),
+(OwnerId) &lt;&gt; $User.Id,
+
+
+(Owner.ManagerId) &lt;&gt; $User.Id)</errorConditionFormula>
+    <errorMessage>You are not authorized to make this Change.</errorMessage>
+</ValidationRule>

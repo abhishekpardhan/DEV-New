@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Contract Renewal Reminder email template used by ContractRenewalBatch Apex job. This template is triggered 60 days and 30 days before Contract End Date for MSA contracts. The template contains a placeholder (&lt;!--SFX_TABLE_PLACEHOLDER--&gt;) that is dynamically replaced by Apex with a table of linked SFX Accounts. Recipients include MSA Local NAM, their Manager, and Regional Manager with exclusion logic for Rubal Jain (70002).</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Contract Renewal Template</name>
+    <style>none</style>
+    <subject>Renewal Reminder - Contract Expiring | msaAccountName</subject>
+    <textOnly>Dear localNamName, 
+
+This is a reminder that the below contract is scheduled to end on {!Contract__c.Contract_End_Date__c}. 
+
+Contract Details 
+
+Contract Name: {!Contract__c.Name} 
+Contract End Date: {!Contract__c.Contract_End_Date__c} 
+MSA Code: msaAccountName
+
+Account (MSA)
+msaAccountName
+
+Linked SFX Accounts
+SFXCodeTable
+
+Kindly review the contract and initiate the renewal process to ensure business continuity across the MSA and all associated SFX accounts.
+
+Please take the necessary action before the end date to avoid service or 
+revenue disruption. 
+
+Regards,
+Team Safexpress</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

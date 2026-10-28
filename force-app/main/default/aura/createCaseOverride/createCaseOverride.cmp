@@ -1,0 +1,25 @@
+<!-- 
+    File Name          : createCaseOverride 
+    Description        : This Component is used to Override the Standard New Case On Case Object
+    Author             : Deepak 
+    Last Modified Date :  23/7/2021
+    Last Modified By   :
+    Modification Logs  
+    Ver           Date              Author                Modification
+    =====================================================================
+    1.0         23/7/2021           Deepak                Initial Version
+
+-->
+
+<!-- sldsValidatorIgnore -->
+<aura:component implements="force:hasRecordId,lightning:actionOverride,lightning:isUrlAddressable,lightning:hasPageReference" access="global" >
+    <aura:attribute name="createCaseId" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    <lightning:workspaceAPI aura:id="workspace"/>
+
+    <div class="slds-box--border slds-theme--default">
+        <lightning:flow aura:id="flowId" onstatuschange="{!c.handleStatusChange}"/>
+    </div>
+    <div class="blank" style="min-height: 50px !important;"></div>
+    
+</aura:component>

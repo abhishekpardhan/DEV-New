@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Business Detail</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Business Details</value>
+    </caseValues>
+    <layouts>
+        <layout>Business Detail</layout>
+        <sections>
+            <label><!-- Address details --></label>
+            <section>Address details</section>
+        </sections>
+        <sections>
+            <label><!-- Branch Details --></label>
+            <section>Branch Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Potential 100000 and Expected business can not be less than 50000 --></errorMessage>
+        <name>Business_amount_less_then_100000</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Opportunity and Account mismatch. --></errorMessage>
+        <name>For_CaseIsNull</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Case and Account mismatch. --></errorMessage>
+        <name>For_OpportunityIsNull</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter correct GST Number. --></errorMessage>
+        <name>GST_Number_Format_Check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter correct GST Number. --></errorMessage>
+        <name>GST_Number_Format_Check_For_Pickup</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter correct PAN number. --></errorMessage>
+        <name>Pan_No_Format_Check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You are not allowed to modify after case has approved OR Opportunity has Closed/Won --></errorMessage>
+        <name>Record_Lock</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Record cannot be created or modified because the related Case is Rejected. --></errorMessage>
+        <name>Rejected_Case_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter correct TAN Number. --></errorMessage>
+        <name>Tan_No_Format_check</name>
+    </validationRules>
+</CustomObjectTranslation>

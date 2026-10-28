@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Onboarding_Task_Completion_VR</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISPICKVAL(Status, &quot;Completed&quot;),
+    $RecordType.Name == &apos;On Boarding&apos;,
+      AND(
+    NOT(
+      $Profile.Name == &apos;Corporate salesforce team&apos;),
+      NOT($Profile.Name == &apos;Read Only&apos;),
+      NOT($Profile.Name == &apos;Onboarding Team&apos;),
+      NOT($Profile.Name == &apos;System Administrator&apos;)  
+    
+  ),
+    OR(
+          ISPICKVAL(Pickup_Frequency__c, &quot;&quot;),
+        ISBLANK(Please_Specify__c),
+        ISBLANK(Expected_pickup_start_date__c),
+ISPICKVAL(Product_Vertical__c, &quot;&quot;),
+        ISBLANK(Distance_from_Booking_Office_KM__c),
+        ISBLANK(Product_Name__c),
+        ISBLANK(Remarks__c)
+    )
+)</errorConditionFormula>
+    <errorMessage>To complete this On Boarding task, please fill all required fields:
+17. Pickup Frequency
+18. Please Specify (Other Location)
+19. Expected Pickup Start Date
+20. Product Vertical
+21. Distance from Booking Office (KM)
+22. Product Name
+23. Remarks</errorMessage>
+</ValidationRule>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deffered_Reason__c</fullName>
+    <label>Deferred Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Quotation expiry</fullName>
+                <default>false</default>
+                <label>Quotation expiry</label>
+            </value>
+            <value>
+                <fullName>Price Not acceptable</fullName>
+                <default>false</default>
+                <label>Price Not acceptable</label>
+            </value>
+            <value>
+                <fullName>Terms &amp; Conditions not acceptable</fullName>
+                <default>false</default>
+                <label>Terms &amp; Conditions not acceptable</label>
+            </value>
+            <value>
+                <fullName>Any Deduction Clause not acceptable</fullName>
+                <default>false</default>
+                <label>Any Deduction Clause not acceptable</label>
+            </value>
+            <value>
+                <fullName>Product Not acceptable</fullName>
+                <default>false</default>
+                <label>Product Not acceptable</label>
+            </value>
+            <value>
+                <fullName>Any other reasons</fullName>
+                <default>false</default>
+                <label>Any other reasons</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,77 @@
+{
+  "required" : [ "varApproxWeight", "varDeliveryPincode", "varEmail", "varName", "varPackageCount", "varPhone", "varPickupAddress", "varPickupPincode" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "varApproxWeight" : {
+      "title" : "varApproxWeight",
+      "description" : "Approximate weight in kg saved from the validated booking form.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "varContactId" : {
+      "title" : "varContactId",
+      "description" : "Linked Contact Id of the messaging session, if any.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "varDeliveryPincode" : {
+      "title" : "varDeliveryPincode",
+      "description" : "Serviceable delivery pincode saved from the validated booking form.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "varEmail" : {
+      "title" : "varEmail",
+      "description" : "Email address saved from the validated booking form.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "varMessagingSessionId" : {
+      "title" : "varMessagingSessionId",
+      "description" : "Id of the messaging session to link the case to.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "varName" : {
+      "title" : "varName",
+      "description" : "Full name saved from the validated booking form.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "varPackageCount" : {
+      "title" : "varPackageCount",
+      "description" : "Number of packages saved from the validated booking form.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "varPhone" : {
+      "title" : "varPhone",
+      "description" : "10-digit mobile number saved from the validated booking form.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "varPickupAddress" : {
+      "title" : "varPickupAddress",
+      "description" : "Pickup address saved from the validated booking form.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "varPickupPincode" : {
+      "title" : "varPickupPincode",
+      "description" : "Serviceable pickup pincode saved from the validated booking form.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason__c</fullName>
+    <label>Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Status</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>OTHERS</fullName>
+                <default>false</default>
+                <label>OTHERS</label>
+            </value>
+            <value>
+                <fullName>MIS</fullName>
+                <default>false</default>
+                <label>MIS</label>
+            </value>
+            <value>
+                <fullName>SUBMIT</fullName>
+                <default>false</default>
+                <label>SUBMIT</label>
+            </value>
+            <value>
+                <fullName>BILL NOT RECEIVED</fullName>
+                <default>false</default>
+                <label>BILL NOT RECEIVED</label>
+            </value>
+            <value>
+                <fullName>POD NOT AVAILABLE</fullName>
+                <default>false</default>
+                <label>POD NOT AVAILABLE</label>
+            </value>
+            <value>
+                <fullName>ORIGNAL POD</fullName>
+                <default>false</default>
+                <label>ORIGNAL POD</label>
+            </value>
+            <value>
+                <fullName>POD-CD</fullName>
+                <default>false</default>
+                <label>POD-CD</label>
+            </value>
+            <value>
+                <fullName>P2M</fullName>
+                <default>false</default>
+                <label>P2M</label>
+            </value>
+            <value>
+                <fullName>Contract related issue</fullName>
+                <default>false</default>
+                <label>Contract related issue</label>
+            </value>
+            <value>
+                <fullName>Damaged Delivery</fullName>
+                <default>false</default>
+                <label>Damaged Delivery</label>
+            </value>
+            <value>
+                <fullName>Late Delivery</fullName>
+                <default>false</default>
+                <label>Late Delivery</label>
+            </value>
+            <value>
+                <fullName>Short Delivery</fullName>
+                <default>false</default>
+                <label>Short Delivery</label>
+            </value>
+            <value>
+                <fullName>Undelivered</fullName>
+                <default>false</default>
+                <label>Undelivered</label>
+            </value>
+            <value>
+                <fullName>Wrong Delivery</fullName>
+                <default>false</default>
+                <label>Wrong Delivery</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Completed</controllingFieldValue>
+            <controllingFieldValue>Open</controllingFieldValue>
+            <controllingFieldValue>In Progress</controllingFieldValue>
+            <controllingFieldValue>Reopen</controllingFieldValue>
+            <valueName>OTHERS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Completed</controllingFieldValue>
+            <controllingFieldValue>Open</controllingFieldValue>
+            <controllingFieldValue>In Progress</controllingFieldValue>
+            <controllingFieldValue>Reopen</controllingFieldValue>
+            <valueName>MIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Completed</controllingFieldValue>
+            <controllingFieldValue>Open</controllingFieldValue>
+            <controllingFieldValue>In Progress</controllingFieldValue>
+            <controllingFieldValue>Reopen</controllingFieldValue>
+            <valueName>SUBMIT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Completed</controllingFieldValue>
+            <controllingFieldValue>Open</controllingFieldValue>
+            <controllingFieldValue>In Progress</controllingFieldValue>
+            <controllingFieldValue>Reopen</controllingFieldValue>
+            <valueName>BILL NOT RECEIVED</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Completed</controllingFieldValue>
+            <controllingFieldValue>Open</controllingFieldValue>
+            <controllingFieldValue>In Progress</controllingFieldValue>
+            <controllingFieldValue>Reopen</controllingFieldValue>
+            <valueName>POD NOT AVAILABLE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Completed</controllingFieldValue>
+            <controllingFieldValue>Open</controllingFieldValue>
+            <controllingFieldValue>In Progress</controllingFieldValue>
+            <controllingFieldValue>Reopen</controllingFieldValue>
+            <valueName>ORIGNAL POD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Completed</controllingFieldValue>
+            <controllingFieldValue>Open</controllingFieldValue>
+            <controllingFieldValue>In Progress</controllingFieldValue>
+            <controllingFieldValue>Reopen</controllingFieldValue>
+            <valueName>POD-CD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Completed</controllingFieldValue>
+            <controllingFieldValue>Open</controllingFieldValue>
+            <controllingFieldValue>In Progress</controllingFieldValue>
+            <controllingFieldValue>Reopen</controllingFieldValue>
+            <valueName>P2M</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Completed</controllingFieldValue>
+            <controllingFieldValue>Open</controllingFieldValue>
+            <controllingFieldValue>In Progress</controllingFieldValue>
+            <controllingFieldValue>Reopen</controllingFieldValue>
+            <valueName>Contract related issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Completed</controllingFieldValue>
+            <controllingFieldValue>Open</controllingFieldValue>
+            <controllingFieldValue>In Progress</controllingFieldValue>
+            <controllingFieldValue>Reopen</controllingFieldValue>
+            <valueName>Damaged Delivery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Completed</controllingFieldValue>
+            <controllingFieldValue>Open</controllingFieldValue>
+            <controllingFieldValue>In Progress</controllingFieldValue>
+            <controllingFieldValue>Reopen</controllingFieldValue>
+            <valueName>Late Delivery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Completed</controllingFieldValue>
+            <controllingFieldValue>Open</controllingFieldValue>
+            <controllingFieldValue>In Progress</controllingFieldValue>
+            <controllingFieldValue>Reopen</controllingFieldValue>
+            <valueName>Short Delivery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Completed</controllingFieldValue>
+            <controllingFieldValue>Open</controllingFieldValue>
+            <controllingFieldValue>In Progress</controllingFieldValue>
+            <controllingFieldValue>Reopen</controllingFieldValue>
+            <valueName>Undelivered</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Completed</controllingFieldValue>
+            <controllingFieldValue>Open</controllingFieldValue>
+            <controllingFieldValue>In Progress</controllingFieldValue>
+            <controllingFieldValue>Reopen</controllingFieldValue>
+            <valueName>Wrong Delivery</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

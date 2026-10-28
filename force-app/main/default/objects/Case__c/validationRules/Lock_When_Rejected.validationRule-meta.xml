@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lock_When_Rejected</fullName>
+    <active>true</active>
+    <description>If a case is Rejected due to any reason the it will be locked only sysadmin and corporate Salesforce team can edit the record.</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(PRIORVALUE(Status__c), &quot;Rejected&quot;),
+    NOT(
+        OR(
+            $Profile.Name = &quot;System Administrator&quot;,
+            $Profile.Name = &quot;Read Only&quot;
+        )
+    )
+)</errorConditionFormula>
+    <errorMessage>This case has been rejected and is locked. Please create a new case.</errorMessage>
+</ValidationRule>

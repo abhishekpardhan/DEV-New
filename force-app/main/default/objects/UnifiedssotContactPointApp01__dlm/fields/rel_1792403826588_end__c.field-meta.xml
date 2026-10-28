@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>rel_1792403826588_end__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>UnifiedssotContactPointApp01_ssot_Pa_rel</label>
+    <referenceTo>UnifiedssotIndividual01__dlm</referenceTo>
+    <relationshipLabel>UnifiedssotContactPointApp01_ssot_Pa_rel</relationshipLabel>
+    <relationshipName>rel_1792403826588_end</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

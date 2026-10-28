@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>From_Date_should_be_future_date</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(OR(ISNEW() ,ISCHANGED(From_Date__c)),!ISBLANK(From_Date__c) ,From_Date__c &lt; TODAY())</errorConditionFormula>
+    <errorDisplayField>From_Date__c</errorDisplayField>
+    <errorMessage>Please fill future Date.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validation_for_Revenue_Management</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    RecordType.Name = &apos;Revenue Management Case&apos;,
+    OR(
+        ISPICKVAL(Case_Typee__c, &apos;Credit Note&apos;),
+        ISPICKVAL(Case_Typee__c, &apos;Commercial Credit Note&apos;)
+    ),
+    INCLUDES(Case_Type__c, &apos;Damage/Shortage Delivery&apos;),
+    OR(
+        INCLUDES(Case_Type__c, &apos;Late Delivery&apos;),
+        INCLUDES(Case_Type__c, &apos;Freight Dispute&apos;),
+        INCLUDES(Case_Type__c, &apos;Revised bill&apos;),
+        INCLUDES(Case_Type__c, &apos;38&apos;),
+        INCLUDES(Case_Type__c, &apos;Special / Turnover discount&apos;),
+        INCLUDES(Case_Type__c, &apos;To Pay service Charge&apos;),
+        INCLUDES(Case_Type__c, &apos;Weight difference&apos;),
+        INCLUDES(Case_Type__c, &apos;Wrong charges applied&apos;),
+        INCLUDES(Case_Type__c, &apos;Wrong code entry&apos;)
+    )
+)</errorConditionFormula>
+    <errorMessage>Please select Damage/Shortage separately</errorMessage>
+</ValidationRule>

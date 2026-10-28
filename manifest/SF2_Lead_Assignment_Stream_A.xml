@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Provision credential secrets/principal access and enable callouts after configuration validation. -->
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>IntegrationTransactionHandler</members>
+        <members>LeadAssignmentService</members>
+        <members>LeadEnrichmentService</members>
+        <members>LeadEnrichmentServiceTest</members>
+        <members>LeadAssignmentServiceTest</members>
+        <members>LeadTriggerHandler</members>
+        <members>PincodeApiMock</members>
+        <members>PincodeLookupQueueable</members>
+        <members>PincodeLookupQueueableTest</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>Central_Desk</members>
+        <name>Queue</name>
+    </types>
+    <types>
+        <members>Lead.Lead_Central_Desk_Lock</members>
+        <name>ValidationRule</name>
+    </types>
+    <types>
+        <members>Propeli_Pincode_Auth</members>
+        <name>ExternalCredential</name>
+    </types>
+    <types>
+        <members>Propeli_Pincode_API</members>
+        <members>Propeli_Token_API</members>
+        <name>NamedCredential</name>
+    </types>
+    <types>
+        <members>PS_Lead_Callout_Access</members>
+        <name>PermissionSet</name>
+    </types>
+    <types>
+        <members>OperationType_PropelI_PincodeLookup</members>
+        <name>customLabel</name>
+    </types>
+    <types>
+        <members>Integration_Transaction__c.Operation_Type__c</members>
+        <name>customField</name>
+    </types>
+    <version>67.0</version>
+</Package>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Drop_Reason_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+    AND(
+        ISPICKVAL(Lead_Drop_Reason__c, &quot;Others&quot;),
+        ISBLANK(Please_Specify__c)
+    ),
+    AND(
+        OR(
+            ISPICKVAL(Status, &quot;Dropped&quot;),
+            ISPICKVAL(Status, &quot;Dropped by Central desk&quot;)
+        ),
+        ISBLANK(TEXT(Lead_Drop_Reason__c))
+    )
+)</errorConditionFormula>
+    <errorMessage>Select a valid Lead Drop Reason and specify the reason when &quot;Others&quot; is selected.</errorMessage>
+</ValidationRule>

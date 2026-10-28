@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_Opportunity_Lock_Type_Business</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT(ISNEW()),
+    OR(
+        ISCHANGED(Business_Type__c),
+        ISCHANGED(Customer_Type__c)
+    ),
+    OR(
+        NOT($Permission.Can_Edit_Restricted_Opportunity_Fields),
+        AND(
+            $Permission.Can_Edit_Restricted_Opportunity_Fields,
+            NOT(ISPICKVAL(Stage__c , &apos;Active&apos;))
+        )
+    )
+)</errorConditionFormula>
+    <errorMessage>Opportunity Type and Business Type can only be modified by authorized corporate teams when the Opportunity Status is Active.</errorMessage>
+</ValidationRule>

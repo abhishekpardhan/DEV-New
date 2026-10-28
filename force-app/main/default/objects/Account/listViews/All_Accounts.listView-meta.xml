@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Accounts</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Customer_Category__c</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>Base_Location__c</columns>
+    <columns>MSA__c</columns>
+    <columns>SFX_Code__c</columns>
+    <columns>Rate_card__c</columns>
+    <columns>Rate_card_end_date__c</columns>
+    <columns>CREATEDBY_USER.ALIAS</columns>
+    <columns>Billing_Branch__c</columns>
+    <columns>ACCOUNT.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>X3PL_Potential__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Actual_SFX</value>
+    </filters>
+    <filters>
+        <field>Booking_hold__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>All Accounts</label>
+</ListView>

@@ -1,0 +1,19 @@
+@media (max-width: 767px){
+    .THIS .slds-scrollable_x {
+        overflow-x: scroll;
+    	-webkit-overflow-scrolling: touch;
+    }
+    .THIS .slds-wrap{
+        padding: 0px 10px
+    }
+    .THIS .slds-text-heading_small{
+        display: block !important;
+    }
+    .THIS .slds-card__header{
+        padding: 12px 10px;
+    }
+    .THIS .forceStyle.desktop .oneContent.active, .THIS .oneContent{
+        overflow: scroll !important;
+        overflow-x: scroll;
+    }
+}

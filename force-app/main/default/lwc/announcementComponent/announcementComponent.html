@@ -1,0 +1,12 @@
+<template> 
+    <lightning-carousel  >
+        <template for:each={announcementsData} for:item="announcement">
+            <template if:true={announcement.isVisible}>
+                <lightning-carousel-image key={announcement.id}
+                    src = {announcement.Image}                                                
+                    href="javascript:void(0);">
+                </lightning-carousel-image>
+            </template>
+        </template>
+    </lightning-carousel>  
+</template>

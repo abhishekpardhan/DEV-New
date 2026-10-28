@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataStreamDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <areHeadersIncludedInFile>false</areHeadersIncludedInFile>
+    <bulkIngest>false</bulkIngest>
+    <creationType>Custom</creationType>
+    <dataConnector>MobileAppMessagingV2_35613b38_3a04_4ef5_b270_1ec64f214d79</dataConnector>
+    <dataConnectorType>StreamingApp</dataConnectorType>
+    <dataExtractMethods>FULL_REFRESH</dataExtractMethods>
+    <dataPlatformDataSetItemName>EVENTS</dataPlatformDataSetItemName>
+    <dataSource>MobileAppMessagingV2_Behavioral_8538CDBC</dataSource>
+    <isLimitedToNewFiles>false</isLimitedToNewFiles>
+    <isMissingFileFailure>false</isMissingFileFailure>
+    <masterLabel>MobileAppMessagingV2-Behavioral Events_8538CDBC</masterLabel>
+    <mktDataLakeObject>MobileAppMessagingV2_Behavioral_8538CDBC__dll</mktDataLakeObject>
+    <mktDataTranObject>MobileAppMessagingV2_Behavioral_8538CDBC</mktDataTranObject>
+</DataStreamDefinition>

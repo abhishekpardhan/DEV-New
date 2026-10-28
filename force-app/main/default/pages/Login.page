@@ -1,0 +1,64 @@
+<apex:page showHeader="false" sidebar="false" controller="CustomLoginController" doctype="html-5.0">
+<apex:stylesheet value="{!URLFOR($Resource.SLDS, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+<!-- Import the Design System style sheet-->
+<apex:slds />
+      <html>
+       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+      </head>
+      <body style="background-color:#F4F6F9;">
+     <div class="slds-grid slds-wrap" style="height:200px;">
+  <div class="slds-col slds-size--1-of-1" align="center">
+    <span>
+    <br/>
+    <apex:image id="theImage" value="{!$Resource.Safexpress_Logo}" width="250" height="200" alt="Description of image here"/>
+    <br/>
+    </span>
+  </div><!-- col1 image div ends -->
+  
+  
+  <div class="slds-col slds-size--1-of-1" align="center">
+    <span>
+    <div id="container" style="display:block;">
+    <apex:form >
+    <br/>
+    <h1 style="color:blue;font-size:15px;">Salesforce Login</h1><br/>
+ <!-- <apex:form >
+      <label>Username : </label>
+      <apex:inputText label="Username" title="Username"  value="{!username}"/><br/><br/>
+      <label>Password : </label>
+      <apex:inputText label="Password" title="Password" value="{!password}"/><br/>
+      <div id="lower">               
+                <apex:commandbutton value="Login" action="{!doLogin}"/>
+            </div><!--/ lower
+              </apex:form>-->
+                            <apex:pageMessages />
+              <div class="slds-form slds-form--stacked" >
+         <div class="slds-form-element" >   
+        
+
+            
+                 <label class="slds-form-element__label" ><span style="color:blue;font-size:15px;">Username</span></label>
+                 <div class="slds-form-element__control" style="width:200px;">
+                 <apex:inputText label="Username" styleClass="slds-input" title="Username"  value="{!username}"/>
+                 </div>              
+                 
+         <label class="slds-form-element__label" ><span style="color:blue;font-size:15px;">Password</span></label>
+         <div class="slds-form-element__control" style="width:200px;">
+          <apex:inputSecret label="Password" styleClass="slds-input" title="Password" value="{!password}"/>
+          </div>
+
+        
+             </div></div>
+             <br/> 
+             <apex:commandbutton styleClass="slds-button slds-button_stateful slds-button_brand slds-not-selected slds-button_neutral" value="Login" action="{!doLogin}"/>
+              </apex:form>
+              </div>
+
+              </span>
+              
+  </div><!-- col2 fields div ends-->
+</div><!-- Grid div ends-->
+    </body>
+    </html>
+</apex:page>

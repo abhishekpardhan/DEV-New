@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case__c</fullName>
+    <label>Case</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>Please Select Claim or Credit/Debit Note case.</errorMessage>
+        <filterItems>
+            <field>Case__c.RecordType.Name</field>
+            <operation>contains</operation>
+            <value>Revenue Management Case,Claim Issues</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Case__c</referenceTo>
+    <relationshipLabel>Waybill Details</relationshipLabel>
+    <relationshipName>Waybill_Details</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Event Lead</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Event Leads</value>
+    </caseValues>
+    <layouts>
+        <layout>Converted Event Layout</layout>
+        <sections>
+            <label><!-- Corporate Address --></label>
+            <section>Corporate Address</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Event Lead Layout</layout>
+        <sections>
+            <label><!-- Corporate Address --></label>
+            <section>Corporate Address</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Converted Event Lead --></label>
+        <name>Converted_Event_Lead</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- New Event Lead --></label>
+        <name>New_Event_Lead</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- You Can&apos;t change the Event lead name. --></errorMessage>
+        <name>Converted_Event_lead_anem</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill 10 digit Mobile No. --></errorMessage>
+        <name>Mobile_Phone_valid</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Pin Code Should be 6 Digits. --></errorMessage>
+        <name>Pin_code_6_didgit</name>
+    </validationRules>
+</CustomObjectTranslation>

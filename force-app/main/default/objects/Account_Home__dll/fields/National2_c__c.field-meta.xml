@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>National2_c__c</fullName>
+    <defaultValue>false</defaultValue>
+    <label>National2</label>
+    <mktDataLakeFieldAttributes>
+        <definitionCreationType>Standard</definitionCreationType>
+        <externalName>National2_c</externalName>
+        <isEventDate>false</isEventDate>
+        <isInternalOrganization>false</isInternalOrganization>
+        <isRecordModified>false</isRecordModified>
+        <usageTag>NONE</usageTag>
+    </mktDataLakeFieldAttributes>
+    <type>Checkbox</type>
+</CustomField>

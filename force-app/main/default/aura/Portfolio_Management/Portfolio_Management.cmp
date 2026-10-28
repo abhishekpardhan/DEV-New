@@ -1,0 +1,377 @@
+<!-- 
+    changed SLDS classes for better UI
+    Changed By: Shubbham Girdhdar
+    Changede Date: 13/05/2019
+    Jira Ticket: SD-352
+    __________________________________________________________________________________
+    -->
+
+
+<aura:component implements="force:appHostable" controller="PortfolioClass">
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doinit}"/>
+    <aura:attribute name="lstAccounts" type="object[]"/>
+    <aura:attribute name="lstAccounts2" type="object[]"/>
+    <aura:attribute name="lstAll" type="object[]"/>
+    <aura:attribute name="inputkeyword" type="string"/>
+    <aura:attribute name="ad" type="string"/>
+    <aura:attribute name="rellist" type="List"/>
+    <aura:attribute name="relexis" type="List"/>
+    <aura:attribute name="newcollist" type="List"/>
+    <aura:attribute name="newsublist" type="List"/>
+    <aura:attribute name="newnational1" type="List"/>
+    <aura:attribute name="newnational2" type="List"/>
+    <aura:attribute name="newnational3" type="List"/>
+    <aura:attribute name="newnational4" type="List"/>
+    <aura:attribute name="newcrs" type="List"/>
+    <aura:attribute name="oldcollist" type="List"/>
+    <aura:attribute name="oldsublist" type="List"/>    
+    <aura:attribute name="newexerel" type="List"/>
+    <aura:attribute name="newexecol" type="List"/>
+    <aura:attribute name="newexesub" type="List"/>
+    <aura:attribute name="map" type="Map"/>
+    <aura:attribute name="exismap" type="Map"/>
+    <aura:attribute name="newexismap" type="Map"/>
+    <aura:attribute name="lstAll2" type="object[]"/>
+    <aura:attribute name="lstusers" type="object[]"/>
+    <aura:attribute name="lstDepartment" type="String[]"/>
+    <aura:attribute name="department" type="boolean" default="false"/>
+    <!-- Attribute Declration For Pagination -->
+    <aura:attribute name="PaginationList" type="object[]"/>
+    <aura:attribute name="startPage" type="Integer" />
+    <aura:attribute name="endPage" type="Integer"/>
+    <aura:attribute name="startPage2" type="Integer" />
+    <aura:attribute name="endPage2" type="Integer"/>
+    <aura:attribute name="totalRecords" type="Integer"/>
+    <aura:attribute name="totalRecords2" type="Integer"/>
+    <aura:attribute name="pageSize" type="Integer" default="10"/>
+    <aura:attribute name="PaginationListExis" type="object[]"/>
+    <aura:attribute name="PaginationListExis2" type="object[]"/>
+    <!-- Attribute Declration For Pagination End-->
+    <aura:attribute name="Spinner" type="boolean" default="false"/>
+    <aura:attribute name="Spinner2" type="boolean" default="false"/>
+    <aura:attribute name="noResultExist" type="boolean" default="false"/>
+    <aura:attribute name="noResultNew" type="boolean" default="false"/>
+    <aura:handler event="aura:waiting" action="{!c.showSpinner}"/>
+    <aura:handler event="aura:doneWaiting" action="{!c.hideSpinner}"/>
+    <!-- Component Heading -->    
+    <div style="background-color:White; border-radius:.55rem;"  >
+        <div class="slds-page-header" style="border-radius: .55rem;">
+            <div class="slds-media">
+                <div class="slds-media__body ">
+                    
+                    <lightning:icon iconName="standard:event" alternativeText="Portfolio Management" title="Portfolio Management" class="slds-float_left"/>
+                    
+                    <h1 class="slds-page-header__title slds-text-heading_large slds-truncate slds-align-middl slds-p-left_small " title="Portfolio Management"><strong>Portfolio Management</strong></h1>
+                    <!--                <p class="slds-text-body_small slds-line-height_reset">Portfolio</p>-->
+                </div>
+                <!--Portfolio report button added by Shubham Girdhar-->
+                <a class="slds-button slds-button_brand" href="http://analytics.safexpress.com/spotfire" target="_blank">Portfolio Report</a>
+            </div>
+        </div>    
+        <!-- Heading finished -->
+        <aura:if isTrue="{!v.Spinner}">
+            <div aura:id="spinnerId" class="slds-spinner_container">
+                <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                    <span class="slds-assistive-text">Loading</span>
+                    <div class="slds-spinner__dot-a"></div>
+                    <div class="slds-spinner__dot-b"></div>
+                </div>
+            </div>
+        </aura:if>  
+        <!-- Input fields -->
+        <div class="slds-form slds-form_compound" >
+            <div class="slds-form-element__group">   
+                <br/>
+                <!-- 1st row -->             
+                <div class="slds-form-element__row slds-align_absolute-center"> 
+                    <div class="slds-form-element slds-size--1-of-2" style="width:20%;">                        
+                        <label class="slds-form-element__label"  for="input-id-01" style="font-size: 20px;">
+                            <abbr class="slds-required" title="required">*</abbr><strong>Department</strong></label>
+                        <div class="slds-form-element__control">
+                            <ui:inputSelect class="slds-input" aura:id="dept" change="{!c.department}">
+                                <ui:inputSelectOption text="" label="Select Department" value="true"/>
+                                <aura:iteration items="{!v.lstDepartment}" var="dep">
+                                    <ui:inputSelectOption text="{!dep}" label="{!dep}" />
+                                </aura:iteration>
+                            </ui:inputSelect>
+                        </div>
+                    </div>
+                    <div class="slds-form-element slds-size--1-of-2" style="width:20%;">                        
+                        <label class="slds-form-element__label" for="input-id-01" style="font-size: 20px;">
+                            <abbr class="slds-required" title="required">*</abbr><strong>User</strong></label>
+                        <div class="slds-form-element__control">
+                            <ui:inputSelect class="slds-input" aura:id="username" change="{!c.userselect}">
+                                <ui:inputSelectOption text="" label="Select User" value="true"/>
+                                <aura:iteration items="{!v.lstusers}" var="u">                            
+                                    <ui:inputSelectOption text="{!u.Id}" label="{!u.Name+' ('+u.AD_Id__c+')'}" />
+                                </aura:iteration>
+                            </ui:inputSelect>
+                        </div>
+                        
+                    </div>
+                </div>             
+            </div>
+        </div>
+        <br/>
+        <!-- search tags -->
+        <div class="slds-form-element__row slds-align_absolute-center">
+            <div class="slds-form-element slds-size--1-of-3" style="width:10%;" >
+                <!-- <label class="slds-form-element__label " for="input-id-01" style="font-size: 20px;">
+            <strong>Search</strong>  
+        <br/>    
+        </label>  -->
+                <div class="slds-form-element__control ">
+                    <ui:inputSelect class="slds-input" aura:id="search">
+                        <ui:inputSelectOption text="" label="Select table" value="true"/>
+                        <ui:inputSelectOption text="Existing Customers" label="Search SFX Code" /> <!-- Changed label name from Existing Customers to Search SFX Code By Shubham Girdhar -->
+                        <ui:inputSelectOption text="New Customers" label="New Customers" />                
+                    </ui:inputSelect>
+                </div>   
+            </div>
+            <div class="slds-size--2-of-3 slds-p-left_x-small" style="width:30%;">
+                <div class="slds-form-element__control " >
+                    <ui:inputText  value="{!v.inputkeyword}" class="slds-input" aura:id="user" placeholder="Enter Name/SFX Code of min. 4 characters"/>                                
+                    
+                </div>
+            </div>
+            
+        </div>
+        <br/>
+        <lightning:button class="slds-align_absolute-center" variant="brand" label="Search" onclick="{!c.keypressed}"/>
+        <br/>
+        <!-- search ends -->
+        
+        <!-- Input fields ends -->
+        <div class="slds-p-horizontal_large">
+            
+            <h2 style="font-weight:bold;font-size: 20px;">Existing Customers</h2>
+            <!-- Existing table -->
+            <table class="slds-table slds-table--bordered slds-table_striped">
+                <thead>
+                    <tr class="slds-text-title--caps">
+                        <th scope="col" style="font-weight:bold;" class="slds-cell-wrap">
+                            <span class="slds-truncate" title="Name">Client Name</span>      
+                        </th>
+                        <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                            <span class="slds-truncate" title="Name">Portfolio <br/> Code</span>      
+                        </th>
+                        <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                            <span class="slds-truncate" title="Name">Booking <br/> Branch</span>      
+                        </th>
+                        <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                            <span class="slds-truncate" title="Name">Collection <br/> Branch</span>      
+                        </th>
+                        <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                            <span class="slds-truncate" title="Name">Submission <br/> Branch</span>      
+                        </th>
+                        <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                            <span class="slds-truncate" title="Name">Relationship</span>      
+                        </th>
+                        <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                            <span class="slds-truncate" title="Name">Collection</span>      
+                        </th>
+                        <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                            <span class="slds-truncate" title="Name">Submission</span>      
+                        </th>
+                        <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                            <span class="slds-truncate" title="Name">CCD</span>      
+                        </th>
+                        <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                            <span class="slds-truncate" title="Name">Local<br/>NAM</span>      
+                        </th>
+                        <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                            <span class="slds-truncate" title="Name">QRM</span>      
+                        </th>
+                        <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                            <span class="slds-truncate" title="Name">RM</span>      
+                        </th>
+                        <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                            <span class="slds-truncate" title="Name">CRS</span>      
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <aura:if isTrue="{!v.noResultExist}">
+                        <tr><span style="color:red;font-size:20px;">No Account Found</span></tr>
+                    </aura:if>            
+                    <aura:iteration items="{!v.PaginationListExis}" var="p">
+                        
+                        <tr>
+                            <td scope="row" class="slds-cell-wrap slds-truncate" >
+                                {!p.Account__r.Name}
+                            </td>
+                            <td scope="row" class="slds-cell-wrap slds-truncate">
+                                {!p.Account__r.SFX_Code__c}
+                            </td>
+                            <td scope="row" class="slds-cell-wrap slds-truncate">
+                                {!p.Account__r.Booking_Branch__r.Name}
+                            </td>
+                            <td scope="row" class="slds-cell-wrap slds-truncate">
+                                {!p.Account__r.Collection_Branch__r.Name}
+                            </td>
+                            <td scope="row" class="slds-cell-wrap slds-truncate">
+                                {!p.Account__r.Submission_Branch__r.Name}
+                            </td>           
+                            <td scope="row">
+                                <ui:inputCheckbox aura:id="erel" change="{!c.checkerel}" text="{!p.Id}" value="{!p.Relationship__c}" disabled="{!and(p.Account__r.Relationship__c == true,p.Relationship__c == false)}"/>
+                            </td>
+                            <td scope="row">
+                                <ui:inputCheckbox aura:id="ecol" change="{!c.checkecol}" text="{!p.Id}" value="{!p.Collection__c}" disabled="{!and(p.Account__r.Collection__c == true,p.Collection__c == false)}"/>
+                            </td>
+                            <td scope="row">
+                                <ui:inputCheckbox aura:id="esub" change="{!c.checkesub}" text="{!p.Id}" value="{!p.Submission__c}" disabled="{!and(p.Account__r.Submission__c == true,p.Submission__c == false)}"/>
+                            </td>
+                            <td scope="row">
+                                <ui:inputCheckbox aura:id="esub" change="{!c.checken1}" text="{!p.Id}" value="{!p.National1__c}" disabled="{!and(p.Account__r.National1__c == true,p.National1__c == false)}"/>
+                            </td>
+                            <td scope="row">
+                                <ui:inputCheckbox aura:id="esub" change="{!c.checken2}" text="{!p.Id}" value="{!p.National2__c}" disabled="{!and(p.Account__r.National2__c == true,p.National2__c == false)}"/>
+                            </td>
+                            <td scope="row">
+                                <ui:inputCheckbox aura:id="esub" change="{!c.checken3}" text="{!p.Id}" value="{!p.National3__c}" disabled="{!and(p.Account__r.National3__c == true,p.National3__c == false)}"/>
+                            </td>
+                            <td scope="row">
+                                <ui:inputCheckbox aura:id="esub" change="{!c.checken4}" text="{!p.Id}" value="{!p.National4__c}" disabled="{!and(p.Account__r.National4__c == true,p.National4__c == false)}"/>
+                            </td>
+                            <td scope="row">
+                                <ui:inputCheckbox aura:id="esub" change="{!c.checkecrs}" text="{!p.Id}" value="{!p.CRS__c}" disabled="{!v.department == false}"/>
+                            </td>
+                        </tr>    
+                        
+                    </aura:iteration>
+                    
+                </tbody>
+                
+            </table>
+            <br/>
+            <lightning:buttonGroup class="slds-align_absolute-center" >
+                <lightning:button label="Previous" disabled="{!v.startPage == 0}"  
+                                  onclick="{!c.previous2}" variant="brand"
+                                  iconName='utility:back'/>
+                &nbsp; &nbsp;
+                <lightning:button label="Next" disabled="{!v.endPage >= v.totalRecords2}" 
+                                  onclick="{!c.next2}" variant="brand"
+                                  iconName='utility:forward' iconPosition='right'/>
+            </lightning:buttonGroup>
+            <!-- another body starts -->
+            <br/>
+            <br/>
+            <h2 style="font-weight:bold;font-size: 20px;">New Customers</h2>
+            <table class="slds-table slds-table--bordered slds-table_striped" style="width:100%">
+                <thead>
+                    <tr class="slds-text-title--caps">
+                        <th scope="col" style="font-weight:bold; " class="slds-cell-wrap">
+                            <span class="slds-truncate" title="Name">Client Name</span>      
+                        </th>
+                        <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                            <span class="slds-truncate" title="Name">Portfolio <br/> Code</span>      
+                        </th>
+                        <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                            <span class="slds-truncate" title="Name">Booking <br/> Branch</span>      
+                        </th>
+                        <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                            <span class="slds-truncate slds-align_absolute-center" title="Name">Collection <br/> Branch</span>      
+                        </th>
+                        <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                            <span class="slds-truncate" title="Name">Submission <br/> Branch</span>      
+                        </th>
+                        <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                            <span class="slds-truncate" title="Name">Relationship</span>      
+                        </th>
+                        <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                            <span class="slds-truncate" title="Name">Collection</span>      
+                        </th>
+                        <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                            <span class="slds-truncate" title="Name">Submission</span>      
+                        </th>
+                        <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                            <span class="slds-truncate" title="Name">CCD</span>      
+                        </th>
+                        <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                            <span class="slds-truncate slds-align_absolute-center" title="Name">Local<br/>NAM</span>      
+                        </th>
+                        <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                            <span class="slds-truncate" title="Name">QRM</span>      
+                        </th>
+                        <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                            <span class="slds-truncate" title="Name">RM</span>      
+                        </th>
+                        <th scope="col" style="font-weight:bold;" class="slds-cell-wrap slds-cell-shrink">
+                            <span class="slds-truncate" title="Name">CRS</span>      
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <aura:if isTrue="{!v.noResultNew}">
+                        <tr><span style="color:red;font-size:20px;">No Account Found</span></tr>
+                    </aura:if>
+                    <aura:iteration items="{!v.PaginationList}" var="p">
+                        
+                        <tr>
+                            <td scope="row" class="slds-cell-wrap">{!p.Name}</td>
+                            
+                            <td scope="row" class="slds-cell-wrap">
+                                {!p.SFX_Code__c}
+                            </td>
+                            <td scope="row" class="slds-cell-wrap">
+                                {!p.Booking_Branch__r.Name}
+                            </td>
+                            <td scope="row" class="slds-cell-wrap">
+                                {!p.Collection_Branch__r.Name}
+                            </td>
+                            <td scope="row" class="slds-cell-wrap">
+                                {!p.Submission_Branch__r.Name}
+                            </td>                    
+                            <td scope="row" class="slds-cell-wrap">
+                                <ui:inputCheckbox aura:id="nrel" change="{!c.checknrel}" text="{!p.Id}" value="" disabled="{!p.Relationship__c == true}"/>
+                            </td>
+                            <td scope="row" class="slds-cell-wrap">
+                                <ui:inputCheckbox aura:id="ncol" change="{!c.checkncol}" text="{!p.Id}" value="" disabled="{!p.Collection__c == true}"/>
+                            </td>
+                            <td scope="row" class="slds-cell-wrap">
+                                <ui:inputCheckbox aura:id="nsub" change="{!c.checknsub}" text="{!p.Id}" value="" disabled="{!p.Submission__c == true}"/>
+                            </td>
+                            <td scope="row" class="slds-cell-wrap">
+                                <ui:inputCheckbox aura:id="nn1" change="{!c.checknn1}" text="{!p.Id}" value="" disabled="{!p.National1__c == true}"/>
+                            </td>
+                            <td scope="row" class="slds-cell-wrap">
+                                <ui:inputCheckbox aura:id="nn2" change="{!c.checknn2}" text="{!p.Id}" value="" disabled="{!p.National2__c == true}"/>
+                            </td>
+                            <td scope="row" class="slds-cell-wrap">
+                                <ui:inputCheckbox aura:id="nn3" change="{!c.checknn3}" text="{!p.Id}" value="" disabled="{!p.National3__c == true}"/>
+                            </td>
+                            <td scope="row" class="slds-cell-wrap">
+                                <ui:inputCheckbox aura:id="nn4" change="{!c.checknn4}" text="{!p.Id}" value="" disabled="{!p.National4__c == true}"/>
+                            </td>
+                            <td scope="row" class="slds-cell-wrap">
+                                <ui:inputCheckbox aura:id="crs" change="{!c.checkncrs}" text="{!p.Id}" value="" disabled="{!v.department == false}"/>
+                            </td>
+                        </tr>
+                    </aura:iteration>
+                    
+                    
+                </tbody>
+                
+                
+            </table>    
+            <br/>
+            <lightning:buttonGroup class="slds-align_absolute-center" >
+                <lightning:button  label="Previous" disabled="{!v.startPage2 == 0}"  
+                                  onclick="{!c.previous}" variant="brand"
+                                  iconName='utility:back'/>
+                &nbsp; &nbsp;
+                <lightning:button label="Next" disabled="{!v.endPage2 >= v.totalRecords}" 
+                                  onclick="{!c.next}" variant="brand"
+                                  iconName='utility:forward' iconPosition='right'/>
+            </lightning:buttonGroup>
+        </div>
+        <br/>
+        <!-- new customer table ends -->
+        <div align="center">
+            <ui:button label="Assign" press="{!c.assign}" class="slds-button slds-button_brand"/>
+        </div>
+        <br/>
+    </div>
+</aura:component>

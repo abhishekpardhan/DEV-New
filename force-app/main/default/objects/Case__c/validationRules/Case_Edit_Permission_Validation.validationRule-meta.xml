@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Edit_Permission_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT(SkipValidationWhileReAssigning__c),  
+				IF(
+ OR($Profile.Name = &apos;CCD&apos;,
+$Profile.Name =&apos;Read Only&apos;),
+False,
+AND(
+    NOT(ISNEW()),NOT(ISBLANK(Assigned_To__c)),
+				 
+     NOT($Permission.Transfer_Admin_Permission),
+    Assigned_To__c  &lt;&gt;  $User.Id ,  
+    CreatedById &lt;&gt; $User.Id,        
+    $Profile.Name &lt;&gt; &apos;System Administrator&apos;,  
+    $Profile.Name &lt;&gt; &apos;Integration User&apos;,
+    $Profile.Name &lt;&gt; &apos;Corporate salesforce team&apos;,
+    $Profile.Name &lt;&gt; &apos;Revenue Management&apos;,
+    $Profile.Name &lt;&gt; &apos;Corporate IT team&apos;,
+$Profile.Name &lt;&gt; &apos;Claim User Profile&apos;
+)
+								)
+
+)</errorConditionFormula>
+    <errorMessage>You do not have permission to edit this case.</errorMessage>
+</ValidationRule>

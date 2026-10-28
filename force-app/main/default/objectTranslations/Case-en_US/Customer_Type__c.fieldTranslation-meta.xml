@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Customer Type --></label>
+    <name>Customer_Type__c</name>
+    <picklistValues>
+        <masterLabel>3PL</masterLabel>
+        <translation><!-- 3PL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CREDIT</masterLabel>
+        <translation><!-- CREDIT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CREDIT+RETAIL</masterLabel>
+        <translation><!-- CREDIT+RETAIL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FTL</masterLabel>
+        <translation><!-- FTL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PRC</masterLabel>
+        <translation><!-- PRC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TRANSPORTATION+3PL</masterLabel>
+        <translation><!-- TRANSPORTATION+3PL --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

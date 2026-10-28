@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Resend_Comments__c</fullName>
+    <inlineHelpText>This field will show the comments added by BDM when quote is resend to the central team for any discrepancies.</inlineHelpText>
+    <label>Resend Comments</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

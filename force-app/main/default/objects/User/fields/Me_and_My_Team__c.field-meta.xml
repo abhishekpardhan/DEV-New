@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Me_and_My_Team__c</fullName>
+    <formula>OR( Id = $User.Id , Manager.Id = $User.Id, Manager.Manager.Id = $User.Id )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Me and My Team</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

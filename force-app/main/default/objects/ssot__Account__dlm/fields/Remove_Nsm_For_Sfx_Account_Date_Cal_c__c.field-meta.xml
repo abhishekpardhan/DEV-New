@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Remove_Nsm_For_Sfx_Account_Date_Cal_c__c</fullName>
+    <label>Remove_Nsm_For_Sfx_Account_Date_Cal_c</label>
+    <mktDataModelFieldAttributes>
+        <definitionCreationType>Custom</definitionCreationType>
+        <isDynamicLookup>false</isDynamicLookup>
+        <labelOverride>Remove_Nsm_For_Sfx_Account_Date_Cal_c</labelOverride>
+        <masterLabel>Remove_Nsm_For_Sfx_Account_Date_Cal_c</masterLabel>
+        <usageTag>None</usageTag>
+    </mktDataModelFieldAttributes>
+    <required>false</required>
+    <type>Date</type>
+</CustomField>

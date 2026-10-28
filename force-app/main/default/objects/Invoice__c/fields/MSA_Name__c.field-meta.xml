@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MSA_Name__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Account__c!= null,
+IF(Account__r.ParentId != null,
+IF(Account__r.Parent.ParentId !=null,IF(Account__r.Parent.Parent.ParentId !=null,IF(Account__r.Parent.Parent.Parent.ParentId !=null, IF(Account__r.Parent.Parent.Parent.ParentId !=null,IF(Account__r.Parent.Parent.Parent.Parent.ParentId !=null,&apos;&apos;
+,Account__r.Parent.Parent.Parent.Parent.Parent.Name)
+,Account__r.Parent.Parent.Parent.Parent.Name)
+,Account__r.Parent.Parent.Parent.Name)
+,Account__r.Parent.Parent.Name)
+,Account__r.Parent.Name)
+,Account__r.Name ),
+Name)</formula>
+    <label>MSA Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

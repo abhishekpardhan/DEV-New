@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Dropped_Read_Only</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  NOT(IsVRBypassed__c),
+  NOT($Permission.Lead_VR_Bypass),
+  NOT($Permission.Lead_Revive),
+  NOT(ISNEW()),
+  OR(
+    ISPICKVAL(PRIORVALUE(Status), &quot;Dropped&quot;),
+    ISPICKVAL(PRIORVALUE(Status), &quot;Dropped by Central desk&quot;)
+  )
+)</errorConditionFormula>
+    <errorMessage>This lead is dropped and can&apos;t be changed. Ask a user with the Revive permission to revive it.</errorMessage>
+</ValidationRule>

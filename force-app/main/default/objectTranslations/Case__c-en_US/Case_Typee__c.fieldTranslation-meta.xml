@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Access Type --></label>
+    <name>Case_Typee__c</name>
+    <picklistValues>
+        <masterLabel>API Integration Required</masterLabel>
+        <translation><!-- API Integration Required --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Air Business</masterLabel>
+        <translation><!-- Air Business --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Any Misc.</masterLabel>
+        <translation><!-- Any Misc. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Balance Confirmation/No Dues Certificate/Ledger</masterLabel>
+        <translation><!-- Balance Confirmation/No Dues Certificate/Ledger --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Base location/Collection Location/Bill Submission Location change</masterLabel>
+        <translation><!-- Base location/Collection Location/Bill Submission Location change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bill Dispatch</masterLabel>
+        <translation><!-- Bill Dispatch --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bill Generation requirement</masterLabel>
+        <translation><!-- Bill Generation requirement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Branch Transfer</masterLabel>
+        <translation><!-- Branch Transfer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Business Support</masterLabel>
+        <translation><!-- Business Support --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Change Collector in Retail</masterLabel>
+        <translation><!-- Change Collector in Retail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Change Request</masterLabel>
+        <translation><!-- Change Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Claim Issues</masterLabel>
+        <translation><!-- Claim Issues --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Commercial Credit Note</masterLabel>
+        <translation><!-- Commercial Credit Note --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Credit Code Management</masterLabel>
+        <translation><!-- Credit Code Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Credit Note</masterLabel>
+        <translation><!-- Credit Note --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Credit Rebate</masterLabel>
+        <translation><!-- Credit Rebate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer Portal request</masterLabel>
+        <translation><!-- Customer Portal request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dashboard/Spotfire</masterLabel>
+        <translation><!-- Dashboard/Spotfire --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Debit Note/Allied Bill</masterLabel>
+        <translation><!-- Debit Note/Allied Bill --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Digital Collection &amp; Receipting issue</masterLabel>
+        <translation><!-- Digital Collection &amp; Receipting issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Freight MIS requirement</masterLabel>
+        <translation><!-- Freight MIS requirement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GST Issue</masterLabel>
+        <translation><!-- GST Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Meeting Request</masterLabel>
+        <translation><!-- Meeting Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Misc Income (Retail)</masterLabel>
+        <translation><!-- Misc Income (Retail) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Misc Income( Credit )</masterLabel>
+        <translation><!-- Misc Income( Credit ) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Monthly Closure Support</masterLabel>
+        <translation><!-- Monthly Closure Support --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Operation Issues</masterLabel>
+        <translation><!-- Operation Issues --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>POD Viewer/Invoice</masterLabel>
+        <translation><!-- POD Viewer/Invoice --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>POD requirement/CD requirement</masterLabel>
+        <translation><!-- POD requirement/CD requirement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Paid Credit Note</masterLabel>
+        <translation><!-- Paid Credit Note --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Paid Rebate Advise</masterLabel>
+        <translation><!-- Paid Rebate Advise --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pricing</masterLabel>
+        <translation><!-- Pricing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RFQ Support</masterLabel>
+        <translation><!-- RFQ Support --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rate issue - Retail</masterLabel>
+        <translation><!-- Rate issue - Retail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reciept cancellation( Credit)</masterLabel>
+        <translation><!-- Reciept cancellation( Credit) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reciept cancellation( Retail)</masterLabel>
+        <translation><!-- Reciept cancellation( Retail) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Refund to Customer</masterLabel>
+        <translation><!-- Refund to Customer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Retail Allied bill</masterLabel>
+        <translation><!-- Retail Allied bill --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Retail GST Invoice</masterLabel>
+        <translation><!-- Retail GST Invoice --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Revised Bill</masterLabel>
+        <translation><!-- Revised Bill --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Special Delivery</masterLabel>
+        <translation><!-- Special Delivery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>To pay Debit Advise</masterLabel>
+        <translation><!-- To pay Debit Advise --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>To pay rebate Advise</masterLabel>
+        <translation><!-- To pay rebate Advise --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Topay Credit Note</masterLabel>
+        <translation><!-- Topay Credit Note --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Topay to Credit conversion</masterLabel>
+        <translation><!-- Topay to Credit conversion --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

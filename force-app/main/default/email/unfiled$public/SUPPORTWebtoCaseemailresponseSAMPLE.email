@@ -1,0 +1,15 @@
+Dear {!Case.Contact_Name__c},
+ 
+Greetings from Safexpress!
+
+This is in regard to the pickup request with  Case #{!Case.CaseNumber}. 
+
+Request you to mention the above Case number  in all your communications.
+
+Please feel free to contact us for any further query/assistance on our 24X7 toll free number 1800-113-113 or e-mail us on info@safexpress.com
+
+Thank you for considering Safexpress Pvt. Ltd.
+
+Thanks & Regards,
+
+Team Safexpress

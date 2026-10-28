@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Category__c</fullName>
+    <label>Sub Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Main_Category__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>DeliveryProcessRequest</fullName>
+                <default>false</default>
+                <label>Delivery Process Request</label>
+            </value>
+            <value>
+                <fullName>WaybillEscalation</fullName>
+                <default>false</default>
+                <label>Waybill Escalation</label>
+            </value>
+            <value>
+                <fullName>SpecialDeliveryRequest</fullName>
+                <default>false</default>
+                <label>Special Delivery Request</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>CustomerEscalation</controllingFieldValue>
+            <valueName>DeliveryProcessRequest</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CustomerEscalation</controllingFieldValue>
+            <valueName>WaybillEscalation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CustomerEscalation</controllingFieldValue>
+            <valueName>SpecialDeliveryRequest</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

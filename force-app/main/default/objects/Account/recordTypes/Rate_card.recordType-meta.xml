@@ -1,0 +1,2823 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rate_card</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>SFX_Account_Compact_Layout</compactLayoutAssignment>
+    <label>Rate Card</label>
+    <picklistValues>
+        <picklist>AccountSource</picklist>
+        <values>
+            <fullName>Articles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Booking Associates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Branch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Campaign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cold Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Directory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Green Truck Associate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ICM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Service Providers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reference Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Safexperience Centre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Segment Analysis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Account_Type__c</picklist>
+        <values>
+            <fullName>Emerging</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enterprise</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Area__c</picklist>
+        <values>
+            <fullName>AGARTALA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AGRA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AHMEDABAD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AHMEDABAD CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AHMEDNAGAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AIZAWL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AIZWAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ALIGARH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ALLAHABAD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ALWAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AMBALA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AMBALA CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AMRITSAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANDHRA PRADESH CENTRAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANDHRA PRADESH EAST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANDHRA PRADESH WEST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AP SCU001</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ATTIBELE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AURANGABAD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AURANGABAD CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BADDI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAHADURGARH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BANGALORE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BANGALORE CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BANGALORE DELIVERY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BANGALORE NORTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BANGALORE SCS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BANGALORE SOUTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BARASAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAREILLY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BARODA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BARODA CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BATHINDA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAWAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BELAGAVI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BELGAUM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BENGALURU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BENGALURU CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BENGALURU NORTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BENGALURU SOUTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BERHAMPUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BHAGALPUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BHATINDA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BHAYLA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BHILAI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BHIWADI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BHIWANDI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BHIWANDI CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BHOPAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BHUBANESHWAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BHUBANESHWAR CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BHUBANESWAR CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BIHAR CENTRAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BIHAR EAST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BIHAR NORTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BIHAR SOUTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BILASPUR %28CG%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BINOLA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BINOLA 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BONGAIGAON</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRAHMAPUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CALICUT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHANDIGARH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHANDWAJI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHANGODAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHEMBUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHENNAI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHENNAI CENTRAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHENNAI CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHENNAI NORTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHENNAI SCS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHENNAI SOUTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHENNAI WEST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHHATRAPATI SAMBHAJINAGAR CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHHATTISGARH CENTRAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COCHIN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COCHIN CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COIMBATORE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COIMBATORE CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CORPORATE OFFICE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CUTTACK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DADRA AND NAGAR HAVELI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DAMAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DEHRADUN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DELHI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DELHI CENTRAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DELHI EAST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DELHI NCR HUB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DELHI NORTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DELHI SAM PLUS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DELHI SAM PLUS 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DELHI SCS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DELHI SOUTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DELHI SOUTH WEST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DELHI WEST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DEWAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DHANBAD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DHULE HUB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DIMAPUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DL AQUALITE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DL MINDA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DL RELAXO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DOBBASPET</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DODA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DURGAPUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dadri</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ERODE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FARIDABAD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FARIDABAD CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FARRUKHNAGAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GANDHIDHAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GHAZIABAD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GORAKHPUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GOREGAON</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GREATER BANGALORE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GREATER JAIPUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GREATER MUMBAI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GREATER MUMBAI CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GREATER NAGPUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GREATER NOIDA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GUJARAT CENTRAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GUJARAT EAST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GUJARAT NORTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GUJARAT SOUTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GUJARAT SOUTH EAST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GUJARAT WEST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GUJARAT-NORTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GURGAON</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GURGAON CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GURUGRAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GURUGRAM CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GUWAHATI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GUWAHATI CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GWALIOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greater Howrah</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HARIDWAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HARYANA NORTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HARYANA RO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HARYANA SOUTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HARYANA SOUTH HUB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HARYANA WEST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HARYANA WEST NH10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HISSAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOOGHLY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOSHIARPUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOSUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOWRAH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HP CENTRAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HP NORTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HP SOUTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR BENETTON</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR SAM-001</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR SCU003</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR TATA MOTOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HUBBALLI CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HUBLI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HUBLI CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HYDERABAD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HYDERABAD CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HYDERABAD HITEC CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hyderabad North</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IMPHAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INDORE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INDORE CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ITANAGAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>J%26K CENTRAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JABALPUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JABALPUR CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JAIPUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JAIPUR CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JALANDHAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JAMMU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JAMNAGAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JAMSHEDPUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JAMSHEDPUR CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JHAJJAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JHANSI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JHARKHAND CENTRAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JODHPUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JORHAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KALAMBOLI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KANPUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KANPUR CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KARNAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KARNATAKA CENTRAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KARNATAKA EAST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KARNATAKA NORTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KARNATAKA NORTH WEST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KARNATAKA SOUTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KARNATAKA WEST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KERALA CENTRAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KERALA NORTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KERALA SOUTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KERALAM CENTRAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KHARAGPUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KOCHI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KOCHI CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KOLHAPUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KOLKATA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KOLKATA CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KOLKATA OUTBOUND</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KOLKATA SCS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KOLKATA SOUTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KOLLAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KOTA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KOZHIKODE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kolkata Dankuni</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LADAKH CENTRAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LUCKNOW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LUCKNOW CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LUDHIANA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LUDHIANA CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MADURAI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MAHARASHTRA CENTRAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MAHARASHTRA EAST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MAHARASHTRA NORTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MAHARASHTRA SOUTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MAHARASHTRA SOUTH EAST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MAHARASTRA CENTRAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MALAPPURAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MALDA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MANESAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MANGALORE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MANGALURU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MARAIMALAI NAGAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MAUNATH BHANJAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MCU0002</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MEERUT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MH MAHINDRA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MH SCU002</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MH SYSKA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MOHALI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MOHAN NAGAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MP CENTRAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MP EAST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MP NORTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MP SOUTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MU GODREJ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MU POLYCAB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MU SCHAEFFLER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MUMBAI CENTRAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MUMBAI CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MUMBAI CITY SOUTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MUMBAI NORTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MUMBAI SAM PLUS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MUMBAI SCS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MUMBAI SOUTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MURSHIDABAD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MUZAFFARPUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MYSORE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MYSURU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NAGPUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NAGPUR BUTIBORI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NAGPUR CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NASHIK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NASIK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NAVI MUMBAI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NAVI MUMBAI CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NCR HUB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NCR LOGISTICS PARK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NCR SCS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NEEMRANA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NELAMANGALA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NELAMANGALA CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NELLORE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NOIDA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NOIDA SAM PLUS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NOIDA SCS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NORTH-EAST NORTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NORTH-EAST SOUTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Delhi Central</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODISHA EAST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODISHA SOUTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ODISHA WEST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ORISSA CENTRAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PALAKKAD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PALGHAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PALWAL SAM PLUS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PANIPAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PANJIM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PATANCHERU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PATAUDI BILASPUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PATIALA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PATNA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PATNA CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PHALTAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PHURSUNGI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PITHAMPUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PONDICHERRY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PRAYAGRAJ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUDUCHERRY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUNE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUNE CHAKAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUNE CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUNE RANJANGAON</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUNE RANJANGAON CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUNE SCS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUNE TATHAWADE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUNE THATHWADE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUNE VADGAON</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUNE WAGHOLI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUNJAB HUB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUNJAB NORTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUNJAB SOUTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUNJAB WEST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PURNIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RAIGARH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RAIPUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RAIPUR CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RAJAHMUNDRY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RAJASTHAN CENTRAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RAJASTHAN EAST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RAJASTHAN NORTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RAJASTHAN SOUTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RAJASTHAN WEST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RAJKOT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RAJPURA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RANCHI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RANCHI CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RANGPO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RANGPOO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RJ HERO MOTOCORP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RJ MAHINDRA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RJ SCU001</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RJ SCU002</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ROURKELA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RUDRAPUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAHIBABAD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SALEM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SALEM CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAM - AQUALITE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAM - DL RELAXO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAM - HR BENETTON</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAM - KA HIMALYA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAM - MH SYSKA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAM - MINDA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAM - MU GODREJ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAM - MU POLYCAB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAM - MU SCHAEFFLER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAM - RJ MAHINDRA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAM - TN TIDC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAM - UP MANKIND</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAM - WB TATA MOTOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAMBALPUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SANAND</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SANGANER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SECUNDERABAD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SHAMSHABAD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SHILLONG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SHIMOGA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SHIVAMOGGA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIKKIM - WB NORTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIKKIM CENTRAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SILCHAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SILIGURI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SOLAPUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SONEPAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SONIPAT CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SRI CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SRINAGAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SRIPERUMBUDUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SURAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TAMIL NADU CENTRAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TAMIL NADU EAST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TAMIL NADU SOUTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TAURU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TAURU CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TELENGANA CENTRAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TELENGANA EAST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TELENGANA WEST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>THANE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>THIRUVANANTHAPURAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>THRISSUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TINSUKIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TIRUNELVELI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TIRUPATI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TIRUPUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TIRUVALLUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TIRUVALLUR CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TN SCU001</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TN TIDC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRICHY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRIVENDRUM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TUMAKURU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TUMKUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UDAIPUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UNA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UNNAO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UP BORDER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UP CENTRAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UP EAST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UP MANKIND</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UP NORTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UP SAMSUNG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UP SCU 005</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UP SCU002</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UP SCU005</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UP SOUTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UP SOUTH CENTRAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UP SOUTH EAST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UP SOUTH WEST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UP WEST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UP WEST HUB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UP WEST NORTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UP-SAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UTTARAKHAND</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UTTARAKHAND EAST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UTTARAKHAND WEST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UTTRAKHAND CENTRAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VAPI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VAPI CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VARANASI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VASAI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VASHI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIJAYAWADA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIJAYAWADA CITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VISAKHAPATNAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VISHAKHAPATNAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VITHALAPUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vadodara City</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WB CENTRAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WB NORTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WB SCU001</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WB SOUTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WB TATA MOTOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WB WEST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WB-West</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WHITEFIELD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZIRAKPUR</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Billing_Level__c</picklist>
+        <values>
+            <fullName>MSA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rate Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SFX</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Blocked__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Branch_Status__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-active</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Business_Type__c</picklist>
+        <values>
+            <fullName>A2A</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANYWHERE TO ANYWHERE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outbound</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Competition_Air__c</picklist>
+        <values>
+            <fullName>BLUEDART</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DELHIVERY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DTDC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FUTURE LOGISTICS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GATI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LOCAL TRANSPORTER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MAHINDRA LOGISTICS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NITCO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OM LOGISTICS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OTHERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RAHUL CARGO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>V-TRANS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>V-XPRESS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VRL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XPRESSBEES</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Competition_Surface__c</picklist>
+        <values>
+            <fullName>BLUEDART</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DELHIVERY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DTDC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FUTURE LOGISTICS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GATI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LOCAL TRANSPORTER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MAHINDRA LOGISTICS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NITCO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OM LOGISTICS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OTHERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RAHUL CARGO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>V-TRANS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>V-XPRESS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VRL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XPRESSBEES</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Customer_Category__c</picklist>
+        <values>
+            <fullName>A PLUS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A PLUS INB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A PLUS PRJ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A PLUS WMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AA PLUS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AAA PLUS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ATPL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NA PLUS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Direct_Pickup__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Grade__c</picklist>
+        <values>
+            <fullName>A</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Incremental_Clause__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Industry</picklist>
+        <values>
+            <fullName>Agriculture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apparel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biotechnology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chemicals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Construction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consulting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electronics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entertainment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environmental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food %26 Beverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Healthcare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospitality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Machinery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manufacturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not For Profit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recreation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shipping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telecommunications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Utilities</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lead_Drop_Reason__c</picklist>
+        <values>
+            <fullName>Rate Mismatch</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Local_National__c</picklist>
+        <values>
+            <fullName>Local</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>National</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mentor__c</picklist>
+        <values>
+            <fullName>CMD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ED</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ownership</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subsidiary</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product_Sourcing__c</picklist>
+        <values>
+            <fullName>Import</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manufacturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outsourced Mfg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trading</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rate_Card_Applicable__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rating</picklist>
+        <values>
+            <fullName>Must Win</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Normal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Region__c</picklist>
+        <values>
+            <fullName>ANDHRA PRADESH - TELANGANA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BIHAR - JHARKHAND - ODISHA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CORPORATE OFFICE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DELHI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GUJARAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HARYANA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JK - HP - LADAKH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KARNATAKA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KERALAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MADHYA PRADESH - CHHATTISGARH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MAHARASHTRA - GOA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MUMBAI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NORTH EAST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUNJAB - CHANDIGARH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RAJASTHAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TAMILNADU - PUDUCHERRY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UTTAR PRADESH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UTTARAKHAND</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WEST BENGAL - SIKKIM</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Salutation__c</picklist>
+        <values>
+            <fullName>Dr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mrs%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ms%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prof%2E</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Service_line__c</picklist>
+        <values>
+            <fullName>Distribution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PROJECTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WAREHOUSE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WMS%2BDISTRIBUTION</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Source__c</picklist>
+        <values>
+            <fullName>Articles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Booking Associates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Branch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Campaign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cold Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Directory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google Leads</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Green Truck Associate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ICM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Service Providers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LinkedIn leads</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reference Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Safexperience Centre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Segment Analysis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confirmed Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INACTIVE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Passive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect Customer</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub__c</picklist>
+        <values>
+            <fullName>ARTIFICIAL JEWELLERY %2FACCESSORIES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AUTO ACCESSORIES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AUTO COMPONENTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AUTO TYRES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BANKS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BUILDING MATERIAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BULK DRUGS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CAMPUS 2 HOME</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHEMICALS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COMMODITY EXPRESS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E-COMMERCE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EASY 2 MOVE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ELECTRICAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EVENT MANAGEMENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FINANCIAL INSTITUTIONS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMCG-FOOD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMCG-NON FOOD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOOTWEAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HARDWARE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INDUSTRIAL EQUIPMENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INDUSTRY ASSOCIATIONS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INSURANCE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT INSTITUTES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LEATHER ACCESSORIES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MOBILE PHONES%2FACCESSORIES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OFFICE AUTOMATION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PACKAGING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PHARMACEUTICALS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PRINTING PRESS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUBLISHING HOUSES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>READYMADE GARMENTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RETAIL CHAIN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAFEHOME</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAINIK EXPRESS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAREES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SECURITY SYSTEMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SPORTS%2FTOYS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STATIONARY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TELECOM EQUIPMENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TOOLS AND SPARES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VET</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Transit_Insurance__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes with Excess Clause</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Analyst</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Competitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Integrator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Investor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Press</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reseller</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>CREDIT%2BRETAIL</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Vertical__c</picklist>
+        <values>
+            <fullName>ALLIANCE PARTNER MANAGEMENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AUTOMOTIVE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HI TECH</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>X3PL_Competition__c</picklist>
+        <values>
+            <fullName>BLUEDART</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DELHIVERY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DTDC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FUTURE LOGISTICS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GATI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LOCAL TRANSPORTER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MAHINDRA LOGISTICS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NITCO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OM LOGISTICS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OTHERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RAHUL CARGO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>V-TRANS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>V-XPRESS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VRL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XPRESSBEES</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

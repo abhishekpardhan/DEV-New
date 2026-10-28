@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <processMetadataValues>
+            <name>emailAlertSelection</name>
+            <value>
+                <stringValue>Send_email_to_Account_Finance</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_1_A1</name>
+        <label>Send Email to finance</label>
+        <locationX>100</locationX>
+        <locationY>200</locationY>
+        <actionName>Opportunity__c.Send_email_to_Account_Finance</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Opportunity__c.Send_email_to_Account_Finance</nameSegment>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>emailAlertSelection</name>
+            <value>
+                <stringValue>Send_Email_to_Account_Qrm</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_3_A1</name>
+        <label>Send Email To Qrm</label>
+        <locationX>300</locationX>
+        <locationY>200</locationY>
+        <actionName>Opportunity__c.Send_Email_to_Account_Qrm</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Opportunity__c.Send_Email_to_Account_Qrm</nameSegment>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>emailAlertSelection</name>
+            <value>
+                <stringValue>Send_Email_To_Retail_Manager</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_5_A1</name>
+        <label>Send email to retail manager</label>
+        <locationX>500</locationX>
+        <locationY>200</locationY>
+        <actionName>Opportunity__c.Send_Email_To_Retail_Manager</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Opportunity__c.Send_Email_To_Retail_Manager</nameSegment>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>emailAlertSelection</name>
+            <value>
+                <stringValue>Send_Email_To_Account_PRC</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_7_A1</name>
+        <label>Send Email to PRC</label>
+        <locationX>700</locationX>
+        <locationY>200</locationY>
+        <actionName>Opportunity__c.Send_Email_To_Account_PRC</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Opportunity__c.Send_Email_To_Account_PRC</nameSegment>
+    </actionCalls>
+    <apiVersion>49.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision</name>
+        <label>myDecision</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision2</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_1</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_1_A1</targetReference>
+            </connector>
+            <label>Check Finance</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision2</name>
+        <label>myDecision2</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision4</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_3</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_3</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_3_A1</targetReference>
+            </connector>
+            <label>Check Qrm</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>2.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision4</name>
+        <label>myDecision4</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision6</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_5</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_5</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_5_A1</targetReference>
+            </connector>
+            <label>Check Retail</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>3.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision6</name>
+        <label>myDecision6</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_7</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_7</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_7_A1</targetReference>
+            </connector>
+            <label>Check PRC</label>
+        </rules>
+    </decisions>
+    <description>When opportunity is closed Won the Account Link will be send to Finance and Nam3</description>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>AND(
+OR(ISNEW(),ISCHANGED([Opportunity__c].Stage__c)),
+ISPICKVAL([Opportunity__c].Stage__c , &apos;Closed Won&apos;),
+OR
+(ISPICKVAL([Opportunity__c].Customer_Type__c , &apos;New Opportunity&apos;),
+ISPICKVAL([Opportunity__c].Customer_Type__c , &apos;Existing-New&apos;)),
+!ISPICKVAL([Opportunity__c].Type__c ,&apos;Retail&apos;),
+!ISPICKVAL([Opportunity__c].Type__c ,&apos;PRC&apos;))</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_1</name>
+        <dataType>Boolean</dataType>
+        <expression>AND(
+OR(ISNEW(),ISCHANGED({!myVariable_current.Stage__c})),
+ISPICKVAL({!myVariable_current.Stage__c} , &apos;Closed Won&apos;),
+OR
+(ISPICKVAL({!myVariable_current.Customer_Type__c} , &apos;New Opportunity&apos;),
+ISPICKVAL({!myVariable_current.Customer_Type__c} , &apos;Existing-New&apos;)),
+!ISPICKVAL({!myVariable_current.Type__c} ,&apos;Retail&apos;),
+!ISPICKVAL({!myVariable_current.Type__c} ,&apos;PRC&apos;))</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>AND(!ISBLANK([Opportunity__c].Qrm_Email__c) ,OR(ISNEW(),ISCHANGED([Opportunity__c].Stage__c)) ,ISPICKVAL([Opportunity__c].Stage__c , &apos;Closed Won&apos;),ISPICKVAL([Opportunity__c].Customer_Type__c , &apos;Renewal Opportunity&apos;))</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_3</name>
+        <dataType>Boolean</dataType>
+        <expression>AND(!ISBLANK({!myVariable_current.Qrm_Email__c}) ,OR(ISNEW(),ISCHANGED({!myVariable_current.Stage__c})) ,ISPICKVAL({!myVariable_current.Stage__c} , &apos;Closed Won&apos;),ISPICKVAL({!myVariable_current.Customer_Type__c} , &apos;Renewal Opportunity&apos;))</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>AND(
+OR(ISNEW(),ISCHANGED([Opportunity__c].Stage__c)),
+ISPICKVAL([Opportunity__c].Stage__c , &apos;Closed Won&apos;),
+OR
+(ISPICKVAL([Opportunity__c].Customer_Type__c , &apos;New Opportunity&apos;),
+ISPICKVAL([Opportunity__c].Customer_Type__c , &apos;Existing-New&apos;)),
+ISPICKVAL([Opportunity__c].Type__c ,&apos;Retail&apos;))</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_5</name>
+        <dataType>Boolean</dataType>
+        <expression>AND(
+OR(ISNEW(),ISCHANGED({!myVariable_current.Stage__c})),
+ISPICKVAL({!myVariable_current.Stage__c} , &apos;Closed Won&apos;),
+OR
+(ISPICKVAL({!myVariable_current.Customer_Type__c} , &apos;New Opportunity&apos;),
+ISPICKVAL({!myVariable_current.Customer_Type__c} , &apos;Existing-New&apos;)),
+ISPICKVAL({!myVariable_current.Type__c} ,&apos;Retail&apos;))</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>AND(
+OR(ISNEW(),ISCHANGED([Opportunity__c].Stage__c)),
+ISPICKVAL([Opportunity__c].Stage__c , &apos;Closed Won&apos;),
+OR
+(ISPICKVAL([Opportunity__c].Customer_Type__c , &apos;New Opportunity&apos;),
+ISPICKVAL([Opportunity__c].Customer_Type__c , &apos;Existing-New&apos;)),
+ISPICKVAL([Opportunity__c].Type__c ,&apos;PRC&apos;))</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_7</name>
+        <dataType>Boolean</dataType>
+        <expression>AND(
+OR(ISNEW(),ISCHANGED({!myVariable_current.Stage__c})),
+ISPICKVAL({!myVariable_current.Stage__c} , &apos;Closed Won&apos;),
+OR
+(ISPICKVAL({!myVariable_current.Customer_Type__c} , &apos;New Opportunity&apos;),
+ISPICKVAL({!myVariable_current.Customer_Type__c} , &apos;Existing-New&apos;)),
+ISPICKVAL({!myVariable_current.Type__c} ,&apos;PRC&apos;))</expression>
+    </formulas>
+    <interviewLabel>Send_Account_Link_To_Finance_Retail_And_Qrm-17_InterviewLabel</interviewLabel>
+    <label>Send Account Link To Finance/Retail And NAm3 Updated</label>
+    <processMetadataValues>
+        <name>ObjectType</name>
+        <value>
+            <stringValue>Opportunity__c</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>ObjectVariable</name>
+        <value>
+            <elementReference>myVariable_current</elementReference>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OldObjectVariable</name>
+        <value>
+            <elementReference>myVariable_old</elementReference>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>TriggerType</name>
+        <value>
+            <stringValue>onAllChanges</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Workflow</processType>
+    <startElementReference>myDecision</startElementReference>
+    <status>Obsolete</status>
+    <variables>
+        <name>myVariable_current</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Opportunity__c</objectType>
+    </variables>
+    <variables>
+        <name>myVariable_old</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Opportunity__c</objectType>
+    </variables>
+</Flow>

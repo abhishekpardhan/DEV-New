@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Onboarding_Task_Completion_Fields</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISPICKVAL(Status, &quot;Completed&quot;),
+    $RecordType.Name == &apos;On Boarding&apos;,
+  AND(
+    NOT(
+      $Profile.Name == &apos;Corporate salesforce team&apos;),
+      NOT($Profile.Name == &apos;Read Only&apos;),
+      NOT($Profile.Name == &apos;Onboarding Team&apos;),
+      NOT($Profile.Name == &apos;System Administrator&apos;)  
+    
+  ),
+    OR(
+        ISBLANK(Visited_With__c),
+        ISBLANK(Dispatch_Consignee_type__c),
+        ISBLANK(TEXT(Meeting_type__c)),
+        ISBLANK(TEXT(Is_weight_printed_on_invoice__c)),
+        ISBLANK(Expected_Business__c),
+        ISBLANK(TEXT(Is_FTL_movement_there__c)),
+        ISBLANK(Expected_WV__c),
+        ISPICKVAL(Required_daily_MIS__c, &quot;&quot;)
+    )
+)</errorConditionFormula>
+    <errorMessage>To complete this On Boarding task, please fill all required fields:
+1. Visited With
+2. Dispatch/Consignee Type
+3. Meeting Type
+4. Is Weight Printed on Invoice?
+5. Expected Business
+6. Is FTL Movement There?
+7. Expected WV
+8.Required daily BIR</errorMessage>
+</ValidationRule>

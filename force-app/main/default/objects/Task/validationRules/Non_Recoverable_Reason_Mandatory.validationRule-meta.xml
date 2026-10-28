@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Non_Recoverable_Reason_Mandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(OR(ISPICKVAL(Payment_Remaining__c , &apos;Non-Recoverable&apos;),ISPICKVAL(Payment_Remaining__c , &apos;Partly Recoverable / Non Recoverable&apos;)), ISPICKVAL(non_recoverable_reason__c, &apos;&apos;)
+)</errorConditionFormula>
+    <errorDisplayField>non_recoverable_reason__c</errorDisplayField>
+    <errorMessage>Please Fill Non Recoverable Reason.</errorMessage>
+</ValidationRule>

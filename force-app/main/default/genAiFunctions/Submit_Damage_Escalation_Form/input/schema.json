@@ -1,0 +1,14 @@
+{
+  "required" : [ "formData" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "formData" : {
+      "title" : "Damage Escalation Form",
+      "description" : "Form where the customer enters waybill, mobile, email and uploads proof of damage.",
+      "lightning:type" : "c__safexpressDamageEscalationForm",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

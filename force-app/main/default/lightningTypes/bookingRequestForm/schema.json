@@ -1,0 +1,5 @@
+{
+  "description" : "Details the customer enters to raise a booking or pickup request",
+  "lightning:type" : "@apexClassType/c__BookingRequestFormAction$BookingForm",
+  "title" : "bookingRequestForm"
+}

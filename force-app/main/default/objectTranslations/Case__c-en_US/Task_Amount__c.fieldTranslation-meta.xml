@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Fill the amount of Credit Note/ Claim to be given to customer --></help>
+    <label><!-- Credit Note / Claim  Amount --></label>
+    <name>Task_Amount__c</name>
+</CustomFieldTranslation>

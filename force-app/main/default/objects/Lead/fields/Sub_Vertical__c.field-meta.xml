@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Vertical__c</fullName>
+    <label>Sub Vertical</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Vertical__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Sub_Vertical</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>HEALTH</controllingFieldValue>
+            <valueName>PHARMACEUTICALS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HEALTH</controllingFieldValue>
+            <valueName>BULK DRUGS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HEALTH</controllingFieldValue>
+            <valueName>AYURVEDIC MEDICINE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HEALTH</controllingFieldValue>
+            <valueName>MEDICAL EQUIPMENTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HEALTH</controllingFieldValue>
+            <valueName>SCIENTIFIC EQUIPMENTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HEALTH</controllingFieldValue>
+            <valueName>SURGICAL GOODS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ALLIANCE PARTNER MANAGEMENT</controllingFieldValue>
+            <valueName>COURIER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ALLIANCE PARTNER MANAGEMENT</controllingFieldValue>
+            <valueName>FREIGHT FORWARDING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ALLIANCE PARTNER MANAGEMENT</controllingFieldValue>
+            <valueName>LOGISTICS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ALLIANCE PARTNER MANAGEMENT</controllingFieldValue>
+            <valueName>WAREHOUSING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APPARELS</controllingFieldValue>
+            <valueName>FABRIC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APPARELS</controllingFieldValue>
+            <valueName>READYMADE GARMENTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APPARELS</controllingFieldValue>
+            <valueName>FOOTWEAR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APPARELS</controllingFieldValue>
+            <valueName>ARTIFICIAL JEWELLERY /ACCESSORIES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APPARELS</controllingFieldValue>
+            <valueName>SAREES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APPARELS</controllingFieldValue>
+            <valueName>LEATHER ACCESSORIES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APPARELS</controllingFieldValue>
+            <valueName>BLANKETS/QUILT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APPARELS</controllingFieldValue>
+            <valueName>CHIKAN CLOTHING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APPARELS</controllingFieldValue>
+            <valueName>HOSIERY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APPARELS</controllingFieldValue>
+            <valueName>KHADI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APPARELS</controllingFieldValue>
+            <valueName>KNITWEAR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APPARELS</controllingFieldValue>
+            <valueName>WOOLLEN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APPARELS</controllingFieldValue>
+            <valueName>YARN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HI TECH</controllingFieldValue>
+            <valueName>IT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HI TECH</controllingFieldValue>
+            <valueName>TELECOM EQUIPMENT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HI TECH</controllingFieldValue>
+            <valueName>MOBILE PHONES/ACCESSORIES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HI TECH</controllingFieldValue>
+            <valueName>OFFICE AUTOMATION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HI TECH</controllingFieldValue>
+            <valueName>SECURITY SYSTEMS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INSTITUTION</controllingFieldValue>
+            <valueName>BANKS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INSTITUTION</controllingFieldValue>
+            <valueName>FINANCIAL INSTITUTIONS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INSTITUTION</controllingFieldValue>
+            <valueName>INSURANCE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INSTITUTION</controllingFieldValue>
+            <valueName>IT INSTITUTES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INSTITUTION</controllingFieldValue>
+            <valueName>EVENT MANAGEMENT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INSTITUTION</controllingFieldValue>
+            <valueName>INDUSTRY ASSOCIATIONS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AUTOMOTIVE</controllingFieldValue>
+            <valueName>AUTO COMPONENTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AUTOMOTIVE</controllingFieldValue>
+            <valueName>AUTO TYRES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AUTOMOTIVE</controllingFieldValue>
+            <valueName>AUTO ACCESSORIES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AUTOMOTIVE</controllingFieldValue>
+            <valueName>AUTO BATTERY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AUTOMOTIVE</controllingFieldValue>
+            <valueName>AUTO PAINTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AUTOMOTIVE</controllingFieldValue>
+            <valueName>AUTO SPARE PARTS(FOR DISTRIBUTION)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIBRAND</controllingFieldValue>
+            <valueName>RETAIL CHAIN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTIBRAND</controllingFieldValue>
+            <valueName>E-COMMERCE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BOOKS</controllingFieldValue>
+            <valueName>PUBLISHING HOUSES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BOOKS</controllingFieldValue>
+            <valueName>PRINTING PRESS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BOOKS</controllingFieldValue>
+            <valueName>COACHING CENTRES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BOOKS</controllingFieldValue>
+            <valueName>COLLEGE/UNIVERSITY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BOOKS</controllingFieldValue>
+            <valueName>PRE-SCHOOLS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BOOKS</controllingFieldValue>
+            <valueName>PROMOTIONAL MATERIAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINEERING</controllingFieldValue>
+            <valueName>INDUSTRIAL EQUIPMENT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINEERING</controllingFieldValue>
+            <valueName>TOOLS AND SPARES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINEERING</controllingFieldValue>
+            <valueName>CHEMICALS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINEERING</controllingFieldValue>
+            <valueName>ELECTRICAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINEERING</controllingFieldValue>
+            <valueName>HARDWARE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINEERING</controllingFieldValue>
+            <valueName>BUILDING MATERIAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINEERING</controllingFieldValue>
+            <valueName>PACKAGING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINEERING</controllingFieldValue>
+            <valueName>ARMS n AMMUNITIONS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINEERING</controllingFieldValue>
+            <valueName>GENSET</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINEERING</controllingFieldValue>
+            <valueName>PUMPS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FMCG</controllingFieldValue>
+            <valueName>STATIONARY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FMCG</controllingFieldValue>
+            <valueName>FMCG-FOOD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FMCG</controllingFieldValue>
+            <valueName>FMCG-NON FOOD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FMCG</controllingFieldValue>
+            <valueName>SPORTS/TOYS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FMCG</controllingFieldValue>
+            <valueName>AGARBATTI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FMCG</controllingFieldValue>
+            <valueName>CONSUMER ELECTRONICS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FMCG</controllingFieldValue>
+            <valueName>COSMETICS PRODUCTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FMCG</controllingFieldValue>
+            <valueName>GIFT ITEMS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FMCG</controllingFieldValue>
+            <valueName>HOME APPLIANCES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FMCG</controllingFieldValue>
+            <valueName>HOME DECOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FMCG</controllingFieldValue>
+            <valueName>PERFUMERY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FMCG</controllingFieldValue>
+            <valueName>WHITE GOODS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RETAILSPLSRV</controllingFieldValue>
+            <valueName>CAMPUS 2 HOME</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RETAILSPLSRV</controllingFieldValue>
+            <valueName>SAINIK EXPRESS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RETAILSPLSRV</controllingFieldValue>
+            <valueName>SAFEHOME</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RETAILSPLSRV</controllingFieldValue>
+            <valueName>EASY 2 MOVE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RETAILSPLSRV</controllingFieldValue>
+            <valueName>COMMODITY EXPRESS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RETAILSPLSRV</controllingFieldValue>
+            <valueName>SAFE RETURNS (Exhibition)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RETAILSPLSRV</controllingFieldValue>
+            <valueName>SAFE RETURNS(Retails Stores)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HANDICRAFTS</controllingFieldValue>
+            <valueName>HANDLOOM/ HANDICRAFTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HANDICRAFTS</controllingFieldValue>
+            <valueName>JUTE PRODUCTS</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

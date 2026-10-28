@@ -1,0 +1,35 @@
+{
+  "required" : [ "waybillNumber" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "contactPhone" : {
+      "title" : "Contact Phone",
+      "description" : "Contact Phone ",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "messagingSessionId" : {
+      "title" : "Messaging Session Id",
+      "description" : "Current Messaging Session id",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "urgentDeliveryRequested" : {
+      "title" : "Urgent Delivery Requested",
+      "description" : "The user has requested the the urgent delivery for the shipment",
+      "lightning:type" : "lightning__booleanType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "waybillNumber" : {
+      "title" : "Waybill Number",
+      "description" : "Waybill number as the input given by customer",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

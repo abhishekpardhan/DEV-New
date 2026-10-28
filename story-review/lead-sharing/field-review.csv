@@ -1,0 +1,5 @@
+"Field","ExistsLocally","Type","ValueSet","Source","Status"
+"Lead.Region__c","True","Picklist","Region","C:\Users\80629\Downloads\SF2\DEV@New\force-app\main\default/objects/Lead/fields/Region__c.field-meta.xml","VERIFIED locally: approved active values"
+"Lead.Vertical__c","True","Picklist","Vertical_Global","C:\Users\80629\Downloads\SF2\DEV@New\force-app\main\default/objects/Lead/fields/Vertical__c.field-meta.xml","VERIFIED locally; inactive legacy criteria explicitly approved, picklists unchanged"
+"Lead.Sub_Vertical__c","True","Picklist","Sub_Vertical","C:\Users\80629\Downloads\SF2\DEV@New\force-app\main\default/objects/Lead/fields/Sub_Vertical__c.field-meta.xml","VERIFIED locally; inactive legacy criteria explicitly approved, picklists unchanged"
+"Lead.LeadSource","True","Picklist","LeadSource (StandardValueSet)","C:\Users\80629\Downloads\SF2\DEV@New\force-app\main\default/objects/Lead/fields/LeadSource.field-meta.xml","VERIFIED locally: approved active values"

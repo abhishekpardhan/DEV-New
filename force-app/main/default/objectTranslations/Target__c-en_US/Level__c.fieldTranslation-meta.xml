@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Level --></label>
+    <name>Level__c</name>
+    <picklistValues>
+        <masterLabel>Area Level</masterLabel>
+        <translation><!-- Area Level --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BDM Level</masterLabel>
+        <translation><!-- BDM Level --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Corporate Level</masterLabel>
+        <translation><!-- Corporate Level --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Region Level</masterLabel>
+        <translation><!-- Region Level --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Opportunity Contact</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Opportunity Contacts</value>
+    </caseValues>
+    <layouts>
+        <layout>Opportunity Contact Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- The contact must be associated with the account on the opportunity --></errorMessage>
+        <name>Same_contact_on_OppCon_and_opp_acc</name>
+    </validationRules>
+</CustomObjectTranslation>

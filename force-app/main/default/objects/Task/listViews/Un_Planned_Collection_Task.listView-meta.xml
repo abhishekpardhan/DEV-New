@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Un_Planned_Collection_Task</fullName>
+    <columns>SUBJECT</columns>
+    <columns>WHAT_NAME</columns>
+    <columns>Account_Name__c</columns>
+    <columns>Invoice_date__c</columns>
+    <columns>STATUS</columns>
+    <columns>Outstanding_Amount__c</columns>
+    <columns>Remaining_Payment_Tentative_Date__c</columns>
+    <columns>Payment_By__c</columns>
+    <columns>Remarks__c</columns>
+    <columns>Reason__c</columns>
+    <columns>DUE_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>PRIORITY</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>IS_CLOSED</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Task.Collection</value>
+    </filters>
+    <filters>
+        <field>Remaining_Payment_Tentative_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>STATUS</field>
+        <operation>equals</operation>
+        <value>Open,In Progress,Reopen</value>
+    </filters>
+    <label>Un-Planned Collection Task</label>
+</ListView>

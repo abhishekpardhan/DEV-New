@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Target</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Targets</value>
+    </caseValues>
+    <layouts>
+        <layout>Area/BDM Layout</layout>
+        <sections>
+            <label><!-- CSC Target --></label>
+            <section>CSC Target</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- New Sales Target --></label>
+            <section>New Sales Target</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Corporate Layout</layout>
+        <sections>
+            <label><!-- CSC Target --></label>
+            <section>CSC Target</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- New Sales Target --></label>
+            <section>New Sales Target</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Region Layout</layout>
+        <sections>
+            <label><!-- CSC Target --></label>
+            <section>CSC Target</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- New Sales Target --></label>
+            <section>New Sales Target</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Target Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Area/BDM --></label>
+        <name>Area_BDM</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Corporate --></label>
+        <name>Corporate</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Region --></label>
+        <name>Region</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- You are not able to edit this record.For further Information please ask your administrator. --></errorMessage>
+        <name>Area_manager_cant_change_the_record</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can not create target for Area Level and BDM Level manually. --></errorMessage>
+        <name>Auto_Target_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select Business Type. --></errorMessage>
+        <name>Business_Type_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill Collection. --></errorMessage>
+        <name>CSC_Collection_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill Delivery Sales. --></errorMessage>
+        <name>CSC_Delivery_Sales_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill Local Sales. --></errorMessage>
+        <name>CSC_Local_Sales_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill National Sales. --></errorMessage>
+        <name>CSC_National_Sales_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill Local Sales, National Sales, Delivery Sales and Collection. --></errorMessage>
+        <name>CSC_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill future Date. --></errorMessage>
+        <name>From_Date_should_be_future_date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill Amount. --></errorMessage>
+        <name>New_Sales_Amount_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill No of Contract. --></errorMessage>
+        <name>New_Sales_No_of_Contract_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill No of Contract, Yield and amount. --></errorMessage>
+        <name>New_Sales_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill Yield. --></errorMessage>
+        <name>New_Sales_Yield_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select Region. --></errorMessage>
+        <name>Region_Level_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You are not able to edit this record.For further Information please ask your administrator. --></errorMessage>
+        <name>Regional_manager_cant_change_the_record</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- you can&apos;t edit this page as 10 days has passed from creation. --></errorMessage>
+        <name>Reord_will_edit_10_days_from_creation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- To Date should be after From Date. --></errorMessage>
+        <name>To_date_Should_be_after_from_date</name>
+    </validationRules>
+</CustomObjectTranslation>

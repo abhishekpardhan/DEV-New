@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Business Type --></label>
+    <name>Business_Type__c</name>
+    <picklistValues>
+        <masterLabel>Credit-Outbound</masterLabel>
+        <translation><!-- Credit-Outbound --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RETAIL-NON PRC</masterLabel>
+        <translation><!-- RETAIL-NON PRC --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

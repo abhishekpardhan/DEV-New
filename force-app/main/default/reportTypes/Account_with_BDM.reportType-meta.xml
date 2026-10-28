@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Account_Team__c</baseObject>
+    <category>accounts</category>
+    <deployed>true</deployed>
+    <description>Account with BDM</description>
+    <label>Account with BDM</label>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account</displayNameOverride>
+            <field>Account__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>is_CurrentUser_AM__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>is_CurrentUser_RM__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Name</displayNameOverride>
+            <field>Account_Name__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Owner Id</displayNameOverride>
+            <field>Account_Owner_Id__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Team ID</displayNameOverride>
+            <field>Id</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Team LastModi Date</displayNameOverride>
+            <field>Account_Team_LastModi_Date__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Account Team Name</displayNameOverride>
+            <field>Name</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>BDM</displayNameOverride>
+            <field>BDM__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>BDM (Propel-I)</displayNameOverride>
+            <field>BDMPropelI__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Billing By Id</displayNameOverride>
+            <field>Billing_By_Id__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CCD</displayNameOverride>
+            <field>National1__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Collection</displayNameOverride>
+            <field>Collection__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Composite key</displayNameOverride>
+            <field>Composite_key__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created By</displayNameOverride>
+            <field>CreatedBy</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created Date</displayNameOverride>
+            <field>CreatedDate</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created Date</displayNameOverride>
+            <field>Created_Date__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CRS</displayNameOverride>
+            <field>CRS__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Currency</displayNameOverride>
+            <field>CurrencyIsoCode</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Is PropelI</displayNameOverride>
+            <field>Is_PropelI__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Is Shared</displayNameOverride>
+            <field>Is_Shared__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified By</displayNameOverride>
+            <field>LastModifiedBy</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified Date</displayNameOverride>
+            <field>LastModifiedDate</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Local NAM</displayNameOverride>
+            <field>National2__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>MSA</displayNameOverride>
+            <field>MSA__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>MSA Id</displayNameOverride>
+            <field>MSA_Id__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>NSM</displayNameOverride>
+            <field>NSM__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Parent Account Id</displayNameOverride>
+            <field>Parent_Account_Id__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Parent Parent Id</displayNameOverride>
+            <field>Parent_Parent_Id__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>PropelI BDM Mapping</displayNameOverride>
+            <field>PropelI_BDM_Mapping__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>PropelI Branch Id</displayNameOverride>
+            <field>PropelI_Branch_Id__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>PropelI Composite Key</displayNameOverride>
+            <field>PropelI_Composite_Key__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>QRM</displayNameOverride>
+            <field>National3__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Rate Card Id</displayNameOverride>
+            <field>Rate_Card_Id__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Record Type</displayNameOverride>
+            <field>RecordType</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Relationship</displayNameOverride>
+            <field>Relationship__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Revenue Mgmt</displayNameOverride>
+            <field>National4__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Running User Collection Flag</displayNameOverride>
+            <field>Running_User_Collection_Flag__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SFX</displayNameOverride>
+            <field>SFX__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SFX Id</displayNameOverride>
+            <field>SFX_Id__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Shared Account Id</displayNameOverride>
+            <field>Shared_Account_Id__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Submission</displayNameOverride>
+            <field>Submission__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Test</displayNameOverride>
+            <field>BDM_Propel_I__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Team : Account : Account Name</displayNameOverride>
+            <field>Account__c.Name</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Team : Account : Account Name</displayNameOverride>
+            <field>Account__c.Account_Name__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Team : Account : Parent Account</displayNameOverride>
+            <field>Account__c.Parent</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Team : Account : Parent Account : Account Name</displayNameOverride>
+            <field>Account__c.Parent.Name</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Team : Account : Parent Account : Account Name</displayNameOverride>
+            <field>Account__c.Parent.Account_Name__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Team : Account : Parent Account : Parent Account</displayNameOverride>
+            <field>Account__c.Parent.Parent</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Team : Account : Parent Account : Parent Account : Account Name</displayNameOverride>
+            <field>Account__c.Parent.Parent.Name</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Team : Account : Parent Account : Parent Account : Account Name</displayNameOverride>
+            <field>Account__c.Parent.Parent.Account_Name__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Team : Account : Parent Account : Parent Account : Parent Account</displayNameOverride>
+            <field>Account__c.Parent.Parent.Parent</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Team : Account : Parent Account : Parent Account : Parent Account : Account Name</displayNameOverride>
+            <field>Account__c.Parent.Parent.Parent.Name</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Team : Account : Parent Account : Parent Account : Parent Account : Account Name</displayNameOverride>
+            <field>Account__c.Parent.Parent.Parent.Account_Name__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Team : PropelI BDM Mapping : Booking Branch</displayNameOverride>
+            <field>PropelI_BDM_Mapping__c.Booking_Branch__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Team : PropelI BDM Mapping : Billing Branch</displayNameOverride>
+            <field>PropelI_BDM_Mapping__c.Billing_Branch__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Team : PropelI BDM Mapping : PropelI BDM</displayNameOverride>
+            <field>PropelI_BDM_Mapping__c.PropelI_BDM__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Team : PropelI BDM Mapping : PropelI BDM : Full Name</displayNameOverride>
+            <field>PropelI_BDM_Mapping__c.PropelI_BDM__c.Name</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Team : PropelI BDM Mapping : Submission</displayNameOverride>
+            <field>PropelI_BDM_Mapping__c.Submission__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Team : PropelI BDM Mapping : Collection</displayNameOverride>
+            <field>PropelI_BDM_Mapping__c.Collection__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Team : PropelI BDM Mapping : Collection Branch</displayNameOverride>
+            <field>PropelI_BDM_Mapping__c.Collection_Branch__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Team : PropelI BDM Mapping : Submission Branch</displayNameOverride>
+            <field>PropelI_BDM_Mapping__c.Submission_Branch__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Team : Account : Status</displayNameOverride>
+            <field>Account__c.Status__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Team : Account : Parent Account : Parent Account : Status</displayNameOverride>
+            <field>Account__c.Parent.Parent.Status__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Team : Account : SFX Code</displayNameOverride>
+            <field>Account__c.SFX_Code__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Team : Account : Parent Account : Parent Account : SFX Code</displayNameOverride>
+            <field>Account__c.Parent.Parent.SFX_Code__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>MSA</displayNameOverride>
+            <field>Account__c.MSA__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Team : Account : Billing Level</displayNameOverride>
+            <field>Account__c.Billing_Level__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Team : PropelI BDM Mapping : PropelI BDM Mapping ID</displayNameOverride>
+            <field>PropelI_BDM_Mapping__c.Id</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Is_current_user_BDM__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Customer_Category__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>SFX_Code__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>DELIVERY_HOLD__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>BDM_NAME__c</field>
+            <table>Account_Team__c</table>
+        </columns>
+        <masterLabel>Account Teams</masterLabel>
+    </sections>
+</ReportType>

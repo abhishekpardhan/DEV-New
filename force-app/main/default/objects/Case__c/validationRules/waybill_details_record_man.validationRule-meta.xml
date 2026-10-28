@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>waybill_details_record_man</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(NOT(ISNEW()) ,OR(RecordType.DeveloperName = &apos;Credit_Debit_Note&apos;,RecordType.DeveloperName = &apos;Claim_Issues&apos;), Total_Waybill_No__c = 0, LastModifiedDate &lt;&gt; CreatedDate)</errorConditionFormula>
+    <errorMessage>Please create Waybill Details.</errorMessage>
+</ValidationRule>

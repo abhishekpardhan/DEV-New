@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Time_Spent_in_Journey__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    OR(
+        ISBLANK(CheckIn_Date__c),
+        ISBLANK(CheckOut_Date__c)
+    ),
+    NULL,
+
+    /* Total minutes (never below 0) */
+    IF(
+        MAX(0, FLOOR((CheckOut_Date__c - CheckIn_Date__c) * 1440)) &lt; 60,
+
+        /* Minutes only → 00m / 05m / 18m */
+        IF(
+            MAX(0, FLOOR((CheckOut_Date__c - CheckIn_Date__c) * 1440)) &lt; 10,
+            &quot;0&quot; &amp;
+            TEXT(MAX(0, FLOOR((CheckOut_Date__c - CheckIn_Date__c) * 1440))) &amp; &quot;m&quot;,
+            TEXT(MAX(0, FLOOR((CheckOut_Date__c - CheckIn_Date__c) * 1440))) &amp; &quot;m&quot;
+        ),
+
+        /* Hours + Minutes */
+        IF(
+            FLOOR(MAX(0, FLOOR((CheckOut_Date__c - CheckIn_Date__c) * 1440)) / 60) &lt; 10,
+            &quot;0&quot; &amp;
+            TEXT(FLOOR(MAX(0, FLOOR((CheckOut_Date__c - CheckIn_Date__c) * 1440)) / 60)),
+            TEXT(FLOOR(MAX(0, FLOOR((CheckOut_Date__c - CheckIn_Date__c) * 1440)) / 60))
+        ) &amp; &quot;h &quot; &amp;
+
+        IF(
+            MOD(MAX(0, FLOOR((CheckOut_Date__c - CheckIn_Date__c) * 1440)), 60) &lt; 10,
+            &quot;0&quot; &amp;
+            TEXT(MOD(MAX(0, FLOOR((CheckOut_Date__c - CheckIn_Date__c) * 1440)), 60)),
+            TEXT(MOD(MAX(0, FLOOR((CheckOut_Date__c - CheckIn_Date__c) * 1440)), 60))
+        ) &amp; &quot;m&quot;
+    )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Time Spent in Journey</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

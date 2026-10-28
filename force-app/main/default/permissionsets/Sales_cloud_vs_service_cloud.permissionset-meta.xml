@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <applicationVisibilities>
+        <application>standard__LightningService</application>
+        <visible>true</visible>
+    </applicationVisibilities>
+    <description>User can user sales and service cloud together</description>
+    <hasActivationRequired>true</hasActivationRequired>
+    <label>Sales cloud vs service cloud</label>
+    <license>Salesforce</license>
+</PermissionSet>

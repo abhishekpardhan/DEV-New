@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Type__c</fullName>
+    <label>Sub Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Case_Type__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>3PL</fullName>
+                <default>false</default>
+                <label>3PL</label>
+            </value>
+            <value>
+                <fullName>3PL and Distribution</fullName>
+                <default>false</default>
+                <label>3PL and Distribution</label>
+            </value>
+            <value>
+                <fullName>Address Change</fullName>
+                <default>false</default>
+                <label>Address Change</label>
+            </value>
+            <value>
+                <fullName>Bike Express</fullName>
+                <default>false</default>
+                <label>Bike Express</label>
+            </value>
+            <value>
+                <fullName>Booking not done</fullName>
+                <default>false</default>
+                <label>Booking not done</label>
+            </value>
+            <value>
+                <fullName>Branch / Office / Staff</fullName>
+                <default>false</default>
+                <label>Branch / Office / Staff</label>
+            </value>
+            <value>
+                <fullName>Consignee Change</fullName>
+                <default>false</default>
+                <label>Consignee Change</label>
+            </value>
+            <value>
+                <fullName>Credit</fullName>
+                <default>false</default>
+                <label>Credit</label>
+            </value>
+            <value>
+                <fullName>CREDIT+RETAIL</fullName>
+                <default>false</default>
+                <label>CREDIT+RETAIL</label>
+            </value>
+            <value>
+                <fullName>Credit- Outbound</fullName>
+                <default>false</default>
+                <label>Credit- Outbound</label>
+            </value>
+            <value>
+                <fullName>Damage</fullName>
+                <default>false</default>
+                <label>Damage</label>
+            </value>
+            <value>
+                <fullName>Delay in delivery</fullName>
+                <default>false</default>
+                <label>Delay in delivery</label>
+            </value>
+            <value>
+                <fullName>Delivery not done</fullName>
+                <default>false</default>
+                <label>Delivery not done</label>
+            </value>
+            <value>
+                <fullName>Distribution</fullName>
+                <default>false</default>
+                <label>Distribution</label>
+            </value>
+            <value>
+                <fullName>DOD_DOC Cancellation</fullName>
+                <default>false</default>
+                <label>DOD_DOC Cancellation</label>
+            </value>
+            <value>
+                <fullName>FTL</fullName>
+                <default>false</default>
+                <label>FTL</label>
+            </value>
+            <value>
+                <fullName>GSTIN Change</fullName>
+                <default>false</default>
+                <label>GSTIN Change</label>
+            </value>
+            <value>
+                <fullName>Interchange</fullName>
+                <default>false</default>
+                <label>Interchange</label>
+            </value>
+            <value>
+                <fullName>MOP Change</fullName>
+                <default>false</default>
+                <label>MOP Change</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+            <value>
+                <fullName>Pilferred</fullName>
+                <default>false</default>
+                <label>Pilferred</label>
+            </value>
+            <value>
+                <fullName>Pincode Change</fullName>
+                <default>false</default>
+                <label>Pincode Change</label>
+            </value>
+            <value>
+                <fullName>POD Credit</fullName>
+                <default>false</default>
+                <label>POD Credit</label>
+            </value>
+            <value>
+                <fullName>POD Retail</fullName>
+                <default>false</default>
+                <label>POD Retail</label>
+            </value>
+            <value>
+                <fullName>Products &amp; Services</fullName>
+                <default>false</default>
+                <label>Products &amp; Services</label>
+            </value>
+            <value>
+                <fullName>Re-Booking</fullName>
+                <default>false</default>
+                <label>Re-Booking</label>
+            </value>
+            <value>
+                <fullName>Refund</fullName>
+                <default>false</default>
+                <label>Refund</label>
+            </value>
+            <value>
+                <fullName>Request for HUB Div</fullName>
+                <default>false</default>
+                <label>Request for HUB Div</label>
+            </value>
+            <value>
+                <fullName>Re-Routing</fullName>
+                <default>false</default>
+                <label>Re-Routing</label>
+            </value>
+            <value>
+                <fullName>Retail</fullName>
+                <default>false</default>
+                <label>Retail</label>
+            </value>
+            <value>
+                <fullName>Retail- C2H</fullName>
+                <default>false</default>
+                <label>Retail- C2H</label>
+            </value>
+            <value>
+                <fullName>Retail- E2M</fullName>
+                <default>false</default>
+                <label>Retail- E2M</label>
+            </value>
+            <value>
+                <fullName>Retail-Non-PRC</fullName>
+                <default>false</default>
+                <label>Retail-Non-PRC</label>
+            </value>
+            <value>
+                <fullName>Retail- PRC</fullName>
+                <default>false</default>
+                <label>Retail- PRC</label>
+            </value>
+            <value>
+                <fullName>Retail- Sanik Express</fullName>
+                <default>false</default>
+                <label>Retail- Sanik Express</label>
+            </value>
+            <value>
+                <fullName>Reverse Inbound- Credit</fullName>
+                <default>false</default>
+                <label>Reverse Inbound- Credit</label>
+            </value>
+            <value>
+                <fullName>Reverse Inbound- Retail-Non-PRC</fullName>
+                <default>false</default>
+                <label>Reverse Inbound- Retail-Non-PRC</label>
+            </value>
+            <value>
+                <fullName>Reverse Inbound- Retail-PRC</fullName>
+                <default>false</default>
+                <label>Reverse Inbound- Retail-PRC</label>
+            </value>
+            <value>
+                <fullName>Service Failure</fullName>
+                <default>false</default>
+                <label>Service Failure</label>
+            </value>
+            <value>
+                <fullName>Shipment On Hold</fullName>
+                <default>false</default>
+                <label>Shipment On Hold</label>
+            </value>
+            <value>
+                <fullName>Shipment Re-Booking</fullName>
+                <default>false</default>
+                <label>Shipment Re-Booking</label>
+            </value>
+            <value>
+                <fullName>Shipment Status</fullName>
+                <default>false</default>
+                <label>Shipment Status</label>
+            </value>
+            <value>
+                <fullName>Short / Part Shipment</fullName>
+                <default>false</default>
+                <label>Short / Part Shipment</label>
+            </value>
+            <value>
+                <fullName>Status</fullName>
+                <default>false</default>
+                <label>Status</label>
+            </value>
+            <value>
+                <fullName>Transportation+3PL</fullName>
+                <default>false</default>
+                <label>Transportation+3PL</label>
+            </value>
+            <value>
+                <fullName>Wrong Behaviours</fullName>
+                <default>false</default>
+                <label>Wrong Behaviours</label>
+            </value>
+            <value>
+                <fullName>Wrong Delivery</fullName>
+                <default>false</default>
+                <label>Wrong Delivery</label>
+            </value>
+            <value>
+                <fullName>Credit- Inbound</fullName>
+                <default>false</default>
+                <label>Credit- Inbound</label>
+            </value>
+            <value>
+                <fullName>Route vehicle</fullName>
+                <default>false</default>
+                <label>Route vehicle</label>
+            </value>
+            <value>
+                <fullName>Booking branch</fullName>
+                <default>false</default>
+                <label>Booking branch</label>
+            </value>
+            <value>
+                <fullName>Delivery branch</fullName>
+                <default>false</default>
+                <label>Delivery branch</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Freight Dispute</controllingFieldValue>
+            <valueName>Refund</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pickup Issue</controllingFieldValue>
+            <controllingFieldValue>Feedback</controllingFieldValue>
+            <controllingFieldValue>Waybill Enquiry</controllingFieldValue>
+            <controllingFieldValue>Service Issue</controllingFieldValue>
+            <controllingFieldValue>General Enquiry</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>Escalation</controllingFieldValue>
+            <valueName>Others</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Feedback</controllingFieldValue>
+            <valueName>Wrong Behaviours</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Waybill Enquiry</controllingFieldValue>
+            <valueName>Shipment Status</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Claim Enquiry</controllingFieldValue>
+            <valueName>Status</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business Enquiry (B2B)</controllingFieldValue>
+            <valueName>3PL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business Enquiry (B2B)</controllingFieldValue>
+            <valueName>Credit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business Enquiry (B2B)</controllingFieldValue>
+            <valueName>CREDIT+RETAIL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business Enquiry (B2B)</controllingFieldValue>
+            <valueName>FTL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business Enquiry (B2B)</controllingFieldValue>
+            <valueName>Retail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business Enquiry (B2B)</controllingFieldValue>
+            <valueName>Transportation+3PL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Associate Enquiry</controllingFieldValue>
+            <valueName>Route vehicle</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Associate Enquiry</controllingFieldValue>
+            <valueName>Booking branch</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Associate Enquiry</controllingFieldValue>
+            <valueName>Delivery branch</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Booking Request</controllingFieldValue>
+            <valueName>Bike Express</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Booking Request</controllingFieldValue>
+            <valueName>Credit- Outbound</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Booking Request</controllingFieldValue>
+            <valueName>Retail- C2H</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Booking Request</controllingFieldValue>
+            <valueName>Retail- E2M</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Booking Request</controllingFieldValue>
+            <valueName>Retail-Non-PRC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Booking Request</controllingFieldValue>
+            <valueName>Retail- PRC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Booking Request</controllingFieldValue>
+            <valueName>Retail- Sanik Express</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Booking Request</controllingFieldValue>
+            <valueName>Reverse Inbound- Credit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Booking Request</controllingFieldValue>
+            <valueName>Reverse Inbound- Retail-Non-PRC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Booking Request</controllingFieldValue>
+            <valueName>Reverse Inbound- Retail-PRC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Booking Request</controllingFieldValue>
+            <valueName>Credit- Inbound</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POD</controllingFieldValue>
+            <valueName>POD Credit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POD</controllingFieldValue>
+            <valueName>POD Retail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change Request</controllingFieldValue>
+            <valueName>Address Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change Request</controllingFieldValue>
+            <valueName>Consignee Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change Request</controllingFieldValue>
+            <valueName>DOD_DOC Cancellation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change Request</controllingFieldValue>
+            <valueName>GSTIN Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change Request</controllingFieldValue>
+            <valueName>MOP Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change Request</controllingFieldValue>
+            <valueName>Pincode Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change Request</controllingFieldValue>
+            <valueName>Re-Booking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change Request</controllingFieldValue>
+            <valueName>Request for HUB Div</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change Request</controllingFieldValue>
+            <valueName>Re-Routing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change Request</controllingFieldValue>
+            <valueName>Shipment On Hold</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change Request</controllingFieldValue>
+            <valueName>Shipment Re-Booking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service Issue</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Booking not done</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service Issue</controllingFieldValue>
+            <valueName>Damage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service Issue</controllingFieldValue>
+            <valueName>Delay in delivery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service Issue</controllingFieldValue>
+            <valueName>Delivery not done</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service Issue</controllingFieldValue>
+            <valueName>Interchange</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service Issue</controllingFieldValue>
+            <valueName>Pilferred</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service Issue</controllingFieldValue>
+            <valueName>Short / Part Shipment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service Issue</controllingFieldValue>
+            <valueName>Wrong Delivery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Enquiry</controllingFieldValue>
+            <valueName>Branch / Office / Staff</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Enquiry</controllingFieldValue>
+            <valueName>Products &amp; Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Escalation</controllingFieldValue>
+            <valueName>Service Failure</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

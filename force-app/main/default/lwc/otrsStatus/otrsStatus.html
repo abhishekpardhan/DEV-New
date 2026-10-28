@@ -1,0 +1,44 @@
+<template>
+    <lightning-quick-action-panel header={headerText}>
+        <div class="content">
+            <div
+                if:true={isSpinnerShow}
+                id="spinner-info-section"
+                class="slds-text-align_center slds-var-p-around_medium"
+            >
+                <lightning-spinner
+                    class="slds-split-view_container slds-p-top--large"
+                    variant="brand"
+                    alternative-text="Loading"
+                    size="small"
+                >
+                </lightning-spinner>
+
+                <div class="slds-p-top--small">
+                    Please wait, Checking Freshservice Status
+                </div>
+            </div>
+
+            <div if:true={isOtrsInfoShow}>
+                <c-otrs-display-info
+                    ticket-detail={ticketDetail}>
+                </c-otrs-display-info>
+
+                <c-otrs-articles
+                    record-id={recordId}
+                    articles={articles}
+                    otrs-ticket-number={otrsTicketNumber}>
+                </c-otrs-articles>
+            </div>
+        </div>
+
+        <div slot="footer">
+            <lightning-button
+                label="Close"
+                variant="brand"
+                onclick={closeModal}
+            >
+            </lightning-button>
+        </div>
+    </lightning-quick-action-panel>
+</template>

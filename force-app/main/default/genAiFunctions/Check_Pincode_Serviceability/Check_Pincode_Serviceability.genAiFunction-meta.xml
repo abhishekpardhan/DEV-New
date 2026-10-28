@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Checks whether the pincode shared by the customer is a valid 6-digit numeric pincode and whether service is available in it. Returns the pincode status and, for serviceable pincodes, the city, district and state.</description>
+    <developerName>Check_Pincode_Serviceability</developerName>
+    <invocationTarget>AgentforcePincodeCheck</invocationTarget>
+    <invocationTargetType>apex</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <localDeveloperName>Check_Pincode_Serviceability</localDeveloperName>
+    <masterLabel>Check Pincode Serviceability</masterLabel>
+    <progressIndicatorMessage>Loading...</progressIndicatorMessage>
+</GenAiFunction>

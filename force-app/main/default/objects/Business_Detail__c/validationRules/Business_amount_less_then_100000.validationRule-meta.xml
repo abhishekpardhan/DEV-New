@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_amount_less_then_100000</fullName>
+    <active>true</active>
+    <description>Potential 100000 and Expected business can not be less than 50000</description>
+    <errorConditionFormula>OR(
+AND(
+ISNUMBER(Potential_Business__c),
+VALUE(Potential_Business__c) &lt; 100000
+),
+AND(
+ISNUMBER(Expected_Business__c),
+VALUE(Expected_Business__c) &lt; 50000
+)
+)</errorConditionFormula>
+    <errorMessage>Potential 100000 and Expected business can not be less than 50000</errorMessage>
+</ValidationRule>

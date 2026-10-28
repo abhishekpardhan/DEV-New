@@ -1,0 +1,615 @@
+﻿[
+    {
+        "Name":  "SR_Lead_RGN_APT",
+        "Source":  "Story LLD supplied in request",
+        "SourceRule":  "",
+        "Group":  "SG_RGN_APT_RM",
+        "Access":  "Edit",
+        "Logic":  "1",
+        "Conditions":  [
+                           {
+                               "field":  "Region__c",
+                               "operation":  "equals",
+                               "value":  "ANDHRA PRADESH - TELANGANA"
+                           }
+                       ],
+        "Status":  "VERIFIED",
+        "IncludeAll":  "false"
+    },
+    {
+        "Name":  "SR_Lead_RGN_BJO",
+        "Source":  "Story LLD supplied in request",
+        "SourceRule":  "",
+        "Group":  "SG_RGN_BJO_RM",
+        "Access":  "Edit",
+        "Logic":  "1",
+        "Conditions":  [
+                           {
+                               "field":  "Region__c",
+                               "operation":  "equals",
+                               "value":  "BIHAR - JHARKHAND - ODISHA"
+                           }
+                       ],
+        "Status":  "VERIFIED",
+        "IncludeAll":  "false"
+    },
+    {
+        "Name":  "SR_Lead_RGN_DLI",
+        "Source":  "Story LLD supplied in request",
+        "SourceRule":  "",
+        "Group":  "SG_RGN_DLI_RM",
+        "Access":  "Edit",
+        "Logic":  "1",
+        "Conditions":  [
+                           {
+                               "field":  "Region__c",
+                               "operation":  "equals",
+                               "value":  "DELHI"
+                           }
+                       ],
+        "Status":  "VERIFIED",
+        "IncludeAll":  "false"
+    },
+    {
+        "Name":  "SR_Lead_RGN_GJT",
+        "Source":  "Story LLD supplied in request",
+        "SourceRule":  "",
+        "Group":  "SG_RGN_GJT_RM",
+        "Access":  "Edit",
+        "Logic":  "1",
+        "Conditions":  [
+                           {
+                               "field":  "Region__c",
+                               "operation":  "equals",
+                               "value":  "GUJARAT"
+                           }
+                       ],
+        "Status":  "VERIFIED",
+        "IncludeAll":  "false"
+    },
+    {
+        "Name":  "SR_Lead_RGN_HRN",
+        "Source":  "Story LLD supplied in request",
+        "SourceRule":  "",
+        "Group":  "SG_RGN_HRN_RM",
+        "Access":  "Edit",
+        "Logic":  "1",
+        "Conditions":  [
+                           {
+                               "field":  "Region__c",
+                               "operation":  "equals",
+                               "value":  "HARYANA"
+                           }
+                       ],
+        "Status":  "VERIFIED",
+        "IncludeAll":  "false"
+    },
+    {
+        "Name":  "SR_Lead_RGN_JKH",
+        "Source":  "Story LLD supplied in request",
+        "SourceRule":  "",
+        "Group":  "SG_RGN_JKH_RM",
+        "Access":  "Edit",
+        "Logic":  "1",
+        "Conditions":  [
+                           {
+                               "field":  "Region__c",
+                               "operation":  "equals",
+                               "value":  "JK - HP - LADAKH"
+                           }
+                       ],
+        "Status":  "VERIFIED",
+        "IncludeAll":  "false"
+    },
+    {
+        "Name":  "SR_Lead_RGN_KRL",
+        "Source":  "Story LLD supplied in request",
+        "SourceRule":  "",
+        "Group":  "SG_RGN_KRL_RM",
+        "Access":  "Edit",
+        "Logic":  "1",
+        "Conditions":  [
+                           {
+                               "field":  "Region__c",
+                               "operation":  "equals",
+                               "value":  "KERALAM"
+                           }
+                       ],
+        "Status":  "VERIFIED",
+        "IncludeAll":  "false"
+    },
+    {
+        "Name":  "SR_Lead_RGN_KTK",
+        "Source":  "Story LLD supplied in request",
+        "SourceRule":  "",
+        "Group":  "SG_RGN_KTK_RM",
+        "Access":  "Edit",
+        "Logic":  "1",
+        "Conditions":  [
+                           {
+                               "field":  "Region__c",
+                               "operation":  "equals",
+                               "value":  "KARNATAKA"
+                           }
+                       ],
+        "Status":  "VERIFIED",
+        "IncludeAll":  "false"
+    },
+    {
+        "Name":  "SR_Lead_RGN_MHG",
+        "Source":  "Story LLD supplied in request",
+        "SourceRule":  "",
+        "Group":  "SG_RGN_MHG_RM",
+        "Access":  "Edit",
+        "Logic":  "1",
+        "Conditions":  [
+                           {
+                               "field":  "Region__c",
+                               "operation":  "equals",
+                               "value":  "MAHARASHTRA - GOA"
+                           }
+                       ],
+        "Status":  "VERIFIED",
+        "IncludeAll":  "false"
+    },
+    {
+        "Name":  "SR_Lead_RGN_MPC",
+        "Source":  "Story LLD supplied in request",
+        "SourceRule":  "",
+        "Group":  "SG_RGN_MPC_RM",
+        "Access":  "Edit",
+        "Logic":  "1",
+        "Conditions":  [
+                           {
+                               "field":  "Region__c",
+                               "operation":  "equals",
+                               "value":  "MADHYA PRADESH - CHHATTISGARH"
+                           }
+                       ],
+        "Status":  "VERIFIED",
+        "IncludeAll":  "false"
+    },
+    {
+        "Name":  "SR_Lead_RGN_MUM",
+        "Source":  "Story LLD supplied in request",
+        "SourceRule":  "",
+        "Group":  "SG_RGN_MUM_RM",
+        "Access":  "Edit",
+        "Logic":  "1",
+        "Conditions":  [
+                           {
+                               "field":  "Region__c",
+                               "operation":  "equals",
+                               "value":  "MUMBAI"
+                           }
+                       ],
+        "Status":  "VERIFIED",
+        "IncludeAll":  "false"
+    },
+    {
+        "Name":  "SR_Lead_RGN_NRE",
+        "Source":  "Story LLD supplied in request",
+        "SourceRule":  "",
+        "Group":  "SG_RGN_NRE_RM",
+        "Access":  "Edit",
+        "Logic":  "1",
+        "Conditions":  [
+                           {
+                               "field":  "Region__c",
+                               "operation":  "equals",
+                               "value":  "NORTH EAST"
+                           }
+                       ],
+        "Status":  "VERIFIED",
+        "IncludeAll":  "false"
+    },
+    {
+        "Name":  "SR_Lead_RGN_PBC",
+        "Source":  "Story LLD supplied in request",
+        "SourceRule":  "",
+        "Group":  "SG_RGN_PBC_RM",
+        "Access":  "Edit",
+        "Logic":  "1",
+        "Conditions":  [
+                           {
+                               "field":  "Region__c",
+                               "operation":  "equals",
+                               "value":  "PUNJAB - CHANDIGARH"
+                           }
+                       ],
+        "Status":  "VERIFIED",
+        "IncludeAll":  "false"
+    },
+    {
+        "Name":  "SR_Lead_RGN_RJN",
+        "Source":  "Story LLD supplied in request",
+        "SourceRule":  "",
+        "Group":  "SG_RGN_RJN_RM",
+        "Access":  "Edit",
+        "Logic":  "1",
+        "Conditions":  [
+                           {
+                               "field":  "Region__c",
+                               "operation":  "equals",
+                               "value":  "RAJASTHAN"
+                           }
+                       ],
+        "Status":  "VERIFIED",
+        "IncludeAll":  "false"
+    },
+    {
+        "Name":  "SR_Lead_RGN_TNP",
+        "Source":  "Story LLD supplied in request",
+        "SourceRule":  "",
+        "Group":  "SG_RGN_TNP_RM",
+        "Access":  "Edit",
+        "Logic":  "1",
+        "Conditions":  [
+                           {
+                               "field":  "Region__c",
+                               "operation":  "equals",
+                               "value":  "TAMILNADU - PUDUCHERRY"
+                           }
+                       ],
+        "Status":  "VERIFIED",
+        "IncludeAll":  "false"
+    },
+    {
+        "Name":  "SR_Lead_RGN_UKH",
+        "Source":  "Story LLD supplied in request",
+        "SourceRule":  "",
+        "Group":  "SG_RGN_UKH_RM",
+        "Access":  "Edit",
+        "Logic":  "1",
+        "Conditions":  [
+                           {
+                               "field":  "Region__c",
+                               "operation":  "equals",
+                               "value":  "UTTARAKHAND"
+                           }
+                       ],
+        "Status":  "VERIFIED",
+        "IncludeAll":  "false"
+    },
+    {
+        "Name":  "SR_Lead_RGN_UPR",
+        "Source":  "Story LLD supplied in request",
+        "SourceRule":  "",
+        "Group":  "SG_RGN_UPR_RM",
+        "Access":  "Edit",
+        "Logic":  "1",
+        "Conditions":  [
+                           {
+                               "field":  "Region__c",
+                               "operation":  "equals",
+                               "value":  "UTTAR PRADESH"
+                           }
+                       ],
+        "Status":  "VERIFIED",
+        "IncludeAll":  "false"
+    },
+    {
+        "Name":  "SR_Lead_RGN_WBS",
+        "Source":  "Story LLD supplied in request",
+        "SourceRule":  "",
+        "Group":  "SG_RGN_WBS_RM",
+        "Access":  "Edit",
+        "Logic":  "1",
+        "Conditions":  [
+                           {
+                               "field":  "Region__c",
+                               "operation":  "equals",
+                               "value":  "WEST BENGAL - SIKKIM"
+                           }
+                       ],
+        "Status":  "VERIFIED",
+        "IncludeAll":  "false"
+    },
+    {
+        "Name":  "SR_Lead_VH_APPARELS_LIFESTYLE",
+        "Source":  "Lead__c",
+        "SourceRule":  "VH_APPARELS_LIFESTYLE",
+        "Group":  "VH_APPARELS_LIFESTYLE",
+        "Access":  "Edit",
+        "Logic":  "1",
+        "Conditions":  [
+                           {
+                               "field":  "Vertical__c",
+                               "operation":  "equals",
+                               "value":  "APPARELS \u0026 LIFESTYLE"
+                           }
+                       ],
+        "Status":  "APPROVED LEGACY INACTIVE: exact retrieved criteria retained by user instruction",
+        "IncludeAll":  "false"
+    },
+    {
+        "Name":  "SR_Lead_VH_AUTOMOTIVE",
+        "Source":  "Lead__c",
+        "SourceRule":  "VH_AUTOMOTIVE",
+        "Group":  "VH_AUTOMOTIVE",
+        "Access":  "Edit",
+        "Logic":  "1",
+        "Conditions":  [
+                           {
+                               "field":  "Vertical__c",
+                               "operation":  "equals",
+                               "value":  "AUTOMOTIVE"
+                           }
+                       ],
+        "Status":  "VERIFIED",
+        "IncludeAll":  "false"
+    },
+    {
+        "Name":  "SR_Lead_VH_Engineering_Electrical_Hardware",
+        "Source":  "Lead__c",
+        "SourceRule":  "VH_Engineering_Electrical_Hardware",
+        "Group":  "VH_Engineering_Electrical_Hardware",
+        "Access":  "Edit",
+        "Logic":  "1",
+        "Conditions":  [
+                           {
+                               "field":  "Vertical__c",
+                               "operation":  "equals",
+                               "value":  "Engineering \u0026 Electrical Hardware"
+                           }
+                       ],
+        "Status":  "APPROVED LEGACY INACTIVE: exact retrieved criteria retained by user instruction",
+        "IncludeAll":  "false"
+    },
+    {
+        "Name":  "SR_Lead_VH_FMCG_CONSUMER_GOODS",
+        "Source":  "Lead__c",
+        "SourceRule":  "VH_FMCG_CONSUMER_GOODS",
+        "Group":  "VH_FMCG_CONSUMER_GOODS",
+        "Access":  "Edit",
+        "Logic":  "1",
+        "Conditions":  [
+                           {
+                               "field":  "Vertical__c",
+                               "operation":  "equals",
+                               "value":  "FMCG/CONSUMER GOODS"
+                           }
+                       ],
+        "Status":  "APPROVED LEGACY INACTIVE: exact retrieved criteria retained by user instruction",
+        "IncludeAll":  "false"
+    },
+    {
+        "Name":  "SR_Lead_VH_HEALTHCARE",
+        "Source":  "Lead__c",
+        "SourceRule":  "VH_HEALTHCARE",
+        "Group":  "VH_HEALTHCARE",
+        "Access":  "Edit",
+        "Logic":  "1",
+        "Conditions":  [
+                           {
+                               "field":  "Vertical__c",
+                               "operation":  "equals",
+                               "value":  "HEALTHCARE"
+                           }
+                       ],
+        "Status":  "APPROVED LEGACY INACTIVE: exact retrieved criteria retained by user instruction",
+        "IncludeAll":  "false"
+    },
+    {
+        "Name":  "SR_Lead_VH_HI_TECH",
+        "Source":  "Lead__c",
+        "SourceRule":  "VH_HI_TECH",
+        "Group":  "VH_HI_TECH",
+        "Access":  "Edit",
+        "Logic":  "1",
+        "Conditions":  [
+                           {
+                               "field":  "Vertical__c",
+                               "operation":  "equals",
+                               "value":  "HI TECH"
+                           }
+                       ],
+        "Status":  "VERIFIED",
+        "IncludeAll":  "false"
+    },
+    {
+        "Name":  "SR_Lead_VH_Institutional",
+        "Source":  "Lead__c",
+        "SourceRule":  "VH_Institutional",
+        "Group":  "VH_Institutional",
+        "Access":  "Edit",
+        "Logic":  "1",
+        "Conditions":  [
+                           {
+                               "field":  "Vertical__c",
+                               "operation":  "equals",
+                               "value":  "Institutional"
+                           }
+                       ],
+        "Status":  "APPROVED LEGACY INACTIVE: exact retrieved criteria retained by user instruction",
+        "IncludeAll":  "false"
+    },
+    {
+        "Name":  "SR_Lead_VH_Publishing",
+        "Source":  "Lead__c",
+        "SourceRule":  "VH_Publishing",
+        "Group":  "VH_Publishing",
+        "Access":  "Edit",
+        "Logic":  "1",
+        "Conditions":  [
+                           {
+                               "field":  "Vertical__c",
+                               "operation":  "equals",
+                               "value":  "Publishing"
+                           }
+                       ],
+        "Status":  "APPROVED LEGACY INACTIVE: exact retrieved criteria retained by user instruction",
+        "IncludeAll":  "false"
+    },
+    {
+        "Name":  "SR_Lead_VH_Retail_Campus_2_Home",
+        "Source":  "Lead__c",
+        "SourceRule":  "VH_Retail_Campus_2_Home",
+        "Group":  "VH_Retail_Campus_2_Home",
+        "Access":  "Edit",
+        "Logic":  "1 AND 2",
+        "Conditions":  [
+                           {
+                               "field":  "Vertical__c",
+                               "operation":  "equals",
+                               "value":  "Retail Special Services"
+                           },
+                           {
+                               "field":  "Sub_Vertical__c",
+                               "operation":  "equals",
+                               "value":  "CAMPUS 2 HOME"
+                           }
+                       ],
+        "Status":  "APPROVED LEGACY INACTIVE: exact retrieved criteria retained by user instruction",
+        "IncludeAll":  "false"
+    },
+    {
+        "Name":  "SR_Lead_VH_Retail_Commodity_Express",
+        "Source":  "Lead__c",
+        "SourceRule":  "VH_Retail_Commodity_Express",
+        "Group":  "VH_Retail_Commodity_Express",
+        "Access":  "Edit",
+        "Logic":  "1 AND 2",
+        "Conditions":  [
+                           {
+                               "field":  "Vertical__c",
+                               "operation":  "equals",
+                               "value":  "Retail Special Services"
+                           },
+                           {
+                               "field":  "Sub_Vertical__c",
+                               "operation":  "equals",
+                               "value":  "COMMODITY EXPRESS"
+                           }
+                       ],
+        "Status":  "APPROVED LEGACY INACTIVE: exact retrieved criteria retained by user instruction",
+        "IncludeAll":  "false"
+    },
+    {
+        "Name":  "SR_Lead_VH_Retail_Easy_2_Move",
+        "Source":  "Lead__c",
+        "SourceRule":  "VH_Retail_Easy_2_Move",
+        "Group":  "VH_Retail_Easy_2_Move",
+        "Access":  "Edit",
+        "Logic":  "1 AND 2",
+        "Conditions":  [
+                           {
+                               "field":  "Vertical__c",
+                               "operation":  "equals",
+                               "value":  "Retail Special Services"
+                           },
+                           {
+                               "field":  "Sub_Vertical__c",
+                               "operation":  "equals",
+                               "value":  "EASY 2 MOVE"
+                           }
+                       ],
+        "Status":  "APPROVED LEGACY INACTIVE: exact retrieved criteria retained by user instruction",
+        "IncludeAll":  "false"
+    },
+    {
+        "Name":  "SR_Lead_VH_Retail_SAFEHOME",
+        "Source":  "Lead__c",
+        "SourceRule":  "VH_Retail_SAFEHOME",
+        "Group":  "VH_Retail_SAFEHOME",
+        "Access":  "Edit",
+        "Logic":  "1 AND 2",
+        "Conditions":  [
+                           {
+                               "field":  "Vertical__c",
+                               "operation":  "equals",
+                               "value":  "Retail Special Services"
+                           },
+                           {
+                               "field":  "Sub_Vertical__c",
+                               "operation":  "equals",
+                               "value":  "SAFEHOME"
+                           }
+                       ],
+        "Status":  "APPROVED LEGACY INACTIVE: exact retrieved criteria retained by user instruction",
+        "IncludeAll":  "false"
+    },
+    {
+        "Name":  "SR_Lead_VH_Retail_SAINIK_EXPRESS",
+        "Source":  "Lead__c",
+        "SourceRule":  "VH_Retail_SAINIK_EXPRESS",
+        "Group":  "VH_Retail_SAINIK_EXPRESS",
+        "Access":  "Edit",
+        "Logic":  "1 AND 2",
+        "Conditions":  [
+                           {
+                               "field":  "Vertical__c",
+                               "operation":  "equals",
+                               "value":  "Retail Special Services"
+                           },
+                           {
+                               "field":  "Sub_Vertical__c",
+                               "operation":  "equals",
+                               "value":  "SAINIK EXPRESS"
+                           }
+                       ],
+        "Status":  "APPROVED LEGACY INACTIVE: exact retrieved criteria retained by user instruction",
+        "IncludeAll":  "false"
+    },
+    {
+        "Name":  "SR_Lead_VH_Retail_Safe_Returns",
+        "Source":  "Lead__c",
+        "SourceRule":  "VH_Retail_Safe_Returns",
+        "Group":  "VH_Retail_Safe_Returns",
+        "Access":  "Edit",
+        "Logic":  "1 AND 2",
+        "Conditions":  [
+                           {
+                               "field":  "Vertical__c",
+                               "operation":  "equals",
+                               "value":  "Retail Special Services"
+                           },
+                           {
+                               "field":  "Sub_Vertical__c",
+                               "operation":  "equals",
+                               "value":  "Safe Returns"
+                           }
+                       ],
+        "Status":  "APPROVED LEGACY INACTIVE: exact retrieved criteria retained by user instruction",
+        "IncludeAll":  "false"
+    },
+    {
+        "Name":  "SR_Lead_Alliance_Partner",
+        "Source":  "Story LLD supplied in request",
+        "SourceRule":  "",
+        "Group":  "Alliance_Partner_Management",
+        "Access":  "Read",
+        "Logic":  "1",
+        "Conditions":  [
+                           {
+                               "field":  "Vertical__c",
+                               "operation":  "equals",
+                               "value":  "ALLIANCE PARTNER MANAGEMENT"
+                           }
+                       ],
+        "Status":  "VERIFIED",
+        "IncludeAll":  "false"
+    },
+    {
+        "Name":  "SR_Lead_Safexperience_Team",
+        "Source":  "Story LLD supplied in request",
+        "SourceRule":  "",
+        "Group":  "Safexperience_Team",
+        "Access":  "Edit",
+        "Logic":  "1 OR 2",
+        "Conditions":  [
+                           {
+                               "field":  "LeadSource",
+                               "operation":  "equals",
+                               "value":  "Website"
+                           },
+                           {
+                               "field":  "LeadSource",
+                               "operation":  "equals",
+                               "value":  "Safexperience Centre"
+                           }
+                       ],
+        "Status":  "VERIFIED",
+        "IncludeAll":  "false"
+    }
+]

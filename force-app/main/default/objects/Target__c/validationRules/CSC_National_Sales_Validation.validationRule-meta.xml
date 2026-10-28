@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CSC_National_Sales_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+
+ISPICKVAL( Type__c , &quot;CSC&quot;), 
+
+	ISNULL(National_Sales__c)
+
+)</errorConditionFormula>
+    <errorDisplayField>National_Sales__c</errorDisplayField>
+    <errorMessage>Please fill National Sales.</errorMessage>
+</ValidationRule>

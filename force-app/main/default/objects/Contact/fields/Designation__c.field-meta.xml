@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Designation__c</fullName>
+    <label>Designation</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Addl. Director</fullName>
+                <default>false</default>
+                <label>Addl. Director</label>
+            </value>
+            <value>
+                <fullName>Area Manager</fullName>
+                <default>false</default>
+                <label>Area Manager</label>
+            </value>
+            <value>
+                <fullName>Assistant General Manager</fullName>
+                <default>false</default>
+                <label>Assistant General Manager</label>
+            </value>
+            <value>
+                <fullName>Assistant Manager</fullName>
+                <default>false</default>
+                <label>Assistant Manager</label>
+            </value>
+            <value>
+                <fullName>Assistant Vice President</fullName>
+                <default>false</default>
+                <label>Assistant Vice President</label>
+            </value>
+            <value>
+                <fullName>Associate</fullName>
+                <default>false</default>
+                <label>Associate</label>
+            </value>
+            <value>
+                <fullName>CAO</fullName>
+                <default>false</default>
+                <label>CAO</label>
+            </value>
+            <value>
+                <fullName>CEO</fullName>
+                <default>false</default>
+                <label>CEO</label>
+            </value>
+            <value>
+                <fullName>CFO</fullName>
+                <default>false</default>
+                <label>CFO</label>
+            </value>
+            <value>
+                <fullName>CFO &amp; CS</fullName>
+                <default>false</default>
+                <label>CFO &amp; CS</label>
+            </value>
+            <value>
+                <fullName>CHAIRMAN</fullName>
+                <default>false</default>
+                <label>CHAIRMAN</label>
+            </value>
+            <value>
+                <fullName>CHAIRMAN &amp; MD</fullName>
+                <default>false</default>
+                <label>CHAIRMAN &amp; MD</label>
+            </value>
+            <value>
+                <fullName>COO</fullName>
+                <default>false</default>
+                <label>COO</label>
+            </value>
+            <value>
+                <fullName>Co-Ordinator</fullName>
+                <default>false</default>
+                <label>Co-Ordinator</label>
+            </value>
+            <value>
+                <fullName>Country Head</fullName>
+                <default>false</default>
+                <label>Country Head</label>
+            </value>
+            <value>
+                <fullName>Deputy General Manager</fullName>
+                <default>false</default>
+                <label>Deputy General Manager</label>
+            </value>
+            <value>
+                <fullName>Deputy Manager</fullName>
+                <default>false</default>
+                <label>Deputy Manager</label>
+            </value>
+            <value>
+                <fullName>Director</fullName>
+                <default>false</default>
+                <label>Director</label>
+            </value>
+            <value>
+                <fullName>Engineer</fullName>
+                <default>false</default>
+                <label>Engineer</label>
+            </value>
+            <value>
+                <fullName>Executive</fullName>
+                <default>false</default>
+                <label>Executive</label>
+            </value>
+            <value>
+                <fullName>Executive Assistant</fullName>
+                <default>false</default>
+                <label>Executive Assistant</label>
+            </value>
+            <value>
+                <fullName>Executive Director</fullName>
+                <default>false</default>
+                <label>Executive Director</label>
+            </value>
+            <value>
+                <fullName>Executive Vice President</fullName>
+                <default>false</default>
+                <label>Executive Vice President</label>
+            </value>
+            <value>
+                <fullName>Founder &amp; Chairman</fullName>
+                <default>false</default>
+                <label>Founder &amp; Chairman</label>
+            </value>
+            <value>
+                <fullName>General Manager</fullName>
+                <default>false</default>
+                <label>General Manager</label>
+            </value>
+            <value>
+                <fullName>Group CEO</fullName>
+                <default>false</default>
+                <label>Group CEO</label>
+            </value>
+            <value>
+                <fullName>Head of Department</fullName>
+                <default>false</default>
+                <label>Head of Department</label>
+            </value>
+            <value>
+                <fullName>Incharge</fullName>
+                <default>false</default>
+                <label>Incharge</label>
+            </value>
+            <value>
+                <fullName>Manager</fullName>
+                <default>false</default>
+                <label>Manager</label>
+            </value>
+            <value>
+                <fullName>Managing Director</fullName>
+                <default>false</default>
+                <label>Managing Director</label>
+            </value>
+            <value>
+                <fullName>Managing Partner</fullName>
+                <default>false</default>
+                <label>Managing Partner</label>
+            </value>
+            <value>
+                <fullName>National Head</fullName>
+                <default>false</default>
+                <label>National Head</label>
+            </value>
+            <value>
+                <fullName>National Manager</fullName>
+                <default>false</default>
+                <label>National Manager</label>
+            </value>
+            <value>
+                <fullName>Officer</fullName>
+                <default>false</default>
+                <label>Officer</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+            <value>
+                <fullName>Owner</fullName>
+                <default>false</default>
+                <label>Owner</label>
+            </value>
+            <value>
+                <fullName>President</fullName>
+                <default>false</default>
+                <label>President</label>
+            </value>
+            <value>
+                <fullName>Promoter</fullName>
+                <default>false</default>
+                <label>Promoter</label>
+            </value>
+            <value>
+                <fullName>Regional Manager</fullName>
+                <default>false</default>
+                <label>Regional Manager</label>
+            </value>
+            <value>
+                <fullName>Senior Consultant</fullName>
+                <default>false</default>
+                <label>Senior Consultant</label>
+            </value>
+            <value>
+                <fullName>Sr. Executive</fullName>
+                <default>false</default>
+                <label>Sr. Executive</label>
+            </value>
+            <value>
+                <fullName>Sr. Manager</fullName>
+                <default>false</default>
+                <label>Sr. Manager</label>
+            </value>
+            <value>
+                <fullName>Supervisor</fullName>
+                <default>false</default>
+                <label>Supervisor</label>
+            </value>
+            <value>
+                <fullName>Territory Manager</fullName>
+                <default>false</default>
+                <label>Territory Manager</label>
+            </value>
+            <value>
+                <fullName>Vice President</fullName>
+                <default>false</default>
+                <label>Vice President</label>
+            </value>
+            <value>
+                <fullName>Zonal Manager</fullName>
+                <default>false</default>
+                <label>Zonal Manager</label>
+            </value>
+            <value>
+                <fullName>Not Specified</fullName>
+                <default>false</default>
+                <label>Not Specified</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,90 @@
+<aura:component implements="force:lightningQuickAction,force:hasRecordId" controller="QuoteActionController" access="global">
+    
+    <aura:attribute name="recordId" type="Id"/>
+    <aura:attribute name="modalview" type="boolean" default="false"/>
+    <aura:attribute name="modalview2" type="boolean" default="false"/>
+    <aura:attribute name="aria-modal" type="boolean" default="true"/>
+    <aura:attribute name="showError2" type="boolean" default="false"/>
+    <aura:attribute name="lstDefferedReasons" type="String[]"/>
+    <aura:attribute name="deferredTill" type="Date"/>
+    <aura:attribute name="todayDate" type="String"/>
+    <lightning:button label="Defer Quote and Opportunity" onclick="{!c.closequoteandopp}" variant="brand"/>&nbsp;
+    <lightning:button label="Create New Quote" onclick="{!c.createnewquote}" variant="brand"/>
+    
+    <aura:if isTrue="{!v.modalview}">
+        <div class="modal" style="height: 500px;">
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <header class="slds-modal__header slds-modal__header_empty">
+                        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick="{!c.closeModal}">
+                            <lightning:icon iconName="utility:close" size="small" alternativeText="Close" />
+                            <span class="slds-assistive-text">Close</span>
+                        </button>
+                    </header>
+                    <div class="slds-modal__content slds-p-around_medium">
+                      <lightning:input 
+                            aura:id="deferredTill"
+                            type="date"
+                            label="Deferred Till"
+                            value="{!v.deferredTill}"
+                            required="true"
+                            onchange="{!c.handleDateChange}" />
+
+                    </div>
+
+                    <footer class="slds-modal__footer">
+                        <button class="slds-button slds-button_neutral" onclick="{!c.closeModal}">Cancel</button>
+                        <button class="slds-button slds-button_brand" onclick="{!c.saveModal}">Save</button>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </div>
+    </aura:if>
+    <aura:if isTrue="{!v.modalview2}">
+        <div class="modal" style="height: 500px;">
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-02" aria-modal="true" aria-describedby="modal-content-id-2" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container" style="width: 800px;">
+                    <header class="slds-modal__header slds-modal__header_empty">
+                        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick="{!c.closeModal}">
+                            <lightning:icon iconName="utility:close" size="small" alternativeText="Close" />
+                            <span class="slds-assistive-text">Close</span>
+                        </button>
+                        <!--<h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Lost Opportunity</h2>-->
+                    </header>
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        
+                        <label class="slds-form-element__label"  for="input-id-01">
+                            <abbr class="slds-required" title="required">*</abbr>Please Enter Deferred Reason</label>
+                        <div class="slds-form-element__control">
+                            <ui:inputSelect class="slds-input" multiple="true" aura:id="defferedReason">
+                                <!-- <ui:inputSelectOption text="null" label="Select Deferred Reason" value="true"/>-->
+                                <aura:iteration items="{!v.lstDefferedReasons}" var="rea">
+                                    <ui:inputSelectOption text="{!rea}" label="{!rea}" />
+                                </aura:iteration>
+                            </ui:inputSelect>
+                        </div>
+                        <label class="slds-form-element__label"  for="input-id-01">
+                            Please Enter Sub Reason</label>
+                        <div class="slds-form-element__control">
+                            <ui:inputText aura:id="subReason" class="slds-input" />
+                        </div>
+                        <label class="slds-form-element__label"  for="input-id-01">
+                            <abbr class="slds-required" title="required">*</abbr>New Quote Name</label>
+                        <div class="slds-form-element__control">
+                            <ui:inputText aura:id="newquotename" class="slds-input" />
+                        </div>
+                        <aura:if isTrue="{!v.showError2}">
+                            <div style="color:red;">Please fill value in both fields.</div>
+                        </aura:if>
+                    </div>                    
+                    <footer class="slds-modal__footer">
+                        <button class="slds-button slds-button_neutral" onclick="{!c.closeModal}">Cancel</button>
+                        <button class="slds-button slds-button_brand" onclick="{!c.saveModal2}">Save</button>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </div>
+    </aura:if>
+</aura:component>

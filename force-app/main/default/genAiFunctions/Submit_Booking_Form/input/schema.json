@@ -1,0 +1,14 @@
+{
+  "required" : [ "booking_form" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "booking_form" : {
+      "title" : "Booking Form",
+      "description" : "Booking or pickup request details entered by the customer in the form.",
+      "lightning:type" : "c__bookingRequestForm",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

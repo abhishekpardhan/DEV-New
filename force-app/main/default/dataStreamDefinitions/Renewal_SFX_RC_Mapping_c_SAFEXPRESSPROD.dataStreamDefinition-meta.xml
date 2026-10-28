@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataStreamDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <areHeadersIncludedInFile>false</areHeadersIncludedInFile>
+    <bulkIngest>false</bulkIngest>
+    <creationType>Custom</creationType>
+    <dataConnector>SalesforceDotCom_SAFEXPRESSPROD</dataConnector>
+    <dataConnectorType>SalesforceDotCom</dataConnectorType>
+    <dataExtractMethods>FULL_REFRESH</dataExtractMethods>
+    <dataPlatformDataSetItemName>SFDC</dataPlatformDataSetItemName>
+    <dataSource>Salesforce_SAFEXPRESSPROD</dataSource>
+    <isLimitedToNewFiles>false</isLimitedToNewFiles>
+    <isMissingFileFailure>false</isMissingFileFailure>
+    <masterLabel>Renewal_SFX_RC_Mapping__c_SAFEXPRESSPROD</masterLabel>
+    <mktDataLakeObject>Renewal_SFX_RC_Mapping_c_SAFEXPRESSPROD__dll</mktDataLakeObject>
+    <mktDataTranObject>Renewal_SFX_RC_Mapping_c_SAFEXPRESSPROD</mktDataTranObject>
+</DataStreamDefinition>

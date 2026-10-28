@@ -1,0 +1,39 @@
+<aura:component implements="force:lightningQuickAction,force:hasSObjectName,force:hasRecordId" controller="LeadConversion">
+    <aura:attribute name="recordId" type="Id"/>
+    <aura:handler name="init" action="{!c.doinit}" value="{!this}"/>
+    <aura:attribute name="convert" type="boolean" default='true'/>
+    <aura:attribute name="Spinner" type="boolean" default='false'/>
+    <aura:attribute name="isCreateCustomer" type="boolean" default='true'/>
+    <aura:attribute name="leadCustomerName" type="String" default=''/>
+    <aura:attribute name="customerName" type="String" default=''/>
+    <aura:if isTrue="{!v.Spinner}">
+        <div aura:id="spinnerId" class="slds-spinner_container">
+            <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                <span class="slds-assistive-text">Loading</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+	</aura:if>
+    <aura:if isTrue = "{!v.convert}">
+        <aura:if isTrue="{!v.isCreateCustomer}">
+            <h2 style="text-align:center;">Please confirm to convert the Lead to Account and Opportunity</h2><!--</label>-->
+        	<br/>
+            <div align="center" draggable="false">
+                <lightning:button label="Yes" aura:id="disablebuttonid"  onclick="{!c.bpress}" variant="brand"/>
+            </div> 
+            <aura:set attribute="else">
+                <h2 style="text-align:left;color:red;">Lead name and Customer name is different, Are you sure want to update and convert</h2> 
+        		 
+                <div align="left" draggable="false">
+                    <div align="left">Lead Name : {!v.leadCustomerName} </div>
+                    <div align="left" style="color: #000;font-size: 18px;">Customer Name : {!v.customerName} </div> 
+                    <lightning:button label="Yes, Update" aura:id="disablebuttonid"  onclick="{!c.updateLead}" variant="brand"/>
+                </div>
+                
+            </aura:set>    
+         
+          </aura:if>  
+          
+    </aura:if>
+</aura:component>

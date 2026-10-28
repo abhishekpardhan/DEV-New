@@ -1,0 +1,126 @@
+<!-- 
+    File Name          : wayBillSearchForFlow
+    Description        : This Component is used in the new Case Flow as an embedded component
+    Author             : Deepak 
+    Last Modified Date : 23/7/2021
+    Last Modified By   :
+    Modification Logs  
+    Ver           Date              Author                Modification
+    =====================================================================
+    1.0         23/7/2021        Deepak                Initial Version
+
+-->
+<!-- sldsValidatorIgnore -->
+<template>
+
+    <!-- Spinner Section -->
+    <div if:true={isSpinnerShow}> 
+        <lightning-spinner alternative-text="Loading" variant="brand" size="small"></lightning-spinner>
+    </div>
+
+    <lightning-layout multiple-rows="true" vertical-align="end" horizontal-align="slds-grid_align-center">  
+        <lightning-layout-item size="12" small-device-size="3" medium-device-size="3" large-device-size="4" >
+            <div style="display: inline-flex;" class="slds-form-element__control">
+                <lightning-input type="text" value={searchedWayBillNo} label="Waybill Number"  max-length="15" onchange={handleWayBillChange} ></lightning-input>
+                <div style="margin: 23px 0px 0px 10px;">
+                    <lightning-button  title="Search" icon-name="utility:search" label="Search" disabled={isSearchDisabled} onclick={handleSearch}></lightning-button>
+                </div>  
+            </div>
+            <div class="slds-required" if:true={errorMassage}>{errorMassage}</div>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" small-device-size="3" medium-device-size="3" large-device-size="4" >
+            <div style="margin-right: 20px;" class="slds-form-element__control">
+                <lightning-input type="text" label="Waybill Status" value={WaybillStatus} onchange={handleWaybillStatusChange} disabled ={isOutputFieldsDisabled}></lightning-input>
+            </div>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" small-device-size="3" medium-device-size="3" large-device-size="4" >
+            <div style="margin-right: 20px;" class="slds-form-element__control">
+                <lightning-input type="date" value={edd} label="EDD" onchange={handleEDDChange} disabled ={isOutputFieldsDisabled}></lightning-input>
+            </div>
+        </lightning-layout-item> 
+        <lightning-layout-item size="12" small-device-size="3" medium-device-size="3" large-device-size="4" >
+            <div style="margin-right: 20px;" class="slds-form-element__control">
+                <lightning-input type="text" value={fromBranch}  label="From Branch" onchange={handleFromBranchChange} disabled ={isOutputFieldsDisabled} ></lightning-input>
+            </div> 
+        </lightning-layout-item>
+        <lightning-layout-item size="12" small-device-size="3" medium-device-size="3" large-device-size="4" >
+            <div style="margin-right: 20px;" class="slds-form-element__control">
+                <lightning-input type="text" value={toBranch}  label="To Branch" onchange={handleToBranchChange} disabled ={isOutputFieldsDisabled}  ></lightning-input>
+            </div>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" small-device-size="3" medium-device-size="3" large-device-size="4" >
+            <div style="margin-right: 20px;" class="slds-form-element__control">
+                <lightning-input type="date" value={pickUpDate} onchange={handlePickUpDateChange} label="PickUp Date"  disabled ={isOutputFieldsDisabled}></lightning-input>
+            </div>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" small-device-size="3" medium-device-size="3" large-device-size="4" >
+            <div style="margin-right: 20px;" class="slds-form-element__control">
+                <!-- <lightning-combobox
+                label="Mode Of Payment"
+                name="ModeOfPayment"  
+                placeholder="--None--"
+                value={modeOfPayment}
+                options={optionsModeOfPayment}
+                onchange={handleModeOfPaymentChange}
+                disabled ={isOutputFieldsDisabled} ></lightning-combobox> -->
+                <lightning-input type="text" value={modeOfPayment} onchange={handleModeOfPaymentChange} label="Mode Of Payment" disabled ={isOutputFieldsDisabled}></lightning-input>
+
+            </div> 
+        </lightning-layout-item>
+        <lightning-layout-item size="12" small-device-size="3" medium-device-size="3" large-device-size="4" >
+            <div style="margin-right: 20px;" class="slds-form-element__control">
+                <!-- <lightning-combobox
+                label="Mode Of Dispatch"
+                name="ModeOfDispatch"  
+                placeholder="--None--"
+                value={modeOfDispatch}
+                options={optionsModeOfDispatch}
+                onchange={handleModeOfDispatchChange} 
+                disabled ={isOutputFieldsDisabled}></lightning-combobox> -->
+                <lightning-input type="text" value={modeOfDispatch} onchange={handleModeOfDispatchChange} label="Mode Of Dispatch" disabled ={isOutputFieldsDisabled}></lightning-input>
+
+            </div>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" small-device-size="3" medium-device-size="3" large-device-size="4" >
+            <div style="margin-right: 20px;" class="slds-form-element__control">
+                <lightning-input type="text"  value={freight} label="Freight" disabled></lightning-input>
+            </div>
+        </lightning-layout-item> 
+        <lightning-layout-item size="12" small-device-size="3" medium-device-size="3" large-device-size="4" >
+            <div style="margin-right: 20px;" class="slds-form-element__control">
+                <lightning-input type="text"  value={ConsigneeName} label="Consignee Name" onchange={handleConsigneeNameChange} disabled ={isOutputFieldsDisabled} ></lightning-input>
+            </div> 
+        </lightning-layout-item>
+        <lightning-layout-item size="12" small-device-size="3" medium-device-size="3" large-device-size="4" >
+            <div style="margin-right: 20px;" class="slds-form-element__control">
+                <lightning-input type="text" value={consignorName} label="Consignor Name" onchange={handleConsignorNameChange} disabled ={isOutputFieldsDisabled} ></lightning-input>
+            </div> 
+        </lightning-layout-item>
+        <lightning-layout-item size="12" small-device-size="3" medium-device-size="3" large-device-size="4" >
+            <div style="margin-right: 20px;" class="slds-form-element__control">
+                <!-- <lightning-combobox
+                label="DOD/DACC"
+                name="dod_dacc"  
+                placeholder="--None--"
+                value={dod_Dacc}
+                options={optionsDodDacc}
+                onchange={handleDodDaccChange} 
+                disabled ={isOutputFieldsDisabled}></lightning-combobox> -->
+                <lightning-input type="text" value={dod_Dacc} label="DOD/DACC Amount" onchange={handleDodDaccChange} disabled ={isOutputFieldsDisabled} ></lightning-input>
+
+            </div> 
+        </lightning-layout-item>
+        <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" >
+            <div style="margin-right: 20px;" class="slds-form-element__control slds-align--absolute-center slds-p-top--xx-small">
+                <div id="waybill-track-history">
+                    <lightning-button if:true={trackData} class="slds-m-left--small" variant="base" label="WayBill Track" title="WayBill Track" onclick={handleClickTrack}></lightning-button>
+                    <c-way-bill-modal header-text="Track History" track-data={trackData} is-track-history if:true={isTrackShow} onclose={handleWayBillModalClose}></c-way-bill-modal>
+                </div>
+                <div id="recnt-case-history">
+                    <lightning-button if:true={trackData} class="slds-m-left--small" variant="base" label="Recent Cases" title="Recent Cases" onclick={handleCaseHistoryShow}></lightning-button>
+                    <c-way-bill-modal way-bill-number={wayBillNumber} record-limit={recordLimit} header-text="Recent Cases" if:true={isCaseHistoryShow} onclose={handleWayBillModalClose}></c-way-bill-modal>
+                </div>
+            </div>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

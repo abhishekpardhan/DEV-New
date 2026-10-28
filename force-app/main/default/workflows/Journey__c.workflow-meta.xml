@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Auto_Approve</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Auto Approved</literalValue>
+        <name>Auto Approve</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Auto_approved</fullName>
+        <description>In case of user manager is Rubal Jain Sir, it will approved auto approved</description>
+        <field>Approval_Status__c</field>
+        <literalValue>Auto Approved</literalValue>
+        <name>Auto approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Auto_approved_by_CMD</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved By RM</literalValue>
+        <name>Auto approved by CMD</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FieldJon</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Pending from RM</literalValue>
+        <name>FieldJon</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FieldJon4</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected by Manager</literalValue>
+        <name>FieldJon4</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Field_Update1_2</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved By RM</literalValue>
+        <name>Field Update1_2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Field_update</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected By RM</literalValue>
+        <name>Field update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Fieldjon6</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved By RM</literalValue>
+        <name>Fieldjon6</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Fieldjon7</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected By RM</literalValue>
+        <name>Fieldjon7</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Is_Locked_False</fullName>
+        <field>Is_Locked__c</field>
+        <literalValue>0</literalValue>
+        <name>Is Locked False</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Is_locked_true</fullName>
+        <field>Is_Locked__c</field>
+        <literalValue>1</literalValue>
+        <name>Is locked true</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Is_locked_true1</fullName>
+        <field>Is_Locked__c</field>
+        <literalValue>1</literalValue>
+        <name>Is locked true1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Record_type_update_journey</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Journey_Completed</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Record type update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>STATUS_UPDATE</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Auto Approved</literalValue>
+        <name>STATUS UPDATE</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>field_udate</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Auto Approved</literalValue>
+        <name>field udate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>record_type_update</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Approval_Process_Completed</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>record type update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>record_type_update1</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Approval_Process_Completed</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>record type update1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>record_type_update2</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Journey_Completed</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>record type update2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>submit_for_app</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Submitted for Approval</literalValue>
+        <name>submit for app</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>submit_for_app1</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Submitted for Approval</literalValue>
+        <name>submit for app1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

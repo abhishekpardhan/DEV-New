@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DateShouldNotExceed</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT(
+        OR(
+            $Profile.Name = &quot;System Administrator&quot;,
+            $Profile.Name = &quot;Integration User&quot;,
+            $Profile.Name = &quot;Portfolio Management&quot;,
+            $Profile.Name = &quot;Corporate salesforce team&quot;
+        )
+    ),
+     RecordType.DeveloperName = &quot;Collection&quot;,
+    OR(
+        Remaining_Payment_Tentative_Date__c &lt; TODAY(),
+        Remaining_Payment_Tentative_Date__c &gt;
+        CASE(
+            Green_Book__c,
+            &quot;GB&quot;,
+            DATE(
+                IF(MONTH(AddMonths(TODAY(),1))=12,
+                    YEAR(AddMonths(TODAY(),1))+1,
+                    YEAR(AddMonths(TODAY(),1))),
+                IF(MONTH(AddMonths(TODAY(),1))=12,
+                    1,
+                    MONTH(AddMonths(TODAY(),1))+1),
+                1
+            ) - 1,
+            &quot;GB1&quot;,
+            DATE(
+                IF(MONTH(AddMonths(TODAY(),2))=12,
+                    YEAR(AddMonths(TODAY(),2))+1,
+                    YEAR(AddMonths(TODAY(),2))),
+                IF(MONTH(AddMonths(TODAY(),2))=12,
+                    1,
+                    MONTH(AddMonths(TODAY(),2))+1),
+                1
+            ) - 1,
+            DATE(
+                IF(MONTH(AddMonths(TODAY(),3))=12,
+                    YEAR(AddMonths(TODAY(),3))+1,
+                    YEAR(AddMonths(TODAY(),3))),
+                IF(MONTH(AddMonths(TODAY(),3))=12,
+                    1,
+                    MONTH(AddMonths(TODAY(),3))+1),
+                1
+            ) - 1
+        )
+    )
+)</errorConditionFormula>
+    <errorDisplayField>Remaining_Payment_Tentative_Date__c</errorDisplayField>
+    <errorMessage>Payment Collection Tentative Date must be between today and the applicable month-end: GB – next month, GB+1 – following month, GB+2/Blank – third month from Today.</errorMessage>
+</ValidationRule>

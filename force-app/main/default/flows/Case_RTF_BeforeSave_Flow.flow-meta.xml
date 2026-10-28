@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assignment_2</name>
+        <label>Assignment 2</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Approval_Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Auto-approved</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Active</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Once the case matches the rejection scenario, the case is assigned back to the creator of the case</description>
+        <name>ReassignToCreator</name>
+        <label>ReassignToCreator</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Assigned_To__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.CreatedById</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>is_Regional_Finance_Head</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>In the Update Outcome we are again checking if the Creator of the case and the Assigned to are same or different</description>
+        <name>CaseCreatorOwnerAreSame</name>
+        <label>CaseCreatorOwnerAreSame</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Same</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CreatedById</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Assigned_To__c</elementReference>
+                </rightValue>
+            </conditions>
+            <label>Same</label>
+        </rules>
+        <rules>
+            <name>Different</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CreatedById</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Assigned_To__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Matches_Rejection_Scenario_for_specific_recordtype</targetReference>
+            </connector>
+            <label>Different</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>We are checking if we are updating or creating a case</description>
+        <name>CreateorUpdate</name>
+        <label>CreateorUpdate</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>is_Regional_Finance_Head</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>isCreate</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>isCreatOrUpdate</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>is_Regional_Finance_Head</targetReference>
+            </connector>
+            <label>isCreate</label>
+        </rules>
+        <rules>
+            <name>isUpdate</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>isCreatOrUpdate</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CaseCreatorOwnerAreSame</targetReference>
+            </connector>
+            <label>isUpdate</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>We are only checking for the Active Flows</description>
+        <name>FlowisActive</name>
+        <label>FlowisActive</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>isActive</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>orgSetting.Is_active__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CreateorUpdate</targetReference>
+            </connector>
+            <label>isActive</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>is_Regional_Finance_Head</name>
+        <label>is Regional Finance Head</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Regional_Finance_Head</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Profile.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Regional Finance Head</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Case_Typee__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Credit Rebate</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Corporate_Credit_Case</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Claim_Issues</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assignment_2</targetReference>
+            </connector>
+            <label>Regional Finance Head</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>In the Different outcome of decision element we are deciding if the case matches the rejection scenarios</description>
+        <name>Matches_Rejection_Scenario_for_specific_recordtype</name>
+        <label>Matches Rejection Scenario for specific recordtype?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>ReassignNeeded</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>IsRejectedCase</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ReassignToCreator</targetReference>
+            </connector>
+            <label>ReassignNeeded</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>CaseAssigmentBoolean</name>
+        <dataType>Boolean</dataType>
+        <expression>AND(
+	OR(
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;Reciept cancellation( Credit)&apos;),
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;Misc Income( Credit )&apos; ),
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;Misc Income (Retail)&apos;),
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;Paid Rebate Advise&apos;),
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;Digital Collection &amp; Receipting issue&apos;),
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;To pay rebate Advise&apos;),
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;Balance Confirmation/No Dues Certificate/Ledger&apos;),
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;GST Issue&apos;),
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;Refund to Customer&apos;),
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;Any Misc.&apos;),
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;Change Collector in Retail&apos;),
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;Reciept cancellation( Retail)&apos;),
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;Credit Note&apos;),
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;To pay Debit Advise&apos;),
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;Topay to Credit conversion&apos;),
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;Retail Allied bill&apos;),
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;Rate issue - Retail&apos;),
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;Retail GST Invoice&apos;)
+	  ),
+	OR(
+	ISPICKVAL({!$Record.Status__c},&apos;Active&apos;)
+	,ISPICKVAL({!$Record.Status__c},&apos;Provisional&apos;)
+	  )
+)</expression>
+    </formulas>
+    <formulas>
+        <name>isCreatOrUpdate</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <formulas>
+        <name>IsRejectedCase</name>
+        <dataType>Boolean</dataType>
+        <expression>OR(
+  AND(
+    $Record.RecordType.DeveloperName == &quot;Credit_Debit_Note&quot;,
+    OR(
+      TEXT($Record.Status__c) == &quot;Rejected&quot;,
+      TEXT($Record.Approval_Status__c) == &quot;Rejected&quot;,
+      TEXT($Record.Approval_Status__c) == &quot;Rejected by Claim Dept&quot;,
+      TEXT($Record.Approval_Status__c) == &quot;Rejected By AM&quot;
+    )
+  ),
+
+  AND(
+    $Record.RecordType.DeveloperName == &quot;Corporate_Credit_Case&quot;,
+    OR(
+      TEXT($Record.Status__c) == &quot;Rejected&quot;,
+      TEXT($Record.Approval_Status__c) == &quot;Rejected By AM&quot;
+    )
+  ),
+
+  AND(
+    $Record.RecordType.DeveloperName == &quot;Customer_Portal_Access_new&quot;,
+    OR(
+      TEXT($Record.Status__c) == &quot;Rejected&quot;,
+      TEXT($Record.Approval_Status__c) == &quot;Rejected by CO&quot;,
+      TEXT($Record.Approval_Status__c) == &quot;Rejected by Claim Dept&quot;,
+      TEXT($Record.Approval_Status__c) == &quot;Rejected By AM&quot;
+    )
+  )
+)</expression>
+    </formulas>
+    <interviewLabel>Case_RTF_BeforeSave_Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Case_RTF_BeforeSave_Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>orgSetting</name>
+        <label>orgSetting</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>FlowisActive</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Label</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Flow</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Org_Setting__mdt</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Is_active__c</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>orgSetting</targetReference>
+        </connector>
+        <object>Case__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Creates a Booking Request support case from the validated booking details and returns the case number.</description>
+    <developerName>Create_Booking_Request_Case</developerName>
+    <invocationTarget>BookingRequestCaseAction</invocationTarget>
+    <invocationTargetType>apex</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <localDeveloperName>Create_Booking_Request_Case</localDeveloperName>
+    <masterLabel>Create Booking Request Case</masterLabel>
+    <progressIndicatorMessage>Registering your pickup request...</progressIndicatorMessage>
+</GenAiFunction>

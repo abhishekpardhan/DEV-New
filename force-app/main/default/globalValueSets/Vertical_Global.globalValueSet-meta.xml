@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>ALLIANCE PARTNER MANAGEMENT</fullName>
+        <default>false</default>
+        <label>ALLIANCE PARTNER MANAGEMENT</label>
+    </customValue>
+    <customValue>
+        <fullName>APPARELS</fullName>
+        <default>false</default>
+        <label>APPARELS</label>
+    </customValue>
+    <customValue>
+        <fullName>AUTOMOTIVE</fullName>
+        <default>false</default>
+        <label>AUTOMOTIVE</label>
+    </customValue>
+    <customValue>
+        <fullName>BOOKS</fullName>
+        <default>false</default>
+        <label>BOOKS</label>
+    </customValue>
+    <customValue>
+        <fullName>ENGINEERING</fullName>
+        <default>false</default>
+        <label>ENGINEERING</label>
+    </customValue>
+    <customValue>
+        <fullName>FMCG</fullName>
+        <default>false</default>
+        <label>FMCG</label>
+    </customValue>
+    <customValue>
+        <fullName>HANDICRAFTS</fullName>
+        <default>false</default>
+        <label>HANDICRAFTS</label>
+    </customValue>
+    <customValue>
+        <fullName>HEALTH</fullName>
+        <default>false</default>
+        <label>HEALTH</label>
+    </customValue>
+    <customValue>
+        <fullName>HI TECH</fullName>
+        <default>false</default>
+        <label>HI TECH</label>
+    </customValue>
+    <customValue>
+        <fullName>INSTITUTION</fullName>
+        <default>false</default>
+        <label>INSTITUTION</label>
+    </customValue>
+    <customValue>
+        <fullName>MULTIBRAND</fullName>
+        <default>false</default>
+        <label>MULTIBRAND</label>
+    </customValue>
+    <customValue>
+        <fullName>RETAILSPLSRV</fullName>
+        <default>false</default>
+        <label>RETAILSPLSRV</label>
+    </customValue>
+    <customValue>
+        <fullName>SERVICE</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>SERVICE</label>
+    </customValue>
+    <customValue>
+        <fullName>Retail Special Services</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Retail Special Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Publishing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Publishing</label>
+    </customValue>
+    <customValue>
+        <fullName>Institutional</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Institutional</label>
+    </customValue>
+    <customValue>
+        <fullName>HEALTHCARE</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>HEALTHCARE</label>
+    </customValue>
+    <customValue>
+        <fullName>FMCG/CONSUMER GOODS</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>FMCG/CONSUMER GOODS</label>
+    </customValue>
+    <customValue>
+        <fullName>Engineering &amp; Electrical Hardware</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Engineering &amp; Electrical Hardware</label>
+    </customValue>
+    <customValue>
+        <fullName>APPARELS &amp; LIFESTYLE</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>APPARELS &amp; LIFESTYLE</label>
+    </customValue>
+    <masterLabel>Vertical Global</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

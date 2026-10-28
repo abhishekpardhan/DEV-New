@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Branch_Mandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISPICKVAL( Source__c , &quot;Branch&quot;) ,  ISBLANK(Booking_Branch__c))</errorConditionFormula>
+    <errorDisplayField>Booking_Branch__c</errorDisplayField>
+    <errorMessage>Please select a Branch.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,21 @@
+.slds-carousel__autoplay{
+	display:none;
+}
+.slds-carousel__content{
+	height:auto;
+	padding:5px 0 10px 0;
+}
+.slds-carousel__image img{
+	height:350px!important;
+}
+.slds-carousel__stage{
+	background-color:#fff;
+	border-radius:5px;
+}
+.slds-carousel__indicators{
+	margin-bottom:5px;
+	margin-top:8px;
+}
+.slds-carousel__content{
+	display:none;
+}

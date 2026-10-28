@@ -1,0 +1,174 @@
+<!-- 
+    File Name          : wayBillSearch
+    Description        : This Component is is used to search waybill information and show in the page
+    Author             : Deepak 
+    Last Modified Date : 6/7/2021
+    Last Modified By   :
+    Modification Logs  
+    Ver           Date              Author                Modification
+    =====================================================================
+    1.0         6/7/2021         Deepak                Initial Version
+
+-->
+<!-- sldsValidatorIgnore -->
+<template>
+    <!-- Spinner Section -->
+    <div if:true={isSpinnerShow}> 
+        <lightning-spinner alternative-text="Loading" variant="brand" size="small"></lightning-spinner>
+    </div>
+    <lightning-card title="Waybill Search " icon-name="custom:custom39">
+        <div id="card-body" class="slds-border_top slds-var-p-horizontal_xx-small">
+            <!-- Input and Search Section -->
+            <lightning-layout multiple-rows="true" vertical-align="end" horizontal-align="slds-grid_align-center">
+                <lightning-layout-item size="12" small-device-size="12" medium-device-size="8" large-device-size="6" padding="around-small">
+                    <div class="slds-form-element__control">
+                        <lightning-input type="text" value={searchedWayBillNo} label="Enter Waybill Number"  max-length="15" onchange={handleWayBillChange} ></lightning-input>
+                    </div>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" small-device-size="12" medium-device-size="4" large-device-size="6" padding="around-small">
+                    <div class="slds-form-element__control">
+                        <lightning-button label="Search" disabled={isSearchDisabled} variant="brand" onclick={handleSearch}></lightning-button>
+                    </div>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" padding="around-small">
+                    <div class="slds-required" if:true={errorMassage}>{errorMassage}</div>
+                </lightning-layout-item>
+            </lightning-layout>
+            <!-- Result Section -->
+            <div if:true={showDetail} id="result-section">
+                <div id="Information-section">
+                    <!-- Header Information Section-->
+                    <div id="header-info">
+                        <h3 class="slds-section-title--divider">Showing Information for  WayBill # {waybillInfo.waybillNo}</h3>
+                        <lightning-layout multiple-rows="true" >
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" padding="around-small">
+                                <div class="slds-form-element slds-text-title_bold"><span class="slds-form-element__label">WayBill Status</span>
+                                    <div class="slds-form-element__control"><span class="slds-form-element__static"><p>{WayBillStatus}</p></span></div>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6" padding="around-small">
+                                <div class="slds-form-element slds-border_bottom  "><span class="slds-form-element__label">Pick Up Date</span>
+                                    <div class="slds-form-element__control"><span class="slds-form-element__static"><p>{waybillInfo.pickupDate}</p></span></div>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6" padding="around-small">
+                                <div class="slds-form-element slds-border_bottom  "><span class="slds-form-element__label">Ship Date</span>
+                                    <div class="slds-form-element__control"><span class="slds-form-element__static"><p>{waybillInfo.shipDate}</p></span></div>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6" padding="around-small">
+                                <div class="slds-form-element slds-border_bottom  "><span class="slds-form-element__label">Booking Branch</span>
+                                    <div class="slds-form-element__control"><span class="slds-form-element__static"><p>{waybillInfo.bookingBranch}</p></span></div>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6" padding="around-small">
+                                <div class="slds-form-element slds-border_bottom  "><span class="slds-form-element__label">Mode</span>
+                                    <div class="slds-form-element__control"><span class="slds-form-element__static"><p>{waybillInfo.mode}</p></span></div>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6" padding="around-small">
+                                <div class="slds-form-element slds-border_bottom  "><span class="slds-form-element__label">DOD/DOCC Amount</span>
+                                    <div class="slds-form-element__control"><span class="slds-form-element__static"><p>{dodDaccAmt}</p></span></div>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6" padding="around-small">
+                                <div class="slds-form-element slds-border_bottom  "><span class="slds-form-element__label">Destination Pin Code</span>
+                                    <div class="slds-form-element__control"><span class="slds-form-element__static"><p>{waybillInfo.pinode}</p></span></div>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6" padding="around-small">
+                                <div class="slds-form-element slds-border_bottom  "><span class="slds-form-element__label">Delivery City</span>
+                                    <div class="slds-form-element__control"><span class="slds-form-element__static"><p>{waybillInfo.dlvryCity}</p></span></div>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6" padding="around-small">
+                                <div class="slds-form-element slds-border_bottom  "><span class="slds-form-element__label">Delivery Gateway</span>
+                                    <div class="slds-form-element__control"><span class="slds-form-element__static"><p>{waybillInfo.dlvryGty}</p></span></div>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6" padding="around-small">
+                                <div class="slds-form-element slds-border_bottom  "><span class="slds-form-element__label">Freight (if waybill booked on Paid /To pay for Retail)</span>
+                                    <div class="slds-form-element__control"><span class="slds-form-element__static"><p>{waybillInfo.freight} </p></span></div>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6" padding="around-small">
+                                <div class="slds-form-element slds-border_bottom  "><span class="slds-form-element__label">SFX/PRC (Code as per Mode of payment)</span>
+                                    <div class="slds-form-element__control"><span class="slds-form-element__static"><p>{waybillInfo.sfxPrcCode}</p></span></div>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6" padding="around-small">
+                                <div class="slds-form-element slds-border_bottom  "><span class="slds-form-element__label">Consignment Type</span>
+                                    <div class="slds-form-element__control"><span class="slds-form-element__static"><p>{waybillInfo.dlvryType}</p></span></div>
+                                </div>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                    </div>
+                    <!-- Consignor Information Section-->
+                    <div id="consignor-info">
+                        <h3 class="slds-section-title--divider">Consignor Information</h3>
+                        <lightning-layout multiple-rows="true" > 
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6" padding="around-small">
+                                <div class="slds-form-element slds-border_bottom  "><span class="slds-form-element__label">Name</span>
+                                    <div class="slds-form-element__control"><span class="slds-form-element__static"><p>{waybillInfo.consignor}</p></span></div>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6" padding="around-small">
+                                <div class="slds-form-element slds-border_bottom  "><span class="slds-form-element__label">GSTIN</span>
+                                    <div class="slds-form-element__control"><span class="slds-form-element__static"><p>{waybillInfo.cnorGstn}</p></span></div>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6" padding="around-small">
+                                <div class="slds-form-element slds-border_bottom  "><span class="slds-form-element__label">Mobile</span>
+                                    <div class="slds-form-element__control"><span class="slds-form-element__static"><p>{waybillInfo.cnorMobNo}</p></span></div>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6" padding="around-small">
+                                <div class="slds-form-element slds-border_bottom  "><span class="slds-form-element__label">Email</span>
+                                    <div class="slds-form-element__control"><span class="slds-form-element__static"><p>{waybillInfo.cnorEmailId}</p></span></div>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6" padding="around-small">
+                                <div class="slds-form-element slds-border_bottom  "><span class="slds-form-element__label">Address</span>
+                                    <div class="slds-form-element__control"><span class="slds-form-element__static"><p>{waybillInfo.cnorAddress}</p></span></div>
+                                </div>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                    </div>
+                    <!-- Consignee Information Section-->
+                    <div id="consignee-info">
+                        <h3 class="slds-section-title--divider">Consignee Information</h3>
+                        <lightning-layout multiple-rows="true" > 
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6" padding="around-small">
+                                <div class="slds-form-element slds-border_bottom  "><span class="slds-form-element__label">Name</span>
+                                    <div class="slds-form-element__control"><span class="slds-form-element__static"><p>{waybillInfo.consignee}</p></span></div>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6" padding="around-small">
+                                <div class="slds-form-element slds-border_bottom  "><span class="slds-form-element__label">GSTIN</span>
+                                    <div class="slds-form-element__control"><span class="slds-form-element__static"><p>{waybillInfo.cneeGstn}</p></span></div>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6" padding="around-small">
+                                <div class="slds-form-element slds-border_bottom  "><span class="slds-form-element__label">Mobile</span>
+                                    <div class="slds-form-element__control"><span class="slds-form-element__static"><p>{waybillInfo.cneeMob}</p></span></div>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6" padding="around-small">
+                                <div class="slds-form-element slds-border_bottom  "><span class="slds-form-element__label">Email</span>
+                                    <div class="slds-form-element__control"><span class="slds-form-element__static"><p>{waybillInfo.cneeEmailId}</p></span></div>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6" padding="around-small">
+                                <div class="slds-form-element slds-border_bottom  "><span class="slds-form-element__label">Address</span>
+                                    <div class="slds-form-element__control"><span class="slds-form-element__static"><p>{waybillInfo.cneeAddress}</p></span></div>
+                                </div>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                    </div>
+                </div>
+                <!-- table Section -->
+                <c-way-bill-track-table track-data={trackData} ></c-way-bill-track-table>
+            </div>
+        </div> 
+    </lightning-card>
+</template>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment_Remaining_Date_Mandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISCHANGED( OwnerId ), OR(ISPICKVAL( Payment_Remaining__c ,&apos;Recoverable&apos;),ISPICKVAL( Payment_Remaining__c ,&apos;Partly Recoverable / Non Recoverable&apos;)), 
+RecordType.DeveloperName = &apos;Collection&apos;,ISBLANK( Remaining_Payment_Tentative_Date__c),NOT($Profile.Name =&apos;Integration User&apos;),NOT($Profile.Name = &apos;Portfolio Management&apos;),NOT($Profile.Name = &apos;System Administrator&apos;)
+)</errorConditionFormula>
+    <errorDisplayField>Remaining_Payment_Tentative_Date__c</errorDisplayField>
+    <errorMessage>Please enter Tentative Date for recoverable payment.</errorMessage>
+</ValidationRule>

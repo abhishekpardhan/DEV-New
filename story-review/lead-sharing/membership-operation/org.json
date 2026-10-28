@@ -1,0 +1,19 @@
+﻿{
+  "status": 0,
+  "result": {
+    "records": [
+      {
+        "attributes": {
+          "type": "Organization",
+          "url": "/services/data/v68.0/sobjects/Organization/00DC1000005VGonMAG"
+        },
+        "Id": "00DC1000005VGonMAG",
+        "Name": "Safexpress Private Limited",
+        "IsSandbox": true
+      }
+    ],
+    "totalSize": 1,
+    "done": true
+  },
+  "warnings": []
+}

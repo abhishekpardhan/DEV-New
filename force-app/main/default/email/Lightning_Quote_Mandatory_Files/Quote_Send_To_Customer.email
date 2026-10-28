@@ -1,0 +1,16 @@
+<Html>
+<p style=font-family:Cambria;>
+Dear {!Opportunity__c.Salutation__c} {!Opportunity__c.Contact_Person_Name__c}
+ <br/><br/>
+Greetings from Safexpress!  
+<br/><br/> 
+In reference to your discussion with our representative, we are sending you a commercial proposal covering our pricing terms for pan India Express Distribution through Surface and Air modes. Please feel free to approach us for any further clarity.
+<br/> <br/>
+Looking forward to welcome you onboard and serve you as your supply chain and logistics partner!<br/>
+<br/>
+Warm Regards <br/>
+Team - Safexpress <br/><br/>
+<img src="https://safeforce1--c.ap5.content.force.com/servlet/servlet.ImageServer?id=0157F000001KE7J&oid=00D72000003PJfF&lastMod=1528388029000" alt="Company Logo" height="100" width="190"/>
+</p>
+<br/>
+</Html>

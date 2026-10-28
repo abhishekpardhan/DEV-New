@@ -1,0 +1,35 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <div class="main_class">
+        <div if:false={displayText}>
+            <c-custom-lookup obj-name="Account" field-name="Rate_Card_Formula__c" search-placeholder="Search Accounts"
+                icon-name="standard:account" onlookupselected={handleAccountSelection}> </c-custom-lookup>
+        </div>
+
+        <div if:true={displayText}>
+            <div class="slds-combobox_container slds-has-selection">
+                <label class="slds-form-element__label" for="combobox-id-1"><span class="slds-required">*</span>SFX/PRC/Rate Card</label>
+                <div class="lookupInputContainer slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
+                    aria-expanded="false" aria-haspopup="listbox" role="combobox">
+                    <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_left-right"
+                        role="none">
+                        <!--Lookup Selected record pill container start-->
+                        <div class="pillDiv">
+                            <span class="slds-icon_container slds-combobox__input-entity-icon">
+                                <lightning-icon icon-name="standard:account" size="x-small" alternative-text="icon">
+                                </lightning-icon>
+                            </span>
+                            <input type="text" id="combobox-id-1" value={displayText}
+                                class="slds-input slds-combobox__input slds-combobox__input-value" readonly />
+                            <button class="slds-button slds-button_icon slds-input__icon slds-input__icon_right"
+                                title="Remove selected option">
+                                <lightning-icon icon-name="utility:close" size="x-small" alternative-text="close icon"
+                                    onclick={handleRemovePill}></lightning-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

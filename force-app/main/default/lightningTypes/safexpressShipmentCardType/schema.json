@@ -1,0 +1,26 @@
+{
+  "title" : "SafexpressShipmentCardType",
+  "lightning:type" : "lightning__objectType",
+  "properties" : {
+    "state" : {
+      "title" : "State",
+      "lightning:type" : "lightning__textType"
+    },
+    "headerColor" : {
+      "title" : "Header Color",
+      "lightning:type" : "lightning__textType"
+    },
+    "headerTitle" : {
+      "title" : "Header Title",
+      "lightning:type" : "lightning__textType"
+    },
+    "footerNote" : {
+      "title" : "Footer Note",
+      "lightning:type" : "lightning__textType"
+    },
+    "errorMessage" : {
+      "title" : "Error Message",
+      "lightning:type" : "lightning__textType"
+    }
+  }
+}

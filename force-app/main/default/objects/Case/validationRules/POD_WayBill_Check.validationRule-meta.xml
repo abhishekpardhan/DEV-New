@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>POD_WayBill_Check</fullName>
+    <active>true</active>
+    <description>WayBill Status should be delivered to create a POD Case.</description>
+    <errorConditionFormula>AND(
+    NOT($Setup.Custom_Validation_Exception_Setting__c.Bypass_Validation_Rules__c),
+				RecordType.Name = &apos;POD&apos;,
+				OR(TEXT(WayBill_Status__c) != &apos;Delivered&apos;,ISBLANK(TEXT(WayBill_Status__c)))
+)</errorConditionFormula>
+    <errorMessage>WayBill Status should be Delivered to create a POD Type Case.</errorMessage>
+</ValidationRule>

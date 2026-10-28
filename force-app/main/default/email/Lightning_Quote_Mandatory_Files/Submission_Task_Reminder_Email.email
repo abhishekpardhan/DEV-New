@@ -1,0 +1,6 @@
+Hi {!Task.Bdm_Name__c},
+
+{!Task.Subject} is not completed.
+Kindly follow up on this and update the status and remarks.
+
+Thanks

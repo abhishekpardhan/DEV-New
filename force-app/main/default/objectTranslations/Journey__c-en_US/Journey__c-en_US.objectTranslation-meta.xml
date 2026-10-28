@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Journey</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Journey</value>
+    </caseValues>
+    <layouts>
+        <layout>Approval Process completed</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- GeoLocation --></label>
+            <section>GeoLocation</section>
+        </sections>
+        <sections>
+            <label><!-- Total Journey(In KM) --></label>
+            <section>Total Journey(In KM)</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Journey Completed</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- GeoLocation --></label>
+            <section>GeoLocation</section>
+        </sections>
+        <sections>
+            <label><!-- Total Journey(In KM) --></label>
+            <section>Total Journey(In KM)</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Journey Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>New Journey</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- GeoLocation --></label>
+            <section>GeoLocation</section>
+        </sections>
+        <sections>
+            <label><!-- Total Journey(In KM) --></label>
+            <section>Total Journey(In KM)</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Check In --></label>
+        <name>Check_In</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Check Out --></label>
+        <name>Check_Out</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Journey Audit --></label>
+        <name>Journey_Audit</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Not to be Claimed --></label>
+        <name>NotToBeClaimecFlowCall</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Not to be Claimed --></label>
+        <name>Not_to_be_Claimed</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Approval Process Completed --></label>
+        <name>Approval_Process_Completed</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Journey Completed --></label>
+        <name>Journey_Completed</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- New Journey --></label>
+        <name>New_Journey</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- You Can&apos;t enter this value while creating a new record. --></errorMessage>
+        <name>Actual_Km_validation_on_insert</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Journey Date cant be changed after check-in --></errorMessage>
+        <name>Journey_Date_cant_Change</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill future Date. --></errorMessage>
+        <name>Journey_Date_future_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Mode of Transport cannot be changed after the Journey has been checked in --></errorMessage>
+        <name>Mode_of_transportation_cannot_be_changed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can&apos;t change the Outstation. --></errorMessage>
+        <name>Outstation_cant_change</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot edit records that are older than 30 days. --></errorMessage>
+        <name>Prevent_Editing_Old_Records</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill Remarks. --></errorMessage>
+        <name>Remarks_Mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You Can&apos;t enter this value while creating a new record. --></errorMessage>
+        <name>Remarks_validation_on_Insert</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You have No Permission to Edit this Field. --></errorMessage>
+        <name>owner_readonly</name>
+    </validationRules>
+</CustomObjectTranslation>

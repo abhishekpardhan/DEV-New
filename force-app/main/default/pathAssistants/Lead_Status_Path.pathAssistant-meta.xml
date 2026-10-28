@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Lead</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Lead Status Path</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Region__c</fieldNames>
+        <fieldNames>Area__c</fieldNames>
+        <fieldNames>Description</fieldNames>
+        <fieldNames>Is_Registered_Customer__c</fieldNames>
+        <fieldNames>Booking_Branch__c</fieldNames>
+        <picklistValueName>Active</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Lead_Drop_Reason__c</fieldNames>
+        <fieldNames>Approval_Status__c</fieldNames>
+        <fieldNames>Description</fieldNames>
+        <picklistValueName>Dropped</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Lead_Drop_Reason__c</fieldNames>
+        <fieldNames>Description</fieldNames>
+        <picklistValueName>Dropped by Central desk</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Vertical__c</fieldNames>
+        <fieldNames>Sub_Vertical__c</fieldNames>
+        <fieldNames>Address</fieldNames>
+        <picklistValueName>Qualified</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>

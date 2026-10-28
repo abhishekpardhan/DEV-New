@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataSourceObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <dataSource>Unified_Messaging_Consent_17efc46f_f202_4329_ad29_2c3f3e458442</dataSource>
+    <externalRecordIdentifier>Unified_Messaging_Consent_ConsentAuditTrail_FE3A7FBA</externalRecordIdentifier>
+    <masterLabel>Unified_Messaging_Consent_ConsentAuditTrail_FE3A7FBA</masterLabel>
+    <storageType>LOCAL</storageType>
+    <templateVersion>1</templateVersion>
+</DataSourceObject>

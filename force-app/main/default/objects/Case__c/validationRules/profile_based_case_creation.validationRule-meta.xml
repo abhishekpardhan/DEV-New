@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>profile_based_case_creation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT(SkipValidationWhileReAssigning__c),
+OR(AND(AND($Profile.Name &lt;&gt;&apos;System Administrator&apos;,$Profile.Name &lt;&gt;&apos;Integration User&apos;,$Profile.Name &lt;&gt;&apos;Regional Manager&apos;,$Profile.Name &lt;&gt;&apos;Regional Finance Head&apos;,$Profile.Name &lt;&gt;&apos;Revenue Management&apos;),
+OR(ISPICKVAL(Case_Typee__c, &apos;GST Issue&apos;),ISPICKVAL(Case_Typee__c,&apos;Refund to Customer&apos;),
+ISPICKVAL(Case_Typee__c,&apos;Retail GST Invoice&apos;),ISPICKVAL(Case_Typee__c,&apos;Change Collector in Retail&apos;),ISPICKVAL(Case_Typee__c,&apos;Reciept cancellation( Retail)&apos;),
+ISPICKVAL(Case_Typee__c,&apos;Reciept cancellation( Credit)&apos;),ISPICKVAL(Case_Typee__c,&apos;Paid Collection Issue&apos;),ISPICKVAL(Case_Typee__c,&apos;To pay Collection issue&apos;),
+ISPICKVAL(Case_Typee__c,&apos;To pay Debit Advise&apos;),ISPICKVAL(Case_Typee__c,&apos;Discount On Topay&apos;),ISPICKVAL(Case_Typee__c,&apos;To pay Debit Advise&apos;),
+ISPICKVAL(Case_Typee__c,&apos;To Pay delivery issue due to freight&apos;),ISPICKVAL(Case_Typee__c,&apos;Any Misc.&apos;),ISPICKVAL(Case_Typee__c,&apos;Misc Income (Retail)&apos;),
+ISPICKVAL(Case_Typee__c,&apos;Topay to Credit conversion&apos;),ISPICKVAL(Case_Typee__c,&apos;Misc Income( Credit )&apos;),ISPICKVAL(Case_Typee__c,&apos;Digital Collection &amp; Receipting issue&apos;),ISPICKVAL(Case_Typee__c,&apos;Waybill Edit&apos;),ISPICKVAL(Case_Typee__c,&apos;Wrong bank account selected&apos;),ISPICKVAL(Case_Typee__c,&apos;Wrong waybill / Bill Apply&apos;),ISPICKVAL(Case_Typee__c,&apos;Wrong Cheque No Mentioned or document upload&apos;))),
+AND(AND($Profile.Name &lt;&gt;&apos;System Administrator&apos;,$Profile.Name &lt;&gt;&apos;Integration User&apos;,$Profile.Name &lt;&gt;&apos;Area Manager&apos;,$Profile.Name &lt;&gt;&apos;Regional Manager&apos;,$Profile.Name &lt;&gt;&apos;BDM&apos;,$Profile.Name &lt;&gt;&apos;BDM-6&apos;,
+$Profile.Name &lt;&gt;&apos;Revenue Management&apos;,$Profile.Name &lt;&gt;&apos;Claim User Profile&apos;,$Profile.Name &lt;&gt;&apos;3PL&apos;,$Profile.Name &lt;&gt;&apos;Area Manager-6&apos;),OR(
+ISPICKVAL(Case_Typee__c,&apos;Revised Bill&apos;),ISPICKVAL(Case_Typee__c,&apos;Base location/Collection Location/Bill Submission Location change&apos;),
+ISPICKVAL(Case_Typee__c,&apos;Bill Dispatch&apos;),ISPICKVAL(Case_Typee__c,&apos;POD requirement/CD requirement&apos;),ISPICKVAL(Case_Typee__c,&apos;Freight MIS requirement&apos;),
+ISPICKVAL(Case_Typee__c,&apos;Debit Note/Allied Bill&apos;),ISPICKVAL(Case_Typee__c,&apos;Bill Generation requirement&apos;)))))</errorConditionFormula>
+    <errorDisplayField>Case_Typee__c</errorDisplayField>
+    <errorMessage>You are not authorized to create this type of Case. Please change the case type</errorMessage>
+</ValidationRule>

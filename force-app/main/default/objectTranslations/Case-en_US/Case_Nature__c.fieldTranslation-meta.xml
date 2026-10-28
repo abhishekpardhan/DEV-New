@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Case Nature --></label>
+    <name>Case_Nature__c</name>
+    <picklistValues>
+        <masterLabel>Change Request</masterLabel>
+        <translation><!-- Change Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Complaint</masterLabel>
+        <translation><!-- Complaint --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Enquiry</masterLabel>
+        <translation><!-- Enquiry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>POD</masterLabel>
+        <translation><!-- POD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Request</masterLabel>
+        <translation><!-- Request --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

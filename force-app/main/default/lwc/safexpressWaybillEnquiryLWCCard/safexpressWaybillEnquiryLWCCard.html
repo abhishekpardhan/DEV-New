@@ -1,0 +1,69 @@
+<template>
+    <!-- Error state — simple message, no truck strip -->
+    <template lwc:if={isError}>
+        <article class="error-card">
+            <header class="header">
+                <img class="logo" src={logoUrl} alt="Safexpress" />
+                <div class="header-text">
+                    <p class="title">{headerTitle}</p>
+                </div>
+            </header>
+            <div class="error-body">
+                <p class="error-message">{errorMessage}</p>
+            </div>
+            <footer class="footer">{footerNote}</footer>
+        </article>
+    </template>
+
+    <!-- Data state — with truck strip and all fields -->
+    <template lwc:if={hasData}>
+        <article class="card">
+            <header class="header">
+                <img class="logo" src={logoUrl} alt="Safexpress" />
+                <div class="header-text">
+                    <p class="title">{headerTitle}</p>
+                </div>
+            </header>
+
+            <div class="truck-strip">
+                <img class="road" src={roadUrl} alt="" />
+                <img class="truck" src={truckUrl} alt="" />
+            </div>
+
+            <div class="details">
+                <div class="row">
+                    <span class="row-label">📦 Waybill No.</span>
+                    <span class="row-value">{waybillNumberFormatted}</span>
+                </div>
+                <div class="row">
+                    <span class="row-label">🕐 Last Event</span>
+                    <span class="row-value">{lastEvent}</span>
+                </div>
+                <div class="row">
+                    <span class="row-label">🚚 Current Status</span>
+                    <span class="row-value">{currentStatus}</span>
+                </div>
+                <template lwc:if={hasDeliveryLocation}>
+                    <div class="row">
+                        <span class="row-label">📍 Delivery Location</span>
+                        <span class="row-value">{deliveryLocation}</span>
+                    </div>
+                </template>
+                <template lwc:if={hasDeliveredOn}>
+                    <div class="row">
+                        <span class="row-label">✅ Delivered On</span>
+                        <span class="row-value">{deliveredOn}</span>
+                    </div>
+                </template>
+                <template lwc:if={hasCaseNumber}>
+                    <div class="row">
+                        <span class="row-label">🎫 Case Number</span>
+                        <span class="row-value">{caseNumber}</span>
+                    </div>
+                </template>
+            </div>
+
+            <footer class="footer">🙏 Thank you for choosing Safexpress. 😊</footer>
+        </article>
+    </template>
+</template>

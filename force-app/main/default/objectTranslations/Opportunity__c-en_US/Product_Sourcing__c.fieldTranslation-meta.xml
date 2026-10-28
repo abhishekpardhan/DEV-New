@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Product Sourcing --></label>
+    <name>Product_Sourcing__c</name>
+    <picklistValues>
+        <masterLabel>Import</masterLabel>
+        <translation><!-- Import --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Manufacturing</masterLabel>
+        <translation><!-- Manufacturing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outsourced Mfg</masterLabel>
+        <translation><!-- Outsourced Mfg --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trading</masterLabel>
+        <translation><!-- Trading --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

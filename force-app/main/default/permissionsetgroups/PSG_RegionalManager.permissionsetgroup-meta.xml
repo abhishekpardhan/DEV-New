@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>PSG_RegionalManager</label>
+    <permissionSets>PS_Account_Contact_Management</permissionSets>
+    <permissionSets>PS_Business_Detail_Management</permissionSets>
+    <permissionSets>PS_Case_FieldCommon</permissionSets>
+    <permissionSets>PS_Contract_FieldCommon</permissionSets>
+    <permissionSets>PS_Field_Misc</permissionSets>
+    <permissionSets>PS_Invoice_Billing_Management</permissionSets>
+    <permissionSets>PS_Journey_Event_Management</permissionSets>
+    <permissionSets>PS_Lead_Management</permissionSets>
+    <permissionSets>PS_Opportunity_Management</permissionSets>
+    <permissionSets>PS_Quote_Management</permissionSets>
+    <permissionSets>PS_Reference_Data_ReadOnly</permissionSets>
+    <permissionSets>PS_RegionalManager</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

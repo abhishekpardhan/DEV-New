@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Lead</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Leads</value>
+    </caseValues>
+    <layouts>
+        <layout>Converted Layout</layout>
+        <sections>
+            <label><!-- Corporate Address --></label>
+            <section>Corporate Address</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Assignment/Reassignment --></label>
+            <section>Lead Assignment/Reassignment</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Lead Layout</layout>
+        <sections>
+            <label><!-- Corporate Address --></label>
+            <section>Corporate Address</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Assignment/Reassignment --></label>
+            <section>Lead Assignment/Reassignment</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Retail Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Information --></label>
+            <section>Lead Information</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Change Record Type --></label>
+        <name>Change_Record_Type</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Convert --></label>
+        <name>Convert</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Converted Lead Recordtype --></label>
+        <name>Converted_Lead_Recordtype</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Credit Lead --></label>
+        <name>Credit_Lead</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Retail Lead --></label>
+        <name>Retail_Lead</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please change the owner from central team to any user. --></errorMessage>
+        <name>Assign_to_Central_Desk_uncheck_validatio</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select a Branch. --></errorMessage>
+        <name>Branch_Mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Fill Campaign Name. --></errorMessage>
+        <name>Campaign_name_mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only Central Desk can use this status --></errorMessage>
+        <name>Central_Desk_Lead_drop_status</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Waybill Number must be exactly 12 digits and contains only numbers --></errorMessage>
+        <name>CheckWaybillNumber</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Lead Name cannot be changed. --></errorMessage>
+        <name>Converted_status_validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Empty this field For the current Status. --></errorMessage>
+        <name>Deferred_Till_Remove</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Fill Deferred till. --></errorMessage>
+        <name>Deferred_Till_mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select the &quot;Dropped by Central Desk&quot; value --></errorMessage>
+        <name>Dropped_status_restricted_for_Central_De</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Fill Existing Customer Details --></errorMessage>
+        <name>Existing_Customer_Details_Mandaotry</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Status should be Active only --></errorMessage>
+        <name>ForRetail_StatusIsActive</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- GST number is required for qualified lead --></errorMessage>
+        <name>GST_is_required_for_Qualified_lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Invalid GST number --></errorMessage>
+        <name>GST_number_invalid</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can&apos;t change the status to converted. --></errorMessage>
+        <name>Lead_Converted_status</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Lead drop reason must be blank/none if status is not dropped. --></errorMessage>
+        <name>Lead_Drop_Reason_Blank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Lead Drop Reason is required while dropping the lead. --></errorMessage>
+        <name>Lead_Drop_Reason_Mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You don&apos;t have permission to change the Owner. --></errorMessage>
+        <name>Lead_Owner_Read_Only</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This record is locked --></errorMessage>
+        <name>Lead_Record_Lock</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Status should be Active only. --></errorMessage>
+        <name>Lead_Status_IsActive</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can&apos;t change the Source while Status is Qualified. --></errorMessage>
+        <name>Lead_Status_Qualified_2</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can&apos;t change the Lead name while Status is Qualified. --></errorMessage>
+        <name>Lead_Status_is_Qualified1</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Mobile No should be in 10 digit --></errorMessage>
+        <name>Mobile_No_should_be_in_10_digit</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select present or future date. --></errorMessage>
+        <name>Past_Date_not_allowed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only Central Team can edit the record. --></errorMessage>
+        <name>Record_Update_Restricted</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can’t edit GST Exempt. --></errorMessage>
+        <name>Restrict_GST_Exempt_Edit</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Safexpress domain email not allowed --></errorMessage>
+        <name>Safexpress_domain_email_not_allowed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Pin Code Should be 6 Digits --></errorMessage>
+        <name>Zip_code_Should_be_6_Digist</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Paid Credit Note9</label>
+    <protected>false</protected>
+    <values>
+        <field>Case_Type__c</field>
+        <value xsi:type="xsd:string">Paid Credit Note</value>
+    </values>
+    <values>
+        <field>FederationIdentifier__c</field>
+        <value xsi:type="xsd:string">61308@safexpressdc1.com</value>
+    </values>
+    <values>
+        <field>Sub_Type_Order__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>Sub_Type__c</field>
+        <value xsi:type="xsd:string">FOC Booking</value>
+    </values>
+    <values>
+        <field>Type_Order__c</field>
+        <value xsi:type="xsd:double">2.0</value>
+    </values>
+    <values>
+        <field>UserId__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

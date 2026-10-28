@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Account Manager - Manages Credit Customers</fullName>
+        <default>false</default>
+        <label>Account Manager - Manages Credit Customers</label>
+    </customValue>
+    <customValue>
+        <fullName>Area Manager</fullName>
+        <default>false</default>
+        <label>Area Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Assistant Area Manager</fullName>
+        <default>false</default>
+        <label>Assistant Area Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Assistant Manager BDM</fullName>
+        <default>false</default>
+        <label>Assistant Manager BDM</label>
+    </customValue>
+    <customValue>
+        <fullName>BDM(SE)</fullName>
+        <default>false</default>
+        <label>BDM(SE)</label>
+    </customValue>
+    <customValue>
+        <fullName>BDM - AVP- New Sales Management</fullName>
+        <default>false</default>
+        <label>BDM - AVP- New Sales Management</label>
+    </customValue>
+    <customValue>
+        <fullName>BDM - VP  (BDM)</fullName>
+        <default>false</default>
+        <label>BDM - VP  (BDM)</label>
+    </customValue>
+    <customValue>
+        <fullName>CAM Team</fullName>
+        <default>false</default>
+        <label>CAM Team</label>
+    </customValue>
+    <customValue>
+        <fullName>CCD - MBR Support</fullName>
+        <default>false</default>
+        <label>CCD - MBR Support</label>
+    </customValue>
+    <customValue>
+        <fullName>Client Relation Support (CRS)</fullName>
+        <default>false</default>
+        <label>Client Relation Support (CRS)</label>
+    </customValue>
+    <customValue>
+        <fullName>Conveyance Head</fullName>
+        <default>false</default>
+        <label>Conveyance Head</label>
+    </customValue>
+    <customValue>
+        <fullName>Conveyance Team</fullName>
+        <default>false</default>
+        <label>Conveyance Team</label>
+    </customValue>
+    <customValue>
+        <fullName>Coordinator - Executive assistant to RM</fullName>
+        <default>false</default>
+        <label>Coordinator - Executive assistant to RM</label>
+    </customValue>
+    <customValue>
+        <fullName>Coordinator-VP Office</fullName>
+        <default>false</default>
+        <label>Coordinator-VP Office</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate BDM - GBA</fullName>
+        <default>false</default>
+        <label>Corporate BDM - GBA</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate BDM - NSM</fullName>
+        <default>false</default>
+        <label>Corporate BDM - NSM</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate Credit Department</fullName>
+        <default>false</default>
+        <label>Corporate Credit Department</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate Head - Revenue Management</fullName>
+        <default>false</default>
+        <label>Corporate Head - Revenue Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate Head SCS</fullName>
+        <default>false</default>
+        <label>Corporate Head SCS</label>
+    </customValue>
+    <customValue>
+        <fullName>Executive</fullName>
+        <default>false</default>
+        <label>Executive</label>
+    </customValue>
+    <customValue>
+        <fullName>Executive Director</fullName>
+        <default>false</default>
+        <label>Executive Director</label>
+    </customValue>
+    <customValue>
+        <fullName>First Mile Sales Management</fullName>
+        <default>false</default>
+        <label>First Mile Sales Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Founder &amp; Chairman</fullName>
+        <default>false</default>
+        <label>Founder &amp; Chairman</label>
+    </customValue>
+    <customValue>
+        <fullName>GM BDM</fullName>
+        <default>false</default>
+        <label>GM BDM</label>
+    </customValue>
+    <customValue>
+        <fullName>Head - Business Information Report</fullName>
+        <default>false</default>
+        <label>Head - Business Information Report</label>
+    </customValue>
+    <customValue>
+        <fullName>Head-Client Relation</fullName>
+        <default>false</default>
+        <label>Head-Client Relation</label>
+    </customValue>
+    <customValue>
+        <fullName>Head-Contract Desk</fullName>
+        <default>false</default>
+        <label>Head-Contract Desk</label>
+    </customValue>
+    <customValue>
+        <fullName>Head - Corporate Credit Department</fullName>
+        <default>false</default>
+        <label>Head - Corporate Credit Department</label>
+    </customValue>
+    <customValue>
+        <fullName>Head-First Mile Sales Management</fullName>
+        <default>false</default>
+        <label>Head-First Mile Sales Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Head - FMSM</fullName>
+        <default>false</default>
+        <label>Head - FMSM</label>
+    </customValue>
+    <customValue>
+        <fullName>Head – Growth Strategy</fullName>
+        <default>false</default>
+        <label>Head – Growth Strategy</label>
+    </customValue>
+    <customValue>
+        <fullName>Head- Inbound Customer Management</fullName>
+        <default>false</default>
+        <label>Head- Inbound Customer Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Head-National Customer</fullName>
+        <default>false</default>
+        <label>Head-National Customer</label>
+    </customValue>
+    <customValue>
+        <fullName>Head-Negative Sale</fullName>
+        <default>false</default>
+        <label>Head-Negative Sale</label>
+    </customValue>
+    <customValue>
+        <fullName>Head - New Sales Management</fullName>
+        <default>false</default>
+        <label>Head - New Sales Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Head Quality Revenue Management</fullName>
+        <default>false</default>
+        <label>Head Quality Revenue Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Head-Retail</fullName>
+        <default>false</default>
+        <label>Head-Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>Head-Retail Service Centre</fullName>
+        <default>false</default>
+        <label>Head-Retail Service Centre</label>
+    </customValue>
+    <customValue>
+        <fullName>Head - Risk Management</fullName>
+        <default>false</default>
+        <label>Head - Risk Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Head-Safexperience Centre</fullName>
+        <default>false</default>
+        <label>Head-Safexperience Centre</label>
+    </customValue>
+    <customValue>
+        <fullName>Head - Weight Volume</fullName>
+        <default>false</default>
+        <label>Head - Weight Volume</label>
+    </customValue>
+    <customValue>
+        <fullName>Head - Zero Billing</fullName>
+        <default>false</default>
+        <label>Head - Zero Billing</label>
+    </customValue>
+    <customValue>
+        <fullName>Head-Zero Billing</fullName>
+        <default>false</default>
+        <label>Head-Zero Billing</label>
+    </customValue>
+    <customValue>
+        <fullName>Inbound Customer Management</fullName>
+        <default>false</default>
+        <label>Inbound Customer Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Manager BDM</fullName>
+        <default>false</default>
+        <label>Manager BDM</label>
+    </customValue>
+    <customValue>
+        <fullName>Managing Director</fullName>
+        <default>false</default>
+        <label>Managing Director</label>
+    </customValue>
+    <customValue>
+        <fullName>National Sales Manager- Regional Head</fullName>
+        <default>false</default>
+        <label>National Sales Manager- Regional Head</label>
+    </customValue>
+    <customValue>
+        <fullName>New Sales Management</fullName>
+        <default>false</default>
+        <label>New Sales Management</label>
+    </customValue>
+    <customValue>
+        <fullName>New Sales Manager</fullName>
+        <default>false</default>
+        <label>New Sales Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>New Sales Manager- Regional Head</fullName>
+        <default>false</default>
+        <label>New Sales Manager- Regional Head</label>
+    </customValue>
+    <customValue>
+        <fullName>On Boarding Team</fullName>
+        <default>false</default>
+        <label>On Boarding Team</label>
+    </customValue>
+    <customValue>
+        <fullName>Performance Management Team</fullName>
+        <default>false</default>
+        <label>Performance Management Team</label>
+    </customValue>
+    <customValue>
+        <fullName>Portfolio and Performance Management</fullName>
+        <default>false</default>
+        <label>Portfolio and Performance Management</label>
+    </customValue>
+    <customValue>
+        <fullName>President</fullName>
+        <default>false</default>
+        <label>President</label>
+    </customValue>
+    <customValue>
+        <fullName>Quality Revenue Management</fullName>
+        <default>false</default>
+        <label>Quality Revenue Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Regional Finance Manager</fullName>
+        <default>false</default>
+        <label>Regional Finance Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Regional Manager</fullName>
+        <default>false</default>
+        <label>Regional Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Retail</fullName>
+        <default>false</default>
+        <label>Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>Retail-Regional Head</fullName>
+        <default>false</default>
+        <label>Retail-Regional Head</label>
+    </customValue>
+    <customValue>
+        <fullName>Support</fullName>
+        <default>false</default>
+        <label>Safeforce1 Support</label>
+    </customValue>
+    <customValue>
+        <fullName>Safeforce Team</fullName>
+        <default>false</default>
+        <label>Safeforce Team</label>
+    </customValue>
+    <customValue>
+        <fullName>Safexperience Team</fullName>
+        <default>false</default>
+        <label>Safexperience Team</label>
+    </customValue>
+    <customValue>
+        <fullName>Salesforce Admin</fullName>
+        <default>false</default>
+        <label>Salesforce Administrator</label>
+    </customValue>
+    <customValue>
+        <fullName>Sales Officer - Mix of Account Manager, New Sales and Retail</fullName>
+        <default>false</default>
+        <label>Sales Officer - Mix of Account Manager, New Sales and Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>SCS - Accounts and Finance</fullName>
+        <default>false</default>
+        <label>SCS - Accounts and Finance</label>
+    </customValue>
+    <customValue>
+        <fullName>SCS – BDM</fullName>
+        <default>false</default>
+        <label>SCS – BDM</label>
+    </customValue>
+    <customValue>
+        <fullName>SCS - Head Business</fullName>
+        <default>false</default>
+        <label>SCS - Head Business</label>
+    </customValue>
+    <customValue>
+        <fullName>SCS – Operations</fullName>
+        <default>false</default>
+        <label>SCS – Operations</label>
+    </customValue>
+    <customValue>
+        <fullName>VP Marketing</fullName>
+        <default>false</default>
+        <label>VP Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>Zero-Biiling</fullName>
+        <default>false</default>
+        <label>Zero-Biiling</label>
+    </customValue>
+    <customValue>
+        <fullName>OST ( Operation and other Support Team)</fullName>
+        <default>false</default>
+        <label>OST ( Operation and other Support Team)</label>
+    </customValue>
+    <customValue>
+        <fullName>Enterprise Sales</fullName>
+        <default>false</default>
+        <label>Enterprise Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>Sr. Executive</fullName>
+        <default>false</default>
+        <label>Sr. Executive</label>
+    </customValue>
+    <customValue>
+        <fullName>Assistant Manager</fullName>
+        <default>false</default>
+        <label>Assistant Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Head - Strategy</fullName>
+        <default>false</default>
+        <label>Head - Strategy</label>
+    </customValue>
+    <customValue>
+        <fullName>Territory Manager</fullName>
+        <default>false</default>
+        <label>Territory Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Head Billing</fullName>
+        <default>false</default>
+        <label>Head Billing</label>
+    </customValue>
+    <customValue>
+        <fullName>Revenue Management</fullName>
+        <default>false</default>
+        <label>Revenue Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Regional Relationship Manager</fullName>
+        <default>false</default>
+        <label>Regional Relationship Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>ACCOUNT EXECUTIVE</fullName>
+        <default>false</default>
+        <label>ACCOUNT EXECUTIVE</label>
+    </customValue>
+    <customValue>
+        <fullName>Sr. Manager - Corporate Strategy</fullName>
+        <default>false</default>
+        <label>Sr. Manager - Corporate Strategy</label>
+    </customValue>
+    <customValue>
+        <fullName>Deputy Manager</fullName>
+        <default>false</default>
+        <label>Deputy Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>ADMINISTRATION</fullName>
+        <default>false</default>
+        <label>ADMINISTRATION</label>
+    </customValue>
+    <customValue>
+        <fullName>New Sales</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>New Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>ICM</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>ICM</label>
+    </customValue>
+    <masterLabel>Designation</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

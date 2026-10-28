@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Prompt xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>Contract Management User Guidance</masterLabel>
+    <promptVersions>
+        <body>&lt;p&gt;Introducing&amp;nbsp;to the &lt;strong&gt;Contract Management&lt;/strong&gt; module! This tool is designed to streamline contract creation, tracking, and management processes. Let’s get started with an overview of its key features.&lt;/p&gt;</body>
+        <delayDays>1</delayDays>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayType>Targeted</displayType>
+        <endDate>2088-01-01</endDate>
+        <experience>Lightning</experience>
+        <imageAltText>Logo</imageAltText>
+        <imageLocation>Right</imageLocation>
+        <isPublished>true</isPublished>
+        <masterLabel>Contract Management User Guidance Step 1</masterLabel>
+        <publishedDate>2025-01-10</publishedDate>
+        <referenceElementContext>{&quot;scope&quot;:{&quot;attributes&quot;:{&quot;id&quot;:&quot;sfdc:TabDefinition.standard-home&quot;}},&quot;version&quot;:2}</referenceElementContext>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <startDate>2025-01-08</startDate>
+        <stepNumber>1</stepNumber>
+        <timesToDisplay>2</timesToDisplay>
+        <title>Welcome to Contract Management</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>&lt;p&gt;&lt;strong&gt;Details Tab&lt;/strong&gt;: View or edit all contract details.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Related Lists&lt;/strong&gt;: Access associated records, such as accounts, opportunities and files.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Chatter&lt;/strong&gt;: Collaborate with team members directly within the contract record.&lt;/p&gt;</body>
+        <customApplication>Safexpress</customApplication>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayType>Targeted</displayType>
+        <experience>Lightning</experience>
+        <imageAltText>c1</imageAltText>
+        <imageLocation>Right</imageLocation>
+        <isPublished>false</isPublished>
+        <masterLabel>Contract Management User Guidance Step 2</masterLabel>
+        <referenceElementContext>{&quot;scope&quot;:{&quot;attributes&quot;:{&quot;id&quot;:&quot;181c7013df09423d8f755b49c067f6f3&quot;}},&quot;version&quot;:2}</referenceElementContext>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>2</stepNumber>
+        <targetPageKey1>chatter</targetPageKey1>
+        <targetPageType>standard__namedPage</targetPageType>
+        <title>Navigation Overview</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>&lt;p&gt;With Contract Management, you can:&lt;/p&gt;&lt;p&gt;Create and store contracts securely.&lt;/p&gt;&lt;p&gt;Track contract statuses and key milestones.&lt;/p&gt;&lt;p&gt;Set automated reminders for renewal dates.&lt;/p&gt;&lt;p&gt;Collaborate with stakeholders effectively.&lt;/p&gt;&lt;p&gt;Explore the tabs and features to maximize efficiency.&lt;/p&gt;</body>
+        <customApplication>Safexpress</customApplication>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayType>Targeted</displayType>
+        <experience>Lightning</experience>
+        <imageAltText>c2</imageAltText>
+        <imageLocation>Left</imageLocation>
+        <isPublished>false</isPublished>
+        <masterLabel>Contract Management User Guidance Step 3</masterLabel>
+        <referenceElementContext>{&quot;scope&quot;:{&quot;attributes&quot;:{&quot;id&quot;:&quot;sfdc:TabDefinition.Contract__c&quot;}},&quot;version&quot;:2}</referenceElementContext>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>3</stepNumber>
+        <targetPageKey1>chatter</targetPageKey1>
+        <targetPageType>standard__namedPage</targetPageType>
+        <title>Key Features</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>&lt;p&gt;Before updating the opportunity as &quot;Closed-won&quot;, go to contract tab from app launcher and create a new contract.&lt;/p&gt;</body>
+        <customApplication>Safexpress</customApplication>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayType>Targeted</displayType>
+        <experience>Lightning</experience>
+        <imageAltText>c3</imageAltText>
+        <imageLocation>Right</imageLocation>
+        <isPublished>false</isPublished>
+        <masterLabel>Contract Management User Guidance Step 4</masterLabel>
+        <referenceElementContext>{&quot;scope&quot;:{&quot;attributes&quot;:{&quot;id&quot;:&quot;sfdc:TabDefinition.Opportunity__c&quot;}},&quot;version&quot;:2}</referenceElementContext>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>4</stepNumber>
+        <targetPageKey1>chatter</targetPageKey1>
+        <targetPageType>standard__namedPage</targetPageType>
+        <title>Opportunity Closed-won</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>&lt;p&gt;Click the&amp;nbsp;&lt;strong&gt;&apos;New&apos;&lt;/strong&gt;&amp;nbsp;button on the Contracts tab.&lt;/p&gt;&lt;p&gt;Fill in mandatory fields like Contract Name, Account, Start Date, and End Date.&lt;/p&gt;&lt;p&gt;Add supporting documents by attaching files.&lt;/p&gt;&lt;p&gt;Ensure all required fields are complete to avoid errors&lt;/p&gt;</body>
+        <customApplication>Safexpress</customApplication>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayType>Targeted</displayType>
+        <experience>Lightning</experience>
+        <imageAltText>c4</imageAltText>
+        <imageLocation>Right</imageLocation>
+        <isPublished>false</isPublished>
+        <masterLabel>Contract Management User Guidance Step 5</masterLabel>
+        <referenceElementContext>{&quot;scope&quot;:{&quot;attributes&quot;:{&quot;id&quot;:&quot;sfdc:StandardButton.Contract__c.New&quot;}},&quot;version&quot;:2}</referenceElementContext>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>5</stepNumber>
+        <targetPageKey1>Contract__c</targetPageKey1>
+        <targetPageKey2>list</targetPageKey2>
+        <targetPageType>standard__objectPage</targetPageType>
+        <title>Creating a New Contract</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>&lt;p&gt;Thank you for your understanding on contract module, further you need any support reach out to &lt;strong&gt;Corporate Salesforce Team&lt;/strong&gt;.&lt;/p&gt;</body>
+        <customApplication>Safexpress</customApplication>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayType>Targeted</displayType>
+        <experience>Lightning</experience>
+        <imageAltText>tq</imageAltText>
+        <imageLocation>Left</imageLocation>
+        <isPublished>false</isPublished>
+        <masterLabel>Contract Management User Guidance Step 6</masterLabel>
+        <referenceElementContext>{&quot;scope&quot;:{&quot;attributes&quot;:{&quot;id&quot;:&quot;sfdc:TabDefinition.standard-home&quot;}},&quot;version&quot;:2}</referenceElementContext>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>6</stepNumber>
+        <targetPageKey1>chatter</targetPageKey1>
+        <targetPageType>standard__namedPage</targetPageType>
+        <title>Thank you</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+</Prompt>

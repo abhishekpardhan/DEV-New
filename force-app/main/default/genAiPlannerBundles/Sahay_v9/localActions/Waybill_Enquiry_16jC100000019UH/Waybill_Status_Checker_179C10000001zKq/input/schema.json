@@ -1,0 +1,42 @@
+{
+  "required" : [ "waybillNumber" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "customerConcern" : {
+      "title" : "Customer Concern",
+      "description" : "Customer Concern",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "eWaybillNumber" : {
+      "title" : "E-Waybill Number",
+      "description" : "E Waybill number ",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "isUrgentDeliveryRequest" : {
+      "title" : "Is Urgent Delivery Request",
+      "description" : "Check if this Is Urgent Delivery Request",
+      "lightning:type" : "lightning__booleanType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "messagingSessionId" : {
+      "title" : "Messaging Session Id",
+      "description" : "Current Messaging Session Id",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "waybillNumber" : {
+      "title" : "Waybill Number",
+      "description" : "This will be used as input to use the fetch the Waybill status ",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

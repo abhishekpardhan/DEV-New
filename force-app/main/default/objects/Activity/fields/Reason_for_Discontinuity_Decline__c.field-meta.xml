@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_for_Discontinuity_Decline__c</fullName>
+    <label>Reason for Discontinuity /Decline</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>BIR</fullName>
+                <default>false</default>
+                <label>BIR</label>
+            </value>
+            <value>
+                <fullName>Change in Key Decision-Maker</fullName>
+                <default>false</default>
+                <label>Change in Key Decision-Maker</label>
+            </value>
+            <value>
+                <fullName>Competitor Influence</fullName>
+                <default>false</default>
+                <label>Competitor Influence</label>
+            </value>
+            <value>
+                <fullName>Customer Shifted</fullName>
+                <default>false</default>
+                <label>Customer Shifted</label>
+            </value>
+            <value>
+                <fullName>Damage Complaints</fullName>
+                <default>false</default>
+                <label>Damage Complaints</label>
+            </value>
+            <value>
+                <fullName>Pickup Issues</fullName>
+                <default>false</default>
+                <label>Pickup Issues</label>
+            </value>
+            <value>
+                <fullName>POD Delays</fullName>
+                <default>false</default>
+                <label>POD Delays</label>
+            </value>
+            <value>
+                <fullName>Pricing Issues</fullName>
+                <default>false</default>
+                <label>Pricing Issues</label>
+            </value>
+            <value>
+                <fullName>Reduced Business Volumes</fullName>
+                <default>false</default>
+                <label>Reduced Business Volumes</label>
+            </value>
+            <value>
+                <fullName>Service Issues</fullName>
+                <default>false</default>
+                <label>Service Issues</label>
+            </value>
+            <value>
+                <fullName>Shortage Claims</fullName>
+                <default>false</default>
+                <label>Shortage Claims</label>
+            </value>
+            <value>
+                <fullName>Unresolved Claims</fullName>
+                <default>false</default>
+                <label>Unresolved Claims</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

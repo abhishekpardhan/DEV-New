@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marketing_promotion_Event_purpose</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL(Event_Purpose__c , &apos;Marketing/Promotion&apos;) &amp;&amp; ISBLANK(Campaign__c) &amp;&amp; NOT(Name = &quot;System Event&quot;)</errorConditionFormula>
+    <errorDisplayField>Campaign__c</errorDisplayField>
+    <errorMessage>Please fill this field</errorMessage>
+</ValidationRule>

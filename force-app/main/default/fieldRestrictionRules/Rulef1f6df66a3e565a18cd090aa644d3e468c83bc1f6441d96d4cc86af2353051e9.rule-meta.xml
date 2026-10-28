@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldRestrictionRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <classification>BT_VerificationHistory_EPIM</classification>
+    <classificationType>FieldSet</classificationType>
+    <description>Field Restriction Rule for Black Tab PII Masking BT_VerificationHistory_EPIM</description>
+    <enforcementType>FieldRestrict</enforcementType>
+    <masterLabel>Rulef1f6df66a3e565a18cd090aa644d3e468c83bc1f6441d96d4cc86af2353051e9</masterLabel>
+    <recordFilter>Id=&apos;NEVER_TRUE&apos;</recordFilter>
+    <targetEntity>VerificationHistory</targetEntity>
+    <userCriteria>CASE($User.UserType,&apos;SfdcAdmin&apos;,1,0)=1</userCriteria>
+    <version>0</version>
+</FieldRestrictionRule>

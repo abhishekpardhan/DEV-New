@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Case Sub Type --></label>
+    <name>Case_Sub_Type__c</name>
+    <picklistValues>
+        <masterLabel>A2A Pickup API</masterLabel>
+        <translation><!-- A2A Pickup API --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Create Consignor/Consignee API</masterLabel>
+        <translation><!-- Create Consignor/Consignee API --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>E-POD API</masterLabel>
+        <translation><!-- E-POD API --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LR/Waybill Creation</masterLabel>
+        <translation><!-- LR/Waybill Creation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>One Scan Pickup</masterLabel>
+        <translation><!-- One Scan Pickup --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Others</masterLabel>
+        <translation><!-- Others --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Waybill Creation API</masterLabel>
+        <translation><!-- Waybill Creation API --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Waybill Tracking API</masterLabel>
+        <translation><!-- Waybill Tracking API --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>With Tech Leadership</masterLabel>
+        <translation><!-- With Tech Leadership --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>With Tech Team</masterLabel>
+        <translation><!-- With Tech Team --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

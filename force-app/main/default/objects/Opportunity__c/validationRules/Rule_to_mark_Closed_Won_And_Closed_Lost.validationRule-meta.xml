@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rule_to_mark_Closed_Won_And_Closed_Lost</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    OR(
+        ISPICKVAL(Stage__c, &quot;Closed Won&quot;),
+        ISPICKVAL(Stage__c, &quot;Closed Lost&quot;)
+    ),
+    ISCHANGED(Stage__c),
+    OR(
+        ISPICKVAL(LatestQuote__r.Status__c, &quot;Active&quot;),
+        ISPICKVAL(LatestQuote__r.Status__c, &quot;Pending with Quotation Team&quot;),
+        ISPICKVAL(LatestQuote__r.Status__c, &quot;Pending for Review&quot;),
+        ISPICKVAL(LatestQuote__r.Status__c, &quot;Resent to Central Quotation Team&quot;)
+    )
+)</errorConditionFormula>
+    <errorDisplayField>X3PL_Competition__c</errorDisplayField>
+    <errorMessage>The Opportunity cannot be marked as &apos;Closed Won&apos; or &apos;Closed Lost&apos; while the Quote is in &apos;Active,&apos; &apos;Pending with Quotation Team,&apos; &apos;Pending for Review,&apos; or &apos;Resent to Central Quotation Team.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,79 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" controller="ReleaseController" >
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, Initial-scale=1"/>
+    </head>
+    
+    <aura:attribute name="releaseList" type="Release__c[]"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doinit}"/>
+    <div style="color:white">
+        
+        <div height="30" width="120"  style="Background-color:white; height:50px; width:40px; border-radius: 5px;" onclick="{!c.show}">
+            <img src="{!$Resource.release}" style="border-radius: 5px; height:30px; width:30px; color:red; !important" alt="Release" height="40" width="45" class="slds-align_absolute-center" /> 
+            <p style="color:Black; text-align:center; color:Blue; font-size: 8px; line-height: 1.2;" >All<br/>Features</p>
+        </div> 
+        
+     <!--   <div height="30" width="120"  style="Background-color:white; height:50px; width:40px; border-radius: 5px;" onclick="{!c.show}">
+            <img src="{!$Resource.release_gif}" style="border-radius: 5px; height:30px; width:30px; color:red; !important" alt="Release" height="40" width="45" class="slds-align_absolute-center" /> 
+            <p style="color:Black; text-align:center; color:red; font-size: 8px; line-height: 1.2;" >New<br/>Features</p>
+        </div>  -->
+        
+    </div>
+    <div class="myTest">
+        <div style="height:640px">
+            <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_medium" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1">
+                <div class="slds-modal__container">
+                    <header class="slds-modal__header">
+                        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick="{!c.hide}">
+                            <lightning:icon iconName="utility:close" size="small" alternativeText="Close"
+                                            class="slds-button__icon slds-icon_small slds-button_icon-inverse"/>
+                            <span class="slds-assistive-text">Close</span>
+                        </button>
+                        <h1 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">All Releases</h1>
+                    </header>
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1" >
+                        <div class="slds-p-horizontal_xx-large slds-p-top_xx-large">
+                            <aura:iteration items="{!v.releaseList}" var="rel">
+                                <lightning:accordion aura:id="accordion" class="slds-card slds-border_top" allowMultipleSectionsOpen="true" >
+                                    <div  class="slds-card">
+                                        <lightning:accordionSection name="A" label="{!rel.Name}">
+                                            <aura:set attribute="actions">
+                                                {!rel.Release_Date__c}
+                                            </aura:set>
+                                            <aura:set attribute="body">
+                                                <aura:unescapedHtml value="{!rel.Summary__c}"/>
+                                                <br/>
+                                                You can view/download the document here: <a class="slds-button slds-button_brand" href="{!rel.Document_link__c}" target="_blank">Document</a>
+                                                
+                                            </aura:set>
+                                        </lightning:accordionSection>
+                                    </div>
+                                </lightning:accordion>
+                            </aura:iteration>
+                        </div>
+                    </div>
+                    <footer class="slds-modal__footer">
+                        <lightning:button  label="Close" onclick="{!c.hide}" />
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </div>   
+        <!-- <div class="slds-p-horizontal_xx-large slds-p-top_xx-large">
+        <aura:iteration items="{!v.releaseList}" var="rel">
+            <lightning:accordion aura:id="accordion" class="slds-card" allowMultipleSectionsOpen="true" >
+                <div  class="slds-card">
+                    <lightning:accordionSection name="A" label="{!rel.Name}"> 
+                        <aura:set attribute="actions">
+                            {!rel.Release_Date__c}
+                        </aura:set>
+                        <aura:set attribute="body">
+                            <aura:unescapedHtml value="{!rel.Summary__c}"/>
+                        </aura:set>
+                    </lightning:accordionSection>
+                </div>
+            </lightning:accordion>
+        </aura:iteration>
+    </div> -->
+    </div>
+</aura:component>

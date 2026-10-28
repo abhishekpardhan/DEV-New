@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opt_Out_for_Customer_Relationship_Profil__c</fullName>
+    <defaultValue>false</defaultValue>
+    <label>Opt Out – CR Profiling Task</label>
+    <mktDataLakeFieldAttributes>
+        <definitionCreationType>Standard</definitionCreationType>
+        <externalName>Opt_Out_for_Customer_Relationship_Profil</externalName>
+        <isEventDate>false</isEventDate>
+        <isInternalOrganization>false</isInternalOrganization>
+        <isRecordModified>false</isRecordModified>
+        <usageTag>NONE</usageTag>
+    </mktDataLakeFieldAttributes>
+    <type>Checkbox</type>
+</CustomField>

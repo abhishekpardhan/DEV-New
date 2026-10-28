@@ -1,0 +1,69 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body aria-readonly="false" style="height: auto; min-height: auto;">
+<table cellpadding="0" cellspacing="0" id="contentpage_emailTemplateBodyContent" width="100%">
+	
+		<tr>
+			<td align="center" width="100%">
+			<table cellpadding="0" cellspacing="0" width="600">
+				
+					<tr>
+						<td>
+						<table cellpadding="0" cellspacing="0" width="100%">
+							
+								<tr valign="top">
+									<td width="100%">
+									<table cellpadding="0" cellspacing="0">
+										
+											<tr>
+												<td>
+												<table cellpadding="0" cellspacing="0" id="contentRegion">
+													
+														<tr>
+															<td>Dear&nbsp;{{{Case.Consignor_Name__c}}},
+															<p><br />
+															Greetings from Safexpress!<br />
+															&nbsp;</p>
+
+															<p>This is in regard to the pickup request received on&nbsp;{{{Case.CaseCreationFormattedDate__c}}} under request No. {{{Case.CaseNumber}}}.</p>
+
+															<p>As per our records, your consignment has been collected on {{{Case.WayBillPickupFormattedDate__c}}}. The Waybill details for the same are mentioned below:</p>
+
+															<p><strong>{{{Case.WaybillNo__c}}}</strong></p>
+
+															<p>Request you to mention the above captioned Waybill Number in all your communications. You can also track your consignment by entering the above Waybill Number on the below link:<br />
+															<br />
+															<a href="http://www.safexpress.com/">http://www.safexpress.com/</a><br />
+															<br />
+															Please feel free to contact us for any further query/assistance on our 24X7 toll-free number 1800-113-113 or email us&nbsp;at&nbsp;<a href="mailto:info@safexpress.com">info@safexpress.com</a>.<br />
+															<br />
+															Thank you for considering Safexpress Pvt. Ltd.<br />
+															<br />
+															<br />
+															<br />
+															Thank you &amp; Regards,<br />
+															Team Safexpress</p>
+															</td>
+														</tr>
+													
+												</table>
+												</td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+							
+						</table>
+						</td>
+					</tr>
+				
+			</table>
+			</td>
+		</tr>
+	
+</table>
+</body>
+</html>

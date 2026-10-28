@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>number</bucketType>
+        <developerName>BucketField_48183155</developerName>
+        <masterLabel>Aging Bucket</masterLabel>
+        <nullTreatment>z</nullTreatment>
+        <sourceColumnName>Lead__c.Age_of_Lead__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <to>5</to>
+            </sourceValues>
+            <value>0 -5 Days</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>5</from>
+                <to>15</to>
+            </sourceValues>
+            <value>6 - 15 Days</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>15</from>
+                <to>30</to>
+            </sourceValues>
+            <value>16 - 30 Days</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>30</from>
+                <to>90</to>
+            </sourceValues>
+            <value>30 - 90 Days</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>90</from>
+                <to>180</to>
+            </sourceValues>
+            <value>91 - 180 Days</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>180</from>
+                <to>365</to>
+            </sourceValues>
+            <value>181 - 365 Days</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>365</from>
+            </sourceValues>
+            <value>Above 365 Days</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Lead__c.Contact_Person_Name__c</field>
+    </columns>
+    <columns>
+        <field>CUST_OWNER_NAME</field>
+    </columns>
+    <columns>
+        <field>Lead__c.Email__c</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_NAME</field>
+    </columns>
+    <columns>
+        <field>Lead__c.Phone__c</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>Lead__c.Age_of_Lead__c</field>
+    </columns>
+    <currency>INR</currency>
+    <filter>
+        <criteriaItems>
+            <column>Lead__c.Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Dropped,Converted,Non Validate,Dropped by Central desk</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Lead__c.Region__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Lead__c.Type__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_48183155</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Open Leads - Salesforce-2</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Lead__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>false</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <sortColumn>Lead__c.Age_of_Lead__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

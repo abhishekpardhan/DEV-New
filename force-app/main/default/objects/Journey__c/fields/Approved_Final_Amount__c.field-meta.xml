@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approved_Final_Amount__c</fullName>
+    <formula>IF(Approved_Journey_Amount__c &gt; 0,
+IF(Approved_Expense_Amount__c &gt;0,Approved_Journey_Amount__c + Approved_Expense_Amount__c ,0+ Approved_Journey_Amount__c ), 0+Approved_Expense_Amount__c )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Approved Final Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPermission xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Bypasses Lead validation rules (admins and data loads only)</description>
+    <isLicensed>false</isLicensed>
+    <label>Lead VR Bypass</label>
+</CustomPermission>

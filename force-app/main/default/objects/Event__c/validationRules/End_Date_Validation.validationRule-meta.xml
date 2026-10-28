@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>End_Date_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(OR(ISNEW() ,ISCHANGED(End__c)) ,!is_Automated__c ,OR(End__c  &lt; Start__c ,DATEVALUE(End__c)  &gt; DATEVALUE(Start__c) ))</errorConditionFormula>
+    <errorDisplayField>End__c</errorDisplayField>
+    <errorMessage>End date should be after start Date and only 1 day event.</errorMessage>
+</ValidationRule>

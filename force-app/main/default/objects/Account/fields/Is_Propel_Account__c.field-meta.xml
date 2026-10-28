@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Propel_Account__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This account has been created from the Propel system.
+Created as part of the JIRA SAC-122</description>
+    <inlineHelpText>This account has been created from the Propel system</inlineHelpText>
+    <label>Is Propel Account</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

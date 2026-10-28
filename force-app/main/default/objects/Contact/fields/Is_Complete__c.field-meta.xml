@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Complete__c</fullName>
+    <formula>AND(
+				 NOT(ISBLANK(LastName)),
+     NOT(ISBLANK(Email)),
+     NOT(ISBLANK( MobilePhone )),
+     ISBLANK( EmailBouncedDate ),
+     NOT(ISBLANK(TEXT( Designation__c))),
+     NOT(ISPICKVAL(Designation__c, &apos;Others&apos;)) ,
+     NOT(ISPICKVAL(Designation__c, &apos;Not Specified&apos;)) ,
+     NOT(ISBLANK(TEXT( Department__c) )),
+     NOT(ISPICKVAL(Department__c, &apos;Others&apos;)),
+     NOT(ISBLANK(TEXT( Contact_State__c ))),
+     NOT(ISBLANK( Responsible_for__c )),
+     NOT(ISBLANK( MailingStreet )),
+     NOT(ISBLANK( MailingPostalCode )),
+     NOT(ISBLANK( MailingState )),
+     NOT(ISBLANK( MailingCity )),
+     NOT(ISBLANK(TEXT( Address_Type__c ))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Is Complete ?</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

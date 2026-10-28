@@ -1,0 +1,9 @@
+Dear Manager,
+
+This is a reminder that contract for {!Account.Name} will expire soon. Please discuss with customer to renew the contract before it expires.
+
+Please log in to salesforce using url: https://safeforce1.force.com
+After logged in please click the link to access record:{!Account.Instance_Url__c}{!Account.Id}
+
+Regards, 
+Central Credit Team

@@ -1,0 +1,1286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Log_a_Call</fullName>
+    <active>true</active>
+    <label>Log a Call</label>
+    <picklistValues>
+        <picklist>Additional_Customer_Support_Needed__c</picklist>
+        <values>
+            <fullName>Dedicated Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Additional Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Special Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology %26 Integration</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Any_Complaints_Negative_Feedback__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Any_Deduction_in_Bill__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Any_Pending_Claims__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Are_Payments_Received_in_GB__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BIR_type__c</picklist>
+        <values>
+            <fullName>Local</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>National</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Booking_for_PAN_India__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Change_in_Key_Decision_Maker__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Code_Type__c</picklist>
+        <values>
+            <fullName>Extended</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Local</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sister Concern</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transfer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Current_Business_Status__c</picklist>
+        <values>
+            <fullName>Continue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declining</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discontinued</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Growing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Once in a while</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Project-based</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Customer_Satisfaction_with_Services__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Customer_Satisfied_with_BIR__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Customer_Satisfied_with_SLE__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Dispatch_Consignee_type__c</picklist>
+        <values>
+            <fullName>CONSUMER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DEALER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DISTRIBUTOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STOCK TRANSFER</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Has_customer_engaged_with_competitor__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Sure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Is_FTL_movement_there__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Is_weight_printed_on_invoice__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Is_weight_scale_available__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Meeting_type__c</picklist>
+        <values>
+            <fullName>AT CUSTOMER PREMISES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>THROUGH TELEPHONE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>THROUGH VIDEO CALL</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mode_of_Last_Interaction__c</picklist>
+        <values>
+            <fullName>Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Person Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Virtual Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WhatsApp</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Month_Business_Continuity_Likelihood__c</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Payment_By__c</picklist>
+        <values>
+            <fullName>Cheque</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RTGS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Payment_Remaining__c</picklist>
+        <values>
+            <fullName>Non-Recoverable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partly Recoverable %2F Non Recoverable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recoverable</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Pickup_Frequency__c</picklist>
+        <values>
+            <fullName>DAILY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ON CALL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WEEKLY</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Pickup_Location__c</picklist>
+        <values>
+            <fullName>DISTRIBUTOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OTHERS %28PLEASE SPECIFY%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VENDOR%2FSUPPLIER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WAREHOUSE</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Normal</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product_Vertical__c</picklist>
+        <values>
+            <fullName>APM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APPARELS %26 LIFESTYLE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AUTOMOTIVE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engineering %26 Electrical Hardware</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMCG%2FCONSUMER GOODS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HEALTHCARE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HI TECH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Institutional</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Publishing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail Special Services</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Purpose__c</picklist>
+        <values>
+            <fullName>A%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AA%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AAA%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ACCIDENT %2F BREAK DOWN LOCATION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ADDRESS NOT FOUND</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANY EVENT PARTICIPATION%C2%A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANY OTHER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANY OTHER INSTITUTION VISIT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANY OTHER PROMOTIONAL ACTIVITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANY OTHER TRAINING %2F SEMINAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ASSIGNING THE RIGHTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ATTEND EXTERNAL TRAINING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ATTEND IN HOUSE TRAINING AS PARTICIPANT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BILL COLLECTION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BILL NOT RECEIVED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BILL SUBMISSION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BILLS RELATED ESCALATION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BIR CUSTOMIZATION REQUEST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BIR UPGRADATION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BOOKING QUALITY ADHERENCE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BUSINESS DEVELOPMENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BUSINESS ENHANCEMENT%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BUSINESS PROSPECT GENERATION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BUSINESS REVIEW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BUSINESS SUPPORT ACTIVITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CALLS %2F MAIL%C2%A0 TO CUSTOMERS%28BIZ%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CALLS %2F MAIL%C2%A0 TO CUSTOMERS%28COURTESY%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CALLS %2F MAIL%C2%A0 TO CUSTOMERS%28SERVICE%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CALLS TO RBUS %2F STAFF FOR BIZ REVIEW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CAMPUS2HOME BOOKING PROMOTION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHANGE IN CUSTOMER%27S CONTACT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHECK-IN CHECK OUT ISSUE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COLD CALL%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COLLECT D%2ED%2E%2FCHEQUE%2B C-FORM LETTER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CONTACT PERSON NOT AVAILABLE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CONTACTS UPDATE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CONTRACT RENEWAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COURTESY VISITS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CSR ACTIVITY%C2%A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CUSTOMER NAME UPDATE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consignee App</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>D%2ED%2E TO CONVERT IN CHEQUE LETTER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DACC CANCEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DATA ENTRY MISTAKE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DELIVERY AGAINST D%2ED%2E%2B CHEQUE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DISPUTE RESOLUTION%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DISTANCE ISSUE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DOD AMOUNT CHANGE LETTER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DOD CANCEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DOD%2FDACC CANCEL LETTER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Damage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EASY2MOVE BOOKING PROMOTION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EVENT%2F SPONSORSHIP %2F CAMPAIGN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FESTIVAL REASON</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FIFO NOT FOLLOWED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOLLOWUP CALLS%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOR OUR CAMPAIGNING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GENERAL VISIT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GROUP MEETING %2F SEMINAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOS IN NORMAL BAYS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INBOUND BUSINESS DEVELOPMENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ISSUE IN CASE CREATION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LEAD FOLLOW UP%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LEGAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MANAGING PICKUP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MARKET CLOSED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MEETING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MEETING WITH RBUS%2F TEAM FOR BUSINESS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MEETING WITH SENIORS FOR BUSINESS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MEETING WITH STAFF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NEW BIR TO BE INITIATED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NEW BUSINESS OPPORTUNITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NO TEAM BRIEF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OPEN SHUTTERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OPERATIONAL ISSUES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ORIGNAL POD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OTHER VISIT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OTHERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>P2M</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PALLETS OUT OF PLACE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAYMENT FOLLOW UP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PERSONNEL NOT IN UNIFORM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PICKUP SUPPORT%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>POD NOT AVAILABLE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>POD-CD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PREPARATION%2F REVIEW OF%C2%A0 REPORTS- BOOKING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PROACTIVE PICKUP GENERATION EFFORTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PROMOTION AND GIFTING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Package Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pilferage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REBATE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RELATIONSHIP BUILDING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RESOLUTION OF SERVICE ISSUE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RETURNS BOOKING FROM EXHIBITION%2F EVENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REVIVAL%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ROAD SHOW%2C IN GROUP CAMPAIGN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SALES CAMPAIGN INDIVIDUALLY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SALES GROWTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SERVICE ISSUE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SERVICE RELATED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SHIPMENTS NEAR GATE%2FRAMP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SHIPMENTS WALL STACKED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SOCIAL OCCASION COURTESY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STACKING NEAR STORAGE BAY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STRENGTHEN TO INBOUND CUSTOMER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SUBMIT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SURVEY OF LOSS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shortage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRAIN IN HOUSE TEAM MEMBERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRAINING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TROLLEYS WRONLY PARKED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UNAUTHORIZED MOVEMENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UNCLEAN FLOOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VISIBILITY ISSUE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VISIT FOR INSURANCE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VISIT FOR POLICE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VISIT TO COMMERCIAL TAXES DEPT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VISIT TO RTO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZERO BILLING</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason__c</picklist>
+        <values>
+            <fullName>BILL NOT RECEIVED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract related issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ORIGNAL POD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OTHERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>P2M</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>POD NOT AVAILABLE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>POD-CD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SUBMIT</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason_for_Discontinuity_Decline__c</picklist>
+        <values>
+            <fullName>BIR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Change in Key Decision-Maker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Competitor Influence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Shifted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Damage Complaints</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>POD Delays</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pickup Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pricing Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reduced Business Volumes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shortage Claims</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unresolved Claims</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Required_daily_MIS__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Reopen</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Subject</picklist>
+        <values>
+            <fullName>Call</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sunday_Pickup__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extended Code %E2%80%93 Zero Sale</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>BDM - WORK FROM OFFICE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BILL COLLECTION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BILL SUBMISSION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BIR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRANCH VISIT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHQ DISHONOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CONSIGNEE RECOMMENDATION LETTERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CONSIGNEE SALES LEAD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CONSIGNEE VISITED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CORPORATE TASK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CUSTOMER VISIT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CUSTOMER VISIT - EXISTING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CUSTOMER VISIT - NEW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CUSTOMER WAREHOUSE VISIT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Claim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DOD%2FDACC CANCELLATION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EXTENDED CODE - NEGATIVE SALE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EXTENDED CODE - ZERO SALE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IN-HOUSE BIZ%2F SUPPORT  ACTIVITIES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INCIDENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INCIDENT AT 3PL HUB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INTERNAL MEETING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NEGATIVE SALE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NEW SALES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NORMAL VISIT %26 ICM CUSTOMER CAMPAIGN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ONBOARDING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PRICING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PROMOTIONAL ACTIVITY%2F CAMPAIGN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RENEWEL ACCOUNT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SALESFORCE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SHORT%2FEXCESS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TOUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRAINING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VISIT TO BRANCH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VISIT TO EVENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VISIT TO GOVT%2E AUTHORITY%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VISIT TO INCIDENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VISIT TO INSTITUTION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZERO BILLING</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Unresolved_Issues__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partially</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Visited_With__c</picklist>
+        <values>
+            <fullName>AREA MANAGER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NEW SALES MANAGER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REGIONAL MANAGER</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>non_recoverable_reason__c</picklist>
+        <values>
+            <fullName>38</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Damage Delivery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Late Delivery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Short Delivery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Undelivered</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

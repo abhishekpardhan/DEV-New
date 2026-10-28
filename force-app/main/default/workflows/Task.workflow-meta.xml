@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Send_Email_To_Task_Customer</fullName>
+        <description>Send Email To Task Customer</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Lightning_Quote_Mandatory_Files/Send_Email_To_Task_Customer</template>
+    </alerts>
+    <alerts>
+        <fullName>Submission_email_alert_15_days</fullName>
+        <description>Submission email alert 15 days</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>proposal@safexpress.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Lightning_Quote_Mandatory_Files/Submission_Task_Reminder_Email</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Automation_Field_Update</fullName>
+        <field>Automation__c</field>
+        <literalValue>0</literalValue>
+        <name>Automation Field Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Case_Lock_after_completion_OnBoarding</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Closed_Task_Record_Type</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Case Lock after completion_OnBoarding</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Onboarding_task_open_for_edit</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>On_Boarding</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Onboarding task open for edit</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Onboarding Task</fullName>
+        <actions>
+            <name>Case_Lock_after_completion_OnBoarding</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Task.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>On Boarding</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.Status</field>
+            <operation>equals</operation>
+            <value>Completed</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Onboarding Task for reopen</fullName>
+        <actions>
+            <name>Onboarding_task_open_for_edit</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Task.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Completed Onboarding Task</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.Status</field>
+            <operation>equals</operation>
+            <value>Reopen</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Submission Task Email Send 15 days</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Task.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Submission</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.Status</field>
+            <operation>notEqual</operation>
+            <value>Completed</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Submission_email_alert_15_days</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Task.CreatedDate</offsetFromField>
+            <timeLength>15</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Submission_email_alert_15_days</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Task.CreatedDate</offsetFromField>
+            <timeLength>30</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Task Automation Field Removal</fullName>
+        <actions>
+            <name>Automation_Field_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Task.Automation__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

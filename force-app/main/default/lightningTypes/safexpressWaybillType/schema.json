@@ -1,0 +1,5 @@
+{
+  "description" : "Safexpress Waybill Response Structure",
+  "lightning:type" : "@apexClassType/c__SafexpressWaybillStatusResult",
+  "title" : "Safexpress Waybill Response"
+}

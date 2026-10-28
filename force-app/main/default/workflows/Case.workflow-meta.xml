@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Send_Email_On_Case_Creation_Booking_Request</fullName>
+        <ccEmails>co.pickup@safexpress.com</ccEmails>
+        <description>Send Email On Case Creation Booking Request</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>noreply@safexpress.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Send_Email_On_Case_Creation_Booking_Request_Template_1718677695341</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Email_On_Case_Creation_Non_Booking_Request</fullName>
+        <description>Send Email On Case Creation Non Booking Request</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>noreply@safexpress.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Send_Email_On_Case_Creation_Non_Booking_Request_Template_1718677758925</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Email_on_Creation_For_Case_Type_Booking_Request</fullName>
+        <ccEmails>co.pickup@safexpress.com</ccEmails>
+        <description>Send Email on Creation For Case Type-Booking Request</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>noreply@safexpress.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/SUPPORTWebtoCaseemailresponseSAMPLE</template>
+    </alerts>
+</Workflow>

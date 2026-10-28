@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Contact_Opportunity_Lead_Mandate</fullName>
+    <active>true</active>
+    <description>If Purpose of Event is &quot;Existing Customer Meeting&quot;: 
+Related To: Only the “Account (SFX Code)” is mandatorily required. 
+If Purpose of Event is &quot;New Customer Meeting&quot;: 
+Related To: Only either (Lead) or (Opportunity) or (Parent Account &amp; Contact) are t</description>
+    <errorConditionFormula>IF(
+	AND(
+		NOT(Name = &quot;System Event&quot;),
+		IF(
+			ISPICKVAL(Event_Purpose__c	, &apos;New Customer Meeting&apos;),			
+			IF(
+				OR(
+					NOT(ISBLANK(Opportunity__c)),
+					NOT(ISBLANK(Lead__c)),
+					AND(
+						NOT(ISBLANK(Account__c)),
+						NOT(ISBLANK(Contact__c))
+					)
+				),
+				False,
+				True				
+			),
+			False
+		)
+	),
+	True,
+	False
+)</errorConditionFormula>
+    <errorMessage>Related field: Please fill either (Account &amp; Contact) OR Opportunity OR Lead</errorMessage>
+</ValidationRule>

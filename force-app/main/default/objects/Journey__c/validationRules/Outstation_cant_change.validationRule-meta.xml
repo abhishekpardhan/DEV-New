@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Outstation_cant_change</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISCHANGED(Outstation__c), OR(!ISBLANK( CheckIn_Date__c ),
+!ISBLANK(CheckOut_Date__c)
+),
+NOT(Last_Updated_By_Flow__c), ISCHANGED(Last_Updated_By_Flow__c) = FALSE)</errorConditionFormula>
+    <errorDisplayField>Outstation__c</errorDisplayField>
+    <errorMessage>You can&apos;t change the Outstation.</errorMessage>
+</ValidationRule>

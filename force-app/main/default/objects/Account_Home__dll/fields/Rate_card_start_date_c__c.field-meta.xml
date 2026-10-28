@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rate_card_start_date_c__c</fullName>
+    <label>Rate card start date</label>
+    <mktDataLakeFieldAttributes>
+        <definitionCreationType>Standard</definitionCreationType>
+        <externalName>Rate_card_start_date_c</externalName>
+        <isEventDate>false</isEventDate>
+        <isInternalOrganization>false</isInternalOrganization>
+        <isRecordModified>false</isRecordModified>
+        <usageTag>NONE</usageTag>
+    </mktDataLakeFieldAttributes>
+    <required>false</required>
+    <type>Date</type>
+</CustomField>

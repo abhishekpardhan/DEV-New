@@ -1,0 +1,101 @@
+<!-- QuoteSendToCustomer -->
+<aura:component implements="force:lightningQuickAction,force:hasRecordId" controller="QuoteSendToCustomer" access="global">
+    <aura:handler name="init" action="{!c.doinit}" value="{!this}"/>
+    <aura:attribute name="sendEmail" type="boolean" default="false"/>
+    <aura:attribute name="errorMessage" type="boolean" default="false"/>
+    <aura:attribute name="message" type="String"/>
+    <aura:attribute name="listQuoteWrapper" type="List"/>
+    <aura:attribute name="Spinner" type="boolean" default="false"/>
+    <aura:if isTrue="{!v.Spinner}">
+        <div aura:id="spinnerId" class="slds-spinner_container">
+            <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                <span class="slds-assistive-text">Loading</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.sendEmail}" >
+        <div class="">
+            <!--###### MODAL BOX Start######--> 
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container" Style="Height:100% ;width:100%;">
+                    <!-- ###### MODAL BOX HEADER Start ######-->
+                    <header class="slds-modal__header">
+                        <lightning:buttonIcon iconName="utility:close"
+                                              onclick="{! c.closeModel }"
+                                              alternativeText="close"
+                                              variant="bare-inverse"
+                                              class="slds-modal__close"/>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Contacts</h2>
+                    </header>
+                    <!--###### MODAL BOX BODY Part Start######-->
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <div class="slds-scrollable_x">
+                            <aura:if isTrue="{!v.errorMessage}" >
+                                <h2  Style="color:red;font-family:-webkit-pictograph;text-align:center;" class="slds-text-heading_medium slds-hyphenate">Error : {!v.message}</h2>
+                            </aura:if>
+                            <table class="slds-table slds-table_bordered slds-table_striped" style="width:100%">
+                                <thead>
+                                    <tr class="slds-text-title_caps">
+                                        <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                                            <span class="slds-truncate" title="select">select</span>      
+                                        </th>
+                                        <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                                            <span class="slds-truncate" title="Name">Name</span>      
+                                        </th>
+                                        <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                                            <span class="slds-truncate" title="Designation">Designation</span>      
+                                        </th>
+                                        <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                                            <span class="slds-truncate" title="Department">Department</span>      
+                                        </th>
+                                        <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                                            <span class="slds-truncate" title="Email">Email Id</span>      
+                                        </th>
+                                        <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                                            <span class="slds-truncate" title="Type">Type</span>      
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <aura:iteration items="{!v.listQuoteWrapper}" var="QuoteWrapper">
+                                        <tr>
+                                            <td scope="row" class="slds-cell-wrap slds-truncate" ><ui:inputCheckbox value="{!QuoteWrapper.isSelected}"/></td>
+                                            <td scope="row" class="slds-cell-wrap slds-truncate">{!QuoteWrapper.objContact.Name}</td>
+                                            <td scope="row" class="slds-cell-wrap slds-truncate">{!QuoteWrapper.objContact.Department__c}</td>
+                                            <td scope="row" class="slds-cell-wrap slds-truncate">{!QuoteWrapper.objContact.Designation__c}</td>
+                                            <td scope="row" class="slds-cell-wrap slds-truncate">{!QuoteWrapper.objContact.Email}</td>
+                                            <td scope="row" class="slds-cell-wrap slds-truncate"> 
+                                                <lightning:select aura:id="state_opt"
+                                                                  value="{!QuoteWrapper.typeId}"
+                                                                  name="state_opt" >
+                                                    <option value="To">To</option>
+                                                    <option value="Cc">Cc</option>
+                                                </lightning:select>
+                                            </td>
+                                        </tr>
+                                    </aura:iteration>
+                                </tbody>
+                            </table> 
+                        </div>
+                    </div>
+                    <!--###### MODAL BOX FOOTER Part Start ######-->
+                    <footer class="slds-modal__footer">
+                        <lightning:button variant="neutral" 
+                                          label="Cancel"
+                                          title="Cancel"
+                                          onclick="{! c.closeModel }"/>
+                        <lightning:button variant="brand" 
+                                          label="Send"
+                                          title="Send"
+                                          onclick="{!c.sendToCustomer}"/>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+            <!--###### MODAL BOX Part END Here ######-->
+        </div>
+    </aura:if>
+</aura:component>

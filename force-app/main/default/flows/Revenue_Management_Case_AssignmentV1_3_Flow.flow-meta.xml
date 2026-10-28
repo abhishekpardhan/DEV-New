@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>checking_for_conditions_to_update_fields</name>
+        <label>checking for conditions to update fields</label>
+        <locationX>182</locationX>
+        <locationY>287</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>BalanceConfirmation_RRM</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Profile.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Regional Finance Head</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_2_of_updateStatus</targetReference>
+            </connector>
+            <label>Regional Finance Head</label>
+        </rules>
+    </decisions>
+    <description>It will replace some of automation of &apos;Revenue Management Case Assignment &apos; version 33 PB.</description>
+    <environments>Default</environments>
+    <interviewLabel>Revenue Management Case AssignmentV1.3 Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Revenue Management Case AssignmentV1.3 Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Copy_2_of_updateStatus</name>
+        <label>updateStatus</label>
+        <locationX>50</locationX>
+        <locationY>395</locationY>
+        <inputAssignments>
+            <field>Approval_Status__c</field>
+            <value>
+                <stringValue>Auto-approved</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status__c</field>
+            <value>
+                <stringValue>Active</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>checking_for_conditions_to_update_fields</targetReference>
+        </connector>
+        <filterFormula>AND(
+	OR(
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;Reciept cancellation( Credit)&apos;),
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;Misc Income( Credit )&apos; ),
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;Misc Income (Retail)&apos;),
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;Paid Rebate Advise&apos;),
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;Digital Collection &amp; Receipting issue&apos;),
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;To pay rebate Advise&apos;),
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;Balance Confirmation/No Dues Certificate/Ledger&apos;),
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;GST Issue&apos;),
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;Refund to Customer&apos;),
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;Any Misc.&apos;),
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;Change Collector in Retail&apos;),
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;Reciept cancellation( Retail)&apos;),
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;Credit Note&apos;),
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;To pay Debit Advise&apos;),
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;Topay to Credit conversion&apos;),
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;Retail Allied bill&apos;),
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;Rate issue - Retail&apos;),
+	ISPICKVAL({!$Record.Case_Typee__c},&apos;Retail GST Invoice&apos;)
+	  ),
+	OR(
+	ISPICKVAL({!$Record.Status__c},&apos;Active&apos;)
+	,ISPICKVAL({!$Record.Status__c},&apos;Provisional&apos;)
+	  )
+)</filterFormula>
+        <object>Case__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

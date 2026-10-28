@@ -1,0 +1,82 @@
+<template>
+    <lightning-card title="BDM Report" icon-name="standard:user">
+        <div style="padding: 20px; width: 100%; overflow: scroll;">
+            <table class="slds-table slds-table_bordered slds-border_left slds-border_right">
+                <thead>
+                    <tr class="slds-line-height_reset">
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="BDM Name">BDM Name</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="MSA Code">MSA Code</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="SFX Code">SFX Code</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="SFX Code">Account Id</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Account Name">Account Name</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Base Location">Base Location</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Local NAM">Local NAM</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Booking Branch">Booking Branch</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Relationship">Relationship</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Submission Branch">Submission Branch</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Submission">Submission</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Collection Branch">Collection Branch</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Collection">Collection</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="NSM">NSM</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="QRM">QRM</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="CRS">CRS</div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={data} for:item="eachRec" for:index="index1">
+                        <tr key={eachRec.SFX} style="padding: 10px;">
+                            <td>{eachRec.BDMName}</td>
+                            <td>{eachRec.MSA}</td>
+                            <td>{eachRec.SFX}</td>
+                            <td>{eachRec.AccountId}</td>
+                            <td>{eachRec.AccountName}</td>
+                            <td>{eachRec.BaseLocation}</td>
+                            <td>{eachRec.LocalNAM}</td>
+                            <td>{eachRec.BookingBranch}</td>
+                            <td>{eachRec.Relationship}</td>
+                            <td>{eachRec.SubmissionBranch}</td>
+                            <td>{eachRec.Submission}</td>
+                            <td>{eachRec.CollectionBranch}</td>
+                            <td>{eachRec.Collection}</td>
+                            <td>{eachRec.NSM}</td>
+                            <td>{eachRec.QRM}</td>
+                            <td>{eachRec.CRS}</td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Cant_change</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISCHANGED(Status__c) ,  OR(ISPICKVAL(Status__c,&apos;Prospect Customer&apos;) , ISPICKVAL(Status__c, &apos;Confirmed Customer&apos;)), !Automation_Status_Update__c )</errorConditionFormula>
+    <errorDisplayField>Status__c</errorDisplayField>
+    <errorMessage>You are not able to select this status.</errorMessage>
+</ValidationRule>

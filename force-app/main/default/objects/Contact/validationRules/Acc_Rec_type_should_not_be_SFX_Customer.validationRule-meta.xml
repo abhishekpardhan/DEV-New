@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Acc_Rec_type_should_not_be_SFX_Customer</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(AND(Account.Is_Propel_Account__c = TRUE , ISNEW(),NOT( ISNULL(Account.Id) )), TRUE , FALSE)</errorConditionFormula>
+    <errorMessage>Contact cannot be created for Propel type account</errorMessage>
+</ValidationRule>

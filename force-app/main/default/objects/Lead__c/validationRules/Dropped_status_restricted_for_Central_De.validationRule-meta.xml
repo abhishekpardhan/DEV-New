@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dropped_status_restricted_for_Central_De</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND($Profile.Name=&apos;Central Corporate Team&apos;, ISPICKVAL(Status__c, &apos;Dropped&apos;))</errorConditionFormula>
+    <errorDisplayField>Status__c</errorDisplayField>
+    <errorMessage>Please select the &quot;Dropped by Central Desk&quot; value</errorMessage>
+</ValidationRule>

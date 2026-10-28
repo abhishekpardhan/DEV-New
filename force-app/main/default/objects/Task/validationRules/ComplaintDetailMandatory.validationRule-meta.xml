@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ComplaintDetailMandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+			 ISPICKVAL(Any_Complaints_Negative_Feedback__c, &quot;Yes&quot;),
+    ISBLANK(Complaint_Details__c)
+)</errorConditionFormula>
+    <errorMessage>&quot;Please provide complaint details when feedback is marked as Yes.&quot;</errorMessage>
+</ValidationRule>

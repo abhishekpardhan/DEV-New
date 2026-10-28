@@ -1,0 +1,1202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Type__c</fullName>
+    <label>Product Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>A/C PARTS</fullName>
+                <default>false</default>
+                <label>A/C PARTS</label>
+            </value>
+            <value>
+                <fullName>ACCESSORIES</fullName>
+                <default>false</default>
+                <label>ACCESSORIES</label>
+            </value>
+            <value>
+                <fullName>AGARBATTI</fullName>
+                <default>false</default>
+                <label>AGARBATTI</label>
+            </value>
+            <value>
+                <fullName>AGATE STONE</fullName>
+                <default>false</default>
+                <label>AGATE STONE</label>
+            </value>
+            <value>
+                <fullName>AGRO PRODUCTS</fullName>
+                <default>false</default>
+                <label>AGRO PRODUCTS</label>
+            </value>
+            <value>
+                <fullName>AJWAIN</fullName>
+                <default>false</default>
+                <label>AJWAIN</label>
+            </value>
+            <value>
+                <fullName>ALMOND</fullName>
+                <default>false</default>
+                <label>ALMOND</label>
+            </value>
+            <value>
+                <fullName>AMAZON FC</fullName>
+                <default>false</default>
+                <label>AMAZON FC</label>
+            </value>
+            <value>
+                <fullName>ANCHOR AND DRILL BIT</fullName>
+                <default>false</default>
+                <label>ANCHOR AND DRILL BIT</label>
+            </value>
+            <value>
+                <fullName>ANCHOR AND TOOLS 119</fullName>
+                <default>false</default>
+                <label>ANCHOR AND TOOLS 119</label>
+            </value>
+            <value>
+                <fullName>APM HOUSEHOLD</fullName>
+                <default>false</default>
+                <label>APM HOUSEHOLD</label>
+            </value>
+            <value>
+                <fullName>ARMS AND AMMUNITION</fullName>
+                <default>false</default>
+                <label>ARMS AND AMMUNITION</label>
+            </value>
+            <value>
+                <fullName>ARTIFICIAL JEWELLERY</fullName>
+                <default>false</default>
+                <label>ARTIFICIAL JEWELLERY</label>
+            </value>
+            <value>
+                <fullName>AUTO PARTS</fullName>
+                <default>false</default>
+                <label>AUTO PARTS</label>
+            </value>
+            <value>
+                <fullName>AXLE</fullName>
+                <default>false</default>
+                <label>AXLE</label>
+            </value>
+            <value>
+                <fullName>AYURVEDIC MEDICINE</fullName>
+                <default>false</default>
+                <label>AYURVEDIC MEDICINE</label>
+            </value>
+            <value>
+                <fullName>AYURVEDIC PRODUCT</fullName>
+                <default>false</default>
+                <label>AYURVEDIC PRODUCT</label>
+            </value>
+            <value>
+                <fullName>BADI</fullName>
+                <default>false</default>
+                <label>BADI</label>
+            </value>
+            <value>
+                <fullName>BAMBOO STICK</fullName>
+                <default>false</default>
+                <label>BAMBOO STICK</label>
+            </value>
+            <value>
+                <fullName>BANDAGE</fullName>
+                <default>false</default>
+                <label>BANDAGE</label>
+            </value>
+            <value>
+                <fullName>BANGLES</fullName>
+                <default>false</default>
+                <label>BANGLES</label>
+            </value>
+            <value>
+                <fullName>BARREL</fullName>
+                <default>false</default>
+                <label>BARREL</label>
+            </value>
+            <value>
+                <fullName>BAT</fullName>
+                <default>false</default>
+                <label>BAT</label>
+            </value>
+            <value>
+                <fullName>BATTERY</fullName>
+                <default>false</default>
+                <label>BATTERY</label>
+            </value>
+            <value>
+                <fullName>BEAN BAG</fullName>
+                <default>false</default>
+                <label>BEAN BAG</label>
+            </value>
+            <value>
+                <fullName>BEARING</fullName>
+                <default>false</default>
+                <label>BEARING</label>
+            </value>
+            <value>
+                <fullName>BEARING PARTS</fullName>
+                <default>false</default>
+                <label>BEARING PARTS</label>
+            </value>
+            <value>
+                <fullName>BEDSHEET</fullName>
+                <default>false</default>
+                <label>BEDSHEET</label>
+            </value>
+            <value>
+                <fullName>BELLS</fullName>
+                <default>false</default>
+                <label>BELLS</label>
+            </value>
+            <value>
+                <fullName>BIDI</fullName>
+                <default>false</default>
+                <label>BIDI</label>
+            </value>
+            <value>
+                <fullName>BIKEXPRESS</fullName>
+                <default>false</default>
+                <label>BIKEXPRESS</label>
+            </value>
+            <value>
+                <fullName>BLACK PEPPER</fullName>
+                <default>false</default>
+                <label>BLACK PEPPER</label>
+            </value>
+            <value>
+                <fullName>BLANKETS</fullName>
+                <default>false</default>
+                <label>BLANKETS</label>
+            </value>
+            <value>
+                <fullName>BOOKS</fullName>
+                <default>false</default>
+                <label>BOOKS</label>
+            </value>
+            <value>
+                <fullName>BRASS PRODUCTS</fullName>
+                <default>false</default>
+                <label>BRASS PRODUCTS</label>
+            </value>
+            <value>
+                <fullName>BRASSWARE</fullName>
+                <default>false</default>
+                <label>BRASSWARE</label>
+            </value>
+            <value>
+                <fullName>BRUSH</fullName>
+                <default>false</default>
+                <label>BRUSH</label>
+            </value>
+            <value>
+                <fullName>BULK DRUGS</fullName>
+                <default>false</default>
+                <label>BULK DRUGS</label>
+            </value>
+            <value>
+                <fullName>BULK DRY FRUITS</fullName>
+                <default>false</default>
+                <label>BULK DRY FRUITS</label>
+            </value>
+            <value>
+                <fullName>CABLE</fullName>
+                <default>false</default>
+                <label>CABLE</label>
+            </value>
+            <value>
+                <fullName>CABLE DRUM</fullName>
+                <default>false</default>
+                <label>CABLE DRUM</label>
+            </value>
+            <value>
+                <fullName>CAMPUS2HOME BOOKING</fullName>
+                <default>false</default>
+                <label>CAMPUS2HOME BOOKING</label>
+            </value>
+            <value>
+                <fullName>CARDAMOM</fullName>
+                <default>false</default>
+                <label>CARDAMOM</label>
+            </value>
+            <value>
+                <fullName>CARPET</fullName>
+                <default>false</default>
+                <label>CARPET</label>
+            </value>
+            <value>
+                <fullName>CARRY BAGS</fullName>
+                <default>false</default>
+                <label>CARRY BAGS</label>
+            </value>
+            <value>
+                <fullName>CASHEW</fullName>
+                <default>false</default>
+                <label>CASHEW</label>
+            </value>
+            <value>
+                <fullName>CASTINGS</fullName>
+                <default>false</default>
+                <label>CASTINGS</label>
+            </value>
+            <value>
+                <fullName>CATING</fullName>
+                <default>false</default>
+                <label>CATING</label>
+            </value>
+            <value>
+                <fullName>Chain</fullName>
+                <default>false</default>
+                <label>Chain</label>
+            </value>
+            <value>
+                <fullName>CHAPPALS</fullName>
+                <default>false</default>
+                <label>CHAPPALS</label>
+            </value>
+            <value>
+                <fullName>CHIESEL,ANCHOR AND TOOLS</fullName>
+                <default>false</default>
+                <label>CHIESEL,ANCHOR AND TOOLS</label>
+            </value>
+            <value>
+                <fullName>CHIKAN CLOTHINGS</fullName>
+                <default>false</default>
+                <label>CHIKAN CLOTHINGS</label>
+            </value>
+            <value>
+                <fullName>CHIKANKARI</fullName>
+                <default>false</default>
+                <label>CHIKANKARI</label>
+            </value>
+            <value>
+                <fullName>CHILLED ROLL (METAL)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CHILLED ROLL (METAL)</label>
+            </value>
+            <value>
+                <fullName>CHILLED ROLL METAL</fullName>
+                <default>false</default>
+                <label>CHILLED ROLL METAL</label>
+            </value>
+            <value>
+                <fullName>CIGARETTES</fullName>
+                <default>false</default>
+                <label>CIGARETTES</label>
+            </value>
+            <value>
+                <fullName>CLOTH BALE</fullName>
+                <default>false</default>
+                <label>CLOTH BALE</label>
+            </value>
+            <value>
+                <fullName>COCOON</fullName>
+                <default>false</default>
+                <label>COCOON</label>
+            </value>
+            <value>
+                <fullName>COCOONS</fullName>
+                <default>false</default>
+                <label>COCOONS</label>
+            </value>
+            <value>
+                <fullName>COFFEE</fullName>
+                <default>false</default>
+                <label>COFFEE</label>
+            </value>
+            <value>
+                <fullName>COILS</fullName>
+                <default>false</default>
+                <label>COILS</label>
+            </value>
+            <value>
+                <fullName>COIR PRODUCT</fullName>
+                <default>false</default>
+                <label>COIR PRODUCT</label>
+            </value>
+            <value>
+                <fullName>COLOUR</fullName>
+                <default>false</default>
+                <label>COLOUR</label>
+            </value>
+            <value>
+                <fullName>COMPUTER GOODS</fullName>
+                <default>false</default>
+                <label>COMPUTER GOODS</label>
+            </value>
+            <value>
+                <fullName>Condoms and Contraceptives.</fullName>
+                <default>false</default>
+                <label>Condoms and Contraceptives.</label>
+            </value>
+            <value>
+                <fullName>COPPER WIRE</fullName>
+                <default>false</default>
+                <label>COPPER WIRE</label>
+            </value>
+            <value>
+                <fullName>COSMETICS</fullName>
+                <default>false</default>
+                <label>COSMETICS</label>
+            </value>
+            <value>
+                <fullName>COTTON THREAD</fullName>
+                <default>false</default>
+                <label>COTTON THREAD</label>
+            </value>
+            <value>
+                <fullName>COUPLING</fullName>
+                <default>false</default>
+                <label>COUPLING</label>
+            </value>
+            <value>
+                <fullName>CRANKSHAFTS</fullName>
+                <default>false</default>
+                <label>CRANKSHAFTS</label>
+            </value>
+            <value>
+                <fullName>CRUCIBLE</fullName>
+                <default>false</default>
+                <label>CRUCIBLE</label>
+            </value>
+            <value>
+                <fullName>CUTTING BLADE</fullName>
+                <default>false</default>
+                <label>CUTTING BLADE</label>
+            </value>
+            <value>
+                <fullName>CYCLE</fullName>
+                <default>false</default>
+                <label>CYCLE</label>
+            </value>
+            <value>
+                <fullName>CYCLE PARTS</fullName>
+                <default>false</default>
+                <label>CYCLE PARTS</label>
+            </value>
+            <value>
+                <fullName>DISPLAY ITEM</fullName>
+                <default>false</default>
+                <label>DISPLAY ITEM</label>
+            </value>
+            <value>
+                <fullName>DRUM</fullName>
+                <default>false</default>
+                <label>DRUM</label>
+            </value>
+            <value>
+                <fullName>DRY FRUITS</fullName>
+                <default>false</default>
+                <label>DRY FRUITS</label>
+            </value>
+            <value>
+                <fullName>EASY2MOVE</fullName>
+                <default>false</default>
+                <label>EASY2MOVE</label>
+            </value>
+            <value>
+                <fullName>ELECTRICAL EQUIPMENT</fullName>
+                <default>false</default>
+                <label>ELECTRICAL EQUIPMENT</label>
+            </value>
+            <value>
+                <fullName>ELECTRICALS</fullName>
+                <default>false</default>
+                <label>ELECTRICALS</label>
+            </value>
+            <value>
+                <fullName>ELECTRONIC EQUIPMENT</fullName>
+                <default>false</default>
+                <label>ELECTRONIC EQUIPMENT</label>
+            </value>
+            <value>
+                <fullName>FABRIC</fullName>
+                <default>false</default>
+                <label>FABRIC</label>
+            </value>
+            <value>
+                <fullName>FAST MOVING CONSUMER GOODS (FMCG)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>FAST MOVING CONSUMER GOODS (FMCG)</label>
+            </value>
+            <value>
+                <fullName>FAST MOVING CONSUMER GOODS FMCG</fullName>
+                <default>false</default>
+                <label>FAST MOVING CONSUMER GOODS FMCG</label>
+            </value>
+            <value>
+                <fullName>FASTNERS</fullName>
+                <default>false</default>
+                <label>FASTNERS</label>
+            </value>
+            <value>
+                <fullName>FISH NET</fullName>
+                <default>false</default>
+                <label>FISH NET</label>
+            </value>
+            <value>
+                <fullName>FOOTWEAR</fullName>
+                <default>false</default>
+                <label>FOOTWEAR</label>
+            </value>
+            <value>
+                <fullName>FORGINGS</fullName>
+                <default>false</default>
+                <label>FORGINGS</label>
+            </value>
+            <value>
+                <fullName>FURNITURE</fullName>
+                <default>false</default>
+                <label>FURNITURE</label>
+            </value>
+            <value>
+                <fullName>GAS STOVE</fullName>
+                <default>false</default>
+                <label>GAS STOVE</label>
+            </value>
+            <value>
+                <fullName>GENERAL</fullName>
+                <default>false</default>
+                <label>GENERAL</label>
+            </value>
+            <value>
+                <fullName>GENSET PARTS</fullName>
+                <default>false</default>
+                <label>GENSET PARTS</label>
+            </value>
+            <value>
+                <fullName>GHUNGROO</fullName>
+                <default>false</default>
+                <label>GHUNGROO</label>
+            </value>
+            <value>
+                <fullName>GIFT ITEM</fullName>
+                <default>false</default>
+                <label>GIFT ITEM</label>
+            </value>
+            <value>
+                <fullName>GREAR BOX</fullName>
+                <default>false</default>
+                <label>GREAR BOX</label>
+            </value>
+            <value>
+                <fullName>GREASE AND OIL</fullName>
+                <default>false</default>
+                <label>GREASE AND OIL</label>
+            </value>
+            <value>
+                <fullName>GUN PARTS</fullName>
+                <default>false</default>
+                <label>GUN PARTS</label>
+            </value>
+            <value>
+                <fullName>HANDICRAFT</fullName>
+                <default>false</default>
+                <label>HANDICRAFT</label>
+            </value>
+            <value>
+                <fullName>HANDLOOM</fullName>
+                <default>false</default>
+                <label>HANDLOOM</label>
+            </value>
+            <value>
+                <fullName>HANDLOOM FABRIC PRODUCTS</fullName>
+                <default>false</default>
+                <label>HANDLOOM FABRIC PRODUCTS</label>
+            </value>
+            <value>
+                <fullName>HANDMADE PAPER AND PAPER PRODUCTS</fullName>
+                <default>false</default>
+                <label>HANDMADE PAPER AND PAPER PRODUCTS</label>
+            </value>
+            <value>
+                <fullName>HEAVY MACHINERY</fullName>
+                <default>false</default>
+                <label>HEAVY MACHINERY</label>
+            </value>
+            <value>
+                <fullName>HELMET</fullName>
+                <default>false</default>
+                <label>HELMET</label>
+            </value>
+            <value>
+                <fullName>HERBS</fullName>
+                <default>false</default>
+                <label>HERBS</label>
+            </value>
+            <value>
+                <fullName>HOSIERY</fullName>
+                <default>false</default>
+                <label>HOSIERY</label>
+            </value>
+            <value>
+                <fullName>HOUSEHOLD GOODS</fullName>
+                <default>false</default>
+                <label>HOUSEHOLD GOODS</label>
+            </value>
+            <value>
+                <fullName>IMITATION JEWELLERY</fullName>
+                <default>false</default>
+                <label>IMITATION JEWELLERY</label>
+            </value>
+            <value>
+                <fullName>IMPORTED HOUSEHOLD</fullName>
+                <default>false</default>
+                <label>IMPORTED HOUSEHOLD</label>
+            </value>
+            <value>
+                <fullName>INSULATOR</fullName>
+                <default>false</default>
+                <label>INSULATOR</label>
+            </value>
+            <value>
+                <fullName>ISABGOL</fullName>
+                <default>false</default>
+                <label>ISABGOL</label>
+            </value>
+            <value>
+                <fullName>JASDAN HANDICRAFT</fullName>
+                <default>false</default>
+                <label>JASDAN HANDICRAFT</label>
+            </value>
+            <value>
+                <fullName>JEERA</fullName>
+                <default>false</default>
+                <label>JEERA</label>
+            </value>
+            <value>
+                <fullName>JUTE PRODUCTS</fullName>
+                <default>false</default>
+                <label>JUTE PRODUCTS</label>
+            </value>
+            <value>
+                <fullName>JUTI</fullName>
+                <default>false</default>
+                <label>JUTI</label>
+            </value>
+            <value>
+                <fullName>KATTHA</fullName>
+                <default>false</default>
+                <label>KATTHA</label>
+            </value>
+            <value>
+                <fullName>KHADI</fullName>
+                <default>false</default>
+                <label>KHADI</label>
+            </value>
+            <value>
+                <fullName>KITCHENWARE</fullName>
+                <default>false</default>
+                <label>KITCHENWARE</label>
+            </value>
+            <value>
+                <fullName>KOPRA</fullName>
+                <default>false</default>
+                <label>KOPRA</label>
+            </value>
+            <value>
+                <fullName>LAC BANGLES</fullName>
+                <default>false</default>
+                <label>LAC BANGLES</label>
+            </value>
+            <value>
+                <fullName>LADIES SUIT CLOTH (UNSTICHED)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>LADIES SUIT CLOTH (UNSTICHED)</label>
+            </value>
+            <value>
+                <fullName>LADIES SUIT CLOTH UNSTICHED</fullName>
+                <default>false</default>
+                <label>LADIES SUIT CLOTH UNSTICHED</label>
+            </value>
+            <value>
+                <fullName>LAMINATES</fullName>
+                <default>false</default>
+                <label>LAMINATES</label>
+            </value>
+            <value>
+                <fullName>LARGE CARDAMOM</fullName>
+                <default>false</default>
+                <label>LARGE CARDAMOM</label>
+            </value>
+            <value>
+                <fullName>LEATHER</fullName>
+                <default>false</default>
+                <label>LEATHER</label>
+            </value>
+            <value>
+                <fullName>LEATHER PRODUCT</fullName>
+                <default>false</default>
+                <label>LEATHER PRODUCT</label>
+            </value>
+            <value>
+                <fullName>LIQUID CHEMICAL</fullName>
+                <default>false</default>
+                <label>LIQUID CHEMICAL</label>
+            </value>
+            <value>
+                <fullName>LIQUOR</fullName>
+                <default>false</default>
+                <label>LIQUOR</label>
+            </value>
+            <value>
+                <fullName>LOCKS</fullName>
+                <default>false</default>
+                <label>LOCKS</label>
+            </value>
+            <value>
+                <fullName>LUBRICANTS</fullName>
+                <default>false</default>
+                <label>LUBRICANTS</label>
+            </value>
+            <value>
+                <fullName>MACHINERY</fullName>
+                <default>false</default>
+                <label>MACHINERY</label>
+            </value>
+            <value>
+                <fullName>MACHINERY PARTS</fullName>
+                <default>false</default>
+                <label>MACHINERY PARTS</label>
+            </value>
+            <value>
+                <fullName>MAKHANA</fullName>
+                <default>false</default>
+                <label>MAKHANA</label>
+            </value>
+            <value>
+                <fullName>MEDICAL EQUIPMENT</fullName>
+                <default>false</default>
+                <label>MEDICAL EQUIPMENT</label>
+            </value>
+            <value>
+                <fullName>METAL HARDWARE PRODUCTS</fullName>
+                <default>false</default>
+                <label>METAL HARDWARE PRODUCTS</label>
+            </value>
+            <value>
+                <fullName>MINERALS</fullName>
+                <default>false</default>
+                <label>MINERALS</label>
+            </value>
+            <value>
+                <fullName>MINRAL BOARD</fullName>
+                <default>false</default>
+                <label>MINRAL BOARD</label>
+            </value>
+            <value>
+                <fullName>MOSQUITO NET</fullName>
+                <default>false</default>
+                <label>MOSQUITO NET</label>
+            </value>
+            <value>
+                <fullName>MOTOR PARTS</fullName>
+                <default>false</default>
+                <label>MOTOR PARTS</label>
+            </value>
+            <value>
+                <fullName>MOULDS</fullName>
+                <default>false</default>
+                <label>MOULDS</label>
+            </value>
+            <value>
+                <fullName>MUSICAL INSTRUMENT</fullName>
+                <default>false</default>
+                <label>MUSICAL INSTRUMENT</label>
+            </value>
+            <value>
+                <fullName>NUTBOLT</fullName>
+                <default>false</default>
+                <label>NUTBOLT</label>
+            </value>
+            <value>
+                <fullName>OLD CLOTH</fullName>
+                <default>false</default>
+                <label>OLD CLOTH</label>
+            </value>
+            <value>
+                <fullName>P1</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>P1</label>
+            </value>
+            <value>
+                <fullName>PACKED FOOD PRODUCT</fullName>
+                <default>false</default>
+                <label>PACKED FOOD PRODUCT</label>
+            </value>
+            <value>
+                <fullName>PACKED FOODS</fullName>
+                <default>false</default>
+                <label>PACKED FOODS</label>
+            </value>
+            <value>
+                <fullName>PACKING MATERIAL</fullName>
+                <default>false</default>
+                <label>PACKING MATERIAL</label>
+            </value>
+            <value>
+                <fullName>PACKING STRIPES</fullName>
+                <default>false</default>
+                <label>PACKING STRIPES</label>
+            </value>
+            <value>
+                <fullName>PAINT BRUSH</fullName>
+                <default>false</default>
+                <label>PAINT BRUSH</label>
+            </value>
+            <value>
+                <fullName>PAPAD</fullName>
+                <default>false</default>
+                <label>PAPAD</label>
+            </value>
+            <value>
+                <fullName>PESTICIDES</fullName>
+                <default>false</default>
+                <label>PESTICIDES</label>
+            </value>
+            <value>
+                <fullName>PHARMACEUTICALS</fullName>
+                <default>false</default>
+                <label>PHARMACEUTICALS</label>
+            </value>
+            <value>
+                <fullName>PHOTO COPIER MACHINE</fullName>
+                <default>false</default>
+                <label>PHOTO COPIER MACHINE</label>
+            </value>
+            <value>
+                <fullName>PICKLE</fullName>
+                <default>false</default>
+                <label>PICKLE</label>
+            </value>
+            <value>
+                <fullName>PISTON</fullName>
+                <default>false</default>
+                <label>PISTON</label>
+            </value>
+            <value>
+                <fullName>PLASTIC BAGS</fullName>
+                <default>false</default>
+                <label>PLASTIC BAGS</label>
+            </value>
+            <value>
+                <fullName>PLASTIC ITEM</fullName>
+                <default>false</default>
+                <label>PLASTIC ITEM</label>
+            </value>
+            <value>
+                <fullName>PLY BOARD</fullName>
+                <default>false</default>
+                <label>PLY BOARD</label>
+            </value>
+            <value>
+                <fullName>POLY FILM</fullName>
+                <default>false</default>
+                <label>POLY FILM</label>
+            </value>
+            <value>
+                <fullName>POLY ROLLER</fullName>
+                <default>false</default>
+                <label>POLY ROLLER</label>
+            </value>
+            <value>
+                <fullName>PRECIOUS GEMS</fullName>
+                <default>false</default>
+                <label>PRECIOUS GEMS</label>
+            </value>
+            <value>
+                <fullName>PRECIOUS METAL</fullName>
+                <default>false</default>
+                <label>PRECIOUS METAL</label>
+            </value>
+            <value>
+                <fullName>PRECISION EQUIPMENT</fullName>
+                <default>false</default>
+                <label>PRECISION EQUIPMENT</label>
+            </value>
+            <value>
+                <fullName>PRINTED MATERIAL</fullName>
+                <default>false</default>
+                <label>PRINTED MATERIAL</label>
+            </value>
+            <value>
+                <fullName>PRINTED STATIONARY</fullName>
+                <default>false</default>
+                <label>PRINTED STATIONARY</label>
+            </value>
+            <value>
+                <fullName>PROMOTIONAL ITEM</fullName>
+                <default>false</default>
+                <label>PROMOTIONAL ITEM</label>
+            </value>
+            <value>
+                <fullName>PUMP</fullName>
+                <default>false</default>
+                <label>PUMP</label>
+            </value>
+            <value>
+                <fullName>RAISIN</fullName>
+                <default>false</default>
+                <label>RAISIN</label>
+            </value>
+            <value>
+                <fullName>RAKHI</fullName>
+                <default>false</default>
+                <label>RAKHI</label>
+            </value>
+            <value>
+                <fullName>RAKHI PROJEC</fullName>
+                <default>false</default>
+                <label>RAKHI PROJEC</label>
+            </value>
+            <value>
+                <fullName>RAW SILK</fullName>
+                <default>false</default>
+                <label>RAW SILK</label>
+            </value>
+            <value>
+                <fullName>READY MADE GARMENT (RMG)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>READY MADE GARMENT (RMG)</label>
+            </value>
+            <value>
+                <fullName>READY MADE GARMENT RMG</fullName>
+                <default>false</default>
+                <label>READY MADE GARMENT RMG</label>
+            </value>
+            <value>
+                <fullName>RECIOUS GEMS</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>RECIOUS GEMS</label>
+            </value>
+            <value>
+                <fullName>REPAIR TOOLS</fullName>
+                <default>false</default>
+                <label>REPAIR TOOLS</label>
+            </value>
+            <value>
+                <fullName>RETAIL PROJECTS</fullName>
+                <default>false</default>
+                <label>RETAIL PROJECTS</label>
+            </value>
+            <value>
+                <fullName>RICE</fullName>
+                <default>false</default>
+                <label>RICE</label>
+            </value>
+            <value>
+                <fullName>RIM</fullName>
+                <default>false</default>
+                <label>RIM</label>
+            </value>
+            <value>
+                <fullName>RMG &amp; ACCESSORIES</fullName>
+                <default>false</default>
+                <label>RMG &amp; ACCESSORIES</label>
+            </value>
+            <value>
+                <fullName>RUBBER</fullName>
+                <default>false</default>
+                <label>RUBBER</label>
+            </value>
+            <value>
+                <fullName>RUBBER PRODUCTS</fullName>
+                <default>false</default>
+                <label>RUBBER PRODUCTS</label>
+            </value>
+            <value>
+                <fullName>SAFEHOME</fullName>
+                <default>false</default>
+                <label>SAFEHOME</label>
+            </value>
+            <value>
+                <fullName>SAFERELOCATION</fullName>
+                <default>false</default>
+                <label>SAFERELOCATION</label>
+            </value>
+            <value>
+                <fullName>SAFE RETURN FURNITURE</fullName>
+                <default>false</default>
+                <label>SAFE RETURN FURNITURE</label>
+            </value>
+            <value>
+                <fullName>SAFE RETURN MAKHANA</fullName>
+                <default>false</default>
+                <label>SAFE RETURN MAKHANA</label>
+            </value>
+            <value>
+                <fullName>SAFE RETURN RMG</fullName>
+                <default>false</default>
+                <label>SAFE RETURN RMG</label>
+            </value>
+            <value>
+                <fullName>Safe Returns</fullName>
+                <default>false</default>
+                <label>Safe Returns</label>
+            </value>
+            <value>
+                <fullName>SAFEXPRESS FAMILY</fullName>
+                <default>false</default>
+                <label>SAFEXPRESS FAMILY</label>
+            </value>
+            <value>
+                <fullName>SAINIK EXPRESS</fullName>
+                <default>false</default>
+                <label>SAINIK EXPRESS</label>
+            </value>
+            <value>
+                <fullName>SANITARY PADS</fullName>
+                <default>false</default>
+                <label>SANITARY PADS</label>
+            </value>
+            <value>
+                <fullName>SAREE</fullName>
+                <default>false</default>
+                <label>SAREE</label>
+            </value>
+            <value>
+                <fullName>SAUNF</fullName>
+                <default>false</default>
+                <label>SAUNF</label>
+            </value>
+            <value>
+                <fullName>SCIENTIFIC EQUIPMENT</fullName>
+                <default>false</default>
+                <label>SCIENTIFIC EQUIPMENT</label>
+            </value>
+            <value>
+                <fullName>SCREW AND WASHER</fullName>
+                <default>false</default>
+                <label>SCREW AND WASHER</label>
+            </value>
+            <value>
+                <fullName>SEALENT,ANCHOR,TOOLS 01</fullName>
+                <default>false</default>
+                <label>SEALENT,ANCHOR,TOOLS 01</label>
+            </value>
+            <value>
+                <fullName>SEALENT AND TOOLS 00</fullName>
+                <default>false</default>
+                <label>SEALENT AND TOOLS 00</label>
+            </value>
+            <value>
+                <fullName>SEEDS</fullName>
+                <default>false</default>
+                <label>SEEDS</label>
+            </value>
+            <value>
+                <fullName>SHAWL</fullName>
+                <default>false</default>
+                <label>SHAWL</label>
+            </value>
+            <value>
+                <fullName>SHEETS</fullName>
+                <default>false</default>
+                <label>SHEETS</label>
+            </value>
+            <value>
+                <fullName>SHIRTS</fullName>
+                <default>false</default>
+                <label>SHIRTS</label>
+            </value>
+            <value>
+                <fullName>SHWALS</fullName>
+                <default>false</default>
+                <label>SHWALS</label>
+            </value>
+            <value>
+                <fullName>SILK</fullName>
+                <default>false</default>
+                <label>SILK</label>
+            </value>
+            <value>
+                <fullName>SILK YARN</fullName>
+                <default>false</default>
+                <label>SILK YARN</label>
+            </value>
+            <value>
+                <fullName>SOAP STONE</fullName>
+                <default>false</default>
+                <label>SOAP STONE</label>
+            </value>
+            <value>
+                <fullName>SODI BLANKET</fullName>
+                <default>false</default>
+                <label>SODI BLANKET</label>
+            </value>
+            <value>
+                <fullName>SPARE PARTS</fullName>
+                <default>false</default>
+                <label>SPARE PARTS</label>
+            </value>
+            <value>
+                <fullName>SPICES</fullName>
+                <default>false</default>
+                <label>SPICES</label>
+            </value>
+            <value>
+                <fullName>SPORTS GOODS</fullName>
+                <default>false</default>
+                <label>SPORTS GOODS</label>
+            </value>
+            <value>
+                <fullName>STAMPING</fullName>
+                <default>false</default>
+                <label>STAMPING</label>
+            </value>
+            <value>
+                <fullName>STATIONERY</fullName>
+                <default>false</default>
+                <label>STATIONERY</label>
+            </value>
+            <value>
+                <fullName>SUIT</fullName>
+                <default>false</default>
+                <label>SUIT</label>
+            </value>
+            <value>
+                <fullName>SUPARI</fullName>
+                <default>false</default>
+                <label>SUPARI</label>
+            </value>
+            <value>
+                <fullName>SURGICAL COTTON</fullName>
+                <default>false</default>
+                <label>SURGICAL COTTON</label>
+            </value>
+            <value>
+                <fullName>SWEETS</fullName>
+                <default>false</default>
+                <label>SWEETS</label>
+            </value>
+            <value>
+                <fullName>TABLET</fullName>
+                <default>false</default>
+                <label>TABLET</label>
+            </value>
+            <value>
+                <fullName>TAX FREE BOOKS</fullName>
+                <default>false</default>
+                <label>TAX FREE BOOKS</label>
+            </value>
+            <value>
+                <fullName>TEA</fullName>
+                <default>false</default>
+                <label>TEA</label>
+            </value>
+            <value>
+                <fullName>TELECOMMUNICATION EQUIPMENT</fullName>
+                <default>false</default>
+                <label>TELECOMMUNICATION EQUIPMENT</label>
+            </value>
+            <value>
+                <fullName>TERACOTA</fullName>
+                <default>false</default>
+                <label>TERACOTA</label>
+            </value>
+            <value>
+                <fullName>TEXTILE</fullName>
+                <default>false</default>
+                <label>TEXTILE</label>
+            </value>
+            <value>
+                <fullName>THOMAS MACHINE</fullName>
+                <default>false</default>
+                <label>THOMAS MACHINE</label>
+            </value>
+            <value>
+                <fullName>TIMBER PRODUCTS</fullName>
+                <default>false</default>
+                <label>TIMBER PRODUCTS</label>
+            </value>
+            <value>
+                <fullName>TISSUE PAPER</fullName>
+                <default>false</default>
+                <label>TISSUE PAPER</label>
+            </value>
+            <value>
+                <fullName>TOBACO PRODUCTS</fullName>
+                <default>false</default>
+                <label>TOBACO PRODUCTS</label>
+            </value>
+            <value>
+                <fullName>TOILETRIES</fullName>
+                <default>false</default>
+                <label>TOILETRIES</label>
+            </value>
+            <value>
+                <fullName>TOOLS</fullName>
+                <default>false</default>
+                <label>TOOLS</label>
+            </value>
+            <value>
+                <fullName>TOWEL</fullName>
+                <default>false</default>
+                <label>TOWEL</label>
+            </value>
+            <value>
+                <fullName>UPS</fullName>
+                <default>false</default>
+                <label>UPS</label>
+            </value>
+            <value>
+                <fullName>UTENSILS</fullName>
+                <default>false</default>
+                <label>UTENSILS</label>
+            </value>
+            <value>
+                <fullName>VALVE &amp; FASTENER</fullName>
+                <default>false</default>
+                <label>VALVE &amp; FASTENER</label>
+            </value>
+            <value>
+                <fullName>WALL CLOCK</fullName>
+                <default>false</default>
+                <label>WALL CLOCK</label>
+            </value>
+            <value>
+                <fullName>WALNUT</fullName>
+                <default>false</default>
+                <label>WALNUT</label>
+            </value>
+            <value>
+                <fullName>WEIGHING SCALE</fullName>
+                <default>false</default>
+                <label>WEIGHING SCALE</label>
+            </value>
+            <value>
+                <fullName>WOOD PRODUCTS</fullName>
+                <default>false</default>
+                <label>WOOD PRODUCTS</label>
+            </value>
+            <value>
+                <fullName>WOOLEN GARMENT</fullName>
+                <default>false</default>
+                <label>WOOLEN GARMENT</label>
+            </value>
+            <value>
+                <fullName>WOOLEN GOODS</fullName>
+                <default>false</default>
+                <label>WOOLEN GOODS</label>
+            </value>
+            <value>
+                <fullName>ZIP</fullName>
+                <default>false</default>
+                <label>ZIP</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

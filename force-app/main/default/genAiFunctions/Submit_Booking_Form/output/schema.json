@@ -1,0 +1,123 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "approxWeight" : {
+      "title" : "Approx Weight (kg)",
+      "description" : "Approximate weight in kg; blank when invalid.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "deliveryLocation" : {
+      "title" : "Delivery Location",
+      "description" : "City, district and state of the delivery pincode.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "deliveryPincode" : {
+      "title" : "Delivery Pincode",
+      "description" : "Serviceable delivery pincode; blank when invalid or not serviceable.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "email" : {
+      "title" : "Email",
+      "description" : "Cleaned email address; blank when invalid.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "errorMessage" : {
+      "title" : "Error Message",
+      "description" : "Customer-facing description of each detail that needs correction, one per line.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "formStatus" : {
+      "title" : "Form Status",
+      "description" : "VALID when every detail passed, INVALID when a detail needs correction, ERROR when the pincode check could not be completed. Never show this value to the customer.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "invalidFields" : {
+      "title" : "Invalid Fields",
+      "description" : "Codes of the details that need correction. Never show these codes to the customer.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "mobileNumber" : {
+      "title" : "Mobile Number",
+      "description" : "Cleaned 10-digit mobile number; blank when invalid.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "name" : {
+      "title" : "Name",
+      "description" : "Cleaned full name; blank when invalid.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "packageCount" : {
+      "title" : "Number of Packages",
+      "description" : "Number of packages; blank when invalid.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "pickupAddress" : {
+      "title" : "Pickup Address",
+      "description" : "Cleaned pickup address; blank when invalid.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "pickupLocation" : {
+      "title" : "Pickup Location",
+      "description" : "City, district and state of the pickup pincode.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "pickupPincode" : {
+      "title" : "Pickup Pincode",
+      "description" : "City, district and state of the pickup pincode.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

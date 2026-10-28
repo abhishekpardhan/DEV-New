@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approval_Status__c</fullName>
+    <defaultValue>&quot;Not Submitted for Approval&quot;</defaultValue>
+    <label>Approval Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Submitted for Approval</fullName>
+                <default>true</default>
+                <label>Not Submitted for Approval</label>
+            </value>
+            <value>
+                <fullName>Pending from AM</fullName>
+                <default>false</default>
+                <label>Pending from AM</label>
+            </value>
+            <value>
+                <fullName>Approved By AM</fullName>
+                <default>false</default>
+                <label>Approved By AM</label>
+            </value>
+            <value>
+                <fullName>Rejected By AM</fullName>
+                <default>false</default>
+                <label>Rejected By AM</label>
+            </value>
+            <value>
+                <fullName>Approved by Claim Dept</fullName>
+                <default>false</default>
+                <label>Approved by Claim Dept</label>
+            </value>
+            <value>
+                <fullName>Rejected by Claim Dept</fullName>
+                <default>false</default>
+                <label>Rejected by Claim Dept</label>
+            </value>
+            <value>
+                <fullName>Pending from Claim Dept.</fullName>
+                <default>false</default>
+                <label>Pending from Claim Dept.</label>
+            </value>
+            <value>
+                <fullName>Auto-approved</fullName>
+                <default>false</default>
+                <label>Auto-approved</label>
+            </value>
+            <value>
+                <fullName>Approved by CO</fullName>
+                <default>false</default>
+                <label>Approved by CO</label>
+            </value>
+            <value>
+                <fullName>Approved by CCD</fullName>
+                <default>false</default>
+                <label>Approved by CCD</label>
+            </value>
+            <value>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+                <label>Rejected</label>
+            </value>
+            <value>
+                <fullName>Rejected by CO</fullName>
+                <default>false</default>
+                <label>Rejected by CO</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

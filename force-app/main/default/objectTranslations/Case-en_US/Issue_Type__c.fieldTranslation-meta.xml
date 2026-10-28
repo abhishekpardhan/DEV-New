@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Issue Type --></label>
+    <name>Issue_Type__c</name>
+    <picklistValues>
+        <masterLabel>Address Change</masterLabel>
+        <translation><!-- Address Change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>At Gateway</masterLabel>
+        <translation><!-- At Gateway --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DOD Cancellation</masterLabel>
+        <translation><!-- DOD Cancellation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In Transit</masterLabel>
+        <translation><!-- In Transit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Open Delivery</masterLabel>
+        <translation><!-- Open Delivery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Re-Booking</masterLabel>
+        <translation><!-- Re-Booking --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wrong Delivery</masterLabel>
+        <translation><!-- Wrong Delivery --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

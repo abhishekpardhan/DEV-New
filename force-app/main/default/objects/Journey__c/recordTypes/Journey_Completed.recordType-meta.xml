@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Journey_Completed</fullName>
+    <active>true</active>
+    <label>Journey Completed</label>
+    <picklistValues>
+        <picklist>Approval_Status__c</picklist>
+        <values>
+            <fullName>Approved By RM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved by Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Auto Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Submitted for Approval</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Not to be Claimed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending from Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending from RM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected By RM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected by Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted for Approval</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mode_of_transport__c</picklist>
+        <values>
+            <fullName>Personal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

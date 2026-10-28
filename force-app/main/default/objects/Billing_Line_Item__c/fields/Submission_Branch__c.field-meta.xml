@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Submission_Branch__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Submission Branch</label>
+    <referenceTo>Branch_Master__c</referenceTo>
+    <relationshipLabel>Billing Line Items (Submission Branch)</relationshipLabel>
+    <relationshipName>Billing_Line_Items1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

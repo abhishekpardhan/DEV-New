@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WayBill_Check_On_Closed_Case</fullName>
+    <active>false</active>
+    <description>WayBill number is required to Complete the Booking Cases.</description>
+    <errorConditionFormula>AND(
+NOT($Setup.Custom_Validation_Exception_Setting__c.Bypass_Validation_Rules__c),
+    TEXT(Case_Nature__c) = &apos;Request&apos;,
+    OR(ISBLANK(WaybillNo__c),ISNULL(WaybillNo__c)),
+    TEXT(Case_Type__c) =&apos;Booking Request&apos;,
+    TEXT(Status) =&apos;Completed&apos;
+)</errorConditionFormula>
+    <errorMessage>WayBill Number is required to Complete the Case.</errorMessage>
+</ValidationRule>

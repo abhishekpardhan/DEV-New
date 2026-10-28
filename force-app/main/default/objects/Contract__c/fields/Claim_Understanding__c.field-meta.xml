@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Claim_Understanding__c</fullName>
+    <label>Claim Understanding</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Owners Risk</fullName>
+                <default>false</default>
+                <label>Owners Risk</label>
+            </value>
+            <value>
+                <fullName>Carriers Risk</fullName>
+                <default>false</default>
+                <label>Carriers Risk</label>
+            </value>
+            <value>
+                <fullName>Owners Risk with Excess Clause</fullName>
+                <default>false</default>
+                <label>Owners Risk with Excess Clause</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

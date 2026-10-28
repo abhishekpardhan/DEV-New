@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partly_Recoverable_Non_recoverable_rule</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+     !ISCHANGED(OwnerId), 
+    RecordType.DeveloperName = &apos;Collection&apos;,
+NOT($Profile.Name = &apos;Portfolio Management&apos;),
+    ISPICKVAL( Payment_Remaining__c ,&apos;Partly Recoverable / Non Recoverable&apos;),OR(ISNULL(Partly_Recoverable_Amount__c),Partly_Recoverable_Amount__c &lt;= 0)
+)</errorConditionFormula>
+    <errorDisplayField>Partly_Recoverable_Amount__c</errorDisplayField>
+    <errorMessage>Please Enter Partly Recoverable Amount.</errorMessage>
+</ValidationRule>

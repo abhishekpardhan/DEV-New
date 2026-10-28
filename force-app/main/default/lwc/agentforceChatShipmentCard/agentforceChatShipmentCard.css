@@ -1,0 +1,153 @@
+:host {
+    display: block;
+    font-family: -apple-system, BlinkMacSystemFont, "Salesforce Sans", "Segoe UI", Roboto, sans-serif;
+}
+
+/* Card Containers */
+.sfx-card,
+.sfx-error-card {
+    max-width: 380px;
+    margin: 0.5rem 0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+}
+
+/* Header Section */
+.sfx-header,
+.sfx-error-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.75rem 1rem;
+    gap: 0.5rem;
+    background-color: #1e7a34;
+    position: relative;
+}
+
+.sfx-header--center {
+    justify-content: center;
+}
+
+.sfx-logo {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.sfx-title,
+.sfx-error-title {
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.3;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Animated Track Section */
+.sfx-truck-track {
+    position: relative;
+    height: 52px;
+    overflow: hidden;
+    background-color: #2d2d2d;
+}
+
+.sfx-truck {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 36px;
+    /* stylelint-disable keyframes-name-pattern */
+    animation: truckSlide 6s linear infinite;
+    /* stylelint-enable keyframes-name-pattern */
+}
+
+/* stylelint-disable keyframes-name-pattern */
+@keyframes truckSlide {
+    0% {
+        left: -80px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+/* stylelint-enable keyframes-name-pattern */
+
+/* Loading State */
+.sfx-loading {
+    padding: 0.75rem;
+    background-color: #ffffff;
+}
+
+.sfx-loading-text {
+    font-size: 0.8125rem;
+    color: #1e7a34;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+}
+
+/* Content Body */
+.sfx-body {
+    padding: 0.5rem 0.75rem;
+    background-color: #ffffff;
+}
+
+.sfx-row {
+    display: flex;
+    align-items: flex-start;
+    padding: 0.4375rem 4px;
+    border-bottom: 1.5px solid #2e7d32;
+}
+
+.sfx-row:last-child {
+    border-bottom: none;
+}
+
+.sfx-label {
+    flex: 0 0 48%;
+    font-size: 0.75rem;
+    color: #155724;
+    font-weight: 700;
+    border-right: 2px solid #4caf50;
+    padding-right: 0.5rem;
+}
+
+.sfx-value {
+    flex: 1;
+    font-size: 0.75rem;
+    color: #1a1a1a;
+    font-weight: 500;
+    padding-left: 0.5rem;
+    word-break: break-word;
+}
+
+/* Error Body */
+.sfx-error-body {
+    padding: 0.75rem 1rem;
+    background-color: #ffffff;
+}
+
+.sfx-error-message {
+    font-size: 0.8125rem;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+/* Footer Section */
+.sfx-footer,
+.sfx-error-footer {
+    background-color: #1a1a1a;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.6875rem;
+    color: #ffffff;
+    font-weight: 600;
+    text-align: center;
+    border-top: none;
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Status --></label>
+    <name>Stage__c</name>
+    <picklistValues>
+        <masterLabel>Active</masterLabel>
+        <translation><!-- Active --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Archive</masterLabel>
+        <translation><!-- Archive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Closed Lost</masterLabel>
+        <translation><!-- Closed Lost --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Closed Won</masterLabel>
+        <translation><!-- Closed Won --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deferred</masterLabel>
+        <translation><!-- Deferred --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Negotiation</masterLabel>
+        <translation><!-- Negotiation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quotation</masterLabel>
+        <translation><!-- Quotation --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

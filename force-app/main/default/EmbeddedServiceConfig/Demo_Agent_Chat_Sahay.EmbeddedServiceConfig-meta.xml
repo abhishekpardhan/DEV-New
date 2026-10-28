@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmbeddedServiceConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <areGuestUsersAllowed>false</areGuestUsersAllowed>
+    <branding>EmbeddedServiceConfig_BrandingSet_1a115e91e6a</branding>
+    <clientVersion>WebV2</clientVersion>
+    <deploymentFeature>EmbeddedMessaging</deploymentFeature>
+    <deploymentType>Web</deploymentType>
+    <embeddedServiceMessagingChannel>
+        <businessHours>Default</businessHours>
+        <isChatInvitationCustomizable>false</isChatInvitationCustomizable>
+        <isEnabled>true</isEnabled>
+        <isInvitationEnabled>false</isInvitationEnabled>
+        <isSendInvtAllowedAfterAccept>false</isSendInvtAllowedAfterAccept>
+        <isSendInvtAllowedAfterReject>false</isSendInvtAllowedAfterReject>
+        <messagingChannel>Demo_Agent_Chat_Sahay</messagingChannel>
+        <shouldShowAgentforceTagline>false</shouldShowAgentforceTagline>
+        <shouldShowDeliveryReceipts>false</shouldShowDeliveryReceipts>
+        <shouldShowEmojiSelection>false</shouldShowEmojiSelection>
+        <shouldShowReadReceipts>false</shouldShowReadReceipts>
+        <shouldShowTypingIndicators>false</shouldShowTypingIndicators>
+        <shouldStartNewLineOnEnter>false</shouldStartNewLineOnEnter>
+    </embeddedServiceMessagingChannel>
+    <isEnabled>true</isEnabled>
+    <isTermsAndConditionsEnabled>false</isTermsAndConditionsEnabled>
+    <isTermsAndConditionsRequired>false</isTermsAndConditionsRequired>
+    <masterLabel>Demo_Agent_Chat_Sahay</masterLabel>
+    <shouldHideAuthDialog>false</shouldHideAuthDialog>
+    <site>ESW_Demo_Agent_Chat_Sahay_17913689441261</site>
+</EmbeddedServiceConfig>

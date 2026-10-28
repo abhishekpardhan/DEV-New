@@ -1,0 +1,159 @@
+<apex:page controller="SafexpressChequeController" showHeader="false" sidebar="false"   renderAs="pdf" standardStylesheets="false" contentType="text/html">
+<html>
+<head>
+    <meta charset="UTF-8" />
+</head>
+<body style="margin:0;padding:0;font-family:Arial,sans-serif;font-size:13px;color:#000;background:#fff;">
+
+    <!-- ═══════════════════════════════════════════════════
+         RTGS / NEFT
+         Image: 902 x 425 px  (confirmed by pixel scan)
+
+         Measured positions:
+           Date value  : y=68,  x=830  (after "Date:" label ends at x=825)
+           Green starts: y=114
+           Body text   : y=122, x=14,  width=870
+           Amount      : y=195, x=718
+           SR NO label : y=336, x=329–540  → value at x=548
+    ════════════════════════════════════════════════════ -->
+    <apex:outputPanel layout="block" rendered="{!isRTGSOrNEFT}">
+
+
+<div style="
+    position:relative;
+    width:700px;
+     /*border:2px solid black;*/
+    height:450px;
+    margin:auto;
+    justify-content:center;
+    align-items:center;
+">
+
+    <!-- Background Image -->
+    <img src="{!imageUrl}"
+         style="justify-content:center;
+                padding-right:9px;
+            position:absolute;
+                top:24px;
+                left:24px;
+            width:650px;
+            height:400px;
+            margin:auto;
+          
+         "/>
+
+    <!-- Content Layer -->
+    <table style="
+        position:absolute;
+        top:48px;
+        left:42px;
+        width:625px;
+        height:350px;
+                  /*border:2px solid black;*/
+    ">
+
+        <tr>
+            <td colspan="2" style="height:25px; /*border:2px solid black;">
+                &nbsp;
+            </td>
+        </tr>
+
+        <!-- Date -->
+        <tr>
+            <td style="width:80%; /*border:2px solid black;*/">&nbsp;</td>
+            <td style="
+                width:20%;
+                text-align:center;
+                font-size:12px;
+                font-family:Arial;
+                /*border:2px solid black;*/
+            ">
+                {!closedDate}
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="height:40px;    /*border:2px solid black;*/">
+                &nbsp;
+            </td>
+        </tr>
+        <!-- Main Content -->
+        <tr>
+            <td style="
+                 padding-left:30px;
+                font-size:12px;
+                font-family:Arial;
+                vertical-align:top;
+                         /*border:2px solid black;*/
+                height:150px;
+            ">
+                This is to state that Safexpress has transferred a payment of <br/>
+                                Rs.&nbsp;<strong>{!amountInWords}</strong> <br/>
+                                    
+                                to <strong>{!displayName}</strong> 
+                                <apex:outputPanel rendered="{!showWaybills}">
+                                    &nbsp;in A/C No. <strong>{!accountNumber}</strong><br/>
+                                    of <strong>{!bankBranchName}</strong> <br/>
+                                     as full &amp; final settlement of claim <br/>
+                                    against Waybill No. {!waybillCSV} <br/>
+                                    Through NEFT vide No. <strong>{!chequeCofNo}</strong>
+
+                                </apex:outputPanel>
+                                <apex:outputPanel rendered="{!NOT(showWaybills)}">
+                                    &nbsp;in A/C No. <strong>{!accountNumber}</strong><br/>
+                                    of <strong>{!bankBranchName}</strong> <br/>
+                                    as full &amp; final settlement of claim.<br/>
+                                    Through NEFT vide No. <strong>{!chequeCofNo}</strong><br/>
+                                    Waybill details are attached separately.
+                                </apex:outputPanel>
+                                <br/> 
+            </td>
+
+            <td style="
+                text-align:center;
+                vertical-align:middle;
+                font-size:16px;
+                font-weight:bold;
+                          /*border:2px solid black;*/
+            ">
+                {!displayAmount}/-
+            </td>
+        </tr>
+         <tr>
+            <td colspan="2" style="height:25px;     /*border:2px solid black;*/">
+                &nbsp;
+            </td>
+        </tr>
+        <!-- SR Number -->
+        <tr>
+            <td colspan="2"
+                style="
+                    text-align:center;
+                    font-size:14px;
+                    vertical-align:bottom;
+                    height:40px;
+                ">
+                <span style="padding-left:35px;">{!srNo}</span>
+            </td>
+        </tr>
+
+    </table>
+
+</div>
+     
+       
+
+       
+      
+              
+
+    </apex:outputPanel>
+
+
+    <!-- ═══════════════════════════════════════════════
+         COF — Plain text letter (unchanged)
+    ════════════════════════════════════════════════ -->
+    
+
+</body>
+</html>
+</apex:page>

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bot xmlns="http://soap.sforce.com/2006/04/metadata">
+    <agentDSLEnabled>false</agentDSLEnabled>
+    <botMlDomain>
+        <label>Safexpress Enhanced AutoBot</label>
+        <mlIntents>
+            <developerName>End_Chat</developerName>
+            <label>End Chat</label>
+            <mlIntentUtterances>
+                <utterance>2</utterance>
+            </mlIntentUtterances>
+        </mlIntents>
+        <mlIntents>
+            <description>Pickup Request for shipment</description>
+            <developerName>Pickup_Request</developerName>
+            <label>Press 1 for Pickup Request</label>
+            <mlIntentUtterances>
+                <utterance>1</utterance>
+            </mlIntentUtterances>
+        </mlIntents>
+        <mlIntents>
+            <developerName>Press_1_for_Distribution</developerName>
+            <label>Press 1 for Distribution</label>
+            <mlIntentUtterances>
+                <utterance>1</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Distribution</utterance>
+            </mlIntentUtterances>
+        </mlIntents>
+        <mlIntents>
+            <developerName>Press_1_for_Request_Pickup</developerName>
+            <label>Press 1 for Request Pickup</label>
+            <mlIntentUtterances>
+                <utterance>1</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Request Pickup</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Pickup</utterance>
+            </mlIntentUtterances>
+        </mlIntents>
+        <mlIntents>
+            <developerName>Press_2_Escalation</developerName>
+            <label>Press 2 Escalation</label>
+            <mlIntentUtterances>
+                <utterance>2</utterance>
+            </mlIntentUtterances>
+        </mlIntents>
+        <mlIntents>
+            <developerName>Press_2_for_3PL</developerName>
+            <label>Press 2 for 3PL</label>
+            <mlIntentUtterances>
+                <utterance>2</utterance>
+            </mlIntentUtterances>
+        </mlIntents>
+        <mlIntents>
+            <developerName>Press_3_for_3_PL_and_Distribution</developerName>
+            <label>Press 3 for 3 PL and Distribution</label>
+            <mlIntentUtterances>
+                <utterance>3</utterance>
+            </mlIntentUtterances>
+        </mlIntents>
+        <mlIntents>
+            <developerName>Press_3_for_Freight_Dispitute</developerName>
+            <label>Press 3 for Freight Dispitute</label>
+            <mlIntentUtterances>
+                <utterance>3</utterance>
+            </mlIntentUtterances>
+        </mlIntents>
+        <mlIntents>
+            <developerName>Press_3_for_Leave_Feedback</developerName>
+            <label>Press 3 for Leave Feedback</label>
+            <mlIntentUtterances>
+                <utterance>3</utterance>
+            </mlIntentUtterances>
+        </mlIntents>
+        <mlIntents>
+            <developerName>Press_4_for_Distribution_Query</developerName>
+            <label>Press 4 for Distribution Query</label>
+            <mlIntentUtterances>
+                <utterance>4</utterance>
+            </mlIntentUtterances>
+        </mlIntents>
+        <mlIntents>
+            <developerName>Press_4_for_Other</developerName>
+            <label>Press 4 for Other</label>
+            <mlIntentUtterances>
+                <utterance>4</utterance>
+            </mlIntentUtterances>
+        </mlIntents>
+        <mlIntents>
+            <developerName>Press_4_for_Pickup_Issue</developerName>
+            <label>Press 4 for Pickup Issue</label>
+            <mlIntentUtterances>
+                <utterance>4</utterance>
+            </mlIntentUtterances>
+        </mlIntents>
+        <mlIntents>
+            <developerName>Press_5_for_Feedback</developerName>
+            <label>Press 5 for Feedback</label>
+            <mlIntentUtterances>
+                <utterance>5</utterance>
+            </mlIntentUtterances>
+        </mlIntents>
+        <mlIntents>
+            <developerName>Service_Issue</developerName>
+            <label>Press 1 Service Issue</label>
+            <mlIntentUtterances>
+                <utterance>1</utterance>
+            </mlIntentUtterances>
+        </mlIntents>
+        <mlIntents>
+            <developerName>Track_Shipment</developerName>
+            <label>Track Shipment</label>
+            <mlIntentUtterances>
+                <utterance>2</utterance>
+            </mlIntentUtterances>
+        </mlIntents>
+        <mlIntents>
+            <developerName>Welcome</developerName>
+            <label>Welcome</label>
+        </mlIntents>
+        <mlSlotClasses>
+            <dataType>Text</dataType>
+            <developerName>Date_Indian_Format</developerName>
+            <extractionRegex>^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$</extractionRegex>
+            <extractionType>Pattern</extractionType>
+            <label>Date_Indian_Format</label>
+        </mlSlotClasses>
+        <mlSlotClasses>
+            <dataType>Text</dataType>
+            <developerName>Download_GST_Invoice_Options</developerName>
+            <extractionRegex>^[1-2-3]{1}$</extractionRegex>
+            <extractionType>Pattern</extractionType>
+            <label>Download GST Invoice Options</label>
+        </mlSlotClasses>
+        <mlSlotClasses>
+            <dataType>Text</dataType>
+            <developerName>dynamicPickupTime</developerName>
+            <extractionRegex>(.*?)</extractionRegex>
+            <extractionType>Pattern</extractionType>
+            <label>dynamicPickupTime</label>
+        </mlSlotClasses>
+        <mlSlotClasses>
+            <dataType>Text</dataType>
+            <developerName>EscalationSubTypeOptions</developerName>
+            <extractionRegex>^[1-2]*{1}$</extractionRegex>
+            <extractionType>Pattern</extractionType>
+            <label>EscalationSubTypeOptions</label>
+        </mlSlotClasses>
+        <mlSlotClasses>
+            <dataType>Text</dataType>
+            <developerName>feedbackOptions</developerName>
+            <extractionRegex>^[1-3]{1}$</extractionRegex>
+            <extractionType>Pattern</extractionType>
+            <label>feedbackScore</label>
+        </mlSlotClasses>
+        <mlSlotClasses>
+            <dataType>Text</dataType>
+            <developerName>FreightDisputeSubtypeOptions</developerName>
+            <extractionRegex>^[1]{1}$</extractionRegex>
+            <extractionType>Pattern</extractionType>
+            <label>FreightDisputeSubtypeOptions</label>
+        </mlSlotClasses>
+        <mlSlotClasses>
+            <dataType>Text</dataType>
+            <description>For input 1 or 2</description>
+            <developerName>HaveBox</developerName>
+            <extractionRegex>^[1-2]{1}$</extractionRegex>
+            <extractionType>Pattern</extractionType>
+            <label>HaveBox</label>
+        </mlSlotClasses>
+        <mlSlotClasses>
+            <dataType>Text</dataType>
+            <developerName>Only_Text</developerName>
+            <extractionRegex>^[a-zA-Z ]*$</extractionRegex>
+            <extractionType>Pattern</extractionType>
+            <label>Only Text</label>
+        </mlSlotClasses>
+        <mlSlotClasses>
+            <dataType>Text</dataType>
+            <developerName>pickUpTimeSlot</developerName>
+            <extractionRegex>(.*?)</extractionRegex>
+            <extractionType>Pattern</extractionType>
+            <label>pickUpTimeSlot</label>
+        </mlSlotClasses>
+        <mlSlotClasses>
+            <dataType>Text</dataType>
+            <developerName>Pincode2</developerName>
+            <extractionRegex>^\d{6}$</extractionRegex>
+            <extractionType>Pattern</extractionType>
+            <label>Pincode</label>
+        </mlSlotClasses>
+        <mlSlotClasses>
+            <dataType>Text</dataType>
+            <developerName>serviceIssueSubtypeOptions</developerName>
+            <extractionRegex>^[1-7]{1}$</extractionRegex>
+            <extractionType>Pattern</extractionType>
+            <label>serviceIssueSubtypeOptions</label>
+        </mlSlotClasses>
+        <mlSlotClasses>
+            <dataType>Text</dataType>
+            <developerName>Store_1_4_Option</developerName>
+            <extractionRegex>^[1-4]{1}$</extractionRegex>
+            <extractionType>Pattern</extractionType>
+            <label>Store 1-4 Option</label>
+        </mlSlotClasses>
+        <mlSlotClasses>
+            <dataType>Text</dataType>
+            <developerName>WayBillNumber</developerName>
+            <extractionRegex>^\d{8,15}$</extractionRegex>
+            <extractionType>Pattern</extractionType>
+            <label>WayBillNumber</label>
+        </mlSlotClasses>
+        <mlSlotClasses>
+            <dataType>Text</dataType>
+            <developerName>X10_Digit_Mobile_Number</developerName>
+            <extractionRegex>^[6789]\d{10}$</extractionRegex>
+            <extractionType>Pattern</extractionType>
+            <label>10 Digit Mobile Number</label>
+        </mlSlotClasses>
+        <name>Safexpress_Enhanced_AutoBot</name>
+    </botMlDomain>
+    <botSource>None</botSource>
+    <botUser>manoj.sharma1@safexpress.com.prod.dev</botUser>
+    <contextVariables>
+        <contextVariableMappings>
+            <SObjectType>MessagingEndUser</SObjectType>
+            <fieldName>MessagingEndUser.ContactId</fieldName>
+            <messageType>WhatsApp</messageType>
+        </contextVariableMappings>
+        <contextVariableMappings>
+            <SObjectType>MessagingEndUser</SObjectType>
+            <fieldName>MessagingEndUser.ContactId</fieldName>
+            <messageType>EmbeddedMessaging</messageType>
+        </contextVariableMappings>
+        <dataType>Id</dataType>
+        <developerName>ContactId</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Contact Id</label>
+    </contextVariables>
+    <contextVariables>
+        <contextVariableMappings>
+            <SObjectType>MessagingSession</SObjectType>
+            <fieldName>MessagingSession.MessagingEndUserId</fieldName>
+            <messageType>WhatsApp</messageType>
+        </contextVariableMappings>
+        <contextVariableMappings>
+            <SObjectType>MessagingSession</SObjectType>
+            <fieldName>MessagingSession.MessagingEndUserId</fieldName>
+            <messageType>EmbeddedMessaging</messageType>
+        </contextVariableMappings>
+        <dataType>Id</dataType>
+        <developerName>EndUserId</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>End User Id</label>
+    </contextVariables>
+    <contextVariables>
+        <dataType>Text</dataType>
+        <developerName>pincode</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>pincode</label>
+    </contextVariables>
+    <contextVariables>
+        <contextVariableMappings>
+            <SObjectType>MessagingSession</SObjectType>
+            <fieldName>MessagingSession.Id</fieldName>
+            <messageType>WhatsApp</messageType>
+        </contextVariableMappings>
+        <contextVariableMappings>
+            <SObjectType>MessagingSession</SObjectType>
+            <fieldName>MessagingSession.Id</fieldName>
+            <messageType>EmbeddedMessaging</messageType>
+        </contextVariableMappings>
+        <dataType>Id</dataType>
+        <developerName>RoutableId</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Routable Id</label>
+    </contextVariables>
+    <defaultOutboundFlow>Route_Work_Flow_RC</defaultOutboundFlow>
+    <description>A bot from scratch.</description>
+    <label>Safexpress Enhanced AutoBot</label>
+    <logPrivateConversationData>true</logPrivateConversationData>
+    <richContentEnabled>true</richContentEnabled>
+    <sessionTimeout>5</sessionTimeout>
+    <type>Bot</type>
+</Bot>

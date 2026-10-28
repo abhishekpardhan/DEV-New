@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validation_for_Journey_outstation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( Journey__r.Outstation__c=False,
+OR(ISPICKVAL( Expense_Type__c ,&apos;Ticket - Air&apos;),
+ISPICKVAL( Expense_Type__c ,&apos;Taxi &amp; Car Expense&apos;),
+ISPICKVAL( Expense_Type__c ,&apos;Food Expenses&apos;),
+ISPICKVAL( Expense_Type__c ,&apos;Ticket - Train/Other&apos;),
+ISPICKVAL( Expense_Type__c ,&apos;Hotel Expenses&apos;)
+)
+)</errorConditionFormula>
+    <errorMessage>You can only select Local Conveyance</errorMessage>
+</ValidationRule>

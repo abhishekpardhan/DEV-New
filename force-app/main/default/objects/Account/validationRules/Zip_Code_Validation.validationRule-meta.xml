@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Zip_Code_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(!ISBLANK( BillingPostalCode ),NOT(REGEX(BillingPostalCode, &quot;\\d{6}&quot;)))</errorConditionFormula>
+    <errorDisplayField>BillingPostalCode</errorDisplayField>
+    <errorMessage>Corporate Pin Code Should be 6 digits.</errorMessage>
+</ValidationRule>

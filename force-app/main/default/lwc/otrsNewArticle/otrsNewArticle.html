@@ -1,0 +1,39 @@
+<!-- 
+    File Name          : otrsNewArticle
+    Description        : This Component is a child component to create New Article in the OTRS System
+    Author             : Deepak 
+    Last Modified Date : 30/7/2021
+    Last Modified By   :
+    Modification Logs  
+    Ver           Date              Author                Modification
+    =====================================================================
+    1.0          30/7/2021         Deepak                Initial Version
+
+-->
+
+<template>
+    <div if:true={isSpinnerShow}>
+        <lightning-spinner alternative-text="Loading" size="medium" variant="brand"></lightning-spinner>
+    </div>
+    <lightning-card title="">
+        <!-- <div slot="title" class="header-text slds-text-title_caps slds-text-title_bold">New Article</div> -->
+        <div >
+            <lightning-layout multiple-rows="true">
+                <!-- <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12">
+                    <div class="slds-form-element">
+                        <lightning-input type="text" variant="standard" required name="subject" label="Subject" placeholder="type here..." onchange={handleSubjectChange} value={subject}></lightning-input>
+                    </div>
+                </lightning-layout-item> -->
+                <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12">
+                    <div class="slds-form-element">
+                        <lightning-textarea name="body" label="Comment" required placeholder="type here..." value={body} onchange={handleBodyChange}></lightning-textarea>
+                    </div>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+        <div slot="footer">
+            <lightning-button class="slds-var-m-right_xx-small" label="Cancel" title="Cancel" onclick={handleCancel}></lightning-button>
+            <lightning-button class="slds-var-m-left_xx-small" variant="brand" label="Save" title="Save" onclick={handleSave}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

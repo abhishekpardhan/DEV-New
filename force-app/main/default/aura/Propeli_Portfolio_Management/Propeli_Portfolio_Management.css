@@ -1,0 +1,40 @@
+.THIS .slds-accordion__summary {
+    padding: 0rem;
+}
+.THIS .slds-accordion__summary-action {
+    width: 0rem;
+}
+.THIS .slds-accordion__summary-content {
+    width: 20rem;
+}
+.THIS .slds-accordion__summary-heading {
+    width: 29rem;
+}
+.THIS .sfxrelationship {
+    margin-left: 8rem;
+}
+.THIS .sfxExsRelationship {
+    margin-left: 5rem;
+}
+/*.THIS .slds-accordion__section {
+    margin-left: 8rem;
+}
+.THIS .slds-accordion__section {
+    width: 74rem;
+}*/
+.THIS .green-checkbox{
+    border-color: rgb(0, 0, 0); /*Choose your color*/
+    box-shadow: 0 0 3px #000000; /*Choose a darker color for the shadow*/
+}
+.THIS.slds-spinner_container {  
+  z-index: 10000;
+  position: fixed;   
+}
+
+.THIS input.uiInput--checkbox[type=checkbox][disabled]{
+    background-color: #00FF00!important;
+    border: 2px solid blue!important;
+}
+.THIS .slds-button:focus {
+    box-shadow:none;
+}

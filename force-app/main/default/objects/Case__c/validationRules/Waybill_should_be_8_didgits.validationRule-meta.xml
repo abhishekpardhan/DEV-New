@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Waybill_should_be_8_didgits</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(AND(RecordType.DeveloperName =&apos;Operation_Issues&apos; ,ISBLANK( Waybill_Numbers__c ), AND(NOT(INCLUDES(Case_Type__c, &apos;37&apos;)),NOT(INCLUDES(Case_Type__c, &apos;New Pickup&apos;)))) ,
+AND(OR (ISCHANGED(Waybill_Numbers__c), ISNEW()),NOT(ISBLANK( Waybill_Numbers__c )) ,NOT(REGEX(Waybill_Numbers__c , &quot;\\d{10}&quot;))))</errorConditionFormula>
+    <errorDisplayField>Waybill_Numbers__c</errorDisplayField>
+    <errorMessage>Please Fill 8 OR 10 Digits Waybill Numbers!</errorMessage>
+</ValidationRule>

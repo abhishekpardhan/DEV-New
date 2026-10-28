@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ChangeRequest_WayBill_Check</fullName>
+    <active>true</active>
+    <description>WayBill Status should be not be delivered to create a Chage Request Case.</description>
+    <errorConditionFormula>AND(
+    NOT($Setup.Custom_Validation_Exception_Setting__c.Bypass_Validation_Rules__c),
+				TEXT(Case_Type__c) = &apos;Change Request&apos;,
+				OR(TEXT(WayBill_Status__c) == &apos;Waybill Delivered&apos;,ISBLANK(TEXT(WayBill_Status__c)))
+)</errorConditionFormula>
+    <errorMessage>WayBill Status should be not be Delivered to create a Change Request Type Case.</errorMessage>
+</ValidationRule>

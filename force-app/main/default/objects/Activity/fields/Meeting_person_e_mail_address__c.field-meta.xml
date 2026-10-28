@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Meeting_person_e_mail_address__c</fullName>
+    <externalId>false</externalId>
+    <label>Meeting person e-mail address</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Email</type>
+    <unique>false</unique>
+</CustomField>

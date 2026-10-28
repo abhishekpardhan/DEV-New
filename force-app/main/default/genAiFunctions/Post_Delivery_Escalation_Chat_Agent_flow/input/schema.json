@@ -1,0 +1,49 @@
+{
+  "required" : [ "varSubtype", "varWaybillNumber" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "varCaseNature" : {
+      "title" : "varCaseNature",
+      "description" : "Receives the case nature (e.g., \"Post-Delivery Escalation\").",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "varCaseType" : {
+      "title" : "varCaseType",
+      "description" : "Receives the case type (e.g., \"Complaint\" or \"Escalation\").",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "varCustomerEmail" : {
+      "title" : "varCustomerEmail",
+      "description" : "Receives customer email address from the conversation or Apex action to log the escalation case.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "varCustomerMobile" : {
+      "title" : "varCustomerMobile",
+      "description" : "Receives customer mobile number from the conversation or Apex action to log the escalation case.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "varSubtype" : {
+      "title" : "varSubtype",
+      "description" : "Receives the specific concern (e.g., \"Material Damaged\", \"Shortage\", etc.).",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "varWaybillNumber" : {
+      "title" : "varWaybillNumber",
+      "description" : "Receives the 12-digit waybill number from Agentforce.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

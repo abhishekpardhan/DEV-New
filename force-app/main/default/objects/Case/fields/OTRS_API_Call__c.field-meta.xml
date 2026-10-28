@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OTRS_API_Call__c</fullName>
+    <formula>OR(
+				TEXT(Sub_Type__c) = &apos;Pilferred&apos;,
+				TEXT(Sub_Type__c) = &apos;Short / Part Shipment&apos;,
+				TEXT(Sub_Type__c) = &apos;Wrong Delivery&apos;,
+				TEXT(Sub_Type__c) = &apos;Delivery Not Done&apos;,
+				TEXT(Sub_Type__c) = &apos;Interchange&apos;,
+				TEXT(Sub_Type__c) = &apos;Delay In Delivery&apos;,
+				TEXT(Sub_Type__c) = &apos;Damage&apos;,
+				TEXT(Sub_Type__c) = &apos;Address Change&apos;,
+				TEXT(Sub_Type__c) = &apos;Shipment On Hold&apos;,
+				TEXT(Sub_Type__c) = &apos;DOD_DOC Cancellation&apos;,
+				TEXT(Sub_Type__c) = &apos;Shipment Re-Booking&apos;
+				)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>OTRS API Call?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

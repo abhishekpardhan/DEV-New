@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account__c</fullName>
+    <label>Account</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>((1 AND 8) OR (4 AND 5) OR (2 AND 3 AND 8) OR 6 OR (9 AND 10)) AND 7</booleanFilter>
+        <filterItems>
+            <field>Account.RecordType.Name</field>
+            <operation>contains</operation>
+            <value>SFX Customer,PRC Customer, SFX,Rate Card</value>
+        </filterItems>
+        <filterItems>
+            <field>Account.RecordType.Name</field>
+            <operation>equals</operation>
+            <value>Prospect Customer</value>
+        </filterItems>
+        <filterItems>
+            <field>Account.Propel_MSACode__c</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </filterItems>
+        <filterItems>
+            <field>$Source.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Corporate Credit Case</value>
+        </filterItems>
+        <filterItems>
+            <field>$Source.Case_Typee__c</field>
+            <operation>equals</operation>
+            <value>RFQ Support</value>
+        </filterItems>
+        <filterItems>
+            <field>$Source.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Customer Technology/IT request</value>
+        </filterItems>
+        <filterItems>
+            <field>Account.Is_Propel_Account__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </filterItems>
+        <filterItems>
+            <field>$Source.RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>Claim Issues</value>
+        </filterItems>
+        <filterItems>
+            <field>$Source.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Claim Issues</value>
+        </filterItems>
+        <filterItems>
+            <field>Account.RecordType.Name</field>
+            <operation>contains</operation>
+            <value>SFX,PRC Customer</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Cases</relationshipLabel>
+    <relationshipName>Cases</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

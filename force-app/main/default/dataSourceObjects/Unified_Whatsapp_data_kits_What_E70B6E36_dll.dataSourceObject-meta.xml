@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataSourceObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <dataSource>Unified_Whatsapp_data_kits_767ed6d2_d641_480e_9848_d6a4c67a8ba3</dataSource>
+    <externalRecordIdentifier>Unified_Whatsapp_data_kits_WhatsappEngagement_E70B6E36</externalRecordIdentifier>
+    <masterLabel>Unified_Whatsapp_data_kits_WhatsappEngagement_E70B6E36</masterLabel>
+    <storageType>LOCAL</storageType>
+    <templateVersion>1</templateVersion>
+</DataSourceObject>

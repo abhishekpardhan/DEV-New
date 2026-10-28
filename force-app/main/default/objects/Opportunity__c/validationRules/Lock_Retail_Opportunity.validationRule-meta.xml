@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lock_Retail_Opportunity</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISPICKVAL(Type__c, &quot;Retail&quot;),
+
+    OR(
+        ISNEW(),
+        ISCHANGED(Type__c)
+    ),
+
+    NOT(
+        OR(
+            $Profile.Name = &quot;Read Only&quot;,
+            $Profile.Name = &quot;System Administrator&quot;,
+            $Profile.Name = &quot;Corporate salesforce team&quot;
+        )
+    )
+)</errorConditionFormula>
+    <errorDisplayField>Type__c</errorDisplayField>
+    <errorMessage>You are not authorized to create Retail Customer Type opportunity.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Vertical__c</fullName>
+    <label>Product Vertical</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>APM</fullName>
+                <default>false</default>
+                <label>ALLIANCE PARTNER MANAGEMENT</label>
+            </value>
+            <value>
+                <fullName>APPARELS &amp; LIFESTYLE</fullName>
+                <default>false</default>
+                <label>APPARELS</label>
+            </value>
+            <value>
+                <fullName>AUTOMOTIVE</fullName>
+                <default>false</default>
+                <label>AUTOMOTIVE</label>
+            </value>
+            <value>
+                <fullName>Publishing</fullName>
+                <default>false</default>
+                <label>BOOKS</label>
+            </value>
+            <value>
+                <fullName>Engineering &amp; Electrical Hardware</fullName>
+                <default>false</default>
+                <label>ENGINEERING</label>
+            </value>
+            <value>
+                <fullName>FMCG/CONSUMER GOODS</fullName>
+                <default>false</default>
+                <label>FMCG</label>
+            </value>
+            <value>
+                <fullName>HANDICRAFTS</fullName>
+                <default>false</default>
+                <label>HANDICRAFTS</label>
+            </value>
+            <value>
+                <fullName>HEALTHCARE</fullName>
+                <default>false</default>
+                <label>HEALTH</label>
+            </value>
+            <value>
+                <fullName>HI TECH</fullName>
+                <default>false</default>
+                <label>HI TECH</label>
+            </value>
+            <value>
+                <fullName>Institutional</fullName>
+                <default>false</default>
+                <label>INSTITUTION</label>
+            </value>
+            <value>
+                <fullName>MULTIBRAND</fullName>
+                <default>false</default>
+                <label>MULTIBRAND</label>
+            </value>
+            <value>
+                <fullName>Retail Special Services</fullName>
+                <default>false</default>
+                <label>RETAILSPLSRV</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,17 @@
+Dear Team,
+<br/><br/>
+Opportunity Type: {!Opportunity__c.Customer_Type__c}. Please create/renew customer code for {!Opportunity__c.Account__c} as per the details attached. 
+<br/>
+<br/>
+Account Id  :  {!Opportunity__c.AccId__c}
+<br/>
+Opportunity Id  :  {!Opportunity__c.Opportunity_Id__c}
+<br/>
+<br/>
+Please log in to salesforce using url: https://safeforce1.force.com
+<br/>
+After logged in please click the link to access record:  {!Opportunity__c.Account_URL__c}{!Opportunity__c.AccountId__c}
+<br/><br/>
+Regards,
+<br/>
+{!Opportunity__c.OwnerFullName}

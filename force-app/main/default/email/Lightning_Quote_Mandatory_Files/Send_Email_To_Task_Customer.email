@@ -1,0 +1,10 @@
+Dear {!Task.Submitted_To__c},
+<br/><br/>
+We would like to  thank you for giving us an opportunity to continously serve you. 
+This is to confirm the submission of Bill number {!Invoice__c.Bill_Number__c}. 
+<br/>
+Thank you for your trust in brand Safexpress. 
+<br/><br/>
+Regards,
+<br/>
+{!Task.CreatedBy}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_Mandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(OR(ISNEW() ,ISCHANGED(Status__c)),TEXT(Status__c) = &apos;Cancelled&apos; ,ISPICKVAL(Reason__c, &apos;&apos;))</errorConditionFormula>
+    <errorDisplayField>Reason__c</errorDisplayField>
+    <errorMessage>Please select Reason.</errorMessage>
+</ValidationRule>

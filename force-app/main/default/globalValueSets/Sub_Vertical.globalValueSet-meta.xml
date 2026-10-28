@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>FABRIC</fullName>
+        <default>false</default>
+        <label>FABRIC</label>
+    </customValue>
+    <customValue>
+        <fullName>AUTO COMPONENTS</fullName>
+        <default>false</default>
+        <label>AUTO COMPONENTS</label>
+    </customValue>
+    <customValue>
+        <fullName>AUTO TYRES</fullName>
+        <default>false</default>
+        <label>AUTO TYRES</label>
+    </customValue>
+    <customValue>
+        <fullName>AUTO ACCESSORIES</fullName>
+        <default>false</default>
+        <label>AUTO ACCESSORIES</label>
+    </customValue>
+    <customValue>
+        <fullName>READYMADE GARMENTS</fullName>
+        <default>false</default>
+        <label>READYMADE GARMENTS</label>
+    </customValue>
+    <customValue>
+        <fullName>FOOTWEAR</fullName>
+        <default>false</default>
+        <label>FOOTWEAR</label>
+    </customValue>
+    <customValue>
+        <fullName>ARTIFICIAL JEWELLERY /ACCESSORIES</fullName>
+        <default>false</default>
+        <label>ARTIFICIAL JEWELLERY /ACCESSORIES</label>
+    </customValue>
+    <customValue>
+        <fullName>SAREES</fullName>
+        <default>false</default>
+        <label>SAREES</label>
+    </customValue>
+    <customValue>
+        <fullName>LEATHER ACCESSORIES</fullName>
+        <default>false</default>
+        <label>LEATHER ACCESSORIES</label>
+    </customValue>
+    <customValue>
+        <fullName>PUBLISHING HOUSES</fullName>
+        <default>false</default>
+        <label>PUBLISHING HOUSES</label>
+    </customValue>
+    <customValue>
+        <fullName>PRINTING PRESS</fullName>
+        <default>false</default>
+        <label>PRINTING PRESS</label>
+    </customValue>
+    <customValue>
+        <fullName>STATIONARY</fullName>
+        <default>false</default>
+        <label>STATIONARY</label>
+    </customValue>
+    <customValue>
+        <fullName>BANKS</fullName>
+        <default>false</default>
+        <label>BANKS</label>
+    </customValue>
+    <customValue>
+        <fullName>FINANCIAL INSTITUTIONS</fullName>
+        <default>false</default>
+        <label>FINANCIAL INSTITUTIONS</label>
+    </customValue>
+    <customValue>
+        <fullName>INSURANCE</fullName>
+        <default>false</default>
+        <label>INSURANCE</label>
+    </customValue>
+    <customValue>
+        <fullName>IT INSTITUTES</fullName>
+        <default>false</default>
+        <label>IT INSTITUTES</label>
+    </customValue>
+    <customValue>
+        <fullName>EVENT MANAGEMENT</fullName>
+        <default>false</default>
+        <label>EVENT MANAGEMENT</label>
+    </customValue>
+    <customValue>
+        <fullName>RETAIL CHAIN</fullName>
+        <default>false</default>
+        <label>RETAIL CHAIN</label>
+    </customValue>
+    <customValue>
+        <fullName>E-COMMERCE</fullName>
+        <default>false</default>
+        <label>E-COMMERCE</label>
+    </customValue>
+    <customValue>
+        <fullName>INDUSTRY ASSOCIATIONS</fullName>
+        <default>false</default>
+        <label>INDUSTRY ASSOCIATIONS</label>
+    </customValue>
+    <customValue>
+        <fullName>IT</fullName>
+        <default>false</default>
+        <label>IT</label>
+    </customValue>
+    <customValue>
+        <fullName>TELECOM EQUIPMENT</fullName>
+        <default>false</default>
+        <label>TELECOM EQUIPMENT</label>
+    </customValue>
+    <customValue>
+        <fullName>MOBILE PHONES/ACCESSORIES</fullName>
+        <default>false</default>
+        <label>MOBILE PHONES/ACCESSORIES</label>
+    </customValue>
+    <customValue>
+        <fullName>OFFICE AUTOMATION</fullName>
+        <default>false</default>
+        <label>OFFICE AUTOMATION</label>
+    </customValue>
+    <customValue>
+        <fullName>SECURITY SYSTEMS</fullName>
+        <default>false</default>
+        <label>SECURITY SYSTEMS</label>
+    </customValue>
+    <customValue>
+        <fullName>PHARMACEUTICALS</fullName>
+        <default>false</default>
+        <label>PHARMACEUTICALS</label>
+    </customValue>
+    <customValue>
+        <fullName>BULK DRUGS</fullName>
+        <default>false</default>
+        <label>BULK DRUGS</label>
+    </customValue>
+    <customValue>
+        <fullName>VET</fullName>
+        <default>false</default>
+        <label>VET</label>
+    </customValue>
+    <customValue>
+        <fullName>FMCG-FOOD</fullName>
+        <default>false</default>
+        <label>FMCG-FOOD</label>
+    </customValue>
+    <customValue>
+        <fullName>FMCG-NON FOOD</fullName>
+        <default>false</default>
+        <label>FMCG-NON FOOD</label>
+    </customValue>
+    <customValue>
+        <fullName>SPORTS/TOYS</fullName>
+        <default>false</default>
+        <label>SPORTS/TOYS</label>
+    </customValue>
+    <customValue>
+        <fullName>INDUSTRIAL EQUIPMENT</fullName>
+        <default>false</default>
+        <label>INDUSTRIAL EQUIPMENT</label>
+    </customValue>
+    <customValue>
+        <fullName>TOOLS AND SPARES</fullName>
+        <default>false</default>
+        <label>TOOLS AND SPARES</label>
+    </customValue>
+    <customValue>
+        <fullName>CHEMICALS</fullName>
+        <default>false</default>
+        <label>CHEMICALS</label>
+    </customValue>
+    <customValue>
+        <fullName>ELECTRICAL</fullName>
+        <default>false</default>
+        <label>ELECTRICAL</label>
+    </customValue>
+    <customValue>
+        <fullName>HARDWARE</fullName>
+        <default>false</default>
+        <label>HARDWARE</label>
+    </customValue>
+    <customValue>
+        <fullName>BUILDING MATERIAL</fullName>
+        <default>false</default>
+        <label>BUILDING MATERIAL</label>
+    </customValue>
+    <customValue>
+        <fullName>PACKAGING</fullName>
+        <default>false</default>
+        <label>PACKAGING</label>
+    </customValue>
+    <customValue>
+        <fullName>CAMPUS 2 HOME</fullName>
+        <default>false</default>
+        <label>CAMPUS 2 HOME</label>
+    </customValue>
+    <customValue>
+        <fullName>SAINIK EXPRESS</fullName>
+        <default>false</default>
+        <label>SAINIK EXPRESS</label>
+    </customValue>
+    <customValue>
+        <fullName>SAFEHOME</fullName>
+        <default>false</default>
+        <label>SAFEHOME</label>
+    </customValue>
+    <customValue>
+        <fullName>EASY 2 MOVE</fullName>
+        <default>false</default>
+        <label>EASY 2 MOVE</label>
+    </customValue>
+    <customValue>
+        <fullName>COMMODITY EXPRESS</fullName>
+        <default>false</default>
+        <label>COMMODITY EXPRESS</label>
+    </customValue>
+    <customValue>
+        <fullName>BLANKETS/QUILT</fullName>
+        <default>false</default>
+        <label>BLANKETS/QUILT</label>
+    </customValue>
+    <customValue>
+        <fullName>CHIKAN CLOTHING</fullName>
+        <default>false</default>
+        <label>CHIKAN CLOTHING</label>
+    </customValue>
+    <customValue>
+        <fullName>HOSIERY</fullName>
+        <default>false</default>
+        <label>HOSIERY</label>
+    </customValue>
+    <customValue>
+        <fullName>KHADI</fullName>
+        <default>false</default>
+        <label>KHADI</label>
+    </customValue>
+    <customValue>
+        <fullName>KNITWEAR</fullName>
+        <default>false</default>
+        <label>KNITWEAR</label>
+    </customValue>
+    <customValue>
+        <fullName>WOOLLEN</fullName>
+        <default>false</default>
+        <label>WOOLLEN</label>
+    </customValue>
+    <customValue>
+        <fullName>YARN</fullName>
+        <default>false</default>
+        <label>YARN</label>
+    </customValue>
+    <customValue>
+        <fullName>AUTO BATTERY</fullName>
+        <default>false</default>
+        <label>AUTO BATTERY</label>
+    </customValue>
+    <customValue>
+        <fullName>AUTO PAINTS</fullName>
+        <default>false</default>
+        <label>AUTO PAINTS</label>
+    </customValue>
+    <customValue>
+        <fullName>AUTO SPARE PARTS(FOR DISTRIBUTION)</fullName>
+        <default>false</default>
+        <label>AUTO SPARE PARTS(FOR DISTRIBUTION)</label>
+    </customValue>
+    <customValue>
+        <fullName>COACHING CENTRES</fullName>
+        <default>false</default>
+        <label>COACHING CENTRES</label>
+    </customValue>
+    <customValue>
+        <fullName>COLLEGE/UNIVERSITY</fullName>
+        <default>false</default>
+        <label>COLLEGE/UNIVERSITY</label>
+    </customValue>
+    <customValue>
+        <fullName>PRE-SCHOOLS</fullName>
+        <default>false</default>
+        <label>PRE-SCHOOLS</label>
+    </customValue>
+    <customValue>
+        <fullName>PROMOTIONAL MATERIAL</fullName>
+        <default>false</default>
+        <label>PROMOTIONAL MATERIAL</label>
+    </customValue>
+    <customValue>
+        <fullName>ARMS n AMMUNITIONS</fullName>
+        <default>false</default>
+        <label>ARMS n AMMUNITIONS</label>
+    </customValue>
+    <customValue>
+        <fullName>GENSET</fullName>
+        <default>false</default>
+        <label>GENSET</label>
+    </customValue>
+    <customValue>
+        <fullName>PUMPS</fullName>
+        <default>false</default>
+        <label>PUMPS</label>
+    </customValue>
+    <customValue>
+        <fullName>AGARBATTI</fullName>
+        <default>false</default>
+        <label>AGARBATTI</label>
+    </customValue>
+    <customValue>
+        <fullName>CONSUMER ELECTRONICS</fullName>
+        <default>false</default>
+        <label>CONSUMER ELECTRONICS</label>
+    </customValue>
+    <customValue>
+        <fullName>COSMETICS PRODUCTS</fullName>
+        <default>false</default>
+        <label>COSMETICS PRODUCTS</label>
+    </customValue>
+    <customValue>
+        <fullName>GIFT ITEMS</fullName>
+        <default>false</default>
+        <label>GIFT ITEMS</label>
+    </customValue>
+    <customValue>
+        <fullName>HOME APPLIANCES</fullName>
+        <default>false</default>
+        <label>HOME APPLIANCES</label>
+    </customValue>
+    <customValue>
+        <fullName>HOME DECOR</fullName>
+        <default>false</default>
+        <label>HOME DECOR</label>
+    </customValue>
+    <customValue>
+        <fullName>PERFUMERY</fullName>
+        <default>false</default>
+        <label>PERFUMERY</label>
+    </customValue>
+    <customValue>
+        <fullName>WHITE GOODS</fullName>
+        <default>false</default>
+        <label>WHITE GOODS</label>
+    </customValue>
+    <customValue>
+        <fullName>HANDLOOM/ HANDICRAFTS</fullName>
+        <default>false</default>
+        <label>HANDLOOM/ HANDICRAFTS</label>
+    </customValue>
+    <customValue>
+        <fullName>JUTE PRODUCTS</fullName>
+        <default>false</default>
+        <label>JUTE PRODUCTS</label>
+    </customValue>
+    <customValue>
+        <fullName>AYURVEDIC MEDICINE</fullName>
+        <default>false</default>
+        <label>AYURVEDIC MEDICINE</label>
+    </customValue>
+    <customValue>
+        <fullName>MEDICAL EQUIPMENTS</fullName>
+        <default>false</default>
+        <label>MEDICAL EQUIPMENTS</label>
+    </customValue>
+    <customValue>
+        <fullName>SCIENTIFIC EQUIPMENTS</fullName>
+        <default>false</default>
+        <label>SCIENTIFIC EQUIPMENTS</label>
+    </customValue>
+    <customValue>
+        <fullName>SURGICAL GOODS</fullName>
+        <default>false</default>
+        <label>SURGICAL GOODS</label>
+    </customValue>
+    <customValue>
+        <fullName>SAFE RETURNS (Exhibition)</fullName>
+        <default>false</default>
+        <label>SAFE RETURNS (Exhibition)</label>
+    </customValue>
+    <customValue>
+        <fullName>SAFE RETURNS(Retails Stores)</fullName>
+        <default>false</default>
+        <label>SAFE RETURNS(Retails Stores)</label>
+    </customValue>
+    <customValue>
+        <fullName>COURIER</fullName>
+        <default>false</default>
+        <label>COURIER</label>
+    </customValue>
+    <customValue>
+        <fullName>FREIGHT FORWARDING</fullName>
+        <default>false</default>
+        <label>FREIGHT FORWARDING</label>
+    </customValue>
+    <customValue>
+        <fullName>LOGISTICS</fullName>
+        <default>false</default>
+        <label>LOGISTICS</label>
+    </customValue>
+    <customValue>
+        <fullName>WAREHOUSING</fullName>
+        <default>false</default>
+        <label>WAREHOUSING</label>
+    </customValue>
+    <customValue>
+        <fullName>Alternate / Ayurvedic Medicine</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Alternate / Ayurvedic Medicine</label>
+    </customValue>
+    <customValue>
+        <fullName>Home Appliances / Consumer Electro. / White Goods</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Home Appliances / Consumer Electro. / White Goods</label>
+    </customValue>
+    <customValue>
+        <fullName>Auto Spare Parts</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Auto Spare Parts</label>
+    </customValue>
+    <customValue>
+        <fullName>Safe Returns</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Safe Returns</label>
+    </customValue>
+    <customValue>
+        <fullName>Home Furnishing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Home Furnishing</label>
+    </customValue>
+    <customValue>
+        <fullName>Fabric /Yarn / Hosiery</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Fabric /Yarn / Hosiery</label>
+    </customValue>
+    <customValue>
+        <fullName>College / University / Pre Schools / Coaching Centre</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>College / University / Pre Schools / Coaching Centre</label>
+    </customValue>
+    <customValue>
+        <fullName>Service Partner Business</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Service Partner Business</label>
+    </customValue>
+    <customValue>
+        <fullName>DISPOSABLES</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>DISPOSABLES</label>
+    </customValue>
+    <customValue>
+        <fullName>DIAGNOSTICS</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>DIAGNOSTICS</label>
+    </customValue>
+    <customValue>
+        <fullName>Medical Equip / Surgical</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Medical Equip / Surgical</label>
+    </customValue>
+    <masterLabel>Sub Vertical</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

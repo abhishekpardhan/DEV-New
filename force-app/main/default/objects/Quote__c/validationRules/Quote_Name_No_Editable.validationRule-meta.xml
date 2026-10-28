@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quote_Name_No_Editable</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISCHANGED(Name) &amp;&amp; !ISNEW()</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>Quote Name is not editable!</errorMessage>
+</ValidationRule>

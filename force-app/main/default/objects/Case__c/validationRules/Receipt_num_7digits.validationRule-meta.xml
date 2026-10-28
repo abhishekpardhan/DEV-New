@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Receipt_num_7digits</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND((OR(ISBLANK(Receipt_Number__c),NOT(REGEX(Receipt_Number__c, &quot;\\d{7}&quot;)))),OR(ISPICKVAL(Case_Typee__c,&apos;Reciept cancellation( Credit)&apos;),ISPICKVAL(Case_Typee__c,&apos;Reciept cancellation( Retail)&apos;),ISPICKVAL(Case_Typee__c,&apos;To pay Debit Advise&apos;),ISPICKVAL(Case_Typee__c,&apos;Change Collector in Retail&apos;),ISPICKVAL(Case_Typee__c,&apos;Misc Income( Credit )&apos;),ISPICKVAL(Case_Typee__c,&apos;Misc Income (Retail)&apos;),ISPICKVAL(Case_Typee__c,&apos;Refund to Customer&apos;)))</errorConditionFormula>
+    <errorDisplayField>Receipt_Number__c</errorDisplayField>
+    <errorMessage>Receipt number must be of 7 digits</errorMessage>
+</ValidationRule>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Fusion_Invoice__c.Date__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Fusion_Invoice__c.Amount__c</field>
+    </columns>
+    <columns>
+        <field>Fusion_Invoice__c.Invoice_Type__c</field>
+    </columns>
+    <columns>
+        <field>Fusion_Invoice__c.Invoice_Group__c</field>
+    </columns>
+    <columns>
+        <field>Fusion_Invoice__c.Name__c</field>
+    </columns>
+    <columns>
+        <field>Fusion_Invoice__c.PayGroup__c</field>
+    </columns>
+    <columns>
+        <field>Fusion_Invoice__c.Supplier__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Fusion_Invoice__c.Total_Line_Amount__c</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_NAME</field>
+    </columns>
+    <columns>
+        <field>Fusion_Invoice__c.Description__c</field>
+    </columns>
+    <currency>INR</currency>
+    <description>Fusion invoice report current and last month</description>
+    <format>Tabular</format>
+    <name>Fusion Invoices Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Fusion_Invoice__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Fusion_Invoice__c.Date__c</dateColumn>
+        <interval>INTERVAL_LASTTHISMONTH</interval>
+    </timeFrameFilter>
+</Report>

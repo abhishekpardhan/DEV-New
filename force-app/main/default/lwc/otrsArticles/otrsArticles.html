@@ -1,0 +1,77 @@
+<!-- 
+    File Name          : otrsArticles
+    Description        : This Component is a child component to show the Articles from OTRS
+    Author             : Deepak 
+    Last Modified Date : 29/7/2021
+    Last Modified By   :
+    Modification Logs  
+    Ver           Date              Author                Modification
+    =====================================================================
+    1.0          29/7/2021         Deepak                Initial Version
+
+-->
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnoreNextLine -->
+<template>
+        
+        <lightning-card class>
+            <div slot="title" class="header-text slds-text-title_caps slds-text-title_bold">{headerText}</div>
+            <lightning-button  slot="actions" icon-name="utility:add" label="New Comment" title="New Comment" onclick={newArticle}></lightning-button>
+            <div class="slds-var-p-horizontal_medium">
+                <!-- List of related Articles table -->
+                <div style="height: 170px;" if:true={isTableShow}>
+                    <lightning-datatable
+                            key-field="ArticleId"
+                            data={articles}
+                            columns={articleColumns}
+                            onrowaction={handleRowAction}
+                            hide-checkbox-column>
+                    </lightning-datatable>
+                </div>
+            </div>
+        </lightning-card>
+        <!-- Modal Section for article info view -->
+        <div if:true={isSelectedArticleShow}>
+            <div class="slds-modal slds-fade-in-open slds-backdrop slds-modal_medium" >
+                <div class="slds-modal__container">
+                    <!-- HEADER Section-->
+                    <div class="slds-modal__header">
+                        <lightning-button-icon icon-name="utility:close" alternative-text="Close this window" size="large"
+                            variant="bare-inverse" onclick={closeModal} class="slds-modal__close">
+                        </lightning-button-icon>
+                        <h2>{modalHeaderText}</h2>
+                    </div>
+                    <!--Body Section-->
+                    <div class="slds-modal__content slds-p-around--small" > 
+                        <c-otrs-article-item article={article} ></c-otrs-article-item>
+                    </div> 
+                    <!--Footer Section-->
+                    <div class="slds-modal__footer">
+                        <lightning-button label="Close" variant="brand" onclick={closeModal}></lightning-button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- New Article Modal Section -->
+        <div if:true={isNewArticleShow}>
+            <div class="slds-modal slds-fade-in-open slds-backdrop slds-modal_medium" >
+                <div class="slds-modal__container">
+                    <!-- HEADER Section-->
+                    <div class="slds-modal__header">
+                        <lightning-button-icon icon-name="utility:close" alternative-text="Close this window" size="large"
+                            variant="bare-inverse" onclick={closeModal} class="slds-modal__close">
+                        </lightning-button-icon>
+                        <h2>{newArticleHeader}</h2>
+                    </div>
+                    <!--Body Section-->
+                    <div class="slds-modal__content slds-p-around--small" > 
+                        <c-otrs-new-article record-id={recordId} otrs-ticket-number={otrsTicketNumber} oncancel={closeModal} onupdate={addArticle}></c-otrs-new-article>
+                    </div> 
+                    <!--Footer Section-->
+                    <!-- <div class="slds-modal__footer">
+                        <lightning-button label="close" variant="brand" onclick={closeModal}></lightning-button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+</template>

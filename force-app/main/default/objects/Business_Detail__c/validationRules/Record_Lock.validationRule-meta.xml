@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Record_Lock</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(
+
+	OR( 
+		$Profile.Name =&apos;CCD&apos;,
+		$Profile.Name =&apos;Central Corporate Team&apos;,
+		$Profile.Name =&apos;Corporate Salesforce Team&apos;,
+		$Profile.Name =&apos;Revenue Management Access&apos;,
+		$Profile.Name =&apos;Read Only&apos;
+	),
+	False,
+	IF(
+		AND(OR(
+			TEXT(Opportunity__r.Stage__c) = &apos;Closed Won&apos;,
+			TEXT(Case__r.Approval_Status__c) =  &apos;Approved By AM&apos;
+		),
+		NOT(isChanged(Pickup_Contact__c)),
+		NOt(isChanged(Submission_Contact__c)),
+                NOt(isChanged(BIR_Contacts__c)),
+                NOt(isChanged(Collection_Contact__c))
+		),
+		True,
+		False
+	)
+)</errorConditionFormula>
+    <errorMessage>You are not allowed to modify after case has approved OR Opportunity has Closed/Won</errorMessage>
+</ValidationRule>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BusinessDiscontinuityReason</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+OR(
+    ISPICKVAL(Current_Business_Status__c, &quot;Discontinued&quot;),
+ISPICKVAL(Current_Business_Status__c, &quot;Declining&quot;)),
+    ISBLANK(Reason_for_Discontinuity_Decline__c),
+ISPICKVAL(Status, &quot;Completed&quot;)
+)</errorConditionFormula>
+    <errorMessage>Reason for Discontinuity / Decline must be filled when Business Status is Discontinued.</errorMessage>
+</ValidationRule>

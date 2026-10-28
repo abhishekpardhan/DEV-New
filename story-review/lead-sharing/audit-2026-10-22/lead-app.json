@@ -1,0 +1,19 @@
+﻿{
+  "status": 0,
+  "result": {
+    "records": [
+      {
+        "attributes": {
+          "type": "AppDefinition",
+          "url": "/services/data/v68.0/sobjects/AppDefinition/06mC10000018nKjIAI"
+        },
+        "DurableId": "06mC10000018nKjIAI",
+        "DeveloperName": "safexpress2_0",
+        "Label": "safexpress2_0"
+      }
+    ],
+    "totalSize": 1,
+    "done": true
+  },
+  "warnings": []
+}

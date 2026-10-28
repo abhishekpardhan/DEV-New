@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Debit_Note</fullName>
+    <active>true</active>
+    <description>used to create the debit note for invoice.</description>
+    <label>Debit Note</label>
+    <picklistValues>
+        <picklist>Billing_Level__c</picklist>
+        <values>
+            <fullName>MSA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RATE Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SFX</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Collected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partly Collected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,45 @@
+<!--**
+ * Description		:		Todays Event component 
+ * Created By       :       Shubham Girdhar
+ * Created Date     :       10th jan, 2020
+ * Release          :       25th jan, 2020
+ * Last Modified on :
+ * Jira Ticket      :       https://safexpress.atlassian.net/browse/SD-403
+ **-->
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" controller="TodaysEvent_Controller" >
+<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+<aura:attribute name="CurrentUser" type="Id"/>
+<aura:attribute name="EventList" type="List"/>  
+<div style="height:237px;Background-Color:white; border-radius:5px; border: 1px solid lightgrey">
+   <div style="height:30px">  
+    <div style="padding-top:10px; padding-left:16px; padding-right:16px">
+       <b class="slds-text-title_bold" style="font-Size: 16px">Upcoming Events</b>
+</div>
+</div>
+<div class="slds-scrollable_y" style="height:206px; Padding-left:16px; Padding-right:16px">
+<aura:iteration items="{!v.EventList}" var="Eve" >
+<div  style="padding-top: 10px;">
+   <div>
+      <a href="javascript:void(0);" tabindex="-1" Name="{!Eve.Id}" onclick="{!c.detailPage}">{!Eve.Name}</a>
+  <!-- <p style="float:right">{!Eve.StartDate__c}</p> -->
+    <div style= "float:right"> 
+<lightning:formattedDateTime value="{!Eve.Start__c}"  
+                                 year="numeric" month="short" day="2-digit" hour="2-digit"
+                                 minute="2-digit" />
+       </div>
+    </div>
+   <div>
+   <p class="slds-text-body_regular">Status: {!Eve.Status__c}</p>
+</div>
+</div>
+</aura:iteration>
+</div>
+
+
+<!-- <div style="height:44px; Border-Top:1px solid lightgrey">
+   <div class="slds-text-align_center" style="padding-top: 12px;">
+   <a href="javascript:void(0);"  tabindex="-1" Name="{}" onclick="{}">View All</a>
+</div>
+</div> -->
+</div>
+</aura:component>

@@ -1,0 +1,169 @@
+<!-- 
+    File Name          : otrsDisplayInfo
+    Description        : This Component is a child component to show the OTRS header information
+    Author             : Deepak 
+    Last Modified Date : 29/7/2021
+    Last Modified By   :
+    Modification Logs  
+    Ver           Date              Author                Modification
+    =====================================================================
+    1.0          29/7/2021         Deepak                Initial Version
+
+-->
+
+<template>
+
+    <!-- <lightning-card> -->
+        <!-- <div slot="title" class="header-text slds-text-title_caps slds-text-title_bold">Information</div> -->
+        <div class="slds-var-p-horizontal_medium ">
+            <div id="header-info" >
+                <lightning-layout multiple-rows="true">
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="3" large-device-size="3">
+                        <div class="slds-form-element slds-border_bottom slds-var-m-around_xx-small"><span
+                                class="slds-form-element__label">Title</span>
+                            <div class="slds-form-element__control"><span class="slds-form-element__static">
+                                    <p>{ticketDetail.title}</p>
+                                </span></div>
+                        </div>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="3" large-device-size="3">
+                        <div class="slds-form-element slds-border_bottom slds-var-m-around_xx-small"><span
+                                class="slds-form-element__label">Current
+                                Queue</span>
+                            <div class="slds-form-element__control"><span class="slds-form-element__static">
+                                    <p>{ticketDetail.queue}</p>
+                                </span></div>
+                        </div>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="3" large-device-size="3">
+                        <div class="slds-form-element slds-border_bottom slds-var-m-around_xx-small"><span class="slds-form-element__label">Type</span>
+                            <div class="slds-form-element__control"><span class="slds-form-element__static">
+                                    <p>{ticketDetail.type}</p>
+                                </span></div>
+                        </div>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="3" large-device-size="3">
+                        <div class="slds-form-element slds-border_bottom slds-var-m-around_xx-small"><span
+                                class="slds-form-element__label">Current
+                                Status</span>
+                            <div class="slds-form-element__control"><span class="slds-form-element__static">
+                                    <p>{ticketDetail.state}</p>
+                                </span></div>
+                        </div>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="3" large-device-size="3">
+                        <div class="slds-form-element slds-border_bottom slds-var-m-around_xx-small"><span
+                                class="slds-form-element__label">Priority</span>
+                            <div class="slds-form-element__control"><span class="slds-form-element__static">
+                                    <p>{ticketDetail.priority}</p>
+                                </span></div>
+                        </div>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="3" large-device-size="3">
+                        <div class="slds-form-element slds-border_bottom slds-var-m-around_xx-small"><span
+                                class="slds-form-element__label">Created
+                                For Customer</span>
+                            <div class="slds-form-element__control"><span class="slds-form-element__static">
+                                    <p>{ticketDetail.CreatedForCustomer}</p>
+                                </span></div>
+                        </div>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="3" large-device-size="3">
+                        <div class="slds-form-element slds-border_bottom slds-var-m-around_xx-small"><span
+                                class="slds-form-element__label">Created
+                                By Customer</span>
+                            <div class="slds-form-element__control"><span class="slds-form-element__static">
+                                    <p>{ticketDetail.CreatedByCustomer}</p>
+                                </span></div>
+                        </div>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="3" large-device-size="3">
+                        <div class="slds-form-element slds-border_bottom slds-var-m-around_xx-small"><span
+                                class="slds-form-element__label">Customer
+                                Email</span>
+                            <div class="slds-form-element__control"><span class="slds-form-element__static">
+                                    <p>{ticketDetail.CustomerEmail}</p>
+                                </span></div>
+                        </div>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="3" large-device-size="3">
+                        <div class="slds-form-element slds-border_bottom slds-var-m-around_xx-small"><span
+                                class="slds-form-element__label">Main
+                                Category</span>
+                            <div class="slds-form-element__control"><span class="slds-form-element__static">
+                                    <p>{ticketDetail.MainCategory}</p>
+                                </span></div>
+                        </div>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="3" large-device-size="3">
+                        <div class="slds-form-element slds-border_bottom slds-var-m-around_xx-small"><span
+                                class="slds-form-element__label">Sub Category</span>
+                            <div class="slds-form-element__control"><span class="slds-form-element__static">
+                                    <p>{ticketDetail.SubCategory}</p>
+                                </span></div>
+                        </div>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="3" large-device-size="3">
+                        <div class="slds-form-element slds-border_bottom slds-var-m-around_xx-small"><span
+                                class="slds-form-element__label">Issue
+                                Type</span>
+                            <div class="slds-form-element__control"><span class="slds-form-element__static">
+                                    <p>{ticketDetail.IssueType}</p>
+                                </span></div>
+                        </div>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="3" large-device-size="3">
+                        <div class="slds-form-element slds-border_bottom slds-var-m-around_xx-small"><span
+                                class="slds-form-element__label">Alternate Phone</span>
+                            <div class="slds-form-element__control"><span class="slds-form-element__static">
+                                    <p>{ticketDetail.AltPhone}</p>
+                                </span></div>
+                        </div>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="3" large-device-size="3">
+                        <div class="slds-form-element slds-border_bottom slds-var-m-around_xx-small"><span
+                                class="slds-form-element__label">Region</span>
+                            <div class="slds-form-element__control"><span class="slds-form-element__static">
+                                    <p>{ticketDetail.Region}</p>
+                                </span></div>
+                        </div>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="3" large-device-size="3">
+                        <div class="slds-form-element slds-border_bottom slds-var-m-around_xx-small"><span
+                                class="slds-form-element__label">Impact</span>
+                            <div class="slds-form-element__control"><span class="slds-form-element__static">
+                                    <p>{ticketDetail.Impact}</p>
+                                </span></div>
+                        </div>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="3" large-device-size="3">
+                        <div class="slds-form-element slds-border_bottom slds-var-m-around_xx-small"><span
+                                class="slds-form-element__label">Owner</span>
+                            <div class="slds-form-element__control"><span class="slds-form-element__static">
+                                    <p>{ticketDetail.Owner}</p>
+                                </span></div>
+                        </div>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="3" large-device-size="3">
+                        <div class="slds-form-element slds-border_bottom slds-var-m-around_xx-small"><span
+                                class="slds-form-element__label">Create
+                                DateTime</span>
+                            <div class="slds-form-element__control"><span class="slds-form-element__static">
+                                    <p>{ticketDetail.CreateTime}</p>
+                                </span></div>
+                        </div>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="3" large-device-size="3">
+                        <div class="slds-form-element slds-border_bottom slds-var-m-around_xx-small"><span
+                                class="slds-form-element__label">Modified
+                                DateTime</span>
+                            <div class="slds-form-element__control"><span class="slds-form-element__static">
+                                    <p>{ticketDetail.ModifiedTime}</p>
+                                </span></div>
+                        </div>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </div>
+        </div>
+    <!-- </lightning-card>     -->
+</template>

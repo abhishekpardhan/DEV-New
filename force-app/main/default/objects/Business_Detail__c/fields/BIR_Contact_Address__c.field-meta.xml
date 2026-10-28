@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BIR_Contact_Address__c</fullName>
+    <externalId>false</externalId>
+    <formula>BIR_Contacts__r.MobilePhone&amp; BR() &amp; BIR_Contacts__r.Email &amp; BR() &amp; BIR_Contacts__r.MailingStreet &amp; BR() &amp; BIR_Contacts__r.MailingCity &amp; BR() &amp; BIR_Contacts__r.MailingPostalCode</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>BIR Contact Address</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Quick Lead</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Quick leads</value>
+    </caseValues>
+    <layouts>
+        <layout>Quick Lead Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Error --></errorMessage>
+        <name>Quick_Lead_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill other enquiry types --></errorMessage>
+        <name>validation1</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill date of call --></errorMessage>
+        <name>validation2</name>
+    </validationRules>
+</CustomObjectTranslation>

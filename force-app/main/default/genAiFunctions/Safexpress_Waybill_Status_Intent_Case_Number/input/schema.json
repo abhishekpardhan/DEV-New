@@ -1,0 +1,35 @@
+{
+  "required" : [ "waybillNumber" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "contactPhone" : {
+      "title" : "Contact Phone",
+      "description" : "Contact phone ",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "messagingSessionId" : {
+      "title" : "Messaging Session Id",
+      "description" : "Current Messaging Session Id",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "urgentDeliveryRequested" : {
+      "title" : "Urgent Delivery Requested",
+      "description" : "Urgent Delivery request  ",
+      "lightning:type" : "lightning__booleanType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "waybillNumber" : {
+      "title" : "Waybill Number",
+      "description" : "Waybill number",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

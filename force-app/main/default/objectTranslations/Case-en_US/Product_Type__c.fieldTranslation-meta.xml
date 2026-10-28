@@ -1,0 +1,925 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Product Type --></label>
+    <name>Product_Type__c</name>
+    <picklistValues>
+        <masterLabel>A/C PARTS</masterLabel>
+        <translation><!-- A/C PARTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ACCESSORIES</masterLabel>
+        <translation><!-- ACCESSORIES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AGARBATTI</masterLabel>
+        <translation><!-- AGARBATTI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AGATE STONE</masterLabel>
+        <translation><!-- AGATE STONE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AGRO PRODUCTS</masterLabel>
+        <translation><!-- AGRO PRODUCTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AJWAIN</masterLabel>
+        <translation><!-- AJWAIN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ALMOND</masterLabel>
+        <translation><!-- ALMOND --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AMAZON FC</masterLabel>
+        <translation><!-- AMAZON FC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ANCHOR AND DRILL BIT</masterLabel>
+        <translation><!-- ANCHOR AND DRILL BIT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ANCHOR AND TOOLS 119</masterLabel>
+        <translation><!-- ANCHOR AND TOOLS 119 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>APM HOUSEHOLD</masterLabel>
+        <translation><!-- APM HOUSEHOLD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ARMS AND AMMUNITION</masterLabel>
+        <translation><!-- ARMS AND AMMUNITION --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ARTIFICIAL JEWELLERY</masterLabel>
+        <translation><!-- ARTIFICIAL JEWELLERY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AUTO PARTS</masterLabel>
+        <translation><!-- AUTO PARTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AXLE</masterLabel>
+        <translation><!-- AXLE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AYURVEDIC MEDICINE</masterLabel>
+        <translation><!-- AYURVEDIC MEDICINE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AYURVEDIC PRODUCT</masterLabel>
+        <translation><!-- AYURVEDIC PRODUCT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BADI</masterLabel>
+        <translation><!-- BADI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BAMBOO STICK</masterLabel>
+        <translation><!-- BAMBOO STICK --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BANDAGE</masterLabel>
+        <translation><!-- BANDAGE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BANGLES</masterLabel>
+        <translation><!-- BANGLES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BARREL</masterLabel>
+        <translation><!-- BARREL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BAT</masterLabel>
+        <translation><!-- BAT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BATTERY</masterLabel>
+        <translation><!-- BATTERY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BEAN BAG</masterLabel>
+        <translation><!-- BEAN BAG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BEARING</masterLabel>
+        <translation><!-- BEARING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BEARING PARTS</masterLabel>
+        <translation><!-- BEARING PARTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BEDSHEET</masterLabel>
+        <translation><!-- BEDSHEET --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BELLS</masterLabel>
+        <translation><!-- BELLS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BIDI</masterLabel>
+        <translation><!-- BIDI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BIKEXPRESS</masterLabel>
+        <translation><!-- BIKEXPRESS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BLACK PEPPER</masterLabel>
+        <translation><!-- BLACK PEPPER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BLANKETS</masterLabel>
+        <translation><!-- BLANKETS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BOOKS</masterLabel>
+        <translation><!-- BOOKS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BRASS PRODUCTS</masterLabel>
+        <translation><!-- BRASS PRODUCTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BRASSWARE</masterLabel>
+        <translation><!-- BRASSWARE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BRUSH</masterLabel>
+        <translation><!-- BRUSH --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BULK DRUGS</masterLabel>
+        <translation><!-- BULK DRUGS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BULK DRY FRUITS</masterLabel>
+        <translation><!-- BULK DRY FRUITS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CABLE</masterLabel>
+        <translation><!-- CABLE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CABLE DRUM</masterLabel>
+        <translation><!-- CABLE DRUM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CAMPUS2HOME BOOKING</masterLabel>
+        <translation><!-- CAMPUS2HOME BOOKING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CARDAMOM</masterLabel>
+        <translation><!-- CARDAMOM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CARPET</masterLabel>
+        <translation><!-- CARPET --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CARRY BAGS</masterLabel>
+        <translation><!-- CARRY BAGS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CASHEW</masterLabel>
+        <translation><!-- CASHEW --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CASTINGS</masterLabel>
+        <translation><!-- CASTINGS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CATING</masterLabel>
+        <translation><!-- CATING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CHAPPALS</masterLabel>
+        <translation><!-- CHAPPALS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CHIESEL,ANCHOR AND TOOLS</masterLabel>
+        <translation><!-- CHIESEL,ANCHOR AND TOOLS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CHIKAN CLOTHINGS</masterLabel>
+        <translation><!-- CHIKAN CLOTHINGS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CHIKANKARI</masterLabel>
+        <translation><!-- CHIKANKARI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CHILLED ROLL METAL</masterLabel>
+        <translation><!-- CHILLED ROLL METAL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CIGARETTES</masterLabel>
+        <translation><!-- CIGARETTES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CLOTH BALE</masterLabel>
+        <translation><!-- CLOTH BALE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>COCOON</masterLabel>
+        <translation><!-- COCOON --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>COCOONS</masterLabel>
+        <translation><!-- COCOONS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>COFFEE</masterLabel>
+        <translation><!-- COFFEE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>COILS</masterLabel>
+        <translation><!-- COILS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>COIR PRODUCT</masterLabel>
+        <translation><!-- COIR PRODUCT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>COLOUR</masterLabel>
+        <translation><!-- COLOUR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>COMPUTER GOODS</masterLabel>
+        <translation><!-- COMPUTER GOODS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>COPPER WIRE</masterLabel>
+        <translation><!-- COPPER WIRE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>COSMETICS</masterLabel>
+        <translation><!-- COSMETICS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>COTTON THREAD</masterLabel>
+        <translation><!-- COTTON THREAD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>COUPLING</masterLabel>
+        <translation><!-- COUPLING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CRANKSHAFTS</masterLabel>
+        <translation><!-- CRANKSHAFTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CRUCIBLE</masterLabel>
+        <translation><!-- CRUCIBLE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CUTTING BLADE</masterLabel>
+        <translation><!-- CUTTING BLADE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CYCLE</masterLabel>
+        <translation><!-- CYCLE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CYCLE PARTS</masterLabel>
+        <translation><!-- CYCLE PARTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Chain</masterLabel>
+        <translation><!-- Chain --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Condoms and Contraceptives.</masterLabel>
+        <translation><!-- Condoms and Contraceptives. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DISPLAY ITEM</masterLabel>
+        <translation><!-- DISPLAY ITEM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DRUM</masterLabel>
+        <translation><!-- DRUM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DRY FRUITS</masterLabel>
+        <translation><!-- DRY FRUITS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EASY2MOVE</masterLabel>
+        <translation><!-- EASY2MOVE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ELECTRICAL EQUIPMENT</masterLabel>
+        <translation><!-- ELECTRICAL EQUIPMENT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ELECTRICALS</masterLabel>
+        <translation><!-- ELECTRICALS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ELECTRONIC EQUIPMENT</masterLabel>
+        <translation><!-- ELECTRONIC EQUIPMENT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FABRIC</masterLabel>
+        <translation><!-- FABRIC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FAST MOVING CONSUMER GOODS FMCG</masterLabel>
+        <translation><!-- FAST MOVING CONSUMER GOODS FMCG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FASTNERS</masterLabel>
+        <translation><!-- FASTNERS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FISH NET</masterLabel>
+        <translation><!-- FISH NET --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FOOTWEAR</masterLabel>
+        <translation><!-- FOOTWEAR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FORGINGS</masterLabel>
+        <translation><!-- FORGINGS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FURNITURE</masterLabel>
+        <translation><!-- FURNITURE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GAS STOVE</masterLabel>
+        <translation><!-- GAS STOVE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GENERAL</masterLabel>
+        <translation><!-- GENERAL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GENSET PARTS</masterLabel>
+        <translation><!-- GENSET PARTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GHUNGROO</masterLabel>
+        <translation><!-- GHUNGROO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GIFT ITEM</masterLabel>
+        <translation><!-- GIFT ITEM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GREAR BOX</masterLabel>
+        <translation><!-- GREAR BOX --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GREASE AND OIL</masterLabel>
+        <translation><!-- GREASE AND OIL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GUN PARTS</masterLabel>
+        <translation><!-- GUN PARTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HANDICRAFT</masterLabel>
+        <translation><!-- HANDICRAFT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HANDLOOM</masterLabel>
+        <translation><!-- HANDLOOM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HANDLOOM FABRIC PRODUCTS</masterLabel>
+        <translation><!-- HANDLOOM FABRIC PRODUCTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HANDMADE PAPER AND PAPER PRODUCTS</masterLabel>
+        <translation><!-- HANDMADE PAPER AND PAPER PRODUCTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HEAVY MACHINERY</masterLabel>
+        <translation><!-- HEAVY MACHINERY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HELMET</masterLabel>
+        <translation><!-- HELMET --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HERBS</masterLabel>
+        <translation><!-- HERBS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HOSIERY</masterLabel>
+        <translation><!-- HOSIERY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HOUSEHOLD GOODS</masterLabel>
+        <translation><!-- HOUSEHOLD GOODS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IMITATION JEWELLERY</masterLabel>
+        <translation><!-- IMITATION JEWELLERY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IMPORTED HOUSEHOLD</masterLabel>
+        <translation><!-- IMPORTED HOUSEHOLD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INSULATOR</masterLabel>
+        <translation><!-- INSULATOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ISABGOL</masterLabel>
+        <translation><!-- ISABGOL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>JASDAN HANDICRAFT</masterLabel>
+        <translation><!-- JASDAN HANDICRAFT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>JEERA</masterLabel>
+        <translation><!-- JEERA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>JUTE PRODUCTS</masterLabel>
+        <translation><!-- JUTE PRODUCTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>JUTI</masterLabel>
+        <translation><!-- JUTI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>KATTHA</masterLabel>
+        <translation><!-- KATTHA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>KHADI</masterLabel>
+        <translation><!-- KHADI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>KITCHENWARE</masterLabel>
+        <translation><!-- KITCHENWARE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>KOPRA</masterLabel>
+        <translation><!-- KOPRA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LAC BANGLES</masterLabel>
+        <translation><!-- LAC BANGLES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LADIES SUIT CLOTH UNSTICHED</masterLabel>
+        <translation><!-- LADIES SUIT CLOTH UNSTICHED --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LAMINATES</masterLabel>
+        <translation><!-- LAMINATES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LARGE CARDAMOM</masterLabel>
+        <translation><!-- LARGE CARDAMOM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LEATHER</masterLabel>
+        <translation><!-- LEATHER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LEATHER PRODUCT</masterLabel>
+        <translation><!-- LEATHER PRODUCT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LIQUID CHEMICAL</masterLabel>
+        <translation><!-- LIQUID CHEMICAL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LIQUOR</masterLabel>
+        <translation><!-- LIQUOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LOCKS</masterLabel>
+        <translation><!-- LOCKS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LUBRICANTS</masterLabel>
+        <translation><!-- LUBRICANTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MACHINERY</masterLabel>
+        <translation><!-- MACHINERY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MACHINERY PARTS</masterLabel>
+        <translation><!-- MACHINERY PARTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MAKHANA</masterLabel>
+        <translation><!-- MAKHANA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MEDICAL EQUIPMENT</masterLabel>
+        <translation><!-- MEDICAL EQUIPMENT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>METAL HARDWARE PRODUCTS</masterLabel>
+        <translation><!-- METAL HARDWARE PRODUCTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MINERALS</masterLabel>
+        <translation><!-- MINERALS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MINRAL BOARD</masterLabel>
+        <translation><!-- MINRAL BOARD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MOSQUITO NET</masterLabel>
+        <translation><!-- MOSQUITO NET --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MOTOR PARTS</masterLabel>
+        <translation><!-- MOTOR PARTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MOULDS</masterLabel>
+        <translation><!-- MOULDS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MUSICAL INSTRUMENT</masterLabel>
+        <translation><!-- MUSICAL INSTRUMENT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NUTBOLT</masterLabel>
+        <translation><!-- NUTBOLT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OLD CLOTH</masterLabel>
+        <translation><!-- OLD CLOTH --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PACKED FOOD PRODUCT</masterLabel>
+        <translation><!-- PACKED FOOD PRODUCT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PACKED FOODS</masterLabel>
+        <translation><!-- PACKED FOODS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PACKING MATERIAL</masterLabel>
+        <translation><!-- PACKING MATERIAL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PACKING STRIPES</masterLabel>
+        <translation><!-- PACKING STRIPES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PAINT BRUSH</masterLabel>
+        <translation><!-- PAINT BRUSH --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PAPAD</masterLabel>
+        <translation><!-- PAPAD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PESTICIDES</masterLabel>
+        <translation><!-- PESTICIDES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PHARMACEUTICALS</masterLabel>
+        <translation><!-- PHARMACEUTICALS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PHOTO COPIER MACHINE</masterLabel>
+        <translation><!-- PHOTO COPIER MACHINE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PICKLE</masterLabel>
+        <translation><!-- PICKLE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PISTON</masterLabel>
+        <translation><!-- PISTON --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PLASTIC BAGS</masterLabel>
+        <translation><!-- PLASTIC BAGS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PLASTIC ITEM</masterLabel>
+        <translation><!-- PLASTIC ITEM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PLY BOARD</masterLabel>
+        <translation><!-- PLY BOARD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>POLY FILM</masterLabel>
+        <translation><!-- POLY FILM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>POLY ROLLER</masterLabel>
+        <translation><!-- POLY ROLLER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PRECIOUS GEMS</masterLabel>
+        <translation><!-- PRECIOUS GEMS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PRECIOUS METAL</masterLabel>
+        <translation><!-- PRECIOUS METAL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PRECISION EQUIPMENT</masterLabel>
+        <translation><!-- PRECISION EQUIPMENT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PRINTED MATERIAL</masterLabel>
+        <translation><!-- PRINTED MATERIAL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PRINTED STATIONARY</masterLabel>
+        <translation><!-- PRINTED STATIONARY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PROMOTIONAL ITEM</masterLabel>
+        <translation><!-- PROMOTIONAL ITEM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PUMP</masterLabel>
+        <translation><!-- PUMP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RAISIN</masterLabel>
+        <translation><!-- RAISIN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RAKHI</masterLabel>
+        <translation><!-- RAKHI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RAKHI PROJEC</masterLabel>
+        <translation><!-- RAKHI PROJEC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RAW SILK</masterLabel>
+        <translation><!-- RAW SILK --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>READY MADE GARMENT RMG</masterLabel>
+        <translation><!-- READY MADE GARMENT RMG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REPAIR TOOLS</masterLabel>
+        <translation><!-- REPAIR TOOLS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RETAIL PROJECTS</masterLabel>
+        <translation><!-- RETAIL PROJECTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RICE</masterLabel>
+        <translation><!-- RICE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RIM</masterLabel>
+        <translation><!-- RIM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RMG &amp; ACCESSORIES</masterLabel>
+        <translation><!-- RMG &amp; ACCESSORIES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RUBBER</masterLabel>
+        <translation><!-- RUBBER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RUBBER PRODUCTS</masterLabel>
+        <translation><!-- RUBBER PRODUCTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SAFE RETURN FURNITURE</masterLabel>
+        <translation><!-- SAFE RETURN FURNITURE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SAFE RETURN MAKHANA</masterLabel>
+        <translation><!-- SAFE RETURN MAKHANA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SAFE RETURN RMG</masterLabel>
+        <translation><!-- SAFE RETURN RMG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SAFEHOME</masterLabel>
+        <translation><!-- SAFEHOME --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SAFERELOCATION</masterLabel>
+        <translation><!-- SAFERELOCATION --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SAFEXPRESS FAMILY</masterLabel>
+        <translation><!-- SAFEXPRESS FAMILY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SAINIK EXPRESS</masterLabel>
+        <translation><!-- SAINIK EXPRESS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SANITARY PADS</masterLabel>
+        <translation><!-- SANITARY PADS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SAREE</masterLabel>
+        <translation><!-- SAREE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SAUNF</masterLabel>
+        <translation><!-- SAUNF --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SCIENTIFIC EQUIPMENT</masterLabel>
+        <translation><!-- SCIENTIFIC EQUIPMENT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SCREW AND WASHER</masterLabel>
+        <translation><!-- SCREW AND WASHER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SEALENT AND TOOLS 00</masterLabel>
+        <translation><!-- SEALENT AND TOOLS 00 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SEALENT,ANCHOR,TOOLS 01</masterLabel>
+        <translation><!-- SEALENT,ANCHOR,TOOLS 01 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SEEDS</masterLabel>
+        <translation><!-- SEEDS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SHAWL</masterLabel>
+        <translation><!-- SHAWL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SHEETS</masterLabel>
+        <translation><!-- SHEETS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SHIRTS</masterLabel>
+        <translation><!-- SHIRTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SHWALS</masterLabel>
+        <translation><!-- SHWALS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SILK</masterLabel>
+        <translation><!-- SILK --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SILK YARN</masterLabel>
+        <translation><!-- SILK YARN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SOAP STONE</masterLabel>
+        <translation><!-- SOAP STONE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SODI BLANKET</masterLabel>
+        <translation><!-- SODI BLANKET --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SPARE PARTS</masterLabel>
+        <translation><!-- SPARE PARTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SPICES</masterLabel>
+        <translation><!-- SPICES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SPORTS GOODS</masterLabel>
+        <translation><!-- SPORTS GOODS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STAMPING</masterLabel>
+        <translation><!-- STAMPING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STATIONERY</masterLabel>
+        <translation><!-- STATIONERY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SUIT</masterLabel>
+        <translation><!-- SUIT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SUPARI</masterLabel>
+        <translation><!-- SUPARI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SURGICAL COTTON</masterLabel>
+        <translation><!-- SURGICAL COTTON --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SWEETS</masterLabel>
+        <translation><!-- SWEETS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Safe Returns</masterLabel>
+        <translation><!-- Safe Returns --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TABLET</masterLabel>
+        <translation><!-- TABLET --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TAX FREE BOOKS</masterLabel>
+        <translation><!-- TAX FREE BOOKS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TEA</masterLabel>
+        <translation><!-- TEA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TELECOMMUNICATION EQUIPMENT</masterLabel>
+        <translation><!-- TELECOMMUNICATION EQUIPMENT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TERACOTA</masterLabel>
+        <translation><!-- TERACOTA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TEXTILE</masterLabel>
+        <translation><!-- TEXTILE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>THOMAS MACHINE</masterLabel>
+        <translation><!-- THOMAS MACHINE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TIMBER PRODUCTS</masterLabel>
+        <translation><!-- TIMBER PRODUCTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TISSUE PAPER</masterLabel>
+        <translation><!-- TISSUE PAPER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TOBACO PRODUCTS</masterLabel>
+        <translation><!-- TOBACO PRODUCTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TOILETRIES</masterLabel>
+        <translation><!-- TOILETRIES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TOOLS</masterLabel>
+        <translation><!-- TOOLS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TOWEL</masterLabel>
+        <translation><!-- TOWEL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UPS</masterLabel>
+        <translation><!-- UPS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UTENSILS</masterLabel>
+        <translation><!-- UTENSILS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VALVE &amp; FASTENER</masterLabel>
+        <translation><!-- VALVE &amp; FASTENER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WALL CLOCK</masterLabel>
+        <translation><!-- WALL CLOCK --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WALNUT</masterLabel>
+        <translation><!-- WALNUT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WEIGHING SCALE</masterLabel>
+        <translation><!-- WEIGHING SCALE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WOOD PRODUCTS</masterLabel>
+        <translation><!-- WOOD PRODUCTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WOOLEN GARMENT</masterLabel>
+        <translation><!-- WOOLEN GARMENT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WOOLEN GOODS</masterLabel>
+        <translation><!-- WOOLEN GOODS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZIP</masterLabel>
+        <translation><!-- ZIP --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

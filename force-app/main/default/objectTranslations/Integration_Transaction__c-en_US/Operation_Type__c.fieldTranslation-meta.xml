@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Operation Type --></label>
+    <name>Operation_Type__c</name>
+    <picklistValues>
+        <masterLabel>Create Customer</masterLabel>
+        <translation><!-- Create Customer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CreateOpportunityPropeli</masterLabel>
+        <translation><!-- CreateOpportunityPropeli --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EnterpriseEnquiryCaseStatus</masterLabel>
+        <translation><!-- EnterpriseEnquiryCaseStatus --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EnterpriseUpdateCase</masterLabel>
+        <translation><!-- EnterpriseUpdateCase --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PropelICaseCancellation</masterLabel>
+        <translation><!-- PropelICaseCancellation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PropelICaseCreation</masterLabel>
+        <translation><!-- PropelICaseCreation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SLACK_ARCHIVE_CHANNEL</masterLabel>
+        <translation><!-- SLACK_ARCHIVE_CHANNEL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SLACK_CREATE_CHANNEL</masterLabel>
+        <translation><!-- SLACK_CREATE_CHANNEL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SLACK_INVITE_BOT</masterLabel>
+        <translation><!-- SLACK_INVITE_BOT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SLACK_INVITE_USER</masterLabel>
+        <translation><!-- SLACK_INVITE_USER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SLACK_POST_MESSAGE</masterLabel>
+        <translation><!-- SLACK_POST_MESSAGE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SLACK_POST_THREAD_REPLY</masterLabel>
+        <translation><!-- SLACK_POST_THREAD_REPLY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SLACK_REMOVE_USER</masterLabel>
+        <translation><!-- SLACK_REMOVE_USER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SLACK_TAG_USER</masterLabel>
+        <translation><!-- SLACK_TAG_USER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SLACK_TAG_USER_IN_THREAD</masterLabel>
+        <translation><!-- SLACK_TAG_USER_IN_THREAD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>iConnectUpdateCase</masterLabel>
+        <translation><!-- iConnectUpdateCase --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>protonUpdateCase</masterLabel>
+        <translation><!-- protonUpdateCase --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

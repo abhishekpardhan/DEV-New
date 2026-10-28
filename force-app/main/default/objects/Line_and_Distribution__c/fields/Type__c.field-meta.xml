@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <label>Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ticket - Air</fullName>
+                <default>false</default>
+                <label>Ticket - Air</label>
+            </value>
+            <value>
+                <fullName>Ticket - Train/Other</fullName>
+                <default>false</default>
+                <label>Ticket - Train/Other</label>
+            </value>
+            <value>
+                <fullName>Taxi &amp; Car Expense</fullName>
+                <default>false</default>
+                <label>Taxi &amp; Car Expense</label>
+            </value>
+            <value>
+                <fullName>Local Conveyance</fullName>
+                <default>false</default>
+                <label>Local Conveyance</label>
+            </value>
+            <value>
+                <fullName>Hotel Expenses</fullName>
+                <default>false</default>
+                <label>Hotel Expenses</label>
+            </value>
+            <value>
+                <fullName>Food Expenses</fullName>
+                <default>false</default>
+                <label>Food Expenses</label>
+            </value>
+            <value>
+                <fullName>Conveyance</fullName>
+                <default>false</default>
+                <label>Conveyance</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

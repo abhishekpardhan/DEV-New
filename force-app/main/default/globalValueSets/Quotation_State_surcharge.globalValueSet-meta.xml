@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Orissa</fullName>
+        <default>false</default>
+        <label>Orissa</label>
+    </customValue>
+    <customValue>
+        <fullName>Bihar</fullName>
+        <default>false</default>
+        <label>Bihar</label>
+    </customValue>
+    <customValue>
+        <fullName>Jammu &amp; Kashmir</fullName>
+        <default>false</default>
+        <label>Jammu &amp; Kashmir</label>
+    </customValue>
+    <customValue>
+        <fullName>Jharkhand</fullName>
+        <default>false</default>
+        <label>Jharkhand</label>
+    </customValue>
+    <customValue>
+        <fullName>Kerala</fullName>
+        <default>false</default>
+        <label>Kerala</label>
+    </customValue>
+    <customValue>
+        <fullName>Sikkim</fullName>
+        <default>false</default>
+        <label>Sikkim</label>
+    </customValue>
+    <customValue>
+        <fullName>West Bengal</fullName>
+        <default>false</default>
+        <label>West Bengal</label>
+    </customValue>
+    <customValue>
+        <fullName>Arunachal Pradesh</fullName>
+        <default>false</default>
+        <label>Arunachal Pradesh</label>
+    </customValue>
+    <customValue>
+        <fullName>Assam</fullName>
+        <default>false</default>
+        <label>Assam</label>
+    </customValue>
+    <customValue>
+        <fullName>Manipur</fullName>
+        <default>false</default>
+        <label>Manipur</label>
+    </customValue>
+    <customValue>
+        <fullName>Meghalaya</fullName>
+        <default>false</default>
+        <label>Meghalaya</label>
+    </customValue>
+    <customValue>
+        <fullName>Mizoram</fullName>
+        <default>false</default>
+        <label>Mizoram</label>
+    </customValue>
+    <customValue>
+        <fullName>Nagaland</fullName>
+        <default>false</default>
+        <label>Nagaland</label>
+    </customValue>
+    <customValue>
+        <fullName>Tripura</fullName>
+        <default>false</default>
+        <label>Tripura</label>
+    </customValue>
+    <customValue>
+        <fullName>Guwahati</fullName>
+        <default>false</default>
+        <label>Guwahati</label>
+    </customValue>
+    <customValue>
+        <fullName>Jammu</fullName>
+        <default>false</default>
+        <label>Jammu</label>
+    </customValue>
+    <masterLabel>Quotation State surcharge</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,8 @@
+Dear Team,
+
+Please create quote for {!Quote__c.Opportunity__c} as per the details attached.
+Please log in to salesforce using url: https://safeforce1.force.com
+After logged in please click the link to access record: {!Quote__c.Instance_url__c}{!Quote__c.Id} 
+
+Regards,
+{!Quote__c.CreatedBy}

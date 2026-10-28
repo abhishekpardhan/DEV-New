@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>sfdc.admin@safexpress.com</contactEmail>
+    <label>SnowFlake Integration</label>
+    <oauthConfig>
+        <callbackUrl>http://localhost:1717/OauthRedirect</callbackUrl>
+        <certificate>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</certificate>
+        <consumerKey>3MVG9gl7ph1Px3YbgNEQb6IBNHmyUC3dAeiScYD.qFxuHO4KnllvEmbSSKQqCPq5R9ojooGNQYs3uQ_u5.9Qn</consumerKey>
+        <isAdminApproved>true</isAdminApproved>
+        <isClientCredentialEnabled>false</isClientCredentialEnabled>
+        <isCodeCredentialEnabled>false</isCodeCredentialEnabled>
+        <isCodeCredentialPostOnly>false</isCodeCredentialPostOnly>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isNamedUserJwtEnabled>false</isNamedUserJwtEnabled>
+        <isPkceRequired>false</isPkceRequired>
+        <isRefreshTokenRotationEnabled>false</isRefreshTokenRotationEnabled>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <isSecretRequiredForTokenExchange>false</isSecretRequiredForTokenExchange>
+        <isTokenExchangeEnabled>false</isTokenExchangeEnabled>
+        <scopes>Api</scopes>
+        <scopes>Web</scopes>
+        <scopes>Full</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <isTokenExchangeFlowEnabled>false</isTokenExchangeFlowEnabled>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+    <profileName>Integration User</profileName>
+    <profileName>System Administrator</profileName>
+</ConnectedApp>

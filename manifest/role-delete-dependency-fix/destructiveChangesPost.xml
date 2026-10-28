@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Account.ARM_codes_Visiblity</members>
+        <members>Account.Account_3PL_and</members>
+        <members>Account.Revenue_management</members>
+        <members>Account.Revenue_management_Case_Account</members>
+        <members>Account.Type_3pl</members>
+        <members>Lead__c.Lead_Type_3pl</members>
+        <members>Lead__c.Lead_Type_FTL</members>
+        <members>Opportunity__c.Type_3pl</members>
+        <members>Opportunity__c.Type_FTL</members>
+        <name>SharingCriteriaRule</name>
+    </types>
+    <types>
+        <members>Lead__c.Send_Email_To_3pl</members>
+        <name>WorkflowAlert</name>
+    </types>
+    <version>67.0</version>
+</Package>

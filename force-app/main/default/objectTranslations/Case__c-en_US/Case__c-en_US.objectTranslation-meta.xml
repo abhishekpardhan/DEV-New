@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Case</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Cases</value>
+    </caseValues>
+    <layouts>
+        <layout>Account Modification Page Layout</layout>
+        <sections>
+            <label><!-- Case Details --></label>
+            <section>Case Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Case Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Claim Page Layout</layout>
+        <sections>
+            <label><!-- Bank Details --></label>
+            <section>Bank Details</section>
+        </sections>
+        <sections>
+            <label><!-- Claim Settlement --></label>
+            <section>Claim Settlement</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Credit/Debit Note Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Credit/Debit Note Revenue Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Invoice Details --></label>
+            <section>Invoice Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Customer Portal Access</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Customer Technology/IT request</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Operational Page Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Claim Issues --></label>
+        <name>Claim_Issues</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Corporate Credit Case --></label>
+        <name>Corporate_Credit_Case</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Revenue Management Case --></label>
+        <name>Credit_Debit_Note</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Customer Technology/IT request --></label>
+        <name>CustomerTechnologyITrequest</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Customer Portal Access-old --></label>
+        <name>Customer_Portal_Access</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Customer Portal Access --></label>
+        <name>Customer_Portal_Access_new</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Operation Issues --></label>
+        <name>Operation_Issues</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- You do not have permission to edit this case. --></errorMessage>
+        <name>Case_Edit_Permission_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Case amount is greater than invoice outstanding amount --></errorMessage>
+        <name>Case_amount_greater_than_INV_amount</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Record type cannot be changed --></errorMessage>
+        <name>Case_recordtype_change_validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The case has been submitted , so you cannot change the status to &quot;Rejected&quot; at this stage. --></errorMessage>
+        <name>Case_submitted_Rejection_not_allowed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Claim Approved Amount, Claim Settlement Date and Cheque/COF No are required when changing Status to Completed. --></errorMessage>
+        <name>Claim_Case_Completion_VR</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Credit/Debit note number Should be 12 and 15 digits. --></errorMessage>
+        <name>Credit_note_cannot_be_more_than_15</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- User cannot edit the record --></errorMessage>
+        <name>Edit_Permission_for_CCD_Cases</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter a valid GSTIN. --></errorMessage>
+        <name>GSTIN_Format_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill the information. --></errorMessage>
+        <name>Invoice_Mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You are not allowed to edit this lock record --></errorMessage>
+        <name>LockRevenueCaseRecord</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You are not allowed to change Completed case --></errorMessage>
+        <name>Lock_All_Cases_After_Completion_Rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This case has been rejected and is locked. Please create a new case. --></errorMessage>
+        <name>Lock_When_Rejected</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Phone number should be of 10 digits and must not start with 0 --></errorMessage>
+        <name>Phone_number_should_be_of_10_digits</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- After Claim Processed, only Rejected or Completed status is allowed. --></errorMessage>
+        <name>Processed_Claim_Status_Change_VR</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You are not authorized to change the status to Claim Processed. --></errorMessage>
+        <name>Processed_Claim_VR</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Rate Difference cannot be selected with any other Case Sub Type. --></errorMessage>
+        <name>Rate_Difference_Exclusive_Subtype</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Receipt number must be of 7 digits --></errorMessage>
+        <name>Receipt_num_7digits</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- For Credit Rebate, select only one Case Sub Type. Only Late Delivery and Weight Difference can be selected together. --></errorMessage>
+        <name>Select_One_Value_For_Credit_Rebate</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Status should not be changed until the waybill details are added --></errorMessage>
+        <name>Status_to_be_Provisional_on_case_create</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter a valid Indian Pincode. --></errorMessage>
+        <name>Validate_Indian_Pincode</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Code Extension should be selected separately --></errorMessage>
+        <name>Validation_for_Code_Extension</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select Damage/Shortage separately --></errorMessage>
+        <name>Validation_for_Revenue_Management</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Fill 8 OR 10 Digits Waybill Numbers! --></errorMessage>
+        <name>Waybill_should_be_8_didgits</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill the amount --></errorMessage>
+        <name>amount_mandate</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill the invoice number --></errorMessage>
+        <name>invoice_mandate</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You are not authorized to create this type of Case. Please change the case type --></errorMessage>
+        <name>profile_based_case_creation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please create Waybill Details. --></errorMessage>
+        <name>waybill_details_record_man</name>
+    </validationRules>
+</CustomObjectTranslation>

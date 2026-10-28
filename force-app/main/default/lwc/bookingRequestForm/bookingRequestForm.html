@@ -1,0 +1,118 @@
+<template>
+    <article class="card" aria-labelledby="booking-title">
+        <header class="card-head">
+            <template lwc:if={showLogo}>
+                <img class="card-logo" src={logoUrl} alt="Safexpress" onerror={handleLogoError} />
+            </template>
+            <h2 id="booking-title" class="card-title">Book a Pickup Request</h2>
+        </header>
+
+        <div class="card-body">
+            <p class="booking-hint">Please share your details to raise a pickup request. All fields are required.</p>
+
+            <fieldset class="group">
+                <legend class="group-title">Your details</legend>
+                <lightning-input data-field="name" label="Full name" value={form.name}
+                    max-length="80" autocomplete="name" required read-only={readOnly}
+                    onchange={handleChange} onblur={handleBlur}></lightning-input>
+                <lightning-input data-field="mobileNumber" type="tel" label="Mobile number"
+                    placeholder="10-digit mobile number" value={form.mobileNumber} max-length="16"
+                    autocomplete="tel" required read-only={readOnly}
+                    onchange={handleChange} onblur={handleBlur}></lightning-input>
+                <lightning-input data-field="email" type="email" label="Email address"
+                    placeholder="name@company.com" value={form.email} max-length="80" autocomplete="email"
+                    message-when-type-mismatch="Kindly enter a valid email address (like name@company.com)."
+                    required read-only={readOnly}
+                    onchange={handleChange} onblur={handleBlur}></lightning-input>
+            </fieldset>
+
+            <fieldset class="group">
+                <legend class="group-title">Pickup and delivery</legend>
+                <ol class="route">
+                    <li class={pickup.stopClass}>
+                        <span class="route-marker" aria-hidden="true"></span>
+                        <lightning-input data-field="pickupPincode" type="tel" label="Pickup pincode"
+                            placeholder="6-digit pincode" value={form.pickupPincode} max-length="6"
+                            autocomplete="postal-code" required read-only={readOnly}
+                            onchange={handleChange} onblur={handleBlur}></lightning-input>
+                        <div class="pin-status" aria-live="polite">
+                            <template lwc:if={pickup.checking}>
+                                <p class="pin-note"><span class="pin-spinner" aria-hidden="true"></span>Checking pincode…</p>
+                            </template>
+                            <template lwc:elseif={pickup.ok}>
+                                <div class="pin-found">
+                                    <lightning-icon icon-name="utility:success" variant="success" size="x-small"
+                                        alternative-text="Pincode verified"></lightning-icon>
+                                    <div>
+                                        <p class="pin-city">{pickup.city}</p>
+                                        <p class="pin-area">{pickup.area}</p>
+                                    </div>
+                                </div>
+                            </template>
+                            <template lwc:elseif={pickup.unavailable}>
+                                <p class="pin-note">We will verify this pincode when you submit.</p>
+                            </template>
+                        </div>
+                        <lightning-textarea data-field="pickupAddress" label="Pickup address"
+                            placeholder="House or plot number, street, area, landmark"
+                            value={form.pickupAddress} max-length="255" required read-only={readOnly}
+                            onchange={handleChange} onblur={handleBlur}></lightning-textarea>
+                    </li>
+                    <li class={delivery.stopClass}>
+                        <span class="route-marker" aria-hidden="true"></span>
+                        <lightning-input data-field="deliveryPincode" type="tel" label="Delivery pincode"
+                            placeholder="6-digit pincode" value={form.deliveryPincode} max-length="6"
+                            required read-only={readOnly}
+                            onchange={handleChange} onblur={handleBlur}></lightning-input>
+                        <div class="pin-status" aria-live="polite">
+                            <template lwc:if={delivery.checking}>
+                                <p class="pin-note"><span class="pin-spinner" aria-hidden="true"></span>Checking pincode…</p>
+                            </template>
+                            <template lwc:elseif={delivery.ok}>
+                                <div class="pin-found">
+                                    <lightning-icon icon-name="utility:success" variant="success" size="x-small"
+                                        alternative-text="Pincode verified"></lightning-icon>
+                                    <div>
+                                        <p class="pin-city">{delivery.city}</p>
+                                        <p class="pin-area">{delivery.area}</p>
+                                    </div>
+                                </div>
+                            </template>
+                            <template lwc:elseif={delivery.unavailable}>
+                                <p class="pin-note">We will verify this pincode when you submit.</p>
+                            </template>
+                        </div>
+                    </li>
+                </ol>
+            </fieldset>
+
+            <fieldset class="group">
+                <legend class="group-title">Shipment</legend>
+                <div class="pair">
+                    <lightning-input data-field="approxWeight" type="number" label="Approx weight (kg)"
+                        value={form.approxWeight} step="0.01" min="0.01" max="50000"
+                        message-when-bad-input="Kindly enter the weight in kg as a number."
+                        message-when-step-mismatch="Weight can have up to 2 decimals."
+                        message-when-range-underflow="Weight must be more than 0 kg."
+                        message-when-range-overflow="Weight can be at most 50,000 kg."
+                        required read-only={readOnly}
+                        onchange={handleChange} onblur={handleBlur}></lightning-input>
+                    <lightning-input data-field="packageCount" type="number" label="Number of packages"
+                        value={form.packageCount} step="1" min="1" max="5000"
+                        message-when-bad-input="Kindly enter the number of packages as a whole number."
+                        message-when-step-mismatch="Kindly enter a whole number of packages."
+                        message-when-range-underflow="There must be at least 1 package."
+                        message-when-range-overflow="Number of packages can be at most 5,000."
+                        required read-only={readOnly}
+                        onchange={handleChange} onblur={handleBlur}></lightning-input>
+                </div>
+            </fieldset>
+
+            <template lwc:if={showStatus}>
+                <p class={statusClass} role="status" aria-live="polite">{statusText}</p>
+            </template>
+        </div>
+
+        <footer class="card-foot">Distribution Redefined</footer>
+    </article>
+</template>

@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Campaign_Name__c</fullName>
+    <description>values to be taken from proton</description>
+    <label>Campaign Name</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Source__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Campaign_Name</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>6TH FOOD &amp; GROCERY FORUM INDIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>8TH NORTH EAST BUSINESS SUMMIT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>ASIA MANUFACTURING &amp; SUPPLY CHAIN SUMMIT 2014</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>ASIA MANUFACTURING SUMMIT 2013</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>ASIA MANUFACTURING SUPPLY CHAIN SUMMIT 2016</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>ASIA RETAIL CONGRESS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>ASIA RETAIL CONGRESS-2014</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>AUTO COMPONENT SHOW-2014</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>AUTO EXPO-2014</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>AUTO SCM CHENNAI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>AUTO SCM PUNE-2014</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>BOOK FAIR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>BOOKS &amp; PERIODICALS (PART II) 2016</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>Books &amp; Periodicals NCR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>BWC-2013</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>CII BUILDING WAREHOUSING COMPETITIVENESS-2015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>CII CARGO SUMMIT-2014</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>CII CONSUMER FAIR-2014</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>CII INDUSTRAIL EXPO HARIDWAR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>CII INDUSTRIAL EXPO HARIDWAR 2013</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>CII LOGISTICS 2013</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>CII-NEXT GENERATION SUPPLY CHAIN-2014</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>CII ROLE OF TECHNOLOGY &amp; LOGISTICS IN SCM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>CII ROLE OF TECHNOLOGY IN LOGISTICS AND SUPPLY CHAIN SUMMIT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>CII SUPPLY CHAIN 2020</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>CSCMP-2014</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>CSR LIVEWEEK-2013</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>DELHI BOOK FAIR 2012</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>eDM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>ELECRAMA-1-2014</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>ELECRAMA-2-2014</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>ELSC MUMBAI 2013</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>ENGG. EXPO-LUDHIANA-2013</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>E-TAILING INDIA SUMMIT-2013</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>Fastener Fair 2017</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>FOOD &amp; GROCERY FORUM-2014</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>FOOD FORUM 2012</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>Food Forum 2018</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>FRANCHISE INDIA 2012</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>FRANCHISE INDIA 2014</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>GARMENT FAIR 2012</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>GREEN EVENT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>IMTEX 2013</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>IMTOS, DELHI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>INDIA BRAND CONGRESS 2012</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>INDIA FASHION FORUM 2013</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>INDIA FASHION FORUM-2014</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>INDIA HEALTH SUMMIT 2012</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>India Integrated transport &amp; logistics Summit 2017</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>INDIA LOGISTICS &amp; WAREHOUSING SHOW 2013</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>INDIA LOGISTICS EXPO-2016</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>INDIAN RETAIL CONGRESS-2014</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>INDIAN RETAIL FORUM-2013</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>INDIAN SUPPLY CHAIN &amp; EXCELLENCE AWARDS 2013</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>INDIAN SUPPLY CHAIN &amp; LOGISTICS SUMMIT 2014</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>INDIA RETAIL FORUM 2012</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>INDIA STRATEGY FORUM 2012</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>INDIA WAREHOUSING &amp; LOGISTICS SHOW, 2012</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>INDUSTRIAL EXPO-JAIPUR-2014</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>INDUSTRIAL EXPO JAMSHEDPUR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>INDUSTRIAL EXPO LUDHIANA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>INTEX 2013</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>J&amp;K EMPORIUM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>JAMSHEDPUR INDUSTRIAL EXPO 2013</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>KHADI , SILK FAIR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>LEATHER FAIR 2013</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>MUST WIN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>NORTH EAST BUSINESS SUMMIT-2013</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>NORTH EAST WAREHOUSING CONCLAVE-2013</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>RETAIL &amp; COVENIENCE EXPO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>SERVJAN HATHKARGA HASTSHILP KALYAN SAMITI ROORKEE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>SIAM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>TOOLS + HARDWARE INDIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>TOY BIZ 2013</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>TOY BIZ INTERNATIONAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>TOY FAIR 2012</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>WORLD BOOK FAIR 2013</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>WORLD BOOK FAIR-2014</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>Zero Billing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Campaign</controllingFieldValue>
+            <valueName>OTHERS</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

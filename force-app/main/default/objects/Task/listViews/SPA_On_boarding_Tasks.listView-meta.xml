@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SPA_On_boarding_Tasks</fullName>
+    <columns>Account_Name__c</columns>
+    <columns>SUBJECT</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Booking_branch__c</columns>
+    <columns>Code_Type__c</columns>
+    <columns>WHO_NAME</columns>
+    <columns>WHAT_NAME</columns>
+    <columns>DUE_DATE</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>PRIORITY</columns>
+    <columns>STATUS</columns>
+    <columns>Journey__c</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>SUBJECT</field>
+        <operation>contains</operation>
+        <value>boarding</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Task.On_Boarding</value>
+    </filters>
+    <filters>
+        <field>Booking_branch__c</field>
+        <operation>contains</operation>
+        <value>60</value>
+    </filters>
+    <label>SPA On-boarding Tasks</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>Managing_Director</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

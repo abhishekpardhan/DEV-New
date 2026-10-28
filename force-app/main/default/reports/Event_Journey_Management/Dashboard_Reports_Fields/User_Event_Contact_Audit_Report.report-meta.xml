@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>User.Event__c$CreatedById$Event_Purpose__c</field>
+    </columns>
+    <columns>
+        <field>User$Name</field>
+    </columns>
+    <columns>
+        <field>User.Event__c$CreatedById$Name</field>
+    </columns>
+    <columns>
+        <field>User.Event__c$CreatedById.Contacts__r$Name</field>
+    </columns>
+    <columns>
+        <field>User*User$Region__c</field>
+    </columns>
+    <columns>
+        <field>User.Event__c$CreatedById$Time_Spent_Auto__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Unique</aggregateTypes>
+        <field>User.Event__c$CreatedById$Id</field>
+    </columns>
+    <columns>
+        <field>User.Event__c$CreatedById$Branch__c</field>
+    </columns>
+    <currency>INR</currency>
+    <description>User Event Contact</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>User.Event__c$CreatedById.Contacts__r$Contact_State__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>User.Event__c$CreatedById$Activities_to_be_Performed__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>User Event Contact Audit Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>USERS_EVENT_CONTACT__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>User.Event__c$CreatedById$CheckIn_Date__c</dateColumn>
+        <interval>INTERVAL_LASTTHISMONTH</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,29 @@
+<template>
+    <div if:true={showSpinner} id='spinner-info-section' class="slds-text-align_center slds-var-p-around_medium">
+        <lightning-spinner class="slds-split-view_container slds-p-top--large" variant="brand" alternative-text="Loading" size="small" ></lightning-spinner>
+        <div class="slds-p-top--small">Please wait, Updating Case Status</div>
+    </div>
+   <!-- <lightning-quick-action-panel header={caseStatusLabel}> -->
+        
+        <div if:false={showSpinner} class="picklist-container">
+            <div if:true={showError}>
+                <div class="slds-p-top--small">
+                    <p><span style="color:red;">{caseError}</span></p>
+                </div>
+            </div>
+            <!-- Picklist for updating reason -->
+            <lightning-combobox
+                name="reason"
+                label="Cancellation Reasons"
+                value={selectedReason}
+                options={picklistValues}
+                onchange={handleReasonChange}
+            ></lightning-combobox>
+        </div>
+
+        <div class="button-container">
+            <lightning-button label="OK" onclick={handleUpdateStatus} class="custom-button"></lightning-button>
+            <lightning-button label="Close" variant="brand" onclick={closeModal} class="custom-button"></lightning-button>
+        </div>
+   <!-- </lightning-quick-action-panel> --> 
+</template>

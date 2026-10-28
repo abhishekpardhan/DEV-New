@@ -1,0 +1,1248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Purpose__c</fullName>
+    <label>Sub Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>OTHERS</fullName>
+                <default>false</default>
+                <label>OTHERS</label>
+            </value>
+            <value>
+                <fullName>REBATE</fullName>
+                <default>false</default>
+                <label>REBATE</label>
+            </value>
+            <value>
+                <fullName>LEGAL</fullName>
+                <default>false</default>
+                <label>LEGAL</label>
+            </value>
+            <value>
+                <fullName>MIS</fullName>
+                <default>false</default>
+                <label>MIS</label>
+            </value>
+            <value>
+                <fullName>SUBMIT</fullName>
+                <default>false</default>
+                <label>SUBMIT</label>
+            </value>
+            <value>
+                <fullName>BILL NOT RECEIVED</fullName>
+                <default>false</default>
+                <label>BILL NOT RECEIVED</label>
+            </value>
+            <value>
+                <fullName>POD NOT AVAILABLE</fullName>
+                <default>false</default>
+                <label>POD NOT AVAILABLE</label>
+            </value>
+            <value>
+                <fullName>ORIGNAL POD</fullName>
+                <default>false</default>
+                <label>ORIGNAL POD</label>
+            </value>
+            <value>
+                <fullName>POD-CD</fullName>
+                <default>false</default>
+                <label>POD-CD</label>
+            </value>
+            <value>
+                <fullName>P2M</fullName>
+                <default>false</default>
+                <label>P2M</label>
+            </value>
+            <value>
+                <fullName>ADDRESS NOT FOUND</fullName>
+                <default>false</default>
+                <label>ADDRESS NOT FOUND</label>
+            </value>
+            <value>
+                <fullName>CONTACT PERSON NOT AVAILABLE</fullName>
+                <default>false</default>
+                <label>CONTACT PERSON NOT AVAILABLE</label>
+            </value>
+            <value>
+                <fullName>MARKET CLOSED</fullName>
+                <default>false</default>
+                <label>MARKET CLOSED</label>
+            </value>
+            <value>
+                <fullName>FESTIVAL REASON</fullName>
+                <default>false</default>
+                <label>FESTIVAL REASON</label>
+            </value>
+            <value>
+                <fullName>SALES GROWTH</fullName>
+                <default>false</default>
+                <label>SALES GROWTH</label>
+            </value>
+            <value>
+                <fullName>NEW BUSINESS OPPORTUNITY</fullName>
+                <default>false</default>
+                <label>NEW BUSINESS OPPORTUNITY</label>
+            </value>
+            <value>
+                <fullName>BILL SUBMISSION</fullName>
+                <default>false</default>
+                <label>BILL SUBMISSION</label>
+            </value>
+            <value>
+                <fullName>BILLS RELATED ESCALATION</fullName>
+                <default>false</default>
+                <label>BILLS RELATED ESCALATION</label>
+            </value>
+            <value>
+                <fullName>BILL COLLECTION</fullName>
+                <default>false</default>
+                <label>BILL COLLECTION</label>
+            </value>
+            <value>
+                <fullName>BUSINESS REVIEW</fullName>
+                <default>false</default>
+                <label>BUSINESS REVIEW</label>
+            </value>
+            <value>
+                <fullName>OPERATIONAL ISSUES</fullName>
+                <default>false</default>
+                <label>OPERATIONAL ISSUES</label>
+            </value>
+            <value>
+                <fullName>CONTRACT RENEWAL</fullName>
+                <default>false</default>
+                <label>CONTRACT RENEWAL</label>
+            </value>
+            <value>
+                <fullName>GENERAL VISIT</fullName>
+                <default>false</default>
+                <label>GENERAL VISIT</label>
+            </value>
+            <value>
+                <fullName>OTHER VISIT</fullName>
+                <default>false</default>
+                <label>OTHER VISIT</label>
+            </value>
+            <value>
+                <fullName>BUSINESS ENHANCEMENT.</fullName>
+                <default>false</default>
+                <label>BUSINESS ENHANCEMENT.</label>
+            </value>
+            <value>
+                <fullName>REVIVAL.</fullName>
+                <default>false</default>
+                <label>REVIVAL.</label>
+            </value>
+            <value>
+                <fullName>PICKUP SUPPORT.</fullName>
+                <default>false</default>
+                <label>PICKUP SUPPORT.</label>
+            </value>
+            <value>
+                <fullName>SERVICE RELATED</fullName>
+                <default>false</default>
+                <label>SERVICE RELATED</label>
+            </value>
+            <value>
+                <fullName>DISPUTE RESOLUTION.</fullName>
+                <default>false</default>
+                <label>DISPUTE RESOLUTION.</label>
+            </value>
+            <value>
+                <fullName>COURTESY VISITS</fullName>
+                <default>false</default>
+                <label>COURTESY VISITS</label>
+            </value>
+            <value>
+                <fullName>PAYMENT FOLLOW UP</fullName>
+                <default>false</default>
+                <label>PAYMENT FOLLOW UP</label>
+            </value>
+            <value>
+                <fullName>COLD CALL.</fullName>
+                <default>false</default>
+                <label>COLD CALL.</label>
+            </value>
+            <value>
+                <fullName>LEAD FOLLOW UP.</fullName>
+                <default>false</default>
+                <label>LEAD FOLLOW UP.</label>
+            </value>
+            <value>
+                <fullName>FOLLOWUP CALLS.</fullName>
+                <default>false</default>
+                <label>FOLLOWUP CALLS.</label>
+            </value>
+            <value>
+                <fullName>INBOUND BUSINESS DEVELOPMENT</fullName>
+                <default>false</default>
+                <label>INBOUND BUSINESS DEVELOPMENT</label>
+            </value>
+            <value>
+                <fullName>SERVICE ISSUE</fullName>
+                <default>false</default>
+                <label>SERVICE ISSUE</label>
+            </value>
+            <value>
+                <fullName>DOD/DACC CANCEL LETTER</fullName>
+                <default>false</default>
+                <label>DOD/DACC CANCEL LETTER</label>
+            </value>
+            <value>
+                <fullName>DOD AMOUNT CHANGE LETTER</fullName>
+                <default>false</default>
+                <label>DOD AMOUNT CHANGE LETTER</label>
+            </value>
+            <value>
+                <fullName>D.D. TO CONVERT IN CHEQUE LETTER</fullName>
+                <default>false</default>
+                <label>D.D. TO CONVERT IN CHEQUE LETTER</label>
+            </value>
+            <value>
+                <fullName>DELIVERY AGAINST D.D.+ CHEQUE</fullName>
+                <default>false</default>
+                <label>DELIVERY AGAINST D.D.+ CHEQUE</label>
+            </value>
+            <value>
+                <fullName>COLLECT D.D./CHEQUE+ C-FORM LETTER</fullName>
+                <default>false</default>
+                <label>COLLECT D.D./CHEQUE+ C-FORM LETTER</label>
+            </value>
+            <value>
+                <fullName>DOD CANCEL</fullName>
+                <default>false</default>
+                <label>DOD CANCEL</label>
+            </value>
+            <value>
+                <fullName>DACC CANCEL</fullName>
+                <default>false</default>
+                <label>DACC CANCEL</label>
+            </value>
+            <value>
+                <fullName>PROACTIVE PICKUP GENERATION EFFORTS</fullName>
+                <default>false</default>
+                <label>PROACTIVE PICKUP GENERATION EFFORTS</label>
+            </value>
+            <value>
+                <fullName>CALLS / MAIL  TO CUSTOMERS(BIZ)</fullName>
+                <default>false</default>
+                <label>CALLS / MAIL  TO CUSTOMERS(BIZ)</label>
+            </value>
+            <value>
+                <fullName>CALLS / MAIL  TO CUSTOMERS(SERVICE)</fullName>
+                <default>false</default>
+                <label>CALLS / MAIL  TO CUSTOMERS(SERVICE)</label>
+            </value>
+            <value>
+                <fullName>CALLS / MAIL  TO CUSTOMERS(COURTESY)</fullName>
+                <default>false</default>
+                <label>CALLS / MAIL  TO CUSTOMERS(COURTESY)</label>
+            </value>
+            <value>
+                <fullName>CALLS TO RBUS / STAFF FOR BIZ REVIEW</fullName>
+                <default>false</default>
+                <label>CALLS TO RBUS / STAFF FOR BIZ REVIEW</label>
+            </value>
+            <value>
+                <fullName>PREPARATION/ REVIEW OF  REPORTS- BOOKING</fullName>
+                <default>false</default>
+                <label>PREPARATION/ REVIEW OF  REPORTS- BOOKING</label>
+            </value>
+            <value>
+                <fullName>SHIPMENTS WALL STACKED</fullName>
+                <default>false</default>
+                <label>SHIPMENTS WALL STACKED</label>
+            </value>
+            <value>
+                <fullName>PALLETS OUT OF PLACE</fullName>
+                <default>false</default>
+                <label>PALLETS OUT OF PLACE</label>
+            </value>
+            <value>
+                <fullName>SHIPMENTS NEAR GATE/RAMP</fullName>
+                <default>false</default>
+                <label>SHIPMENTS NEAR GATE/RAMP</label>
+            </value>
+            <value>
+                <fullName>OPEN SHUTTERS</fullName>
+                <default>false</default>
+                <label>OPEN SHUTTERS</label>
+            </value>
+            <value>
+                <fullName>STACKING NEAR STORAGE BAY</fullName>
+                <default>false</default>
+                <label>STACKING NEAR STORAGE BAY</label>
+            </value>
+            <value>
+                <fullName>FIFO NOT FOLLOWED</fullName>
+                <default>false</default>
+                <label>FIFO NOT FOLLOWED</label>
+            </value>
+            <value>
+                <fullName>PERSONNEL NOT IN UNIFORM</fullName>
+                <default>false</default>
+                <label>PERSONNEL NOT IN UNIFORM</label>
+            </value>
+            <value>
+                <fullName>TROLLEYS WRONLY PARKED</fullName>
+                <default>false</default>
+                <label>TROLLEYS WRONLY PARKED</label>
+            </value>
+            <value>
+                <fullName>HOS IN NORMAL BAYS</fullName>
+                <default>false</default>
+                <label>HOS IN NORMAL BAYS</label>
+            </value>
+            <value>
+                <fullName>UNAUTHORIZED MOVEMENT</fullName>
+                <default>false</default>
+                <label>UNAUTHORIZED MOVEMENT</label>
+            </value>
+            <value>
+                <fullName>NO TEAM BRIEF</fullName>
+                <default>false</default>
+                <label>NO TEAM BRIEF</label>
+            </value>
+            <value>
+                <fullName>UNCLEAN FLOOR</fullName>
+                <default>false</default>
+                <label>UNCLEAN FLOOR</label>
+            </value>
+            <value>
+                <fullName>MEETING WITH SENIORS FOR BUSINESS</fullName>
+                <default>false</default>
+                <label>MEETING WITH SENIORS FOR BUSINESS</label>
+            </value>
+            <value>
+                <fullName>MEETING WITH RBUS/ TEAM FOR BUSINESS</fullName>
+                <default>false</default>
+                <label>MEETING WITH RBUS/ TEAM FOR BUSINESS</label>
+            </value>
+            <value>
+                <fullName>GROUP MEETING / SEMINAR</fullName>
+                <default>false</default>
+                <label>GROUP MEETING / SEMINAR</label>
+            </value>
+            <value>
+                <fullName>STRENGTHEN TO INBOUND CUSTOMER</fullName>
+                <default>false</default>
+                <label>STRENGTHEN TO INBOUND CUSTOMER</label>
+            </value>
+            <value>
+                <fullName>SALES CAMPAIGN INDIVIDUALLY</fullName>
+                <default>false</default>
+                <label>SALES CAMPAIGN INDIVIDUALLY</label>
+            </value>
+            <value>
+                <fullName>ROAD SHOW, IN GROUP CAMPAIGN</fullName>
+                <default>false</default>
+                <label>ROAD SHOW, IN GROUP CAMPAIGN</label>
+            </value>
+            <value>
+                <fullName>ANY OTHER PROMOTIONAL ACTIVITY</fullName>
+                <default>false</default>
+                <label>ANY OTHER PROMOTIONAL ACTIVITY</label>
+            </value>
+            <value>
+                <fullName>DATA ENTRY MISTAKE</fullName>
+                <default>false</default>
+                <label>DATA ENTRY MISTAKE</label>
+            </value>
+            <value>
+                <fullName>TRAINING</fullName>
+                <default>false</default>
+                <label>TRAINING</label>
+            </value>
+            <value>
+                <fullName>BUSINESS DEVELOPMENT</fullName>
+                <default>false</default>
+                <label>BUSINESS DEVELOPMENT</label>
+            </value>
+            <value>
+                <fullName>ANY OTHER</fullName>
+                <default>false</default>
+                <label>ANY OTHER</label>
+            </value>
+            <value>
+                <fullName>MEETING</fullName>
+                <default>false</default>
+                <label>MEETING</label>
+            </value>
+            <value>
+                <fullName>ATTEND IN HOUSE TRAINING AS PARTICIPANT</fullName>
+                <default>false</default>
+                <label>ATTEND IN HOUSE TRAINING AS PARTICIPANT</label>
+            </value>
+            <value>
+                <fullName>ATTEND EXTERNAL TRAINING</fullName>
+                <default>false</default>
+                <label>ATTEND EXTERNAL TRAINING</label>
+            </value>
+            <value>
+                <fullName>TRAIN IN HOUSE TEAM MEMBERS</fullName>
+                <default>false</default>
+                <label>TRAIN IN HOUSE TEAM MEMBERS</label>
+            </value>
+            <value>
+                <fullName>ANY OTHER TRAINING / SEMINAR</fullName>
+                <default>false</default>
+                <label>ANY OTHER TRAINING / SEMINAR</label>
+            </value>
+            <value>
+                <fullName>MEETING WITH STAFF</fullName>
+                <default>false</default>
+                <label>MEETING WITH STAFF</label>
+            </value>
+            <value>
+                <fullName>BOOKING QUALITY ADHERENCE</fullName>
+                <default>false</default>
+                <label>BOOKING QUALITY ADHERENCE</label>
+            </value>
+            <value>
+                <fullName>BUSINESS SUPPORT ACTIVITY</fullName>
+                <default>false</default>
+                <label>BUSINESS SUPPORT ACTIVITY</label>
+            </value>
+            <value>
+                <fullName>FOR OUR CAMPAIGNING</fullName>
+                <default>false</default>
+                <label>FOR OUR CAMPAIGNING</label>
+            </value>
+            <value>
+                <fullName>RETURNS BOOKING FROM EXHIBITION/ EVENT</fullName>
+                <default>false</default>
+                <label>RETURNS BOOKING FROM EXHIBITION/ EVENT</label>
+            </value>
+            <value>
+                <fullName>BUSINESS PROSPECT GENERATION</fullName>
+                <default>false</default>
+                <label>BUSINESS PROSPECT GENERATION</label>
+            </value>
+            <value>
+                <fullName>VISIT TO RTO</fullName>
+                <default>false</default>
+                <label>VISIT TO RTO</label>
+            </value>
+            <value>
+                <fullName>VISIT TO COMMERCIAL TAXES DEPT</fullName>
+                <default>false</default>
+                <label>VISIT TO COMMERCIAL TAXES DEPT</label>
+            </value>
+            <value>
+                <fullName>VISIT FOR POLICE</fullName>
+                <default>false</default>
+                <label>VISIT FOR POLICE</label>
+            </value>
+            <value>
+                <fullName>VISIT FOR INSURANCE</fullName>
+                <default>false</default>
+                <label>VISIT FOR INSURANCE</label>
+            </value>
+            <value>
+                <fullName>ANY OTHER INSTITUTION VISIT</fullName>
+                <default>false</default>
+                <label>ANY OTHER INSTITUTION VISIT</label>
+            </value>
+            <value>
+                <fullName>ACCIDENT / BREAK DOWN LOCATION</fullName>
+                <default>false</default>
+                <label>ACCIDENT / BREAK DOWN LOCATION</label>
+            </value>
+            <value>
+                <fullName>SURVEY OF LOSS</fullName>
+                <default>false</default>
+                <label>SURVEY OF LOSS</label>
+            </value>
+            <value>
+                <fullName>SOCIAL OCCASION COURTESY</fullName>
+                <default>false</default>
+                <label>SOCIAL OCCASION COURTESY</label>
+            </value>
+            <value>
+                <fullName>CSR ACTIVITY</fullName>
+                <default>false</default>
+                <label>CSR ACTIVITY</label>
+            </value>
+            <value>
+                <fullName>RELATIONSHIP BUILDING</fullName>
+                <default>false</default>
+                <label>RELATIONSHIP BUILDING</label>
+            </value>
+            <value>
+                <fullName>EVENT/ SPONSORSHIP / CAMPAIGN</fullName>
+                <default>false</default>
+                <label>EVENT/ SPONSORSHIP / CAMPAIGN</label>
+            </value>
+            <value>
+                <fullName>CAMPUS2HOME BOOKING PROMOTION</fullName>
+                <default>false</default>
+                <label>CAMPUS2HOME BOOKING PROMOTION</label>
+            </value>
+            <value>
+                <fullName>EASY2MOVE BOOKING PROMOTION</fullName>
+                <default>false</default>
+                <label>EASY2MOVE BOOKING PROMOTION</label>
+            </value>
+            <value>
+                <fullName>ANY EVENT PARTICIPATION</fullName>
+                <default>false</default>
+                <label>ANY EVENT PARTICIPATION</label>
+            </value>
+            <value>
+                <fullName>MANAGING PICKUP</fullName>
+                <default>false</default>
+                <label>MANAGING PICKUP</label>
+            </value>
+            <value>
+                <fullName>RESOLUTION OF SERVICE ISSUE</fullName>
+                <default>false</default>
+                <label>RESOLUTION OF SERVICE ISSUE</label>
+            </value>
+            <value>
+                <fullName>NEW BIR TO BE INITIATED</fullName>
+                <default>false</default>
+                <label>NEW BIR TO BE INITIATED</label>
+            </value>
+            <value>
+                <fullName>CHANGE IN CUSTOMER&apos;S CONTACT</fullName>
+                <default>false</default>
+                <label>CHANGE IN CUSTOMER&apos;S CONTACT</label>
+            </value>
+            <value>
+                <fullName>BIR UPGRADATION</fullName>
+                <default>false</default>
+                <label>BIR UPGRADATION</label>
+            </value>
+            <value>
+                <fullName>BIR CUSTOMIZATION REQUEST</fullName>
+                <default>false</default>
+                <label>BIR CUSTOMIZATION REQUEST</label>
+            </value>
+            <value>
+                <fullName>CUSTOMER NAME UPDATE</fullName>
+                <default>false</default>
+                <label>CUSTOMER NAME UPDATE</label>
+            </value>
+            <value>
+                <fullName>DISTANCE ISSUE</fullName>
+                <default>false</default>
+                <label>DISTANCE ISSUE</label>
+            </value>
+            <value>
+                <fullName>CHECK-IN CHECK OUT ISSUE</fullName>
+                <default>false</default>
+                <label>CHECK-IN CHECK OUT ISSUE</label>
+            </value>
+            <value>
+                <fullName>ISSUE IN CASE CREATION</fullName>
+                <default>false</default>
+                <label>ISSUE IN CASE CREATION</label>
+            </value>
+            <value>
+                <fullName>CONTACTS UPDATE</fullName>
+                <default>false</default>
+                <label>CONTACTS UPDATE</label>
+            </value>
+            <value>
+                <fullName>VISIBILITY ISSUE</fullName>
+                <default>false</default>
+                <label>VISIBILITY ISSUE</label>
+            </value>
+            <value>
+                <fullName>ASSIGNING THE RIGHTS</fullName>
+                <default>false</default>
+                <label>ASSIGNING THE RIGHTS</label>
+            </value>
+            <value>
+                <fullName>Damage</fullName>
+                <default>false</default>
+                <label>DAMAGE</label>
+            </value>
+            <value>
+                <fullName>Shortage</fullName>
+                <default>false</default>
+                <label>SHORTAGE</label>
+            </value>
+            <value>
+                <fullName>Package Lost</fullName>
+                <default>false</default>
+                <label>PACKAGE LOST</label>
+            </value>
+            <value>
+                <fullName>Pilferage</fullName>
+                <default>false</default>
+                <label>PILFERAGE</label>
+            </value>
+            <value>
+                <fullName>A+</fullName>
+                <default>false</default>
+                <label>A+</label>
+            </value>
+            <value>
+                <fullName>AA+</fullName>
+                <default>false</default>
+                <label>AA+</label>
+            </value>
+            <value>
+                <fullName>AAA+</fullName>
+                <default>false</default>
+                <label>AAA+</label>
+            </value>
+            <value>
+                <fullName>PROMOTION AND GIFTING</fullName>
+                <default>false</default>
+                <label>PROMOTION AND GIFTING</label>
+            </value>
+            <value>
+                <fullName>ZERO BILLING</fullName>
+                <default>false</default>
+                <label>ZERO BILLING</label>
+            </value>
+            <value>
+                <fullName>Consignee App</fullName>
+                <default>false</default>
+                <label>CONSIGNEE APPLICATION</label>
+            </value>
+            <value>
+                <fullName>ADMIN</fullName>
+                <default>false</default>
+                <label>ADMIN</label>
+            </value>
+            <value>
+                <fullName>MONTHLY BDM MEETING</fullName>
+                <default>false</default>
+                <label>MONTHLY BDM MEETING</label>
+            </value>
+            <value>
+                <fullName>PRICE REVISION</fullName>
+                <default>false</default>
+                <label>PRICE REVISION</label>
+            </value>
+            <value>
+                <fullName>FLFC IMPLEMENTATION</fullName>
+                <default>false</default>
+                <label>FLFC IMPLEMENTATION</label>
+            </value>
+            <value>
+                <fullName>UNDELIVERED CLEARANCE</fullName>
+                <default>false</default>
+                <label>UNDELIVERED CLEARANCE</label>
+            </value>
+            <value>
+                <fullName>CHANGE IN PAYABLE STATION OF D. D OR C.NOR NAME</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CHANGE IN PAYABLE STATION OF D. D OR C.NOR NAME</label>
+            </value>
+            <value>
+                <fullName>COLLECT D.D./CHEQUE ONLY, NOT C-FORM LETTER</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>COLLECT D.D./CHEQUE ONLY, NOT C-FORM LETTER</label>
+            </value>
+            <value>
+                <fullName>CONSIGNEE CONTACT PERSON NOT ENTERTAINING DUE TO WORK</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CONSIGNEE CONTACT PERSON NOT ENTERTAINING DUE TO WORK</label>
+            </value>
+            <value>
+                <fullName>DELIVERY AGAINST D.D. + DACC (GODOWN DELIVERY)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>DELIVERY AGAINST D.D. + DACC (GODOWN DELIVERY)</label>
+            </value>
+            <value>
+                <fullName>IN A SPECIAL CASE LETTER ISSUED FOR PART DELIVERY.</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>IN A SPECIAL CASE LETTER ISSUED FOR PART DELIVERY.</label>
+            </value>
+            <value>
+                <fullName>MANNING OUR STALL/ PRESENCE WHERE WE HAVE SPONSORED</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>MANNING OUR STALL/ PRESENCE WHERE WE HAVE SPONSORED</label>
+            </value>
+            <value>
+                <fullName>MANNING  SAFEXPRESS STALL / KIOSKS (OTHER THAN EXHIBITION).</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>MANNING  SAFEXPRESS STALL / KIOSKS (OTHER THAN EXHIBITION).</label>
+            </value>
+            <value>
+                <fullName>NON DOD/ DAC C C.MENTS CONVERT INTO DOD / D A C C</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>NON DOD/ DAC C C.MENTS CONVERT INTO DOD / D A C C</label>
+            </value>
+            <value>
+                <fullName>OTHER</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>OTHER</label>
+            </value>
+            <value>
+                <fullName>PHYSICAL CHECKING (WM/QUALITY ETC) OF BOOKED MATERIAL</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>PHYSICAL CHECKING (WM/QUALITY ETC) OF BOOKED MATERIAL</label>
+            </value>
+            <value>
+                <fullName>PLANNING/ ACTIVITY FOR SPECIAL SERVICES (EG E2M, C2H)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>PLANNING/ ACTIVITY FOR SPECIAL SERVICES (EG E2M, C2H)</label>
+            </value>
+            <value>
+                <fullName>PREPARATION/ REVIEW OF  REPORTS- BOOKING  QUALITY ( FRT., ADD, PIN, PHONE)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>PREPARATION/ REVIEW OF  REPORTS- BOOKING  QUALITY ( FRT., ADD, PIN, PHONE)</label>
+            </value>
+            <value>
+                <fullName>PREPARATION/ REVIEW OF  REPORTS- SERVICE QUALITY</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>PREPARATION/ REVIEW OF  REPORTS- SERVICE QUALITY</label>
+            </value>
+            <value>
+                <fullName>Safexp</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Safexp</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>SHORT/EXCESS</controllingFieldValue>
+            <controllingFieldValue>CUSTOMER VISIT</controllingFieldValue>
+            <controllingFieldValue>CUSTOMER WAREHOUSE VISIT</controllingFieldValue>
+            <controllingFieldValue>DOD/DACC CANCELLATION</controllingFieldValue>
+            <controllingFieldValue>NEW SALES</controllingFieldValue>
+            <controllingFieldValue>BDM - WORK FROM OFFICE</controllingFieldValue>
+            <controllingFieldValue>BILL COLLECTION</controllingFieldValue>
+            <controllingFieldValue>BILL SUBMISSION</controllingFieldValue>
+            <controllingFieldValue>BRANCH VISIT</controllingFieldValue>
+            <controllingFieldValue>CHQ DISHONOR</controllingFieldValue>
+            <controllingFieldValue>CONSIGNEE RECOMMENDATION LETTERS</controllingFieldValue>
+            <controllingFieldValue>CONSIGNEE SALES LEAD</controllingFieldValue>
+            <controllingFieldValue>CONSIGNEE VISITED</controllingFieldValue>
+            <valueName>OTHERS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SHORT/EXCESS</controllingFieldValue>
+            <valueName>DATA ENTRY MISTAKE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TOUR</controllingFieldValue>
+            <controllingFieldValue>VISIT TO BRANCH</controllingFieldValue>
+            <valueName>TRAINING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TOUR</controllingFieldValue>
+            <valueName>BUSINESS DEVELOPMENT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TOUR</controllingFieldValue>
+            <controllingFieldValue>VISIT TO INCIDENT</controllingFieldValue>
+            <valueName>ANY OTHER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TOUR</controllingFieldValue>
+            <valueName>MEETING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRAINING</controllingFieldValue>
+            <valueName>ATTEND IN HOUSE TRAINING AS PARTICIPANT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRAINING</controllingFieldValue>
+            <valueName>ATTEND EXTERNAL TRAINING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRAINING</controllingFieldValue>
+            <valueName>TRAIN IN HOUSE TEAM MEMBERS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRAINING</controllingFieldValue>
+            <valueName>ANY OTHER TRAINING / SEMINAR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VISIT TO BRANCH</controllingFieldValue>
+            <valueName>MEETING WITH STAFF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VISIT TO BRANCH</controllingFieldValue>
+            <valueName>BOOKING QUALITY ADHERENCE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VISIT TO BRANCH</controllingFieldValue>
+            <valueName>BUSINESS SUPPORT ACTIVITY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VISIT TO EVENT</controllingFieldValue>
+            <valueName>RETURNS BOOKING FROM EXHIBITION/ EVENT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VISIT TO EVENT</controllingFieldValue>
+            <valueName>BUSINESS PROSPECT GENERATION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VISIT TO GOVT. AUTHORITY.</controllingFieldValue>
+            <valueName>VISIT TO RTO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VISIT TO GOVT. AUTHORITY.</controllingFieldValue>
+            <valueName>VISIT TO COMMERCIAL TAXES DEPT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VISIT TO GOVT. AUTHORITY.</controllingFieldValue>
+            <valueName>VISIT FOR POLICE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VISIT TO GOVT. AUTHORITY.</controllingFieldValue>
+            <valueName>VISIT FOR INSURANCE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VISIT TO GOVT. AUTHORITY.</controllingFieldValue>
+            <valueName>ANY OTHER INSTITUTION VISIT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VISIT TO INCIDENT</controllingFieldValue>
+            <valueName>ACCIDENT / BREAK DOWN LOCATION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VISIT TO INCIDENT</controllingFieldValue>
+            <valueName>SURVEY OF LOSS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VISIT TO INCIDENT</controllingFieldValue>
+            <valueName>SOCIAL OCCASION COURTESY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VISIT TO INCIDENT</controllingFieldValue>
+            <valueName>CSR ACTIVITY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VISIT TO INSTITUTION</controllingFieldValue>
+            <valueName>RELATIONSHIP BUILDING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VISIT TO INSTITUTION</controllingFieldValue>
+            <valueName>EVENT/ SPONSORSHIP / CAMPAIGN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VISIT TO INSTITUTION</controllingFieldValue>
+            <valueName>CAMPUS2HOME BOOKING PROMOTION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VISIT TO INSTITUTION</controllingFieldValue>
+            <valueName>EASY2MOVE BOOKING PROMOTION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VISIT TO INSTITUTION</controllingFieldValue>
+            <valueName>ANY EVENT PARTICIPATION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VISIT TO INSTITUTION</controllingFieldValue>
+            <valueName>MANAGING PICKUP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VISIT TO INSTITUTION</controllingFieldValue>
+            <valueName>RESOLUTION OF SERVICE ISSUE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PRICING</controllingFieldValue>
+            <valueName>PRICE REVISION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PRICING</controllingFieldValue>
+            <valueName>FLFC IMPLEMENTATION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CUSTOMER VISIT</controllingFieldValue>
+            <controllingFieldValue>CONSIGNEE VISITED</controllingFieldValue>
+            <valueName>ADDRESS NOT FOUND</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CUSTOMER VISIT</controllingFieldValue>
+            <valueName>BILL SUBMISSION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CUSTOMER VISIT</controllingFieldValue>
+            <valueName>BILLS RELATED ESCALATION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CUSTOMER VISIT</controllingFieldValue>
+            <valueName>BILL COLLECTION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CUSTOMER VISIT</controllingFieldValue>
+            <valueName>BUSINESS REVIEW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CUSTOMER VISIT</controllingFieldValue>
+            <valueName>OPERATIONAL ISSUES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CUSTOMER VISIT</controllingFieldValue>
+            <valueName>CONTRACT RENEWAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CUSTOMER VISIT</controllingFieldValue>
+            <valueName>GENERAL VISIT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CUSTOMER VISIT</controllingFieldValue>
+            <valueName>OTHER VISIT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CUSTOMER VISIT - EXISTING</controllingFieldValue>
+            <valueName>BUSINESS ENHANCEMENT.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CUSTOMER VISIT - EXISTING</controllingFieldValue>
+            <valueName>REVIVAL.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CUSTOMER VISIT - EXISTING</controllingFieldValue>
+            <valueName>PICKUP SUPPORT.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CUSTOMER VISIT - EXISTING</controllingFieldValue>
+            <valueName>SERVICE RELATED</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CUSTOMER VISIT - EXISTING</controllingFieldValue>
+            <valueName>DISPUTE RESOLUTION.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CUSTOMER VISIT - EXISTING</controllingFieldValue>
+            <valueName>COURTESY VISITS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CUSTOMER VISIT - EXISTING</controllingFieldValue>
+            <valueName>PAYMENT FOLLOW UP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CUSTOMER VISIT - NEW</controllingFieldValue>
+            <valueName>COLD CALL.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CUSTOMER VISIT - NEW</controllingFieldValue>
+            <valueName>LEAD FOLLOW UP.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CUSTOMER VISIT - NEW</controllingFieldValue>
+            <valueName>FOLLOWUP CALLS.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CUSTOMER VISIT - NEW</controllingFieldValue>
+            <valueName>INBOUND BUSINESS DEVELOPMENT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CUSTOMER VISIT - NEW</controllingFieldValue>
+            <valueName>SERVICE ISSUE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DOD/DACC CANCELLATION</controllingFieldValue>
+            <valueName>DOD/DACC CANCEL LETTER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DOD/DACC CANCELLATION</controllingFieldValue>
+            <valueName>DOD AMOUNT CHANGE LETTER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DOD/DACC CANCELLATION</controllingFieldValue>
+            <valueName>D.D. TO CONVERT IN CHEQUE LETTER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DOD/DACC CANCELLATION</controllingFieldValue>
+            <valueName>DELIVERY AGAINST D.D.+ CHEQUE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DOD/DACC CANCELLATION</controllingFieldValue>
+            <valueName>COLLECT D.D./CHEQUE+ C-FORM LETTER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DOD/DACC CANCELLATION</controllingFieldValue>
+            <valueName>DOD CANCEL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DOD/DACC CANCELLATION</controllingFieldValue>
+            <valueName>DACC CANCEL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INCIDENT</controllingFieldValue>
+            <controllingFieldValue>INCIDENT AT 3PL HUB</controllingFieldValue>
+            <valueName>SHIPMENTS WALL STACKED</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INCIDENT</controllingFieldValue>
+            <controllingFieldValue>INCIDENT AT 3PL HUB</controllingFieldValue>
+            <valueName>PALLETS OUT OF PLACE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INCIDENT</controllingFieldValue>
+            <controllingFieldValue>INCIDENT AT 3PL HUB</controllingFieldValue>
+            <valueName>SHIPMENTS NEAR GATE/RAMP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INCIDENT</controllingFieldValue>
+            <controllingFieldValue>INCIDENT AT 3PL HUB</controllingFieldValue>
+            <valueName>OPEN SHUTTERS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INCIDENT</controllingFieldValue>
+            <controllingFieldValue>INCIDENT AT 3PL HUB</controllingFieldValue>
+            <valueName>STACKING NEAR STORAGE BAY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INCIDENT</controllingFieldValue>
+            <controllingFieldValue>INCIDENT AT 3PL HUB</controllingFieldValue>
+            <valueName>FIFO NOT FOLLOWED</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INCIDENT</controllingFieldValue>
+            <controllingFieldValue>INCIDENT AT 3PL HUB</controllingFieldValue>
+            <valueName>PERSONNEL NOT IN UNIFORM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INCIDENT</controllingFieldValue>
+            <controllingFieldValue>INCIDENT AT 3PL HUB</controllingFieldValue>
+            <valueName>TROLLEYS WRONLY PARKED</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INCIDENT</controllingFieldValue>
+            <controllingFieldValue>INCIDENT AT 3PL HUB</controllingFieldValue>
+            <valueName>HOS IN NORMAL BAYS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INCIDENT</controllingFieldValue>
+            <controllingFieldValue>INCIDENT AT 3PL HUB</controllingFieldValue>
+            <valueName>UNAUTHORIZED MOVEMENT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INCIDENT</controllingFieldValue>
+            <controllingFieldValue>INCIDENT AT 3PL HUB</controllingFieldValue>
+            <valueName>NO TEAM BRIEF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INCIDENT</controllingFieldValue>
+            <controllingFieldValue>INCIDENT AT 3PL HUB</controllingFieldValue>
+            <valueName>UNCLEAN FLOOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BIR</controllingFieldValue>
+            <valueName>NEW BIR TO BE INITIATED</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BIR</controllingFieldValue>
+            <valueName>CHANGE IN CUSTOMER&apos;S CONTACT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BIR</controllingFieldValue>
+            <valueName>BIR UPGRADATION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BIR</controllingFieldValue>
+            <valueName>BIR CUSTOMIZATION REQUEST</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SALESFORCE</controllingFieldValue>
+            <valueName>CUSTOMER NAME UPDATE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SALESFORCE</controllingFieldValue>
+            <valueName>DISTANCE ISSUE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SALESFORCE</controllingFieldValue>
+            <valueName>CHECK-IN CHECK OUT ISSUE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SALESFORCE</controllingFieldValue>
+            <valueName>ISSUE IN CASE CREATION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SALESFORCE</controllingFieldValue>
+            <valueName>CONTACTS UPDATE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SALESFORCE</controllingFieldValue>
+            <valueName>VISIBILITY ISSUE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SALESFORCE</controllingFieldValue>
+            <valueName>ASSIGNING THE RIGHTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IN-HOUSE BIZ/ SUPPORT  ACTIVITIES</controllingFieldValue>
+            <valueName>PROACTIVE PICKUP GENERATION EFFORTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IN-HOUSE BIZ/ SUPPORT  ACTIVITIES</controllingFieldValue>
+            <valueName>CALLS / MAIL  TO CUSTOMERS(BIZ)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IN-HOUSE BIZ/ SUPPORT  ACTIVITIES</controllingFieldValue>
+            <valueName>CALLS / MAIL  TO CUSTOMERS(SERVICE)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IN-HOUSE BIZ/ SUPPORT  ACTIVITIES</controllingFieldValue>
+            <valueName>CALLS / MAIL  TO CUSTOMERS(COURTESY)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IN-HOUSE BIZ/ SUPPORT  ACTIVITIES</controllingFieldValue>
+            <valueName>CALLS TO RBUS / STAFF FOR BIZ REVIEW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IN-HOUSE BIZ/ SUPPORT  ACTIVITIES</controllingFieldValue>
+            <valueName>PREPARATION/ REVIEW OF  REPORTS- BOOKING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Claim</controllingFieldValue>
+            <valueName>Damage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Claim</controllingFieldValue>
+            <valueName>Shortage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Claim</controllingFieldValue>
+            <valueName>Package Lost</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Claim</controllingFieldValue>
+            <valueName>Pilferage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERNAL MEETING</controllingFieldValue>
+            <valueName>MEETING WITH SENIORS FOR BUSINESS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERNAL MEETING</controllingFieldValue>
+            <valueName>MEETING WITH RBUS/ TEAM FOR BUSINESS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERNAL MEETING</controllingFieldValue>
+            <valueName>GROUP MEETING / SEMINAR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BILL COLLECTION</controllingFieldValue>
+            <valueName>REBATE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BILL COLLECTION</controllingFieldValue>
+            <valueName>LEGAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BILL SUBMISSION</controllingFieldValue>
+            <valueName>MIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BILL SUBMISSION</controllingFieldValue>
+            <valueName>SUBMIT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BILL SUBMISSION</controllingFieldValue>
+            <valueName>BILL NOT RECEIVED</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BILL SUBMISSION</controllingFieldValue>
+            <valueName>POD NOT AVAILABLE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BILL SUBMISSION</controllingFieldValue>
+            <valueName>ORIGNAL POD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BILL SUBMISSION</controllingFieldValue>
+            <valueName>POD-CD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BILL SUBMISSION</controllingFieldValue>
+            <valueName>P2M</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CONSIGNEE VISITED</controllingFieldValue>
+            <valueName>CONTACT PERSON NOT AVAILABLE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CONSIGNEE VISITED</controllingFieldValue>
+            <valueName>MARKET CLOSED</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CONSIGNEE VISITED</controllingFieldValue>
+            <valueName>FESTIVAL REASON</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CORPORATE TASK</controllingFieldValue>
+            <valueName>SALES GROWTH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CORPORATE TASK</controllingFieldValue>
+            <valueName>NEW BUSINESS OPPORTUNITY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CORPORATE TASK</controllingFieldValue>
+            <valueName>A+</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CORPORATE TASK</controllingFieldValue>
+            <valueName>AA+</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CORPORATE TASK</controllingFieldValue>
+            <valueName>AAA+</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CORPORATE TASK</controllingFieldValue>
+            <valueName>PROMOTION AND GIFTING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CORPORATE TASK</controllingFieldValue>
+            <valueName>ZERO BILLING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CORPORATE TASK</controllingFieldValue>
+            <valueName>Consignee App</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CORPORATE TASK</controllingFieldValue>
+            <valueName>ADMIN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CORPORATE TASK</controllingFieldValue>
+            <valueName>MONTHLY BDM MEETING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CORPORATE TASK</controllingFieldValue>
+            <valueName>UNDELIVERED CLEARANCE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NORMAL VISIT &amp; ICM CUSTOMER CAMPAIGN</controllingFieldValue>
+            <valueName>STRENGTHEN TO INBOUND CUSTOMER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROMOTIONAL ACTIVITY/ CAMPAIGN</controllingFieldValue>
+            <valueName>SALES CAMPAIGN INDIVIDUALLY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROMOTIONAL ACTIVITY/ CAMPAIGN</controllingFieldValue>
+            <valueName>ROAD SHOW, IN GROUP CAMPAIGN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROMOTIONAL ACTIVITY/ CAMPAIGN</controllingFieldValue>
+            <valueName>ANY OTHER PROMOTIONAL ACTIVITY</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

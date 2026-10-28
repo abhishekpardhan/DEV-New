@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>JigsawContactId__c</fullName>
+    <label>Jigsaw Contact ID</label>
+    <length>60</length>
+    <mktDataModelFieldAttributes>
+        <definitionCreationType>Transform</definitionCreationType>
+        <isDynamicLookup>false</isDynamicLookup>
+        <labelOverride>Jigsaw Contact ID</labelOverride>
+        <masterLabel>Jigsaw Contact ID</masterLabel>
+        <refAttrDeveloperName>JigsawContactId_Transform</refAttrDeveloperName>
+        <usageTag>None</usageTag>
+    </mktDataModelFieldAttributes>
+    <required>false</required>
+    <type>Text</type>
+</CustomField>

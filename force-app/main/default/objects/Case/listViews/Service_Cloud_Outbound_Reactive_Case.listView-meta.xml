@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Cloud_Outbound_Reactive_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Service Cloud Outbound - Reactive</label>
+    <queue>Service_Cloud_Outbound_Reactive</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

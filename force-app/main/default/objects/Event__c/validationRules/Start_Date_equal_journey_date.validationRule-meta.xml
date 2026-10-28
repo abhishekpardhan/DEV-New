@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Start_Date_equal_journey_date</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(!is_Automated__c ,DATEVALUE(Start__c) !=  Journey__r.Journey_Date__c)</errorConditionFormula>
+    <errorDisplayField>Start__c</errorDisplayField>
+    <errorMessage>Start Date should be same as Journey Date.</errorMessage>
+</ValidationRule>

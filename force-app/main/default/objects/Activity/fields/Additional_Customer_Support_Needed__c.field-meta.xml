@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Additional_Customer_Support_Needed__c</fullName>
+    <label>Additional Customer Support Needed</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Special Service</fullName>
+                <default>false</default>
+                <label>Special Service</label>
+            </value>
+            <value>
+                <fullName>Dedicated Support</fullName>
+                <default>false</default>
+                <label>Dedicated Support</label>
+            </value>
+            <value>
+                <fullName>Technology &amp; Integration</fullName>
+                <default>false</default>
+                <label>Technology &amp; Integration</label>
+            </value>
+            <value>
+                <fullName>No Additional Support</fullName>
+                <default>false</default>
+                <label>No Additional Support</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

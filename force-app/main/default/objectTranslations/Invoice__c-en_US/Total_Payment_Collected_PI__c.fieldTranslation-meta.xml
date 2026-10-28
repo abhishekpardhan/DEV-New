@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Calculated from apply amount minus unapplied amount. --></help>
+    <label><!-- Total Payment Collected(PI) --></label>
+    <name>Total_Payment_Collected_PI__c</name>
+</CustomFieldTranslation>

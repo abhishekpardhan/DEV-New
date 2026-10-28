@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type --></label>
+    <name>Type__c</name>
+    <picklistValues>
+        <masterLabel>3PL</masterLabel>
+        <translation><!-- 3PL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Air Sales</masterLabel>
+        <translation><!-- Air Sales --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CSC</masterLabel>
+        <translation><!-- CSC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Sales</masterLabel>
+        <translation><!-- New Sales --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Weight Volume</masterLabel>
+        <translation><!-- Weight Volume --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yield</masterLabel>
+        <translation><!-- Yield --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,42 @@
+<template>
+    <template lwc:if={hasLocation}>
+        <article class="card">
+            <header class="header">
+                <img class="logo" src={logoUrl} alt="Safexpress" />
+                <p class="message">
+                    <span class="tick" aria-hidden="true"></span>
+                    <span>This is our serviceable location</span>
+                </p>
+            </header>
+
+            <div class="details">
+                <template lwc:if={city}>
+                    <div class="tile">
+                        <span class="tile-label">🏙 City</span>
+                        <span class="tile-value">{city}</span>
+                    </div>
+                </template>
+                <template lwc:if={district}>
+                    <div class="tile">
+                        <span class="tile-label">🗺 District</span>
+                        <span class="tile-value">{district}</span>
+                    </div>
+                </template>
+                <template lwc:if={state}>
+                    <div class="tile">
+                        <span class="tile-label">📍 State</span>
+                        <span class="tile-value">{state}</span>
+                    </div>
+                </template>
+                <template lwc:if={pincode}>
+                    <div class="tile">
+                        <span class="tile-label">📮 Pincode</span>
+                        <span class="tile-value">{pincode}</span>
+                    </div>
+                </template>
+            </div>
+
+            <footer class="footer">🙏 Thank you for choosing Safexpress.</footer>
+        </article>
+    </template>
+</template>

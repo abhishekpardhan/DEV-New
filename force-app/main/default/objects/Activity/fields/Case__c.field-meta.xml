@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Case</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>(1 OR 2) AND 3 AND 4 AND 5 AND 6</booleanFilter>
+        <filterItems>
+            <field>$Source.Payment_Remaining__c</field>
+            <operation>equals</operation>
+            <value>Non-Recoverable</value>
+        </filterItems>
+        <filterItems>
+            <field>$Source.Payment_Remaining__c</field>
+            <operation>equals</operation>
+            <value>Partly Recoverable</value>
+        </filterItems>
+        <filterItems>
+            <field>$Source.WhatId</field>
+            <operation>equals</operation>
+            <valueField>Case__c.Invoice__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Case__c.RecordType.DeveloperName</field>
+            <operation>equals</operation>
+            <value>Credit_Debit_Note</value>
+        </filterItems>
+        <filterItems>
+            <field>Case__c.Case_Typee__c</field>
+            <operation>equals</operation>
+            <value>Credit Note</value>
+        </filterItems>
+        <filterItems>
+            <field>Case__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Completed</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Case__c</referenceTo>
+    <relationshipLabel>Activities</relationshipLabel>
+    <relationshipName>Activities</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Lookup</type>
+</CustomField>

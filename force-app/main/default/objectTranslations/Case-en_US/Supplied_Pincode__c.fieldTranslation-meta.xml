@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- 6-digit Pincode of the customer&apos;s location. Needed to create a lead. --></help>
+    <label><!-- Supplied Pincode --></label>
+    <name>Supplied_Pincode__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason__c</fullName>
+    <label>Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Status__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Poor response during pilot test</fullName>
+                <default>false</default>
+                <label>Poor response during pilot test</label>
+            </value>
+            <value>
+                <fullName>Season/ Event not finalized</fullName>
+                <default>false</default>
+                <label>Season/ Event not finalized</label>
+            </value>
+            <value>
+                <fullName>Season/ event over</fullName>
+                <default>false</default>
+                <label>Season/ event over</label>
+            </value>
+            <value>
+                <fullName>On advise</fullName>
+                <default>false</default>
+                <label>On advise</label>
+            </value>
+            <value>
+                <fullName>Venue related issue</fullName>
+                <default>false</default>
+                <label>Venue related issue</label>
+            </value>
+            <value>
+                <fullName>Less exhibitors</fullName>
+                <default>false</default>
+                <label>Less exhibitors</label>
+            </value>
+            <value>
+                <fullName>Internal issues</fullName>
+                <default>false</default>
+                <label>Internal issues</label>
+            </value>
+            <value>
+                <fullName>Very high cost of space</fullName>
+                <default>false</default>
+                <label>Very high cost of space</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+            <value>
+                <fullName>safexpress</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>safexpress</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Poor response during pilot test</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Season/ Event not finalized</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Season/ event over</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>On advise</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Venue related issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Less exhibitors</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Internal issues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Very high cost of space</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Others</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

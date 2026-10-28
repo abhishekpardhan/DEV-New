@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataStreamDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <areHeadersIncludedInFile>false</areHeadersIncludedInFile>
+    <bulkIngest>false</bulkIngest>
+    <creationType>Custom</creationType>
+    <dataConnector>SalesforceDotCom_SafeExUAT</dataConnector>
+    <dataConnectorType>SalesforceDotCom</dataConnectorType>
+    <dataExtractMethods>FULL_REFRESH</dataExtractMethods>
+    <dataPlatformDataSetItemName>SFDC</dataPlatformDataSetItemName>
+    <dataSource>Salesforce_SafeExUAT</dataSource>
+    <isLimitedToNewFiles>false</isLimitedToNewFiles>
+    <isMissingFileFailure>false</isMissingFileFailure>
+    <masterLabel>CurrencyType_SafeExUAT</masterLabel>
+    <mktDataLakeObject>CurrencyType_SafeExUAT__dll</mktDataLakeObject>
+    <mktDataTranObject>CurrencyType_SafeExUAT</mktDataTranObject>
+</DataStreamDefinition>

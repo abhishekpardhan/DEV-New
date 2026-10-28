@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Purpose__c</fullName>
+    <label>Event Purpose</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Administrative Work</fullName>
+                <default>false</default>
+                <label>Administrative Work</label>
+            </value>
+            <value>
+                <fullName>Associate Meeting</fullName>
+                <default>false</default>
+                <label>Associate Meeting</label>
+            </value>
+            <value>
+                <fullName>Branch Visit</fullName>
+                <default>false</default>
+                <label>Branch Visit</label>
+            </value>
+            <value>
+                <fullName>Collection</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Collection</label>
+            </value>
+            <value>
+                <fullName>Consultation</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Consultation</label>
+            </value>
+            <value>
+                <fullName>Existing Customer Meeting</fullName>
+                <default>false</default>
+                <label>Existing Customer Meeting</label>
+            </value>
+            <value>
+                <fullName>Inbound Customer Visit</fullName>
+                <default>false</default>
+                <label>Inbound Customer Meeting</label>
+            </value>
+            <value>
+                <fullName>Incident Spot Visit</fullName>
+                <default>false</default>
+                <label>Incident Spot Visit</label>
+            </value>
+            <value>
+                <fullName>Internal Review</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Internal Review</label>
+            </value>
+            <value>
+                <fullName>Internal Team Meeting</fullName>
+                <default>false</default>
+                <label>Internal Team Meeting</label>
+            </value>
+            <value>
+                <fullName>Marketing/Promotion</fullName>
+                <default>false</default>
+                <label>Marketing/Promotion</label>
+            </value>
+            <value>
+                <fullName>New Customer Meeting</fullName>
+                <default>false</default>
+                <label>New Customer Meeting</label>
+            </value>
+            <value>
+                <fullName>On-Boarding</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>On-Boarding</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Others</label>
+            </value>
+            <value>
+                <fullName>Promotional Activity</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Promotional Activity</label>
+            </value>
+            <value>
+                <fullName>Retail Customer Meeting</fullName>
+                <default>false</default>
+                <label>Retail Customer Meeting</label>
+            </value>
+            <value>
+                <fullName>Return to Location</fullName>
+                <default>false</default>
+                <label>Return to Location</label>
+            </value>
+            <value>
+                <fullName>Service &amp; Business Review</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Service &amp; Business Review</label>
+            </value>
+            <value>
+                <fullName>Submission</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Submission</label>
+            </value>
+            <value>
+                <fullName>Team development</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Team development</label>
+            </value>
+            <value>
+                <fullName>Weight &amp; Volume</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Weight &amp; Volume</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

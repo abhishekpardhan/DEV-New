@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Start_Date_btw_campaign</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(!is_Automated__c ,OR(DATEVALUE(Start__c) &lt; Campaign__r.Start_Date__c ,DATEVALUE(Start__c) &gt; Campaign__r.End_Date__c))</errorConditionFormula>
+    <errorDisplayField>Start__c</errorDisplayField>
+    <errorMessage>Start Date should be between Campaign&apos;s Start date and End Date.</errorMessage>
+</ValidationRule>

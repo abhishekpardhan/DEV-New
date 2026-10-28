@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>PS_Onboarding_Management</members>
+        <name>PermissionSet</name>
+    </types>
+    <types>
+        <members>PSG_AreaManager</members>
+        <members>PSG_Campaign_Team</members>
+        <members>PSG_CCD_Team</members>
+        <members>PSG_Claim_Team</members>
+        <members>PSG_Contact_ReadOnly</members>
+        <members>PSG_Contract_ReadOnly</members>
+        <members>PSG_Contract_ReadWrite</members>
+        <members>PSG_Conveyance_Team</members>
+        <members>PSG_CQ_Credit</members>
+        <members>PSG_CQ_Retail</members>
+        <members>PSG_Journey_Auditor</members>
+        <members>PSG_Onboarding_Team</members>
+        <members>PSG_Portfolio_Management</members>
+        <members>PSG_RegionalManager</members>
+        <members>PSG_Revenue_Team</members>
+        <members>PSG_Target_Team</members>
+        <members>PSG_TerritoryManager</members>
+        <name>PermissionSetGroup</name>
+    </types>
+    <version>67.0</version>
+</Package>

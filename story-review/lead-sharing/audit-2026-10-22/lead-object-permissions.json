@@ -1,0 +1,1654 @@
+﻿{
+  "status": 0,
+  "result": {
+    "records": [
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/110C5000000AgPAIA0"
+        },
+        "ParentId": "0PLC500000001GzOAI",
+        "Parent": null,
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/110OX000007uM8bYAE"
+        },
+        "ParentId": "0PLOX0000000naE4AQ",
+        "Parent": null,
+        "PermissionsRead": true,
+        "PermissionsCreate": false,
+        "PermissionsEdit": false,
+        "PermissionsDelete": false,
+        "PermissionsViewAllRecords": false,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/110OX00000Iby4YYAR"
+        },
+        "ParentId": "0PLOX0000002Q3H4AU",
+        "Parent": null,
+        "PermissionsRead": true,
+        "PermissionsCreate": false,
+        "PermissionsEdit": true,
+        "PermissionsDelete": false,
+        "PermissionsViewAllRecords": false,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/110OX00000Iby4eYAB"
+        },
+        "ParentId": "0PLOX0000002Q3I4AU",
+        "Parent": null,
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": false,
+        "PermissionsViewAllRecords": false,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/110OX00000Iby9PYAR"
+        },
+        "ParentId": "0PLOX0000002Q3e4AE",
+        "Parent": null,
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": false,
+        "PermissionsViewAllRecords": false,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/110OX00000Iby9cYAB"
+        },
+        "ParentId": "0PLOX0000002Q3h4AE",
+        "Parent": null,
+        "PermissionsRead": true,
+        "PermissionsCreate": false,
+        "PermissionsEdit": true,
+        "PermissionsDelete": false,
+        "PermissionsViewAllRecords": false,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/110OX00000JPE5lYAH"
+        },
+        "ParentId": "0PLOX0000002ehM4AQ",
+        "Parent": null,
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": false,
+        "PermissionsViewAllRecords": false,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/110OX00000JPE6JYAX"
+        },
+        "ParentId": "0PLOX0000002ehO4AQ",
+        "Parent": null,
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": false,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/1107F000011wBbrQAE"
+        },
+        "ParentId": "0PS7F000001qUhPWAU",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PS7F000001qUhPWAU"
+          },
+          "Name": "X00ex00000018ozT_128_09_43_34_1",
+          "Label": "00ex00000018ozT_128_09_43_34_1",
+          "IsOwnedByProfile": true
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/1107F000011wBWrQAM"
+        },
+        "ParentId": "0PS7F000001qUhQWAU",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PS7F000001qUhQWAU"
+          },
+          "Name": "X00ex00000018ozW_128_09_43_34_4",
+          "Label": "00ex00000018ozW_128_09_43_34_4",
+          "IsOwnedByProfile": true
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": false,
+        "PermissionsEdit": false,
+        "PermissionsDelete": false,
+        "PermissionsViewAllRecords": false,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/1107F000011wBXVQA2"
+        },
+        "ParentId": "0PS7F000001qUhRWAU",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PS7F000001qUhRWAU"
+          },
+          "Name": "X00ex00000018ozZ_128_09_43_34_7",
+          "Label": "00ex00000018ozZ_128_09_43_34_7",
+          "IsOwnedByProfile": true
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": false,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/1107F000011wBWeQAM"
+        },
+        "ParentId": "0PS7F000001qUhSWAU",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PS7F000001qUhSWAU"
+          },
+          "Name": "X00ex00000018ozV_128_09_43_34_3",
+          "Label": "00ex00000018ozV_128_09_43_34_3",
+          "IsOwnedByProfile": true
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": false,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/1107F000011wBX5QAM"
+        },
+        "ParentId": "0PS7F000001qUhTWAU",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PS7F000001qUhTWAU"
+          },
+          "Name": "X00ex00000018ozX_128_09_43_34_5",
+          "Label": "00ex00000018ozX_128_09_43_34_5",
+          "IsOwnedByProfile": true
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": false,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/1107F000011wBXIQA2"
+        },
+        "ParentId": "0PS7F000001qUhUWAU",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PS7F000001qUhUWAU"
+          },
+          "Name": "X00ex00000018ozY_128_09_43_34_6",
+          "Label": "00ex00000018ozY_128_09_43_34_6",
+          "IsOwnedByProfile": true
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": false,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/110OX000000rg6QYAQ"
+        },
+        "ParentId": "0PS7F000002yKoMWAU",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PS7F000002yKoMWAU"
+          },
+          "Name": "X00e7F000001lnXLQAY",
+          "Label": "00e7F000001lnXLQAY",
+          "IsOwnedByProfile": true
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/1107F00002MsRN4QAN"
+        },
+        "ParentId": "0PS7F000003d7IxWAI",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PS7F000003d7IxWAI"
+          },
+          "Name": "X00e7F000000JKTGQA4",
+          "Label": "00e7F000000JKTGQA4",
+          "IsOwnedByProfile": true
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": false,
+        "PermissionsEdit": false,
+        "PermissionsDelete": false,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/1107F00002NX4KuQAL"
+        },
+        "ParentId": "0PS7F000004DUgPWAW",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PS7F000004DUgPWAW"
+          },
+          "Name": "X00e7F0000033sGrQAI",
+          "Label": "00e7F0000033sGrQAI",
+          "IsOwnedByProfile": true
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": false,
+        "PermissionsEdit": false,
+        "PermissionsDelete": false,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/1107F00002NX4PkQAL"
+        },
+        "ParentId": "0PS7F000004DUgQWAW",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PS7F000004DUgQWAW"
+          },
+          "Name": "X00e7F0000033sGsQAI",
+          "Label": "00e7F0000033sGsQAI",
+          "IsOwnedByProfile": true
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": false,
+        "PermissionsEdit": false,
+        "PermissionsDelete": false,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/110C100000cfEaeIAE"
+        },
+        "ParentId": "0PSC1000001XZWHOA4",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSC1000001XZWHOA4"
+          },
+          "Name": "sfdc_activityplatform",
+          "Label": "sfdc.activityplatform",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": false,
+        "PermissionsEdit": false,
+        "PermissionsDelete": false,
+        "PermissionsViewAllRecords": false,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/110C100000ch5szIAA"
+        },
+        "ParentId": "0PSC1000001XfwfOAC",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSC1000001XfwfOAC"
+          },
+          "Name": "PS_Lead_Management",
+          "Label": "PS Lead Management",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": false,
+        "PermissionsViewAllRecords": false,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/110C100000ci7t4IAA"
+        },
+        "ParentId": "0PSC1000001XiYOOA0",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSC1000001XiYOOA0"
+          },
+          "Name": "PSG_AreaManager",
+          "Label": "PSG_AreaManager",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": false,
+        "PermissionsViewAllRecords": false,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/110C100000ciAHRIA2"
+        },
+        "ParentId": "0PSC1000001XiYbOAK",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSC1000001XiYbOAK"
+          },
+          "Name": "PSG_RegionalManager",
+          "Label": "PSG_RegionalManager",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": false,
+        "PermissionsViewAllRecords": false,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/110C100000ciB6zIAE"
+        },
+        "ParentId": "0PSC1000001XiYeOAK",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSC1000001XiYeOAK"
+          },
+          "Name": "PSG_TerritoryManager",
+          "Label": "PSG_TerritoryManager",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": false,
+        "PermissionsViewAllRecords": false,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/110C50000002MGWIA2"
+        },
+        "ParentId": "0PSC5000000012sOAA",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSC5000000012sOAA"
+          },
+          "Name": "X00eC5000000LqiUIAS",
+          "Label": "00eC5000000LqiUIAS",
+          "IsOwnedByProfile": true
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/110C50000002xj8IAA"
+        },
+        "ParentId": "0PSC500000001kGOAQ",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSC500000001kGOAQ"
+          },
+          "Name": "sfdc_chatbot_service_permset",
+          "Label": "Chatbot",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": false,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/110C50000002xbzIAA"
+        },
+        "ParentId": "0PSC500000001lEOAQ",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSC500000001lEOAQ"
+          },
+          "Name": "X00eC5000000Lr6bIAC",
+          "Label": "00eC5000000Lr6bIAC",
+          "IsOwnedByProfile": true
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/110C50000002xeiIAA"
+        },
+        "ParentId": "0PSC500000001lFOAQ",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSC500000001lFOAQ"
+          },
+          "Name": "X00eC5000000Lr6cIAC",
+          "Label": "00eC5000000Lr6cIAC",
+          "IsOwnedByProfile": true
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": false,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/110C50000002xhRIAQ"
+        },
+        "ParentId": "0PSC500000001lGOAQ",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSC500000001lGOAQ"
+          },
+          "Name": "X00eC5000000Lr6dIAC",
+          "Label": "00eC5000000Lr6dIAC",
+          "IsOwnedByProfile": true
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": false,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/110C50000005a4bIAA"
+        },
+        "ParentId": "0PSC500000004T9OAI",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSC500000004T9OAI"
+          },
+          "Name": "X00eC5000000Ls8fIAC",
+          "Label": "00eC5000000Ls8fIAC",
+          "IsOwnedByProfile": true
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": false,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/110OX000004dgPOYAY"
+        },
+        "ParentId": "0PSOX0000001RkY4AU",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSOX0000001RkY4AU"
+          },
+          "Name": "Call_Centre_Head1",
+          "Label": "Service Cloud - Call Centre Head.",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": false,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/110OX000004dgRAYAY"
+        },
+        "ParentId": "0PSOX0000001Rka4AE",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSOX0000001Rka4AE"
+          },
+          "Name": "Service_Cloud_Executive",
+          "Label": "Service Cloud - Executive",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": false,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/110OX00000C2BlZYAV"
+        },
+        "ParentId": "0PSOX0000003gKU4AY",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSOX0000003gKU4AY"
+          },
+          "Name": "sfdc_slack",
+          "Label": "Slack Integration User",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": false,
+        "PermissionsEdit": false,
+        "PermissionsDelete": false,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/110OX00000IbyFpYAJ"
+        },
+        "ParentId": "0PSOX0000007pAf4AI",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSOX0000007pAf4AI"
+          },
+          "Name": "sfdc_a360",
+          "Label": "Customer 360 Data Platform Integration",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": false,
+        "PermissionsEdit": true,
+        "PermissionsDelete": false,
+        "PermissionsViewAllRecords": false,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/110OX00000IbyacYAB"
+        },
+        "ParentId": "0PSOX0000007pFV4AY",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSOX0000007pFV4AY"
+          },
+          "Name": "sfdc_a360_sfcrm_data_extract",
+          "Label": "Data Cloud Salesforce Connector",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": false,
+        "PermissionsEdit": false,
+        "PermissionsDelete": false,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/1107F000012JX9QQAW"
+        },
+        "ParentId": "1007F000000TiiBQAS",
+        "Parent": null,
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": false,
+        "PermissionsDelete": false,
+        "PermissionsViewAllRecords": false,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/1107F00002FS3eFQAT"
+        },
+        "ParentId": "1007F000001INPgQAO",
+        "Parent": null,
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/1107F00002NX4HuQAL"
+        },
+        "ParentId": "1007F000001IX5rQAG",
+        "Parent": null,
+        "PermissionsRead": true,
+        "PermissionsCreate": false,
+        "PermissionsEdit": false,
+        "PermissionsDelete": false,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/1107F000011wBXeQAM"
+        },
+        "ParentId": "1007F000001SEPyQAO",
+        "Parent": null,
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/1107F000011wBclQAE"
+        },
+        "ParentId": "1007F000001SEQ0QAO",
+        "Parent": null,
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/110C50000002M2CIAU"
+        },
+        "ParentId": "100C500000001EfIAI",
+        "Parent": null,
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/110C50000005Zu7IAE"
+        },
+        "ParentId": "100C500000001KvIAI",
+        "Parent": null,
+        "PermissionsRead": true,
+        "PermissionsCreate": false,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/110OX00000IbwxoYAB"
+        },
+        "ParentId": "100OX0000138aCiYAI",
+        "Parent": null,
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/110OX00000IbxDEYAZ"
+        },
+        "ParentId": "100OX0000138aCjYAI",
+        "Parent": null,
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/000000007Kzh00QAQQ"
+        },
+        "ParentId": "0PSOX0000007Kzh4AE",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSOX0000007Kzh4AE"
+          },
+          "Name": "SuperUser",
+          "Label": "SuperUser",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/00000001XZT300QAYR"
+        },
+        "ParentId": "0PSC1000001XZT3OAO",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSC1000001XZT3OAO"
+          },
+          "Name": "ActivityMetricsC2CPermSet",
+          "Label": "Activity Metrics C2C Integration User",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": false,
+        "PermissionsEdit": false,
+        "PermissionsDelete": false,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/0000000038PF00QAAT"
+        },
+        "ParentId": "0PSOX00000038PF4AY",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSOX00000038PF4AY"
+          },
+          "Name": "ActorCASCPermSet",
+          "Label": "ActorCASCPermSet",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/000000004HS600QAQR"
+        },
+        "ParentId": "0PSOX0000004HS64AM",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSOX0000004HS64AM"
+          },
+          "Name": "AncMarketingIntegrationUser",
+          "Label": "Agentic Near Core Marketing",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": false,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/000000004HS700QAQR"
+        },
+        "ParentId": "0PSOX0000004HS74AM",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSOX0000004HS74AM"
+          },
+          "Name": "AncPersonalizationIntegrationUser",
+          "Label": "Agentic Near Core Personalization",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": false,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/000000007pCH00QAAT"
+        },
+        "ParentId": "0PSOX0000007pCH4AY",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSOX0000007pCH4AY"
+          },
+          "Name": "C2CAiWorkbenchPlatformMetabolismServicePermSet",
+          "Label": "C2CAiWorkbenchPlatformMetabolismServicePermSet",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/0000000038PG00QAAT"
+        },
+        "ParentId": "0PSOX00000038PG4AY",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSOX00000038PG4AY"
+          },
+          "Name": "C2CCapstonePermSet",
+          "Label": "C2CCapstonePermSet",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/000000004HSA00QAQT"
+        },
+        "ParentId": "0PSOX0000004HSA4A2",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSOX0000004HSA4A2"
+          },
+          "Name": "C2CE360EmailPermSet",
+          "Label": "C2CE360EmailPermSet",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/00000004DflZ00QAIS"
+        },
+        "ParentId": "0PS7F000004DflZWAS",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PS7F000004DflZWAS"
+          },
+          "Name": "C2CHeadlessCMSAccessPermSet",
+          "Label": "Salesforce CMS Integration Admin",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/0000000050sD00QAAS"
+        },
+        "ParentId": "0PSOX00000050sD4AQ",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSOX00000050sD4AQ"
+          },
+          "Name": "C2CMcpServicePermSet",
+          "Label": "C2CMcpServicePermSet",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/000000002gj700QAAQ"
+        },
+        "ParentId": "0PSOX0000002gj74AA",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSOX0000002gj74AA"
+          },
+          "Name": "ConnectivityServiceCASCPermSet",
+          "Label": "ConnectivityServiceCASCPermSet",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/000000008eMr00QAAR"
+        },
+        "ParentId": "0PSOX0000008eMr4AI",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSOX0000008eMr4AI"
+          },
+          "Name": "CustomerEngagementAgent",
+          "Label": "Customer Engagement Agent",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": false,
+        "PermissionsViewAllRecords": false,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/000000000y2b00QAAQ"
+        },
+        "ParentId": "0PSOX0000000y2b4AA",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSOX0000000y2b4AA"
+          },
+          "Name": "D360HomeOrgPermSet",
+          "Label": "Data Cloud Home Org Integration User",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/000000007p9K00QAAS"
+        },
+        "ParentId": "0PSOX0000007p9K4AQ",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSOX0000007p9K4AQ"
+          },
+          "Name": "DCToDCSharingSetupC2CPermSet",
+          "Label": "DCToDCSharingSetupC2CPermSet",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/000000000dqz00QAAQ"
+        },
+        "ParentId": "0PSOX0000000dqz4AA",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSOX0000000dqz4AA"
+          },
+          "Name": "DeliveryEstimationServicePermSet",
+          "Label": "DeliveryEstimationServicePermSet",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/000000002XCo00QAQR"
+        },
+        "ParentId": "0PSOX0000002XCo4AM",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSOX0000002XCo4AM"
+          },
+          "Name": "DesignRegistrationReadOnlyPsl",
+          "Label": "Design Registration Read Only Access",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": false,
+        "PermissionsEdit": false,
+        "PermissionsDelete": false,
+        "PermissionsViewAllRecords": false,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/000000007p9M00QAAS"
+        },
+        "ParentId": "0PSOX0000007p9M4AQ",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSOX0000007p9M4AQ"
+          },
+          "Name": "E360MessagingC2CPermSet",
+          "Label": "E360 Messaging Integration User",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/000000007p9N00QAAS"
+        },
+        "ParentId": "0PSOX0000007p9N4AQ",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSOX0000007p9N4AQ"
+          },
+          "Name": "E360UEC2CPermSet",
+          "Label": "E360UEC2CPermSet",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/00000001XZT400QAYR"
+        },
+        "ParentId": "0PSC1000001XZT4OAO",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSC1000001XZT4OAO"
+          },
+          "Name": "EinsteinActivityCaptureSyncC2CPermSet",
+          "Label": "Einstein Activity Capture Sync C2C Integration User",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": false,
+        "PermissionsEdit": false,
+        "PermissionsDelete": false,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/000000008eMv00QAAR"
+        },
+        "ParentId": "0PSOX0000008eMv4AI",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSOX0000008eMv4AI"
+          },
+          "Name": "HSSMPermSet",
+          "Label": "HSSMPermSet",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/000000000Cbr00QAQQ"
+        },
+        "ParentId": "0PSC50000000CbrOAE",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSC50000000CbrOAE"
+          },
+          "Name": "HighScaleFlowC2CPermSet",
+          "Label": "C360 High Scale Flow Integration User",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/0000000038PH00QAAT"
+        },
+        "ParentId": "0PSOX00000038PH4AY",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSOX00000038PH4AY"
+          },
+          "Name": "HyperionCASCPermSet",
+          "Label": "HyperionCASCPermSet",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/000000008eMy00QAAR"
+        },
+        "ParentId": "0PSOX0000008eMy4AI",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSOX0000008eMy4AI"
+          },
+          "Name": "MarketingCloudAdmin",
+          "Label": "Marketing Cloud Admin",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": false,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/000000008eMz00QAAR"
+        },
+        "ParentId": "0PSOX0000008eMz4AI",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSOX0000008eMz4AI"
+          },
+          "Name": "MarketingCloudManager",
+          "Label": "Marketing Cloud Manager",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": false,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/000000002gj800QAAQ"
+        },
+        "ParentId": "0PSOX0000002gj84AA",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSOX0000002gj84AA"
+          },
+          "Name": "MarketingCloudPublishingC2CPermSet",
+          "Label": "MarketingCloudPublishingC2CPermSet",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/000000001AN700QAQR"
+        },
+        "ParentId": "0PSOX0000001AN74AM",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSOX0000001AN74AM"
+          },
+          "Name": "MarketingCloudReportingC2CPermSet",
+          "Label": "Marketing Cloud Reporting C2C Perm",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/000000007pCI00QAAT"
+        },
+        "ParentId": "0PSOX0000007pCI4AY",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSOX0000007pCI4AY"
+          },
+          "Name": "MuleSoftEinsteinPermSet",
+          "Label": "MuleSoftEinsteinPermSet",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/000000001AN800QAQR"
+        },
+        "ParentId": "0PSOX0000001AN84AM",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSOX0000001AN84AM"
+          },
+          "Name": "MuleSoftPublishInvocableActionsC2CPermSet",
+          "Label": "MuleSoftPublishInvocableActionsC2CPermSet",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/0000000038PI00QAAT"
+        },
+        "ParentId": "0PSOX00000038PI4AY",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSOX00000038PI4AY"
+          },
+          "Name": "MuleSoftSeamlessLoginC2CPermSet",
+          "Label": "MuleSoftSeamlessLoginC2CPermSet",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/000000000dr000QAAQ"
+        },
+        "ParentId": "0PSOX0000000dr04AA",
+        "Parent": null,
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/000000002gj900QAAQ"
+        },
+        "ParentId": "0PSOX0000002gj94AA",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSOX0000002gj94AA"
+          },
+          "Name": "PromptTemplatePermSet",
+          "Label": "PromptTemplatePermSet",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/0000000026uA00QAAS"
+        },
+        "ParentId": "0PSOX00000026uA4AQ",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSOX00000026uA4AQ"
+          },
+          "Name": "RPAC2CPermSet",
+          "Label": "RPAC2CPermSet",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/000000003WmX00QAQS"
+        },
+        "ParentId": "0PSOX0000003WmX4AU",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSOX0000003WmX4AU"
+          },
+          "Name": "RegrelloC2CPermSet",
+          "Label": "RegrelloC2CPermSet",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/000000000AQq00QAQR"
+        },
+        "ParentId": "0PSC50000000AQqOAM",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSC50000000AQqOAM"
+          },
+          "Name": "SeasIndexingPermSet",
+          "Label": "SeaS Indexing C2C User Perm",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/00000001XZT600QAYR"
+        },
+        "ParentId": "0PSC1000001XZT6OAO",
+        "Parent": null,
+        "PermissionsRead": true,
+        "PermissionsCreate": false,
+        "PermissionsEdit": false,
+        "PermissionsDelete": false,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/00000001XZT700QAYR"
+        },
+        "ParentId": "0PSC1000001XZT7OAO",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSC1000001XZT7OAO"
+          },
+          "Name": "UseInboundLeadGen",
+          "Label": "Inbound Lead Generation Agent",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": false,
+        "PermissionsViewAllRecords": false,
+        "PermissionsModifyAllRecords": false
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/000000002gjA00QAAS"
+        },
+        "ParentId": "0PSOX0000002gjA4AQ",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSOX0000002gjA4AQ"
+          },
+          "Name": "YourAccountFeatureDataPermSet",
+          "Label": "YourAccountFeatureDataPermSet",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/000000001OjR00QAQS"
+        },
+        "ParentId": "0PSOX0000001OjR4AU",
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSOX0000001OjR4AU"
+          },
+          "Name": "YourAccountNotifierPermSet",
+          "Label": "YourAccountNotifierPermSet",
+          "IsOwnedByProfile": false
+        },
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      },
+      {
+        "attributes": {
+          "type": "ObjectPermissions",
+          "url": "/services/data/v68.0/sobjects/ObjectPermissions/000000001Iqv00QAQQ"
+        },
+        "ParentId": "0PSOX0000001Iqv4AE",
+        "Parent": null,
+        "PermissionsRead": true,
+        "PermissionsCreate": true,
+        "PermissionsEdit": true,
+        "PermissionsDelete": true,
+        "PermissionsViewAllRecords": true,
+        "PermissionsModifyAllRecords": true
+      }
+    ],
+    "totalSize": 82,
+    "done": true
+  },
+  "warnings": []
+}

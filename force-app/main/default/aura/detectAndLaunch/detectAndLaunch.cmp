@@ -1,0 +1,89 @@
+<aura:component implements="lightning:isUrlAddressable,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" controller="detectAndLaunchController"> <!--inherit recordId attribute-->
+    <lightning:workspaceAPI aura:id="workspace" />
+    
+    <aura:attribute name="record" type="Object" description="The record object to be displayed"/>
+    <aura:attribute name="oppRecord" type="Object"/>
+    <aura:attribute name="simpleRecord" type="Object" description="A simplified view record object to be displayed"/>
+    
+    <aura:attribute name="mode" type="String" default="New"/>
+    <aura:attribute name="recordError" type="String" description="An error message bound to force:recordData"/>
+    
+    <aura:attribute name="flowName" type="String" default="Add_SFX_Rate_Cards_To_Be_Renewed1" description="Launch this flow when the record changes"/>    
+    <aura:attribute name="isModalOpen" type="boolean" default="false"/>
+    <aura:attribute name="showSpinner" type="boolean" default="false"/>
+    <aura:attribute name="showSFX" type="boolean" default="false"/>
+    <aura:attribute name="showRateCard" type="boolean" default="false"/>
+    <aura:attribute name="isAllCheckSfx" type="boolean" default="false"/>
+    <aura:attribute name="isAllCheckRateCard" type="boolean" default="false"/>
+    <aura:attribute name="showErrorMessage" type="boolean" default="false"/>
+    
+    <aura:attribute name="records" type="List"/>
+    <aura:attribute name="filterSFXInfo" type="List"/>
+    
+    <force:recordData aura:id="recordLoader"
+                      fields="Account__c, Customer_Type__c, SFX_Code__c"
+                      recordId="{!v.recordId}"
+                      targetFields="{!v.oppRecord}"
+                      targetError="{!v.recordError}"
+                      recordUpdated="{!c.recordUpdated}"
+                      mode="VIEW"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <div class="slds-m-around_xx-large">
+        <aura:if isTrue="{!v.isModalOpen}">
+            <!--Modal/Popup Box starts here-->
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-small">
+                <div class="slds-modal__container">
+                    <header class="slds-modal__header">
+                        <aura:if isTrue="{!and(v.showSFX, v.records.length > 0)}" >
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">SFX Codes</h2>
+                        </aura:if>
+                        <aura:if isTrue="{!or(and(v.showRateCard, v.records.length > 0), v.showErrorMessage)}" >
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Rate Cards To Be Renewed</h2>
+                        </aura:if>
+                    </header>
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <aura:if isTrue="{!v.showSpinner}">
+                            <lightning:spinner variant="brand" alternativeText="Loading" size="medium" />
+                        </aura:if>
+                        <aura:if isTrue="{!and(v.showSFX, v.records.length > 0)}" >
+                            <lightning:input type="checkbox" aura:id="allCheck" label="Select All" name="Select All" checked="{!v.isAllCheckSfx}" onchange="{! c.selectAllSFX}"/>
+                            <label class="slds-form-element__label" style="margin-top:1rem;">
+                                <abbr class="slds-required" title="required">* </abbr><b>Select SFX to be renewed:</b>
+                            </label>
+                            <aura:iteration items="{! v.records}" var="item">
+                                <lightning:input type="checkbox" aura:id="check" label="{!item.sfxRecord.SFX_Code__c}" name="{!item.sfxRecord.SFX_Code__c}" checked="{!item.sfxRecord.checked}" onchange="{! c.selectSFX}"/>
+                            </aura:iteration>
+                        </aura:if>
+                        <aura:if isTrue="{!and(v.showRateCard, v.filterSFXInfo.length > 0)}" >
+                            <lightning:input type="checkbox" aura:id="allCheckRC" label="Select All" name="Select All" checked="{!v.isAllCheckRateCard}" onchange="{! c.selectAllRateCard}"/>
+                            <label class="slds-form-element__label" style="margin-top:1rem;">
+                                <abbr class="slds-required" title="required">* </abbr><b>Select Rate Cards to be renewed:</b>
+                            </label>
+                            <aura:iteration items="{! v.filterSFXInfo}" var="item">
+                                <aura:iteration items="{! item.rateCardRecords}" var="rec">
+                                    <lightning:input type="checkbox" aura:id="checkRC" label="{! item.sfxRecord.SFX_Code__c+'-'+ rec.Name}" name="{! item.sfxRecord.SFX_Code__c+'-'+ rec.Name}" checked="{!rec.checked}" onchange="{! c.selectRateCard}"/>
+                                </aura:iteration>
+                            </aura:iteration>
+                        </aura:if>
+                        <aura:if isTrue="{! v.showErrorMessage}">
+                            <p style="font-size:15px;">Mappings cannot be created for New or Existing New Opportunities</p>
+                        </aura:if>
+                    </div>
+                    <div class="slds-modal__footer">
+                        <aura:if isTrue="{!and(v.showRateCard, v.records.length > 0)}" >
+                            <lightning:button label="Previous" title="Previous" onclick="{! c.handlePrevious }" />
+                            <lightning:button variant="brand" label="Save" title="Save" onclick="{! c.handleSave }" />
+                        </aura:if>
+                        <aura:if isTrue="{!and(v.showSFX, v.records.length > 0)}" >
+                            <lightning:button variant="brand" label="Next" title="Next" onclick="{! c.handleNext }" />
+                        </aura:if>
+                        <aura:if isTrue="{! v.showErrorMessage}">
+                            <lightning:button variant="brand" label="Close" title="Close" onclick="{! c.cancelModal }" />
+                        </aura:if>
+                    </div>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </aura:if>
+    </div>
+</aura:component>

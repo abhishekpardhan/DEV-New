@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Directory</fullName>
+        <default>false</default>
+        <label>Directory</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Website</fullName>
+        <default>false</default>
+        <label>Website</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Social Media</fullName>
+        <default>false</default>
+        <label>Social Media</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Campaign</fullName>
+        <default>false</default>
+        <label>Campaign</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Branch</fullName>
+        <default>false</default>
+        <label>Branch</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Booking Associates</fullName>
+        <default>false</default>
+        <label>Booking Associates</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Safexperience Centre</fullName>
+        <default>false</default>
+        <label>Safexperience Centre</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Articles</fullName>
+        <default>false</default>
+        <label>Articles</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cold Call</fullName>
+        <default>false</default>
+        <label>Cold Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EDM</fullName>
+        <default>false</default>
+        <label>EDM</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Existing Customer</fullName>
+        <default>false</default>
+        <label>Existing Customer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Green Truck Associate</fullName>
+        <default>false</default>
+        <label>Green Truck Associate</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Reference Call</fullName>
+        <default>false</default>
+        <label>Reference Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Retail</fullName>
+        <default>false</default>
+        <label>Retail</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Segment Analysis</fullName>
+        <default>false</default>
+        <label>Segment Analysis</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ICM</fullName>
+        <default>false</default>
+        <label>ICM</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Social</fullName>
+        <default>false</default>
+        <label>Social</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Employee</fullName>
+        <default>false</default>
+        <label>Employee</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Lead Service Providers</fullName>
+        <default>false</default>
+        <label>Lead Service Providers</label>
+    </standardValue>
+</StandardValueSet>

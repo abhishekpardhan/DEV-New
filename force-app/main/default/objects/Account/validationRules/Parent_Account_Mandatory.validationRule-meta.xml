@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parent_Account_Mandatory</fullName>
+    <active>true</active>
+    <description>Parent Account ID is mandatory.</description>
+    <errorConditionFormula>AND(
+OR (
+$RecordType.Name = &quot;SFX Customer&quot;,
+$RecordType.Name = &quot;PRC Customer&quot;),
+ISBLANK(  ParentId  ))</errorConditionFormula>
+    <errorDisplayField>ParentId</errorDisplayField>
+    <errorMessage>Parent Account is mandatory to save the record.</errorMessage>
+</ValidationRule>

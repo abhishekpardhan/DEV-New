@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Shows the Safexpress damage escalation form to collect waybill, mobile, email and proof of damage, then returns the case outcome.</description>
+    <developerName>Submit_Damage_Escalation_Form</developerName>
+    <invocationTarget>SafexpressDamageEscalationAction</invocationTarget>
+    <invocationTargetType>apex</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <localDeveloperName>Submit_Damage_Escalation_Form</localDeveloperName>
+    <masterLabel>Submit Damage Escalation Form</masterLabel>
+</GenAiFunction>

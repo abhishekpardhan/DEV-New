@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Org_Account_Hierarchy</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Billing_Branch__c</columns>
+    <columns>Zero_Billing_Flag_Pro__c</columns>
+    <columns>Expiry_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Is_Propel_Account__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>Org_Account_Hierarchy</label>
+</ListView>

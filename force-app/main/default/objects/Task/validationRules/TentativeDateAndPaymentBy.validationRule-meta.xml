@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TentativeDateAndPaymentBy</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT(ISCHANGED(OwnerId)),
+    NOT(ISPICKVAL( Status , &quot;Cancelled&quot;)),
+    NOT(ISPICKVAL(Payment_Remaining__c, &quot;Non-Recoverable&quot;)),
+    NOT(ISNEW()),
+    RecordType.Name = &quot;Collection&quot;,
+
+    OR(
+        ISBLANK(Remaining_Payment_Tentative_Date__c),
+        ISBLANK(TEXT(Payment_By__c))
+    ),
+
+    NOT($Profile.Name = &quot;Integration User&quot;),
+    NOT($Profile.Name = &quot;Portfolio Management&quot;),
+    NOT($Profile.Name = &quot;System Administrator&quot;)
+)</errorConditionFormula>
+    <errorMessage>PaymentCollectionTentativeDate And PaymentBy is mandatory.</errorMessage>
+</ValidationRule>

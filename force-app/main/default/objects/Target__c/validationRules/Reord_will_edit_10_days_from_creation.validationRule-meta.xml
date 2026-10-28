@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reord_will_edit_10_days_from_creation</fullName>
+    <active>true</active>
+    <errorConditionFormula>TODAY() - DATEVALUE(CreatedDate) &gt; 10</errorConditionFormula>
+    <errorMessage>you can&apos;t edit this page as 10 days has passed from creation.</errorMessage>
+</ValidationRule>

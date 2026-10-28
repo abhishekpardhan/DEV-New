@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Event</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Events</value>
+    </caseValues>
+    <layouts>
+        <layout>Event Geolocation Completed</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- GeoLocation --></label>
+            <section>GeoLocation</section>
+        </sections>
+        <sections>
+            <label><!-- Related To --></label>
+            <section>Related To</section>
+        </sections>
+        <sections>
+            <label><!-- Total Distance(In KM) --></label>
+            <section>Total Distance(In KM)</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Event Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>New Event Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- GeoLocation --></label>
+            <section>GeoLocation</section>
+        </sections>
+        <sections>
+            <label><!-- Related To --></label>
+            <section>Related To</section>
+        </sections>
+        <sections>
+            <label><!-- Total Distance(In KM) --></label>
+            <section>Total Distance(In KM)</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>NonEdit Event</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- GeoLocation --></label>
+            <section>GeoLocation</section>
+        </sections>
+        <sections>
+            <label><!-- Related To --></label>
+            <section>Related To</section>
+        </sections>
+        <sections>
+            <label><!-- Total Distance(In KM) --></label>
+            <section>Total Distance(In KM)</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Check In --></label>
+        <name>Check_In</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Check Out --></label>
+        <name>Check_Out</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Event Geolocation Completed --></label>
+        <name>Event_Geolocation_Completed</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- New Event --></label>
+        <name>New_Event</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Remarks Edit --></label>
+        <name>Remarks_Edit</name>
+    </recordTypes>
+    <startsWith>Vowel</startsWith>
+    <validationRules>
+        <errorMessage><!-- Related field: Please fill either (Account &amp; Contact) OR Opportunity OR Lead --></errorMessage>
+        <name>Account_Contact_Opportunity_Lead_Mandate</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only One can be selected at one time : Campaign,Account,Opportunity,Lead,Activity. --></errorMessage>
+        <name>Atleast_1_lookup_field_to_be_filled</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Branch Name to be tagged for Event Purpose:Branch Visit --></errorMessage>
+        <name>Branch_Visit_Event_Purpose</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill Branch. --></errorMessage>
+        <name>Branch_mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot cancel this event, already Checked In --></errorMessage>
+        <name>Cacellation_validation_rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill Contact. --></errorMessage>
+        <name>Contact_mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You have no Permission to edit this field. --></errorMessage>
+        <name>EVent_name_Cant_change</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- End date should be after start Date and only 1 day event. --></errorMessage>
+        <name>End_Date_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- End Date should be between Campaign&apos;s Start date and End Date. --></errorMessage>
+        <name>End_Date_btw_campaign</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot edit this event as its associated Journey is &apos;Not to be Claimed&apos;. --></errorMessage>
+        <name>EventCannotbeEditedWhenNotToBeClaimed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Event Purpose can only be set at creation and cannot be updated --></errorMessage>
+        <name>Event_Purpose_Not_editable_after_Insert</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Event cannot be created for Propel type account --></errorMessage>
+        <name>Event_cannot_be_created_on_propel_acct</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can&apos;t &apos;Cancelled&apos; this event as CheckIn has already completed. --></errorMessage>
+        <name>Event_cant_be_cancelled</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Event can&apos;t be create against Closed Journey. --></errorMessage>
+        <name>Event_cant_be_created</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill the account &amp; contacts. --></errorMessage>
+        <name>Existing_Customer_Meeting_Rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill it. --></errorMessage>
+        <name>If_Others_Please_Specify_mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill this field --></errorMessage>
+        <name>Marketing_promotion_Event_purpose</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill Other address. --></errorMessage>
+        <name>Other_address_mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You have No Permission to Edit this Field. --></errorMessage>
+        <name>Owner_readonly</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill Reason. --></errorMessage>
+        <name>Reason_is_mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill atleast One of them : Campaign,Account,Opportunity,Lead,Activity. --></errorMessage>
+        <name>Related_To_section_1_lookup_is_mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- An event cannot be created for a lead with status Converted, Dropped or Dropped by Central Desk --></errorMessage>
+        <name>Restrict_event_creation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please check if either Campaign or Lead or Contact are filled --></errorMessage>
+        <name>Retail_cutsomer_Meeting</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Start Date should be between Campaign&apos;s Start date and End Date. --></errorMessage>
+        <name>Start_Date_btw_campaign</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Start Date should be same as Journey Date. --></errorMessage>
+        <name>Start_Date_equal_journey_date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill future Date. --></errorMessage>
+        <name>Start_Date_future</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill Sub Reason. --></errorMessage>
+        <name>Sub_Reason_is_mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Event Start Date and Event End Date cannot be modified after event creation --></errorMessage>
+        <name>VR_Event_Date_Locked_After_Creation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Cancelled Events can&apos;t be created --></errorMessage>
+        <name>VR_Prevent_Cancelled_Event_Creation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>
+            <!-- You cannot modify these fields directly. 
+Please update the parent event. Changes will sync automatically. -->
+        </errorMessage>
+        <name>VR_Sync_Child_Event_Teams</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only Event Creator can edit Recap of Meeting Field rest fields are non editable --></errorMessage>
+        <name>VR_Unlock_Remarks_Rejected_Journey</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- After checkout ,you can&apos;t change the Subject. --></errorMessage>
+        <name>after_check_out_subject_cant_change</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill the recap of meeting and activities to be performed to save the record. --></errorMessage>
+        <name>mandatory_before_Checkout</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If &quot;No Meeting Done&quot; then other Activities Performed cannot be selected --></errorMessage>
+        <name>validationForNoMeeting</name>
+    </validationRules>
+</CustomObjectTranslation>

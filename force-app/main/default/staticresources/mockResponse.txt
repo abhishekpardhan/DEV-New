@@ -1,0 +1,1 @@
+{"destination_addresses" : [ "Charkhi Dadri - Kanina Rd, Haryana 127306, India" ],"origin_addresses" : [ "Unnamed Road, Shankar Vihar, New Delhi, Delhi 110037, India" ],"rows" : [{"elements" : [{"distance" : {"text" : "116 km","value" : 116244},"duration" : {"text" : "2 hours 35 mins","value" : 9303},"status" : "OK"}]}],"status" : "OK"}

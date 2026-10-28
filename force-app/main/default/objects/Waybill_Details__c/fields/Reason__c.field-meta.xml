@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason__c</fullName>
+    <label>Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Disagreement in Commercials</fullName>
+                <default>false</default>
+                <label>Disagreement in Commercials</label>
+            </value>
+            <value>
+                <fullName>Weight difference</fullName>
+                <default>false</default>
+                <label>Weight difference</label>
+            </value>
+            <value>
+                <fullName>Wrong waybill/Bill Apply</fullName>
+                <default>false</default>
+                <label>Wrong waybill/Bill Apply</label>
+            </value>
+            <value>
+                <fullName>Safextension Charge</fullName>
+                <default>false</default>
+                <label>Safextension Charge</label>
+            </value>
+            <value>
+                <fullName>Safextension Charge deduction</fullName>
+                <default>false</default>
+                <label>Safextension Charge deduction</label>
+            </value>
+            <value>
+                <fullName>Incorrect Billing</fullName>
+                <default>false</default>
+                <label>Incorrect Billing</label>
+            </value>
+            <value>
+                <fullName>Late Delivery Deduction</fullName>
+                <default>false</default>
+                <label>Late Delivery Deduction</label>
+            </value>
+            <value>
+                <fullName>POD Issue</fullName>
+                <default>false</default>
+                <label>POD Issue</label>
+            </value>
+            <value>
+                <fullName>One time Settlement</fullName>
+                <default>false</default>
+                <label>One time Settlement</label>
+            </value>
+            <value>
+                <fullName>Shortage and Damage</fullName>
+                <default>false</default>
+                <label>Shortage and Damage</label>
+            </value>
+            <value>
+                <fullName>Wrong Booking</fullName>
+                <default>false</default>
+                <label>Wrong Booking</label>
+            </value>
+            <value>
+                <fullName>Volume Discount</fullName>
+                <default>false</default>
+                <label>Volume Discount</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

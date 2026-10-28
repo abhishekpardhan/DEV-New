@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>WHONAME</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <columns>
+        <field>PHONE</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>EMAILTEMPLATENAME</field>
+    </columns>
+    <columns>
+        <field>FIRSTOPENDATE</field>
+    </columns>
+    <columns>
+        <field>LASTOPENDATE</field>
+    </columns>
+    <columns>
+        <field>TIMESOPENED</field>
+    </columns>
+    <currency>INR</currency>
+    <description>The number of mass emails created</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <field>SENDDATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <aggregateType>RowCount</aggregateType>
+        <dateGranularity>Day</dateGranularity>
+        <field>OPENED</field>
+        <sortByName>RowCount</sortByName>
+        <sortOrder>Asc</sortOrder>
+        <sortType>Aggregate</sortType>
+    </groupingsDown>
+    <name>Customer Connect - Mass Email</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>EmailStatus</reportType>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <sortColumn>TIMESOPENED</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>SENDDATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Uploaded_SFX</fullName>
+    <columns>NAME</columns>
+    <columns>SFX__c</columns>
+    <columns>Is_Uploaded__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Is_Uploaded__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Uploaded SFX</label>
+</ListView>

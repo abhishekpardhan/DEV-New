@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Region__c</fullName>
+    <defaultValue>&apos;&apos;</defaultValue>
+    <label>Region</label>
+    <required>true</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ANDHRA PRADESH - TELANGANA</fullName>
+                <default>false</default>
+                <label>ANDHRA PRADESH - TELANGANA</label>
+            </value>
+            <value>
+                <fullName>BIHAR - JHARKHAND - ODISHA</fullName>
+                <default>false</default>
+                <label>BIHAR - JHARKHAND - ODISHA</label>
+            </value>
+            <value>
+                <fullName>DELHI</fullName>
+                <default>false</default>
+                <label>DELHI</label>
+            </value>
+            <value>
+                <fullName>GUJARAT</fullName>
+                <default>false</default>
+                <label>GUJARAT</label>
+            </value>
+            <value>
+                <fullName>HARYANA</fullName>
+                <default>false</default>
+                <label>HARYANA</label>
+            </value>
+            <value>
+                <fullName>JK - HP - LADAKH</fullName>
+                <default>false</default>
+                <label>JK - HP - LADAKH</label>
+            </value>
+            <value>
+                <fullName>KARNATAKA</fullName>
+                <default>false</default>
+                <label>KARNATAKA</label>
+            </value>
+            <value>
+                <fullName>KERALAM</fullName>
+                <default>false</default>
+                <label>KERALAM</label>
+            </value>
+            <value>
+                <fullName>MADHYA PRADESH - CHHATTISGARH</fullName>
+                <default>false</default>
+                <label>MADHYA PRADESH - CHHATTISGARH</label>
+            </value>
+            <value>
+                <fullName>MAHARASHTRA - GOA</fullName>
+                <default>false</default>
+                <label>MAHARASHTRA - GOA</label>
+            </value>
+            <value>
+                <fullName>MUMBAI</fullName>
+                <default>false</default>
+                <label>MUMBAI</label>
+            </value>
+            <value>
+                <fullName>NORTH EAST</fullName>
+                <default>false</default>
+                <label>NORTH EAST</label>
+            </value>
+            <value>
+                <fullName>PUNJAB - CHANDIGARH</fullName>
+                <default>false</default>
+                <label>PUNJAB - CHANDIGARH</label>
+            </value>
+            <value>
+                <fullName>RAJASTHAN</fullName>
+                <default>false</default>
+                <label>RAJASTHAN</label>
+            </value>
+            <value>
+                <fullName>TAMILNADU - PUDUCHERRY</fullName>
+                <default>false</default>
+                <label>TAMILNADU - PUDUCHERRY</label>
+            </value>
+            <value>
+                <fullName>UTTAR PRADESH</fullName>
+                <default>false</default>
+                <label>UTTAR PRADESH</label>
+            </value>
+            <value>
+                <fullName>UTTARAKHAND</fullName>
+                <default>false</default>
+                <label>UTTARAKHAND</label>
+            </value>
+            <value>
+                <fullName>WEST BENGAL - SIKKIM</fullName>
+                <default>false</default>
+                <label>WEST BENGAL - SIKKIM</label>
+            </value>
+            <value>
+                <fullName>CORPORATE OFFICE</fullName>
+                <default>false</default>
+                <label>CORPORATE OFFICE</label>
+            </value>
+            <value>
+                <fullName>BJO</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>BJO</label>
+            </value>
+            <value>
+                <fullName>CO</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CO</label>
+            </value>
+            <value>
+                <fullName>DLI</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>DLI</label>
+            </value>
+            <value>
+                <fullName>GJT</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>GJT</label>
+            </value>
+            <value>
+                <fullName>HRN</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>HRN</label>
+            </value>
+            <value>
+                <fullName>JKH</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>JKH</label>
+            </value>
+            <value>
+                <fullName>KRL</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>KRL</label>
+            </value>
+            <value>
+                <fullName>KTK</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>KTK</label>
+            </value>
+            <value>
+                <fullName>MHG</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>MHG</label>
+            </value>
+            <value>
+                <fullName>MPC</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>MPC</label>
+            </value>
+            <value>
+                <fullName>MUM</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>MUM</label>
+            </value>
+            <value>
+                <fullName>NRE</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>NRE</label>
+            </value>
+            <value>
+                <fullName>PBC</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>PBC</label>
+            </value>
+            <value>
+                <fullName>RJN</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>RJN</label>
+            </value>
+            <value>
+                <fullName>TNP</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>TNP</label>
+            </value>
+            <value>
+                <fullName>UKH</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UKH</label>
+            </value>
+            <value>
+                <fullName>UPR</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UPR</label>
+            </value>
+            <value>
+                <fullName>WBS</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>WBS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

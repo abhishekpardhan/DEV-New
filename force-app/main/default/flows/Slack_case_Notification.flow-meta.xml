@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Send_message</name>
+        <label>Send message</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>slackPostMessage</actionName>
+        <actionType>slackPostMessage</actionType>
+        <flowTransactionModel>Automatic</flowTransactionModel>
+        <inputParameters>
+            <name>slackAppIdForToken</name>
+            <value>
+                <stringValue>A03269G3DNE</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackWorkspaceIdForToken</name>
+            <value>
+                <stringValue>T099BQGKCLA</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackConversationId</name>
+            <value>
+                <elementReference>Slack_Salesforce_User_Map.slackUserId</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackMessage</name>
+            <value>
+                <elementReference>RecordNotificationupdate</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>slackPostMessage</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>Slack_Salesforce_User_Map</name>
+        <label>Slack Salesforce User Map</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>slackAgentGetUser</actionName>
+        <actionType>slackAgentGetUser</actionType>
+        <connector>
+            <targetReference>Is_Slack_User</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>salesforceUserId</name>
+            <value>
+                <elementReference>$Record.Assigned_To__c</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>slackAgentGetUser</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Notification_user</name>
+        <label>Notification user</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>RecipientIDs</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>$Record.Assigned_To__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Is_Case_Assigned</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Is_Case_Assigned</name>
+        <label>Is Case Assigned</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Outcome_1_of_Is_Case_Assigned</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>RecipientIDs</leftValueReference>
+                <operator>NotEqualTo</operator>
+            </conditions>
+            <connector>
+                <targetReference>Slack_Salesforce_User_Map</targetReference>
+            </connector>
+            <label>Outcome 1 of Is Case Assigned</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_Slack_User</name>
+        <label>Is Slack User</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Outcome_1_of_Is_Slack_User</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Slack_Salesforce_User_Map.slackUserId</leftValueReference>
+                <operator>NotEqualTo</operator>
+            </conditions>
+            <connector>
+                <targetReference>Send_message</targetReference>
+            </connector>
+            <label>Outcome 1 of Is Slack User</label>
+        </rules>
+    </decisions>
+    <description>This flow only used for the slack useage</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>RecordURL</name>
+        <dataType>String</dataType>
+        <expression>&quot;https://safeforce1.lightning.force.com/lightning/r/&quot;+{!$Record.Id}+&quot;/view&quot;</expression>
+    </formulas>
+    <interviewLabel>Slack case Notification {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Slack case Notification</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>get_Notification_Details</name>
+        <label>get Notification Details</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Notification_user</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>slack_Approval_notification</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>CustomNotificationType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Assigned_To__c</field>
+            <operator>NotEqualTo</operator>
+        </filters>
+        <filters>
+            <field>Assigned_To__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Case__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <scheduledPaths>
+            <connector>
+                <targetReference>get_Notification_Details</targetReference>
+            </connector>
+            <pathType>AsyncAfterCommit</pathType>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>RecordNotificationupdate</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Alert !!
+A Case has been Assigned to you. Case Number : {!$Record.Name},
+Access Type : {!$Record.Case_Typee__c}
+SubType : {!$Record.Case_Type__c}
+Credit Amount : {!$Record.Task_Amount__c}
+Related to Account {!$Record.Account__r.Name}
+Click the link to view Details: {!RecordURL}</text>
+    </textTemplates>
+    <variables>
+        <name>RecipientIDs</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

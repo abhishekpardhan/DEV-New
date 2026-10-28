@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>opp_cannot_be_created_on_propel_acct</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(AND(Account__r.Is_Propel_Account__c = TRUE , ISNEW(),NOT( ISNULL(Account__c) )), TRUE , FALSE)</errorConditionFormula>
+    <errorMessage>Opportunity cannot be created for Propel type account</errorMessage>
+</ValidationRule>

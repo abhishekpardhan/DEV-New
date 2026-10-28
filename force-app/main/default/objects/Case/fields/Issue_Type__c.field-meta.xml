@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Issue_Type__c</fullName>
+    <label>Issue Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Sub_Category__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AddressChange</fullName>
+                <default>false</default>
+                <label>Address Change</label>
+            </value>
+            <value>
+                <fullName>DODCancellation</fullName>
+                <default>false</default>
+                <label>DOD Cancellation</label>
+            </value>
+            <value>
+                <fullName>Rebooking</fullName>
+                <default>false</default>
+                <label>Re-Booking</label>
+            </value>
+            <value>
+                <fullName>AtGateway</fullName>
+                <default>false</default>
+                <label>At Gateway</label>
+            </value>
+            <value>
+                <fullName>OpenDelivery</fullName>
+                <default>false</default>
+                <label>Open Delivery</label>
+            </value>
+            <value>
+                <fullName>WrongDelivery</fullName>
+                <default>false</default>
+                <label>Wrong Delivery</label>
+            </value>
+            <value>
+                <fullName>InTransit</fullName>
+                <default>false</default>
+                <label>In Transit</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>DeliveryProcessRequest</controllingFieldValue>
+            <valueName>AddressChange</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DeliveryProcessRequest</controllingFieldValue>
+            <valueName>DODCancellation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DeliveryProcessRequest</controllingFieldValue>
+            <valueName>Rebooking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DeliveryProcessRequest</controllingFieldValue>
+            <valueName>WrongDelivery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>WaybillEscalation</controllingFieldValue>
+            <valueName>AtGateway</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>WaybillEscalation</controllingFieldValue>
+            <valueName>InTransit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SpecialDeliveryRequest</controllingFieldValue>
+            <valueName>OpenDelivery</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

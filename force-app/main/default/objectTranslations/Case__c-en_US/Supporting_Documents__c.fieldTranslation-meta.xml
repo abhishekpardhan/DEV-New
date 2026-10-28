@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Supporting Documents --></label>
+    <name>Supporting_Documents__c</name>
+    <picklistValues>
+        <masterLabel>Cancelled Cheque</masterLabel>
+        <translation><!-- Cancelled Cheque --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Claim Letter</masterLabel>
+        <translation><!-- Claim Letter --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer&apos;s Email Copy</masterLabel>
+        <translation><!-- Customer&apos;s Email Copy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Invoice</masterLabel>
+        <translation><!-- Invoice --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>POD</masterLabel>
+        <translation><!-- POD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Passbook Copy</masterLabel>
+        <translation><!-- Passbook Copy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Photos of Damage</masterLabel>
+        <translation><!-- Photos of Damage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Survey Report</masterLabel>
+        <translation><!-- Survey Report --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

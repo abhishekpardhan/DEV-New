@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Campaign</fullName>
+        <default>false</default>
+        <label>Campaign</label>
+    </customValue>
+    <customValue>
+        <fullName>Branch</fullName>
+        <default>false</default>
+        <label>Branch</label>
+    </customValue>
+    <customValue>
+        <fullName>Booking Associates</fullName>
+        <default>false</default>
+        <label>Booking Associates</label>
+    </customValue>
+    <customValue>
+        <fullName>Safexperience Centre</fullName>
+        <default>false</default>
+        <label>Safexperience Centre</label>
+    </customValue>
+    <customValue>
+        <fullName>Articles</fullName>
+        <default>false</default>
+        <label>Articles</label>
+    </customValue>
+    <customValue>
+        <fullName>Cold Call</fullName>
+        <default>false</default>
+        <label>Cold Call</label>
+    </customValue>
+    <customValue>
+        <fullName>EDM</fullName>
+        <default>false</default>
+        <label>EDM</label>
+    </customValue>
+    <customValue>
+        <fullName>Existing Customer</fullName>
+        <default>false</default>
+        <label>Existing Customer</label>
+    </customValue>
+    <customValue>
+        <fullName>Green Truck Associate</fullName>
+        <default>false</default>
+        <label>Green Truck Associate</label>
+    </customValue>
+    <customValue>
+        <fullName>Internet</fullName>
+        <default>false</default>
+        <label>Internet</label>
+    </customValue>
+    <customValue>
+        <fullName>Reference Call</fullName>
+        <default>false</default>
+        <label>Reference Call</label>
+    </customValue>
+    <customValue>
+        <fullName>Retail</fullName>
+        <default>false</default>
+        <label>Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>Segment Analysis</fullName>
+        <default>false</default>
+        <label>Segment Analysis</label>
+    </customValue>
+    <customValue>
+        <fullName>ICM</fullName>
+        <default>false</default>
+        <label>ICM</label>
+    </customValue>
+    <customValue>
+        <fullName>Social</fullName>
+        <default>false</default>
+        <label>Social</label>
+    </customValue>
+    <customValue>
+        <fullName>Employee</fullName>
+        <default>false</default>
+        <label>Employee</label>
+    </customValue>
+    <customValue>
+        <fullName>Directory</fullName>
+        <default>false</default>
+        <label>Directory</label>
+    </customValue>
+    <customValue>
+        <fullName>Lead Service Providers</fullName>
+        <default>false</default>
+        <label>Lead Service Providers</label>
+    </customValue>
+    <customValue>
+        <fullName>LinkedIn leads</fullName>
+        <default>false</default>
+        <label>LinkedIn leads</label>
+    </customValue>
+    <customValue>
+        <fullName>Google Leads</fullName>
+        <default>false</default>
+        <label>Google Leads</label>
+    </customValue>
+    <customValue>
+        <fullName>Safexperience Centre - IVR</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Safexperience Centre - IVR</label>
+    </customValue>
+    <customValue>
+        <fullName>Safexperience Centre - WEB</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Safexperience Centre - WEB</label>
+    </customValue>
+    <customValue>
+        <fullName>Safexperience Centre - BOT</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Safexperience Centre - BOT</label>
+    </customValue>
+    <customValue>
+        <fullName>Safexperience Centre - Chatter</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Safexperience Centre - Chatter</label>
+    </customValue>
+    <customValue>
+        <fullName>Consignee Sales</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Consignee Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>Cluster Market Visit</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Cluster Market Visit</label>
+    </customValue>
+    <customValue>
+        <fullName>Event</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Event</label>
+    </customValue>
+    <customValue>
+        <fullName>Marketing Campaign</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Marketing Campaign</label>
+    </customValue>
+    <customValue>
+        <fullName>Research</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Research</label>
+    </customValue>
+    <customValue>
+        <fullName>Safexperience</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Safexperience</label>
+    </customValue>
+    <customValue>
+        <fullName>Newspaper</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Newspaper</label>
+    </customValue>
+    <masterLabel>Source</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

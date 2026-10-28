@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>quote_deferred_validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(RecordType.DeveloperName = &apos;Deferred_Recordtype&apos;, 
+ISCHANGED( Name ),ISCHANGED( Opportunity__c )
+)</errorConditionFormula>
+    <errorMessage>You can&apos;t modify this record.</errorMessage>
+</ValidationRule>

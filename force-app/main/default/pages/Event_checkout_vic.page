@@ -1,0 +1,190 @@
+<!--
+ * Description		:		Controller class for JourneyGeolocation Lightning Component to get the current latitue/Longitude and time information and updation them on CheckIn/CheckOut Fields
+ * Updated By       :       Shubham Girdhar
+ * Created Date     :       
+ * Release          :       17th july, 2019
+ * Last Modified on :       9th july, 2019
+ * Jira Ticket      :       https://safexpress.atlassian.net/browse/SD-409
+ -->
+<apex:page showHeader="false" standardController="Event__c"  extensions="EventGeolocation" sidebar="false"  docType="html-5.0">
+    
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+        <head>
+            <meta charset="utf-8" />
+            <meta http-equiv="x-ua-compatible" content="ie=edge" />
+            <title>Event Check out</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            
+            <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"/>
+            <apex:slds />
+            
+        </head>
+        <body>
+            <c:warningMessage /><br/>
+            <c:ErrorMessage />
+            <c:SuccessMessage />
+            <c:Spinner />
+            
+            <!--------------GPS Activation alert added on 9th,July 2019 by Shubham Girdhar------------------------->    
+            <h1 style="color:red; font-size:20px; text-align:center "> 
+                NOTE: <br/> For CheckIn/Checkout,Device GPS must be Activated
+            </h1> 
+            <!----------------------------------------------------------------------------------------------------->
+            <div id ='TaskExist' style='display : none;'>
+                <input type="hidden" id="accuracyId" />
+                <apex:form >
+                    <apex:inputHidden id="latlong" value="{!lat_long}"/>
+                    <apex:inputHidden id="accuracy" value="{!taskCheckOutAccuracy}"/>
+                    <table class="slds-table slds-table--bordered slds-table_striped" >
+                        <thead>
+                            <tr class="slds-text-title--caps">
+                                <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                                    <span class="slds-truncate" title="Name">select</span>      
+                                </th>
+                                <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                                    <span class="slds-truncate" title="Name">Subject</span>      
+                                </th>
+                                <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                                    <span class="slds-truncate" title="Name">Record Type</span>      
+                                </th>
+                                <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                                    <span class="slds-truncate" title="Name">Type</span>      
+                                </th>
+                                <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                                    <span class="slds-truncate" title="Name">Sub Type</span>      
+                                </th>
+                                <th scope="col" style="font-weight:bold;" class="slds-cell-shrink">
+                                    <span class="slds-truncate" title="Name">Remarks</span>      
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <apex:repeat var="taskWrapper" value="{!lstTaskWrapper}">
+                                <tr>
+                                    <td scope="row" class="slds-cell-wrap slds-truncate" ><apex:inputCheckbox value="{!taskWrapper.isSelected}"/></td>
+                                    <td scope="row" class="slds-cell-wrap slds-truncate" >
+                                        <a href="{!'/one/one.app?#/sObject/'+ taskWrapper.objTask.Id + '/view'}" target="_new">{!taskWrapper.objTask.Subject}</a></td>
+                                    <td scope="row" class="slds-cell-wrap slds-truncate" >{!taskWrapper.objTask.RecordType.Name}</td>
+                                    <td scope="row" class="slds-cell-wrap slds-truncate" >{!taskWrapper.objTask.Type__c}</td>
+                                    <td scope="row" class="slds-cell-wrap slds-truncate" >{!taskWrapper.objTask.Purpose__c}</td>
+                                    
+                                    <td scope="row" class="slds-cell-wrap slds-truncate" ><apex:inputTextarea value="{!taskWrapper.remarks}"></apex:inputTextarea></td>
+                                </tr>
+                            </apex:repeat>
+                        </tbody>
+                    </table>
+                    <div style="height:20px;">
+                    </div>
+                    <center><apex:commandButton styleClass="slds-button slds-button_brand" action="{!changeStatusTask}" value="Save" oncomplete="popUpMsg();" /></center>
+                </apex:form>
+            </div>
+        </body>
+    </html>
+    <script type='text/javascript' src='/canvas/sdk/js/publisher.js'></script>
+    <script> 
+        Sfdc.canvas.publisher.subscribe({name: "publisher.showPanel", 
+                                         onData:function(e) {
+                                             // Sfdc.canvas.publisher.publish({ name : "publisher.close", payload : { refresh:"true" }});
+                                         }});
+    </script>
+    <script>
+    window.onload = function(){ 
+        var startPos;
+        var lat;
+        var lng;
+        var acc;
+        var staticLabel = {!$Label.Check_In_Accuracy};            
+        var geoSuccess = function(position) {
+            startPos = position;
+            lat = startPos.coords.latitude;
+            lng = startPos.coords.longitude;
+            acc = startPos.coords.accuracy;
+
+             Visualforce.remoting.Manager.invokeAction( '{!$RemoteAction.EventGeolocation.eventTaskCheck}',
+                '{!eventId}',
+                function(result, event){
+                    document.getElementById("spinner").style.display = 'none';
+                    if(result=='True'){
+                     
+                      document.getElementById("toastWarning").style.display = "block";
+                      document.getElementById("warningMsg").innerHTML ='Alert: Please take action if any General/CRP/Onboarding task is in Open Status.' ;
+                      document.getElementById("toastSuccess").style.display = 'none';
+                      setTimeout(closePopup, 4000);  
+                     }
+                    else{
+                        Istaskcomplete=false;
+                    }
+                });
+           
+            Visualforce.remoting.Manager.invokeAction(
+                '{!$RemoteAction.EventGeolocation.eventLocation}',
+                '{!eventId}', lat, lng,'checkOut', acc,
+                function(result, event) {
+
+                    if (event.status) {
+                        document.getElementById("spinner").style.display = 'none';
+                           
+                        if( result == 'Contact is not complete. Please complete the contact before check out.' || result == 'You are not able to checkIn/checkout this Event.' || result == 'Current Event is already Check Out.' || result == 'Please Enter the recap of meeting in Event.' || result == 'Please first CheckIn current Event.' || result.includes('Exception')){
+                            document.getElementById("toastSuccess").style.display = 'none';
+                            document.getElementById("errorMsg").innerHTML ='Error '+result ;
+                            document.getElementById("ToastError").style.display = "block";
+                            setTimeout(closeJsPopup, 4000);
+                        }else if(result =='checkOut success Task'){
+                            document.getElementById("toastSuccess").style.display = 'none';
+                            document.getElementById("ToastError").style.display = "none";
+                            document.getElementById("TaskExist").style.display = 'block';
+                            $('[id$=latlong]').val(lat +','+lng );  
+                            $('[id$=accuracy]').val(acc);
+                            $('#accuracyId').val(acc);
+                        }else{
+                            if(acc > staticLabel){
+                                 document.getElementById("toastWarning").style.display = "block";
+                                document.getElementById("warningMsg").innerHTML +='<br/>Warning : Location accuracy is low. Please move to an open area. ' ;
+                                 document.getElementById("toastSuccess").style.display = 'none';
+                                 setTimeout(closeJsPopup, 4000);                                  
+                            } 
+                            document.getElementById("ToastError").style.display = "none";
+                            document.getElementById("successMsg").innerHTML ='Success : Check Out Completed' ;
+                            document.getElementById("toastSuccess").style.display = 'block';
+                            setTimeout(closeJsPopup, 4000);
+                        }
+                    }
+                });
+           };
+        var geoError = function(){
+            document.getElementById("spinner").style.display = 'none';
+            document.getElementById("toastSuccess").style.display = 'none';
+                        // Error note change from 'Geolocation not supported' to 'Please Reload, Taking too much time to get Geolocation.' by Shubham Girdhar on 9th july 2019
+            document.getElementById("errorMsg").innerHTML ='Please Reload, Taking too much time to get Geolocation.' ;
+            document.getElementById("ToastError").style.display = "block";
+            setTimeout(closePopup, 4000);
+        };
+        var geooptions = {
+            enableHighAccuracy: true, 
+            maximumAge        : 15000, 
+            timeout           : 15000
+        };
+        navigator.geolocation.getCurrentPosition(geoSuccess, geoError,geooptions );   
+    }
+    function popUpMsg(){
+        var staticLabel = {!$Label.Check_In_Accuracy};            
+        
+        var accuracy = $('#accuracyId').val();
+        
+        if (accuracy > staticLabel){
+            document.getElementById("toastWarning").style.display = "block";
+            document.getElementById("warningMsg").innerHTML ='Warning : Location accuracy is low. Please move to an open area.' ;
+            document.getElementById("toastSuccess").style.display = 'none';
+            setTimeout(closePopup, 4000);                                                                                              
+        }
+        document.getElementById("TaskExist").style.display = 'none';
+        document.getElementById("ToastError").style.display = "none";
+        document.getElementById("successMsg").innerHTML ='Success : Check Out Completed' ;
+        document.getElementById("toastSuccess").style.display = 'block';
+        setTimeout(closeJsPopup, 4000);
+    }
+    function closeJsPopup(){
+        Sfdc.canvas.publisher.publish({ name : "publisher.close", payload : { refresh:"true" }});
+    }
+    </script>
+</apex:page>
