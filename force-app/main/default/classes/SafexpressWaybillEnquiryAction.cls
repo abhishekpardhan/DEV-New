@@ -186,7 +186,13 @@ global with sharing class SafexpressWaybillEnquiryAction {
     private static String formatWaybill(String num) {
         if (num == null) return '';
         String digits = num.replaceAll('[^0-9]', '');
-        if (digits.length() != 12) return num;
-        return digits.substring(0, 4) + ' ' + digits.substring(4, 8) + ' ' + digits.substring(8, 12);
+        if (digits.length() == 12) {
+            return digits.substring(0, 4) + ' ' + digits.substring(4, 8) + ' ' + digits.substring(8, 12);
+        } else if (digits.length() == 8) {
+            return digits.substring(0, 4) + ' ' + digits.substring(4, 8);
+        } else if (digits.length() == 9) {
+            return digits.substring(0, 3) + ' ' + digits.substring(3, 6) + ' ' + digits.substring(6, 9);
+        }
+        return num;
     }
 }

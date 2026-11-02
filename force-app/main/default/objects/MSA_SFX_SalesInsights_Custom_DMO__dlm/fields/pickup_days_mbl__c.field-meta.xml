@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>pickup_days_mbl__c</fullName>
+    <label>PICKUP_DAYS_MBL</label>
+    <mktDataModelFieldAttributes>
+        <definitionCreationType>Custom</definitionCreationType>
+        <isDynamicLookup>false</isDynamicLookup>
+        <labelOverride>PICKUP_DAYS_MBL</labelOverride>
+        <masterLabel>PICKUP_DAYS_MBL</masterLabel>
+        <usageTag>None</usageTag>
+    </mktDataModelFieldAttributes>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>6</scale>
+    <type>Number</type>
+</CustomField>

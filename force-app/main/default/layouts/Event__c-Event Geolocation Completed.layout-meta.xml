@@ -84,7 +84,7 @@
                 <field>Contact__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Readonly</behavior>
+                <behavior>Edit</behavior>
                 <field>If_Others_Please_Specify__c</field>
             </layoutItems>
         </layoutColumns>

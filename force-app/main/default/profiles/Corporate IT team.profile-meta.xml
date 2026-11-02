@@ -309,6 +309,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>ApexCommonUtils</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>AssignBranchPopulate</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -1117,6 +1121,14 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>LeadAssignmentService</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>LeadAssignmentServiceTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>LeadConversion</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -1130,6 +1142,22 @@
     </classAccesses>
     <classAccesses>
         <apexClass>LeadDropApprovalServiceTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>LeadDuplicateService</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>LeadDuplicateServiceTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>LeadEnrichmentService</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>LeadEnrichmentServiceTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -1349,6 +1377,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>PincodeApiMock</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>PincodeInfoBatch</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -1358,6 +1390,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>PincodeInfoBatchTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>PincodeLookupQueueable</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>PincodeLookupQueueableTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -1613,6 +1653,18 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>SafexpressBusinessEnquiryForm</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SafexpressBusinessEnquiryService</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SafexpressBusinessEnquiryValidator</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>SafexpressChequeController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -1638,6 +1690,18 @@
     </classAccesses>
     <classAccesses>
         <apexClass>SafexpressPostDeliveryStatusAction</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SafexpressUrgentDeliveryAction</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SafexpressUrgentDeliveryController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SafexpressUrgentDeliveryForm</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -14076,6 +14140,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>State_GST_Code__mdt.State_Abbreviation__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>State_GST_Code__mdt.State_GST_Code__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -15360,6 +15429,10 @@
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
+        <flow>Gst_Callout</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
         <flow>Invoice_Delete_after_3_month</flow>
     </flowAccesses>
     <flowAccesses>
@@ -15597,6 +15670,14 @@
     <flowAccesses>
         <enabled>false</enabled>
         <flow>flow_701C100000VyGckIAF_1792009220136</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
+        <flow>flow_701C100000VyGckIAF_1793016175654</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
+        <flow>flow_dj89P62tXx8GG8Gi</flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>

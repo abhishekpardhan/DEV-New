@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>expr_dt__c</fullName>
+    <label>EXPR_DT</label>
+    <mktDataModelFieldAttributes>
+        <definitionCreationType>Custom</definitionCreationType>
+        <isDynamicLookup>false</isDynamicLookup>
+        <labelOverride>EXPR_DT</labelOverride>
+        <masterLabel>EXPR_DT</masterLabel>
+        <usageTag>None</usageTag>
+    </mktDataModelFieldAttributes>
+    <required>false</required>
+    <type>DateTime</type>
+</CustomField>

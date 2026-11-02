@@ -19,6 +19,10 @@
         <translation><!-- EnterpriseUpdateCase --></translation>
     </picklistValues>
     <picklistValues>
+        <masterLabel>PROPELI_PINCODE_LOOKUP</masterLabel>
+        <translation><!-- PROPELI_PINCODE_LOOKUP --></translation>
+    </picklistValues>
+    <picklistValues>
         <masterLabel>PropelICaseCancellation</masterLabel>
         <translation><!-- PropelICaseCancellation --></translation>
     </picklistValues>

@@ -3,11 +3,11 @@
     <fullName>ValidationForAddressTypeOther</fullName>
     <active>true</active>
     <errorConditionFormula>AND(OR($Profile.Name = &apos;BDM&apos;,
-							$Profile.Name = &apos;Area Manager&apos;,
-							$Profile.Name = &apos;Regional National Sales Manager&apos;,
-							$Profile.Name = &apos;Regional New Sales Manager&apos;),
-				ISPICKVAL(Address_Type__c, &apos;Other&apos;) , 
-				ISBLANK(Other_Address_Type__c)
-				)</errorConditionFormula>
+$Profile.Name = &apos;Area Manager&apos;,
+$Profile.Name = &apos;Regional National Sales Manager&apos;,
+$Profile.Name = &apos;Regional New Sales Manager&apos;,$Profile.Name = &apos;SFX Field&apos;),
+ISPICKVAL(Address_Type__c, &apos;Other&apos;) ,
+ISBLANK(Other_Address_Type__c)
+)</errorConditionFormula>
     <errorMessage>Please fill Other Address Type</errorMessage>
 </ValidationRule>

@@ -3,6 +3,7 @@
     <fullName>Designation__c</fullName>
     <label>Designation</label>
     <required>false</required>
+    <securityClassification>Public</securityClassification>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>true</trackHistory>
     <type>Picklist</type>
@@ -181,11 +182,6 @@
                 <label>Officer</label>
             </value>
             <value>
-                <fullName>Others</fullName>
-                <default>false</default>
-                <label>Others</label>
-            </value>
-            <value>
                 <fullName>Owner</fullName>
                 <default>false</default>
                 <label>Owner</label>
@@ -243,7 +239,14 @@
             <value>
                 <fullName>Not Specified</fullName>
                 <default>false</default>
+                <isActive>false</isActive>
                 <label>Not Specified</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Others</label>
             </value>
         </valueSetDefinition>
     </valueSet>

@@ -2,6 +2,12 @@ import { LightningElement, api } from 'lwc';
 import BRAND_LOGO from '@salesforce/resourceUrl/Safexpress_Logo';
 import TRUCK_IMG  from '@salesforce/resourceUrl/SafexpressTruck';
 import ROAD_IMG   from '@salesforce/resourceUrl/SafexpressRoad';
+// Updated to your new static resource names
+import IOS_BADGE     from '@salesforce/resourceUrl/IosStoreLogo';
+import ANDROID_BADGE from '@salesforce/resourceUrl/AppStoreLogo';
+
+const IOS_APP_URL     = 'https://apps.apple.com/in/app/safexpress-app/id6797861161';
+const ANDROID_APP_URL = 'https://play.google.com/store/apps/details?id=com.safexpress.enterprise';
 
 export default class SafexpressWaybillEnquiryLWCCard extends LightningElement {
     @api value;
@@ -9,6 +15,12 @@ export default class SafexpressWaybillEnquiryLWCCard extends LightningElement {
     logoUrl = BRAND_LOGO;
     truckUrl = TRUCK_IMG;
     roadUrl  = ROAD_IMG;
+
+    // Footer app badges
+    iosBadgeUrl     = IOS_BADGE;
+    androidBadgeUrl = ANDROID_BADGE;
+    iosAppUrl       = IOS_APP_URL;
+    androidAppUrl   = ANDROID_APP_URL;
 
     get cardData() {
         let raw = this.value;
@@ -22,16 +34,14 @@ export default class SafexpressWaybillEnquiryLWCCard extends LightningElement {
         return raw && typeof raw === 'object' ? raw : null;
     }
 
-    // Error only when errorMessage is present AND no waybill
     get isError() {
         const d = this.cardData;
         return Boolean(d && d.errorMessage && !d.waybillNumberFormatted);
     }
 
-    // Show data card when waybillNumberFormatted present OR when no data at all (preview)
     get hasData() {
         const d = this.cardData;
-        if (!d) return true; // preview state — show data card template
+        if (!d) return true; 
         return Boolean(d.waybillNumberFormatted);
     }
 
@@ -78,10 +88,5 @@ export default class SafexpressWaybillEnquiryLWCCard extends LightningElement {
 
     get errorMessage() {
         return this.cardData ? this.cardData.errorMessage : null;
-    }
-
-    get footerNote() {
-        const d = this.cardData;
-        return d && d.footerNote ? d.footerNote : '🙏 Thank you for choosing Safexpress. 😊';
     }
 }

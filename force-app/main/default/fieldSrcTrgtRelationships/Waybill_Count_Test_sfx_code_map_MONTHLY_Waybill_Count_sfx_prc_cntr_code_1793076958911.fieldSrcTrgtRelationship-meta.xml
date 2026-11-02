@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSrcTrgtRelationship xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <definitionCreationType>Calculated_Insight</definitionCreationType>
+    <masterLabel>Waybill_Count_Test_sfx_code_map_MONTHLY_Waybill_Count_sfx_prc_cntr_code_1793076958911</masterLabel>
+    <owner>DataCloud</owner>
+    <relationshipCardinality>ManyToOne</relationshipCardinality>
+    <sourceFieldName>Waybill_Count_Test__cio.sfx_code__c</sourceFieldName>
+    <targetEntity xsi:nil="true"/>
+    <targetFieldName>MONTHLY_Waybill_Count__dlm.sfx_prc_cntr_code__c</targetFieldName>
+</FieldSrcTrgtRelationship>

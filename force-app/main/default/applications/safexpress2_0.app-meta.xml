@@ -68,7 +68,6 @@
     <setupExperience>p13n</setupExperience>
     <tabs>standard-home</tabs>
     <tabs>standard-WorkbenchHome</tabs>
-    <tabs>standard-Campaign</tabs>
     <tabs>standard-Lead</tabs>
     <tabs>standard-Opportunity</tabs>
     <uiType>Lightning</uiType>

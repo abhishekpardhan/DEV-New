@@ -1,0 +1,14 @@
+{
+  "required" : [ "formData" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "formData" : {
+      "title" : "Urgent Delivery Form",
+      "description" : "Form where the customer enters their mobile, email, and instructions for urgent delivery.",
+      "lightning:type" : "c__safexpressUrgentDeliveryForm",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

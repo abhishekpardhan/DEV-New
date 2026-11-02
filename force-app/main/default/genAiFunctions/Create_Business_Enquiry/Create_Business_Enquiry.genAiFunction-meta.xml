@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Shows the customer the Business Enquiry form and registers the business enquiry. Validates every detail, blocks duplicates (same mobile number and email), finds or creates the Contact and creates the Business Enquiry (B2B) case. Returns the status, the reference number and the exact message to show the customer. Use this whenever the customer wants to raise a new business enquiry. Never ask for pincode, mobile number, email, name, designation or organisation in chat - the form collects them.</description>
+    <developerName>Create_Business_Enquiry</developerName>
+    <invocationTarget>SafexpressBusinessEnquiryService</invocationTarget>
+    <invocationTargetType>apex</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <localDeveloperName>Create_Business_Enquiry</localDeveloperName>
+    <masterLabel>Create Business Enquiry</masterLabel>
+    <progressIndicatorMessage>Registering your business enquiry...</progressIndicatorMessage>
+</GenAiFunction>

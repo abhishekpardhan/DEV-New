@@ -3,16 +3,16 @@
     <fullName>ValidationForMailingAddress</fullName>
     <active>true</active>
     <errorConditionFormula>AND(OR($Profile.Name = &apos;BDM&apos;,
-							$Profile.Name = &apos;Area Manager&apos;,
-							$Profile.Name = &apos;Regional National Sales Manager&apos;,
-							$Profile.Name = &apos;Regional New Sales Manager&apos;),
-							if(OR(ISBLANK(Lead_Name__c),NOT(isNew())),true,false),
-				OR(ISBLANK(MailingStreet),  
-							ISBLANK(MailingCity),  
-							ISBLANK(MailingPostalCode),  
-						 ISBLANK(MailingState),
-						ISPICKVAL(Address_Type__c, &apos;&apos; ) 							 
-							 )
+$Profile.Name = &apos;Area Manager&apos;,
+$Profile.Name = &apos;Regional National Sales Manager&apos;,
+$Profile.Name = &apos;Regional New Sales Manager&apos;,$Profile.Name = &apos;SFX Field&apos;),
+if(OR(ISBLANK(Lead_Name__c),NOT(isNew())),true,false),
+OR(ISBLANK(MailingStreet),
+ISBLANK(MailingCity),
+ISBLANK(MailingPostalCode),
+ISBLANK(MailingState),
+ISPICKVAL(Address_Type__c, &apos;&apos; )
+)
 )</errorConditionFormula>
     <errorMessage>Please fill the complete Mailing Address !</errorMessage>
 </ValidationRule>

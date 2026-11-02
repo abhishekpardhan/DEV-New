@@ -1017,11 +1017,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>If_Others_Please_Specify__c</field>
-            <table>User.Event__c$CreatedById.Contacts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>Lead_Name__c</field>
             <table>User.Event__c$CreatedById.Contacts__r</table>
         </columns>

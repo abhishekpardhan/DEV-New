@@ -1,7 +1,22 @@
+/**
+* @File Name          : LeadAssignmentService.cls
+* @Description        : Resolves Lead pincodes and assigns eligible Leads to an Area Manager or Central Desk
+* @Author             : Abhishek
+* @Group              : GT
+* @Last Modified By   : Abhishek
+* @Last Modified On   : 28/10/2026
+*==============================================================================
+* Ver         Date              Author              Modification
+*==============================================================================
+* 1.0         28/10/2026        Abhishek            Class Created
+**/
 public inherited sharing class LeadAssignmentService {
     public static Boolean isJobUpdate = false;
     private static Id cachedCentralDeskQueueId;
 
+    // Prepare new Leads before they are saved. Set Central Desk eligibility for
+    // Website/Case Leads, resolve known pincodes locally, and mark unknown ones
+    // Pending so they can be looked up after insert.
     public static void onBeforeInsert(List<Lead> newLeads) {
         try {
             Set<String> pincodes = new Set<String>();
@@ -37,6 +52,9 @@ public inherited sharing class LeadAssignmentService {
         }
     }
 
+    // Start the external lookup for newly saved Leads whose pincode was not
+    // found locally. Create Draft integration transactions; their trigger
+    // handles the later API processing.
     public static void onAfterInsert(List<Lead> newLeads) {
         try {
             List<Integration_Transaction__c> txns = new List<Integration_Transaction__c>();
@@ -60,6 +78,8 @@ public inherited sharing class LeadAssignmentService {
         }
     }
 
+    // Record unexpected service errors with the method name and stack trace.
+    // If the logging utility fails, write its failure to the debug log.
     private static void logError(String methodName, Exception e) {
         try {
             String msg = e.getTypeName() + ': ' + e.getMessage()
@@ -71,6 +91,9 @@ public inherited sharing class LeadAssignmentService {
         }
     }
 
+    // Handle Leads newly marked for Central Desk during an update. Skip job
+    // updates and pending lookups; send previously evaluated Leads to the
+    // queue and evaluate the others for an Area Manager.
     public static void onBeforeUpdate(List<Lead> newLeads, Map<Id, Lead> oldMap) {
         if (isJobUpdate) return;
         try {
@@ -97,6 +120,9 @@ public inherited sharing class LeadAssignmentService {
         }
     }
 
+    // Choose an owner for Leads ready for assignment. Give a Lead to its Area
+    // Manager only when exactly one active manager matches the area; otherwise
+    // keep it with Central Desk and mark the assignment as evaluated.
     public static void assignAreaManager(List<Lead> leads) {
         if (leads == null || leads.isEmpty()) return;
 
@@ -138,6 +164,9 @@ public inherited sharing class LeadAssignmentService {
         return String.isBlank(value) ? null : value.trim().toUpperCase();
     }
 
+    // Check available pincode and branch records before using the external API.
+    // Trim nonblank pincodes and return their locally resolved area and region
+    // so callers can complete lookup and assignment in the same transaction.
     @TestVisible
     private static Map<String, AreaRegion> resolveLocal(Set<String> pincodes) {
         Set<String> normalized = new Set<String>();
@@ -149,6 +178,8 @@ public inherited sharing class LeadAssignmentService {
         return new ReferenceData().resolve(normalized);
     }
 
+    // Get the Central Desk queue used when no unique manager can own a Lead.
+    // Cache its Id for repeated assignments in the same transaction.
     public static Id centralDeskQueueId() {
         if (cachedCentralDeskQueueId == null) {
             cachedCentralDeskQueueId = new ReferenceData().queueId();
@@ -156,8 +187,13 @@ public inherited sharing class LeadAssignmentService {
         return cachedCentralDeskQueueId;
     }
 
+    // Read queue, manager, pincode, and branch reference data for assignment.
+    // These lookups must work independently of Lead record sharing.
     private without sharing class ReferenceData {
 
+        // Find active Area Managers for the requested areas. Group their Ids
+        // by normalized area so assignment can detect a single match or fall
+        // back to Central Desk when multiple managers match.
         public Map<String, List<Id>> areaManagers(Set<String> areas) {
             Map<String, List<Id>> result = new Map<String, List<Id>>();
             if (areas.isEmpty()) return result;
@@ -177,6 +213,9 @@ public inherited sharing class LeadAssignmentService {
             return result;
         }
 
+        // Resolve requested pincodes using local Pincode and PropelI Branch
+        // Master records. Use the oldest mapping for duplicates and return
+        // only pincodes whose branch provides a nonblank area.
         public Map<String, AreaRegion> resolve(Set<String> pincodes) {
             Map<String, AreaRegion> result = new Map<String, AreaRegion>();
             if (pincodes.isEmpty()) return result;
@@ -219,6 +258,9 @@ public inherited sharing class LeadAssignmentService {
             return result;
         }
 
+        // Find the queue used as the fallback Lead owner. Fail with a clear
+        // configuration error when Central_Desk is missing instead of assigning
+        // a Lead to an unknown owner.
         public Id queueId() {
             List<Group> queues = [
                 SELECT Id FROM Group

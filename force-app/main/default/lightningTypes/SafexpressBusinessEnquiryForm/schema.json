@@ -1,0 +1,5 @@
+{
+  "description" : "Business enquiry details collected from the customer through the Safexpress form.",
+  "lightning:type" : "@apexClassType/c__SafexpressBusinessEnquiryForm",
+  "title" : "SafexpressBusinessEnquiryForm"
+}

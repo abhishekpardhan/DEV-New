@@ -11,5 +11,6 @@
         )
     )
 )</errorConditionFormula>
-    <errorMessage>Enter a valid 15-character GST Number.</errorMessage>
+    <errorDisplayField>GST_Number__c</errorDisplayField>
+    <errorMessage>Please enter a valid 15-character GSTIN using uppercase letters and digits only. Ensure the GSTIN follows the correct format.</errorMessage>
 </ValidationRule>

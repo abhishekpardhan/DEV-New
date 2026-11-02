@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Collection_Branch_Flag_c__c</fullName>
+    <defaultValue>false</defaultValue>
+    <label>Collection Branch Flag</label>
+    <mktDataModelFieldAttributes>
+        <definitionCreationType>Custom</definitionCreationType>
+        <isDynamicLookup>false</isDynamicLookup>
+        <labelOverride>Collection Branch Flag</labelOverride>
+        <masterLabel>Collection Branch Flag</masterLabel>
+        <usageTag>None</usageTag>
+    </mktDataModelFieldAttributes>
+    <type>Checkbox</type>
+</CustomField>

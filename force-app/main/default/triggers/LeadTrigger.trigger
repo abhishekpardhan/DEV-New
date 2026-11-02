@@ -2,7 +2,10 @@ trigger LeadTrigger on Lead (
     before insert,
     after insert,
     before update,
-    after update
+    after update,
+    before delete,
+    after delete,
+    after undelete
 ) {
     new LeadTriggerHandler().run();
 }

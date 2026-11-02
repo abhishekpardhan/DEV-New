@@ -3,6 +3,10 @@
     <label>Uttarakhand</label>
     <protected>false</protected>
     <values>
+        <field>State_Abbreviation__c</field>
+        <value xsi:type="xsd:string">UK</value>
+    </values>
+    <values>
         <field>State_GST_Code__c</field>
         <value xsi:type="xsd:string">05</value>
     </values>

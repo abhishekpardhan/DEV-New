@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>dlvry_dt__c</fullName>
+    <label>DLVRY_DT</label>
+    <mktDataModelFieldAttributes>
+        <definitionCreationType>Custom</definitionCreationType>
+        <isDynamicLookup>false</isDynamicLookup>
+        <labelOverride>DLVRY_DT</labelOverride>
+        <masterLabel>DLVRY_DT</masterLabel>
+        <usageTag>None</usageTag>
+    </mktDataModelFieldAttributes>
+    <required>false</required>
+    <type>DateTime</type>
+</CustomField>

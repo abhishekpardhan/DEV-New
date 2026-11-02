@@ -4,13 +4,13 @@
         <creationType>Standard</creationType>
         <dataModelTaxonomy>Salesforce_SFDCReferenceModel_0_93</dataModelTaxonomy>
         <dataSpaceName>default</dataSpaceName>
-        <isEnabled>true</isEnabled>
+        <isEnabled>false</isEnabled>
         <isSegmentable>false</isSegmentable>
         <isSqlDmo>false</isSqlDmo>
         <isUsedForMetrics>false</isUsedForMetrics>
         <labelOverride>Invoice</labelOverride>
         <masterLabel>Invoice</masterLabel>
-        <objectCategory>Salesforce_SFDCReferenceModel_0_93.Related</objectCategory>
+        <objectCategory>Salesforce_SFDCReferenceModel_0_93.Unassigned</objectCategory>
         <referenceEntityGroup>Invoice</referenceEntityGroup>
         <referenceEntityName>Invoice</referenceEntityName>
         <referenceEntitySubjectArea>Invoice</referenceEntitySubjectArea>

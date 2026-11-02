@@ -1,3 +1,15 @@
+/**
+* @File Name          : PincodeLookupQueueable.cls
+* @Description        : Looks up Lead pincodes through PropelI and updates Lead assignment and integration transactions
+* @Author             : Abhishek
+* @Group              : GT
+* @Last Modified By   : Abhishek
+* @Last Modified On   : 28/10/2026
+*==============================================================================
+* Ver         Date              Author              Modification
+*==============================================================================
+* 1.0         28/10/2026        Abhishek            Added class and method Created
+**/
 public without sharing class PincodeLookupQueueable implements Queueable, Database.AllowsCallouts {
     private static final String TOKEN_ENDPOINT = 'callout:Propeli_Token_API/oauth2/token';
     private static final String ENDPOINT =
@@ -21,6 +33,8 @@ public without sharing class PincodeLookupQueueable implements Queueable, Databa
     }
     private class TokenResult { public String token; public String error; }
 
+    // Divide integration transactions into groups of up to BATCH_SIZE and enqueue a
+    // separate lookup job for each group, using the requested delay.
     public static void enqueueInChunks(Map<String, String> all, Integer delayMinutes) {
         Map<String, String> chunk = new Map<String, String>();
         for (String txnId : all.keySet()) {
@@ -33,6 +47,8 @@ public without sharing class PincodeLookupQueueable implements Queueable, Databa
         if (!chunk.isEmpty()) enqueueChunk(chunk, delayMinutes);
     }
 
+    // Enqueue one group when the transaction has a Queueable slot available.
+    // Otherwise log its transaction IDs so the Draft records can be replayed.
     private static void enqueueChunk(Map<String, String> chunk, Integer delayMinutes) {
         if (Limits.getQueueableJobs() < Limits.getLimitQueueableJobs()) {
             System.enqueueJob(new PincodeLookupQueueable(chunk), delayMinutes);
@@ -43,6 +59,8 @@ public without sharing class PincodeLookupQueueable implements Queueable, Databa
         }
     }
 
+    // Attach a finalizer, then process the job's integration transactions.
+    // Log unexpected errors and register the affected transactions for retry.
     public void execute(QueueableContext ctx) {
         Set<Id> txnIds = new Set<Id>();
         for (String s : txnToLead.keySet()) txnIds.add((Id) s);
@@ -63,6 +81,9 @@ public without sharing class PincodeLookupQueueable implements Queueable, Databa
         }
     }
 
+    // Read Draft transactions and look up each distinct pincode, reusing one
+    // OAuth token. Update only still-Pending Leads, then save the lookup result,
+    // failure, or retry state on each integration transaction.
     private void process(Set<Id> txnIds) {
         Integer maxAttempts = Integer.valueOf(Label.Max_Retries);
 
@@ -77,11 +98,13 @@ public without sharing class PincodeLookupQueueable implements Queueable, Databa
         Map<Id, String> pincodeByTxn = new Map<Id, String>();
         Map<String, LookupResult> results = new Map<String, LookupResult>();
         TokenResult token;
+        // Reserve one available callout for the shared OAuth token request.
         Integer capacity = Math.max(0, Limits.getLimitCallouts() - Limits.getCallouts() - 1);
 
         for (Integration_Transaction__c t : txns) {
             String pin = pincodeOf(t);
             pincodeByTxn.put(t.Id, pin);
+            // Reuse the result when several transactions request the same pincode.
             if (String.isBlank(pin) || results.containsKey(pin)) continue;
 
             if (results.size() >= capacity) {
@@ -93,7 +116,7 @@ public without sharing class PincodeLookupQueueable implements Queueable, Databa
                                                  : errorResult(token.error));
         }
 
-        // ---- re-read leads: only still-Pending ones are touched ----
+        // Lock and update only Leads that still need a lookup result.
         Set<Id> leadIds = new Set<Id>();
         for (Integration_Transaction__c t : txns) leadIds.add((Id) t.Record_Id__c);
         Map<Id, Lead> leads = new Map<Id, Lead>([
@@ -110,6 +133,7 @@ public without sharing class PincodeLookupQueueable implements Queueable, Databa
 
         for (Integration_Transaction__c t : txns) {
             Lead lead = leads.get((Id) t.Record_Id__c);
+            // A completed or removed Lead no longer needs this transaction.
             if (lead == null) {
                 t.Status__c = 'Success';
                 t.Error_Message__c = 'Lead no longer Pending; skipped.';
@@ -118,6 +142,7 @@ public without sharing class PincodeLookupQueueable implements Queueable, Databa
 
             String pin = pincodeByTxn.get(t.Id);
             LookupResult r;
+            // A blank pincode is treated as not found without making a callout.
             if (String.isBlank(pin)) {
                 r = new LookupResult();
                 r.state = LookupState.NOT_FOUND;
@@ -146,6 +171,7 @@ public without sharing class PincodeLookupQueueable implements Queueable, Databa
                 change.Area__c = r.area;
                 change.Region__c = r.region;
                 change.Pincode_Lookup_Status__c = 'Completed';
+                // Only Leads flagged for Central Desk need owner assignment here.
                 if (lead.Assign_to_Central_Desk__c == true) assignable.add(change);
             } else { // NOT_FOUND
                 t.Status__c = 'Success';
@@ -153,12 +179,13 @@ public without sharing class PincodeLookupQueueable implements Queueable, Databa
                 applyCentralDesk(change, queueId, 'Not Found');
             }
             updates.add(change);
+            // Keep the transaction at the same index as its Lead update result.
             updateTxns.add(t);
         }
 
         LeadAssignmentService.assignAreaManager(assignable);
 
-        // ---- write back ----
+        // Suppress normal Lead assignment while this job writes lookup results.
         List<ExceptionHandler__c> failures = new List<ExceptionHandler__c>();
         Boolean previousJobUpdate = LeadAssignmentService.isJobUpdate;
         try {
@@ -183,7 +210,7 @@ public without sharing class PincodeLookupQueueable implements Queueable, Databa
             LeadAssignmentService.isJobUpdate = previousJobUpdate;
         }
 
-        // IT update fires the trigger; retried records go back through the handler
+        // Updating Draft transactions fires the handler that schedules retries.
         Database.SaveResult[] txnSaves = Database.update(txns, false);
         for (Integer i = 0; i < txnSaves.size(); i++) {
             if (!txnSaves[i].isSuccess()) {
@@ -195,6 +222,9 @@ public without sharing class PincodeLookupQueueable implements Queueable, Databa
         ExceptionHandling.Exceptions(failures);
     }
 
+    // Handle a failure that affected the whole job. Increment retry counts on
+    // Draft transactions; when attempts are exhausted, mark them failed and
+    // send any still-Pending Leads to Central Desk.
     public static void registerFailure(Set<Id> txnIds, String message) {
         Integer maxAttempts = Integer.valueOf(Label.Max_Retries);
         List<Integration_Transaction__c> txns = [
@@ -213,6 +243,7 @@ public without sharing class PincodeLookupQueueable implements Queueable, Databa
                 exhausted.add((Id) t.Record_Id__c);
             }
         }
+        // Only Leads still Pending need fallback assignment after retries end.
         if (!exhausted.isEmpty()) {
             List<Lead> stuck = [SELECT Id FROM Lead
                                 WHERE Id IN :exhausted AND Pincode_Lookup_Status__c = 'Pending'];
@@ -231,6 +262,8 @@ public without sharing class PincodeLookupQueueable implements Queueable, Databa
         if (!txns.isEmpty()) Database.update(txns, false);
     }
 
+    // Mark an unresolved or failed Lead as evaluated and assign it to the
+    // Central Desk queue with the supplied lookup status.
     private static void applyCentralDesk(Lead row, Id queueId, String status) {
         row.OwnerId = queueId;
         row.Assign_to_Central_Desk__c = true;
@@ -238,6 +271,8 @@ public without sharing class PincodeLookupQueueable implements Queueable, Databa
         row.Pincode_Lookup_Status__c = status;
     }
 
+    // Extract the pincode from the transaction's JSON request. Return null
+    // when the request is invalid so the job can handle it without a callout.
     private static String pincodeOf(Integration_Transaction__c t) {
         try {
             Map<String, Object> req = (Map<String, Object>) JSON.deserializeUntyped(t.Request__c);
@@ -255,12 +290,16 @@ public without sharing class PincodeLookupQueueable implements Queueable, Databa
         return r;
     }
 
+    // Perform one standalone pincode lookup by fetching an OAuth token first.
+    // Return a lookup error if token retrieval fails.
     @TestVisible
     private static LookupResult callApi(String pincode) {
         TokenResult tr = fetchToken();
         return tr.error == null ? callPincodeApi(pincode, tr.token) : errorResult(tr.error);
     }
 
+    // Request an OAuth access token from the configured token endpoint.
+    // Return the token or an error describing a failed or invalid response.
     private static TokenResult fetchToken() {
         TokenResult result = new TokenResult();
         try {
@@ -285,6 +324,9 @@ public without sharing class PincodeLookupQueueable implements Queueable, Databa
         return result;
     }
 
+    // Send the pincode and token to PropelI, then classify the response.
+    // Return area and region for one valid match, NOT_FOUND for no match,
+    // or ERROR for a callout or response failure.
     private static LookupResult callPincodeApi(String pincode, String token) {
         LookupResult result = new LookupResult();
         HttpRequest request = new HttpRequest();
@@ -297,6 +339,7 @@ public without sharing class PincodeLookupQueueable implements Queueable, Databa
         try {
             HttpResponse response = new Http().send(request);
             result.statusCode = response.getStatusCode();
+            // Remove the token before storing the response on a transaction.
             result.response = response.getBody() == null ? null : response.getBody().replace(token, '[REDACTED]');
             if (result.statusCode != 200) {
                 result.state = LookupState.ERROR;
@@ -311,12 +354,14 @@ public without sharing class PincodeLookupQueueable implements Queueable, Databa
             }
             Map<String, Object> data = (Map<String, Object>) payload.get('data');
             if (data == null) throw new CalloutException('Missing data object.');
+            // PropelI uses an empty data object when the pincode is not served.
             if (data.isEmpty()) { // confirmed out-of-service shape: data = {}
                 result.state = LookupState.NOT_FOUND;
                 return result;
             }
             List<Object> rows = (List<Object>) data.get('responseData');
             if (rows == null) throw new CalloutException('Missing responseData array.');
+            // A single response row is required to assign one area and region.
             if (rows.size() != 1) {
                 result.state = LookupState.NOT_FOUND;
                 return result;
@@ -341,7 +386,8 @@ public without sharing class PincodeLookupQueueable implements Queueable, Databa
         return value == null || value.length() <= maximum ? value : value.substring(0, maximum);
     }
 
-    // ex Finalizer: runs after the job, even if the job crashed
+    // Handle failures that stop the Queueable before its normal error handling
+    // can finish, so its transactions are still recorded for retry or failure.
     public without sharing class PincodeFinalizer implements Finalizer {
         private Set<Id> txnIds;
 
@@ -349,6 +395,8 @@ public without sharing class PincodeLookupQueueable implements Queueable, Databa
             this.txnIds = txnIds;
         }
 
+        // When the parent job ends with an unhandled exception, log the error
+        // and update its Draft transactions through registerFailure.
         public void execute(FinalizerContext ctx) {
             if (ctx.getResult() != ParentJobResult.UNHANDLED_EXCEPTION) return;
             try {

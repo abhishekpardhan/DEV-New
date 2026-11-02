@@ -34,6 +34,10 @@
                     <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
+                    <name>hideSlackAction</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
                     <name>numVisibleActions</name>
                     <value>4</value>
                 </componentInstanceProperties>
@@ -114,23 +118,6 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Designation__c</fieldItem>
                 <identifier>RecordDesignation_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.If_Others_Please_Specify__c</fieldItem>
-                <identifier>RecordIf_Others_Please_Specify_cField</identifier>
-                <visibilityRule>
-                    <criteria>
-                        <leftValue>{!Record.Designation__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>Others</rightValue>
-                    </criteria>
-                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>

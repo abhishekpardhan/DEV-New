@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnalyticsVisualization xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <analyticsWorkspace>Service_Agent_Analytics_Workspace</analyticsWorkspace>
+    <dataSource>Service_Agent_Analytics_Extension_9c5</dataSource>
+    <fields>
+        <displayCategory>Discrete</displayCategory>
+        <fieldKey>F3</fieldKey>
+        <fieldName>Agent_Name_clc</fieldName>
+        <role>Dimension</role>
+        <type>Field</type>
+    </fields>
+    <fields>
+        <displayCategory>Continuous</displayCategory>
+        <fieldKey>F5</fieldKey>
+        <fieldName>Voice_Metrics_Calc_clc</fieldName>
+        <function>UserAgg</function>
+        <label>&lt;[Parameters].[Voice Metrics]&gt;</label>
+        <role>Measure</role>
+        <type>Field</type>
+    </fields>
+    <fields>
+        <displayCategory>Discrete</displayCategory>
+        <fieldKey>F6</fieldKey>
+        <fieldName>Timeframe_clc</fieldName>
+        <role>Dimension</role>
+        <type>Field</type>
+    </fields>
+    <fields>
+        <displayCategory>Continuous</displayCategory>
+        <fieldKey>F7</fieldKey>
+        <fieldName>Sorting_Date_clc</fieldName>
+        <function>Max</function>
+        <role>Measure</role>
+        <type>Field</type>
+    </fields>
+    <fields>
+        <displayCategory>Discrete</displayCategory>
+        <fieldKey>F8</fieldKey>
+        <fieldName>SMFilter_for_SP_clc</fieldName>
+        <role>Dimension</role>
+        <type>Field</type>
+    </fields>
+    <fields>
+        <displayCategory>Discrete</displayCategory>
+        <fieldKey>F9</fieldKey>
+        <fieldName>SMFilter_for_Session_clc</fieldName>
+        <role>Dimension</role>
+        <type>Field</type>
+    </fields>
+    <masterLabel>Voice Interruption Rate</masterLabel>
+    <templateAssetSourceName>Voice_Interruption_Rate</templateAssetSourceName>
+    <templateSource>sfdc_internal__Service_Agent_Analytics</templateSource>
+    <version>66.0</version>
+    <views>
+        <fullName>Voice_Interruption_Rate_default</fullName>
+        <isOriginal>true</isOriginal>
+        <masterLabel>default</masterLabel>
+        <version>66.0</version>
+        <viewSpecification>{&quot;filters&quot;:[{&quot;fieldKey&quot;:&quot;F8&quot;,&quot;isContext&quot;:true,&quot;filterInfos&quot;:[{&quot;type&quot;:&quot;In&quot;,&quot;useAll&quot;:false,&quot;isCustom&quot;:false,&quot;values&quot;:[true],&quot;isExcludes&quot;:false}]},{&quot;fieldKey&quot;:&quot;F9&quot;,&quot;isContext&quot;:true,&quot;filterInfos&quot;:[{&quot;type&quot;:&quot;In&quot;,&quot;useAll&quot;:false,&quot;isCustom&quot;:false,&quot;values&quot;:[true],&quot;isExcludes&quot;:false}]}],&quot;sortOrders&quot;:{&quot;fields&quot;:{&quot;F6&quot;:{&quot;type&quot;:&quot;Field&quot;,&quot;order&quot;:&quot;Ascending&quot;,&quot;byField&quot;:&quot;F7&quot;}},&quot;rows&quot;:[],&quot;columns&quot;:[]}}</viewSpecification>
+    </views>
+    <visualSpecification>eyJtb2RlIjoiVmlzdWFsaXphdGlvbiIsInJvd3MiOlsiRjUiXSwiY29sdW1ucyI6WyJGNiJdLCJtYXJrcyI6eyJBTEwiOnsidHlwZSI6IkxpbmUiLCJpc0F1dG9tYXRpYyI6ZmFsc2UsInN0YWNrIjp7ImlzQXV0b21hdGljIjp0cnVlLCJpc1N0YWNrZWQiOmZhbHNlfSwiZW5jb2RpbmdzIjpbeyJmaWVsZEtleSI6IkYzIiwidHlwZSI6IkNvbG9yIn1dfX0sInN0eWxlIjp7ImZpdCI6IlN0YW5kYXJkIiwidGl0bGUiOnsiaXNWaXNpYmxlIjp0cnVlfSwic2hvd0RhdGFQbGFjZWhvbGRlciI6ZmFsc2UsImF4aXMiOnsiRjUiOnsiaXNWaXNpYmxlIjp0cnVlLCJyYW5nZSI6eyJ0eXBlIjoiQXV0byIsImluY2x1ZGVaZXJvIjp0cnVlfSwic2NhbGUiOnsiZm9ybWF0Ijp7Im51bWJlckZvcm1hdEluZm8iOnsidHlwZSI6Ik51bWJlclNob3J0IiwiZGVjaW1hbFBsYWNlcyI6MiwibmVnYXRpdmVWYWx1ZXNGb3JtYXQiOiJBdXRvIiwiZGlzcGxheVVuaXRzIjoiQXV0byIsInByZWZpeCI6IiIsInN1ZmZpeCI6IiIsImluY2x1ZGVUaG91c2FuZFNlcGFyYXRvciI6dHJ1ZX19fSwidGlja3MiOnsibWFqb3JUaWNrcyI6eyJ0eXBlIjoiQXV0byJ9LCJtaW5vclRpY2tzIjp7InR5cGUiOiJBdXRvIn19LCJpc1plcm9MaW5lVmlzaWJsZSI6dHJ1ZX19LCJwYW5lcyI6eyJGNSI6eyJkZWZhdWx0cyI6eyJmb3JtYXQiOnsibnVtYmVyRm9ybWF0SW5mbyI6eyJ0eXBlIjoiTnVtYmVyIiwiZGVjaW1hbFBsYWNlcyI6MiwibmVnYXRpdmVWYWx1ZXNGb3JtYXQiOiJBdXRvIiwiZGlzcGxheVVuaXRzIjoiQXV0byIsInByZWZpeCI6IiIsInN1ZmZpeCI6IiIsImluY2x1ZGVUaG91c2FuZFNlcGFyYXRvciI6dHJ1ZX19fX19LCJtYXJrcyI6eyJBTEwiOnsibGFiZWwiOnsiY2FuT3ZlcmxhcExhYmVscyI6ZmFsc2UsInNob3dNYXJrTGFiZWxzIjp0cnVlLCJtYXJrc1RvTGFiZWwiOnsidHlwZSI6IkFsbCJ9fSwiY29sb3IiOnsiY29sb3IiOiIifSwicmFuZ2UiOnsicmV2ZXJzZSI6dHJ1ZX0sInNpemUiOnsidHlwZSI6IlBpeGVsIiwiaXNBdXRvbWF0aWMiOnRydWUsInZhbHVlIjozfSwiaXNBdXRvbWF0aWNTaXplIjp0cnVlLCJpc1N0YWNraW5nQXhpc0NlbnRlcmVkIjpmYWxzZX19LCJmaWVsZExhYmVscyI6eyJyb3dzIjp7InNob3dMYWJlbHMiOnRydWUsInNob3dEaXZpZGVyTGluZSI6ZmFsc2V9LCJjb2x1bW5zIjp7InNob3dMYWJlbHMiOnRydWUsInNob3dEaXZpZGVyTGluZSI6ZmFsc2V9fSwicmVmZXJlbmNlTGluZXMiOnt9LCJmb250cyI6eyJhY3Rpb25hYmxlSGVhZGVycyI6eyJzaXplIjoxMywiY29sb3IiOiIjMDI1MEQ5In0sImhlYWRlcnMiOnsic2l6ZSI6MTMsImNvbG9yIjoiIzJFMkUyRSJ9LCJmaWVsZExhYmVscyI6eyJzaXplIjoxMywiY29sb3IiOiIjMkUyRTJFIn0sIm1hcmtzIjp7InNpemUiOjEzLCJjb2xvciI6IiMyRTJFMkUifSwibWFya0xhYmVscyI6eyJzaXplIjoxMywiY29sb3IiOiIjMkUyRTJFIn0sImxlZ2VuZExhYmVscyI6eyJzaXplIjoxMywiY29sb3IiOiIjMkUyRTJFIn0sImF4aXNUaWNrTGFiZWxzIjp7InNpemUiOjEzLCJjb2xvciI6IiMyRTJFMkUifX0sInNoYWRpbmciOnsiYmFja2dyb3VuZENvbG9yIjoiI0ZGRkZGRiIsImJhbmRpbmciOnsicm93cyI6eyJjb2xvciI6IiNFNUU1RTUifX19LCJsaW5lcyI6eyJmaWVsZExhYmVsRGl2aWRlckxpbmUiOnsiY29sb3IiOiIjQzlDOUM5In0sInNlcGFyYXRvckxpbmUiOnsiY29sb3IiOiIjQzlDOUM5In0sImF4aXNMaW5lIjp7ImNvbG9yIjoiI0M5QzlDOSJ9LCJ6ZXJvTGluZSI6eyJjb2xvciI6IiNDOUM5QzkifX0sImFsbEhlYWRlcnMiOnsiZmllbGRzIjp7IkY2Ijp7ImlzVmlzaWJsZSI6dHJ1ZSwiaGlkZGVuVmFsdWVzIjpbXSwic2hvd01pc3NpbmdWYWx1ZXMiOmZhbHNlfX0sInJvd3MiOnsibWVyZ2VSZXBlYXRlZENlbGxzIjp0cnVlLCJzaG93SW5kZXgiOmZhbHNlfSwiY29sdW1ucyI6eyJtZXJnZVJlcGVhdGVkQ2VsbHMiOnRydWUsInNob3dJbmRleCI6ZmFsc2V9fX0sImxlZ2VuZHMiOnsiRjMiOnsiaXNWaXNpYmxlIjp0cnVlLCJ0aXRsZSI6eyJpc1Zpc2libGUiOnRydWV9LCJwb3NpdGlvbiI6IlJpZ2h0In19LCJtZWFzdXJlVmFsdWVzIjpbXSwicmVmZXJlbmNlTGluZXMiOnt9LCJmb3JlY2FzdHMiOnt9fQ==</visualSpecification>
+    <workspaceAssetRelationships>
+        <asset xsi:nil="true"/>
+        <assetType>AnalyticsVisualization</assetType>
+        <assetUsageType>Created</assetUsageType>
+        <workspace>Service_Agent_Analytics_Workspace</workspace>
+    </workspaceAssetRelationships>
+</AnalyticsVisualization>

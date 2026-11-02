@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>state_count_last_month__c</fullName>
+    <label>STATE_COUNT_LAST_MONTH</label>
+    <mktDataModelFieldAttributes>
+        <definitionCreationType>Custom</definitionCreationType>
+        <isDynamicLookup>false</isDynamicLookup>
+        <labelOverride>STATE_COUNT_LAST_MONTH</labelOverride>
+        <masterLabel>STATE_COUNT_LAST_MONTH</masterLabel>
+        <usageTag>None</usageTag>
+    </mktDataModelFieldAttributes>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>6</scale>
+    <type>Number</type>
+</CustomField>

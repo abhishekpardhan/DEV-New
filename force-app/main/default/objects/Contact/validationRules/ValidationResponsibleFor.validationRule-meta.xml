@@ -3,12 +3,13 @@
     <fullName>ValidationResponsibleFor</fullName>
     <active>true</active>
     <errorConditionFormula>AND(
-    ISBLANK(Responsible_for__c),
-	if(OR(ISBLANK(Lead_Name__c),NOT(isNew())),true,false),
-				OR($Profile.Name = &apos;BDM&apos;,
-							$Profile.Name = &apos;Area Manager&apos;,
-							$Profile.Name = &apos;Regional National Sales Manager&apos;,
-							$Profile.Name = &apos;Regional New Sales Manager&apos;)
-				)</errorConditionFormula>
+ISBLANK(Responsible_for__c),
+if(OR(ISBLANK(Lead_Name__c),NOT(isNew())),true,false),
+OR($Profile.Name = &apos;BDM&apos;,
+$Profile.Name = &apos;Area Manager&apos;,
+$Profile.Name = &apos;Regional National Sales Manager&apos;,
+$Profile.Name = &apos;Regional New Sales Manager&apos;,
+$Profile.Name = &apos;SFX Field&apos;)
+)</errorConditionFormula>
     <errorMessage>Error: Please select at least one value of &apos;Responsible For&apos;</errorMessage>
 </ValidationRule>

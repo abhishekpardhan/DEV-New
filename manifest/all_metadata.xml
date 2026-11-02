@@ -6,6 +6,14 @@
         <name>ActionableListDefinition</name>
     </types>
     <types>
+        <members>std_Abandonment_Score_Sahay</members>
+        <members>std_BillingOutcome_Sahay</members>
+        <members>std_Deflection_Score_Sahay</members>
+        <members>std_Quality_Score_Sahay</members>
+        <members>std_Session_Notes_Sahay</members>
+        <name>AiAgentScorerDefinition</name>
+    </types>
+    <types>
         <members>Sahay_1</members>
         <members>Sahay_10</members>
         <members>Sahay_11</members>
@@ -23,7 +31,16 @@
         <members>Sahay_22</members>
         <members>Sahay_23</members>
         <members>Sahay_24</members>
+        <members>Sahay_25</members>
+        <members>Sahay_26</members>
+        <members>Sahay_27</members>
+        <members>Sahay_28</members>
+        <members>Sahay_29</members>
         <members>Sahay_3</members>
+        <members>Sahay_30</members>
+        <members>Sahay_31</members>
+        <members>Sahay_32</members>
+        <members>Sahay_33</members>
         <members>Sahay_4</members>
         <members>Sahay_5</members>
         <members>Sahay_6</members>
@@ -35,6 +52,44 @@
     <types>
         <members>testingq_1xK8u2</members>
         <name>AiEvaluationDefinition</name>
+    </types>
+    <types>
+        <members>Employee_Agent_Analytics</members>
+        <members>Service_Agent_Analytics</members>
+        <name>AnalyticsDashboard</name>
+    </types>
+    <types>
+        <members>Agent_Effectiveness_Viz</members>
+        <members>Breakdown_by_Intents</members>
+        <members>Breakdown_by_Subagents</members>
+        <members>Breakdown_by_Tools</members>
+        <members>Effectiveness</members>
+        <members>Health</members>
+        <members>Health_Metrics_Viz</members>
+        <members>Intent_Insights</members>
+        <members>Quality</members>
+        <members>Quality_Metrics_Viz</members>
+        <members>Session_Outcome</members>
+        <members>Subagent_Insights</members>
+        <members>Subagent_Usage</members>
+        <members>TTFT_Viz</members>
+        <members>TTFT_Viz1</members>
+        <members>TTLT_Viz</members>
+        <members>TTLT_Viz1</members>
+        <members>Table_View</members>
+        <members>Table_View_Metrics</members>
+        <members>Tool_Insights</members>
+        <members>Tool_Usage</members>
+        <members>Unique_Sessions_by_Channel</members>
+        <members>Usage</members>
+        <members>Usage_Metrics_Viz</members>
+        <members>Voice_Interruption_Rate</members>
+        <name>AnalyticsVisualization</name>
+    </types>
+    <types>
+        <members>Employee_Agent_Analytics_Workspace</members>
+        <members>Service_Agent_Analytics_Workspace</members>
+        <name>AnalyticsWorkspace</name>
     </types>
     <types>
         <members>AccTeamDelBatch</members>
@@ -64,6 +119,7 @@
         <members>AgentforcePincodeCheck</members>
         <members>AgentforcePincodeCheckTest</members>
         <members>AgentforcePincodeLocationCard</members>
+        <members>ApexCommonUtils</members>
         <members>AssignBranchPopulate</members>
         <members>AssignBranchPopulateTest</members>
         <members>AssignToApproverJob</members>
@@ -266,10 +322,16 @@
         <members>JourneyStatusControllerTest</members>
         <members>JourneyTriggerHandler</members>
         <members>JourneyTriggerHandlerTest</members>
+        <members>LeadAssignmentService</members>
+        <members>LeadAssignmentServiceTest</members>
         <members>LeadConversion</members>
         <members>LeadConversionTest</members>
         <members>LeadDropApprovalService</members>
         <members>LeadDropApprovalServiceTest</members>
+        <members>LeadDuplicateService</members>
+        <members>LeadDuplicateServiceTest</members>
+        <members>LeadEnrichmentService</members>
+        <members>LeadEnrichmentServiceTest</members>
         <members>LeadReviveController</members>
         <members>LeadReviveControllerTest</members>
         <members>LeadSearchController</members>
@@ -324,9 +386,12 @@
         <members>PaymentUpsertAPITest</members>
         <members>PicklistEntryWrapper</members>
         <members>PicklistEntryWrapper_Test</members>
+        <members>PincodeApiMock</members>
         <members>PincodeInfoBatch</members>
         <members>PincodeInfoBatchScheduler</members>
         <members>PincodeInfoBatchTest</members>
+        <members>PincodeLookupQueueable</members>
+        <members>PincodeLookupQueueableTest</members>
         <members>PincodeLookupService</members>
         <members>PortfolioClass</members>
         <members>PortfolioClassTest</members>
@@ -390,6 +455,9 @@
         <members>SFXCustomerUpsertTest</members>
         <members>SFX_RATE_UpsertAPI</members>
         <members>SFX_RATE_UpsertAPITest</members>
+        <members>SafexpressBusinessEnquiryForm</members>
+        <members>SafexpressBusinessEnquiryService</members>
+        <members>SafexpressBusinessEnquiryValidator</members>
         <members>SafexpressChequeController</members>
         <members>SafexpressChequeControllerTest</members>
         <members>SafexpressChequeEmailInvoker</members>
@@ -397,6 +465,9 @@
         <members>SafexpressDamageEscalationAction</members>
         <members>SafexpressDamageEscalationForm</members>
         <members>SafexpressPostDeliveryStatusAction</members>
+        <members>SafexpressUrgentDeliveryAction</members>
+        <members>SafexpressUrgentDeliveryController</members>
+        <members>SafexpressUrgentDeliveryForm</members>
         <members>SafexpressWayBillResponseWrapper</members>
         <members>SafexpressWaybillEnquiryAction</members>
         <members>SafexpressWaybillEnquiryActionTest</members>
@@ -1210,6 +1281,7 @@
         <members>Account_Home__dll.Jigsaw__c</members>
         <members>Account_Home__dll.KQ_Fax__c</members>
         <members>Account_Home__dll.KQ_Id__c</members>
+        <members>Account_Home__dll.KQ_Name__c</members>
         <members>Account_Home__dll.KQ_OwnerId__c</members>
         <members>Account_Home__dll.KQ_ParentId__c</members>
         <members>Account_Home__dll.KQ_Phone__c</members>
@@ -1441,7 +1513,9 @@
         <members>Account_SAFEXPRESSPROD__dll.Is_Propel_Account_c__c</members>
         <members>Account_SAFEXPRESSPROD__dll.JigsawCompanyId__c</members>
         <members>Account_SAFEXPRESSPROD__dll.Jigsaw__c</members>
+        <members>Account_SAFEXPRESSPROD__dll.KQ_Contract_c__c</members>
         <members>Account_SAFEXPRESSPROD__dll.KQ_Id__c</members>
+        <members>Account_SAFEXPRESSPROD__dll.KQ_Name__c</members>
         <members>Account_SAFEXPRESSPROD__dll.KQ_Ownership__c</members>
         <members>Account_SAFEXPRESSPROD__dll.KQ_ParentId__c</members>
         <members>Account_SAFEXPRESSPROD__dll.LastActivityDate__c</members>
@@ -1775,6 +1849,607 @@
         <members>Activity.ValidationBypassDateTime__c</members>
         <members>Activity.Visited_With__c</members>
         <members>Activity.non_recoverable_reason__c</members>
+        <members>AgentOpt_Tag_Association_D3B114DB__dll.AiAgentInteractionId__c</members>
+        <members>AgentOpt_Tag_Association_D3B114DB__dll.AiAgentMomentId__c</members>
+        <members>AgentOpt_Tag_Association_D3B114DB__dll.AiAgentSessionId__c</members>
+        <members>AgentOpt_Tag_Association_D3B114DB__dll.AiAgentTagDefinitionAssociationId__c</members>
+        <members>AgentOpt_Tag_Association_D3B114DB__dll.AiAgentTagId__c</members>
+        <members>AgentOpt_Tag_Association_D3B114DB__dll.AssociationReasonText__c</members>
+        <members>AgentOpt_Tag_Association_D3B114DB__dll.AttributeText__c</members>
+        <members>AgentOpt_Tag_Association_D3B114DB__dll.CreatedByUserId__c</members>
+        <members>AgentOpt_Tag_Association_D3B114DB__dll.CreatedDate__c</members>
+        <members>AgentOpt_Tag_Association_D3B114DB__dll.DataSourceObject__c</members>
+        <members>AgentOpt_Tag_Association_D3B114DB__dll.DataSource__c</members>
+        <members>AgentOpt_Tag_Association_D3B114DB__dll.Id__c</members>
+        <members>AgentOpt_Tag_Association_D3B114DB__dll.IsPassed__c</members>
+        <members>AgentOpt_Tag_Association_D3B114DB__dll.KQ_AiAgentInteractionId__c</members>
+        <members>AgentOpt_Tag_Association_D3B114DB__dll.KQ_AiAgentMomentId__c</members>
+        <members>AgentOpt_Tag_Association_D3B114DB__dll.KQ_AiAgentSessionId__c</members>
+        <members>AgentOpt_Tag_Association_D3B114DB__dll.KQ_AiAgentTagDefinitionAssociationId__c</members>
+        <members>AgentOpt_Tag_Association_D3B114DB__dll.KQ_AiAgentTagId__c</members>
+        <members>AgentOpt_Tag_Association_D3B114DB__dll.KQ_Id__c</members>
+        <members>AgentOpt_Tag_Association_D3B114DB__dll.OrgId__c</members>
+        <members>AgentOpt_Tag_Association_D3B114DB__dll.OutcomeType__c</members>
+        <members>AgentOpt_Tag_Association_D3B114DB__dll.SessionStartTimestamp__c</members>
+        <members>AgentOpt_Tag_Association_D3B114DB__dll.SourceType__c</members>
+        <members>AgentOpt_Tag_Association_D3B114DB__dll.ValueText__c</members>
+        <members>AgentOpt_Tag_Association_D3B114DB__dll.cdp_sys_PartitionDate__c</members>
+        <members>AgentOpt_Tag_Association_D3B114DB__dll.cdp_sys_SourceVersion__c</members>
+        <members>AgentOpt_Tag_Association_Log_572B1DF0__dll.AiAgentApiName__c</members>
+        <members>AgentOpt_Tag_Association_Log_572B1DF0__dll.AiAgentInteractionId__c</members>
+        <members>AgentOpt_Tag_Association_Log_572B1DF0__dll.AiAgentMomentId__c</members>
+        <members>AgentOpt_Tag_Association_Log_572B1DF0__dll.AiAgentSessionId__c</members>
+        <members>AgentOpt_Tag_Association_Log_572B1DF0__dll.AiAgentSessionStartTimestamp__c</members>
+        <members>AgentOpt_Tag_Association_Log_572B1DF0__dll.AiAgentTagDefinitionId__c</members>
+        <members>AgentOpt_Tag_Association_Log_572B1DF0__dll.AiAgentTagId__c</members>
+        <members>AgentOpt_Tag_Association_Log_572B1DF0__dll.Category__c</members>
+        <members>AgentOpt_Tag_Association_Log_572B1DF0__dll.Code__c</members>
+        <members>AgentOpt_Tag_Association_Log_572B1DF0__dll.DataSourceObject__c</members>
+        <members>AgentOpt_Tag_Association_Log_572B1DF0__dll.DataSource__c</members>
+        <members>AgentOpt_Tag_Association_Log_572B1DF0__dll.Id__c</members>
+        <members>AgentOpt_Tag_Association_Log_572B1DF0__dll.KQ_AiAgentInteractionId__c</members>
+        <members>AgentOpt_Tag_Association_Log_572B1DF0__dll.KQ_AiAgentMomentId__c</members>
+        <members>AgentOpt_Tag_Association_Log_572B1DF0__dll.KQ_AiAgentSessionId__c</members>
+        <members>AgentOpt_Tag_Association_Log_572B1DF0__dll.KQ_AiAgentTagDefinitionId__c</members>
+        <members>AgentOpt_Tag_Association_Log_572B1DF0__dll.KQ_AiAgentTagId__c</members>
+        <members>AgentOpt_Tag_Association_Log_572B1DF0__dll.KQ_Id__c</members>
+        <members>AgentOpt_Tag_Association_Log_572B1DF0__dll.LogDateTime__c</members>
+        <members>AgentOpt_Tag_Association_Log_572B1DF0__dll.LogLevel__c</members>
+        <members>AgentOpt_Tag_Association_Log_572B1DF0__dll.Message__c</members>
+        <members>AgentOpt_Tag_Association_Log_572B1DF0__dll.OrgId__c</members>
+        <members>AgentOpt_Tag_Association_Log_572B1DF0__dll.cdp_sys_PartitionDate__c</members>
+        <members>AgentOpt_Tag_Association_Log_572B1DF0__dll.cdp_sys_SourceVersion__c</members>
+        <members>AgentOpt_Tag_D602E652__dll.AiAgentTagDefinitionId__c</members>
+        <members>AgentOpt_Tag_D602E652__dll.CreatedDate__c</members>
+        <members>AgentOpt_Tag_D602E652__dll.DataSourceObject__c</members>
+        <members>AgentOpt_Tag_D602E652__dll.DataSource__c</members>
+        <members>AgentOpt_Tag_D602E652__dll.Description__c</members>
+        <members>AgentOpt_Tag_D602E652__dll.Id__c</members>
+        <members>AgentOpt_Tag_D602E652__dll.IsActive__c</members>
+        <members>AgentOpt_Tag_D602E652__dll.IsFallback__c</members>
+        <members>AgentOpt_Tag_D602E652__dll.KQ_AiAgentTagDefinitionId__c</members>
+        <members>AgentOpt_Tag_D602E652__dll.KQ_Id__c</members>
+        <members>AgentOpt_Tag_D602E652__dll.OrderNumber__c</members>
+        <members>AgentOpt_Tag_D602E652__dll.OrgId__c</members>
+        <members>AgentOpt_Tag_D602E652__dll.OutcomeType__c</members>
+        <members>AgentOpt_Tag_D602E652__dll.Value__c</members>
+        <members>AgentOpt_Tag_D602E652__dll.cdp_sys_SourceVersion__c</members>
+        <members>AgentOpt_Tag_Def_641598D7__dll.CreatedDate__c</members>
+        <members>AgentOpt_Tag_Def_641598D7__dll.DataSourceObject__c</members>
+        <members>AgentOpt_Tag_Def_641598D7__dll.DataSource__c</members>
+        <members>AgentOpt_Tag_Def_641598D7__dll.DataType__c</members>
+        <members>AgentOpt_Tag_Def_641598D7__dll.Description__c</members>
+        <members>AgentOpt_Tag_Def_641598D7__dll.DeveloperName__c</members>
+        <members>AgentOpt_Tag_Def_641598D7__dll.EngineType__c</members>
+        <members>AgentOpt_Tag_Def_641598D7__dll.Id__c</members>
+        <members>AgentOpt_Tag_Def_641598D7__dll.InputScope__c</members>
+        <members>AgentOpt_Tag_Def_641598D7__dll.KQ_Id__c</members>
+        <members>AgentOpt_Tag_Def_641598D7__dll.LightningTypeApiName__c</members>
+        <members>AgentOpt_Tag_Def_641598D7__dll.Name__c</members>
+        <members>AgentOpt_Tag_Def_641598D7__dll.OrgId__c</members>
+        <members>AgentOpt_Tag_Def_641598D7__dll.SemanticType__c</members>
+        <members>AgentOpt_Tag_Def_641598D7__dll.SourceTagReferenceName__c</members>
+        <members>AgentOpt_Tag_Def_641598D7__dll.SourceType__c</members>
+        <members>AgentOpt_Tag_Def_641598D7__dll.Status__c</members>
+        <members>AgentOpt_Tag_Def_641598D7__dll.TagIdentifier__c</members>
+        <members>AgentOpt_Tag_Def_641598D7__dll.VersionNumber__c</members>
+        <members>AgentOpt_Tag_Def_641598D7__dll.cdp_sys_SourceVersion__c</members>
+        <members>AgentOpt_Tag_Def_Association_80FC62FB__dll.AiAgentApiName__c</members>
+        <members>AgentOpt_Tag_Def_Association_80FC62FB__dll.AiAgentTagDefinitionId__c</members>
+        <members>AgentOpt_Tag_Def_Association_80FC62FB__dll.AiPromptTemplateId__c</members>
+        <members>AgentOpt_Tag_Def_Association_80FC62FB__dll.CreatedDate__c</members>
+        <members>AgentOpt_Tag_Def_Association_80FC62FB__dll.DataSourceObject__c</members>
+        <members>AgentOpt_Tag_Def_Association_80FC62FB__dll.DataSource__c</members>
+        <members>AgentOpt_Tag_Def_Association_80FC62FB__dll.Id__c</members>
+        <members>AgentOpt_Tag_Def_Association_80FC62FB__dll.InputScope__c</members>
+        <members>AgentOpt_Tag_Def_Association_80FC62FB__dll.IsActive__c</members>
+        <members>AgentOpt_Tag_Def_Association_80FC62FB__dll.KQ_AiAgentTagDefinitionId__c</members>
+        <members>AgentOpt_Tag_Def_Association_80FC62FB__dll.KQ_Id__c</members>
+        <members>AgentOpt_Tag_Def_Association_80FC62FB__dll.OrgId__c</members>
+        <members>AgentOpt_Tag_Def_Association_80FC62FB__dll.cdp_sys_SourceVersion__c</members>
+        <members>Agent_Interaction__dll.DataSourceObject__c</members>
+        <members>Agent_Interaction__dll.DataSource__c</members>
+        <members>Agent_Interaction__dll.KQ_eventId__c</members>
+        <members>Agent_Interaction__dll.KQ_individualId__c</members>
+        <members>Agent_Interaction__dll.KQ_prevInteractionId__c</members>
+        <members>Agent_Interaction__dll.KQ_sessionId__c</members>
+        <members>Agent_Interaction__dll.attributeText__c</members>
+        <members>Agent_Interaction__dll.cdp_sys_BrowserName__c</members>
+        <members>Agent_Interaction__dll.cdp_sys_BrowserRenderEngine__c</members>
+        <members>Agent_Interaction__dll.cdp_sys_BrowserVendor__c</members>
+        <members>Agent_Interaction__dll.cdp_sys_BrowserVersion__c</members>
+        <members>Agent_Interaction__dll.cdp_sys_DeviceManufacturer__c</members>
+        <members>Agent_Interaction__dll.cdp_sys_DeviceModel__c</members>
+        <members>Agent_Interaction__dll.cdp_sys_DeviceType__c</members>
+        <members>Agent_Interaction__dll.cdp_sys_IsBrowser__c</members>
+        <members>Agent_Interaction__dll.cdp_sys_OSFamily__c</members>
+        <members>Agent_Interaction__dll.cdp_sys_OSVendor__c</members>
+        <members>Agent_Interaction__dll.cdp_sys_OSVersion__c</members>
+        <members>Agent_Interaction__dll.cdp_sys_PartitionDate__c</members>
+        <members>Agent_Interaction__dll.cdp_sys_SourceVersion__c</members>
+        <members>Agent_Interaction__dll.cdp_sys_UserAgent__c</members>
+        <members>Agent_Interaction__dll.dateTime__c</members>
+        <members>Agent_Interaction__dll.endTimestamp__c</members>
+        <members>Agent_Interaction__dll.eventId__c</members>
+        <members>Agent_Interaction__dll.eventType__c</members>
+        <members>Agent_Interaction__dll.individualId__c</members>
+        <members>Agent_Interaction__dll.interactionType__c</members>
+        <members>Agent_Interaction__dll.orgId__c</members>
+        <members>Agent_Interaction__dll.prevInteractionId__c</members>
+        <members>Agent_Interaction__dll.sessionId__c</members>
+        <members>Agent_Interaction__dll.sessionOwnerId__c</members>
+        <members>Agent_Interaction__dll.sessionOwnerObject__c</members>
+        <members>Agent_Interaction__dll.telemetryTraceId__c</members>
+        <members>Agent_Interaction__dll.telemetryTraceSpanId__c</members>
+        <members>Agent_Interaction__dll.topicApiName__c</members>
+        <members>Agent_Log__dll.DataSourceObject__c</members>
+        <members>Agent_Log__dll.DataSource__c</members>
+        <members>Agent_Log__dll.KQ_causeLogId__c</members>
+        <members>Agent_Log__dll.KQ_eventId__c</members>
+        <members>Agent_Log__dll.KQ_interactionId__c</members>
+        <members>Agent_Log__dll.KQ_rootCauseLogId__c</members>
+        <members>Agent_Log__dll.KQ_sessionId__c</members>
+        <members>Agent_Log__dll.KQ_stepId__c</members>
+        <members>Agent_Log__dll.category__c</members>
+        <members>Agent_Log__dll.causeLogId__c</members>
+        <members>Agent_Log__dll.cdp_sys_BrowserName__c</members>
+        <members>Agent_Log__dll.cdp_sys_BrowserRenderEngine__c</members>
+        <members>Agent_Log__dll.cdp_sys_BrowserVendor__c</members>
+        <members>Agent_Log__dll.cdp_sys_BrowserVersion__c</members>
+        <members>Agent_Log__dll.cdp_sys_DeviceManufacturer__c</members>
+        <members>Agent_Log__dll.cdp_sys_DeviceModel__c</members>
+        <members>Agent_Log__dll.cdp_sys_DeviceType__c</members>
+        <members>Agent_Log__dll.cdp_sys_IsBrowser__c</members>
+        <members>Agent_Log__dll.cdp_sys_OSFamily__c</members>
+        <members>Agent_Log__dll.cdp_sys_OSVendor__c</members>
+        <members>Agent_Log__dll.cdp_sys_OSVersion__c</members>
+        <members>Agent_Log__dll.cdp_sys_PartitionDate__c</members>
+        <members>Agent_Log__dll.cdp_sys_SourceVersion__c</members>
+        <members>Agent_Log__dll.cdp_sys_UserAgent__c</members>
+        <members>Agent_Log__dll.code__c</members>
+        <members>Agent_Log__dll.dateTime__c</members>
+        <members>Agent_Log__dll.description__c</members>
+        <members>Agent_Log__dll.detailedDescription__c</members>
+        <members>Agent_Log__dll.eventId__c</members>
+        <members>Agent_Log__dll.eventType__c</members>
+        <members>Agent_Log__dll.interactionId__c</members>
+        <members>Agent_Log__dll.logLevelType__c</members>
+        <members>Agent_Log__dll.orgId__c</members>
+        <members>Agent_Log__dll.rootCauseLogId__c</members>
+        <members>Agent_Log__dll.sessionId__c</members>
+        <members>Agent_Log__dll.stepId__c</members>
+        <members>Agent_Log__dll.telemetryTraceSpanId__c</members>
+        <members>Agent_Log__dll.telemetryTrace__c</members>
+        <members>Agent_MessageAttachment__dll.DataSourceObject__c</members>
+        <members>Agent_MessageAttachment__dll.DataSource__c</members>
+        <members>Agent_MessageAttachment__dll.KQ_eventId__c</members>
+        <members>Agent_MessageAttachment__dll.KQ_messageId__c</members>
+        <members>Agent_MessageAttachment__dll.cdp_sys_BrowserName__c</members>
+        <members>Agent_MessageAttachment__dll.cdp_sys_BrowserRenderEngine__c</members>
+        <members>Agent_MessageAttachment__dll.cdp_sys_BrowserVendor__c</members>
+        <members>Agent_MessageAttachment__dll.cdp_sys_BrowserVersion__c</members>
+        <members>Agent_MessageAttachment__dll.cdp_sys_DeviceManufacturer__c</members>
+        <members>Agent_MessageAttachment__dll.cdp_sys_DeviceModel__c</members>
+        <members>Agent_MessageAttachment__dll.cdp_sys_DeviceType__c</members>
+        <members>Agent_MessageAttachment__dll.cdp_sys_IsBrowser__c</members>
+        <members>Agent_MessageAttachment__dll.cdp_sys_OSFamily__c</members>
+        <members>Agent_MessageAttachment__dll.cdp_sys_OSVendor__c</members>
+        <members>Agent_MessageAttachment__dll.cdp_sys_OSVersion__c</members>
+        <members>Agent_MessageAttachment__dll.cdp_sys_PartitionDate__c</members>
+        <members>Agent_MessageAttachment__dll.cdp_sys_SourceVersion__c</members>
+        <members>Agent_MessageAttachment__dll.cdp_sys_UserAgent__c</members>
+        <members>Agent_MessageAttachment__dll.contentVersionId__c</members>
+        <members>Agent_MessageAttachment__dll.dateTime__c</members>
+        <members>Agent_MessageAttachment__dll.eventId__c</members>
+        <members>Agent_MessageAttachment__dll.eventType__c</members>
+        <members>Agent_MessageAttachment__dll.fileType__c</members>
+        <members>Agent_MessageAttachment__dll.messageId__c</members>
+        <members>Agent_MessageAttachment__dll.orgId__c</members>
+        <members>Agent_MessageAttachment__dll.sfDriveId__c</members>
+        <members>Agent_MessageAttachment__dll.source__c</members>
+        <members>Agent_Message__dll.DataSourceObject__c</members>
+        <members>Agent_Message__dll.DataSource__c</members>
+        <members>Agent_Message__dll.KQ_eventId__c</members>
+        <members>Agent_Message__dll.KQ_individualId__c</members>
+        <members>Agent_Message__dll.KQ_interactionId__c</members>
+        <members>Agent_Message__dll.KQ_parentMessageId__c</members>
+        <members>Agent_Message__dll.KQ_participantId__c</members>
+        <members>Agent_Message__dll.KQ_sessionId__c</members>
+        <members>Agent_Message__dll.cdp_sys_BrowserName__c</members>
+        <members>Agent_Message__dll.cdp_sys_BrowserRenderEngine__c</members>
+        <members>Agent_Message__dll.cdp_sys_BrowserVendor__c</members>
+        <members>Agent_Message__dll.cdp_sys_BrowserVersion__c</members>
+        <members>Agent_Message__dll.cdp_sys_DeviceManufacturer__c</members>
+        <members>Agent_Message__dll.cdp_sys_DeviceModel__c</members>
+        <members>Agent_Message__dll.cdp_sys_DeviceType__c</members>
+        <members>Agent_Message__dll.cdp_sys_IsBrowser__c</members>
+        <members>Agent_Message__dll.cdp_sys_OSFamily__c</members>
+        <members>Agent_Message__dll.cdp_sys_OSVendor__c</members>
+        <members>Agent_Message__dll.cdp_sys_OSVersion__c</members>
+        <members>Agent_Message__dll.cdp_sys_PartitionDate__c</members>
+        <members>Agent_Message__dll.cdp_sys_SourceVersion__c</members>
+        <members>Agent_Message__dll.cdp_sys_UserAgent__c</members>
+        <members>Agent_Message__dll.contentText__c</members>
+        <members>Agent_Message__dll.dateTime__c</members>
+        <members>Agent_Message__dll.eventId__c</members>
+        <members>Agent_Message__dll.eventType__c</members>
+        <members>Agent_Message__dll.individualId__c</members>
+        <members>Agent_Message__dll.interactionId__c</members>
+        <members>Agent_Message__dll.messageAttributes__c</members>
+        <members>Agent_Message__dll.messageEndTimestamp__c</members>
+        <members>Agent_Message__dll.messageStartTimestamp__c</members>
+        <members>Agent_Message__dll.messageType__c</members>
+        <members>Agent_Message__dll.modality__c</members>
+        <members>Agent_Message__dll.msgContentType__c</members>
+        <members>Agent_Message__dll.orgId__c</members>
+        <members>Agent_Message__dll.parentMessageId__c</members>
+        <members>Agent_Message__dll.participantId__c</members>
+        <members>Agent_Message__dll.sessionId__c</members>
+        <members>Agent_Message__dll.sessionOwnerId__c</members>
+        <members>Agent_Message__dll.sessionOwnerObject__c</members>
+        <members>Agent_Participant__dll.DataSourceObject__c</members>
+        <members>Agent_Participant__dll.DataSource__c</members>
+        <members>Agent_Participant__dll.KQ_eventId__c</members>
+        <members>Agent_Participant__dll.KQ_individualId__c</members>
+        <members>Agent_Participant__dll.KQ_sessionId__c</members>
+        <members>Agent_Participant__dll.agentApiName__c</members>
+        <members>Agent_Participant__dll.agentTypeId__c</members>
+        <members>Agent_Participant__dll.cdp_sys_BrowserName__c</members>
+        <members>Agent_Participant__dll.cdp_sys_BrowserRenderEngine__c</members>
+        <members>Agent_Participant__dll.cdp_sys_BrowserVendor__c</members>
+        <members>Agent_Participant__dll.cdp_sys_BrowserVersion__c</members>
+        <members>Agent_Participant__dll.cdp_sys_DeviceManufacturer__c</members>
+        <members>Agent_Participant__dll.cdp_sys_DeviceModel__c</members>
+        <members>Agent_Participant__dll.cdp_sys_DeviceType__c</members>
+        <members>Agent_Participant__dll.cdp_sys_IsBrowser__c</members>
+        <members>Agent_Participant__dll.cdp_sys_OSFamily__c</members>
+        <members>Agent_Participant__dll.cdp_sys_OSVendor__c</members>
+        <members>Agent_Participant__dll.cdp_sys_OSVersion__c</members>
+        <members>Agent_Participant__dll.cdp_sys_PartitionDate__c</members>
+        <members>Agent_Participant__dll.cdp_sys_SourceVersion__c</members>
+        <members>Agent_Participant__dll.cdp_sys_UserAgent__c</members>
+        <members>Agent_Participant__dll.dateTime__c</members>
+        <members>Agent_Participant__dll.endTimestamp__c</members>
+        <members>Agent_Participant__dll.eventId__c</members>
+        <members>Agent_Participant__dll.eventType__c</members>
+        <members>Agent_Participant__dll.individualId__c</members>
+        <members>Agent_Participant__dll.orgId__c</members>
+        <members>Agent_Participant__dll.participantAttributeText__c</members>
+        <members>Agent_Participant__dll.participantId__c</members>
+        <members>Agent_Participant__dll.participantObject__c</members>
+        <members>Agent_Participant__dll.participantRole__c</members>
+        <members>Agent_Participant__dll.sessionId__c</members>
+        <members>Agent_Participant__dll.templateApiName__c</members>
+        <members>Agent_Participant__dll.versionApiName__c</members>
+        <members>Agent_SessionAttachment__dll.DataSourceObject__c</members>
+        <members>Agent_SessionAttachment__dll.DataSource__c</members>
+        <members>Agent_SessionAttachment__dll.KQ_eventId__c</members>
+        <members>Agent_SessionAttachment__dll.KQ_sessionId__c</members>
+        <members>Agent_SessionAttachment__dll.cdp_sys_BrowserName__c</members>
+        <members>Agent_SessionAttachment__dll.cdp_sys_BrowserRenderEngine__c</members>
+        <members>Agent_SessionAttachment__dll.cdp_sys_BrowserVendor__c</members>
+        <members>Agent_SessionAttachment__dll.cdp_sys_BrowserVersion__c</members>
+        <members>Agent_SessionAttachment__dll.cdp_sys_DeviceManufacturer__c</members>
+        <members>Agent_SessionAttachment__dll.cdp_sys_DeviceModel__c</members>
+        <members>Agent_SessionAttachment__dll.cdp_sys_DeviceType__c</members>
+        <members>Agent_SessionAttachment__dll.cdp_sys_IsBrowser__c</members>
+        <members>Agent_SessionAttachment__dll.cdp_sys_OSFamily__c</members>
+        <members>Agent_SessionAttachment__dll.cdp_sys_OSVendor__c</members>
+        <members>Agent_SessionAttachment__dll.cdp_sys_OSVersion__c</members>
+        <members>Agent_SessionAttachment__dll.cdp_sys_PartitionDate__c</members>
+        <members>Agent_SessionAttachment__dll.cdp_sys_SourceVersion__c</members>
+        <members>Agent_SessionAttachment__dll.cdp_sys_UserAgent__c</members>
+        <members>Agent_SessionAttachment__dll.dateTime__c</members>
+        <members>Agent_SessionAttachment__dll.eventId__c</members>
+        <members>Agent_SessionAttachment__dll.eventType__c</members>
+        <members>Agent_SessionAttachment__dll.fileType__c</members>
+        <members>Agent_SessionAttachment__dll.orgId__c</members>
+        <members>Agent_SessionAttachment__dll.sessionId__c</members>
+        <members>Agent_SessionAttachment__dll.sfDriveId__c</members>
+        <members>Agent_SessionAttachment__dll.source__c</members>
+        <members>Agent_SessionAttachment__dll.voiceCallRecordingId__c</members>
+        <members>Agent_Session__dll.DataSourceObject__c</members>
+        <members>Agent_Session__dll.DataSource__c</members>
+        <members>Agent_Session__dll.KQ_eventId__c</members>
+        <members>Agent_Session__dll.KQ_individualId__c</members>
+        <members>Agent_Session__dll.KQ_previousSessionId__c</members>
+        <members>Agent_Session__dll.cdp_sys_BrowserName__c</members>
+        <members>Agent_Session__dll.cdp_sys_BrowserRenderEngine__c</members>
+        <members>Agent_Session__dll.cdp_sys_BrowserVendor__c</members>
+        <members>Agent_Session__dll.cdp_sys_BrowserVersion__c</members>
+        <members>Agent_Session__dll.cdp_sys_DeviceManufacturer__c</members>
+        <members>Agent_Session__dll.cdp_sys_DeviceModel__c</members>
+        <members>Agent_Session__dll.cdp_sys_DeviceType__c</members>
+        <members>Agent_Session__dll.cdp_sys_IsBrowser__c</members>
+        <members>Agent_Session__dll.cdp_sys_OSFamily__c</members>
+        <members>Agent_Session__dll.cdp_sys_OSVendor__c</members>
+        <members>Agent_Session__dll.cdp_sys_OSVersion__c</members>
+        <members>Agent_Session__dll.cdp_sys_PartitionDate__c</members>
+        <members>Agent_Session__dll.cdp_sys_SourceVersion__c</members>
+        <members>Agent_Session__dll.cdp_sys_UserAgent__c</members>
+        <members>Agent_Session__dll.channelType__c</members>
+        <members>Agent_Session__dll.conversationId__c</members>
+        <members>Agent_Session__dll.dateTime__c</members>
+        <members>Agent_Session__dll.endTimestamp__c</members>
+        <members>Agent_Session__dll.eventId__c</members>
+        <members>Agent_Session__dll.eventType__c</members>
+        <members>Agent_Session__dll.individualId__c</members>
+        <members>Agent_Session__dll.messagingSessionId__c</members>
+        <members>Agent_Session__dll.orgId__c</members>
+        <members>Agent_Session__dll.previousSessionId__c</members>
+        <members>Agent_Session__dll.sessionEndType__c</members>
+        <members>Agent_Session__dll.sessionOwnerId__c</members>
+        <members>Agent_Session__dll.sessionOwnerObject__c</members>
+        <members>Agent_Session__dll.variableText__c</members>
+        <members>Agent_Session__dll.voiceCallId__c</members>
+        <members>Agent_Step__dll.DataSourceObject__c</members>
+        <members>Agent_Step__dll.DataSource__c</members>
+        <members>Agent_Step__dll.KQ_eventId__c</members>
+        <members>Agent_Step__dll.KQ_interactionId__c</members>
+        <members>Agent_Step__dll.KQ_prevStepId__c</members>
+        <members>Agent_Step__dll.attributeText__c</members>
+        <members>Agent_Step__dll.cdp_sys_BrowserName__c</members>
+        <members>Agent_Step__dll.cdp_sys_BrowserRenderEngine__c</members>
+        <members>Agent_Step__dll.cdp_sys_BrowserVendor__c</members>
+        <members>Agent_Step__dll.cdp_sys_BrowserVersion__c</members>
+        <members>Agent_Step__dll.cdp_sys_DeviceManufacturer__c</members>
+        <members>Agent_Step__dll.cdp_sys_DeviceModel__c</members>
+        <members>Agent_Step__dll.cdp_sys_DeviceType__c</members>
+        <members>Agent_Step__dll.cdp_sys_IsBrowser__c</members>
+        <members>Agent_Step__dll.cdp_sys_OSFamily__c</members>
+        <members>Agent_Step__dll.cdp_sys_OSVendor__c</members>
+        <members>Agent_Step__dll.cdp_sys_OSVersion__c</members>
+        <members>Agent_Step__dll.cdp_sys_PartitionDate__c</members>
+        <members>Agent_Step__dll.cdp_sys_SourceVersion__c</members>
+        <members>Agent_Step__dll.cdp_sys_UserAgent__c</members>
+        <members>Agent_Step__dll.dateTime__c</members>
+        <members>Agent_Step__dll.endTimestamp__c</members>
+        <members>Agent_Step__dll.errorMessageText__c</members>
+        <members>Agent_Step__dll.eventId__c</members>
+        <members>Agent_Step__dll.eventType__c</members>
+        <members>Agent_Step__dll.generationId__c</members>
+        <members>Agent_Step__dll.generationRequestId__c</members>
+        <members>Agent_Step__dll.generationResponseId__c</members>
+        <members>Agent_Step__dll.inputValueText__c</members>
+        <members>Agent_Step__dll.interactionId__c</members>
+        <members>Agent_Step__dll.name__c</members>
+        <members>Agent_Step__dll.orgId__c</members>
+        <members>Agent_Step__dll.outputValueText__c</members>
+        <members>Agent_Step__dll.postStepVariableText__c</members>
+        <members>Agent_Step__dll.preStepVariableText__c</members>
+        <members>Agent_Step__dll.prevStepId__c</members>
+        <members>Agent_Step__dll.stepType__c</members>
+        <members>Agent_Step__dll.subType__c</members>
+        <members>Agent_Step__dll.telemetryTraceSpanId__c</members>
+        <members>Agent_Step__dll.topicApiName__c</members>
+        <members>Agent_TagAssociation__dll.DataSourceObject__c</members>
+        <members>Agent_TagAssociation__dll.DataSource__c</members>
+        <members>Agent_TagAssociation__dll.KQ_eventId__c</members>
+        <members>Agent_TagAssociation__dll.KQ_interactionId__c</members>
+        <members>Agent_TagAssociation__dll.KQ_momentId__c</members>
+        <members>Agent_TagAssociation__dll.KQ_sessionId__c</members>
+        <members>Agent_TagAssociation__dll.KQ_tagDefAssociationId__c</members>
+        <members>Agent_TagAssociation__dll.KQ_tagId__c</members>
+        <members>Agent_TagAssociation__dll.associationReasonText__c</members>
+        <members>Agent_TagAssociation__dll.attributeText__c</members>
+        <members>Agent_TagAssociation__dll.cdp_sys_BrowserName__c</members>
+        <members>Agent_TagAssociation__dll.cdp_sys_BrowserRenderEngine__c</members>
+        <members>Agent_TagAssociation__dll.cdp_sys_BrowserVendor__c</members>
+        <members>Agent_TagAssociation__dll.cdp_sys_BrowserVersion__c</members>
+        <members>Agent_TagAssociation__dll.cdp_sys_DeviceManufacturer__c</members>
+        <members>Agent_TagAssociation__dll.cdp_sys_DeviceModel__c</members>
+        <members>Agent_TagAssociation__dll.cdp_sys_DeviceType__c</members>
+        <members>Agent_TagAssociation__dll.cdp_sys_IsBrowser__c</members>
+        <members>Agent_TagAssociation__dll.cdp_sys_OSFamily__c</members>
+        <members>Agent_TagAssociation__dll.cdp_sys_OSVendor__c</members>
+        <members>Agent_TagAssociation__dll.cdp_sys_OSVersion__c</members>
+        <members>Agent_TagAssociation__dll.cdp_sys_PartitionDate__c</members>
+        <members>Agent_TagAssociation__dll.cdp_sys_SourceVersion__c</members>
+        <members>Agent_TagAssociation__dll.cdp_sys_UserAgent__c</members>
+        <members>Agent_TagAssociation__dll.dateTime__c</members>
+        <members>Agent_TagAssociation__dll.eventId__c</members>
+        <members>Agent_TagAssociation__dll.eventType__c</members>
+        <members>Agent_TagAssociation__dll.interactionId__c</members>
+        <members>Agent_TagAssociation__dll.isPassed__c</members>
+        <members>Agent_TagAssociation__dll.momentId__c</members>
+        <members>Agent_TagAssociation__dll.orgId__c</members>
+        <members>Agent_TagAssociation__dll.outcomeType__c</members>
+        <members>Agent_TagAssociation__dll.sessionId__c</members>
+        <members>Agent_TagAssociation__dll.sessionStartTimestamp__c</members>
+        <members>Agent_TagAssociation__dll.sourceType__c</members>
+        <members>Agent_TagAssociation__dll.tagDefAssociationId__c</members>
+        <members>Agent_TagAssociation__dll.tagId__c</members>
+        <members>Agent_TagAssociation__dll.valueText__c</members>
+        <members>AiAgentMessageAttachment_std__dlm.ContentDocumentVersionId__c</members>
+        <members>AiAgentMessageAttachment_std__dlm.CreatedTimestamp__c</members>
+        <members>AiAgentMessageAttachment_std__dlm.DataSourceId__c</members>
+        <members>AiAgentMessageAttachment_std__dlm.DataSourceObjectId__c</members>
+        <members>AiAgentMessageAttachment_std__dlm.ExternalSourceId__c</members>
+        <members>AiAgentMessageAttachment_std__dlm.FilePathName__c</members>
+        <members>AiAgentMessageAttachment_std__dlm.FileType__c</members>
+        <members>AiAgentMessageAttachment_std__dlm.Id__c</members>
+        <members>AiAgentMessageAttachment_std__dlm.KQ_Id__c</members>
+        <members>AiAgentMessageAttachment_std__dlm.KQ_MessageId__c</members>
+        <members>AiAgentMessageAttachment_std__dlm.MessageId__c</members>
+        <members>AiAgentMessageAttachment_std__dlm.SourceName__c</members>
+        <members>AiAgentMessageAttachment_std__dlm.rel_1793276081914_end__c</members>
+        <members>AiAgentSessionAttachment_std__dlm.AiAgentSessionId__c</members>
+        <members>AiAgentSessionAttachment_std__dlm.ContentDocumentVersionId__c</members>
+        <members>AiAgentSessionAttachment_std__dlm.CreatedTimestamp__c</members>
+        <members>AiAgentSessionAttachment_std__dlm.DataSourceId__c</members>
+        <members>AiAgentSessionAttachment_std__dlm.DataSourceObjectId__c</members>
+        <members>AiAgentSessionAttachment_std__dlm.ExternalSourceId__c</members>
+        <members>AiAgentSessionAttachment_std__dlm.FilePathName__c</members>
+        <members>AiAgentSessionAttachment_std__dlm.FileType__c</members>
+        <members>AiAgentSessionAttachment_std__dlm.Id__c</members>
+        <members>AiAgentSessionAttachment_std__dlm.KQ_AiAgentSessionId__c</members>
+        <members>AiAgentSessionAttachment_std__dlm.KQ_Id__c</members>
+        <members>AiAgentSessionAttachment_std__dlm.SourceName__c</members>
+        <members>AiAgentSessionAttachment_std__dlm.rel_1793276089328_end__c</members>
+        <members>AiAgentSessionLog_std__dlm.AiAgentInteractionId__c</members>
+        <members>AiAgentSessionLog_std__dlm.AiAgentInteractionStepId__c</members>
+        <members>AiAgentSessionLog_std__dlm.AiAgentSessionId__c</members>
+        <members>AiAgentSessionLog_std__dlm.Category__c</members>
+        <members>AiAgentSessionLog_std__dlm.CauseLogId__c</members>
+        <members>AiAgentSessionLog_std__dlm.Code__c</members>
+        <members>AiAgentSessionLog_std__dlm.DataSourceId__c</members>
+        <members>AiAgentSessionLog_std__dlm.DataSourceObjectId__c</members>
+        <members>AiAgentSessionLog_std__dlm.Description__c</members>
+        <members>AiAgentSessionLog_std__dlm.DetailedDescription__c</members>
+        <members>AiAgentSessionLog_std__dlm.ExternalSourceId__c</members>
+        <members>AiAgentSessionLog_std__dlm.Id__c</members>
+        <members>AiAgentSessionLog_std__dlm.KQ_AiAgentInteractionId__c</members>
+        <members>AiAgentSessionLog_std__dlm.KQ_AiAgentInteractionStepId__c</members>
+        <members>AiAgentSessionLog_std__dlm.KQ_AiAgentSessionId__c</members>
+        <members>AiAgentSessionLog_std__dlm.KQ_CauseLogId__c</members>
+        <members>AiAgentSessionLog_std__dlm.KQ_Id__c</members>
+        <members>AiAgentSessionLog_std__dlm.KQ_RootCauseLogId__c</members>
+        <members>AiAgentSessionLog_std__dlm.LogDateTime__c</members>
+        <members>AiAgentSessionLog_std__dlm.LogLevelType__c</members>
+        <members>AiAgentSessionLog_std__dlm.RootCauseLogId__c</members>
+        <members>AiAgentSessionLog_std__dlm.TelemetryTraceSpanId__c</members>
+        <members>AiAgentSessionLog_std__dlm.TelemetryTrace__c</members>
+        <members>AiAgentSessionLog_std__dlm.rel_1793276062651_end__c</members>
+        <members>AiAgentSessionLog_std__dlm.rel_1793276063029_end__c</members>
+        <members>AiAgentSessionLog_std__dlm.rel_1793276063453_end__c</members>
+        <members>AiAgentSessionLog_std__dlm.rel_1793276089693_end__c</members>
+        <members>AiAgentSessionLog_std__dlm.rel_1793276110836_end__c</members>
+        <members>AiAgentSessionTag_Home__dll.AiTagDefAssocId__c</members>
+        <members>AiAgentSessionTag_Home__dll.AiTagDefinitionId__c</members>
+        <members>AiAgentSessionTag_Home__dll.AiTagValueId__c</members>
+        <members>AiAgentSessionTag_Home__dll.AssociationReason__c</members>
+        <members>AiAgentSessionTag_Home__dll.AttributeText__c</members>
+        <members>AiAgentSessionTag_Home__dll.CreatedById__c</members>
+        <members>AiAgentSessionTag_Home__dll.CreatedDate__c</members>
+        <members>AiAgentSessionTag_Home__dll.CurrencyIsoCode__c</members>
+        <members>AiAgentSessionTag_Home__dll.DataSourceObject__c</members>
+        <members>AiAgentSessionTag_Home__dll.DataSource__c</members>
+        <members>AiAgentSessionTag_Home__dll.Id__c</members>
+        <members>AiAgentSessionTag_Home__dll.IntentIdentifier__c</members>
+        <members>AiAgentSessionTag_Home__dll.InteractionIdentifier__c</members>
+        <members>AiAgentSessionTag_Home__dll.IsDeleted__c</members>
+        <members>AiAgentSessionTag_Home__dll.IsPassed__c</members>
+        <members>AiAgentSessionTag_Home__dll.KQ_AiTagDefAssocId__c</members>
+        <members>AiAgentSessionTag_Home__dll.KQ_AiTagValueId__c</members>
+        <members>AiAgentSessionTag_Home__dll.KQ_Id__c</members>
+        <members>AiAgentSessionTag_Home__dll.KQ_IntentIdentifier__c</members>
+        <members>AiAgentSessionTag_Home__dll.KQ_InteractionIdentifier__c</members>
+        <members>AiAgentSessionTag_Home__dll.KQ_SessionIdentifier__c</members>
+        <members>AiAgentSessionTag_Home__dll.LastModifiedById__c</members>
+        <members>AiAgentSessionTag_Home__dll.LastModifiedDate__c</members>
+        <members>AiAgentSessionTag_Home__dll.Name__c</members>
+        <members>AiAgentSessionTag_Home__dll.OutcomeType__c</members>
+        <members>AiAgentSessionTag_Home__dll.SessionIdentifier__c</members>
+        <members>AiAgentSessionTag_Home__dll.SessionStartTimestamp__c</members>
+        <members>AiAgentSessionTag_Home__dll.SfdcOrganizationId__c</members>
+        <members>AiAgentSessionTag_Home__dll.SourceType__c</members>
+        <members>AiAgentSessionTag_Home__dll.SystemModstamp__c</members>
+        <members>AiAgentSessionTag_Home__dll.ValueText__c</members>
+        <members>AiAgentSessionTag_Home__dll.cdp_sys_PartitionDate__c</members>
+        <members>AiAgentSessionTag_Home__dll.cdp_sys_SourceVersion__c</members>
+        <members>AiAgentTagAssocLog_std__dlm.AiAgentApiName__c</members>
+        <members>AiAgentTagAssocLog_std__dlm.AiAgentInteractionId__c</members>
+        <members>AiAgentTagAssocLog_std__dlm.AiAgentMomentId__c</members>
+        <members>AiAgentTagAssocLog_std__dlm.AiAgentSessionId__c</members>
+        <members>AiAgentTagAssocLog_std__dlm.AiAgentSessionStartTimestamp__c</members>
+        <members>AiAgentTagAssocLog_std__dlm.AiAgentTagDefinitionId__c</members>
+        <members>AiAgentTagAssocLog_std__dlm.AiAgentTagId__c</members>
+        <members>AiAgentTagAssocLog_std__dlm.Category__c</members>
+        <members>AiAgentTagAssocLog_std__dlm.Code__c</members>
+        <members>AiAgentTagAssocLog_std__dlm.DataSourceId__c</members>
+        <members>AiAgentTagAssocLog_std__dlm.DataSourceObjectId__c</members>
+        <members>AiAgentTagAssocLog_std__dlm.ExternalSourceId__c</members>
+        <members>AiAgentTagAssocLog_std__dlm.Id__c</members>
+        <members>AiAgentTagAssocLog_std__dlm.KQ_AiAgentInteractionId__c</members>
+        <members>AiAgentTagAssocLog_std__dlm.KQ_AiAgentMomentId__c</members>
+        <members>AiAgentTagAssocLog_std__dlm.KQ_AiAgentSessionId__c</members>
+        <members>AiAgentTagAssocLog_std__dlm.KQ_AiAgentTagDefinitionId__c</members>
+        <members>AiAgentTagAssocLog_std__dlm.KQ_AiAgentTagId__c</members>
+        <members>AiAgentTagAssocLog_std__dlm.KQ_Id__c</members>
+        <members>AiAgentTagAssocLog_std__dlm.LogDateTime__c</members>
+        <members>AiAgentTagAssocLog_std__dlm.LogLevel__c</members>
+        <members>AiAgentTagAssocLog_std__dlm.Message__c</members>
+        <members>AiAgentTagAssocLog_std__dlm.rel_1793276371257_end__c</members>
+        <members>AiAgentTagAssocLog_std__dlm.rel_1793276371666_end__c</members>
+        <members>AiAgentTagAssocLog_std__dlm.rel_1793276372052_end__c</members>
+        <members>AiAgentTagAssocLog_std__dlm.rel_1793276372427_end__c</members>
+        <members>AiAgentTagAssocLog_std__dlm.rel_1793276372802_end__c</members>
+        <members>AiAgentTagDefAssoc_Home__dll.AiAgentApiName__c</members>
+        <members>AiAgentTagDefAssoc_Home__dll.AiAgentId__c</members>
+        <members>AiAgentTagDefAssoc_Home__dll.AiTagDefinitionId__c</members>
+        <members>AiAgentTagDefAssoc_Home__dll.CreatedById__c</members>
+        <members>AiAgentTagDefAssoc_Home__dll.CreatedDate__c</members>
+        <members>AiAgentTagDefAssoc_Home__dll.DataSourceObject__c</members>
+        <members>AiAgentTagDefAssoc_Home__dll.DataSource__c</members>
+        <members>AiAgentTagDefAssoc_Home__dll.Id__c</members>
+        <members>AiAgentTagDefAssoc_Home__dll.InputScope__c</members>
+        <members>AiAgentTagDefAssoc_Home__dll.IsActiveTransformed__c</members>
+        <members>AiAgentTagDefAssoc_Home__dll.IsActive__c</members>
+        <members>AiAgentTagDefAssoc_Home__dll.IsDeleted__c</members>
+        <members>AiAgentTagDefAssoc_Home__dll.KQ_AiTagDefinitionId__c</members>
+        <members>AiAgentTagDefAssoc_Home__dll.KQ_Id__c</members>
+        <members>AiAgentTagDefAssoc_Home__dll.LastModifiedById__c</members>
+        <members>AiAgentTagDefAssoc_Home__dll.LastModifiedDate__c</members>
+        <members>AiAgentTagDefAssoc_Home__dll.SfdcOrganizationId__c</members>
+        <members>AiAgentTagDefAssoc_Home__dll.Specification__c</members>
+        <members>AiAgentTagDefAssoc_Home__dll.SystemModstamp__c</members>
+        <members>AiAgentTagDefAssoc_Home__dll.cdp_sys_SourceVersion__c</members>
+        <members>AiTagDefinition_Home__dll.AllowOverride__c</members>
+        <members>AiTagDefinition_Home__dll.CreatedById__c</members>
+        <members>AiTagDefinition_Home__dll.CreatedDate__c</members>
+        <members>AiTagDefinition_Home__dll.DataSourceObject__c</members>
+        <members>AiTagDefinition_Home__dll.DataSource__c</members>
+        <members>AiTagDefinition_Home__dll.DataType__c</members>
+        <members>AiTagDefinition_Home__dll.Description__c</members>
+        <members>AiTagDefinition_Home__dll.DeveloperName__c</members>
+        <members>AiTagDefinition_Home__dll.EngineRef__c</members>
+        <members>AiTagDefinition_Home__dll.EngineType__c</members>
+        <members>AiTagDefinition_Home__dll.EngineValue__c</members>
+        <members>AiTagDefinition_Home__dll.Id__c</members>
+        <members>AiTagDefinition_Home__dll.InputScope__c</members>
+        <members>AiTagDefinition_Home__dll.IsDeleted__c</members>
+        <members>AiTagDefinition_Home__dll.KQ_Id__c</members>
+        <members>AiTagDefinition_Home__dll.Language__c</members>
+        <members>AiTagDefinition_Home__dll.LastModifiedById__c</members>
+        <members>AiTagDefinition_Home__dll.LastModifiedDate__c</members>
+        <members>AiTagDefinition_Home__dll.LightningTypeApiName__c</members>
+        <members>AiTagDefinition_Home__dll.LightningType__c</members>
+        <members>AiTagDefinition_Home__dll.MasterLabel__c</members>
+        <members>AiTagDefinition_Home__dll.NamespacePrefix__c</members>
+        <members>AiTagDefinition_Home__dll.SemanticType__c</members>
+        <members>AiTagDefinition_Home__dll.SfdcOrganizationId__c</members>
+        <members>AiTagDefinition_Home__dll.SourceTagReference__c</members>
+        <members>AiTagDefinition_Home__dll.SourceType__c</members>
+        <members>AiTagDefinition_Home__dll.Specification__c</members>
+        <members>AiTagDefinition_Home__dll.Status__c</members>
+        <members>AiTagDefinition_Home__dll.SystemModstamp__c</members>
+        <members>AiTagDefinition_Home__dll.TagIdentifier__c</members>
+        <members>AiTagDefinition_Home__dll.UsageType__c</members>
+        <members>AiTagDefinition_Home__dll.VersionNumber__c</members>
+        <members>AiTagDefinition_Home__dll.cdp_sys_SourceVersion__c</members>
+        <members>AiTagValue_Home__dll.CreatedById__c</members>
+        <members>AiTagValue_Home__dll.CreatedDate__c</members>
+        <members>AiTagValue_Home__dll.DataSourceObject__c</members>
+        <members>AiTagValue_Home__dll.DataSource__c</members>
+        <members>AiTagValue_Home__dll.Description__c</members>
+        <members>AiTagValue_Home__dll.Id__c</members>
+        <members>AiTagValue_Home__dll.IsActiveTransformed__c</members>
+        <members>AiTagValue_Home__dll.IsActive__c</members>
+        <members>AiTagValue_Home__dll.IsDeleted__c</members>
+        <members>AiTagValue_Home__dll.IsFallbackSystemOnly__c</members>
+        <members>AiTagValue_Home__dll.IsFallbackTransformed__c</members>
+        <members>AiTagValue_Home__dll.IsFallback__c</members>
+        <members>AiTagValue_Home__dll.KQ_Id__c</members>
+        <members>AiTagValue_Home__dll.KQ_PrimaryAiTagDefinitionId__c</members>
+        <members>AiTagValue_Home__dll.LastModifiedById__c</members>
+        <members>AiTagValue_Home__dll.LastModifiedDate__c</members>
+        <members>AiTagValue_Home__dll.Order__c</members>
+        <members>AiTagValue_Home__dll.OutcomeType__c</members>
+        <members>AiTagValue_Home__dll.PrimaryAiTagDefinitionId__c</members>
+        <members>AiTagValue_Home__dll.SfdcOrganizationId__c</members>
+        <members>AiTagValue_Home__dll.SystemModstamp__c</members>
+        <members>AiTagValue_Home__dll.Value__c</members>
+        <members>AiTagValue_Home__dll.cdp_sys_SourceVersion__c</members>
         <members>Announcement__c.Image__c</members>
         <members>Announcement__c.Other_Profiles__c</members>
         <members>Announcement__c.User_profile__c</members>
@@ -1921,6 +2596,46 @@
         <members>Billing_Line_Item_c_SAFEXPRESSPROD__dlm.rel_1792563050023_end__c</members>
         <members>Billing_Line_Item_c_SAFEXPRESSPROD__dlm.rel_1792563050502_end__c</members>
         <members>Billing_Line_Item_c_SAFEXPRESSPROD__dlm.rel_1792563050841_end__c</members>
+        <members>BotDefinition_Home__dll.AgentTemplate__c</members>
+        <members>BotDefinition_Home__dll.AgentType__c</members>
+        <members>BotDefinition_Home__dll.BotSource__c</members>
+        <members>BotDefinition_Home__dll.BotUserId__c</members>
+        <members>BotDefinition_Home__dll.CreatedById__c</members>
+        <members>BotDefinition_Home__dll.CreatedDate__c</members>
+        <members>BotDefinition_Home__dll.DataSourceObject__c</members>
+        <members>BotDefinition_Home__dll.DataSource__c</members>
+        <members>BotDefinition_Home__dll.Description__c</members>
+        <members>BotDefinition_Home__dll.DeveloperName__c</members>
+        <members>BotDefinition_Home__dll.Id__c</members>
+        <members>BotDefinition_Home__dll.IsDeleted__c</members>
+        <members>BotDefinition_Home__dll.KQ_Id__c</members>
+        <members>BotDefinition_Home__dll.LastModifiedById__c</members>
+        <members>BotDefinition_Home__dll.LastModifiedDate__c</members>
+        <members>BotDefinition_Home__dll.MasterLabel__c</members>
+        <members>BotDefinition_Home__dll.SfdcOrganizationId__c</members>
+        <members>BotDefinition_Home__dll.SystemModstamp__c</members>
+        <members>BotDefinition_Home__dll.Type__c</members>
+        <members>BotDefinition_Home__dll.cdp_sys_SourceVersion__c</members>
+        <members>BotVersion_Home__dll.BillingMode__c</members>
+        <members>BotVersion_Home__dll.BotDefinitionId__c</members>
+        <members>BotVersion_Home__dll.CopilotPrimaryLanguage__c</members>
+        <members>BotVersion_Home__dll.CopilotSecondaryLanguages__c</members>
+        <members>BotVersion_Home__dll.CreatedById__c</members>
+        <members>BotVersion_Home__dll.CreatedDate__c</members>
+        <members>BotVersion_Home__dll.DataSourceObject__c</members>
+        <members>BotVersion_Home__dll.DataSource__c</members>
+        <members>BotVersion_Home__dll.DeveloperName__c</members>
+        <members>BotVersion_Home__dll.Id__c</members>
+        <members>BotVersion_Home__dll.IsDeleted__c</members>
+        <members>BotVersion_Home__dll.KQ_Id__c</members>
+        <members>BotVersion_Home__dll.LastModifiedById__c</members>
+        <members>BotVersion_Home__dll.LastModifiedDate__c</members>
+        <members>BotVersion_Home__dll.SfdcOrganizationId__c</members>
+        <members>BotVersion_Home__dll.Status__c</members>
+        <members>BotVersion_Home__dll.SystemModstamp__c</members>
+        <members>BotVersion_Home__dll.ToneType__c</members>
+        <members>BotVersion_Home__dll.VersionNumber__c</members>
+        <members>BotVersion_Home__dll.cdp_sys_SourceVersion__c</members>
         <members>Branch_Master_Custom_DMO__dlm.CreatedById__c</members>
         <members>Branch_Master_Custom_DMO__dlm.CreatedDate__c</members>
         <members>Branch_Master_Custom_DMO__dlm.CurrencyIsoCode__c</members>
@@ -3469,6 +4184,7 @@
         <members>Debit_Credit_Note_c_SAFEXPRESSPROD__dll.Invoice_Name_c__c</members>
         <members>Debit_Credit_Note_c_SAFEXPRESSPROD__dll.IsDeleted__c</members>
         <members>Debit_Credit_Note_c_SAFEXPRESSPROD__dll.KQ_Id__c</members>
+        <members>Debit_Credit_Note_c_SAFEXPRESSPROD__dll.KQ_Invoice_Name_c__c</members>
         <members>Debit_Credit_Note_c_SAFEXPRESSPROD__dll.LastActivityDate__c</members>
         <members>Debit_Credit_Note_c_SAFEXPRESSPROD__dll.LastModifiedById__c</members>
         <members>Debit_Credit_Note_c_SAFEXPRESSPROD__dll.LastModifiedDate__c</members>
@@ -3504,6 +4220,7 @@
         <members>Debit_Credit_Note_c_SAFEXPRESSPROD__dlm.Invoice_Name_c__c</members>
         <members>Debit_Credit_Note_c_SAFEXPRESSPROD__dlm.IsDeleted__c</members>
         <members>Debit_Credit_Note_c_SAFEXPRESSPROD__dlm.KQ_Id__c</members>
+        <members>Debit_Credit_Note_c_SAFEXPRESSPROD__dlm.KQ_Invoice_Name_c__c</members>
         <members>Debit_Credit_Note_c_SAFEXPRESSPROD__dlm.LastActivityDate__c</members>
         <members>Debit_Credit_Note_c_SAFEXPRESSPROD__dlm.LastModifiedById__c</members>
         <members>Debit_Credit_Note_c_SAFEXPRESSPROD__dlm.LastModifiedDate__c</members>
@@ -3521,6 +4238,7 @@
         <members>Debit_Credit_Note_c_SAFEXPRESSPROD__dlm.SystemModstamp__c</members>
         <members>Debit_Credit_Note_c_SAFEXPRESSPROD__dlm.Update_Date_c__c</members>
         <members>Debit_Credit_Note_c_SAFEXPRESSPROD__dlm.cdp_sys_SourceVersion__c</members>
+        <members>Debit_Credit_Note_c_SAFEXPRESSPROD__dlm.rel_1793165821891_end__c</members>
         <members>Dg_0tBO_9pFC1000000004t_FRAGMENT__dlm.DataSourceObject__c</members>
         <members>Dg_0tBO_9pFC1000000004t_FRAGMENT__dlm.DataSource__c</members>
         <members>Dg_0tBO_9pFC1000000004t_FRAGMENT__dlm.Id__c</members>
@@ -4194,6 +4912,59 @@
         <members>GST_Validation_Event__e.LeadId__c</members>
         <members>GST_Validation_Event__e.LeadName__c</members>
         <members>GST_Validation_Event__e.SuccessMessage__c</members>
+        <members>GenAiFunctionDefinition_Home__dll.CreatedById__c</members>
+        <members>GenAiFunctionDefinition_Home__dll.CreatedDate__c</members>
+        <members>GenAiFunctionDefinition_Home__dll.DataSourceObject__c</members>
+        <members>GenAiFunctionDefinition_Home__dll.DataSource__c</members>
+        <members>GenAiFunctionDefinition_Home__dll.Description__c</members>
+        <members>GenAiFunctionDefinition_Home__dll.DeveloperName__c</members>
+        <members>GenAiFunctionDefinition_Home__dll.Id__c</members>
+        <members>GenAiFunctionDefinition_Home__dll.InvocationTargetType__c</members>
+        <members>GenAiFunctionDefinition_Home__dll.InvocationTarget__c</members>
+        <members>GenAiFunctionDefinition_Home__dll.IsConfirmationRequired__c</members>
+        <members>GenAiFunctionDefinition_Home__dll.IsDeleted__c</members>
+        <members>GenAiFunctionDefinition_Home__dll.IsIncludeInProgressIndicator__c</members>
+        <members>GenAiFunctionDefinition_Home__dll.IsLocal__c</members>
+        <members>GenAiFunctionDefinition_Home__dll.KQ_Id__c</members>
+        <members>GenAiFunctionDefinition_Home__dll.Language__c</members>
+        <members>GenAiFunctionDefinition_Home__dll.LastModifiedById__c</members>
+        <members>GenAiFunctionDefinition_Home__dll.LastModifiedDate__c</members>
+        <members>GenAiFunctionDefinition_Home__dll.LocalDeveloperName__c</members>
+        <members>GenAiFunctionDefinition_Home__dll.MasterLabel__c</members>
+        <members>GenAiFunctionDefinition_Home__dll.NamespacePrefix__c</members>
+        <members>GenAiFunctionDefinition_Home__dll.ParentId__c</members>
+        <members>GenAiFunctionDefinition_Home__dll.PlannerId__c</members>
+        <members>GenAiFunctionDefinition_Home__dll.PluginId__c</members>
+        <members>GenAiFunctionDefinition_Home__dll.ProgressIndicatorMessage__c</members>
+        <members>GenAiFunctionDefinition_Home__dll.SfdcOrganizationId__c</members>
+        <members>GenAiFunctionDefinition_Home__dll.Source__c</members>
+        <members>GenAiFunctionDefinition_Home__dll.SystemModstamp__c</members>
+        <members>GenAiFunctionDefinition_Home__dll.cdp_sys_SourceVersion__c</members>
+        <members>GenAiPluginDefinition_Home__dll.CanEscalate__c</members>
+        <members>GenAiPluginDefinition_Home__dll.CreatedById__c</members>
+        <members>GenAiPluginDefinition_Home__dll.CreatedDate__c</members>
+        <members>GenAiPluginDefinition_Home__dll.DataSourceObject__c</members>
+        <members>GenAiPluginDefinition_Home__dll.DataSource__c</members>
+        <members>GenAiPluginDefinition_Home__dll.Description__c</members>
+        <members>GenAiPluginDefinition_Home__dll.DeveloperName__c</members>
+        <members>GenAiPluginDefinition_Home__dll.Id__c</members>
+        <members>GenAiPluginDefinition_Home__dll.IsDeleted__c</members>
+        <members>GenAiPluginDefinition_Home__dll.IsLocal__c</members>
+        <members>GenAiPluginDefinition_Home__dll.KQ_Id__c</members>
+        <members>GenAiPluginDefinition_Home__dll.Language__c</members>
+        <members>GenAiPluginDefinition_Home__dll.LastModifiedById__c</members>
+        <members>GenAiPluginDefinition_Home__dll.LastModifiedDate__c</members>
+        <members>GenAiPluginDefinition_Home__dll.LocalDeveloperName__c</members>
+        <members>GenAiPluginDefinition_Home__dll.MasterLabel__c</members>
+        <members>GenAiPluginDefinition_Home__dll.NamespacePrefix__c</members>
+        <members>GenAiPluginDefinition_Home__dll.ParentId__c</members>
+        <members>GenAiPluginDefinition_Home__dll.PlannerId__c</members>
+        <members>GenAiPluginDefinition_Home__dll.PluginType__c</members>
+        <members>GenAiPluginDefinition_Home__dll.Scope__c</members>
+        <members>GenAiPluginDefinition_Home__dll.SfdcOrganizationId__c</members>
+        <members>GenAiPluginDefinition_Home__dll.Source__c</members>
+        <members>GenAiPluginDefinition_Home__dll.SystemModstamp__c</members>
+        <members>GenAiPluginDefinition_Home__dll.cdp_sys_SourceVersion__c</members>
         <members>Group_State_Master__c.Group__c</members>
         <members>Group_State_Master__c.State__c</members>
         <members>Iconnect_API__c.Access_Token1__c</members>
@@ -4339,6 +5110,89 @@
         <members>Invoice__c.Total_Payment_Collected__c</members>
         <members>Invoice__c.Total_Unapply_Amount__c</members>
         <members>Invoice__c.e_Bill__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Account_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Age_of_invoice_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.BDM_Email_IDs_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Bill_Branch_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Bill_Creation_Date_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Bill_Date_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Bill_Due_Date_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Bill_From_Date_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Bill_Last_Update_Date_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Bill_Number_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Bill_To_Date_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Bill_Type_Flag_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Bill_Type_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Billing_Level_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Billing_Line_Item_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.CRS_Propeli_BDM_Mapping_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Charged_Freight_Amount_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Charged_ST_Amount_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Charged_Total_Amount_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Collection_Branch_Flag_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Collection_Branch_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Collection_PropelI_BDM_Mapping_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Composite_Key_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Create_Submission_Task_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.CreatedById__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.CreatedDate__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.CurrencyIsoCode__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Customer_Category_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Customer_Contract_Code_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Customer_Contract_ID_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.DataSourceObject__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.DataSource__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Date_Total_Amount_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Description_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Green_Book_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Id__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.IsDeleted__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Is_PropelI_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Is_Submission_Synced_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.KQ_Account_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.KQ_Bill_Number_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.KQ_Id__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.LastActivityDate__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.LastModifiedById__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.LastModifiedDate__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.LastReferencedDate__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.LastViewedDate__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.MSA_Name_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.MSA_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.NAM_Propeli_BDM_Mapping_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Name__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Out_Oct_Amount_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Out_Total_Amount_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.OwnerId__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Parent_Invoice_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Propel_ID_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.QRM_Propeli_BDM_Mapping_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Rate_Card_Id_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Rate_Card_Number_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Rate_Card_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.RecordTypeId__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Remarks_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.SFX_Code_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.SFX_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.SfdcOrganizationId__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Status_LID_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Status_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Sub_Branch_Master_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Submission_Date_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Submission_propelI_BDM_Mapping_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Submitted_To_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.SystemModstamp__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.To_Person_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Total_Apply_Amount_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Total_Outstanding_Amount_Date_del_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Total_Outstanding_Amount_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Total_Payment_Collected_PI_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Total_Payment_Collected_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.Total_Unapply_Amount_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.cdp_sys_SourceVersion__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.e_Bill_c__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.rel_1793164807991_end__c</members>
+        <members>Invoice_c_Custom_DMO__dlm.rel_1793165410584_end__c</members>
         <members>Invoice_c_SAFEXPRESSPROD__dll.Account_c__c</members>
         <members>Invoice_c_SAFEXPRESSPROD__dll.Age_of_invoice_c__c</members>
         <members>Invoice_c_SAFEXPRESSPROD__dll.BDM_Email_IDs_c__c</members>
@@ -4378,6 +5232,8 @@
         <members>Invoice_c_SAFEXPRESSPROD__dll.IsDeleted__c</members>
         <members>Invoice_c_SAFEXPRESSPROD__dll.Is_PropelI_c__c</members>
         <members>Invoice_c_SAFEXPRESSPROD__dll.Is_Submission_Synced_c__c</members>
+        <members>Invoice_c_SAFEXPRESSPROD__dll.KQ_Account_c__c</members>
+        <members>Invoice_c_SAFEXPRESSPROD__dll.KQ_Bill_Number_c__c</members>
         <members>Invoice_c_SAFEXPRESSPROD__dll.KQ_Id__c</members>
         <members>Invoice_c_SAFEXPRESSPROD__dll.LastActivityDate__c</members>
         <members>Invoice_c_SAFEXPRESSPROD__dll.LastModifiedById__c</members>
@@ -4590,7 +5446,7 @@
         <members>Lead.Area__c</members>
         <members>Lead.Assign_to_Central_Desk__c</members>
         <members>Lead.Assignment_Date__c</members>
-        <members>Lead.Assignment_Evaluated_c__c</members>
+        <members>Lead.Assignment_Evaluated__c</members>
         <members>Lead.Booking_Branch__c</members>
         <members>Lead.Campaign__c</members>
         <members>Lead.Case__c</members>
@@ -4935,6 +5791,228 @@
         <members>MONTHLY_Waybill_Count__dll.src_system__c</members>
         <members>MONTHLY_Waybill_Count__dll.updt_by__c</members>
         <members>MONTHLY_Waybill_Count__dll.updt_dt__c</members>
+        <members>MONTHLY_Waybill_Count__dlm.DataSourceObject__c</members>
+        <members>MONTHLY_Waybill_Count__dlm.DataSource__c</members>
+        <members>MONTHLY_Waybill_Count__dlm.InternalOrganization__c</members>
+        <members>MONTHLY_Waybill_Count__dlm.KQ_id__c</members>
+        <members>MONTHLY_Waybill_Count__dlm.crtd_by__c</members>
+        <members>MONTHLY_Waybill_Count__dlm.crtd_dt__c</members>
+        <members>MONTHLY_Waybill_Count__dlm.delivery_count__c</members>
+        <members>MONTHLY_Waybill_Count__dlm.dlvry_dt__c</members>
+        <members>MONTHLY_Waybill_Count__dlm.expr_dt__c</members>
+        <members>MONTHLY_Waybill_Count__dlm.group_code__c</members>
+        <members>MONTHLY_Waybill_Count__dlm.id__c</members>
+        <members>MONTHLY_Waybill_Count__dlm.lkp_waybl_curr_status_id__c</members>
+        <members>MONTHLY_Waybill_Count__dlm.month_name__c</members>
+        <members>MONTHLY_Waybill_Count__dlm.msa_cust_id__c</members>
+        <members>MONTHLY_Waybill_Count__dlm.pickup_count__c</members>
+        <members>MONTHLY_Waybill_Count__dlm.pickup_dt__c</members>
+        <members>MONTHLY_Waybill_Count__dlm.sfx_prc_cntr_code__c</members>
+        <members>MONTHLY_Waybill_Count__dlm.src_system__c</members>
+        <members>MONTHLY_Waybill_Count__dlm.updt_by__c</members>
+        <members>MONTHLY_Waybill_Count__dlm.updt_dt__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.DataSourceObject__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.DataSource__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.InternalOrganization__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.KQ_booking_branch_id__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.KQ_msa_id__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.KQ_rate_card_id__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.KQ_rate_card_service_offering__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.KQ_sfx_id__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.actual_weight_last_month__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.actual_weight_last_mtd__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.actual_weight_mbl__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.actual_weight_mtd__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.actual_weight_yesterday__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.booking_branch__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.booking_branch_code__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.booking_branch_id__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.chargeable_weight_last_month__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.chargeable_weight_last_mtd__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.chargeable_weight_mbl__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.chargeable_weight_mtd__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.chargeable_weight_yesterday__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.customer_type__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.delivery_gateway_last_month__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.delivery_gateway_last_mtd__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.delivery_gateway_mbl__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.delivery_gateway_mtd__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.delivery_gateway_yesterday__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.hub_waybill_last_month__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.hub_waybill_last_mtd__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.hub_waybill_mbl__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.hub_waybill_mtd__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.hub_waybill_yesterday__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.invoice_value_last_month__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.invoice_value_last_mtd__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.invoice_value_mbl__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.invoice_value_mtd__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.invoice_value_yesterday__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.msa__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.msa_id__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.msa_name__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.no_of_pkg_last_month__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.no_of_pkg_last_mtd__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.no_of_pkg_mbl__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.no_of_pkg_mtd__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.no_of_pkg_yesterday__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.pickup_days_last_month__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.pickup_days_last_mtd__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.pickup_days_mbl__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.pickup_days_mtd__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.pickup_days_yesterday__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.pincode_count_last_month__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.pincode_count_last_mtd__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.pincode_count_mbl__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.pincode_count_mtd__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.pincode_count_yesterday__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.rate_card__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.rate_card_charge_by__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.rate_card_id__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.rate_card_service_offering__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.safextension_waybill_last_month__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.safextension_waybill_last_mtd__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.safextension_waybill_mbl__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.safextension_waybill_mtd__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.safextension_waybill_yesterday__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.schedule_waybill_last_month__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.schedule_waybill_last_mtd__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.schedule_waybill_mbl__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.schedule_waybill_mtd__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.schedule_waybill_yesterday__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.sds_waybill_last_month__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.sds_waybill_last_mtd__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.sds_waybill_mbl__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.sds_waybill_mtd__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.sds_waybill_yesterday__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.sfx__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.sfx_id__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.state_count_last_month__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.state_count_last_mtd__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.state_count_mbl__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.state_count_mtd__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.state_count_yesterday__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.total_freight_last_month__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.total_freight_last_mtd__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.total_freight_mbl__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.total_freight_mtd__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.total_freight_yesterday__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.vmi_waybill_last_month__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.vmi_waybill_last_mtd__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.vmi_waybill_mbl__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.vmi_waybill_mtd__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.vmi_waybill_yesterday__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.volumetric_weight_last_month__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.volumetric_weight_last_mtd__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.volumetric_weight_mbl__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.volumetric_weight_mtd__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.volumetric_weight_yesterday__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.waybill_count_last_month__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.waybill_count_last_mtd__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.waybill_count_mbl__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.waybill_count_mtd__c</members>
+        <members>MSA_SFX_SalesInsights_Custom_DMO__dlm.waybill_count_yesterday__c</members>
+        <members>MSA_SFX_SalesInsights__dll.DataSourceObject__c</members>
+        <members>MSA_SFX_SalesInsights__dll.DataSource__c</members>
+        <members>MSA_SFX_SalesInsights__dll.InternalOrganization__c</members>
+        <members>MSA_SFX_SalesInsights__dll.KQ_booking_branch_id__c</members>
+        <members>MSA_SFX_SalesInsights__dll.KQ_msa_id__c</members>
+        <members>MSA_SFX_SalesInsights__dll.KQ_rate_card_id__c</members>
+        <members>MSA_SFX_SalesInsights__dll.KQ_rate_card_service_offering__c</members>
+        <members>MSA_SFX_SalesInsights__dll.KQ_sfx_id__c</members>
+        <members>MSA_SFX_SalesInsights__dll.actual_weight_last_month__c</members>
+        <members>MSA_SFX_SalesInsights__dll.actual_weight_last_mtd__c</members>
+        <members>MSA_SFX_SalesInsights__dll.actual_weight_mbl__c</members>
+        <members>MSA_SFX_SalesInsights__dll.actual_weight_mtd__c</members>
+        <members>MSA_SFX_SalesInsights__dll.actual_weight_yesterday__c</members>
+        <members>MSA_SFX_SalesInsights__dll.booking_branch__c</members>
+        <members>MSA_SFX_SalesInsights__dll.booking_branch_code__c</members>
+        <members>MSA_SFX_SalesInsights__dll.booking_branch_id__c</members>
+        <members>MSA_SFX_SalesInsights__dll.chargeable_weight_last_month__c</members>
+        <members>MSA_SFX_SalesInsights__dll.chargeable_weight_last_mtd__c</members>
+        <members>MSA_SFX_SalesInsights__dll.chargeable_weight_mbl__c</members>
+        <members>MSA_SFX_SalesInsights__dll.chargeable_weight_mtd__c</members>
+        <members>MSA_SFX_SalesInsights__dll.chargeable_weight_yesterday__c</members>
+        <members>MSA_SFX_SalesInsights__dll.customer_type__c</members>
+        <members>MSA_SFX_SalesInsights__dll.delivery_gateway_last_month__c</members>
+        <members>MSA_SFX_SalesInsights__dll.delivery_gateway_last_mtd__c</members>
+        <members>MSA_SFX_SalesInsights__dll.delivery_gateway_mbl__c</members>
+        <members>MSA_SFX_SalesInsights__dll.delivery_gateway_mtd__c</members>
+        <members>MSA_SFX_SalesInsights__dll.delivery_gateway_yesterday__c</members>
+        <members>MSA_SFX_SalesInsights__dll.hub_waybill_last_month__c</members>
+        <members>MSA_SFX_SalesInsights__dll.hub_waybill_last_mtd__c</members>
+        <members>MSA_SFX_SalesInsights__dll.hub_waybill_mbl__c</members>
+        <members>MSA_SFX_SalesInsights__dll.hub_waybill_mtd__c</members>
+        <members>MSA_SFX_SalesInsights__dll.hub_waybill_yesterday__c</members>
+        <members>MSA_SFX_SalesInsights__dll.invoice_value_last_month__c</members>
+        <members>MSA_SFX_SalesInsights__dll.invoice_value_last_mtd__c</members>
+        <members>MSA_SFX_SalesInsights__dll.invoice_value_mbl__c</members>
+        <members>MSA_SFX_SalesInsights__dll.invoice_value_mtd__c</members>
+        <members>MSA_SFX_SalesInsights__dll.invoice_value_yesterday__c</members>
+        <members>MSA_SFX_SalesInsights__dll.msa__c</members>
+        <members>MSA_SFX_SalesInsights__dll.msa_id__c</members>
+        <members>MSA_SFX_SalesInsights__dll.msa_name__c</members>
+        <members>MSA_SFX_SalesInsights__dll.no_of_pkg_last_month__c</members>
+        <members>MSA_SFX_SalesInsights__dll.no_of_pkg_last_mtd__c</members>
+        <members>MSA_SFX_SalesInsights__dll.no_of_pkg_mbl__c</members>
+        <members>MSA_SFX_SalesInsights__dll.no_of_pkg_mtd__c</members>
+        <members>MSA_SFX_SalesInsights__dll.no_of_pkg_yesterday__c</members>
+        <members>MSA_SFX_SalesInsights__dll.pickup_days_last_month__c</members>
+        <members>MSA_SFX_SalesInsights__dll.pickup_days_last_mtd__c</members>
+        <members>MSA_SFX_SalesInsights__dll.pickup_days_mbl__c</members>
+        <members>MSA_SFX_SalesInsights__dll.pickup_days_mtd__c</members>
+        <members>MSA_SFX_SalesInsights__dll.pickup_days_yesterday__c</members>
+        <members>MSA_SFX_SalesInsights__dll.pincode_count_last_month__c</members>
+        <members>MSA_SFX_SalesInsights__dll.pincode_count_last_mtd__c</members>
+        <members>MSA_SFX_SalesInsights__dll.pincode_count_mbl__c</members>
+        <members>MSA_SFX_SalesInsights__dll.pincode_count_mtd__c</members>
+        <members>MSA_SFX_SalesInsights__dll.pincode_count_yesterday__c</members>
+        <members>MSA_SFX_SalesInsights__dll.rate_card__c</members>
+        <members>MSA_SFX_SalesInsights__dll.rate_card_charge_by__c</members>
+        <members>MSA_SFX_SalesInsights__dll.rate_card_id__c</members>
+        <members>MSA_SFX_SalesInsights__dll.rate_card_service_offering__c</members>
+        <members>MSA_SFX_SalesInsights__dll.safextension_waybill_last_month__c</members>
+        <members>MSA_SFX_SalesInsights__dll.safextension_waybill_last_mtd__c</members>
+        <members>MSA_SFX_SalesInsights__dll.safextension_waybill_mbl__c</members>
+        <members>MSA_SFX_SalesInsights__dll.safextension_waybill_mtd__c</members>
+        <members>MSA_SFX_SalesInsights__dll.safextension_waybill_yesterday__c</members>
+        <members>MSA_SFX_SalesInsights__dll.schedule_waybill_last_month__c</members>
+        <members>MSA_SFX_SalesInsights__dll.schedule_waybill_last_mtd__c</members>
+        <members>MSA_SFX_SalesInsights__dll.schedule_waybill_mbl__c</members>
+        <members>MSA_SFX_SalesInsights__dll.schedule_waybill_mtd__c</members>
+        <members>MSA_SFX_SalesInsights__dll.schedule_waybill_yesterday__c</members>
+        <members>MSA_SFX_SalesInsights__dll.sds_waybill_last_month__c</members>
+        <members>MSA_SFX_SalesInsights__dll.sds_waybill_last_mtd__c</members>
+        <members>MSA_SFX_SalesInsights__dll.sds_waybill_mbl__c</members>
+        <members>MSA_SFX_SalesInsights__dll.sds_waybill_mtd__c</members>
+        <members>MSA_SFX_SalesInsights__dll.sds_waybill_yesterday__c</members>
+        <members>MSA_SFX_SalesInsights__dll.sfx__c</members>
+        <members>MSA_SFX_SalesInsights__dll.sfx_id__c</members>
+        <members>MSA_SFX_SalesInsights__dll.state_count_last_month__c</members>
+        <members>MSA_SFX_SalesInsights__dll.state_count_last_mtd__c</members>
+        <members>MSA_SFX_SalesInsights__dll.state_count_mbl__c</members>
+        <members>MSA_SFX_SalesInsights__dll.state_count_mtd__c</members>
+        <members>MSA_SFX_SalesInsights__dll.state_count_yesterday__c</members>
+        <members>MSA_SFX_SalesInsights__dll.total_freight_last_month__c</members>
+        <members>MSA_SFX_SalesInsights__dll.total_freight_last_mtd__c</members>
+        <members>MSA_SFX_SalesInsights__dll.total_freight_mbl__c</members>
+        <members>MSA_SFX_SalesInsights__dll.total_freight_mtd__c</members>
+        <members>MSA_SFX_SalesInsights__dll.total_freight_yesterday__c</members>
+        <members>MSA_SFX_SalesInsights__dll.vmi_waybill_last_month__c</members>
+        <members>MSA_SFX_SalesInsights__dll.vmi_waybill_last_mtd__c</members>
+        <members>MSA_SFX_SalesInsights__dll.vmi_waybill_mbl__c</members>
+        <members>MSA_SFX_SalesInsights__dll.vmi_waybill_mtd__c</members>
+        <members>MSA_SFX_SalesInsights__dll.vmi_waybill_yesterday__c</members>
+        <members>MSA_SFX_SalesInsights__dll.volumetric_weight_last_month__c</members>
+        <members>MSA_SFX_SalesInsights__dll.volumetric_weight_last_mtd__c</members>
+        <members>MSA_SFX_SalesInsights__dll.volumetric_weight_mbl__c</members>
+        <members>MSA_SFX_SalesInsights__dll.volumetric_weight_mtd__c</members>
+        <members>MSA_SFX_SalesInsights__dll.volumetric_weight_yesterday__c</members>
+        <members>MSA_SFX_SalesInsights__dll.waybill_count_last_month__c</members>
+        <members>MSA_SFX_SalesInsights__dll.waybill_count_last_mtd__c</members>
+        <members>MSA_SFX_SalesInsights__dll.waybill_count_mbl__c</members>
+        <members>MSA_SFX_SalesInsights__dll.waybill_count_mtd__c</members>
+        <members>MSA_SFX_SalesInsights__dll.waybill_count_yesterday__c</members>
         <members>ManagedContentPublishedUrl_Home__dll.AssociatedCampaignId__c</members>
         <members>ManagedContentPublishedUrl_Home__dll.BusinessUnitId__c</members>
         <members>ManagedContentPublishedUrl_Home__dll.ContentKey__c</members>
@@ -5253,6 +6331,7 @@
         <members>MessagingEventsEmailV2_00D7F000_6F1C8206__dll.IspFirstAttemptDateTime__c</members>
         <members>MessagingEventsEmailV2_00D7F000_6F1C8206__dll.JourneyId__c</members>
         <members>MessagingEventsEmailV2_00D7F000_6F1C8206__dll.JourneyName__c</members>
+        <members>MessagingEventsEmailV2_00D7F000_6F1C8206__dll.KQ_AgentforceSessionId__c</members>
         <members>MessagingEventsEmailV2_00D7F000_6F1C8206__dll.KQ_BulkMessageId__c</members>
         <members>MessagingEventsEmailV2_00D7F000_6F1C8206__dll.KQ_ContactPointId__c</members>
         <members>MessagingEventsEmailV2_00D7F000_6F1C8206__dll.KQ_EngagementChannel__c</members>
@@ -5311,6 +6390,7 @@
         <members>MessagingEventsSmsV2_00D7F00000_D96D4043__dll.GlobalEvent__c</members>
         <members>MessagingEventsSmsV2_00D7F00000_D96D4043__dll.IndividualID__c</members>
         <members>MessagingEventsSmsV2_00D7F00000_D96D4043__dll.IsBotClick__c</members>
+        <members>MessagingEventsSmsV2_00D7F00000_D96D4043__dll.KQ_AgentforceSessionId__c</members>
         <members>MessagingEventsSmsV2_00D7F00000_D96D4043__dll.KQ_ContactPointID__c</members>
         <members>MessagingEventsSmsV2_00D7F00000_D96D4043__dll.KQ_EngagementChannel__c</members>
         <members>MessagingEventsSmsV2_00D7F00000_D96D4043__dll.KQ_EventId__c</members>
@@ -5368,6 +6448,7 @@
         <members>MessagingEventsWhatsAppV2_00D7F_2FC720CB__dll.GlobalEvent__c</members>
         <members>MessagingEventsWhatsAppV2_00D7F_2FC720CB__dll.IndividualID__c</members>
         <members>MessagingEventsWhatsAppV2_00D7F_2FC720CB__dll.JourneyId__c</members>
+        <members>MessagingEventsWhatsAppV2_00D7F_2FC720CB__dll.KQ_AgentforceSessionId__c</members>
         <members>MessagingEventsWhatsAppV2_00D7F_2FC720CB__dll.KQ_BulkMessageId__c</members>
         <members>MessagingEventsWhatsAppV2_00D7F_2FC720CB__dll.KQ_EngagementChannel__c</members>
         <members>MessagingEventsWhatsAppV2_00D7F_2FC720CB__dll.KQ_EventId__c</members>
@@ -5918,6 +6999,188 @@
         <members>Other_Address__c.Pin_Code__c</members>
         <members>Other_Address__c.State__c</members>
         <members>Other_Address__c.Type__c</members>
+        <members>PR_AgentOpt_Tag_Association_D3B114DB__dll.DataSourceObject__c</members>
+        <members>PR_AgentOpt_Tag_Association_D3B114DB__dll.DataSource__c</members>
+        <members>PR_AgentOpt_Tag_Association_D3B114DB__dll.InternalOrganization__c</members>
+        <members>PR_AgentOpt_Tag_Association_D3B114DB__dll.KQ_id__c</members>
+        <members>PR_AgentOpt_Tag_Association_D3B114DB__dll.cdp_sys_PartitionDate__c</members>
+        <members>PR_AgentOpt_Tag_Association_D3B114DB__dll.cdp_sys_SourceVersion__c</members>
+        <members>PR_AgentOpt_Tag_Association_D3B114DB__dll.detailed_error__c</members>
+        <members>PR_AgentOpt_Tag_Association_D3B114DB__dll.error_code__c</members>
+        <members>PR_AgentOpt_Tag_Association_D3B114DB__dll.error_context__c</members>
+        <members>PR_AgentOpt_Tag_Association_D3B114DB__dll.error_fields__c</members>
+        <members>PR_AgentOpt_Tag_Association_D3B114DB__dll.error_row__c</members>
+        <members>PR_AgentOpt_Tag_Association_D3B114DB__dll.error_timestamp__c</members>
+        <members>PR_AgentOpt_Tag_Association_D3B114DB__dll.id__c</members>
+        <members>PR_AgentOpt_Tag_Association_Log_572B1DF0__dll.DataSourceObject__c</members>
+        <members>PR_AgentOpt_Tag_Association_Log_572B1DF0__dll.DataSource__c</members>
+        <members>PR_AgentOpt_Tag_Association_Log_572B1DF0__dll.InternalOrganization__c</members>
+        <members>PR_AgentOpt_Tag_Association_Log_572B1DF0__dll.KQ_id__c</members>
+        <members>PR_AgentOpt_Tag_Association_Log_572B1DF0__dll.cdp_sys_PartitionDate__c</members>
+        <members>PR_AgentOpt_Tag_Association_Log_572B1DF0__dll.cdp_sys_SourceVersion__c</members>
+        <members>PR_AgentOpt_Tag_Association_Log_572B1DF0__dll.detailed_error__c</members>
+        <members>PR_AgentOpt_Tag_Association_Log_572B1DF0__dll.error_code__c</members>
+        <members>PR_AgentOpt_Tag_Association_Log_572B1DF0__dll.error_context__c</members>
+        <members>PR_AgentOpt_Tag_Association_Log_572B1DF0__dll.error_fields__c</members>
+        <members>PR_AgentOpt_Tag_Association_Log_572B1DF0__dll.error_row__c</members>
+        <members>PR_AgentOpt_Tag_Association_Log_572B1DF0__dll.error_timestamp__c</members>
+        <members>PR_AgentOpt_Tag_Association_Log_572B1DF0__dll.id__c</members>
+        <members>PR_AgentOpt_Tag_D602E652__dll.DataSourceObject__c</members>
+        <members>PR_AgentOpt_Tag_D602E652__dll.DataSource__c</members>
+        <members>PR_AgentOpt_Tag_D602E652__dll.InternalOrganization__c</members>
+        <members>PR_AgentOpt_Tag_D602E652__dll.KQ_id__c</members>
+        <members>PR_AgentOpt_Tag_D602E652__dll.cdp_sys_PartitionDate__c</members>
+        <members>PR_AgentOpt_Tag_D602E652__dll.cdp_sys_SourceVersion__c</members>
+        <members>PR_AgentOpt_Tag_D602E652__dll.detailed_error__c</members>
+        <members>PR_AgentOpt_Tag_D602E652__dll.error_code__c</members>
+        <members>PR_AgentOpt_Tag_D602E652__dll.error_context__c</members>
+        <members>PR_AgentOpt_Tag_D602E652__dll.error_fields__c</members>
+        <members>PR_AgentOpt_Tag_D602E652__dll.error_row__c</members>
+        <members>PR_AgentOpt_Tag_D602E652__dll.error_timestamp__c</members>
+        <members>PR_AgentOpt_Tag_D602E652__dll.id__c</members>
+        <members>PR_AgentOpt_Tag_Def_641598D7__dll.DataSourceObject__c</members>
+        <members>PR_AgentOpt_Tag_Def_641598D7__dll.DataSource__c</members>
+        <members>PR_AgentOpt_Tag_Def_641598D7__dll.InternalOrganization__c</members>
+        <members>PR_AgentOpt_Tag_Def_641598D7__dll.KQ_id__c</members>
+        <members>PR_AgentOpt_Tag_Def_641598D7__dll.cdp_sys_PartitionDate__c</members>
+        <members>PR_AgentOpt_Tag_Def_641598D7__dll.cdp_sys_SourceVersion__c</members>
+        <members>PR_AgentOpt_Tag_Def_641598D7__dll.detailed_error__c</members>
+        <members>PR_AgentOpt_Tag_Def_641598D7__dll.error_code__c</members>
+        <members>PR_AgentOpt_Tag_Def_641598D7__dll.error_context__c</members>
+        <members>PR_AgentOpt_Tag_Def_641598D7__dll.error_fields__c</members>
+        <members>PR_AgentOpt_Tag_Def_641598D7__dll.error_row__c</members>
+        <members>PR_AgentOpt_Tag_Def_641598D7__dll.error_timestamp__c</members>
+        <members>PR_AgentOpt_Tag_Def_641598D7__dll.id__c</members>
+        <members>PR_AgentOpt_Tag_Def_Association_80FC62FB__dll.DataSourceObject__c</members>
+        <members>PR_AgentOpt_Tag_Def_Association_80FC62FB__dll.DataSource__c</members>
+        <members>PR_AgentOpt_Tag_Def_Association_80FC62FB__dll.InternalOrganization__c</members>
+        <members>PR_AgentOpt_Tag_Def_Association_80FC62FB__dll.KQ_id__c</members>
+        <members>PR_AgentOpt_Tag_Def_Association_80FC62FB__dll.cdp_sys_PartitionDate__c</members>
+        <members>PR_AgentOpt_Tag_Def_Association_80FC62FB__dll.cdp_sys_SourceVersion__c</members>
+        <members>PR_AgentOpt_Tag_Def_Association_80FC62FB__dll.detailed_error__c</members>
+        <members>PR_AgentOpt_Tag_Def_Association_80FC62FB__dll.error_code__c</members>
+        <members>PR_AgentOpt_Tag_Def_Association_80FC62FB__dll.error_context__c</members>
+        <members>PR_AgentOpt_Tag_Def_Association_80FC62FB__dll.error_fields__c</members>
+        <members>PR_AgentOpt_Tag_Def_Association_80FC62FB__dll.error_row__c</members>
+        <members>PR_AgentOpt_Tag_Def_Association_80FC62FB__dll.error_timestamp__c</members>
+        <members>PR_AgentOpt_Tag_Def_Association_80FC62FB__dll.id__c</members>
+        <members>PR_Agent_Interaction__dll.DataSourceObject__c</members>
+        <members>PR_Agent_Interaction__dll.DataSource__c</members>
+        <members>PR_Agent_Interaction__dll.InternalOrganization__c</members>
+        <members>PR_Agent_Interaction__dll.KQ_id__c</members>
+        <members>PR_Agent_Interaction__dll.cdp_sys_PartitionDate__c</members>
+        <members>PR_Agent_Interaction__dll.cdp_sys_SourceVersion__c</members>
+        <members>PR_Agent_Interaction__dll.detailed_error__c</members>
+        <members>PR_Agent_Interaction__dll.error_code__c</members>
+        <members>PR_Agent_Interaction__dll.error_context__c</members>
+        <members>PR_Agent_Interaction__dll.error_fields__c</members>
+        <members>PR_Agent_Interaction__dll.error_row__c</members>
+        <members>PR_Agent_Interaction__dll.error_timestamp__c</members>
+        <members>PR_Agent_Interaction__dll.id__c</members>
+        <members>PR_Agent_Log__dll.DataSourceObject__c</members>
+        <members>PR_Agent_Log__dll.DataSource__c</members>
+        <members>PR_Agent_Log__dll.InternalOrganization__c</members>
+        <members>PR_Agent_Log__dll.KQ_id__c</members>
+        <members>PR_Agent_Log__dll.cdp_sys_PartitionDate__c</members>
+        <members>PR_Agent_Log__dll.cdp_sys_SourceVersion__c</members>
+        <members>PR_Agent_Log__dll.detailed_error__c</members>
+        <members>PR_Agent_Log__dll.error_code__c</members>
+        <members>PR_Agent_Log__dll.error_context__c</members>
+        <members>PR_Agent_Log__dll.error_fields__c</members>
+        <members>PR_Agent_Log__dll.error_row__c</members>
+        <members>PR_Agent_Log__dll.error_timestamp__c</members>
+        <members>PR_Agent_Log__dll.id__c</members>
+        <members>PR_Agent_MessageAttachment__dll.DataSourceObject__c</members>
+        <members>PR_Agent_MessageAttachment__dll.DataSource__c</members>
+        <members>PR_Agent_MessageAttachment__dll.InternalOrganization__c</members>
+        <members>PR_Agent_MessageAttachment__dll.KQ_id__c</members>
+        <members>PR_Agent_MessageAttachment__dll.cdp_sys_PartitionDate__c</members>
+        <members>PR_Agent_MessageAttachment__dll.cdp_sys_SourceVersion__c</members>
+        <members>PR_Agent_MessageAttachment__dll.detailed_error__c</members>
+        <members>PR_Agent_MessageAttachment__dll.error_code__c</members>
+        <members>PR_Agent_MessageAttachment__dll.error_context__c</members>
+        <members>PR_Agent_MessageAttachment__dll.error_fields__c</members>
+        <members>PR_Agent_MessageAttachment__dll.error_row__c</members>
+        <members>PR_Agent_MessageAttachment__dll.error_timestamp__c</members>
+        <members>PR_Agent_MessageAttachment__dll.id__c</members>
+        <members>PR_Agent_Message__dll.DataSourceObject__c</members>
+        <members>PR_Agent_Message__dll.DataSource__c</members>
+        <members>PR_Agent_Message__dll.InternalOrganization__c</members>
+        <members>PR_Agent_Message__dll.KQ_id__c</members>
+        <members>PR_Agent_Message__dll.cdp_sys_PartitionDate__c</members>
+        <members>PR_Agent_Message__dll.cdp_sys_SourceVersion__c</members>
+        <members>PR_Agent_Message__dll.detailed_error__c</members>
+        <members>PR_Agent_Message__dll.error_code__c</members>
+        <members>PR_Agent_Message__dll.error_context__c</members>
+        <members>PR_Agent_Message__dll.error_fields__c</members>
+        <members>PR_Agent_Message__dll.error_row__c</members>
+        <members>PR_Agent_Message__dll.error_timestamp__c</members>
+        <members>PR_Agent_Message__dll.id__c</members>
+        <members>PR_Agent_Participant__dll.DataSourceObject__c</members>
+        <members>PR_Agent_Participant__dll.DataSource__c</members>
+        <members>PR_Agent_Participant__dll.InternalOrganization__c</members>
+        <members>PR_Agent_Participant__dll.KQ_id__c</members>
+        <members>PR_Agent_Participant__dll.cdp_sys_PartitionDate__c</members>
+        <members>PR_Agent_Participant__dll.cdp_sys_SourceVersion__c</members>
+        <members>PR_Agent_Participant__dll.detailed_error__c</members>
+        <members>PR_Agent_Participant__dll.error_code__c</members>
+        <members>PR_Agent_Participant__dll.error_context__c</members>
+        <members>PR_Agent_Participant__dll.error_fields__c</members>
+        <members>PR_Agent_Participant__dll.error_row__c</members>
+        <members>PR_Agent_Participant__dll.error_timestamp__c</members>
+        <members>PR_Agent_Participant__dll.id__c</members>
+        <members>PR_Agent_SessionAttachment__dll.DataSourceObject__c</members>
+        <members>PR_Agent_SessionAttachment__dll.DataSource__c</members>
+        <members>PR_Agent_SessionAttachment__dll.InternalOrganization__c</members>
+        <members>PR_Agent_SessionAttachment__dll.KQ_id__c</members>
+        <members>PR_Agent_SessionAttachment__dll.cdp_sys_PartitionDate__c</members>
+        <members>PR_Agent_SessionAttachment__dll.cdp_sys_SourceVersion__c</members>
+        <members>PR_Agent_SessionAttachment__dll.detailed_error__c</members>
+        <members>PR_Agent_SessionAttachment__dll.error_code__c</members>
+        <members>PR_Agent_SessionAttachment__dll.error_context__c</members>
+        <members>PR_Agent_SessionAttachment__dll.error_fields__c</members>
+        <members>PR_Agent_SessionAttachment__dll.error_row__c</members>
+        <members>PR_Agent_SessionAttachment__dll.error_timestamp__c</members>
+        <members>PR_Agent_SessionAttachment__dll.id__c</members>
+        <members>PR_Agent_Session__dll.DataSourceObject__c</members>
+        <members>PR_Agent_Session__dll.DataSource__c</members>
+        <members>PR_Agent_Session__dll.InternalOrganization__c</members>
+        <members>PR_Agent_Session__dll.KQ_id__c</members>
+        <members>PR_Agent_Session__dll.cdp_sys_PartitionDate__c</members>
+        <members>PR_Agent_Session__dll.cdp_sys_SourceVersion__c</members>
+        <members>PR_Agent_Session__dll.detailed_error__c</members>
+        <members>PR_Agent_Session__dll.error_code__c</members>
+        <members>PR_Agent_Session__dll.error_context__c</members>
+        <members>PR_Agent_Session__dll.error_fields__c</members>
+        <members>PR_Agent_Session__dll.error_row__c</members>
+        <members>PR_Agent_Session__dll.error_timestamp__c</members>
+        <members>PR_Agent_Session__dll.id__c</members>
+        <members>PR_Agent_Step__dll.DataSourceObject__c</members>
+        <members>PR_Agent_Step__dll.DataSource__c</members>
+        <members>PR_Agent_Step__dll.InternalOrganization__c</members>
+        <members>PR_Agent_Step__dll.KQ_id__c</members>
+        <members>PR_Agent_Step__dll.cdp_sys_PartitionDate__c</members>
+        <members>PR_Agent_Step__dll.cdp_sys_SourceVersion__c</members>
+        <members>PR_Agent_Step__dll.detailed_error__c</members>
+        <members>PR_Agent_Step__dll.error_code__c</members>
+        <members>PR_Agent_Step__dll.error_context__c</members>
+        <members>PR_Agent_Step__dll.error_fields__c</members>
+        <members>PR_Agent_Step__dll.error_row__c</members>
+        <members>PR_Agent_Step__dll.error_timestamp__c</members>
+        <members>PR_Agent_Step__dll.id__c</members>
+        <members>PR_Agent_TagAssociation__dll.DataSourceObject__c</members>
+        <members>PR_Agent_TagAssociation__dll.DataSource__c</members>
+        <members>PR_Agent_TagAssociation__dll.InternalOrganization__c</members>
+        <members>PR_Agent_TagAssociation__dll.KQ_id__c</members>
+        <members>PR_Agent_TagAssociation__dll.cdp_sys_PartitionDate__c</members>
+        <members>PR_Agent_TagAssociation__dll.cdp_sys_SourceVersion__c</members>
+        <members>PR_Agent_TagAssociation__dll.detailed_error__c</members>
+        <members>PR_Agent_TagAssociation__dll.error_code__c</members>
+        <members>PR_Agent_TagAssociation__dll.error_context__c</members>
+        <members>PR_Agent_TagAssociation__dll.error_fields__c</members>
+        <members>PR_Agent_TagAssociation__dll.error_row__c</members>
+        <members>PR_Agent_TagAssociation__dll.error_timestamp__c</members>
+        <members>PR_Agent_TagAssociation__dll.id__c</members>
         <members>PR_ConsentAuditTrailV2_00D7F000003D4UQ_C__dll.DataSourceObject__c</members>
         <members>PR_ConsentAuditTrailV2_00D7F000003D4UQ_C__dll.DataSource__c</members>
         <members>PR_ConsentAuditTrailV2_00D7F000003D4UQ_C__dll.InternalOrganization__c</members>
@@ -6643,6 +7906,7 @@
         <members>SpotFire_Group__c.Report_Link__c</members>
         <members>State_And_City_Combination__c.City__c</members>
         <members>State_And_City_Combination__c.State__c</members>
+        <members>State_GST_Code__mdt.State_Abbreviation__c</members>
         <members>State_GST_Code__mdt.State_GST_Code__c</members>
         <members>StaticCurrencyRates_Home1__dll.DataSourceObject__c</members>
         <members>StaticCurrencyRates_Home1__dll.DataSource__c</members>
@@ -7195,6 +8459,7 @@
         <members>Unified_Whatsapp_data_kits_What_E70B6E36__dll.GlobalEvent__c</members>
         <members>Unified_Whatsapp_data_kits_What_E70B6E36__dll.IndividualID__c</members>
         <members>Unified_Whatsapp_data_kits_What_E70B6E36__dll.JourneyId__c</members>
+        <members>Unified_Whatsapp_data_kits_What_E70B6E36__dll.KQ_AgentforceSessionId__c</members>
         <members>Unified_Whatsapp_data_kits_What_E70B6E36__dll.KQ_BulkMessageId__c</members>
         <members>Unified_Whatsapp_data_kits_What_E70B6E36__dll.KQ_EngagementChannel__c</members>
         <members>Unified_Whatsapp_data_kits_What_E70B6E36__dll.KQ_EventId__c</members>
@@ -7551,6 +8816,10 @@
         <members>User_Home__dll.UserType__c</members>
         <members>User_Home__dll.Username__c</members>
         <members>User_Home__dll.cdp_sys_SourceVersion__c</members>
+        <members>Waybill_Count_Test__cio.delivery_count_sum__c</members>
+        <members>Waybill_Count_Test__cio.msa_code__c</members>
+        <members>Waybill_Count_Test__cio.pickup_count__c</members>
+        <members>Waybill_Count_Test__cio.sfx_code__c</members>
         <members>Waybill_Details__c.Amount__c</members>
         <members>Waybill_Details__c.Case__c</members>
         <members>Waybill_Details__c.Claim_Type__c</members>
@@ -7636,6 +8905,115 @@
         <members>dgf35cd9f4d4777f733e6f810492134479936f8c__dgo.dg337c3dc4d34776326879c4c1cbc3a02c35cbe5__c</members>
         <members>dgf35cd9f4d4777f733e6f810492134479936f8c__dgo.dg6603f94887bb228e87de18d78118b2c95b9fef__c</members>
         <members>dgf35cd9f4d4777f733e6f810492134479936f8c__dgo.dg9aab7e492125ee85b6a8351881b501650eb335__c</members>
+        <members>sfm_AiAgentMomentInteraction__dll.AiAgentApiName__c</members>
+        <members>sfm_AiAgentMomentInteraction__dll.AiAgentInteractionId__c</members>
+        <members>sfm_AiAgentMomentInteraction__dll.AiAgentMomentId__c</members>
+        <members>sfm_AiAgentMomentInteraction__dll.DataSourceObject__c</members>
+        <members>sfm_AiAgentMomentInteraction__dll.DataSource__c</members>
+        <members>sfm_AiAgentMomentInteraction__dll.Id__c</members>
+        <members>sfm_AiAgentMomentInteraction__dll.InternalOrganization__c</members>
+        <members>sfm_AiAgentMomentInteraction__dll.KQ_AiAgentInteractionId__c</members>
+        <members>sfm_AiAgentMomentInteraction__dll.KQ_AiAgentMomentId__c</members>
+        <members>sfm_AiAgentMomentInteraction__dll.KQ_Id__c</members>
+        <members>sfm_AiAgentMomentInteraction__dll.OrgId__c</members>
+        <members>sfm_AiAgentMomentInteraction__dll.StartTimestamp__c</members>
+        <members>sfm_AiAgentMomentInteraction__dll.cdp_sys_PartitionDate__c</members>
+        <members>sfm_AiAgentMomentInteraction__dll.cdp_sys_SourceVersion__c</members>
+        <members>sfm_AiAgentMoment__dll.AiAgentApiName__c</members>
+        <members>sfm_AiAgentMoment__dll.AiAgentSessionId__c</members>
+        <members>sfm_AiAgentMoment__dll.AiAgentVersionApiName__c</members>
+        <members>sfm_AiAgentMoment__dll.DataSourceObject__c</members>
+        <members>sfm_AiAgentMoment__dll.DataSource__c</members>
+        <members>sfm_AiAgentMoment__dll.EndTimestamp__c</members>
+        <members>sfm_AiAgentMoment__dll.Id__c</members>
+        <members>sfm_AiAgentMoment__dll.InternalOrganization__c</members>
+        <members>sfm_AiAgentMoment__dll.KQ_AiAgentSessionId__c</members>
+        <members>sfm_AiAgentMoment__dll.KQ_Id__c</members>
+        <members>sfm_AiAgentMoment__dll.OrgId__c</members>
+        <members>sfm_AiAgentMoment__dll.RequestSummaryText__c</members>
+        <members>sfm_AiAgentMoment__dll.ResponseSummaryText__c</members>
+        <members>sfm_AiAgentMoment__dll.StartTimestamp__c</members>
+        <members>sfm_AiAgentMoment__dll.cdp_sys_PartitionDate__c</members>
+        <members>sfm_AiAgentMoment__dll.cdp_sys_SourceVersion__c</members>
+        <members>sfm_AiAgentTagAssociation__dll.AiAgentApiName__c</members>
+        <members>sfm_AiAgentTagAssociation__dll.AiAgentInteractionId__c</members>
+        <members>sfm_AiAgentTagAssociation__dll.AiAgentMomentId__c</members>
+        <members>sfm_AiAgentTagAssociation__dll.AiAgentSessionId__c</members>
+        <members>sfm_AiAgentTagAssociation__dll.AiAgentTagDefinitionAssociationId__c</members>
+        <members>sfm_AiAgentTagAssociation__dll.AiAgentTagId__c</members>
+        <members>sfm_AiAgentTagAssociation__dll.AssociationReasonText__c</members>
+        <members>sfm_AiAgentTagAssociation__dll.AttributeText__c</members>
+        <members>sfm_AiAgentTagAssociation__dll.CreatedByUserId__c</members>
+        <members>sfm_AiAgentTagAssociation__dll.CreatedDate__c</members>
+        <members>sfm_AiAgentTagAssociation__dll.DataSourceObject__c</members>
+        <members>sfm_AiAgentTagAssociation__dll.DataSource__c</members>
+        <members>sfm_AiAgentTagAssociation__dll.Id__c</members>
+        <members>sfm_AiAgentTagAssociation__dll.InternalOrganization__c</members>
+        <members>sfm_AiAgentTagAssociation__dll.IsPassed__c</members>
+        <members>sfm_AiAgentTagAssociation__dll.KQ_AiAgentInteractionId__c</members>
+        <members>sfm_AiAgentTagAssociation__dll.KQ_AiAgentMomentId__c</members>
+        <members>sfm_AiAgentTagAssociation__dll.KQ_AiAgentSessionId__c</members>
+        <members>sfm_AiAgentTagAssociation__dll.KQ_AiAgentTagDefinitionAssociationId__c</members>
+        <members>sfm_AiAgentTagAssociation__dll.KQ_AiAgentTagId__c</members>
+        <members>sfm_AiAgentTagAssociation__dll.KQ_Id__c</members>
+        <members>sfm_AiAgentTagAssociation__dll.OrgId__c</members>
+        <members>sfm_AiAgentTagAssociation__dll.OutcomeType__c</members>
+        <members>sfm_AiAgentTagAssociation__dll.SessionStartTimestamp__c</members>
+        <members>sfm_AiAgentTagAssociation__dll.SourceType__c</members>
+        <members>sfm_AiAgentTagAssociation__dll.ValueText__c</members>
+        <members>sfm_AiAgentTagAssociation__dll.cdp_sys_PartitionDate__c</members>
+        <members>sfm_AiAgentTagAssociation__dll.cdp_sys_SourceVersion__c</members>
+        <members>sfm_AiAgentTagDefinitionAssociation__dll.AiAgentApiName__c</members>
+        <members>sfm_AiAgentTagDefinitionAssociation__dll.AiAgentTagDefinitionId__c</members>
+        <members>sfm_AiAgentTagDefinitionAssociation__dll.AiPromptTemplateId__c</members>
+        <members>sfm_AiAgentTagDefinitionAssociation__dll.CreatedDate__c</members>
+        <members>sfm_AiAgentTagDefinitionAssociation__dll.DataSourceObject__c</members>
+        <members>sfm_AiAgentTagDefinitionAssociation__dll.DataSource__c</members>
+        <members>sfm_AiAgentTagDefinitionAssociation__dll.Id__c</members>
+        <members>sfm_AiAgentTagDefinitionAssociation__dll.InputScope__c</members>
+        <members>sfm_AiAgentTagDefinitionAssociation__dll.InternalOrganization__c</members>
+        <members>sfm_AiAgentTagDefinitionAssociation__dll.IsActive__c</members>
+        <members>sfm_AiAgentTagDefinitionAssociation__dll.KQ_AiAgentTagDefinitionId__c</members>
+        <members>sfm_AiAgentTagDefinitionAssociation__dll.KQ_Id__c</members>
+        <members>sfm_AiAgentTagDefinitionAssociation__dll.OrgId__c</members>
+        <members>sfm_AiAgentTagDefinitionAssociation__dll.cdp_sys_SourceVersion__c</members>
+        <members>sfm_AiAgentTagDefinition__dll.CreatedDate__c</members>
+        <members>sfm_AiAgentTagDefinition__dll.DataSourceObject__c</members>
+        <members>sfm_AiAgentTagDefinition__dll.DataSource__c</members>
+        <members>sfm_AiAgentTagDefinition__dll.DataType__c</members>
+        <members>sfm_AiAgentTagDefinition__dll.Description__c</members>
+        <members>sfm_AiAgentTagDefinition__dll.DeveloperName__c</members>
+        <members>sfm_AiAgentTagDefinition__dll.EngineType__c</members>
+        <members>sfm_AiAgentTagDefinition__dll.Id__c</members>
+        <members>sfm_AiAgentTagDefinition__dll.InputScope__c</members>
+        <members>sfm_AiAgentTagDefinition__dll.InternalOrganization__c</members>
+        <members>sfm_AiAgentTagDefinition__dll.KQ_Id__c</members>
+        <members>sfm_AiAgentTagDefinition__dll.LightningTypeApiName__c</members>
+        <members>sfm_AiAgentTagDefinition__dll.Name__c</members>
+        <members>sfm_AiAgentTagDefinition__dll.OrgId__c</members>
+        <members>sfm_AiAgentTagDefinition__dll.SemanticType__c</members>
+        <members>sfm_AiAgentTagDefinition__dll.SourceTagReferenceName__c</members>
+        <members>sfm_AiAgentTagDefinition__dll.SourceType__c</members>
+        <members>sfm_AiAgentTagDefinition__dll.Status__c</members>
+        <members>sfm_AiAgentTagDefinition__dll.TagIdentifier__c</members>
+        <members>sfm_AiAgentTagDefinition__dll.VersionNumber__c</members>
+        <members>sfm_AiAgentTagDefinition__dll.cdp_sys_SourceVersion__c</members>
+        <members>sfm_AiAgentTag__dll.AiAgentTagDefinitionId__c</members>
+        <members>sfm_AiAgentTag__dll.CreatedDate__c</members>
+        <members>sfm_AiAgentTag__dll.DataSourceObject__c</members>
+        <members>sfm_AiAgentTag__dll.DataSource__c</members>
+        <members>sfm_AiAgentTag__dll.Description__c</members>
+        <members>sfm_AiAgentTag__dll.Id__c</members>
+        <members>sfm_AiAgentTag__dll.InternalOrganization__c</members>
+        <members>sfm_AiAgentTag__dll.IsActive__c</members>
+        <members>sfm_AiAgentTag__dll.IsFallback__c</members>
+        <members>sfm_AiAgentTag__dll.KQ_AiAgentTagDefinitionId__c</members>
+        <members>sfm_AiAgentTag__dll.KQ_Id__c</members>
+        <members>sfm_AiAgentTag__dll.OrderNumber__c</members>
+        <members>sfm_AiAgentTag__dll.OrgId__c</members>
+        <members>sfm_AiAgentTag__dll.OutcomeType__c</members>
+        <members>sfm_AiAgentTag__dll.Value__c</members>
+        <members>sfm_AiAgentTag__dll.cdp_sys_SourceVersion__c</members>
         <members>ssotIndividual01_Unified_SMH_179247055__dlm.Delta_Type__c</members>
         <members>ssotIndividual01_Unified_SMH_179247055__dlm.Id__c</members>
         <members>ssotIndividual01_Unified_SMH_179247055__dlm.KQ_Id__c</members>
@@ -7737,6 +9115,7 @@
         <members>ssot__Account__dlm.Is_PRC_Rate_Card__c</members>
         <members>ssot__Account__dlm.Is_Propel_Account__c</members>
         <members>ssot__Account__dlm.KQ_BillContactAddressId__c</members>
+        <members>ssot__Account__dlm.KQ_Contract_id__c</members>
         <members>ssot__Account__dlm.KQ_FaxPhoneId__c</members>
         <members>ssot__Account__dlm.KQ_Id__c</members>
         <members>ssot__Account__dlm.KQ_OwnerId__c</members>
@@ -7818,6 +9197,62 @@
         <members>ssot__Account__dlm.is_important__c</members>
         <members>ssot__Account__dlm.paidFlag_c_c__c</members>
         <members>ssot__Account__dlm.rate_card_id__c</members>
+        <members>ssot__AiAgentAction__dlm.KQ_Id__c</members>
+        <members>ssot__AiAgentInteractionMessage__dlm.AttributeText__c</members>
+        <members>ssot__AiAgentInteractionMessage__dlm.KQ_AiAgentInteractionId__c</members>
+        <members>ssot__AiAgentInteractionMessage__dlm.KQ_AiAgentSessionId__c</members>
+        <members>ssot__AiAgentInteractionMessage__dlm.KQ_AiAgentSessionParticipantId__c</members>
+        <members>ssot__AiAgentInteractionMessage__dlm.KQ_Id__c</members>
+        <members>ssot__AiAgentInteractionMessage__dlm.KQ_IndividualId__c</members>
+        <members>ssot__AiAgentInteractionMessage__dlm.KQ_ParentMessageId__c</members>
+        <members>ssot__AiAgentInteractionMessage__dlm.MessageEndTimestamp__c</members>
+        <members>ssot__AiAgentInteractionMessage__dlm.MessageStartTimestamp__c</members>
+        <members>ssot__AiAgentInteractionMessage__dlm.Modality__c</members>
+        <members>ssot__AiAgentInteractionStep__dlm.KQ_AiAgentInteractionId__c</members>
+        <members>ssot__AiAgentInteractionStep__dlm.KQ_Id__c</members>
+        <members>ssot__AiAgentInteractionStep__dlm.KQ_PrevStepId__c</members>
+        <members>ssot__AiAgentInteractionStep__dlm.SubType__c</members>
+        <members>ssot__AiAgentInteractionStep__dlm.TopicApiName__c</members>
+        <members>ssot__AiAgentInteraction__dlm.KQ_AiAgentSessionId__c</members>
+        <members>ssot__AiAgentInteraction__dlm.KQ_Id__c</members>
+        <members>ssot__AiAgentInteraction__dlm.KQ_IndividualId__c</members>
+        <members>ssot__AiAgentInteraction__dlm.KQ_PrevInteractionId__c</members>
+        <members>ssot__AiAgentMomentInteraction__dlm.KQ_AiAgentInteractionId__c</members>
+        <members>ssot__AiAgentMomentInteraction__dlm.KQ_AiAgentMomentId__c</members>
+        <members>ssot__AiAgentMomentInteraction__dlm.KQ_Id__c</members>
+        <members>ssot__AiAgentMoment__dlm.KQ_AiAgentSessionId__c</members>
+        <members>ssot__AiAgentMoment__dlm.KQ_Id__c</members>
+        <members>ssot__AiAgentSessionParticipant__dlm.KQ_AiAgentSessionId__c</members>
+        <members>ssot__AiAgentSessionParticipant__dlm.KQ_Id__c</members>
+        <members>ssot__AiAgentSessionParticipant__dlm.KQ_IndividualId__c</members>
+        <members>ssot__AiAgentSession__dlm.ConversationId__c</members>
+        <members>ssot__AiAgentSession__dlm.KQ_Id__c</members>
+        <members>ssot__AiAgentSession__dlm.KQ_IndividualId__c</members>
+        <members>ssot__AiAgentSession__dlm.KQ_PreviousSessionId__c</members>
+        <members>ssot__AiAgentTagAssociation__dlm.AiAgentSessionStartTimestamp__c</members>
+        <members>ssot__AiAgentTagAssociation__dlm.AttributeText__c</members>
+        <members>ssot__AiAgentTagAssociation__dlm.CreatedByUserId__c</members>
+        <members>ssot__AiAgentTagAssociation__dlm.KQ_AiAgentInteractionId__c</members>
+        <members>ssot__AiAgentTagAssociation__dlm.KQ_AiAgentMomentId__c</members>
+        <members>ssot__AiAgentTagAssociation__dlm.KQ_AiAgentSessionId__c</members>
+        <members>ssot__AiAgentTagAssociation__dlm.KQ_AiAgentTagDefinitionAssociationId__c</members>
+        <members>ssot__AiAgentTagAssociation__dlm.KQ_AiAgentTagId__c</members>
+        <members>ssot__AiAgentTagAssociation__dlm.KQ_Id__c</members>
+        <members>ssot__AiAgentTagAssociation__dlm.OutcomeType__c</members>
+        <members>ssot__AiAgentTagAssociation__dlm.SourceType__c</members>
+        <members>ssot__AiAgentTagAssociation__dlm.ValueText__c</members>
+        <members>ssot__AiAgentTagDefinitionAssociation__dlm.InputScope__c</members>
+        <members>ssot__AiAgentTagDefinitionAssociation__dlm.KQ_AiAgentTagDefinitionId__c</members>
+        <members>ssot__AiAgentTagDefinitionAssociation__dlm.KQ_Id__c</members>
+        <members>ssot__AiAgentTagDefinition__dlm.KQ_Id__c</members>
+        <members>ssot__AiAgentTagDefinition__dlm.LightningTypeApiName__c</members>
+        <members>ssot__AiAgentTagDefinition__dlm.SemanticType__c</members>
+        <members>ssot__AiAgentTag__dlm.KQ_AiAgentTagDefinitionId__c</members>
+        <members>ssot__AiAgentTag__dlm.KQ_Id__c</members>
+        <members>ssot__AiAgentTopic__dlm.KQ_Id__c</members>
+        <members>ssot__BotVersion__dlm.BillingMode__c</members>
+        <members>ssot__BotVersion__dlm.KQ_Id__c</members>
+        <members>ssot__Bot__dlm.KQ_Id__c</members>
         <members>ssot__BulkEmailMessage__dlm.CcAddress__c</members>
         <members>ssot__BulkEmailMessage__dlm.IsSyntheticCcEnabled__c</members>
         <members>ssot__BulkEmailMessage__dlm.KQ_CampaignId__c</members>
@@ -7886,6 +9321,7 @@
         <members>ssot__Contract__dlm.KQ_CustomerAccountId__c</members>
         <members>ssot__Contract__dlm.KQ_Id__c</members>
         <members>ssot__Contract__dlm.KQ_LastModifiedById__c</members>
+        <members>ssot__Contract__dlm.rel_1793096649281_end__c</members>
         <members>ssot__DeviceApplicationEngagement__dlm.ContentImpressionRegion__c</members>
         <members>ssot__DeviceApplicationEngagement__dlm.KQ_BulkMessageId__c</members>
         <members>ssot__DeviceApplicationEngagement__dlm.KQ_ContactPointId__c</members>
@@ -7904,6 +9340,7 @@
         <members>ssot__EmailEngagement__dlm.ContentImpressionRegion__c</members>
         <members>ssot__EmailEngagement__dlm.ConversationId__c</members>
         <members>ssot__EmailEngagement__dlm.IsSyntheticCcEnabled__c</members>
+        <members>ssot__EmailEngagement__dlm.KQ_AiAgentSessionId__c</members>
         <members>ssot__EmailEngagement__dlm.KQ_BulkEmailMessageId__c</members>
         <members>ssot__EmailEngagement__dlm.KQ_ContactPointId__c</members>
         <members>ssot__EmailEngagement__dlm.KQ_EngagementChannelId__c</members>
@@ -7915,6 +9352,7 @@
         <members>ssot__EmailEngagement__dlm.ReplyToName__c</members>
         <members>ssot__EmailEngagement__dlm.SendTimeAttributes__c</members>
         <members>ssot__EmailEngagement__dlm.rel_1792131256682_end__c</members>
+        <members>ssot__EmailEngagement__dlm.rel_1793276090060_end__c</members>
         <members>ssot__EngagementChannelType__dlm.KQ_Id__c</members>
         <members>ssot__EngagementChannelType__dlm.UsageType__c</members>
         <members>ssot__EngagementChannelUsage__dlm.KQ_EngagementChannelId__c</members>
@@ -7983,7 +9421,6 @@
         <members>ssot__Individual__dlm.rel_1792468107000_end__c</members>
         <members>ssot__Individual__dlm.rel_1792735652922_end__c</members>
         <members>ssot__InvoiceLine__dlm.Id_Deleted__c</members>
-        <members>ssot__Invoice__dlm.KQ_Id__c</members>
         <members>ssot__Invoice__dlm.MSA_Name__c</members>
         <members>ssot__Invoice__dlm.MSA__c</members>
         <members>ssot__Invoice__dlm.Rate_Card_Id__c</members>
@@ -8034,6 +9471,7 @@
         <members>ssot__MessageEngagement__dlm.InvocableAcceptedDateTime__c</members>
         <members>ssot__MessageEngagement__dlm.IsBotClick__c</members>
         <members>ssot__MessageEngagement__dlm.IspFirstAttemptDateTime__c</members>
+        <members>ssot__MessageEngagement__dlm.KQ_AiAgentSessionId__c</members>
         <members>ssot__MessageEngagement__dlm.KQ_BulkMessageId__c</members>
         <members>ssot__MessageEngagement__dlm.KQ_ContactPointId__c</members>
         <members>ssot__MessageEngagement__dlm.KQ_EngagementChannelId__c</members>
@@ -8055,6 +9493,7 @@
         <members>ssot__MessageEngagement__dlm.SendTimeUsername__c</members>
         <members>ssot__MessageEngagement__dlm.SenderAccount__c</members>
         <members>ssot__MessageEngagement__dlm.rel_1791866472748_end__c</members>
+        <members>ssot__MessageEngagement__dlm.rel_1793276090474_end__c</members>
         <members>ssot__OpportunityContact__dlm.KQ_AccountContactId__c</members>
         <members>ssot__OpportunityContact__dlm.KQ_Id__c</members>
         <members>ssot__OpportunityContact__dlm.KQ_OpportunityId__c</members>
@@ -8228,6 +9667,7 @@
         <members>OperationType_PropelI_CaseCancellation</members>
         <members>OperationType_PropelI_CaseCreation</members>
         <members>OperationType_PropelI_CreateOpportunityPropeli</members>
+        <members>OperationType_PropelI_PincodeLookup</members>
         <members>OperationType_Proton_UpdateCase</members>
         <members>OperationType_enterprise_UpdateCase</members>
         <members>OperationType_iConnect_UpdateCase</members>
@@ -8562,6 +10002,7 @@
         <members>ActnblListKeyPrfmIndAsgnt</members>
         <members>ActvTgtPlatformFieldValue</members>
         <members>Address</members>
+        <members>AgentSession</members>
         <members>AgentWork</members>
         <members>AiEvalCopilotTestCaseRslt</members>
         <members>AiEvalPrmptRagTestCsRslt</members>
@@ -9090,7 +10531,6 @@
         <members>Invoice_Cancel_Permission</members>
         <members>Lead_Central_Desk</members>
         <members>Lead_Duplicate_Exemption</members>
-        <members>Lead_Management</members>
         <members>Lead_Revive</members>
         <members>Lead_VR_Bypass</members>
         <members>Regional_Finance_Head</members>
@@ -9274,6 +10714,7 @@
         <name>Dashboard</name>
     </types>
     <types>
+        <members>AgentOpt</members>
         <members>ConsentAuditTrailV2_00DC1000005VGon</members>
         <members>Flow_Run_Ingestion_Home</members>
         <members>MessagingConsentV2_00DC1000005VGon</members>
@@ -9286,6 +10727,16 @@
         <name>DataConnectorIngestApi</name>
     </types>
     <types>
+        <members>AgentOpt_69ff3f1e_bded_491b_a5d8_0893c14ac511</members>
+        <members>Agent_Interaction</members>
+        <members>Agent_Log</members>
+        <members>Agent_Message</members>
+        <members>Agent_MessageAttachment</members>
+        <members>Agent_Participant</members>
+        <members>Agent_Session</members>
+        <members>Agent_SessionAttachment</members>
+        <members>Agent_Step</members>
+        <members>Agent_TagAssociation</members>
         <members>CatalogMdloConnectionInstanceConsumptionResourceTags</members>
         <members>ConsentAuditTrailV2_00D7F000003D4UQ_81b31f10_4583_44d9_b4ef_bc9e9434490d</members>
         <members>Flow_Run_Ingestion_Home_ca6a01cf_17ae_439f_b6fd_6c5e1c27ae6d</members>
@@ -9315,7 +10766,27 @@
         <members>Account_Home</members>
         <members>Account_SAFEXPRESSPROD</members>
         <members>Account_Team_c_SAFEXPRESSPROD</members>
+        <members>AgentOpt_Tag_Association_D3B114DB_dll</members>
+        <members>AgentOpt_Tag_Association_Log_572B1DF0_dll</members>
+        <members>AgentOpt_Tag_D602E652_dll</members>
+        <members>AgentOpt_Tag_Def_641598D7_dll</members>
+        <members>AgentOpt_Tag_Def_Association_80FC62FB_dll</members>
+        <members>Agent_Interaction_dll</members>
+        <members>Agent_Log_dll</members>
+        <members>Agent_MessageAttachment_dll</members>
+        <members>Agent_Message_dll</members>
+        <members>Agent_Participant_dll</members>
+        <members>Agent_SessionAttachment_dll</members>
+        <members>Agent_Session_dll</members>
+        <members>Agent_Step_dll</members>
+        <members>Agent_TagAssociation_dll</members>
+        <members>AiAgentSessionTag_Home</members>
+        <members>AiAgentTagDefAssoc_Home</members>
+        <members>AiTagDefinition_Home</members>
+        <members>AiTagValue_Home</members>
         <members>Billing_Line_Item_c_SAFEXPRESSPROD</members>
+        <members>BotDefinition_Home</members>
+        <members>BotVersion_Home</members>
         <members>Branch_Master_c_SAFEXPRESSPROD</members>
         <members>BulkMessage_Home</members>
         <members>Business_Detail_c_SAFEXPRESSPROD</members>
@@ -9347,6 +10818,8 @@
         <members>Flow_Run_Ingestion_Home_FlowEle_A80D2F9E_dll</members>
         <members>Flow_Run_Ingestion_Home_FlowRun_45CE2CEB_dll</members>
         <members>Flow_Run_Ingestion_Home_Identit_8DD78E67_dll</members>
+        <members>GenAiFunctionDefinition_Home</members>
+        <members>GenAiPluginDefinition_Home</members>
         <members>Invoice_c_SAFEXPRESSPROD</members>
         <members>Journey_c_SAFEXPRESSPROD</members>
         <members>LeadScoreAdjustment_Home</members>
@@ -9354,6 +10827,7 @@
         <members>Lead_c_SAFEXPRESSPROD</members>
         <members>ListEmail_Home</members>
         <members>MONTHLY_Waybill_Count</members>
+        <members>MSA_SFX_SalesInsights</members>
         <members>ManagedContentPublishedUrl_Home</members>
         <members>ManagedContent_Home</members>
         <members>MarketSegment_Home</members>
@@ -9401,7 +10875,27 @@
         <members>Account_Home</members>
         <members>Account_SAFEXPRESSPROD</members>
         <members>Account_Team_c_SAFEXPRESSPROD</members>
+        <members>AgentOpt_Tag_Association_D3B114DB</members>
+        <members>AgentOpt_Tag_Association_Log_572B1DF0</members>
+        <members>AgentOpt_Tag_D602E652</members>
+        <members>AgentOpt_Tag_Def_641598D7</members>
+        <members>AgentOpt_Tag_Def_Association_80FC62FB</members>
+        <members>Agent_Interaction</members>
+        <members>Agent_Log</members>
+        <members>Agent_Message</members>
+        <members>Agent_MessageAttachment</members>
+        <members>Agent_Participant</members>
+        <members>Agent_Session</members>
+        <members>Agent_SessionAttachment</members>
+        <members>Agent_Step</members>
+        <members>Agent_TagAssociation</members>
+        <members>AiAgentSessionTag_Home</members>
+        <members>AiAgentTagDefAssoc_Home</members>
+        <members>AiTagDefinition_Home</members>
+        <members>AiTagValue_Home</members>
         <members>Billing_Line_Item_c_SAFEXPRESSPROD</members>
+        <members>BotDefinition_Home</members>
+        <members>BotVersion_Home</members>
         <members>Branch_Master_c_SAFEXPRESSPROD</members>
         <members>BulkMessage_Home</members>
         <members>Business_Detail_c_SAFEXPRESSPROD</members>
@@ -9433,6 +10927,8 @@
         <members>Flow_Run_Ingestion_Home_FlowElementRun_A80D2F9E</members>
         <members>Flow_Run_Ingestion_Home_FlowRun_45CE2CEB</members>
         <members>Flow_Run_Ingestion_Home_IdentityMatch_8DD78E67</members>
+        <members>GenAiFunctionDefinition_Home</members>
+        <members>GenAiPluginDefinition_Home</members>
         <members>Invoice_c_SAFEXPRESSPROD</members>
         <members>Journey_c_SAFEXPRESSPROD</members>
         <members>LeadScoreAdjustment_Home</members>
@@ -9440,6 +10936,7 @@
         <members>Lead_c_SAFEXPRESSPROD</members>
         <members>ListEmail_Home</members>
         <members>MONTHLY_Waybill_Count</members>
+        <members>MSA_SFX_SalesInsights</members>
         <members>ManagedContentPublishedUrl_Home</members>
         <members>ManagedContent_Home</members>
         <members>MarketSegment_Home</members>
@@ -9481,6 +10978,7 @@
         <members>marketing/Default_Content_Workspace.sfdc_cms__languageSettings/languages</members>
         <members>marketing/Workspace_1.sfdc_cms__email/MCZ75UFCBBENA5BOED2GZMPKEVPM</members>
         <members>marketing/Workspace_1.sfdc_cms__emailTemplate/MCSQ23DSKZM5CHHKTIAE676CSQYY</members>
+        <members>marketing/Workspace_1.sfdc_cms__form/MCOMZ2ZMTQ4JGSXIRWYXEK6PY2GI</members>
         <members>marketing/Workspace_1.sfdc_cms__image/systemDefaultStandardTemplatebrandStoryLargeImage1</members>
         <members>marketing/Workspace_1.sfdc_cms__image/systemDefaultStandardTemplatebrandStoryLargeImage2</members>
         <members>marketing/Workspace_1.sfdc_cms__image/systemDefaultStandardTemplatebrandStoryLargeImage3</members>
@@ -9643,6 +11141,8 @@
         <members>Contact.Standard_Rule_for_Contacts_with_Duplicate_Leads</members>
         <members>Contract__c.Contract_Duplicate_Rule_HD</members>
         <members>Event_Lead__c.Custom_Event_Lead</members>
+        <members>Lead.Lead_Mobile_Email_Duplicate_Rule</members>
+        <members>Lead.Lead_Name_Duplicate_Rule</members>
         <members>Lead.Standard_Lead_Duplicate_Rule</members>
         <members>Lead.Standard_Rule_for_Leads_with_Duplicate_Contacts</members>
         <members>Lead__c.Custom_Lead_Duplicate_Rule</members>
@@ -9786,10 +11286,14 @@
     <types>
         <members>Enterprise_API</members>
         <members>GST_Validation_Auth</members>
+        <members>PropeliPreBookingEC</members>
+        <members>Propeli_Pincode_Auth</members>
         <members>Safex_FreshService_External</members>
         <name>ExternalCredential</name>
     </types>
     <types>
+        <members>AgentOpt_69ff3f1e_bded_491b_a5d8_0893c14ac511</members>
+        <members>Agent_5a2df52d_6956_43a0_9f7d_f6fdfffdba51</members>
         <members>ConsentAuditTrailV2_00DC1000005VGon_81b31f10_4583_44d9_b4ef_bc9e9434490d</members>
         <members>Flow_Run_Ingestion_Home_ca6a01cf_17ae_439f_b6fd_6c5e1c27ae6d</members>
         <members>MessagingConsentV2_00DC1000005VGon_2e7e0133_f4f0_4ffc_ab4e_ad15f69f87f7</members>
@@ -9804,6 +11308,20 @@
         <name>ExternalDataConnector</name>
     </types>
     <types>
+        <members>AgentOpt_69ff3f1e_bded_491b_a5d8_0893c14ac511.AiAgentTag</members>
+        <members>AgentOpt_69ff3f1e_bded_491b_a5d8_0893c14ac511.AiAgentTagAssocLog</members>
+        <members>AgentOpt_69ff3f1e_bded_491b_a5d8_0893c14ac511.AiAgentTagAssociation</members>
+        <members>AgentOpt_69ff3f1e_bded_491b_a5d8_0893c14ac511.AiAgentTagDefinition</members>
+        <members>AgentOpt_69ff3f1e_bded_491b_a5d8_0893c14ac511.AiAgentTagDefinitionAssociation</members>
+        <members>Agent_5a2df52d_6956_43a0_9f7d_f6fdfffdba51.Interaction</members>
+        <members>Agent_5a2df52d_6956_43a0_9f7d_f6fdfffdba51.Log</members>
+        <members>Agent_5a2df52d_6956_43a0_9f7d_f6fdfffdba51.Message</members>
+        <members>Agent_5a2df52d_6956_43a0_9f7d_f6fdfffdba51.MessageAttachment</members>
+        <members>Agent_5a2df52d_6956_43a0_9f7d_f6fdfffdba51.Participant</members>
+        <members>Agent_5a2df52d_6956_43a0_9f7d_f6fdfffdba51.Session</members>
+        <members>Agent_5a2df52d_6956_43a0_9f7d_f6fdfffdba51.SessionAttachment</members>
+        <members>Agent_5a2df52d_6956_43a0_9f7d_f6fdfffdba51.Step</members>
+        <members>Agent_5a2df52d_6956_43a0_9f7d_f6fdfffdba51.TagAssociation</members>
         <members>ConsentAuditTrailV2_00DC1000005VGon_81b31f10_4583_44d9_b4ef_bc9e9434490d.ConsentAuditTrail</members>
         <members>Flow_Run_Ingestion_Home_ca6a01cf_17ae_439f_b6fd_6c5e1c27ae6d.FlowElementRun</members>
         <members>Flow_Run_Ingestion_Home_ca6a01cf_17ae_439f_b6fd_6c5e1c27ae6d.FlowRun</members>
@@ -9821,6 +11339,10 @@
         <members>Unified_Whatsapp_data_kits_767ed6d2_d641_480e_9848_d6a4c67a8ba3.WhatsappEngagement</members>
         <members>WebEngagementEventsV2_00DC1000005VGon_0af0bde0_5d9f_41cb_b8d7_b4a51a04f121.DeviceToIndividualMatch</members>
         <name>ExternalDataTranObject</name>
+    </types>
+    <types>
+        <members>GSTPortal</members>
+        <name>ExternalServiceRegistration</name>
     </types>
     <types>
         <members>Freshservice_Integration_plcy</members>
@@ -9857,12 +11379,27 @@
     </types>
     <types>
         <members>AccountScoreAdjustment_std_AccountId_map_ssot_Account_ssot_Id_1792131225349</members>
+        <members>AiAgentMessageAttachment_std_MessageId_map_ssot_AiAgentInteractionMessage_ssot_Id_1793276081914</members>
+        <members>AiAgentSessionAttachment_std_AiAgentSessionId_map_ssot_AiAgentSession_ssot_Id_1793276089328</members>
+        <members>AiAgentSessionLog_std_AiAgentInteractionId_map_ssot_AiAgentInteraction_ssot_Id_1793276110836</members>
+        <members>AiAgentSessionLog_std_AiAgentInteractionStepId_map_ssot_AiAgentInteractionStep_ssot_Id_1793276062651</members>
+        <members>AiAgentSessionLog_std_AiAgentSessionId_map_ssot_AiAgentSession_ssot_Id_1793276089693</members>
+        <members>AiAgentSessionLog_std_CauseLogId_map_AiAgentSessionLog_std_Id_1793276063029</members>
+        <members>AiAgentSessionLog_std_RootCauseLogId_map_AiAgentSessionLog_std_Id_1793276063453</members>
+        <members>AiAgentTagAssocLog_std_AiAgentInteractionId_map_ssot_AiAgentInteraction_ssot_Id_1793276371666</members>
+        <members>AiAgentTagAssocLog_std_AiAgentMomentId_map_ssot_AiAgentMoment_ssot_Id_1793276372052</members>
+        <members>AiAgentTagAssocLog_std_AiAgentSessionId_map_ssot_AiAgentSession_ssot_Id_1793276371257</members>
+        <members>AiAgentTagAssocLog_std_AiAgentTagDefinitionId_map_ssot_AiAgentTagDefinition_ssot_Id_1793276372427</members>
+        <members>AiAgentTagAssocLog_std_AiAgentTagId_map_ssot_AiAgentTag_ssot_Id_1793276372802</members>
         <members>Billing_Line_Item_c_SAFEXPRESSPROD_Billing_Branch_c_map_Branch_Master_Custom_DMO_Id_1792563050023</members>
         <members>Billing_Line_Item_c_SAFEXPRESSPROD_Billing_Information_c_map_SAFEXPRESSPROD_Billing_Information_c_Id_1792562622181</members>
         <members>Billing_Line_Item_c_SAFEXPRESSPROD_Collection_Branch_c_map_Branch_Master_Custom_DMO_Id_1792563050502</members>
         <members>Billing_Line_Item_c_SAFEXPRESSPROD_Submission_Branch_c_map_Branch_Master_Custom_DMO_Id_1792563050841</members>
+        <members>Debit_Credit_Note_c_SAFEXPRESSPROD_Invoice_Name_c_map_Invoice_c_Custom_DMO_Bill_Number_c_1793165821891</members>
         <members>E360PushActiveUserCountV2_app_id_map_ssot_DeviceApplicationEngagement_ssot_SoftwareApplicationId_1790231994404</members>
         <members>IndividualScoreAdjustment_std_SourceRecordIdentifier_map_ssot_Individual_ssot_Id_1792131230880</members>
+        <members>Invoice_c_Custom_DMO_Account_c_map_ssot_Account_ssot_Id_1793165410584</members>
+        <members>Invoice_c_Custom_DMO_Account_c_map_ssot_Account_ssot_Name_1793164807991</members>
         <members>SAFEXPRESSPROD_Billing_Information_c_SFX_c_map_ssot_Account_ssot_Id_1792564614037</members>
         <members>UnifiedLinkssotContactPointAddress01_UnifiedRecordId_map_UnifiedssotContactPointAddress01_ssot_Id_1792403822452</members>
         <members>UnifiedLinkssotContactPointAddress02_UnifiedRecordId_map_UnifiedssotContactPointAddress02_ssot_Id_1792735665867</members>
@@ -9886,6 +11423,8 @@
         <members>UnifiedssotContactPointPhone02_ssot_PartyId_map_UnifiedssotIndividual02_ssot_Id_1792735662164</members>
         <members>UnifiedssotPartyIdentification01_ssot_PartyId_map_UnifiedssotIndividual01_ssot_Id_1792403829906</members>
         <members>UnifiedssotPartyIdentification02_ssot_PartyId_map_UnifiedssotIndividual02_ssot_Id_1792735675188</members>
+        <members>Waybill_Count_Test_msa_code_map_MONTHLY_Waybill_Count_msa_cust_id_1793076958960</members>
+        <members>Waybill_Count_Test_sfx_code_map_MONTHLY_Waybill_Count_sfx_prc_cntr_code_1793076958911</members>
         <members>ssotIndividual01_Unified_SMH_179247055_Id_map_UnifiedssotIndividual01_ssot_Id_1792470552849</members>
         <members>ssotIndividual01_Unified_SM_1792470549_Id_map_UnifiedssotIndividual01_ssot_Id_1792470550939</members>
         <members>ssot_BulkEmailMessage_OwnerId_map_ssot_User_ssot_Id_1790230675361</members>
@@ -9900,7 +11439,9 @@
         <members>ssot_ContactPointEmail_ssot_Id_map_UnifiedLinkssotContactPointEmail02_SourceRecordId_1792735656606</members>
         <members>ssot_ContactPointPhone_ssot_Id_map_UnifiedLinkssotContactPointPhone01_SourceRecordId_1792403818258</members>
         <members>ssot_ContactPointPhone_ssot_Id_map_UnifiedLinkssotContactPointPhone02_SourceRecordId_1792735660898</members>
+        <members>ssot_Contract_ssot_Id_map_ssot_Account_Contract_id_1793096649281</members>
         <members>ssot_DeviceApplicationEngagement_ssot_BulkMessageId_map_ssot_BulkMessage_ssot_Id_1790231944248</members>
+        <members>ssot_EmailEngagement_AiAgentSessionId_map_ssot_AiAgentSession_ssot_Id_1793276090060</members>
         <members>ssot_EmailEngagement_ssot_EngagementChannelId_map_ssot_EngagementChannel_ssot_Id_1792131256682</members>
         <members>ssot_FlowRun_ssot_FlowVersionOccurrenceId_map_ssot_FlowVersionOccurrence_ssot_Id_1792131363934</members>
         <members>ssot_FlowRun_ssot_TriggeredByFlowElementRunId_map_ssot_FlowElementRun_ssot_Id_1792131407249</members>
@@ -9909,6 +11450,7 @@
         <members>ssot_Individual_ssot_Id_map_UnifiedLinkssotIndividual01_SourceRecordId_1792403811790</members>
         <members>ssot_Individual_ssot_Id_map_UnifiedLinkssotIndividual02_SourceRecordId_1792735652922</members>
         <members>ssot_Individual_ssot_PartyId_map_ssot_Party_ssot_Id_1790230367370</members>
+        <members>ssot_MessageEngagement_AiAgentSessionId_map_ssot_AiAgentSession_ssot_Id_1793276090474</members>
         <members>ssot_MessageEngagement_ssot_CommunicationSubscriptionId_map_ssot_CommunicationSubscription_ssot_Id_1791866472748</members>
         <members>ssot_PartyIdentification_ssot_Id_map_UnifiedLinkssotPartyIdentification01_SourceRecordId_1792403828857</members>
         <members>ssot_PartyIdentification_ssot_Id_map_UnifiedLinkssotPartyIdentification02_SourceRecordId_1792735673930</members>
@@ -10065,6 +11607,7 @@
         <members>ForCampaignComplete_ThankYouMail</members>
         <members>Get_Contact_From_Mobile_Number</members>
         <members>Get_WhatsApp_Number</members>
+        <members>Gst_Callout</members>
         <members>Invoice_Delete_after_3_month</members>
         <members>Journey_Audited_Screen_Flow</members>
         <members>Journey_for_Rgional_Manager</members>
@@ -10125,6 +11668,8 @@
         <members>WebToCaseAssignments</members>
         <members>business_flow</members>
         <members>flow_701C100000VyGckIAF_1792009220136</members>
+        <members>flow_701C100000VyGckIAF_1793016175654</members>
+        <members>flow_dj89P62tXx8GG8Gi</members>
         <members>lead_assign_to_remove</members>
         <members>onboarding_task</members>
         <name>Flow</name>
@@ -10171,6 +11716,7 @@
         <members>ForCampaignComplete_ThankYouMail</members>
         <members>Get_Contact_From_Mobile_Number</members>
         <members>Get_WhatsApp_Number</members>
+        <members>Gst_Callout</members>
         <members>Invoice_Delete_after_3_month</members>
         <members>Journey_Audited_Screen_Flow</members>
         <members>Journey_for_Rgional_Manager</members>
@@ -10231,6 +11777,8 @@
         <members>WebToCaseAssignments</members>
         <members>business_flow</members>
         <members>flow_701C100000VyGckIAF_1792009220136</members>
+        <members>flow_701C100000VyGckIAF_1793016175654</members>
+        <members>flow_dj89P62tXx8GG8Gi</members>
         <members>lead_assign_to_remove</members>
         <members>onboarding_task</members>
         <name>FlowDefinition</name>
@@ -10254,6 +11802,7 @@
         <members>Check_Pincode_Serviceability</members>
         <members>Check_Pincode_Serviceability_V2</members>
         <members>Create_Booking_Request_Case</members>
+        <members>Create_Business_Enquiry</members>
         <members>Post_Delivery_Escalation_Chat_Agent_flow</members>
         <members>Process_Post_Delivery_Escalation</members>
         <members>Safexpress_Waybill_APEX_For_Status_Check</members>
@@ -10262,6 +11811,7 @@
         <members>Safexpress_Waybill_Status_Intent_De_Duplication_Logic</members>
         <members>Submit_Booking_Form</members>
         <members>Submit_Damage_Escalation_Form</members>
+        <members>Submit_Urgent_Delivery_Form</members>
         <name>GenAiFunction</name>
     </types>
     <types>
@@ -10702,9 +12252,11 @@
         <members>rateCardSectorCmpForFlow</members>
         <members>reassignTaskOwner</members>
         <members>recentCasesByWayBill</members>
+        <members>safexpressUrgentDeliveryForm</members>
         <members>safexpressWaybillEnquiryLWCCard</members>
         <members>sendToOtrs</members>
         <members>sendToPropelIPreBooking</members>
+        <members>sfxBusinessEnquiryForm</members>
         <members>tagBranchQuickAction</members>
         <members>updateWayBillNumber</members>
         <members>wayBillModal</members>
@@ -10715,11 +12267,14 @@
         <name>LightningComponentBundle</name>
     </types>
     <types>
+        <members>SafexpressBusinessEnquiryForm</members>
         <members>Safexpress_Pincode_Location</members>
         <members>Waybill_Enquiry_UI_Card</members>
         <members>bookingRequestForm</members>
         <members>safexpressDamageEscalationForm</members>
         <members>safexpressShipmentCardType</members>
+        <members>safexpressUrgentDeliveryForm</members>
+        <members>safexpressUrgentDeliveryUpdatedForm</members>
         <members>safexpressWaybillType</members>
         <name>LightningTypeBundle</name>
     </types>
@@ -10888,6 +12443,7 @@
         <members>Knowledge__kav.draft_articles</members>
         <members>Knowledge__kav.published_articles</members>
         <members>Lead.AllOpenLeads</members>
+        <members>Lead.Central_Desk_Lead</members>
         <members>Lead__c.All</members>
         <members>Lead__c.All_List_View</members>
         <members>Lead__c.Copy_of_My_List_View</members>
@@ -11037,6 +12593,8 @@
         <members>Contact.Standard_Contact_Match_Rule_v1_1</members>
         <members>Contract__c.Contract_Matching_Rule</members>
         <members>Event_Lead__c.Custom_Event_Lead</members>
+        <members>Lead.Lead_Mobile_Email_Match</members>
+        <members>Lead.Lead_Name_Matching_Rule</members>
         <members>Lead.Standard_Lead_Match_Rule_v1_0</members>
         <members>Lead__c.Custom_Lead_Matching_Rule</members>
         <members>Lead__c.Custom_Lead_Matching_Rule1</members>
@@ -11067,6 +12625,7 @@
     </types>
     <types>
         <members>E360PushActiveUserCountV2</members>
+        <members>Waybill_Count_Test</members>
         <name>MktCalcInsightObjectDef</name>
     </types>
     <types>
@@ -11083,7 +12642,27 @@
         <members>Account_Home</members>
         <members>Account_SAFEXPRESSPROD</members>
         <members>Account_Team_c_SAFEXPRESSPROD</members>
+        <members>AgentOpt_Tag_Association_D3B114DB</members>
+        <members>AgentOpt_Tag_Association_Log_572B1DF0</members>
+        <members>AgentOpt_Tag_D602E652</members>
+        <members>AgentOpt_Tag_Def_641598D7</members>
+        <members>AgentOpt_Tag_Def_Association_80FC62FB</members>
+        <members>Agent_Interaction</members>
+        <members>Agent_Log</members>
+        <members>Agent_Message</members>
+        <members>Agent_MessageAttachment</members>
+        <members>Agent_Participant</members>
+        <members>Agent_Session</members>
+        <members>Agent_SessionAttachment</members>
+        <members>Agent_Step</members>
+        <members>Agent_TagAssociation</members>
+        <members>AiAgentSessionTag_Home</members>
+        <members>AiAgentTagDefAssoc_Home</members>
+        <members>AiTagDefinition_Home</members>
+        <members>AiTagValue_Home</members>
         <members>Billing_Line_Item_c_SAFEXPRESSPROD</members>
+        <members>BotDefinition_Home</members>
+        <members>BotVersion_Home</members>
         <members>Branch_Master_c_SAFEXPRESSPROD</members>
         <members>BulkMessage_Home</members>
         <members>Business_Detail_c_SAFEXPRESSPROD</members>
@@ -11115,6 +12694,8 @@
         <members>Flow_Run_Ingestion_Home_FlowEle_A80D2F9E</members>
         <members>Flow_Run_Ingestion_Home_FlowRun_45CE2CEB</members>
         <members>Flow_Run_Ingestion_Home_Identit_8DD78E67</members>
+        <members>GenAiFunctionDefinition_Home</members>
+        <members>GenAiPluginDefinition_Home</members>
         <members>Invoice_c_SAFEXPRESSPROD</members>
         <members>Journey_c_SAFEXPRESSPROD</members>
         <members>LeadScoreAdjustment_Home</members>
@@ -11122,6 +12703,7 @@
         <members>Lead_c_SAFEXPRESSPROD</members>
         <members>ListEmail_Home</members>
         <members>MONTHLY_Waybill_Count</members>
+        <members>MSA_SFX_SalesInsights</members>
         <members>ManagedContentPublishedUrl_Home</members>
         <members>ManagedContent_Home</members>
         <members>MarketSegment_Home</members>
@@ -11188,6 +12770,10 @@
     <types>
         <members>Enterprise_API</members>
         <members>Enterprise_Enquiry_Case_API</members>
+        <members>GST_Validation_Auth</members>
+        <members>PropeliPreBookingNC</members>
+        <members>Propeli_Pincode_API</members>
+        <members>Propeli_Token_API</members>
         <members>Safex_Freshservice_NC</members>
         <name>NamedCredential</name>
     </types>
@@ -11234,8 +12820,48 @@
         <members>Account_SAFEXPRESSPROD_map_Account_SAFEXPRESSPROD_1791786776442</members>
         <members>Account_Team_c_SAFEXPRESSPROD_map_Account_Team_c_SAFEXPRESSPROD_1791787683492</members>
         <members>Account_Team_c_SAFEXPRESSPROD_map_Account_Team_c_SAFEXPRESSPROD_1791794520264</members>
+        <members>AgentOpt_Tag_Association_D3B114DB_map_AgentOpt_Tag_Association_D3B114DB_1793276337852</members>
+        <members>AgentOpt_Tag_Association_D3B114DB_map_AiAgentTagAssociation_1793276389127</members>
+        <members>AgentOpt_Tag_Association_Log_572B1DF0_map_AgentOpt_Tag_Association_Log_572B1DF0_1793276337851</members>
+        <members>AgentOpt_Tag_Association_Log_572B1DF0_map_AiAgentTagAssocLog_std_1793276367352</members>
+        <members>AgentOpt_Tag_D602E652_map_AgentOpt_Tag_D602E652_1793276337852</members>
+        <members>AgentOpt_Tag_D602E652_map_AiAgentTag_1793276382638</members>
+        <members>AgentOpt_Tag_Def_641598D7_map_AgentOpt_Tag_Def_641598D7_1793276337852</members>
+        <members>AgentOpt_Tag_Def_641598D7_map_AiAgentTagDefinition_1793276386076</members>
+        <members>AgentOpt_Tag_Def_Association_80FC62FB_map_AgentOpt_Tag_Def_Association_80FC62FB_1793276337852</members>
+        <members>AgentOpt_Tag_Def_Association_80FC62FB_map_AiAgentTagDefinitionAssociation_1793276379320</members>
+        <members>Agent_Interaction_map_Agent_Interaction_1793275986110</members>
+        <members>Agent_Interaction_map_AiAgentInteraction_1793276104222</members>
+        <members>Agent_Log_map_Agent_Log_1793275986108</members>
+        <members>Agent_Log_map_AiAgentSessionLog_std_1793276059767</members>
+        <members>Agent_MessageAttachment_map_Agent_MessageAttachment_1793275986109</members>
+        <members>Agent_MessageAttachment_map_AiAgentMessageAttachment_std_1793276079363</members>
+        <members>Agent_Message_map_Agent_Message_1793275986109</members>
+        <members>Agent_Message_map_AiAgentInteractionMessage_1793276072341</members>
+        <members>Agent_Participant_map_Agent_Participant_1793275986109</members>
+        <members>Agent_Participant_map_AiAgentSessionParticipant_1793276067682</members>
+        <members>Agent_SessionAttachment_map_Agent_SessionAttachment_1793275986107</members>
+        <members>Agent_SessionAttachment_map_AiAgentSessionAttachment_std_1793276045195</members>
+        <members>Agent_Session_map_Agent_Session_1793275986109</members>
+        <members>Agent_Session_map_AiAgentSession_1793276083773</members>
+        <members>Agent_Step_map_Agent_Step_1793275986108</members>
+        <members>Agent_Step_map_AiAgentInteractionStep_1793276054527</members>
+        <members>Agent_TagAssociation_map_Agent_TagAssociation_1793275986110</members>
+        <members>Agent_TagAssociation_map_AiAgentTagAssociation_1793276099445</members>
+        <members>AiAgentSessionTag_Home_map_AiAgentSessionTag_Home_1793276554536</members>
+        <members>AiAgentSessionTag_Home_map_AiAgentTagAssociation_1793276558309</members>
+        <members>AiAgentTagDefAssoc_Home_map_AiAgentTagDefAssoc_Home_1793276433691</members>
+        <members>AiAgentTagDefAssoc_Home_map_AiAgentTagDefinitionAssociation_1793276445785</members>
+        <members>AiTagDefinition_Home_map_AiAgentTagDefinition_1793276440514</members>
+        <members>AiTagDefinition_Home_map_AiTagDefinition_Home_1793276433681</members>
+        <members>AiTagValue_Home_map_AiAgentTag_1793276443464</members>
+        <members>AiTagValue_Home_map_AiTagValue_Home_1793276433687</members>
         <members>Billing_Line_Item_c_SAFEXPRESSPROD_map_Billing_Line_Item_c_SAFEXPRESSPROD_1791787683482</members>
         <members>Billing_Line_Item_c_SAFEXPRESSPROD_map_Billing_Line_Item_c_SAFEXPRESSPROD_1791800619612</members>
+        <members>BotDefinition_Home_map_BotDefinition_Home_1793276495622</members>
+        <members>BotDefinition_Home_map_Bot_1793276510477</members>
+        <members>BotVersion_Home_map_BotVersion_1793276507743</members>
+        <members>BotVersion_Home_map_BotVersion_Home_1793276495615</members>
         <members>Branch_Master_c_SAFEXPRESSPROD_map_Branch_Master_Custom_DMO_1791796750347</members>
         <members>Branch_Master_c_SAFEXPRESSPROD_map_Branch_Master_c_SAFEXPRESSPROD_1791787683497</members>
         <members>BulkMessage_Home_map_BulkMessage_1790230796373</members>
@@ -11301,8 +12927,12 @@
         <members>Flow_Run_Ingestion_Home_FlowRun_45CE2CEB_map_Flow_Run_Ingestion_Home_FlowRun_45CE2CEB_1790231261709</members>
         <members>Flow_Run_Ingestion_Home_Identit_8DD78E67_map_Flow_Run_Ingestion_Home_Identit_8DD78E67_1790231261710</members>
         <members>Flow_Run_Ingestion_Home_Identit_8DD78E67_map_IdentityMatch_1790231296797</members>
+        <members>GenAiFunctionDefinition_Home_map_AiAgentAction_1793276514363</members>
+        <members>GenAiFunctionDefinition_Home_map_GenAiFunctionDefinition_Home_1793276495628</members>
+        <members>GenAiPluginDefinition_Home_map_AiAgentTopic_1793276516758</members>
+        <members>GenAiPluginDefinition_Home_map_GenAiPluginDefinition_Home_1793276495634</members>
         <members>IndividualGDPRState_map_IndividualGDPRState_1786302383250</members>
-        <members>Invoice_c_SAFEXPRESSPROD_map_Invoice_1791801196887</members>
+        <members>Invoice_c_SAFEXPRESSPROD_map_Invoice_c_Custom_DMO_1793164247702</members>
         <members>Invoice_c_SAFEXPRESSPROD_map_Invoice_c_SAFEXPRESSPROD_1791786488229</members>
         <members>Journey_c_SAFEXPRESSPROD_map_Journey_c_SAFEXPRESSPROD_1791786776472</members>
         <members>Journey_c_SAFEXPRESSPROD_map_Journey_c_SAFEXPRESSPROD_1791794765687</members>
@@ -11326,6 +12956,9 @@
         <members>ListEmail_Home_map_BulkEmailMessage_1790230672790</members>
         <members>ListEmail_Home_map_ListEmail_Home_1790230580311</members>
         <members>MONTHLY_Waybill_Count_map_MONTHLY_Waybill_Count_1791452538090</members>
+        <members>MONTHLY_Waybill_Count_map_MONTHLY_Waybill_Count_1793076498002</members>
+        <members>MSA_SFX_SalesInsights_map_MSA_SFX_SalesInsights_1793167805594</members>
+        <members>MSA_SFX_SalesInsights_map_MSA_SFX_SalesInsights_Custom_DMO_1793168180259</members>
         <members>ManagedContentPublishedUrl_Home_map_ManagedContentPublishedUrl_Home_1790230580282</members>
         <members>ManagedContentPublishedUrl_Home_map_WebsitePublication_1790230660882</members>
         <members>ManagedContent_Home_map_DigitalContent_1790230668318</members>
@@ -11404,6 +13037,12 @@
         <members>User_Home_map_User_Home_1790230325447</members>
         <members>WebEngagementEventsV2_00D7F0000_4F811102_map_IdentityMatch_1790231514793</members>
         <members>WebEngagementEventsV2_00D7F0000_4F811102_map_WebEngagementEventsV2_00D7F0000_4F811102_1790231503916</members>
+        <members>sfm_AiAgentMomentInteraction_map_AiAgentMomentInteraction_1793276239972</members>
+        <members>sfm_AiAgentMoment_map_AiAgentMoment_1793276278598</members>
+        <members>sfm_AiAgentTagAssociation_map_AiAgentTagAssociation_1793276309060</members>
+        <members>sfm_AiAgentTagDefinitionAssociation_map_AiAgentTagDefinitionAssociation_1793276318665</members>
+        <members>sfm_AiAgentTagDefinition_map_AiAgentTagDefinition_1793276328401</members>
+        <members>sfm_AiAgentTag_map_AiAgentTag_1793276230110</members>
         <name>ObjectSourceTargetMap</name>
     </types>
     <types>
@@ -11442,8 +13081,6 @@
         <members>PSG_Wallet_Monitor</members>
         <members>PS_Account_Contact_Management</members>
         <members>PS_AreaManager</members>
-        <members>PS_AreaMgr_Delta</members>
-        <members>PS_BDM_Delta</members>
         <members>PS_Business_Detail_Management</members>
         <members>PS_CCD_Management</members>
         <members>PS_Campaign_Management</members>
@@ -11459,13 +13096,12 @@
         <members>PS_Conveyance_Finance</members>
         <members>PS_CorporateLeadership</members>
         <members>PS_CorporateSales</members>
-        <members>PS_DefaultLeadCreator</members>
-        <members>PS_ExperienceTeam</members>
         <members>PS_Field_Misc</members>
         <members>PS_IntegrationUser</members>
         <members>PS_Invoice_Billing_Management</members>
         <members>PS_Journey_Auditor</members>
         <members>PS_Journey_Event_Management</members>
+        <members>PS_Lead_Callout_Access</members>
         <members>PS_Lead_Duplicate_Exemption</members>
         <members>PS_Lead_Management</members>
         <members>PS_Lead_Revive</members>
@@ -11477,10 +13113,11 @@
         <members>PS_Portfolio_Management</members>
         <members>PS_Quote_Management</members>
         <members>PS_Reference_Data_ReadOnly</members>
-        <members>PS_RegMgr_Delta</members>
         <members>PS_RegionalFinance</members>
         <members>PS_RegionalManager</members>
         <members>PS_Revenue_Management</members>
+        <members>PS_SafexperienceTeam</members>
+        <members>PS_SystemAdmin</members>
         <members>PS_Target_Management</members>
         <members>PS_TerritoryManager</members>
         <members>Permission_set_profile_read_only</members>
@@ -11529,7 +13166,6 @@
         <members>PSG_Conveyance_Team</members>
         <members>PSG_CorporateLeadership</members>
         <members>PSG_CorporateSales</members>
-        <members>PSG_ExperienceTeam</members>
         <members>PSG_Journey_Auditor</members>
         <members>PSG_Onboarding_Team</members>
         <members>PSG_Oversight</members>
@@ -11539,6 +13175,7 @@
         <members>PSG_RegionalManager</members>
         <members>PSG_Revenue_Team</members>
         <members>PSG_SFX_Common</members>
+        <members>PSG_SafexperienceTeam</members>
         <members>PSG_Target_Team</members>
         <members>PSG_TerritoryManager</members>
         <members>force__AgentforceServiceAgentUserPsg</members>
@@ -11570,6 +13207,7 @@
         <members>ActivityEngagementVirtualChannel_ListEmailChangeEvent</members>
         <members>ActivityEngagementVirtualChannel_ListEmailSentResultChangeEvent</members>
         <members>ActivityEngagementVirtualChannel_TaskChangeEvent</members>
+        <members>DataCloudEntities_AiAgentSessionTagChangeEvent</members>
         <members>DataCloudEntities_CommSubscriptionChangeEvent</members>
         <members>DataCloudEntities_CommSubscriptionChannelTypeChangeEvent</members>
         <members>DataCloudEntities_EngagementChannelTypeChangeEvent</members>
@@ -11703,6 +13341,7 @@
     <types>
         <members>Agent_Sahay_Fallback_Queue</members>
         <members>Business_Enquiry</members>
+        <members>Central_Desk</members>
         <members>Change_Request_Queue</members>
         <members>Chat_Queue</members>
         <members>Complaints</members>
@@ -14191,6 +15830,7 @@
         <members>ActivityRecurrence2</members>
         <members>ActivityRecurrence2Exception</members>
         <members>ActvTgtPlatformFieldValue</members>
+        <members>AgentSession</members>
         <members>AgentWork</members>
         <members>AiEvaluation</members>
         <members>AiGroundingFileRef</members>
@@ -14464,9 +16104,13 @@
         <name>StandardValueSet</name>
     </types>
     <types>
+        <members>AndroidAppLogo</members>
+        <members>AppStoreLogo</members>
         <members>Binder1</members>
         <members>Binder2</members>
         <members>GreenFlagImage</members>
+        <members>IOSAppLogo</members>
+        <members>IosStoreLogo</members>
         <members>MFA_Doc</members>
         <members>Popup</members>
         <members>RedFlagImage</members>
@@ -14492,6 +16136,7 @@
         <name>StaticResource</name>
     </types>
     <types>
+        <members>Agent_5a2df52d_6956_43a0_9f7d_f6fdfffdba51</members>
         <members>MobileAppEventsV2_91dddca4_23c0_4708_88d3_76105d4178e6</members>
         <members>MobileAppMessagingV2_35613b38_3a04_4ef5_b270_1ec64f214d79</members>
         <name>StreamingAppDataConnector</name>
@@ -14809,12 +16454,13 @@
         <members>Journey__c.owner_readonly</members>
         <members>Lead.Block_Safexpress_Email</members>
         <members>Lead.GSTIN_Format_Validation</members>
+        <members>Lead.Lead_Central_Desk_Lock</members>
         <members>Lead.Lead_Core_Mandatory_Fields</members>
         <members>Lead.Lead_Drop_Reason_Required</members>
         <members>Lead.Lead_Dropped_By_Central_Desk</members>
         <members>Lead.Lead_Dropped_Read_Only</members>
+        <members>Lead.Lead_Qualification_GST</members>
         <members>Lead.Mobile_No_should_be_in_10_digit</members>
-        <members>Lead.Please_Specify_Required</members>
         <members>Lead.Validate_Pincode</members>
         <members>Lead__c.Assign_to_Central_Desk_uncheck_validatio</members>
         <members>Lead__c.Branch_Mandatory</members>
@@ -15088,11 +16734,14 @@
         <members>Journey__c.record_type_update2</members>
         <members>Journey__c.submit_for_app</members>
         <members>Journey__c.submit_for_app1</members>
+        <members>Lead.Drop_Reason_Field_Update</members>
         <members>Lead.Lead_Approval_Status_Approved</members>
+        <members>Lead.Lead_Approval_Status_Pending</members>
         <members>Lead.Lead_Approval_Status_Rejected</members>
+        <members>Lead.Lead_Approval_Status_Reset</members>
         <members>Lead.Lead_Status_Active</members>
         <members>Lead.Lead_Status_Dropped</members>
-        <members>Lead.Lead_Status_Pending</members>
+        <members>Lead.Please_Specify_Field_Reset</members>
         <members>Lead__c.Approval_status_update_to_Rejected</members>
         <members>Lead__c.Approval_status_update_to_pending</members>
         <members>Lead__c.Existing_Customer_Detail_Blank</members>
@@ -15250,6 +16899,7 @@
         <members>ForCampaignComplete_ThankYouMail</members>
         <members>Get_Contact_From_Mobile_Number</members>
         <members>Get_WhatsApp_Number</members>
+        <members>Gst_Callout</members>
         <members>Invoice_Delete_after_3_month</members>
         <members>Journey_Audited_Screen_Flow</members>
         <members>Journey_for_Rgional_Manager</members>
@@ -15310,6 +16960,8 @@
         <members>WebToCaseAssignments</members>
         <members>business_flow</members>
         <members>flow_701C100000VyGckIAF_1792009220136</members>
+        <members>flow_701C100000VyGckIAF_1793016175654</members>
+        <members>flow_dj89P62tXx8GG8Gi</members>
         <members>lead_assign_to_remove</members>
         <members>onboarding_task</members>
         <name>WorkflowFlowAutomation</name>

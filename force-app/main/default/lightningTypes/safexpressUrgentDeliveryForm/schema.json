@@ -1,0 +1,5 @@
+{
+  "title" : "Safexpress Urgent Delivery Form",
+  "description" : "Collects mobile, email, and instructions for urgent delivery requests.",
+  "lightning:type" : "@apexClassType/c__SafexpressUrgentDeliveryForm"
+}

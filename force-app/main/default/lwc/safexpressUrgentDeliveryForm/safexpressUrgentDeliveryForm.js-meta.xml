@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Safexpress Urgent Delivery Form</masterLabel>
+    <description>Agentforce chat form: waybill, mobile, email, and instructions for urgent delivery requests.</description>
+    <targets>
+        <target>lightning__AgentforceInput</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__AgentforceInput">
+            <!-- This exactly binds the LWC to your SafexpressUrgentDeliveryForm.cls Apex schema -->
+            <targetType name="c__safexpressUrgentDeliveryForm"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

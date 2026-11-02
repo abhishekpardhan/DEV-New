@@ -163,7 +163,7 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>required</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Account_Type__c</fieldItem>
                 <identifier>RecordAccount_Type_cField</identifier>
@@ -183,7 +183,7 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>required</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Vertical__c</fieldItem>
                 <identifier>RecordVertical_cField</identifier>
@@ -193,7 +193,7 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>required</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Sub_Vertical__c</fieldItem>
                 <identifier>RecordSub_Vertical_cField</identifier>
@@ -265,12 +265,6 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.GST_Status__c</fieldItem>
-                <identifier>RecordGST_Status__cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
                 <fieldItem>Record.Assignment_Evaluated__c</fieldItem>
                 <identifier>RecordAssignment_Evaluated__cField</identifier>
             </fieldInstance>
@@ -353,7 +347,7 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>required</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Region__c</fieldItem>
                 <identifier>RecordRegion_cField</identifier>
@@ -363,7 +357,7 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>required</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Area__c</fieldItem>
                 <identifier>RecordArea_cField</identifier>
@@ -383,7 +377,7 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.GST_Number__c</fieldItem>
                 <identifier>RecordGST_Number_cField</identifier>
@@ -407,6 +401,16 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Event_Lead__c</fieldItem>
                 <identifier>RecordEvent_Lead_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Website</fieldItem>
+                <identifier>RecordWebsiteField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-0f3ec312-52cd-4752-b3f2-fbab99a265fa</name>
@@ -749,6 +753,24 @@
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>flowArguments</name>
+                    <value>[{&quot;label&quot;:&quot;recordId&quot;,&quot;dataType&quot;:&quot;String&quot;,&quot;supportsRecordId&quot;:true,&quot;value&quot;:&quot;{!Record.Id}&quot;}]</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>flowLayout</name>
+                    <value>oneColumn</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>flowName</name>
+                    <value>Gst_Callout</value>
+                </componentInstanceProperties>
+                <componentName>flowruntime:interview</componentName>
+                <identifier>flowruntime_interview_gst</identifier>
+            </componentInstance>
+        </itemInstances>
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>

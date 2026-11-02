@@ -3,6 +3,6 @@
     <enableAIFeedbackWithDC>false</enableAIFeedbackWithDC>
     <enableAITrustInputToxicityDetection>false</enableAITrustInputToxicityDetection>
     <enableAITrustPromptInjectionDetection>false</enableAITrustPromptInjectionDetection>
-    <enableAgentHealthMonitoringGA>false</enableAgentHealthMonitoringGA>
+    <enableAgentHealthMonitoringGA>true</enableAgentHealthMonitoringGA>
     <enableTrustPIIMasking>true</enableTrustPIIMasking>
 </EinsteinAISettings>

@@ -1,0 +1,307 @@
+{
+  "type" : "sfdc_cms__form",
+  "title" : "testForm",
+  "contentBody" : {
+    "formsubmission" : {
+      "actions" : [ {
+        "attributes" : {
+          "formData" : "{!$form.fields}",
+          "formId" : "{!$form.id}",
+          "formVersion" : "{!$form.version}",
+          "pageReferenceId" : "{!$page.id}"
+        },
+        "definition" : "sfdc_cms/umaFormSubmissionAction"
+      }, {
+        "attributes" : {
+          "message" : "Thank you for your submission."
+        },
+        "definition" : "sfdc_cms/showThankYouAction"
+      } ]
+    },
+    "lightning:brandSource" : {
+      "defaultBrandOption" : "sfdcBrand"
+    },
+    "lightning:dataProviders" : [ {
+      "attributes" : {
+        "objectApiName" : "Lead",
+        "recordTypeId" : "012000000000000AAA"
+      },
+      "definition" : "sfdc_cms__recordDataProvider",
+      "sfdcExpressionKey" : "test"
+    } ],
+    "lightning:expressions" : [ ],
+    "sfdc_cms:block" : {
+      "definition" : "sfdc_cms/rootContentBlock",
+      "id" : "720c3858-6631-4752-b020-9db30d23546f",
+      "type" : "block",
+      "children" : [ {
+        "attributes" : {
+          "lightning:backgroundImage" : {
+            "position" : "center center",
+            "repeat" : "no-repeat",
+            "size" : "cover"
+          },
+          "lightning:borderRadius" : "{!$brand.borderRadius.square}",
+          "lightning:borderWidth" : "{!$brand.borderWeight.none}",
+          "lightning:colorScheme" : "{!$brand.colorScheme}",
+          "lightning:margin" : "{!$brand.spacing.none}",
+          "lightning:padding" : "{!$brand.spacing.xSmall}",
+          "reverseOrderOnMobile" : false,
+          "stackOnMobile" : true
+        },
+        "definition" : "lightning/section",
+        "id" : "fb4cdf09-41dd-4838-8e30-b409d0c7d834",
+        "type" : "block",
+        "children" : [ {
+          "attributes" : {
+            "columnWidth" : 12.0,
+            "lightning:backgroundImage" : {
+              "position" : "center center",
+              "repeat" : "no-repeat",
+              "size" : "cover"
+            },
+            "lightning:borderRadius" : "{!$brand.borderRadius.square}",
+            "lightning:borderWidth" : "{!$brand.borderWeight.none}",
+            "lightning:colorScheme" : "{!$brand.colorScheme}",
+            "lightning:margin" : "{!$brand.spacing.none}",
+            "lightning:padding" : "{!$brand.spacing.xSmall}",
+            "lightning:verticalAlignment" : "top"
+          },
+          "definition" : "lightning/column",
+          "id" : "d08ba8b6-1022-47c2-8003-27b925d53da7",
+          "type" : "block",
+          "children" : [ {
+            "attributes" : {
+              "lightning:borderRadius" : "{!$brand.borderRadius.square}",
+              "lightning:borderWidth" : "{!$brand.borderWeight.none}",
+              "lightning:colorGroup" : {
+                "backgroundColor" : "{!$brand.colorScheme.root}",
+                "borderColor" : "{!$brand.colorScheme.neutral}",
+                "linkColor" : "{!$brand.colorScheme.primaryAccent}",
+                "textColor" : "{!$brand.colorScheme.contrast}"
+              },
+              "lightning:margin" : "{!$brand.spacing.none}",
+              "lightning:padding" : "{!$brand.spacing.none}",
+              "rawHtml" : "\n<html lang=\"en\"><head><meta charset=\"UTF-8\" /><meta name=\"viewport\" content=\"width&#61;device-width, initial-scale&#61;1.0\" /><title>Contact Us</title></head></html><style>body{font-family:Arial,sans-serif;background:#f4f6f9;padding:40px 16px}.mc-form{max-width:480px;margin:auto;background:#fff;padding:28px;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.08)}.mc-form h2{margin-top:0;color:#032d60}.mc-form label{display:block;font-size:14px;margin:14px 0 6px;color:#333}.mc-form input,.mc-form select,.mc-form textarea{width:100%;padding:10px;border:1px solid #ccc;border-radius:6px;font-size:14px;box-sizing:border-box}.mc-form .checkbox{display:flex;gap:8px;align-items:flex-start;margin-top:16px;font-size:13px}.mc-form .checkbox input{width:auto;margin-top:2px}.mc-form button{margin-top:20px;width:100%;padding:12px;background:#0176d3;color:#fff;border:0;border-radius:6px;font-size:15px;cursor:pointer}.mc-form button:hover{background:#014486}</style>\n\n<body>\n\n  <!-- Replace action with the Form Action URL from your Form Handler's Code Snippet tab -->\n  <form class=\"mc-form\" method=\"POST\" action=\"https://YOUR-FORM-ACTION-URL-FROM-MARKETING-CLOUD-NEXT\">\n\n    <h2>Get in Touch</h2>\n\n    <label for=\"FirstName\">First Name *</label>\n    <input type=\"text\" id=\"FirstName\" name=\"FirstName\" required=\"required\" />\n\n    <label for=\"LastName\">Last Name *</label>\n    <input type=\"text\" id=\"LastName\" name=\"LastName\" required=\"required\" />\n\n    <label for=\"Email\">Email *</label>\n    <input type=\"email\" id=\"Email\" name=\"Email\" required=\"required\" />\n\n    <label for=\"Phone\">Phone</label>\n    <input type=\"tel\" id=\"Phone\" name=\"Phone\" />\n\n    <label for=\"Company\">Company</label>\n    <input type=\"text\" id=\"Company\" name=\"Company\" />\n\n    <label for=\"Interest\">Interested In</label>\n    <select id=\"Interest\" name=\"Interest\"><option value=\"\">-- Select --</option><option value=\"Product Demo\">Product Demo</option><option value=\"Pricing\">Pricing</option><option value=\"Support\">Support</option></select>\n\n    <label for=\"Message\">Message</label>\n    <textarea id=\"Message\" name=\"Message\" rows=\"4\"></textarea>\n\n    <div class=\"checkbox\">\n      <input type=\"checkbox\" id=\"EmailOptIn\" name=\"EmailOptIn\" value=\"true\" />\n      <label for=\"EmailOptIn\" style=\"margin:0\">I agree to receive marketing emails.</label>\n    </div>\n\n    <!-- Hidden fields (optional) – e.g. tracking info -->\n    <input type=\"hidden\" name=\"LeadSource\" value=\"Website\" />\n    <input type=\"hidden\" name=\"utm_source\" id=\"utm_source\" />\n    <input type=\"hidden\" name=\"utm_medium\" id=\"utm_medium\" />\n    <input type=\"hidden\" name=\"utm_campaign\" id=\"utm_campaign\" />\n\n    <button type=\"submit\">Submit</button>\n  </form>\n\n  \n\n</body>\n"
+            },
+            "definition" : "lightning/html",
+            "id" : "385af4b1-1ea4-4053-acb3-0c2c5fa1e60d",
+            "type" : "block"
+          }, {
+            "attributes" : {
+              "lightning:borderRadius" : "{!$brand.borderRadius.square}",
+              "lightning:borderWidth" : "{!$brand.borderWeight.none}",
+              "lightning:formInputColorGroup" : {
+                "backgroundColor" : "{!$brand.colorScheme.root}",
+                "borderColor" : "{!$brand.colorScheme.neutral}",
+                "textColor" : "{!$brand.colorScheme.contrast}"
+              },
+              "lightning:horizontalAlignment" : "left",
+              "lightning:inputTypography" : "{!$brand.typography.input.input1}",
+              "lightning:labelTypography" : "{!$brand.typography.label.label1}",
+              "lightning:margin" : "{!$brand.spacing.none}",
+              "lightning:padding" : "{!$brand.spacing.none}",
+              "options" : [ {
+                "label" : "CREDIT+RETAIL",
+                "value" : "CREDIT+RETAIL"
+              }, {
+                "label" : "Credit",
+                "value" : "Credit"
+              }, {
+                "label" : "Retail",
+                "value" : "Retail"
+              }, {
+                "label" : "3PL",
+                "value" : "3PL"
+              }, {
+                "label" : "Transportation+3PL",
+                "value" : "Transportation+3PL"
+              } ],
+              "sfdc_cms:fieldReference" : "{!test.Lead_Type__c}",
+              "sfdc_cms:formInputDefaultValueDropdownProperty" : {
+                "defaultValue" : "",
+                "urlParameterValue" : "",
+                "valueType" : "staticValue"
+              },
+              "sfdc_cms:formInputHiddenProperty" : false,
+              "sfdc_cms:formInputLabelProperty" : "Lead Type",
+              "sfdc_cms:formInputNameProperty" : "Lead_Type__c",
+              "sfdc_cms:formInputRequiredProperty" : true,
+              "width" : "auto"
+            },
+            "definition" : "lightning/inputDropdown",
+            "id" : "b2aacf08-41ee-4bd0-bfdf-ec37fb33ebd2",
+            "type" : "block"
+          }, {
+            "attributes" : {
+              "lightning:borderRadius" : "{!$brand.borderRadius.square}",
+              "lightning:borderWidth" : "{!$brand.borderWeight.none}",
+              "lightning:formInputColorGroup" : {
+                "backgroundColor" : "{!$brand.colorScheme.root}",
+                "borderColor" : "{!$brand.colorScheme.neutral}",
+                "textColor" : "{!$brand.colorScheme.contrast}"
+              },
+              "lightning:horizontalAlignment" : "left",
+              "lightning:inputTypography" : "{!$brand.typography.input.input1}",
+              "lightning:labelTypography" : "{!$brand.typography.label.label1}",
+              "lightning:margin" : "{!$brand.spacing.none}",
+              "lightning:padding" : "{!$brand.spacing.none}",
+              "options" : [ {
+                "label" : "Active",
+                "value" : "Active"
+              }, {
+                "label" : "Qualified",
+                "value" : "Qualified"
+              }, {
+                "label" : "Dropped",
+                "value" : "Dropped"
+              }, {
+                "label" : "Dropped by Central desk",
+                "value" : "Dropped by Central desk"
+              }, {
+                "label" : "Convert",
+                "value" : "Convert"
+              } ],
+              "sfdc_cms:fieldReference" : "{!test.Status}",
+              "sfdc_cms:formInputDefaultValueDropdownProperty" : {
+                "defaultValue" : "",
+                "urlParameterValue" : "",
+                "valueType" : "staticValue"
+              },
+              "sfdc_cms:formInputHiddenProperty" : false,
+              "sfdc_cms:formInputLabelProperty" : "Status",
+              "sfdc_cms:formInputNameProperty" : "Status",
+              "sfdc_cms:formInputRequiredProperty" : true,
+              "width" : "auto"
+            },
+            "definition" : "lightning/inputDropdown",
+            "id" : "c5cf329c-f0a1-4da9-9f1d-6ba7f3b859c7",
+            "type" : "block"
+          }, {
+            "attributes" : {
+              "lightning:borderRadius" : "{!$brand.borderRadius.square}",
+              "lightning:borderWidth" : "{!$brand.borderWeight.none}",
+              "lightning:formInputColorGroup" : {
+                "backgroundColor" : "{!$brand.colorScheme.root}",
+                "borderColor" : "{!$brand.colorScheme.neutral}",
+                "textColor" : "{!$brand.colorScheme.contrast}"
+              },
+              "lightning:horizontalAlignment" : "left",
+              "lightning:inputTypography" : "{!$brand.typography.input.input1}",
+              "lightning:labelTypography" : "{!$brand.typography.label.label1}",
+              "lightning:margin" : "{!$brand.spacing.none}",
+              "lightning:padding" : "{!$brand.spacing.none}",
+              "maxLength" : 80.0,
+              "sfdc_cms:fieldReference" : "{!test.LastName}",
+              "sfdc_cms:formInputDefaultValueTextProperty" : {
+                "defaultValue" : "",
+                "valueType" : "staticValue"
+              },
+              "sfdc_cms:formInputHiddenProperty" : false,
+              "sfdc_cms:formInputLabelProperty" : "Last Name",
+              "sfdc_cms:formInputNameProperty" : "LastName",
+              "sfdc_cms:formInputRequiredProperty" : true,
+              "width" : "auto"
+            },
+            "definition" : "lightning/inputText",
+            "id" : "3cfa92db-7309-4a6c-bc07-94f402f3fb22",
+            "type" : "block"
+          }, {
+            "attributes" : {
+              "lightning:borderRadius" : "{!$brand.borderRadius.square}",
+              "lightning:borderWidth" : "{!$brand.borderWeight.none}",
+              "lightning:formInputColorGroup" : {
+                "backgroundColor" : "{!$brand.colorScheme.root}",
+                "borderColor" : "{!$brand.colorScheme.neutral}",
+                "textColor" : "{!$brand.colorScheme.contrast}"
+              },
+              "lightning:horizontalAlignment" : "left",
+              "lightning:inputTypography" : "{!$brand.typography.input.input1}",
+              "lightning:labelTypography" : "{!$brand.typography.label.label1}",
+              "lightning:margin" : "{!$brand.spacing.none}",
+              "lightning:padding" : "{!$brand.spacing.none}",
+              "maxLength" : 255.0,
+              "sfdc_cms:fieldReference" : "{!test.Company}",
+              "sfdc_cms:formInputHiddenProperty" : false,
+              "sfdc_cms:formInputLabelProperty" : "Company",
+              "sfdc_cms:formInputNameProperty" : "Company",
+              "sfdc_cms:formInputRequiredProperty" : true,
+              "width" : "auto"
+            },
+            "definition" : "lightning/inputText",
+            "id" : "75054bb7-7321-4153-aa2d-5d3c4d1ff1c4",
+            "type" : "block"
+          } ]
+        } ]
+      }, {
+        "attributes" : {
+          "lightning:backgroundImage" : {
+            "position" : "center center",
+            "repeat" : "no-repeat",
+            "size" : "cover"
+          },
+          "lightning:borderRadius" : "{!$brand.borderRadius.square}",
+          "lightning:borderWidth" : "{!$brand.borderWeight.none}",
+          "lightning:colorScheme" : "{!$brand.colorScheme}",
+          "lightning:margin" : "{!$brand.spacing.none}",
+          "lightning:padding" : "{!$brand.spacing.xSmall}",
+          "reverseOrderOnMobile" : false,
+          "stackOnMobile" : true
+        },
+        "definition" : "lightning/section",
+        "id" : "dac08d39-5811-4a16-9ef8-7b9e3c2ba05f",
+        "type" : "block",
+        "children" : [ {
+          "attributes" : {
+            "columnWidth" : 12.0,
+            "lightning:backgroundImage" : {
+              "position" : "center center",
+              "repeat" : "no-repeat",
+              "size" : "cover"
+            },
+            "lightning:borderRadius" : "{!$brand.borderRadius.square}",
+            "lightning:borderWidth" : "{!$brand.borderWeight.none}",
+            "lightning:colorScheme" : "{!$brand.colorScheme}",
+            "lightning:margin" : "{!$brand.spacing.none}",
+            "lightning:padding" : "{!$brand.spacing.xSmall}",
+            "lightning:verticalAlignment" : "top"
+          },
+          "definition" : "lightning/column",
+          "id" : "87fae79f-86e9-466e-a438-9d511b361250",
+          "type" : "block",
+          "children" : [ {
+            "attributes" : {
+              "lightning:borderRadius" : "{!$brand.buttonStyleGroup.primary.lightning:borderRadius}",
+              "lightning:borderWidth" : "{!$brand.buttonStyleGroup.primary.lightning:borderWidth}",
+              "lightning:buttonColorGroup" : "{!$brand.buttonStyleGroup.primary.lightning:buttonColorGroup}",
+              "lightning:click" : {
+                "actions" : [ {
+                  "definition" : "sfdc_cms/customEventAction",
+                  "attributes" : {
+                    "type" : "formsubmit",
+                    "options" : {
+                      "bubbles" : true
+                    }
+                  }
+                } ]
+              },
+              "lightning:horizontalAlignment" : "center",
+              "lightning:margin" : "{!$brand.spacing.none}",
+              "lightning:padding" : "{!$brand.buttonStyleGroup.primary.lightning:padding}",
+              "lightning:typography" : "{!$brand.buttonStyleGroup.primary.lightning:typography}",
+              "sfdc_cms:styleGroup" : "{!$brand.buttonStyleGroup.primary}",
+              "text" : "Submit",
+              "width" : "auto"
+            },
+            "definition" : "lightning/actionButton",
+            "id" : "5f3ac4d8-b143-4295-9cff-23e298dfb6f0",
+            "type" : "block"
+          } ]
+        } ]
+      } ]
+    },
+    "sfdc_cms:title" : "testForm",
+    "sfdc_cms:urlName" : "testform"
+  },
+  "urlName" : "testform"
+}

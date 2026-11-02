@@ -60,10 +60,10 @@
         <label>Check Shipment Status</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
-        <defaultConnectorLabel>Not In Transit</defaultConnectorLabel>
+        <defaultConnectorLabel>Not In Transit or Arrived at Destination</defaultConnectorLabel>
         <rules>
-            <name>Is_In_Transit</name>
-            <conditionLogic>and</conditionLogic>
+            <name>IsInTransitorArrivedatDestination</name>
+            <conditionLogic>or</conditionLogic>
             <conditions>
                 <leftValueReference>varCurrentStatus</leftValueReference>
                 <operator>EqualTo</operator>
@@ -71,16 +71,23 @@
                     <stringValue>In Transit</stringValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>varCurrentStatus</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Arrived At Destination</stringValue>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>Get_Open_Case</targetReference>
             </connector>
-            <label>Is In Transit</label>
+            <label>Is In Transit or Arrived at Destination</label>
         </rules>
     </decisions>
-    <description>This flow is used when the customer shipment is in Transit and customer explicitly asks to deliver material urgently. It checks also if there is any existing case is going on with the same waybill  number</description>
+    <description>This flow is used when the customer shipment is in Transit or Arrived at Destination and customer explicitly asks to deliver material urgently. It checks also if there is any existing case is going on with the same waybill  number</description>
     <environments>Default</environments>
     <interviewLabel>Agentfo {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>Agentforce Chat Status Intent Case Creation Flow</label>
+    <label>Agentforce Chat Case Creation and Updation Flow</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>

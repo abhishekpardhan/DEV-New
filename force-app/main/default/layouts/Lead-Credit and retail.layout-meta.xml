@@ -79,10 +79,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>GST_Status__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>Assignment_Evaluated__c</field>
             </layoutItems>
         </layoutColumns>

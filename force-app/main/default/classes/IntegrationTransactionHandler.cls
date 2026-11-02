@@ -15,6 +15,9 @@
 * 1.3         12/06/2026        Rudra Singh         Added routing for OperationType_Enterprise_EnquiryCaseStatus
 *                                                   → ExternalCaseStatusQueueable (Enterprise Enquiry Case API)
 *                                                   in both afterInsert and afterUpdate (retry)
+* 1.4         28/10/2026        Abhishek            Added routing for OperationType_PropelI_PincodeLookup
+*                                                   → PincodeLookupQueueable (PropelI Pincode Lookup API)
+*                                                   in both afterInsert and afterUpdate (retry)
 **/
 public class IntegrationTransactionHandler extends TriggerHandler {
 

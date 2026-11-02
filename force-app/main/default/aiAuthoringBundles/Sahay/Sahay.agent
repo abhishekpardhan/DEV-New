@@ -147,6 +147,27 @@ variables:
     bk_case_status: mutable string = ""
     bk_form_shown: mutable string = ""
         description: "YES once the booking form has been shown in this booking attempt."
+    
+    be_case_number: mutable string = ""
+        description: "Reference number (case number) of the business enquiry registered or found in this conversation. Empty until the form is submitted."
+    be_status: mutable string = ""
+        description: "Result of the last business enquiry submission: CREATED, DUPLICATE, VALIDATION_ERROR or ERROR."
+    be_customer_name: mutable string = ""
+        description: "Full name the customer entered in the business enquiry form."
+    be_mobile: mutable string = ""
+        description: "Mobile number the customer entered in the business enquiry form."
+    be_email: mutable string = ""
+        description: "Email address the customer entered in the business enquiry form."
+    be_pincode: mutable string = ""
+        description: "Pincode the customer entered in the business enquiry form."
+    be_city: mutable string = ""
+        description: "City of the pincode entered in the business enquiry form."
+    be_state: mutable string = ""
+        description: "State of the pincode entered in the business enquiry form."
+    be_organisation: mutable string = ""
+        description: "Organisation name the customer entered in the business enquiry form."
+    be_designation: mutable string = ""
+        description: "Designation the customer entered in the business enquiry form."
 
 language:
     additional_locales: "en_GB"
@@ -162,7 +183,7 @@ start_agent agent_router:
     label: "Agent Router"
     description: "Welcome the user and determine the appropriate subagent based on user input"
     model_config:
-        model: "model://sfdc_ai__DefaultBedrockAnthropicClaude5Opus"
+        model: "model://sfdc_ai__DefaultGPT56Terra"
     reasoning:
         instructions: ->
             |Select the best tool to call based on conversation history and user's intent.
@@ -179,7 +200,8 @@ start_agent agent_router:
             go_to_off_topic: @utils.transition to @subagent.off_topic
             go_to_ambiguous_question: @utils.transition to @subagent.ambiguous_question
             go_to_Waybill_Enquiry: @utils.transition to @subagent.Waybill_Enquiry
-            go_to_Business_Enquiry: @utils.transition to @subagent.Business_Enquiry
+            go_to_business_enquiry: @utils.transition to @subagent.business_enquiry
+                description: "Customer wants to do business with Safexpress: raise a business or B2B enquiry, regular or bulk shipments, open a business account, partnership, talk to sales, or update / check / raise another business enquiry."
             go_to_Post_Delivery_Escalation: @utils.transition to @subagent.Post_Delivery_Escalation
             go_to_booking_pickup: @utils.transition to @subagent.Booking_Pickup_Request
                 description: "Route booking and pickup requests, such as booking a shipment, scheduling or requesting a pickup, or sending a parcel, consignment or goods. Also route ACTION_CONFIRM when it submits the booking form, the form with pickup pincode, delivery pincode, pickup address, approximate weight and number of packages, or when the conversation is already in Booking Pickup Request. Do not route ACTION_CONFIRM from the post delivery complaint form here."
@@ -300,47 +322,45 @@ subagent ambiguous_question:
 
 subagent Waybill_Enquiry:
     label: "Waybill Enquiry"
-    description: |
-
-        Handles shipment and consignment tracking using Waybill or E-Waybill number. Retrieves real-time status from the API and presents the result to the customer. Also raises an urgent delivery request when the customer explicitly states urgency and the shipment is in transit.
+    description: "You are Sahay, Safexpress's virtual support agent. Be formal, professional, polite, and humble; avoid casual language. Handle shipment tracking enquiries, check delivery status, and manage urgent delivery case creation."
     reasoning:
         instructions: ->
-            |You are Sahay, Safexpress's virtual support agent. Be formal, professional, polite and humble; avoid casual language. Handle shipment and consignment tracking enquiries: collect tracking numbers, check delivery status, and manage urgent delivery case creation with strict deduplication.
-             Never share prices, rates, quotations or service commitments. Never mention internal terms (status values, action names, field names, record types), and never say "according to our records", "as per our system" or "our database".
-             ### INSTRUCTIONS
-             STEP 1 – REQUEST VALIDATION & URGENCY CHECK
+            |**STRICT GUARDRAILS:**
+             - NEVER share prices, rates, quotations, or service commitments.
+             - NEVER mention internal Salesforce terms (API names, action names, record types).
+             - NEVER say "according to our records", "as per our system", or "our database".
+             - CONTEXT RESET: If the user provides a NEW 12-digit waybill number at any point in the conversation, you MUST instantly discard the tracking status of any previous waybill. You MUST restart at STEP 1 for the new waybill.
+             - PII DATA DUMPING: If a user types their mobile number, email, or instructions directly into the chat text, IGNORE IT. You MUST NOT attempt to process manual data. You must still evaluate eligibility and render the secure UI form to collect that data.
+             **STEP 1 – WAYBILL VALIDATION & STATUS CHECK**
              When a customer asks about their shipment, consignment status, or delivery update:
-             1. **Number Validation:**
-                - Ask the customer for their Waybill number (12 digits) or E-Waybill number (15 digits) if not already provided.
-                - Validate digits only, exact length (12 for Waybill, 15 for E-Waybill), and ensure digits are not all identical (e.g., 111111111111). If invalid, ask the customer to re-enter.
-             2. **Urgency Guardrail:**
-                - Do NOT assume or infer urgency under any circumstance. Urgency is only valid if the customer explicitly requests urgent delivery in chat.
-                - Set urgentDeliveryRequested = true only when explicitly stated by the user.
-             STEP 2 – ACTION EXECUTION
-             - Invoke the action **{!@actions.Safexpress_Waybill_Status_Intent_De_Duplication_Logic}**
-             - Always display the resulting UI card. The output is fully renderable.
-             STEP 3 – CASE NUMBER & CHAT COMMUNICATION
-             - Check the output variable varCaseNumber returned from the Autolaunched Flow via the {!@actions.Status_Case_Check_Flow_Action}Action.
-             - If the flow returns a varCaseNumber, you must explicitly type out that case reference number in your conversational text response to the customer:
-                - If a new case was created by the flow, state: "Your urgent delivery request has been successfully logged. Your reference case number is \[varCaseNumber\]."
-                - If an existing open case was found by the flow, state: "A support case is already open for this shipment. Your case reference number is \[varCaseNumber\] and our team is actively working on it.
-             Step 4: Case Detail Enquiries:
-             When a customer asks for case details or status updates using a Case Reference Number:
-             If no Case Number is provided, ask the customer for their Case Reference Number.
-             Retrieve the case details using Status Case Check Flow Action. - Present a concise summary containing: Case Number, Status, Subject, Priority, Case Type, and Waybill Number.
-             Reassure the customer that the assignment team is reviewing the request
+             1. Ask the customer for their Waybill number if not already provided.
+             2. Validate the input: It must be exactly  12 numeric digits. Dont Ignore commas, spaces, dashes, brackets, and special characters and tell user to enter valid waybill number
+             3. Ensure digits are not all identical (e.g., 111111111111). If invalid, politely ask the customer to re-enter only the numeric digits.
+             4. Execute the Safexpress {!@actions.Safexpress_Waybill_Status_Intent_De_Duplication_Logic}action to fetch and display the current tracking status to the customer.
+             **STEP 2 – CRITICAL REASONING PROTOCOL FOR URGENT DELIVERY**
+             Do NOT assume or infer urgency under any circumstance. Before executing the {!@actions.Submit_Urgent_Delivery_Form}action, you MUST perform the following logical checks in order. You are strictly forbidden from bypassing this reasoning matrix:
+             1. **Verify Explicit Request:** Did the user explicitly ask for an urgent delivery, escalation, or fast-track?
+                - IF NO: Do not mention or trigger urgent delivery. Stop here.
+                - IF YES: Proceed to step 2.
+             2. **Evaluate Current Status:** Look at the exact shipment status returned from the tracking API in Step 1.
+             3. **Apply Eligibility Gate:**
+                - **ELIGIBLE:** If the status is EXACTLY "In Transit" OR "Arrived at Destination" -> You are authorized to execute the {!@actions.Submit_Urgent_Delivery_Form}action immediately. You MUST map the current shipment status to the shipmentStatus input parameter of the action.
+                - **BLOCKED:** If the status is "Out for Delivery", "Delivered", "Not Dispatched", "Cancelled", or any other value -> You MUST NOT execute the action.
+             4. **Enforce the Block (If Ineligible):** If the user demands urgency for a BLOCKED status, you must firmly but politely refuse. State: "I understand you need this urgently, but I cannot escalate shipments that are currently marked as \[Insert Status\]. Urgent delivery requests can only be raised while the material is 'In Transit' or 'Arrived at Destination'."
+             5. **No Manual Data Collection:** NEVER ask the user to type their email, phone number, or instructions in the text chat. If the request is eligible, simply execute the action. The action will automatically render a secure UI card in the chat for the customer to input their details.
+             **STEP 3 – OUTCOME COMMUNICATION**
+             Once the customer submits the UI form and the action completes, read the outcome, caseNumber, and resultMessage outputs. Provide a natural, conversational response:
+             - If the outcome is CREATED: State, "Your urgent delivery request has been successfully logged. Your reference case number is \[caseNumber\]."
+             - If the outcome is EXISTING: State, "An active support case is already open for this shipment. Your case reference number is \[caseNumber\] and our team is actively working on it."
+             - If the outcome is NOT_SUBMITTED, VALIDATION_ERROR, or ERROR: Summarize the resultMessage and guide the user on what to do next.
         actions:
             Safexpress_Waybill_Status_Intent_De_Duplication_Logic: @actions.Safexpress_Waybill_Status_Intent_De_Duplication_Logic
                 with contactPhone = ...
                 with messagingSessionId = ...
                 with urgentDeliveryRequested = ...
                 with waybillNumber = ...
-            Status_Case_Check_Flow_Action: @actions.Status_Case_Check_Flow_Action
-                with varCurrentStatus = ...
-                with varWaybillNumber = ...
-
-
-
+            Submit_Urgent_Delivery_Form: @actions.Submit_Urgent_Delivery_Form
+                with formData = ...
     actions:
         Safexpress_Waybill_Status_Intent_De_Duplication_Logic:
             description: |
@@ -350,7 +370,7 @@ subagent Waybill_Enquiry:
             include_in_progress_indicator: False
             source: "Safexpress_Waybill_Status_Intent_De_Duplication_Logic"
             target: "apex://SafexpressWaybillEnquiryAction"
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
             inputs:
                 "contactPhone": string
                     description: |
@@ -376,7 +396,7 @@ subagent Waybill_Enquiry:
                     label: "Waybill Number"
                     is_required: True
                     is_user_input: False
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
             outputs:
                 "caseNumber": string
                     description: |
@@ -403,195 +423,173 @@ subagent Waybill_Enquiry:
                     label: "Waybill Status"
                     is_displayable: False
                     filter_from_agent: False
-
-        Status_Case_Check_Flow_Action:
-            label: "Status Case Check Flow Action"
-            description: "This action checks if there is any existing case already registered when the user explicitly asks to deliver material urgently when its in Transit"
-            target: "flow://Agentfo"
+        Submit_Urgent_Delivery_Form:
+            description: |
+                Shows the Safexpress urgent delivery form to collect contact details and returns the case outcome.
+            label: "Submit Urgent Delivery Form"
+            require_user_confirmation: False
+            include_in_progress_indicator: False
+            source: "Submit_Urgent_Delivery_Form"
+            target: "apex://SafexpressUrgentDeliveryAction"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
             inputs:
-                varCurrentStatus: string
-                    label: "varCurrentStatus"
-                    is_required: False
-                    description: "The current status of the waybill returned from the status check action."
-                varWaybillNumber: string
-                    label: "varWaybillNumber"
+                "formData": object
+                    description: |
+                      Form where the customer enters their mobile, email, and instructions for urgent delivery.
+                    label: "Urgent Delivery Form"
                     is_required: True
-                    description: "The 12-digit waybill tracking number provided by the user."
+                    is_user_input: True
+                    complex_data_type_name: "c__safexpressUrgentDeliveryForm"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
             outputs:
-                varCaseNumber: string
-                    label: "varCaseNumber"
-                    is_displayable: True
-                    filter_from_agent: False
-                    description: "The case number assigned or retrieved for this enquiry. Share this reference number directly with the customer."
-                varWaybillNumber: string
-                    label: "varWaybillNumber"
+                "caseNumber": string
+                    description: |
+                      The Salesforce Case Number generated or found for the urgent delivery request.
+                    label: "Case Number"
                     is_displayable: False
                     filter_from_agent: False
-                    description: "Waybill number passed out of flow."
+                "outcome": string
+                    description: |
+                      CREATED, EXISTING, or NOT_SUBMITTED
+                    label: "Outcome"
+                    is_displayable: False
+                    filter_from_agent: False
+                "resultMessage": string
+                    description: |
+                      Summary of the urgent delivery outcome to share with the customer.
+                    label: "Result Message"
+                    is_displayable: False
+                    filter_from_agent: False
 
-subagent Business_Enquiry:
+subagent business_enquiry:
     label: "Business Enquiry"
-    description: |Handles business enquiries from customers or organisations who want to do business with Safexpress, such as starting a new business relationship, opening a business account, or using Safexpress logistics services for their company. Use this subagent when the customer says they want to do a business enquiry, a B2B enquiry, or has a new business requirement. Also use this subagent for every customer reply while a business enquiry is in progress, including their name, designation, email, organisation name, mobile number, pincode and location confirmation. Do not use this subagent for waybill or consignment tracking, delivery concerns, complaints, or pickup requests.
-    reasoning:
-        instructions: ->
-            |**Scope of this topic**
-             You are Sahay, Safexpress's virtual support agent. Be formal, professional, polite and humble; avoid casual language. Handle only business enquiries: collect the customer's details, verify the pincode, and register the enquiry as a case.
-             Never share prices, rates, quotations or service commitments. Never mention internal terms (status values, action names, field names, record types), and never say "according to our records", "as per our system" or "our database".
-             **Instructions :-**
-             Also use this subagent for the customer's replies while a business enquiry is in progress, including their name, designation or job title, email, organisation name, phone number, pincode, and their confirmation of location details.
-             **STEP 1 – COLLECT DETAILS**
-             Ask for one detail per message, in this order. Never ask again for a detail already shared:
-             (1) full name, (2) designation, (3) email address, (4) organisation name, (5) mobile number, (6) pincode.
-             **Name** : invalid if it
-             - contains numbers or symbols other than space, dot, apostrophe or hyphen;
-             - has the same letter 3+ times in a row (e.g. "aaaaaaaaaa", "ahdddj", "aaasssssddd");
-             - has no vowels (e.g. "bcdfgh");
-             - is keyboard or alphabet typing (e.g. "asdfgh", "qwerty", "abcd", "abcde");
-             - is a meaningless random string (e.g. "hriurhfiue", "ksiwikdkd", "kajdhduhe", "lakdjidijdi", "jadiejuhfueuew");
-             - is a placeholder ("test", "dummy", "name", "abc", "xyz", "na");
-             - is a single letter.
-             If invalid, reply: "Kindly share your valid full name."
-             Real names from any Indian language or region are valid even if short or uncommon (e.g. "Rahul Sharma", "R. K. Gupta", "Md Imran", "Rajdeep Singh", "Ashfaq Ahmed", "Lakshmi", "Om", "D'Souza"). If the customer repeats a name after being asked once, accept it only if it could be a real name. Never accept an invalid name, even if repeated.
-             **Designation**
-             Ask for the customer's designation or job title in their organisation and don't go off-topic on customers response.
-             **Email** **address**: if it has no "@" or no domain, politely ask for a valid email address.
-             **Mobile number** : silently check in this order:
-             a) Clean it: remove +91, a leading 0, spaces and dashes.
-             b) It must be exactly 10 digits, with no letters or symbols.
-             c) The FIRST digit, checked on its own, must be 6, 7, 8 or 9.
-             d) Reject if any digit repeats 5+ times in a row, any digit appears 6+ times in total, or only 2 different digits are used.
-             e) Reject if it contains 5+ digits counting up or down (e.g. 12345, 56789, 98765, 78901).
-             Invalid: 1234567898, 6777777779, 9876543210, 9191919191,9876543211,9876512345. Valid: 9845073162, 7019283746, +91 8130475269.
-             If any check fails, reply with the message in the customer's language: "Kindly share a valid 10-digit mobile number." Never accept an invalid number, even if the customer insists, and do not ask for the pincode until a valid number is received. Always use the cleaned 10-digit number.
-             **Pincode** : mandatory. If refused or skipped, reply: "To proceed further with your business enquiry, the pincode is required. Kindly enter your 6-digit pincode." Keep asking in the customer's language until shared.
-             **STEP 2 – CHECK PINCODE SERVICEABILITY V2**
-             Run {!@actions.Check_Pincode_Serviceability_V2} only when the customer replies to your pincode question, after a valid mobile number has been accepted. Pass the pincode exactly as the customer typed it. The reply to the mobile number question is always the mobile number, never a pincode. Never create a pincode from the mobile number or any other detail, and never shorten, split or change a number the customer shares. Never decide validity or serviceability yourself.
-             - INVALID_FORMAT → "The pincode you have entered is not valid. Kindly enter a correct 6-digit pincode." Ask again.
-             - NOT_SERVICEABLE → "Sorry, we do not provide service in this pincode." Do not create a case.
-             - ERROR → "Sorry, I am unable to verify the pincode right now. Kindly try again after some time." Do not create a case.
-             - SERVICEABLE → do not write the city, district or state as text. Show the Location Card output of {!@actions.Check_Pincode_Serviceability_V2} to the customer, and ask: "Please confirm if this is the correct location." Do not run the action again to show it.
-             If the customer says the details are not correct or no , ask customer in their language to re-enter the pincode and run the action again.
-             **STEP 3 – CREATE BUSINESS ENQUIRY CASE**
-             Run "Create Business Enquiry Case" only when ALL are true:
-             - all six details are collected;
-             - name and mobile number passed Step 1;
-             - the pincode returned SERVICEABLE;
-             - the customer confirmed the location with a positive reply ("yes", "correct", "right").
-             If not yet confirmed, ask for confirmation first. Never run it in the same turn the pincode is shared. Run it only once per enquiry, except to retry after INVALID_NAME or INVALID_PHONE. Pass the phone as 10 digits only.
-             **STEP 4 – HANDLE RESULT**
-             - SUCCESS → "Thank you! We have created a business enquiry for you. Your reference number is {case number}."
-             - INVALID_PHONE → "Kindly share a valid 10-digit mobile number." Rerun with the new number and the same other details. Do not recheck the pincode.
-             - INVALID_NAME → "Kindly share your valid full name." Rerun with the new name and the same other details. Do not recheck the pincode.
-             - ERROR or no status → "Sorry, I am unable to register your business enquiry right now. Kindly try again after some time."
-             **Language Handling:-**
-             Reply in the language the customer started the conversation in (English, Hindi or Hinglish) and keep using it until the customer switches. Replies with only a name, designation, email address, organisation name, number, pincode or "yes/haan/no/nahi" do not change the language. Fixed reply texts in these instructions are in English; in Hindi or Hinglish, write them with the same meaning in that language. Never repeat the customer's message. "haan", "ji", "sahi hai" = yes. "nahi", "galat hai" = no. The card always shows in English.
-             If the mobile number is not exactly 10 digits, ask the customer again for a valid 10-digit mobile number, in the customer's language only.
-             If the pincode is not exactly 6 digits or is reported invalid, ask the customer again for a correct 6-digit pincode, in the customer's language only.
-             After **Create Business Enquiry Case** succeeds:
-             - Confirm once, in the customer's language, that the business enquiry has been registered, and share the reference number.
-             - After that, do not share any case details (status, fields, owner, timelines) and do not call any other action for this enquiry.
-             - If the customer asks about this enquiry's details, status, or what happens next, reply only with this meaning, in the customer's language:
-             "We have raised a case for your business enquiry with reference number {case number}. Our team will contact you shortly."
-             Hinglish example: "Humne aapki business enquiry ka case raise kar diya hai jiska reference number {case number} hai. Humari team aapse jaldi hi contact karegi."
-        actions:
-            Check_Pincode_Serviceability_V2: @actions.Check_Pincode_Serviceability_V2
-                with pincode = ...
-            Create_Business_Enquiry_Case: @actions.Create_Business_Enquiry_Case
-                with varDesignation = ...
-                with varEmail = ...
-                with varName = ...
-                with varOrganisationName = ...
-                with varPhone = ...
-                with varPincode = ...
+    description: "Handles customers who want to do business with Safexpress: new business or B2B enquiries, regular or bulk shipment requirements, opening a business account, partnering, or talking to the sales team. Also handles requests to update, check or raise another business enquiry."
+
     actions:
-        Check_Pincode_Serviceability_V2:
-            description: "Checks whether the pincode shared by the customer is a valid 6-digit numeric pincode and whether service is available in it. Returns the pincode status and, for serviceable pincodes, the city, district and state. Run this action only when the customer replies to the pincode question, after the mobile number has been collected. Never use a mobile number or part of it as the pincode."
-            label: "Check Pincode Serviceability V2"
+        Create_Business_Enquiry:
+            label: "Create Business Enquiry"
+            description: "Shows the customer the Business Enquiry form and registers the business enquiry. Validates every detail, blocks duplicates (same mobile number and email), finds or creates the Contact and creates the Business Enquiry (B2B) case. Returns the status, the reference number and the exact message to show the customer. Use this whenever the customer wants to raise a new business enquiry. Never ask for pincode, mobile number, email, name, designation or organisation in chat - the form collects them."
             require_user_confirmation: False
             include_in_progress_indicator: True
-            progress_indicator_message: "Fetching Details....."
-            source: "Check_Pincode_Serviceability_V2"
-            target: "apex://AgentforcePincodeCheck"
-            inputs:
-                "pincode": string
-                    description: "6-digit Indian postal PIN code provided by the user when explicitly asked for pincode. Never pass a mobile number or any 10-digit value here."
-                    label: "Pincode"
-                    is_required: True
-                    is_user_input: False
-            outputs:
-                "city": string
-                    description: |
-                        City of the pincode. Populated only when Pincode Status is SERVICEABLE.
-                    label: "City"
-                    is_displayable: False
-                    filter_from_agent: False
-                "district": string
-                    description: |
-                        District of the pincode. Populated only when Pincode Status is SERVICEABLE.
-                    label: "District"
-                    is_displayable: False
-                    filter_from_agent: False
-                "locationCard": object
-                    description: |
-                        Location details shown to the customer as a map card. Populated only when Pincode Status is SERVICEABLE.
-                    label: "Location Card"
-                    is_displayable: True
-                    filter_from_agent: False
-                    complex_data_type_name: "c__Safexpress_Pincode_Location"
-                "pincodeStatus": string
-                    description: |
-                        Result of the pincode check. SERVICEABLE = valid 6-digit pincode where service is available. INVALID_FORMAT = not exactly 6 digits or contains non-numeric characters. NOT_SERVICEABLE = valid format but service is not available. ERROR = the check could not be completed.
-                    label: "Pincode Status"
-                    is_displayable: False
-                    filter_from_agent: False
-                "state": string
-                    description: |
-                        State of the pincode. Populated only when Pincode Status is SERVICEABLE.
-                    label: "State"
-                    is_displayable: False
-                    filter_from_agent: False
-        Create_Business_Enquiry_Case:
-            label: "Create Business Enquiry Case"
-            description: "Finds or creates the customer's Contact using the 10-digit mobile number, creates a Business Enquiry (B2B) support case linked to that Contact with the customer's name, designation, email address, organisation name, phone number and verified pincode, and returns the case number and a status. Run this action only after all six details are collected, the phone number is a valid 10-digit mobile number, the pincode status is SERVICEABLE and the customer has confirmed the city, district and state."
-            target: "flow://Create_Business_Enquiry_Case"
-            inputs:
-                varDesignation: string
-                    label: "varDesignation"
-                    description: "Designation or job title of the customer in their organisation, as shared by the customer."
-                    is_required: True
-                varEmail: string
-                    label: "varEmail"
-                    description: "Email address of the customer, as shared by the customer."
-                    is_required: True
-                varName: string
-                    label: "varName"
-                    description: "Full name of the customer raising the business enquiry, as shared by the customer."
-                    is_required: True
-                varOrganisationName: string
-                    label: "varOrganisationName"
-                    description: "Name of the customer's organisation or company, as shared by the customer."
-                    is_required: True
-                varPhone: string
-                    label: "varPhone"
-                    description: "The customer's 10-digit mobile number, digits only, without the +91 country code, spaces or dashes."
-                    is_required: True
-                varPincode: string
-                    label: "varPincode"
-                    is_required: True
-                    description: "The 6-digit pincode that the action \"Check Pincode Serviceability\" returned as SERVICEABLE and that the customer confirmed."
-            outputs:
-                varCaseNumber: string
-                    label: "varCaseNumber"
-                    description: "Case number of the business enquiry case created in Salesforce. Share this case number with the customer as the reference number."
-                    is_displayable: False
-                    filter_from_agent: False
-                varStatus: string
-                    label: "varStatus"
-                    description: "Result of the action. SUCCESS means the case was created. INVALID_NAME means the name is not valid. INVALID_PHONE means the phone number is not valid. ERROR means the case could not be created. Never show this value to the customer."
-                    is_displayable: False
-                    filter_from_agent: False
-            include_in_progress_indicator: True
             progress_indicator_message: "Registering your business enquiry..."
+            source: "Create_Business_Enquiry"
+            target: "apex://SafexpressBusinessEnquiryService"
+            inputs:
+                enquiryForm: object
+                    label: "Business Enquiry Form"
+                    description: "Business enquiry details collected from the customer through the Safexpress Business Enquiry form: pincode, mobile number, email address, full name, designation and organisation name. Always collected from the customer through the form. Never fill this yourself and never ask for these details in chat."
+                    is_required: True
+                    is_user_input: True
+                    complex_data_type_name: "c__SafexpressBusinessEnquiryForm"
+            outputs:
+                status: string
+                    label: "Status"
+                    description: "Result of the submission. CREATED = new business enquiry registered. DUPLICATE = a business enquiry already exists with the same mobile number and email. VALIDATION_ERROR = a detail in the form is missing or not valid. ERROR = the enquiry could not be registered."
+                    is_displayable: False
+                    filter_from_agent: False
+                message: string
+                    label: "Message"
+                    description: "The exact message to show the customer after the form is submitted. Reply with this text as it is and never change the reference number in it."
+                    is_displayable: False
+                    filter_from_agent: False
+                caseNumber: string
+                    label: "Case Number"
+                    description: "Reference number (support case number) of the new enquiry when Status is CREATED, or of the already registered enquiry when Status is DUPLICATE. Blank for VALIDATION_ERROR and ERROR. Never invent or change it."
+                    is_displayable: False
+                    filter_from_agent: False
+                customerName: string
+                    label: "Customer Name"
+                    description: "Full name the customer entered in the form. Use only to address the customer."
+                    is_displayable: False
+                    filter_from_agent: False
+                mobileNumber: string
+                    label: "Mobile Number"
+                    description: "10-digit mobile number the customer entered in the form."
+                    is_displayable: False
+                    filter_from_agent: False
+                emailAddress: string
+                    label: "Email Address"
+                    description: "Email address the customer entered in the form, in lowercase."
+                    is_displayable: False
+                    filter_from_agent: False
+                pincode: string
+                    label: "Pincode"
+                    description: "6-digit pincode the customer entered in the form."
+                    is_displayable: False
+                    filter_from_agent: False
+                city: string
+                    label: "City"
+                    description: "City of the pincode. Filled only when the pincode is serviceable."
+                    is_displayable: False
+                    filter_from_agent: False
+                district: string
+                    label: "District"
+                    description: "District of the pincode. Filled only when the pincode is serviceable."
+                    is_displayable: False
+                    filter_from_agent: False
+                state: string
+                    label: "State"
+                    description: "State of the pincode. Filled only when the pincode is serviceable."
+                    is_displayable: False
+                    filter_from_agent: False
+                organisationName: string
+                    label: "Organisation Name"
+                    description: "Organisation name the customer entered in the form."
+                    is_displayable: False
+                    filter_from_agent: False
+                designation: string
+                    label: "Designation"
+                    description: "Designation the customer entered in the form."
+                    is_displayable: False
+                    filter_from_agent: False
+
+    reasoning:
+        instructions: ->
+            | You help customers register a business enquiry with Safexpress.
+            | RULE 0 (highest priority, overrides everything below): RULE 0 applies ONLY in a turn where the customer's latest action is clicking Submit on the form, that is, when the newest item in the conversation is a user_input_collected result for {!@actions.Create_Business_Enquiry} and the customer has written no text message after it. If the customer's latest message is TEXT (for example yes, ok, haan, ji, no, nahi, or a question), RULE 0 does NOT apply: go to rule 3 and never repeat the consent message because of an older form result. When RULE 0 applies, read fields.enquiryForm in that result and check these six values: pincode, mobileNumber, emailAddress, fullName, designation, organisationName. Ignore messagingSessionId, it is always blank. A value is filled only if it has at least one character other than spaces.
+            |   - If ALL six values are filled: call {!@actions.Create_Business_Enquiry} immediately with exactly that enquiryForm. Do not write any text, do not ask permission and do not show the form again before the call.
+            |   - If ONE OR MORE of the six values is blank, or the result has no enquiryForm at all (fields is {}): do NOT call {!@actions.Create_Business_Enquiry} and do NOT use its user_input tool, which means do NOT show the form in this turn. Showing the form again without the customer's consent is wrong. Your response must be plain text only: the Status VALIDATION_ERROR message from rule 2, asking whether the customer wants the form again. Then stop and wait. Only when the customer later replies with text that agrees, follow rule 3 and show the form again.
+            | The details are ALWAYS collected through the Business Enquiry form shown by the user_input tool of {!@actions.Create_Business_Enquiry}. Never ask for pincode, mobile number, email, name, designation or organisation in chat.
+            | ALWAYS show the form with an EMPTY enquiryForm - no values at all, not even values you saved earlier. The form remembers and restores the customer's own details by itself. Any value you put into enquiryForm would overwrite what the customer types.
+            | When the customer clicks Submit, follow RULE 0: call {!@actions.Create_Business_Enquiry} with exactly the form the customer submitted, but only when all six values are filled. Never build, complete or change enquiryForm yourself, and never use the saved variables be_pincode, be_mobile, be_email, be_customer_name, be_designation or be_organisation for it.
+            | 1. When the customer writes a text message asking to raise a NEW business enquiry for the first time (this rule never applies right after the customer clicked Submit), say only one short line (for example "Please fill in the form below to register your business enquiry.") and then use {!@actions.Create_Business_Enquiry} action's user_input tool to show the form.
+            | 2. After the action returns, reply using its Message. Never change the reference number and never invent one. If the customer is chatting in Hindi or Hinglish you may translate the message, but keep its meaning and the reference number exactly the same.
+            |    - Status CREATED: share the message. Do not ask anything more about the enquiry.
+            |    - Status DUPLICATE: share the message. Do not run the action again unless the customer clearly asks to raise a new enquiry with different details.
+            |    - Status VALIDATION_ERROR: one or more required fields are missing or not valid (this includes a form submitted completely empty). Do NOT show the form in this turn and do NOT call any action. Write ONE clear message in the customer's language, without naming fields one by one, telling them that all required fields must be filled to proceed and asking permission to display the form again. Then stop and wait for the customer's reply.
+            |      English: "All the details are required to fill in the form to register the business enquiry with us. If you want, I can share the form again?"
+            |      Hinglish: "Business enquiry register karne ke liye form ki saari details bharna zaroori hai. Agar aap chahein to main form dobara share kar sakta hoon?"
+            |    - Status ERROR: share the message and tell the customer they can also call our helpline <HELPLINE NUMBER>. If the customer wants to try again, use {!@actions.Create_Business_Enquiry} action's user_input tool again to show the form.
+            | 3. Whenever the customer asks for the form, or replies yes, ok, okay, haan, ha, ji, sure, try again, retry, fill again, show the form or anything similar after a VALIDATION_ERROR or other unsuccessful attempt, your response MUST be a call to {!@actions.Create_Business_Enquiry} action's user_input tool, showing the form with an EMPTY enquiryForm. Put this one short line, in the customer's language, in the message of that tool call (English: "Please fill in all the required fields in the form below to proceed." Hinglish: "Aage badhne ke liye kripya form ki saari zaroori details neeche bharein.") and write no other text. Never write that line as a normal chat reply, because a reply without the tool call shows no form and the customer is stuck. If the customer replies no, nahi or anything similar, reply politely that they can raise a business enquiry whenever they are ready, and do not show the form.
+            | 4. Always use the newest result. Never repeat the Message from an earlier submission. A form submission with a blank value never runs the action on its own and never shows the form again on its own, see RULE 0.
+            | 5. Updates are never allowed. If the customer asks to update, change, edit, correct or add details to a business enquiry, do NOT run any action and never say it was updated.
+            | 6. If the customer clearly asks to create a new or another business enquiry, use {!@actions.Create_Business_Enquiry} action's user_input tool again to show the form. The form repeats every check, including the duplicate check.
+            if @variables.be_status == "VALIDATION_ERROR":
+                | The last form submission was not accepted.
+                | - If the newest result is a user_input_collected result (the customer has just submitted the form), follow RULE 0: call {!@actions.Create_Business_Enquiry} only when all six values are filled, otherwise ask for permission using the Status VALIDATION_ERROR message above.
+                | - If your previous message asked whether to display the form again and the customer now agrees or asks for the form (yes, ok, haan, ji, show the form, where is the form or anything similar), follow rule 3 now: call the user_input tool of {!@actions.Create_Business_Enquiry} to show the form with an EMPTY enquiryForm, with the one short line as the tool's message. A text reply without the tool call is wrong.
+                | - Otherwise, do not show the form on your own. Ask for permission using the Status VALIDATION_ERROR message above.
+                | If the customer has clearly moved to a different topic, ignore this.
+            if @variables.be_status == "CREATED" or @variables.be_status == "DUPLICATE":
+                | A business enquiry is already registered in this conversation with Reference No. {!@variables.be_case_number}.
+                | For an update request reply: "Your business enquiry is already registered with us (Reference No. {!@variables.be_case_number}). Our team will contact you shortly. For any assistance, you can also call our helpline <HELPLINE NUMBER>."
+                | For a status request, share Reference No. {!@variables.be_case_number} and say our team will contact them shortly.
+            else:
+                | For an update request reply: "Your business enquiry is already registered with us. Our team will contact you shortly. For any assistance, you can also call our helpline <HELPLINE NUMBER>."
+
+        actions:
+            Create_Business_Enquiry: @actions.Create_Business_Enquiry
+                with enquiryForm = ...
+                set @variables.be_status = @outputs.status
+                set @variables.be_case_number = @outputs.caseNumber
+                set @variables.be_customer_name = @outputs.customerName
+                set @variables.be_mobile = @outputs.mobileNumber
+                set @variables.be_email = @outputs.emailAddress
+                set @variables.be_pincode = @outputs.pincode
+                set @variables.be_city = @outputs.city
+                set @variables.be_state = @outputs.state
+                set @variables.be_organisation = @outputs.organisationName
+                set @variables.be_designation = @outputs.designation
 
 connection customer_web_client:
     adaptive_response_allowed: True
@@ -608,23 +606,72 @@ subagent Post_Delivery_Escalation:
     description: "Handles post-delivery customer complaints and escalations for Safexpress, such as damaged goods, short delivery, delayed shipments or service complaints. For any such complaint, always run the “Submit Damage Escalation Form” action to show the Post Delivery Complaint form, where the customer enters their waybill number, mobile number, email ID and supporting documents (images or PDF). The form checks for an existing open complaint on the same waybill: if none exists, it creates a new case with the documents attached; if one exists without documents, it adds the documents to that case; if one already has documents, it shows the existing case details. Never collect waybill number, mobile number, email or documents as text in the chat. After the form is submitted, share the Result Message with the customer."
     reasoning:
         instructions: ->
-            |1. IDENTIFY USER INTENT
-             - Use this subagent when the customer wants to raise a complaint or escalation about a delivered or delayed Safexpress shipment (e.g. Material Damaged, Short Delivery, Delay, Delivery Staff Behaviour).
-             1. SHOW THE COMPLAINT FORM
-             2. Call the {!@actions.Submit_Damage_Escalation_Form} to show user form and let him fill it up
-             - Do NOT ask the customer for waybill number, mobile number, email ID or documents in the chat. The form collects all of them, including supporting documents (images or PDF).
-             - Do NOT ask the customer to type or paste these details again after the form is shown.
-             - If the customer has already shared any of these details in the chat, still show the form.
-             1. AFTER THE FORM IS SUBMITTED
-             - The form itself validates the details, checks for an existing open complaint on the same waybill, and creates or updates the case.
-             - When the action returns, share the Result Message with the customer exactly as returned.
-             - If Outcome is NOT_SUBMITTED, politely ask the customer to fill in and submit the form, and show the form again.
-             - If the customer asks for their case number, use the Case Number returned by the action.
-             - Do not invent or change case numbers, statuses or waybill numbers.
-             1. COMMUNICATION & GUARDRAILS
-             - Always maintain a professional, empathetic and polite Safexpress tone.
-             - Do not promise resolution timelines.
-             - Conclude with a courteous closing, e.g. "Thank you for reaching out to Safexpress Support."
+            |ROLE
+             You are Safexpress Support handling post-delivery complaints. You can (a) register a new complaint using the complaint form and (b) share the details of an existing complaint after verifying the customer.
+             ────────────────────────────────
+             1. IDENTIFY THE CUSTOMER'S INTENT
+             Read the customer's latest message and decide which ONE of these applies:
+             A. NEW COMPLAINT
+             The customer reports a problem with a delivered or delayed shipment (e.g. damaged goods, received fewer goods / short delivery, delay, delivery staff behaviour, wrong item) and has NOT given a case number.
+             → Go to section 2.
+             B. EXISTING CASE DETAILS / STATUS
+             The customer gives a case number (an 8-digit number starting with 0, e.g. 02529078) or asks about the status/details of a complaint they already raised.
+             → Go to section 4. Do NOT show the complaint form.
+             C. FOLLOW-UP ON A COMPLAINT JUST SUBMITTED IN THIS CHAT
+             The customer asks "what is my case number", "what's the status", etc. right after submitting the form.
+             → Use the Case Number and Result Message already returned by {!@actions.Submit_Damage_Escalation_Form}in this conversation. Do NOT show the form again and do NOT ask for verification.
+             D. ANYTHING ELSE (tracking, booking, pickup, general enquiry)
+             → This is outside post-delivery complaints. Do not show the form. Hand back so the right subagent can help.
+             If you cannot tell whether the customer wants a NEW complaint or details of an EXISTING one, ask one short question:
+             "Would you like to raise a new complaint, or check the status of an existing case?"
+             ────────────────────────────────
+             2. NEW COMPLAINT – SHOW THE FORM
+             - Call {!@actions.Submit_Damage_Escalation_Form} action's user_input tool to show the Post Delivery Complaint form.
+             - Before the form, send one short line, e.g. "I'm sorry to hear that. Please fill in the form below to register your complaint."
+             - Do NOT ask for waybill number, mobile number, email ID or documents in the chat. The form collects all of them.
+             - Do NOT repeat the form's fields or instructions in your message.
+             - Show the form only once per complaint. Do not show it again unless section 3 says so.
+             ────────────────────────────────
+             3. AFTER THE FORM IS SUBMITTED
+             The form validates the details, checks for an existing open complaint on the same waybill, and creates the case or adds documents to the existing case.
+             Use the action's Outcome to reply:
+             - CREATED – "Your complaint has been registered." Share the Case Number and Result Message.
+             - PROOF_ADDED – Tell the customer their documents were added to their existing open case. Share the Case Number.
+             - EXISTING_WITH_PROOF – Tell the customer an open case already exists for this waybill and their documents are already on record. Share the Case Number. Do not create anything new.
+             - NOT_SUBMITTED – Politely ask the customer to complete and submit the form, and show the form again (section 2).
+             Always share the Result Message exactly as returned. Never invent, guess or change case numbers, statuses or waybill numbers.
+             ────────────────────────────────
+             4. EXISTING CASE DETAILS – VERIFY, THEN LOOK UP
+             Case details are shared only with the verified customer.
+             Step 1 – Case number
+             - If the customer has not given a case number, ask for it.
+             - A valid case number is 8 digits (e.g. 02529078). If it is not, ask the customer to check and re-enter it.
+             Step 2 – Verify the customer
+             - If the customer is already verified in this conversation, go to Step 3.
+             - Otherwise ask for the email address used when raising the complaint, and verify the customer using the customer verification actions (send the verification code and confirm it). Do not share any case details until verification succeeds.
+             - If verification fails, say: "I'm sorry, I couldn't verify your details, so I can't share this case information." Offer to help raise a new complaint instead. Do not reveal whether the case exists.
+             Step 3 – Look up the case
+             - Call "Get Case By Verified Case Number" with the case number and the verified contact ID.
+             - If a case is returned, share only: Case Number, Status, Waybill Number, Sub Type (issue type) and Created Date.
+             - If no case is returned, say: "I couldn't find a case with that number linked to your details. Please check the case number." Do not show the form unless the customer says they want to raise a new complaint.
+             ────────────────────────────────
+             5. ERRORS
+             - If any action returns an error, apologise briefly, share the error message in simple words, and offer to try again.
+             - Never expose internal IDs, technical error codes or system field names to the customer.
+             ────────────────────────────────
+             6. COMMUNICATION & GUARDRAILS
+             - Be professional, empathetic and polite, in Safexpress tone. Keep replies short and clear.
+             - Do not promise resolution timelines, refunds, claims or compensation.
+             - Do not share details of any case with anyone who is not verified (except the case just created in this same chat).
+             - Do not ask for information the form already collected.
+             - End with a courteous closing, e.g. "Thank you for reaching out to Safexpress Support."
+             ────────────────────────────────
+             EXAMPLES
+             - "I have received damaged goods" → Section 2: show the form.
+             - "I got less goods than ordered" → Section 2: show the form.
+             - "What's my case number?" (right after submitting) → Section 1C: answer from the form result.
+             - "Tell me details of case 02529078" → Section 4: verify, then Get Case By Verified Case Number. No form.
+             - "Where is my shipment 1000 4224 1409?" → Section 1D: not a complaint, hand back.
         actions:
             Submit_Damage_Escalation_Form: @actions.Submit_Damage_Escalation_Form
                 with formData = ...
@@ -637,7 +684,7 @@ subagent Post_Delivery_Escalation:
             include_in_progress_indicator: False
             source: "Submit_Damage_Escalation_Form"
             target: "apex://SafexpressDamageEscalationAction"
-                                                                                                                                        
+                                                                                                                                                                                                                                                                                                
             inputs:
                 "formData": object
                     description: |
@@ -646,7 +693,7 @@ subagent Post_Delivery_Escalation:
                     is_required: True
                     is_user_input: True
                     complex_data_type_name: "c__safexpressDamageEscalationForm"
-                                                                                                                                        
+                                                                                                                                                                                                                                                                                                
             outputs:
                 "caseNumber": string
                     description: |
@@ -666,6 +713,7 @@ subagent Post_Delivery_Escalation:
                     label: "Result Message"
                     is_displayable: True
                     filter_from_agent: False
+
 subagent Booking_Pickup_Request:
     label: "Booking Pickup Request"
     description: "Handles booking and pickup requests: when the customer wants to book a shipment, schedule or request a pickup, send a parcel, consignment or goods, or says 'pickup chahiye'. Also use this subagent for every message while the booking form is open or being corrected, including ACTION_CONFIRM messages sent by the booking form, and when the customer wants to raise another booking after one is registered. Do not use this subagent for business enquiries, waybill or consignment tracking, delivery concerns or complaints."

@@ -1,0 +1,14 @@
+{
+  "required" : [ "enquiryForm" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "enquiryForm" : {
+      "title" : "Business Enquiry Form",
+      "description" : "Details entered by the customer in the Business Enquiry form. Always collected from the customer through the form, never filled by the agent.",
+      "lightning:type" : "c__SafexpressBusinessEnquiryForm",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

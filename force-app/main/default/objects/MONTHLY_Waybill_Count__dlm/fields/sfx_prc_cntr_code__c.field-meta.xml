@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sfx_prc_cntr_code__c</fullName>
+    <label>SFX_PRC_CNTR_CODE</label>
+    <length>60</length>
+    <mktDataModelFieldAttributes>
+        <definitionCreationType>Custom</definitionCreationType>
+        <isDynamicLookup>false</isDynamicLookup>
+        <labelOverride>SFX_PRC_CNTR_CODE</labelOverride>
+        <masterLabel>SFX_PRC_CNTR_CODE</masterLabel>
+        <usageTag>None</usageTag>
+    </mktDataModelFieldAttributes>
+    <required>false</required>
+    <type>Text</type>
+</CustomField>

@@ -1,13 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <applicationVisibilities>
+        <application>Safexpress</application>
+        <visible>true</visible>
+    </applicationVisibilities>
+    <applicationVisibilities>
+        <application>safexpress2_0</application>
+        <visible>true</visible>
+    </applicationVisibilities>
     <customPermissions>
         <enabled>true</enabled>
         <name>Lead_Central_Desk</name>
     </customPermissions>
     <description>Central Desk persona permission set. Holds all module access for this persona.</description>
+    <externalCredentialPrincipalAccesses>
+        <enabled>true</enabled>
+        <externalCredentialPrincipal>GST_Validation_Auth-token</externalCredentialPrincipal>
+    </externalCredentialPrincipalAccesses>
+    <externalCredentialPrincipalAccesses>
+        <enabled>true</enabled>
+        <externalCredentialPrincipal>Propeli_Pincode_Auth-Pincode_Principal</externalCredentialPrincipal>
+    </externalCredentialPrincipalAccesses>
     <fieldPermissions>
         <editable>true</editable>
         <field>Lead.Account_Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Address</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -38,6 +59,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Lead.Assignment_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.Assignment_Evaluated__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -82,6 +108,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Lead.GST_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Lead.Instance_Url__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -113,6 +144,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Lead.Phone</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.Pincode_Lookup_Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -209,6 +245,16 @@
         <allowRead>true</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
         <object>Lead</object>
+        <viewAllFields>false</viewAllFields>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>UserExternalCredential</object>
         <viewAllFields>false</viewAllFields>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>

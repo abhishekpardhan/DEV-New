@@ -69,6 +69,7 @@ public class ConstantUtility {
     public static final String CASE_TYPE_FREIGHT_DISPUTE = 'Freight Dispute';
     public static final String CASE_TYPE_PICKUP_ISSUE = 'Pickup Issue';
     public static final String CASE_TYPE_B2B = 'Business Enquiry (B2B)';
+    public static final String CASE_TYPE_BUSINESS_REQUEST = 'Booking Request';
     public static final String CASE_NATURE_COMPLAINT = 'Complaint';
     public static final String CASE_NATURE_ENQUIRY = 'Enquiry';
     public static final String CASE_NATURE_REQUEST = 'Request';
@@ -124,12 +125,19 @@ public class ConstantUtility {
     
     
     //Lead Constants
-    public static final String APPROVAL_PROCESS_NAME = 'Lead_Drop_Approval';
+    public static final String LEAD_DROP_APPROVAL_PROCESS_NAME = 'Lead_Drop_Approval';
     public static final String PERMISSION_ERROR = 'You don\'t have permission to revive leads.';
     public static final String INELIGIBLE_ERROR = 'Only an approved Dropped lead or a Dropped by Central Desk lead can be revived.';
     public static final String SUCCESS_MESSAGE = 'Lead revived.';
     public static final String NOT_FOUND_ERROR = 'Lead not found or you do not have access to it.';
     public static final String INVALID_ID_ERROR = 'A valid Lead Id is required.';
+    public static final String LEAD_REVIVE = 'Lead_Revive';
+    public static final String REVIVE_LEAD = 'Revive Lead';
+    public static final String LEAD_DUPLICATE_EXEMPTION = 'Lead_Duplicate_Exemption';
+    public static final String DUPLICATE_PAN_ERROR_MESSAGE_PREFIX ='A Lead or Account already exists with the same PAN ' + '(derived from GST number): ';
+    public static final String PROSPECT_CUSTOMER_RT = 'Prospect_Customer';
+    public static final String SFX_CUSTOMER_RT = 'SFX_Customer';
+    
 
 
     public static final String SUB_TYPE_Retail_PRC = 'Retail- PRC';
@@ -168,6 +176,8 @@ public class ConstantUtility {
     public static final String Pending_For_Approval = 'Pending for Approval';
     public static final String Dropped_By_Central_Desk ='Dropped by Central desk';
     public static final String Approved = 'Approved';
+    Public Static Id CREDIT_LEAD_RECORDTYPE_ID =  Lead__c.SObjectType.getDescribe().getRecordTypeInfosByDeveloperName().get('Credit_Lead').getRecordTypeId();
+    Public Static Id RETAIL_LEAD_RECORDTYPE_ID =  Lead__c.SObjectType.getDescribe().getRecordTypeInfosByDeveloperName().get('Retail_Lead').getRecordTypeId();
     public static final String Lead_Type_Retail ='Retail';
     public static final String Lead_Type_3PL ='3PL';
     public static final String CREDIT_RETAIL ='CREDIT+RETAIL';

@@ -8,8 +8,8 @@ public with sharing class BookingRequestValidator {
     public static final Integer EMAIL_MAX_LEN = 80;
     public static final Integer ADDRESS_MIN_LEN = 10;
     public static final Integer ADDRESS_MAX_LEN = 255;
-    public static final Decimal WEIGHT_MAX_KG = 50000;
-    public static final Integer PACKAGES_MAX = 5000;
+    // Weight has no business limit. Total_Weight__c is Number(16,2): up to 14 digits before the decimal point.
+    public static final Integer PACKAGES_MAX = 10000000; // 1 crore
     public static final Decimal MIN_KG_PER_PACKAGE = 0.05;
 
     public class FieldResult {
@@ -283,21 +283,23 @@ public with sharing class BookingRequestValidator {
     public static FieldResult validateWeight(String raw) {
         String text = raw == null ? '' : raw.trim();
         if (String.isBlank(text)) return fail('Kindly enter the approximate weight in kg.');
-        if (!matches('^(0|[1-9]\\d{0,6})(\\.\\d{1,2})?$', text)) {
+        // Up to 14 digits before the decimal point (field limit of Total_Weight__c) and up to 2 decimals.
+        if (!matches('^(0|[1-9]\\d{0,13})(\\.\\d{1,2})?$', text)) {
             return fail('Kindly enter the weight in kg as a number, with up to 2 decimals (like 12.5).');
         }
-        Decimal kg = Decimal.valueOf(text);
-        if (kg <= 0 || kg > WEIGHT_MAX_KG) return fail('Weight must be more than 0 and at most 50,000 kg.');
+        if (Decimal.valueOf(text) <= 0) return fail('Weight must be more than 0 kg.');
         return ok(text);
     }
 
     public static FieldResult validatePackages(String raw) {
         String text = raw == null ? '' : raw.trim();
         if (String.isBlank(text)) return fail('Kindly enter the number of packages.');
-        if (!matches('^[1-9]\\d{0,4}$', text)) {
+        if (!matches('^[1-9]\\d*$', text)) {
             return fail('Kindly enter the number of packages as a whole number (like 3).');
         }
-        if (Integer.valueOf(text) > PACKAGES_MAX) return fail('Number of packages must be between 1 and 5,000.');
+        if (text.length() > 8 || Integer.valueOf(text) > PACKAGES_MAX) {
+            return fail('Number of packages must be between 1 and 1,00,00,000 (1 crore).');
+        }
         return ok(text);
     }
 

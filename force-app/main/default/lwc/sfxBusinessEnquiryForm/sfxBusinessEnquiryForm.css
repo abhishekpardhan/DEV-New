@@ -1,0 +1,272 @@
+:host {
+    display: block;
+}
+
+.sfx-card {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #d8dde6;
+    border-radius: 10px;
+    overflow: hidden;
+    color: #181818;
+    font-family: 'Salesforce Sans', Arial, sans-serif;
+    box-sizing: border-box;
+}
+.sfx-card *,
+.sfx-card *::before,
+.sfx-card *::after {
+    box-sizing: border-box;
+}
+
+/* Header */
+.sfx-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    background: #1e7b34;
+}
+.sfx-logo-box {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 2px 4px;
+    background: #ffffff;
+    border-radius: 3px;
+}
+.sfx-logo {
+    display: block;
+    height: 24px;
+    width: auto;
+}
+.sfx-title {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Body */
+.sfx-body {
+    padding: 12px 14px 14px;
+}
+.sfx-intro {
+    margin: 0 0 6px;
+    text-align: center;
+    color: #706e6b;
+    font-size: 12.5px;
+    line-height: 1.45;
+}
+.sfx-section-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 14px 0 10px;
+    color: #1e7b34;
+    font-size: 14px;
+    font-weight: 700;
+}
+.sfx-section-title::after {
+    content: '';
+    flex: 1;
+    border-top: 1px solid #e5e5e5;
+}
+
+/* Fields */
+.sfx-field {
+    margin-bottom: 12px;
+}
+.sfx-label {
+    display: block;
+    margin-bottom: 4px;
+    color: #3e3e3c;
+    font-size: 12px;
+}
+.sfx-req {
+    color: #c23934;
+    margin-right: 2px;
+}
+.sfx-input {
+    width: 100%;
+    height: 34px;
+    padding: 0 10px;
+    font-size: 13px;
+    font-family: inherit;
+    color: #181818;
+    background: #ffffff;
+    border: 1px solid #8a8d91;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+.sfx-input::placeholder {
+    color: #9a9a9a;
+}
+.sfx-input:focus {
+    border-color: #1e7b34;
+    box-shadow: 0 0 0 2px rgba(30, 123, 52, 0.18);
+}
+.sfx-input.is-valid {
+    border-color: #1e7b34;
+    box-shadow: inset 0 0 0 1px #1e7b34;
+}
+.sfx-input.has-error {
+    border-color: #c23934;
+    box-shadow: inset 0 0 0 1px #c23934;
+}
+.sfx-input:disabled {
+    background: #f3f3f3;
+    border-color: #d8d8d8;
+    box-shadow: none;
+    color: #9a9a9a;
+    cursor: not-allowed;
+}
+.sfx-error {
+    margin: 4px 0 0;
+    color: #c23934;
+    font-size: 11.5px;
+    line-height: 1.35;
+}
+.sfx-hint {
+    margin: 6px 0 0;
+    color: #706e6b;
+    font-size: 11.5px;
+}
+.sfx-lock-note {
+    margin: -2px 0 10px;
+    color: #706e6b;
+    font-size: 11.5px;
+}
+
+/* Pincode location card */
+.sfx-location {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 8px;
+    padding: 8px 10px;
+    background: #eaf5ec;
+    border: 1px solid #cfe6d4;
+    border-radius: 6px;
+}
+.sfx-check {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    margin-top: 1px;
+    border-radius: 50%;
+    background: #1e7b34;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+}
+.sfx-location-city {
+    margin: 0;
+    color: #1e5e2c;
+    font-size: 13px;
+    font-weight: 700;
+}
+.sfx-location-sub {
+    margin: 2px 0 0;
+    color: #5c5c5c;
+    font-size: 12px;
+}
+
+/* Alerts */
+.sfx-alert {
+    margin-top: 8px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    line-height: 1.45;
+}
+.sfx-alert p {
+    margin: 0;
+}
+.sfx-alert-title {
+    margin-bottom: 2px !important;
+    font-weight: 700;
+}
+.sfx-alert-error {
+    background: #fdecea;
+    border: 1px solid #f4c7c3;
+    color: #a61a14;
+}
+.sfx-alert-info {
+    background: #fff7e6;
+    border: 1px solid #f2d39b;
+    color: #7a4d00;
+}
+.sfx-link {
+    margin-left: 4px;
+    padding: 0;
+    background: none;
+    border: none;
+    color: #0b5cab;
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.sfx-ready {
+    margin: 4px 0 0;
+    padding: 8px 10px;
+    background: #eaf5ec;
+    border-radius: 6px;
+    color: #1e5e2c;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Stepper (dot + line on the left, like the pickup form) */
+.sfx-step {
+    position: relative;
+    padding-left: 26px;
+    padding-bottom: 12px;
+}
+.sfx-step::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 29px;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #9aa0a6;
+    border-radius: 50%;
+    background: #ffffff;
+    z-index: 1;
+}
+.sfx-step::after {
+    content: '';
+    position: absolute;
+    left: 9px;
+    top: 41px;
+    bottom: -29px;
+    border-left: 2px dashed #b0b5ba;
+}
+.sfx-step.is-last::after {
+    display: none;
+}
+.sfx-step.is-done::before {
+    background: #1e7b34;
+    border-color: #1e7b34;
+}
+.sfx-step.is-done::after {
+    border-left-style: solid;
+    border-left-color: #1e7b34;
+}
+.sfx-step.is-error::before {
+    border-color: #c23934;
+}
+
+/* Footer */
+.sfx-footer {
+    padding: 9px 12px;
+    background: #1a1a1a;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12.5px;
+    font-weight: 700;
+}

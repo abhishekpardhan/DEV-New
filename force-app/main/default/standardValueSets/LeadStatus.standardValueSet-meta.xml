@@ -11,7 +11,7 @@
         <fullName>Qualified</fullName>
         <default>false</default>
         <label>Qualified</label>
-        <converted>true</converted>
+        <converted>false</converted>
     </standardValue>
     <standardValue>
         <fullName>Dropped</fullName>
@@ -24,5 +24,11 @@
         <default>false</default>
         <label>Dropped by Central desk</label>
         <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Convert</fullName>
+        <default>false</default>
+        <label>Convert</label>
+        <converted>true</converted>
     </standardValue>
 </StandardValueSet>

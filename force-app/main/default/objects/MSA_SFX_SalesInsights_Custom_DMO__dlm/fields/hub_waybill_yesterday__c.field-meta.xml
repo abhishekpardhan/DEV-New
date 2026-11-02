@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>hub_waybill_yesterday__c</fullName>
+    <label>HUB_WAYBILL_YESTERDAY</label>
+    <mktDataModelFieldAttributes>
+        <definitionCreationType>Custom</definitionCreationType>
+        <isDynamicLookup>false</isDynamicLookup>
+        <labelOverride>HUB_WAYBILL_YESTERDAY</labelOverride>
+        <masterLabel>HUB_WAYBILL_YESTERDAY</masterLabel>
+        <usageTag>None</usageTag>
+    </mktDataModelFieldAttributes>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>6</scale>
+    <type>Number</type>
+</CustomField>

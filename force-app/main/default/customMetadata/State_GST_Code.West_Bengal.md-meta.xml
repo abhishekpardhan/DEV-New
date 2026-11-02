@@ -3,6 +3,10 @@
     <label>West Bengal</label>
     <protected>false</protected>
     <values>
+        <field>State_Abbreviation__c</field>
+        <value xsi:type="xsd:string">WB</value>
+    </values>
+    <values>
         <field>State_GST_Code__c</field>
         <value xsi:type="xsd:string">19</value>
     </values>

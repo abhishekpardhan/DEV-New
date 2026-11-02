@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>rate_card_service_offering__c</fullName>
+    <label>RATE_CARD_SERVICE_OFFERING</label>
+    <length>60</length>
+    <mktDataModelFieldAttributes>
+        <definitionCreationType>Custom</definitionCreationType>
+        <isDynamicLookup>false</isDynamicLookup>
+        <labelOverride>RATE_CARD_SERVICE_OFFERING</labelOverride>
+        <masterLabel>RATE_CARD_SERVICE_OFFERING</masterLabel>
+        <primaryIndexOrder>1</primaryIndexOrder>
+        <usageTag>None</usageTag>
+    </mktDataModelFieldAttributes>
+    <required>false</required>
+    <type>Text</type>
+</CustomField>

@@ -8,8 +8,8 @@ export const LIMITS = Object.freeze({
     EMAIL_MAX_LEN: 80,
     ADDRESS_MIN_LEN: 10,
     ADDRESS_MAX_LEN: 255,
-    WEIGHT_MAX_KG: 50000,
-    PACKAGES_MAX: 5000,
+    // Weight has no business limit. Total_Weight__c is Number(16,2): up to 14 digits before the decimal point.
+    PACKAGES_MAX: 10000000, // 1 crore
     MIN_KG_PER_PACKAGE: 0.05
 });
 
@@ -30,10 +30,10 @@ export const MESSAGES = Object.freeze({
     ADDRESS_INVALID: 'Kindly enter a valid pickup address.',
     WEIGHT_REQUIRED: 'Kindly enter the approximate weight in kg.',
     WEIGHT_INVALID: 'Kindly enter the weight in kg as a number, with up to 2 decimals (like 12.5).',
-    WEIGHT_RANGE: 'Weight must be more than 0 and at most 50,000 kg.',
+    WEIGHT_RANGE: 'Weight must be more than 0 kg.',
     PACKAGES_REQUIRED: 'Kindly enter the number of packages.',
     PACKAGES_INVALID: 'Kindly enter the number of packages as a whole number (like 3).',
-    PACKAGES_RANGE: 'Number of packages must be between 1 and 5,000.',
+    PACKAGES_RANGE: 'Number of packages must be between 1 and 1,00,00,000 (1 crore).',
     WEIGHT_PER_PACKAGE: 'The weight looks too low for this many packages. Kindly check both values.'
 });
 
@@ -241,17 +241,17 @@ export function validateAddress(raw) {
 export function validateWeight(raw) {
     const text = asText(raw).trim();
     if (!text) return fail(MESSAGES.WEIGHT_REQUIRED);
-    if (!/^(0|[1-9]\d{0,6})(\.\d{1,2})?$/.test(text)) return fail(MESSAGES.WEIGHT_INVALID);
-    const kg = Number(text);
-    if (!(kg > 0) || kg > LIMITS.WEIGHT_MAX_KG) return fail(MESSAGES.WEIGHT_RANGE);
+    // Up to 14 digits before the decimal point (field limit of Total_Weight__c) and up to 2 decimals.
+    if (!/^(0|[1-9]\d{0,13})(\.\d{1,2})?$/.test(text)) return fail(MESSAGES.WEIGHT_INVALID);
+    if (!(Number(text) > 0)) return fail(MESSAGES.WEIGHT_RANGE);
     return ok(text);
 }
 
 export function validatePackages(raw) {
     const text = asText(raw).trim();
     if (!text) return fail(MESSAGES.PACKAGES_REQUIRED);
-    if (!/^[1-9]\d{0,4}$/.test(text)) return fail(MESSAGES.PACKAGES_INVALID);
-    if (Number(text) > LIMITS.PACKAGES_MAX) return fail(MESSAGES.PACKAGES_RANGE);
+    if (!/^[1-9]\d*$/.test(text)) return fail(MESSAGES.PACKAGES_INVALID);
+    if (text.length > 8 || Number(text) > LIMITS.PACKAGES_MAX) return fail(MESSAGES.PACKAGES_RANGE);
     return ok(text);
 }
 

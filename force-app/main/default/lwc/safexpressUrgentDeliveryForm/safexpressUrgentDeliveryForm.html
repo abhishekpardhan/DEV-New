@@ -1,0 +1,217 @@
+<template>
+    <div class="sfx-card">
+        <div class="sfx-header">
+            <img src={logoUrl} alt="Safexpress" class="sfx-logo" />
+            <h2 class="sfx-title">⚡ Urgent Delivery Request</h2>
+        </div>
+
+        <div class="sfx-body">
+            <template lwc:if={showForm}>
+                <p class="sfx-instruction">
+                    Please verify your details below to log an urgent delivery request.
+                </p>
+
+                <div class="sfx-progress-track" aria-hidden="true">
+                    <div class="sfx-progress-fill" style={progressStyle}></div>
+                </div>
+                <p class="sfx-progress-label">{completedCount} of {totalSteps} completed</p>
+
+                <div class="sfx-section-title">
+                    <span>Your Details</span>
+                    <span class="sfx-section-line"></span>
+                </div>
+
+                <div class="sfx-steps">
+                    <!-- Waybill -->
+                    <div class={waybillStepClass}>
+                        <span class="sfx-dot"></span>
+                        <div class="sfx-step-body">
+                            <label class="sfx-label" for="sfx-waybill">
+                                <span class="sfx-req">*</span>📦 Waybill Number
+                            </label>
+                            <div class="sfx-input-wrap">
+                                <input
+                                    id="sfx-waybill"
+                                    class="sfx-input"
+                                    data-field="waybill"
+                                    type="text"
+                                    inputmode="numeric"
+                                    maxlength="12"
+                                    placeholder="12-digit waybill number"
+                                    value={waybill}
+                                    disabled={isWaybillDisabled}
+                                    oninput={handleInputChange}
+                                    onblur={handleBlur} />
+                                <span class="sfx-check">✓</span>
+                            </div>
+                            <template lwc:if={waybillError}>
+                                <p class="sfx-field-error">{waybillError}</p>
+                            </template>
+                        </div>
+                    </div>
+
+                    <!-- Mobile -->
+                    <div class={mobileStepClass}>
+                        <span class="sfx-dot"></span>
+                        <div class="sfx-step-body">
+                            <label class="sfx-label" for="sfx-mobile">
+                                <span class="sfx-req">*</span>📱 Mobile Number
+                            </label>
+                            <div class="sfx-input-wrap">
+                                <input
+                                    id="sfx-mobile"
+                                    class="sfx-input"
+                                    data-field="mobile"
+                                    type="tel"
+                                    inputmode="numeric"
+                                    maxlength="10"
+                                    placeholder="10-digit mobile number"
+                                    value={mobile}
+                                    disabled={isBusy}
+                                    oninput={handleInputChange}
+                                    onblur={handleBlur} />
+                                <span class="sfx-check">✓</span>
+                            </div>
+                            <template lwc:if={mobileError}>
+                                <p class="sfx-field-error">{mobileError}</p>
+                            </template>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class={emailStepClass}>
+                        <span class="sfx-dot"></span>
+                        <div class="sfx-step-body">
+                            <label class="sfx-label" for="sfx-email">
+                                <span class="sfx-req">*</span>✉️ Email ID
+                            </label>
+                            <div class="sfx-input-wrap">
+                                <input
+                                    id="sfx-email"
+                                    class="sfx-input"
+                                    data-field="email"
+                                    type="email"
+                                    inputmode="email"
+                                    placeholder="name@company.com"
+                                    value={email}
+                                    disabled={isBusy}
+                                    oninput={handleInputChange}
+                                    onblur={handleBlur} />
+                                <span class="sfx-check">✓</span>
+                            </div>
+                            <template lwc:if={emailError}>
+                                <p class="sfx-field-error">{emailError}</p>
+                            </template>
+                        </div>
+                    </div>
+
+                    <!-- Instructions -->
+                    <div class={instructionsStepClass}>
+                        <span class="sfx-dot"></span>
+                        <div class="sfx-step-body">
+                            <label class="sfx-label" for="sfx-instructions">
+                                💬 Special Instructions <span class="sfx-optional">(optional)</span>
+                            </label>
+                            <textarea
+                                id="sfx-instructions"
+                                class="sfx-input sfx-textarea"
+                                data-field="instructions"
+                                rows="2"
+                                maxlength="2000"
+                                placeholder="Add any delivery instructions..."
+                                value={instructions}
+                                disabled={isBusy}
+                                oninput={handleInputChange}
+                                onblur={handleBlur}></textarea>
+                            <div class="sfx-counter-row">
+                                <template lwc:if={instructionsError}>
+                                    <p class="sfx-field-error">{instructionsError}</p>
+                                </template>
+                                <span class="sfx-counter">{instructionsLength}/2000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <template lwc:if={errorMessage}>
+                    <div class="sfx-error" role="alert">{errorMessage}</div>
+                </template>
+
+                <template lwc:if={isBusy}>
+                    <div class="sfx-busy">
+                        <span class="sfx-spinner"></span>
+                        <span>{progressText}</span>
+                    </div>
+                </template>
+
+                <div class="sfx-button-container">
+                    <button
+                        type="button"
+                        class="sfx-upload-btn"
+                        disabled={isSubmitDisabled}
+                        onclick={handleSubmit}>
+                        Submit Request
+                    </button>
+                </div>
+            </template>
+
+            <template lwc:else>
+                <div class="sfx-confirm-note">{confirmNote}</div>
+
+                <div class="sfx-result">
+                    <lightning-icon
+                        icon-name={resultIcon}
+                        variant={resultVariant}
+                        size="medium"
+                        class="sfx-result-icon">
+                    </lightning-icon>
+                    <p class="sfx-result-message">{result.message}</p>
+
+                    <div class="sfx-details">
+                        <template lwc:if={result.caseNumber}>
+                            <div class="sfx-detail-row">
+                                <span class="sfx-detail-label">🎫 Case Number</span>
+                                <span class="sfx-detail-value">{result.caseNumber}</span>
+                            </div>
+                        </template>
+                        <div class="sfx-detail-row">
+                            <span class="sfx-detail-label">📦 Waybill Number</span>
+                            <span class="sfx-detail-value">{waybill}</span>
+                        </div>
+                        <template lwc:if={result.caseStatus}>
+                            <div class="sfx-detail-row">
+                                <span class="sfx-detail-label">🚚 Status</span>
+                                <span class="sfx-detail-value">{result.caseStatus}</span>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </template>
+        </div>
+
+        <div class="sfx-footer">
+            <span class="sfx-footer-tag">Distribution Redefined</span>
+            <div class="sfx-apps">
+                <span class="sfx-apps-label">Get the Safexpress App</span>
+                <div class="sfx-app-badges">
+                    <a
+                        class="sfx-badge-link"
+                        href={iosAppUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Download on the App Store">
+                        <img src={iosBadgeUrl} alt="Download on the App Store" class="sfx-badge" />
+                    </a>
+                    <a
+                        class="sfx-badge-link"
+                        href={androidAppUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Get it on Google Play">
+                        <img src={androidBadgeUrl} alt="Get it on Google Play" class="sfx-badge" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

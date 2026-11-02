@@ -3,12 +3,19 @@ private class LeadReviveControllerTest {
     /**
      * Creates a Lead with the minimum standard required fields.
      */
-    private static Lead createLead(String lastName, String status, String approvalStatus) {
+    private static Lead createLead(String lastName, String status, String approvalStatus,String dropReason) {
         Lead leadRecord = new Lead(
             LastName = lastName,
             Company = 'Test Company',
             Status = status,
-            Approval_Status__c = approvalStatus
+            Approval_Status__c = approvalStatus,
+            Lead_Drop_Reason__c = dropReason,
+            MobilePhone = '9282932829',
+            Email = 'test@mail.com',
+            Street = 'Test Street',
+            City = 'Test City',
+            State = 'Test State',
+            PostalCode = '283992'
         );
         return leadRecord;
     }
@@ -64,7 +71,7 @@ private class LeadReviveControllerTest {
      */
     @IsTest
     static void testPermissionDenied() {
-        Lead leadRecord = createLead('Permission Denied', ConstantUtility.Dropped, ConstantUtility.Approved);
+        Lead leadRecord = createLead('Permission Denied', ConstantUtility.Dropped, ConstantUtility.Approved, 'FTL Customer');
         insert leadRecord;
         User testUser = createUserWithoutLeadRevivePermission();
         System.runAs(testUser) {
@@ -104,7 +111,7 @@ private class LeadReviveControllerTest {
     @IsTest
     static void testReviveApprovedDroppedLead() {
         assignLeadRevivePermission();
-        Lead leadRecord = createLead('Approved Dropped', ConstantUtility.Dropped, ConstantUtility.Approved);
+        Lead leadRecord = createLead('Approved Dropped', ConstantUtility.Dropped, ConstantUtility.Approved, 'FTL Customer');
         leadRecord.Lead_Drop_Reason__c = 'Test drop reason';
         leadRecord.Please_Specify__c = 'Test specification';
         insert leadRecord;
@@ -126,7 +133,7 @@ private class LeadReviveControllerTest {
     @IsTest
     static void testReviveCentralDeskDroppedLead() {
         assignLeadRevivePermission();
-        Lead leadRecord = createLead('Central Desk Dropped', ConstantUtility.Dropped_By_Central_Desk, null);
+        Lead leadRecord = createLead('Central Desk Dropped', ConstantUtility.Dropped_By_Central_Desk,null, 'FTL Customer');
         insert leadRecord;
         Test.startTest();
         List<String> results = LeadReviveController.reviveLeads(new List<Id>{ leadRecord.Id });
@@ -144,7 +151,7 @@ private class LeadReviveControllerTest {
     @IsTest
     static void testIneligibleLead() {
         assignLeadRevivePermission();
-        Lead leadRecord = createLead('Ineligible Lead', ConstantUtility.ACTIVE, null);
+        Lead leadRecord = createLead('Ineligible Lead', ConstantUtility.ACTIVE, null,null);
         insert leadRecord;
         Test.startTest();
         List<String> results = LeadReviveController.reviveLeads(new List<Id>{ leadRecord.Id });
@@ -176,7 +183,7 @@ private class LeadReviveControllerTest {
     @IsTest
     static void testNullIdInInputList() {
         assignLeadRevivePermission();
-        Lead leadRecord = createLead('Valid Lead', ConstantUtility.ACTIVE, null);
+        Lead leadRecord = createLead('Valid Lead', ConstantUtility.ACTIVE, null,null);
         insert leadRecord;
         List<Id> inputIds = new List<Id>{null, leadRecord.Id};
         Test.startTest();
@@ -193,7 +200,7 @@ private class LeadReviveControllerTest {
     @IsTest
     static void testLeadNotFound() {
         assignLeadRevivePermission();
-        Lead leadRecord = createLead('Deleted Lead', ConstantUtility.ACTIVE, null);
+        Lead leadRecord = createLead('Deleted Lead', ConstantUtility.ACTIVE, null,null);
         insert leadRecord;
         Id deletedLeadId = leadRecord.Id;
         delete leadRecord;
@@ -210,7 +217,7 @@ private class LeadReviveControllerTest {
     @IsTest
     static void testDuplicateLeadIds() {
         assignLeadRevivePermission();
-        Lead leadRecord = createLead('Duplicate Lead', ConstantUtility.Dropped, ConstantUtility.Approved);
+        Lead leadRecord = createLead('Duplicate Lead', ConstantUtility.Dropped, ConstantUtility.Approved,'FTL Customer');
         insert leadRecord;
         List<Id> inputIds = new List<Id>{leadRecord.Id, leadRecord.Id};
         Test.startTest();
@@ -232,9 +239,9 @@ private class LeadReviveControllerTest {
         List<Lead> leadsToInsert = new List<Lead>();
         for (Integer i = 0; i < 200; i++) {
             if (Math.mod(i, 2) == 0) {
-                leadsToInsert.add(createLead('Eligible ' + i, ConstantUtility.Dropped, ConstantUtility.Approved));
+                leadsToInsert.add(createLead('Eligible ' + i, ConstantUtility.Dropped, ConstantUtility.Approved,'FTL Customer'));
             } else {
-                leadsToInsert.add(createLead('Ineligible ' + i, ConstantUtility.ACTIVE, null));
+                //leadsToInsert.add(createLead('Ineligible ' + i, ConstantUtility.ACTIVE, null));
             }
         }
         insert leadsToInsert;

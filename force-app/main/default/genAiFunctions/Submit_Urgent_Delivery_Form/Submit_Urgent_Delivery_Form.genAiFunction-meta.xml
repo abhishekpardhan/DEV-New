@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Shows the Safexpress urgent delivery form to collect contact details and returns the case outcome.</description>
+    <developerName>Submit_Urgent_Delivery_Form</developerName>
+    <invocationTarget>SafexpressUrgentDeliveryAction</invocationTarget>
+    <invocationTargetType>apex</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <localDeveloperName>Submit_Urgent_Delivery_Form</localDeveloperName>
+    <masterLabel>Submit Urgent Delivery Form</masterLabel>
+</GenAiFunction>

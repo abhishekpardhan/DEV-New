@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>chargeable_weight_mtd__c</fullName>
+    <label>CHARGEABLE_WEIGHT_MTD</label>
+    <mktDataModelFieldAttributes>
+        <definitionCreationType>Custom</definitionCreationType>
+        <isDynamicLookup>false</isDynamicLookup>
+        <labelOverride>CHARGEABLE_WEIGHT_MTD</labelOverride>
+        <masterLabel>CHARGEABLE_WEIGHT_MTD</masterLabel>
+        <usageTag>None</usageTag>
+    </mktDataModelFieldAttributes>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>6</scale>
+    <type>Number</type>
+</CustomField>

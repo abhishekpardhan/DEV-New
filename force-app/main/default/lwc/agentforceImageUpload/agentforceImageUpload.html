@@ -13,92 +13,268 @@
                     Please share your details along with Images or PDF to raise a complaint
                 </p>
 
-                <div class="sfx-field">
-                    <lightning-input
-                        data-field="waybill"
-                        type="text"
-                        label="Waybill Number"
-                        placeholder="12-digit waybill number"
-                        value={waybill}
-                        required
-                        max-length="14"
-                        pattern="[0-9 ]{12,14}"
-                        message-when-pattern-mismatch="Please enter your 12-digit waybill number."
-                        disabled={isBusy}
-                        onchange={handleInputChange}>
-                    </lightning-input>
+                <!-- Progress -->
+                <div class="sfx-progress-track" aria-hidden="true">
+                    <div class="sfx-progress-fill" style={progressStyle}></div>
+                </div>
+                <p class="sfx-progress-label">{completedCount} of {totalSteps} completed</p>
+
+                <!-- ===== Section 1: Your issue ===== -->
+                <div class="sfx-section-title">
+                    <span>Your issue</span>
+                    <span class="sfx-section-line"></span>
                 </div>
 
-                <div class="sfx-field">
-                    <lightning-input
-                        data-field="mobile"
-                        type="tel"
-                        label="Mobile Number"
-                        placeholder="10-digit mobile number"
-                        value={mobile}
-                        required
-                        max-length="10"
-                        pattern="[0-9]{10}"
-                        message-when-pattern-mismatch="Please enter a valid 10-digit mobile number."
-                        disabled={isBusy}
-                        onchange={handleInputChange}>
-                    </lightning-input>
-                </div>
-
-                <div class="sfx-field">
-                    <lightning-input
-                        data-field="email"
-                        type="email"
-                        label="Email ID"
-                        placeholder="name@example.com"
-                        value={email}
-                        required
-                        message-when-type-mismatch="Please enter a valid email address."
-                        disabled={isBusy}
-                        onchange={handleInputChange}>
-                    </lightning-input>
-                </div>
-
-                <div class="sfx-field">
-                    <lightning-input
-                        type="file"
-                        label="Supporting Documents (PNG, JPEG or PDF)"
-                        accept=".jpg,.jpeg,.png,.pdf,image/png,image/jpeg,application/pdf"
-                        multiple
-                        required
-                        disabled={isBusy}
-                        onchange={handleFileChange}>
-                    </lightning-input>
-                    <p class="sfx-hint">Photos are compressed automatically. PDFs up to 2 MB each.</p>
-                </div>
-
-                <template lwc:if={hasFiles}>
-                    <div class="sfx-file-list">
-                        <template for:each={files} for:item="file">
-                            <div key={file.id} class="sfx-file-item">
-                                <lightning-icon icon-name={file.icon} size="x-small" class="sfx-file-icon"></lightning-icon>
-                                <span class="sfx-file-name" title={file.name}>{file.name}</span>
-                                <span class="sfx-file-size">{file.sizeLabel}</span>
-                                <button
-                                    type="button"
-                                    class="sfx-remove-btn"
-                                    title="Remove file"
-                                    data-id={file.id}
+                <div class="sfx-steps">
+                    <div class={issueStepClass}>
+                        <span class="sfx-dot"></span>
+                        <div class="sfx-step-body">
+                            <label class="sfx-label" for="sfx-issue">
+                                <span class="sfx-req">*</span>📝 Issue Type
+                            </label>
+                            <div class="sfx-input-wrap">
+                                <select
+                                    id="sfx-issue"
+                                    class="sfx-input sfx-select"
+                                    data-field="issueType"
                                     disabled={isBusy}
-                                    onclick={handleRemoveFile}>
-                                    ✕
-                                </button>
+                                    onchange={handleInputChange}
+                                    onblur={handleBlur}>
+                                    <option value="" selected={isNoIssueSelected}>Select the issue you are facing</option>
+                                    <template for:each={issueOptions} for:item="opt">
+                                        <option key={opt.value} value={opt.value} selected={opt.selected}>{opt.label}</option>
+                                    </template>
+                                </select>
                             </div>
-                        </template>
+                            <template lwc:if={issueError}>
+                                <p class="sfx-field-error">{issueError}</p>
+                            </template>
+                        </div>
                     </div>
-                </template>
+                </div>
+
+                <!-- ===== Section 2: Your details ===== -->
+                <div class="sfx-section-title">
+                    <span>Your details</span>
+                    <span class="sfx-section-line"></span>
+                </div>
+
+                <div class="sfx-steps">
+                    <!-- Waybill -->
+                    <div class={waybillStepClass}>
+                        <span class="sfx-dot"></span>
+                        <div class="sfx-step-body">
+                            <label class="sfx-label" for="sfx-waybill">
+                                <span class="sfx-req">*</span>📦 Waybill Number
+                            </label>
+                            <div class="sfx-input-wrap">
+                                <input
+                                    id="sfx-waybill"
+                                    class="sfx-input"
+                                    data-field="waybill"
+                                    type="text"
+                                    inputmode="numeric"
+                                    maxlength="14"
+                                    placeholder="12-digit waybill number"
+                                    value={waybill}
+                                    disabled={isBusy}
+                                    oninput={handleInputChange}
+                                    onblur={handleBlur} />
+                                <span class="sfx-check">✓</span>
+                            </div>
+                            <template lwc:if={waybillError}>
+                                <p class="sfx-field-error">{waybillError}</p>
+                            </template>
+                        </div>
+                    </div>
+
+                    <!-- Mobile -->
+                    <div class={mobileStepClass}>
+                        <span class="sfx-dot"></span>
+                        <div class="sfx-step-body">
+                            <label class="sfx-label" for="sfx-mobile">
+                                <span class="sfx-req">*</span>📱 Mobile Number
+                            </label>
+                            <div class="sfx-input-wrap">
+                                <input
+                                    id="sfx-mobile"
+                                    class="sfx-input"
+                                    data-field="mobile"
+                                    type="tel"
+                                    inputmode="numeric"
+                                    maxlength="10"
+                                    placeholder="10-digit mobile number"
+                                    value={mobile}
+                                    disabled={isBusy}
+                                    oninput={handleInputChange}
+                                    onblur={handleBlur} />
+                                <span class="sfx-check">✓</span>
+                            </div>
+                            <template lwc:if={mobileError}>
+                                <p class="sfx-field-error">{mobileError}</p>
+                            </template>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class={emailStepClass}>
+                        <span class="sfx-dot"></span>
+                        <div class="sfx-step-body">
+                            <label class="sfx-label" for="sfx-email">
+                                <span class="sfx-req">*</span>✉️ Email ID
+                            </label>
+                            <div class="sfx-input-wrap">
+                                <input
+                                    id="sfx-email"
+                                    class="sfx-input"
+                                    data-field="email"
+                                    type="email"
+                                    inputmode="email"
+                                    placeholder="name@example.com"
+                                    value={email}
+                                    disabled={isBusy}
+                                    oninput={handleInputChange}
+                                    onblur={handleBlur} />
+                                <span class="sfx-check">✓</span>
+                            </div>
+                            <template lwc:if={emailError}>
+                                <p class="sfx-field-error">{emailError}</p>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== Section 3: Complaint details ===== -->
+                <div class="sfx-section-title">
+                    <span>Complaint details</span>
+                    <span class="sfx-section-line"></span>
+                </div>
+
+                <div class="sfx-steps">
+                    <!-- Description -->
+                    <div class={descriptionStepClass}>
+                        <span class="sfx-dot"></span>
+                        <div class="sfx-step-body">
+                            <label class="sfx-label" for="sfx-description">
+                                <template lwc:if={isDescriptionRequired}>
+                                    <span class="sfx-req">*</span>
+                                </template>
+                                💬 Describe what happened
+                                <template lwc:if={isDescriptionOptional}>
+                                    <span class="sfx-optional">(optional)</span>
+                                </template>
+                            </label>
+                            <textarea
+                                id="sfx-description"
+                                class="sfx-input sfx-textarea"
+                                data-field="description"
+                                rows="3"
+                                maxlength="2000"
+                                placeholder={descriptionPlaceholder}
+                                value={description}
+                                disabled={isBusy}
+                                oninput={handleInputChange}
+                                onblur={handleBlur}></textarea>
+                            <div class="sfx-counter-row">
+                                <template lwc:if={descriptionError}>
+                                    <p class="sfx-field-error">{descriptionError}</p>
+                                </template>
+                                <span class="sfx-counter">{descriptionLength}/2000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Incident date (staff behaviour only) -->
+                    <template lwc:if={isStaffIssue}>
+                        <div class={incidentDateStepClass}>
+                            <span class="sfx-dot"></span>
+                            <div class="sfx-step-body">
+                                <label class="sfx-label" for="sfx-date">
+                                    📅 Date of incident <span class="sfx-optional">(optional)</span>
+                                </label>
+                                <div class="sfx-input-wrap">
+                                    <input
+                                        id="sfx-date"
+                                        class="sfx-input"
+                                        data-field="incidentDate"
+                                        type="date"
+                                        max={todayIso}
+                                        value={incidentDate}
+                                        disabled={isBusy}
+                                        onchange={handleInputChange}
+                                        onblur={handleBlur} />
+                                </div>
+                                <template lwc:if={incidentDateError}>
+                                    <p class="sfx-field-error">{incidentDateError}</p>
+                                </template>
+                            </div>
+                        </div>
+                    </template>
+
+                    <!-- Supporting documents -->
+                    <div class={filesStepClass}>
+                        <span class="sfx-dot"></span>
+                        <div class="sfx-step-body">
+                            <p class="sfx-label">
+                                <template lwc:if={isDocsRequired}>
+                                    <span class="sfx-req">*</span>
+                                </template>
+                                📎 Supporting Documents (PNG, JPEG or PDF)
+                                <template lwc:if={isDocsOptional}>
+                                    <span class="sfx-optional">(optional)</span>
+                                </template>
+                            </p>
+
+                            <label
+                                class={dropZoneClass}
+                                ondragenter={handleDragOver}
+                                ondragover={handleDragOver}
+                                ondragleave={handleDragLeave}
+                                ondrop={handleDrop}>
+                                <input
+                                    class="sfx-file-input"
+                                    type="file"
+                                    multiple
+                                    accept=".jpg,.jpeg,.png,.pdf,image/png,image/jpeg,application/pdf"
+                                    disabled={isBusy}
+                                    onchange={handleFileChange} />
+                                <span class="sfx-drop-icon">📤</span>
+                                <span class="sfx-drop-text">
+                                    <strong>Click to upload</strong> or drag &amp; drop
+                                </span>
+                                <span class="sfx-drop-hint">Photos are compressed automatically. PDFs up to 2 MB each.</span>
+                            </label>
+
+                            <template lwc:if={hasFiles}>
+                                <div class="sfx-file-list">
+                                    <template for:each={files} for:item="file">
+                                        <div key={file.id} class="sfx-file-chip">
+                                            <span class="sfx-file-emoji">{file.emoji}</span>
+                                            <span class="sfx-file-name" title={file.name}>{file.name}</span>
+                                            <span class="sfx-file-size">{file.sizeLabel}</span>
+                                            <button
+                                                type="button"
+                                                class="sfx-remove-btn"
+                                                title="Remove file"
+                                                data-id={file.id}
+                                                disabled={isBusy}
+                                                onclick={handleRemoveFile}>
+                                                ✕
+                                            </button>
+                                        </div>
+                                    </template>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </div>
 
                 <template lwc:if={errorMessage}>
                     <div class="sfx-error" role="alert">{errorMessage}</div>
                 </template>
 
                 <template lwc:if={isBusy}>
-                    <div class="sfx-progress">
+                    <div class="sfx-busy">
                         <span class="sfx-spinner"></span>
                         <span>{progressText}</span>
                     </div>
@@ -117,6 +293,8 @@
 
             <!-- ================= RESULT VIEW ================= -->
             <template lwc:else>
+                <div class="sfx-confirm-note">{confirmNote}</div>
+
                 <div class="sfx-result">
                     <lightning-icon
                         icon-name={resultIcon}
@@ -129,29 +307,35 @@
                     <div class="sfx-details">
                         <template lwc:if={result.caseNumber}>
                             <div class="sfx-detail-row">
-                                <span class="sfx-detail-label">Case Number</span>
+                                <span class="sfx-detail-label">🎫 Case Number</span>
                                 <span class="sfx-detail-value">{result.caseNumber}</span>
                             </div>
                         </template>
+                        <template lwc:if={result.issueLabel}>
+                            <div class="sfx-detail-row">
+                                <span class="sfx-detail-label">📝 Issue Type</span>
+                                <span class="sfx-detail-value">{result.issueLabel}</span>
+                            </div>
+                        </template>
                         <div class="sfx-detail-row">
-                            <span class="sfx-detail-label">Waybill Number</span>
+                            <span class="sfx-detail-label">📦 Waybill Number</span>
                             <span class="sfx-detail-value">{result.waybillFormatted}</span>
                         </div>
                         <template lwc:if={result.caseStatus}>
                             <div class="sfx-detail-row">
-                                <span class="sfx-detail-label">Status</span>
+                                <span class="sfx-detail-label">🚚 Status</span>
                                 <span class="sfx-detail-value">{result.caseStatus}</span>
                             </div>
                         </template>
                         <template lwc:if={result.createdOn}>
                             <div class="sfx-detail-row">
-                                <span class="sfx-detail-label">Created On</span>
+                                <span class="sfx-detail-label">🕒 Created On</span>
                                 <span class="sfx-detail-value">{result.createdOn}</span>
                             </div>
                         </template>
                         <template lwc:if={hasFilesAttached}>
                             <div class="sfx-detail-row">
-                                <span class="sfx-detail-label">Proof Files</span>
+                                <span class="sfx-detail-label">📎 Supporting Documents</span>
                                 <span class="sfx-detail-value">{result.filesAttached}</span>
                             </div>
                         </template>
@@ -162,7 +346,28 @@
 
         <!-- Footer -->
         <div class="sfx-footer">
-            <span>Distribution Redefined</span>
+            <span class="sfx-footer-tag">Distribution Redefined</span>
+            <div class="sfx-apps">
+                <span class="sfx-apps-label">Get the Safexpress App</span>
+                <div class="sfx-app-badges">
+                    <a
+                        class="sfx-badge-link"
+                        href={iosAppUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Download on the App Store">
+                        <img src={iosBadgeUrl} alt="Download on the App Store" class="sfx-badge" />
+                    </a>
+                    <a
+                        class="sfx-badge-link"
+                        href={androidAppUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Get it on Google Play">
+                        <img src={androidBadgeUrl} alt="Get it on Google Play" class="sfx-badge" />
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </template>

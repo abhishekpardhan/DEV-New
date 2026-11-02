@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>68.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <dataSpace>default</dataSpace>
+    <description>Flow for testForm</description>
+    <environments>Default</environments>
+    <interviewLabel>testForm Flow</interviewLabel>
+    <label>testForm Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Journey</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <form>marketing--Workspace_1.sfdc_cms__form--MCOMZ2ZMTQ4JGSXIRWYXEK6PY2GI</form>
+        <triggerType>FormSubmissionEvent</triggerType>
+    </start>
+    <status>InvalidDraft</status>
+</Flow>

@@ -3,20 +3,19 @@
     <fullName>Lead_Core_Mandatory_Fields</fullName>
     <active>true</active>
     <errorConditionFormula>AND(
-  NOT(IsVRBypassed__c),
-  NOT($Permission.Lead_VR_Bypass),
-  NOT($Permission.Lead_Management),
-  NOT(ISPICKVAL(LeadSource, &apos;Website&apos;)),
-  NOT(ISPICKVAL(LeadSource, &apos;Social Media&apos;)),
-  NOT(ISPICKVAL(LeadSource, &apos;Safexperience Centre&apos;)),
-  ISBLANK(Case__c),
-  OR(
-    ISBLANK(MobilePhone),
-    ISBLANK(Email),
-    ISBLANK(Street),
-    ISBLANK(City),
-    ISBLANK(State)
-  )
+    NOT(IsVRBypassed__c),
+    NOT($Permission.Lead_VR_Bypass),
+    NOT(ISPICKVAL(LeadSource, &quot;Website&quot;)),
+    NOT(ISPICKVAL(LeadSource, &quot;Social Media&quot;)),
+    NOT(ISPICKVAL(LeadSource, &quot;Safexperience Centre&quot;)),
+    ISBLANK(Case__c),
+    OR(
+        ISBLANK(MobilePhone),
+        ISBLANK(Email),
+        ISBLANK(Street),
+        ISBLANK(City),
+        ISBLANK(State)
+    )
 )</errorConditionFormula>
     <errorMessage>Mobile, Email, Street, City, State, and Postal Code are required.</errorMessage>
 </ValidationRule>

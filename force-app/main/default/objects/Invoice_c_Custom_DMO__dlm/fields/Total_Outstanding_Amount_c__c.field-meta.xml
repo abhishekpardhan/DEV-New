@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Outstanding_Amount_c__c</fullName>
+    <label>Total Outstanding Amount</label>
+    <mktDataModelFieldAttributes>
+        <definitionCreationType>Custom</definitionCreationType>
+        <isDynamicLookup>false</isDynamicLookup>
+        <labelOverride>Total Outstanding Amount</labelOverride>
+        <masterLabel>Total Outstanding Amount</masterLabel>
+        <usageTag>None</usageTag>
+    </mktDataModelFieldAttributes>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>6</scale>
+    <type>Number</type>
+</CustomField>

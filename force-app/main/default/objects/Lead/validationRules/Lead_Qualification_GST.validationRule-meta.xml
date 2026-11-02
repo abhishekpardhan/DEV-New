@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Qualification_GST</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT(IsVRBypassed__c),
+    NOT($Permission.Lead_VR_Bypass),
+    ISPICKVAL(Status, &quot;Qualified&quot;),
+    OR(ISNEW(), ISCHANGED(Status)),
+    OR(
+        ISBLANK(GST_Number__c),
+        AND(GST_Status__c &lt;&gt; &quot;ACT&quot;, GST_Status__c &lt;&gt; &quot;PRO&quot;)
+    )
+)</errorConditionFormula>
+    <errorDisplayField>GST_Number__c</errorDisplayField>
+    <errorMessage>A lead can be qualified only with a valid GST number.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,114 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "caseNumber" : {
+      "title" : "Case Number",
+      "description" : "Reference number (support case number) of the new enquiry when Status is CREATED, or of the already registered enquiry when Status is DUPLICATE. Blank for VALIDATION_ERROR and ERROR. Never invent or change it.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "city" : {
+      "title" : "City",
+      "description" : "City of the pincode. Filled only when the pincode is serviceable.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "customerName" : {
+      "title" : "Customer Name",
+      "description" : "Full name the customer entered in the form. Use only to address the customer.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "designation" : {
+      "title" : "Designation",
+      "description" : "Designation the customer entered in the form.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "district" : {
+      "title" : "District",
+      "description" : "District of the pincode. Filled only when the pincode is serviceable.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "emailAddress" : {
+      "title" : "Email Address",
+      "description" : "Email address the customer entered in the form.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "message" : {
+      "title" : "Message",
+      "description" : "The exact message to show the customer after the form is submitted. Reply with this text as it is and never change the reference number in it.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "mobileNumber" : {
+      "title" : "Mobile Number",
+      "description" : "10-digit mobile number the customer entered in the form.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "organisationName" : {
+      "title" : "Organisation Name",
+      "description" : "Organisation name the customer entered in the form.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "pincode" : {
+      "title" : "Pincode",
+      "description" : "6-digit pincode the customer entered in the form.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "state" : {
+      "title" : "State",
+      "description" : "State of the pincode. Filled only when the pincode is serviceable.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "status" : {
+      "title" : "Status",
+      "description" : "Result of the submission. CREATED = new business enquiry registered. DUPLICATE = a business enquiry already exists with the same mobile number and email. VALIDATION_ERROR = a detail in the form is missing or not valid. ERROR = the enquiry could not be registered.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

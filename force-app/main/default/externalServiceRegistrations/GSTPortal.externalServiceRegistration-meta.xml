@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExternalServiceRegistration xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>GSTPortal</label>
+    <namedCredentialReference>GST_Validation_Auth</namedCredentialReference>
+    <operations>
+        <active>true</active>
+        <name>validatex20gstin</name>
+    </operations>
+    <registrationProviderType>SchemaInferred</registrationProviderType>
+    <schema>{&quot;openapi&quot;:&quot;3.0.1&quot;,&quot;info&quot;:{&quot;title&quot;:&quot;GSTPortal&quot;,&quot;description&quot;:&quot;&quot;},&quot;paths&quot;:{&quot;/propel-util-api/secured-propel/api/v1/mast/validate-gstin/{gstin}&quot;:{&quot;get&quot;:{&quot;description&quot;:&quot;&quot;,&quot;operationId&quot;:&quot;Validate GSTIN&quot;,&quot;parameters&quot;:[{&quot;name&quot;:&quot;gstin&quot;,&quot;in&quot;:&quot;path&quot;,&quot;description&quot;:&quot;&quot;,&quot;required&quot;:true,&quot;allowEmptyValue&quot;:false,&quot;schema&quot;:{&quot;type&quot;:&quot;string&quot;}}],&quot;responses&quot;:{&quot;2XX&quot;:{&quot;description&quot;:&quot;&quot;,&quot;content&quot;:{&quot;application/json&quot;:{&quot;schema&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;data&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;TradeName&quot;:{&quot;type&quot;:&quot;string&quot;},&quot;Status&quot;:{&quot;type&quot;:&quot;string&quot;},&quot;LegalName&quot;:{&quot;type&quot;:&quot;string&quot;},&quot;Gstin&quot;:{&quot;type&quot;:&quot;string&quot;},&quot;State&quot;:{&quot;type&quot;:&quot;string&quot;},&quot;StateCode&quot;:{&quot;type&quot;:&quot;string&quot;}}},&quot;message&quot;:{&quot;type&quot;:&quot;string&quot;},&quot;status&quot;:{&quot;type&quot;:&quot;string&quot;},&quot;responseId&quot;:{&quot;type&quot;:&quot;string&quot;}}}}}}}}}}}</schema>
+    <schemaType>OpenApi3</schemaType>
+    <serviceBinding>{&quot;host&quot;:&quot;&quot;,&quot;basePath&quot;:&quot;/&quot;,&quot;allowedSchemes&quot;:[],&quot;requestMediaTypes&quot;:[],&quot;responseMediaTypes&quot;:[],&quot;compatibleMediaTypes&quot;:{},&quot;integrationFlags&quot;:null,&quot;extensions&quot;:{}}</serviceBinding>
+    <status>Complete</status>
+    <systemVersion>9</systemVersion>
+</ExternalServiceRegistration>
