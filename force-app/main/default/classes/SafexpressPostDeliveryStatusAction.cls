@@ -2,26 +2,27 @@
  * Post-delivery complaints for the Safexpress Agentforce chat agent.
  *
  * Entry points:
- *  1. execute()            - Agentforce invocable action (unchanged contract, returns SafexpressWaybillEnquiryCard)
- *  2. precheckEscalation() - called by LWC before uploading documents: validates + checks for an open complaint
- *  3. submitEscalation()   - called by LWC after uploading documents: creates case OR updates the existing case
+ *  1. execute()                    - Agentforce invocable action (unchanged contract, returns SafexpressWaybillEnquiryCard)
+ *  2. checkWaybill()               - called by LWC as soon as Issue Type + Waybill are entered:
+ *                                    tracking API status check (Delivered only) + open-case check for the same issue
+ *  3. precheckEscalation()         - called by LWC before uploading documents: validates all fields
+ *  4. submitEscalation()           - called by LWC after uploading documents: re-checks Delivered + duplicates, creates the case
+ *  5. addDocumentsToExistingCase() - called by LWC when the same issue is already open: attaches documents only
  *
  * Issue types (form dropdown) and the Sub Type saved on the case:
- *   MATERIAL_DAMAGED -> Material Damaged                  (material group, documents required)
- *   SHORTAGE         -> Short Delivery                    (material group, documents required)
- *   NOT_RECEIVED     -> Delivery not done                 (material group, documents required)
- *   SHOWN_DELIVERED  -> Delivery not done                 (material group, documents required)
+ *   MATERIAL_DAMAGED -> Material Damaged          (documents required)
+ *   SHORTAGE         -> Short Delivery            (documents required)
+ *   NOT_RECEIVED     -> Delivery not done         (documents required)
+ *   SHOWN_DELIVERED  -> Delivery not done         (documents required)
  *   (NOT_RECEIVED and SHOWN_DELIVERED share the Sub Type; the exact issue is written in Case.Description)
- *   STAFF_BEHAVIOUR  -> Branch / Office / Staff           (staff group, documents optional, description required)
+ *   STAFF_BEHAVIOUR  -> Branch / Office / Staff   (documents optional, description required)
  *
- * De-duplication (per group): one OPEN complaint per waybill per group.
- *   - Material group: any open complaint on the waybill whose Sub Type is NOT the staff sub type.
- *   - Staff group:    any open complaint on the waybill whose Sub Type IS the staff sub type.
- *
- * Open complaint found:
- *   - Material group: case without files -> files attached (PROOF_ADDED); case with files -> EXISTING_WITH_PROOF.
- *   - Staff group:    files attached if provided (PROOF_ADDED), otherwise EXISTING.
- *   - The customer's description is always added to the existing case as a Case Comment.
+ * Rules:
+ *   - A complaint can be raised only when the waybill status (tracking API) is Delivered.
+ *   - De-duplication per issue type: one OPEN complaint per waybill per issue type.
+ *     A different issue type on the same waybill creates a new case.
+ *   - Same issue already open: the form shows the case and allows adding documents only
+ *     (mandatory if the case has none, optional extra documents otherwise).
  */
 public without sharing class SafexpressPostDeliveryStatusAction {
 
@@ -32,6 +33,7 @@ public without sharing class SafexpressPostDeliveryStatusAction {
     private static final Integer PROOF_UPLOAD_WINDOW_HOURS = 2;
     // New complaint cases are owned by this queue (Group.DeveloperName)
     private static final String COMPLAINTS_QUEUE_DEV_NAME = 'Complaints';
+    private static final String DELIVERY_NOT_DONE_SUBTYPE = 'Delivery not done';
     private static final Integer MIN_STAFF_DESCRIPTION = 20;
     private static final Integer MAX_DESCRIPTION = 2000;
 
@@ -44,6 +46,16 @@ public without sharing class SafexpressPostDeliveryStatusAction {
     public static final String OUTCOME_PROOF_REQUIRED       = 'PROOF_REQUIRED';
     public static final String OUTCOME_VALIDATION_ERROR     = 'VALIDATION_ERROR';
     public static final String OUTCOME_ERROR                = 'ERROR';
+    // checkWaybill outcomes
+    public static final String OUTCOME_READY                = 'READY';            // Delivered, no open case for this issue
+    public static final String OUTCOME_OPEN_CASE            = 'OPEN_CASE';        // same issue already open -> documents only
+    public static final String OUTCOME_NOT_DELIVERED        = 'NOT_DELIVERED';    // status is not Delivered
+    public static final String OUTCOME_INVALID_WAYBILL      = 'INVALID_WAYBILL';  // not 12 digits / API returned nothing
+    public static final String OUTCOME_API_ERROR            = 'API_ERROR';        // tracking API unavailable
+
+    private static final String MSG_INVALID_WAYBILL = 'Please provide a valid waybill number.';
+    private static final String MSG_API_ERROR = 'We couldn\'t check your waybill right now. Please try again in a few minutes.';
+    private static final String MSG_OPEN_CASE = 'A complaint is already open for this waybill. Our team is working on it.';
 
     // ---------- Issue types offered in the form ----------
     private class IssueType {
@@ -128,7 +140,7 @@ public without sharing class SafexpressPostDeliveryStatusAction {
 
         try {
             CaseLookup lookup = new CaseLookup();
-            Case existing = lookup.findLatestOpenComplaint(inp.waybillVariants(), inp.isStaff);
+            Case existing = lookup.findOpenComplaintForIssue(inp);
 
             if (existing != null) {
                 return existingResult(
@@ -165,11 +177,56 @@ public without sharing class SafexpressPostDeliveryStatusAction {
         @AuraEnabled public String createdOn;
         @AuraEnabled public Integer filesAttached;
         @AuraEnabled public String agentMessage;   // text the LWC posts back into the chat
+        @AuraEnabled public String waybillStatus;  // tracking status, e.g. Delivered / In Transit
+        @AuraEnabled public Boolean docsOnly;      // same issue already open: only documents can be added
+        @AuraEnabled public Boolean caseHasDocuments;
     }
 
     /**
-     * Step 1 (before any upload): validate inputs and check for an open complaint in the same group.
-     * Tells the LWC whether documents are required and whether to upload them.
+     * Called as soon as Issue Type and Waybill are entered (before any other field is unlocked):
+     *   1. waybill format, 2. tracking API status = Delivered, 3. open case for the same issue type.
+     */
+    @AuraEnabled
+    public static EscalationResult checkWaybill(String waybillNumber, String issueType) {
+        Inputs inp = new Inputs(waybillNumber, null, null);
+        inp.setIssue(issueType);
+
+        if (!inp.hasValidIssue()) {
+            return validationErrorResult(inp, 'Please select the type of issue you are facing.');
+        }
+        if (!Pattern.matches('^\\d{12}$', inp.waybillNum)) {
+            return waybillProblemResult(inp, OUTCOME_INVALID_WAYBILL, MSG_INVALID_WAYBILL, null);
+        }
+
+        try {
+            // Callout first (no DML/savepoint before it)
+            WaybillStatus ws = fetchWaybillStatus(inp.waybillNum);
+            if (ws.outcome != OUTCOME_READY) {
+                return waybillProblemResult(inp, ws.outcome, ws.message, ws.currentStatus);
+            }
+
+            CaseLookup lookup = new CaseLookup();
+            Case existing = lookup.findOpenComplaintForIssue(inp);
+            if (existing != null) {
+                EscalationResult r = openCaseResult(inp, existing, lookup.hasProof(existing.Id));
+                r.waybillStatus = ws.currentStatus;
+                return r;
+            }
+
+            EscalationResult r = baseResult(inp, OUTCOME_READY);
+            r.waybillStatus = ws.currentStatus;
+            r.proofRequired = !inp.isStaff;
+            r.uploadFiles = true;
+            r.message = '';
+            return r;
+
+        } catch (Exception ex) {
+            return waybillProblemResult(inp, OUTCOME_API_ERROR, MSG_API_ERROR, null);
+        }
+    }
+
+    /**
+     * Step 1 of submit (before any upload): validates all fields and checks for an open case for the same issue.
      */
     @AuraEnabled
     public static EscalationResult precheckEscalation(
@@ -189,29 +246,15 @@ public without sharing class SafexpressPostDeliveryStatusAction {
 
         try {
             CaseLookup lookup = new CaseLookup();
-            Case existing = lookup.findLatestOpenComplaint(inp.waybillVariants(), inp.isStaff);
-
-            if (existing == null) {
-                EscalationResult r = baseResult(inp, OUTCOME_NEW);
-                r.proofRequired = !inp.isStaff;
-                r.uploadFiles = true;
-                r.message = 'No open complaint found for this waybill.';
-                return r;
+            Case existing = lookup.findOpenComplaintForIssue(inp);
+            if (existing != null) {
+                return openCaseResult(inp, existing, lookup.hasProof(existing.Id));
             }
 
-            // Material group: an open case that already has documents does not need more
-            if (!inp.isStaff && lookup.hasProof(existing.Id)) {
-                EscalationResult r = existingWithProofResult(inp, existing);
-                r.uploadFiles = false;
-                return r;
-            }
-
-            EscalationResult r = existingResult(
-                inp, existing, OUTCOME_EXISTING_NEEDS_PROOF,
-                'An active case (' + existing.CaseNumber + ') is already open for this waybill. Your details will be added to it.'
-            );
+            EscalationResult r = baseResult(inp, OUTCOME_NEW);
             r.proofRequired = !inp.isStaff;
             r.uploadFiles = true;
+            r.message = 'No open complaint found for this waybill and issue.';
             return r;
 
         } catch (Exception ex) {
@@ -220,8 +263,8 @@ public without sharing class SafexpressPostDeliveryStatusAction {
     }
 
     /**
-     * Step 2 (after documents are uploaded via AgentforceImageUploadController.uploadProofFile):
-     * re-runs de-duplication and either creates the case or updates the existing one.
+     * Step 2 of submit (after documents are uploaded via AgentforceImageUploadController.uploadProofFile):
+     * re-checks Delivered on the server and the duplicate rule, then creates the case.
      * Everything is rolled back if any step fails.
      */
     @AuraEnabled
@@ -242,35 +285,28 @@ public without sharing class SafexpressPostDeliveryStatusAction {
             return validationErrorResult(inp, validationMsg);
         }
 
+        // Server-side Delivered re-check (callout must run before any DML / savepoint)
+        WaybillStatus ws;
+        try {
+            ws = fetchWaybillStatus(inp.waybillNum);
+        } catch (Exception ex) {
+            return waybillProblemResult(inp, OUTCOME_API_ERROR, MSG_API_ERROR, null);
+        }
+        if (ws.outcome != OUTCOME_READY) {
+            return waybillProblemResult(inp, ws.outcome, ws.message, ws.currentStatus);
+        }
+
         Savepoint sp = Database.setSavepoint();
         try {
             CaseLookup lookup = new CaseLookup();
-            Set<Id> docIds = lookup.verifiedUploads(contentDocumentIds);
-            Case existing = lookup.findLatestOpenComplaint(inp.waybillVariants(), inp.isStaff);
+            Case existing = lookup.findOpenComplaintForIssue(inp);
 
-            // --- Open complaint in the same group: never create a new case ---
+            // Same issue already open: never create a new case (form switches to documents-only)
             if (existing != null) {
-                Boolean caseHasProof = lookup.hasProof(existing.Id);
-
-                if (!inp.isStaff && !caseHasProof && docIds.isEmpty()) {
-                    return proofRequiredResult(inp);
-                }
-
-                // Keep the customer's new details on the existing case
-                lookup.addCaseComment(existing.Id, inp.caseCommentText());
-                lookup.linkSessionToCase(messagingSessionId, existing.Id);
-
-                if (!inp.isStaff && caseHasProof) {
-                    return existingWithProofResult(inp, existing);   // new files ignored
-                }
-                if (!docIds.isEmpty()) {
-                    Integer linked = lookup.linkFiles(existing.Id, docIds);
-                    return proofAddedResult(inp, existing, linked);
-                }
-                return existingUpdatedResult(inp, existing);         // staff group, no files
+                return openCaseResult(inp, existing, lookup.hasProof(existing.Id));
             }
 
-            // --- No open complaint: documents are mandatory for material issues ---
+            Set<Id> docIds = lookup.verifiedUploads(contentDocumentIds);
             if (!inp.isStaff && docIds.isEmpty()) {
                 return proofRequiredResult(inp);
             }
@@ -284,6 +320,139 @@ public without sharing class SafexpressPostDeliveryStatusAction {
             Database.rollback(sp);
             return errorResult(inp, ex);
         }
+    }
+
+    /**
+     * Same issue already open: attach the uploaded documents to that case (no new case, no other changes).
+     * Documents are mandatory when the open case has none.
+     */
+    @AuraEnabled
+    public static EscalationResult addDocumentsToExistingCase(
+        String waybillNumber,
+        String issueType,
+        List<String> contentDocumentIds,
+        String messagingSessionId
+    ) {
+        Inputs inp = new Inputs(waybillNumber, null, null);
+        inp.setIssue(issueType);
+
+        if (!inp.hasValidIssue()) {
+            return validationErrorResult(inp, 'Please select the type of issue you are facing.');
+        }
+        if (!Pattern.matches('^\\d{12}$', inp.waybillNum)) {
+            return waybillProblemResult(inp, OUTCOME_INVALID_WAYBILL, MSG_INVALID_WAYBILL, null);
+        }
+
+        Savepoint sp = Database.setSavepoint();
+        try {
+            CaseLookup lookup = new CaseLookup();
+            Case existing = lookup.findOpenComplaintForIssue(inp);
+            if (existing == null) {
+                return validationErrorResult(inp,
+                    'The open complaint for this waybill could not be found. Please refresh and submit a new complaint.');
+            }
+
+            Set<Id> docIds = lookup.verifiedUploads(contentDocumentIds);
+            if (docIds.isEmpty()) {
+                return lookup.hasProof(existing.Id)
+                    ? validationErrorResult(inp, 'Please upload at least one document to add to your complaint.')
+                    : proofRequiredResult(inp);
+            }
+
+            Integer linked = lookup.linkFiles(existing.Id, docIds);
+            lookup.linkSessionToCase(messagingSessionId, existing.Id);
+            return proofAddedResult(inp, existing, linked);
+
+        } catch (Exception ex) {
+            Database.rollback(sp);
+            return errorResult(inp, ex);
+        }
+    }
+
+    // =====================================================================
+    // WAYBILL STATUS (tracking API) - same logic as SafexpressWaybillEnquiryAction
+    // =====================================================================
+
+    private class WaybillStatus {
+        String outcome;        // READY (Delivered) / NOT_DELIVERED / INVALID_WAYBILL / API_ERROR
+        String currentStatus;
+        String message;
+    }
+
+    private static WaybillStatus fetchWaybillStatus(String waybillNum) {
+        WaybillStatus ws = new WaybillStatus();
+
+        String rawJson;
+        try {
+            rawJson = GetWayBillStatusAPI.getWayBillInfo(waybillNum);
+        } catch (Exception ex) {
+            ws.outcome = OUTCOME_API_ERROR;
+            ws.message = MSG_API_ERROR;
+            return ws;
+        }
+
+        // NULL / not found -> invalid waybill
+        if (String.isBlank(rawJson) || rawJson.contains('Not Found')) {
+            ws.outcome = OUTCOME_INVALID_WAYBILL;
+            ws.message = MSG_INVALID_WAYBILL;
+            return ws;
+        }
+
+        WayBillResponseWrapper wrapper;
+        try {
+            wrapper = (WayBillResponseWrapper) JSON.deserialize(rawJson, WayBillResponseWrapper.class);
+        } catch (Exception ex) {
+            ws.outcome = OUTCOME_API_ERROR;
+            ws.message = MSG_API_ERROR;
+            return ws;
+        }
+        if (wrapper == null || wrapper.data == null) {
+            ws.outcome = OUTCOME_INVALID_WAYBILL;
+            ws.message = MSG_INVALID_WAYBILL;
+            return ws;
+        }
+
+        String currentStatus = null;
+        if (wrapper.data.track != null && !wrapper.data.track.isEmpty()) {
+            WayBillResponseWrapper.Track latest = wrapper.data.track[0];
+            String cleanWebsite = normalizeStatus(latest.websiteMsg);
+            String cleanEvent = normalizeStatus(latest.eventDescr);
+            currentStatus = String.isNotBlank(cleanWebsite) ? cleanWebsite : cleanEvent;
+        }
+        ws.currentStatus = String.isNotBlank(currentStatus) ? currentStatus : 'Not available';
+
+        Boolean isDelivered = String.isNotBlank(currentStatus)
+            && currentStatus.toLowerCase().contains('delivered')
+            && !currentStatus.toLowerCase().contains('undelivered');
+
+        if (isDelivered) {
+            ws.outcome = OUTCOME_READY;
+        } else {
+            ws.outcome = OUTCOME_NOT_DELIVERED;
+            ws.message = 'The current status of your consignment is ' + ws.currentStatus
+                + '. A complaint can be raised only when the status is Delivered.';
+        }
+        return ws;
+    }
+
+    // Copied from SafexpressWaybillEnquiryAction so the form and the enquiry card always agree
+    private static String normalizeStatus(String raw) {
+        if (String.isBlank(raw)) return null;
+        String s = raw.toLowerCase();
+        if (s.contains('out for delivery'))                         return 'Out for Delivery';
+        if (s.contains('delivered') && !s.contains('undelivered')) return 'Delivered';
+        if (s.contains('undelivered'))                             return 'Undelivered';
+        if (s.contains('arrived at destination'))                  return 'Arrived at Destination';
+        if (s.contains('arrived'))                                 return 'Arrived at Destination';
+        if (s.contains('in transit'))                              return 'In Transit';
+        if (s.contains('departed') || s.contains('transit'))       return 'In Transit';
+        if (s.contains('booked') || s.contains('rps created'))     return 'Booked';
+        if (s.contains('picked up') || s.contains('pickup'))       return 'Picked Up';
+        if (s.contains('cancelled') || s.contains('canceled'))     return 'Cancelled';
+        if (s.contains('pending'))                                 return 'Pending';
+        if (s.contains('waybill arrived'))                         return 'Arrived at Destination';
+        if (s.contains('waybill in transit') || s.contains('is departed') || s.contains('vehicle')) return 'In Transit';
+        return raw;
     }
 
     // =====================================================================
@@ -360,11 +529,6 @@ public without sharing class SafexpressPostDeliveryStatusAction {
             }
             lines.add('Raised via: Safexpress chat (Post Delivery Complaint form)');
             return String.join(lines, '\n');
-        }
-
-        // Text added as a Case Comment on an existing case
-        String caseCommentText() {
-            return 'Additional details received via chat\n' + caseDescriptionText();
         }
     }
 
@@ -477,6 +641,8 @@ public without sharing class SafexpressPostDeliveryStatusAction {
         r.isError = false;
         r.proofRequired = false;
         r.uploadFiles = false;
+        r.docsOnly = false;
+        r.caseHasDocuments = false;
         r.filesAttached = 0;
         r.waybillFormatted = inp.formattedWaybill;
         r.issueLabel = inp.issueLabel;
@@ -499,23 +665,26 @@ public without sharing class SafexpressPostDeliveryStatusAction {
         return r;
     }
 
-    private static EscalationResult existingWithProofResult(Inputs inp, Case c) {
-        EscalationResult r = existingResult(
-            inp, c, OUTCOME_EXISTING_WITH_PROOF,
-            'An active case (' + c.CaseNumber + ') is already open for this waybill and your documents are already on record.'
-        );
+    // Same issue already open for this waybill -> form shows the case, documents only
+    private static EscalationResult openCaseResult(Inputs inp, Case c, Boolean hasDocuments) {
+        EscalationResult r = existingResult(inp, c, OUTCOME_OPEN_CASE, MSG_OPEN_CASE);
+        r.docsOnly = true;
+        r.caseHasDocuments = hasDocuments;
+        r.proofRequired = !hasDocuments;
+        r.uploadFiles = true;
         r.agentMessage = 'An open complaint ' + c.CaseNumber + ' already exists for waybill '
-            + inp.formattedWaybill + ' and documents are already on record.';
+            + inp.formattedWaybill + '. Our team is working on it.';
         return r;
     }
 
-    private static EscalationResult existingUpdatedResult(Inputs inp, Case c) {
-        EscalationResult r = existingResult(
-            inp, c, OUTCOME_EXISTING,
-            'An active case (' + c.CaseNumber + ') is already open for this waybill. Your details have been added to it.'
-        );
-        r.agentMessage = 'An open complaint ' + c.CaseNumber + ' already exists for waybill '
-            + inp.formattedWaybill + '. The new details have been added to it.';
+    // Waybill could not be used: invalid / not delivered / API error
+    private static EscalationResult waybillProblemResult(Inputs inp, String outcome, String msg, String currentStatus) {
+        EscalationResult r = baseResult(inp, outcome);
+        r.isError = true;
+        r.waybillStatus = currentStatus;
+        r.headerTitle = 'Waybill Check';
+        r.message = msg;
+        r.footerNote = msg;
         return r;
     }
 
@@ -602,26 +771,38 @@ public without sharing class SafexpressPostDeliveryStatusAction {
     // =====================================================================
     private without sharing class CaseLookup {
 
-        // One OPEN complaint per waybill per group (material vs staff behaviour)
-        Case findLatestOpenComplaint(Set<String> waybillVariants, Boolean staffGroup) {
-            String groupFilter = staffGroup
-                ? 'AND Sub_Type__c = :staffSubType '
-                : 'AND (Sub_Type__c = null OR Sub_Type__c != :staffSubType) ';
+        // One OPEN complaint per waybill per issue type
+        Case findOpenComplaintForIssue(Inputs inp) {
             String soql =
-                'SELECT Id, CaseNumber, Status, CreatedDate, Subject, Sub_Type__c ' +
+                'SELECT Id, CaseNumber, Status, CreatedDate, Subject, Sub_Type__c, Description ' +
                 'FROM Case ' +
                 'WHERE WaybillNo__c IN :waybills ' +
                 'AND IsClosed = false ' +
                 'AND (Case_Nature__c = \'Complaint\' OR Type = \'Complaint\') ' +
-                groupFilter +
+                'AND Sub_Type__c = :subType ' +
                 'ORDER BY CreatedDate DESC ' +
-                'LIMIT 1';
+                'LIMIT 50';
             List<Case> cases = Database.queryWithBinds(
                 soql,
-                new Map<String, Object>{ 'waybills' => waybillVariants, 'staffSubType' => STAFF_SUBTYPE },
+                new Map<String, Object>{ 'waybills' => inp.waybillVariants(), 'subType' => inp.subType },
                 AccessLevel.SYSTEM_MODE
             );
-            return cases.isEmpty() ? null : cases[0];
+
+            for (Case c : cases) {
+                if (isSameIssue(c, inp)) return c;
+            }
+            return null;
+        }
+
+        // "Delivery not done" is shared by two issues: tell them apart by the issue text in Description
+        Boolean isSameIssue(Case c, Inputs inp) {
+            if (inp.subType != DELIVERY_NOT_DONE_SUBTYPE || !inp.issueRequired || String.isBlank(inp.issueLabel)) {
+                return true;
+            }
+            String descr = c.Description != null ? c.Description : '';
+            if (descr.contains('Issue: ' + inp.issueLabel)) return true;
+            // Older cases without an "Issue:" line count as "Expected material not received"
+            return !descr.contains('Issue: ') && inp.issueKey == 'NOT_RECEIVED';
         }
 
         Case getById(Id caseId) {
@@ -651,17 +832,6 @@ public without sharing class SafexpressPostDeliveryStatusAction {
                 AccessLevel.SYSTEM_MODE
             );
             return !links.isEmpty();
-        }
-
-        // Internal (not published) comment with the customer's new details
-        void addCaseComment(Id caseId, String body) {
-            if (String.isBlank(body)) return;
-            CaseComment cc = new CaseComment(
-                ParentId = caseId,
-                CommentBody = body.abbreviate(3900),
-                IsPublished = false
-            );
-            Database.insert(cc, AccessLevel.SYSTEM_MODE);
         }
 
         // Only accept files uploaded by the current user in the last few hours

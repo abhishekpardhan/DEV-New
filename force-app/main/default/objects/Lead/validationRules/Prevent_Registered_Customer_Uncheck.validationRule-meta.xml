@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Registered_Customer_Uncheck</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT(ISNEW()),
+    PRIORVALUE(Is_Registered_Customer__c) = TRUE,
+    Is_Registered_Customer__c = FALSE
+)</errorConditionFormula>
+    <errorMessage>Once Registered Customer is checked, it cannot be unchecked.</errorMessage>
+</ValidationRule>

@@ -1,10 +1,12 @@
 import { LightningElement, api } from 'lwc';
 import precheckEscalation from '@salesforce/apex/SafexpressPostDeliveryStatusAction.precheckEscalation';
 import submitEscalation from '@salesforce/apex/SafexpressPostDeliveryStatusAction.submitEscalation';
+import checkWaybill from '@salesforce/apex/SafexpressPostDeliveryStatusAction.checkWaybill';
+import addDocumentsToExistingCase from '@salesforce/apex/SafexpressPostDeliveryStatusAction.addDocumentsToExistingCase';
 import uploadProofFile from '@salesforce/apex/AgentforceImageUploadController.uploadProofFile';
 import SFX_LOGO from '@salesforce/resourceUrl/Safexpress_Logo';
-import IOS_BADGE from '@salesforce/resourceUrl/IOSAppLogo';
-import ANDROID_BADGE from '@salesforce/resourceUrl/AndroidAppLogo';
+import IOS_BADGE from '@salesforce/resourceUrl/IosStoreLogo';      // App Store badge
+import ANDROID_BADGE from '@salesforce/resourceUrl/AppStoreLogo';  // Google Play badge
 
 const ALLOWED_EXTENSIONS = ['jpg', 'jpeg', 'png', 'pdf'];
 
@@ -96,6 +98,16 @@ const ISSUE_TYPES = [
 const MIN_STAFF_DESCRIPTION = 20;
 const MAX_DESCRIPTION = 2000;
 
+// Waybill check (Issue Type + Waybill) states
+const CHECK_IDLE = 'idle';         // waiting for Issue Type + 12-digit waybill
+const CHECK_RUNNING = 'checking';  // calling checkWaybill
+const CHECK_READY = 'ready';       // Delivered, no open case -> all fields unlocked
+const CHECK_OPEN_CASE = 'openCase';// same issue already open -> documents only
+const CHECK_BLOCKED = 'blocked';   // invalid waybill / not delivered / API error
+const CHECK_DEBOUNCE_MS = 300;
+const MSG_INVALID_WAYBILL = 'Please provide a valid waybill number.';
+const MSG_CHECK_FAILED = "We couldn't check your waybill right now. Please try again in a few minutes.";
+
 const IOS_APP_URL = 'https://apps.apple.com/in/app/safexpress-app/id6797861161';
 const ANDROID_APP_URL = 'https://play.google.com/store/apps/details?id=com.safexpress.enterprise';
 
@@ -138,6 +150,19 @@ export default class AgentforceImageUpload extends LightningElement {
 
     fileSeq = 0;
 
+    // Waybill check
+    checkState = CHECK_IDLE;
+    checkResult = null;
+    checkMessage = '';
+    checkOutcome = '';
+    checkedKey = '';
+    checkSeq = 0;
+    checkTimer;
+
+    disconnectedCallback() {
+        clearTimeout(this.checkTimer);
+    }
+
     // ---------------- Issue type ----------------
 
     get issueOptions() {
@@ -162,11 +187,12 @@ export default class AgentforceImageUpload extends LightningElement {
 
     // Documents: required for material issues, optional for staff behaviour
     get isDocsRequired() {
+        if (this.isOpenCaseMode) return true; // adding documents to the open case
         return this.isIssueValid && !this.isStaffIssue;
     }
 
     get isDocsOptional() {
-        return this.isStaffIssue;
+        return !this.isOpenCaseMode && this.isStaffIssue;
     }
 
     // Description: required for staff behaviour, optional otherwise
@@ -239,8 +265,9 @@ export default class AgentforceImageUpload extends LightningElement {
     }
 
     get waybillError() {
+        if (this.isWaybillValid && this.checkOutcome === 'INVALID_WAYBILL') return MSG_INVALID_WAYBILL;
         if (!this.touched.waybill || this.isWaybillValid) return '';
-        return this.waybill ? 'Waybill number must be exactly 12 digits.' : 'Waybill number is required.';
+        return this.waybill ? MSG_INVALID_WAYBILL : 'Waybill number is required.';
     }
 
     get mobileError() {
@@ -281,7 +308,8 @@ export default class AgentforceImageUpload extends LightningElement {
     }
 
     get waybillStepClass() {
-        return this.stepClass(this.isWaybillValid, !!this.waybillError, false);
+        const done = this.isWaybillValid && (this.isReadyMode || this.isOpenCaseMode);
+        return this.stepClass(done, !!this.waybillError, false);
     }
 
     get mobileStepClass() {
@@ -312,14 +340,18 @@ export default class AgentforceImageUpload extends LightningElement {
         let cls = 'sfx-drop-zone';
         if (this.isDragOver) cls += ' is-dragover';
         if (this.hasFiles) cls += ' has-files';
-        if (this.isBusy) cls += ' is-disabled';
+        if (this.isDocsLocked) cls += ' is-disabled';
         return cls;
     }
 
     // ---------------- Progress ----------------
 
     get requiredChecks() {
-        const checks = [this.isIssueValid, this.isWaybillValid, this.isMobileValid, this.isEmailValid];
+        const waybillOk = this.isWaybillValid && (this.isReadyMode || this.isOpenCaseMode);
+        if (this.isOpenCaseMode) {
+            return [this.isIssueValid, waybillOk, this.hasFiles];
+        }
+        const checks = [this.isIssueValid, waybillOk, this.isMobileValid, this.isEmailValid];
         if (this.isDocsRequired) checks.push(this.hasFiles);
         if (this.isDescriptionRequired) checks.push(this.isDescriptionValid);
         return checks;
@@ -352,12 +384,69 @@ export default class AgentforceImageUpload extends LightningElement {
     }
 
     get isSubmitDisabled() {
+        if (this.isBusy || this.isChecking) return true;
+        if (this.isOpenCaseMode) return !this.hasFiles;
+        if (!this.isReadyMode) return true;
         return (
-            this.isBusy ||
             this.completedCount < this.totalSteps ||
             !this.isDescriptionValid ||
             !this.isIncidentDateValid
         );
+    }
+
+    get submitLabel() {
+        return this.isOpenCaseMode ? 'Add Documents' : 'Submit Complaint';
+    }
+
+    // ---------------- Waybill check state ----------------
+
+    get isChecking() {
+        return this.checkState === CHECK_RUNNING;
+    }
+
+    get isReadyMode() {
+        return this.checkState === CHECK_READY;
+    }
+
+    get isOpenCaseMode() {
+        return this.checkState === CHECK_OPEN_CASE;
+    }
+
+    get isBlocked() {
+        return this.checkState === CHECK_BLOCKED;
+    }
+
+    // Banner for not delivered / API error (invalid waybill shows under the waybill field)
+    get showCheckBanner() {
+        return this.isBlocked && this.checkOutcome !== 'INVALID_WAYBILL' && !!this.checkMessage;
+    }
+
+    get checkBannerClass() {
+        return this.checkOutcome === 'NOT_DELIVERED' ? 'sfx-banner sfx-banner-warn' : 'sfx-banner sfx-banner-error';
+    }
+
+    // Mobile, Email, Description, Date: only after Delivered + no open case
+    get isDetailsLocked() {
+        return this.isBusy || !this.isReadyMode;
+    }
+
+    // Documents: after Delivered, or for the open case
+    get isDocsLocked() {
+        return this.isBusy || !(this.isReadyMode || this.isOpenCaseMode);
+    }
+
+    get openCase() {
+        return this.checkResult || {};
+    }
+
+    get openCaseDocsHint() {
+        return this.openCase.caseHasDocuments
+            ? 'You can add more supporting documents to this complaint.'
+            : 'Please upload supporting documents (images or PDF) for this complaint.';
+    }
+
+    get showDetailsSections() {
+        return !this.isOpenCaseMode;
     }
 
     get sessionId() {
@@ -382,6 +471,9 @@ export default class AgentforceImageUpload extends LightningElement {
     }
 
     get confirmNote() {
+        if (this.result?.outcome === 'PROOF_ADDED') {
+            return '✅ Your documents have been added to your complaint. Please click Submit below to confirm.';
+        }
         return this.isExistingOutcome
             ? '✅ Your existing case details are shown. Please click Submit below to confirm.'
             : '✅ Your complaint is registered. Please click Submit below to confirm.';
@@ -410,6 +502,80 @@ export default class AgentforceImageUpload extends LightningElement {
             }
         }
         this.errorMessage = '';
+
+        if (field === 'issueType' || field === 'waybill') {
+            this.scheduleWaybillCheck();
+        }
+    }
+
+    // ---------------- Waybill check (Issue Type + Waybill) ----------------
+
+    get checkKey() {
+        return `${this.issueType}|${this.waybillDigits}`;
+    }
+
+    resetWaybillCheck() {
+        clearTimeout(this.checkTimer);
+        this.checkSeq += 1; // ignore any response still on the way
+        this.checkState = CHECK_IDLE;
+        this.checkResult = null;
+        this.checkMessage = '';
+        this.checkOutcome = '';
+        this.checkedKey = '';
+    }
+
+    scheduleWaybillCheck() {
+        if (!this.isIssueValid || !this.isWaybillValid) {
+            this.resetWaybillCheck();
+            return;
+        }
+        if (this.checkKey === this.checkedKey && this.checkState !== CHECK_IDLE && this.checkOutcome !== 'API_ERROR') {
+            return; // nothing changed (an API error is retried on the next change)
+        }
+        clearTimeout(this.checkTimer);
+        this.checkState = CHECK_RUNNING;
+        this.checkMessage = '';
+        this.checkOutcome = '';
+        const key = this.checkKey;
+        // eslint-disable-next-line @lwc/lwc/no-async-operation
+        this.checkTimer = setTimeout(() => this.runWaybillCheck(key), CHECK_DEBOUNCE_MS);
+    }
+
+    async runWaybillCheck(key) {
+        this.checkSeq += 1;
+        const seq = this.checkSeq;
+        try {
+            const res = await checkWaybill({ waybillNumber: this.waybill, issueType: this.issueType });
+            if (seq !== this.checkSeq || key !== this.checkKey) return; // user changed input meanwhile
+            this.checkedKey = key;
+            this.applyCheckResult(res);
+        } catch (error) {
+            if (seq !== this.checkSeq) return;
+            console.error('Waybill check error: ', error);
+            this.checkedKey = key;
+            this.checkState = CHECK_BLOCKED;
+            this.checkOutcome = 'API_ERROR';
+            this.checkMessage = MSG_CHECK_FAILED;
+        }
+    }
+
+    // Used by the live check and when the server re-check (submit) disagrees
+    applyCheckResult(res) {
+        this.checkResult = res;
+        this.checkOutcome = res?.outcome || '';
+        this.checkMessage = res?.message || '';
+        if (this.checkOutcome === 'READY') {
+            this.checkState = CHECK_READY;
+        } else if (this.checkOutcome === 'OPEN_CASE') {
+            this.checkState = CHECK_OPEN_CASE;
+        } else {
+            this.checkState = CHECK_BLOCKED;
+            if (!this.checkMessage) this.checkMessage = MSG_CHECK_FAILED;
+        }
+    }
+
+    isWaybillOutcome(outcome) {
+        return outcome === 'NOT_DELIVERED' || outcome === 'INVALID_WAYBILL' || outcome === 'API_ERROR';
     }
 
     handleBlur(event) {
@@ -526,8 +692,64 @@ export default class AgentforceImageUpload extends LightningElement {
         };
     }
 
-    async handleSubmit() {
+    async uploadSelectedFiles() {
+        const documentIds = [];
+        for (let i = 0; i < this.files.length; i++) {
+            const file = this.files[i];
+            this.progressText = `Uploading document ${i + 1} of ${this.files.length}...`;
+            if (!file.documentId) {
+                // eslint-disable-next-line no-await-in-loop
+                file.documentId = await uploadProofFile({
+                    fileName: file.name,
+                    base64Data: file.base64Data,
+                    messagingSessionId: this.sessionId
+                });
+            }
+            documentIds.push(file.documentId);
+        }
+        return documentIds;
+    }
+
+    // Same issue already open: add documents only
+    async handleAddDocuments() {
         this.errorMessage = '';
+        if (!this.hasFiles) {
+            this.errorMessage = 'Please upload at least one image or PDF.';
+            return;
+        }
+
+        this.isSubmitting = true;
+        try {
+            const documentIds = await this.uploadSelectedFiles();
+            this.progressText = 'Adding documents to your complaint...';
+            const res = await addDocumentsToExistingCase({
+                waybillNumber: this.waybill,
+                issueType: this.issueType,
+                contentDocumentIds: documentIds,
+                messagingSessionId: this.sessionId
+            });
+            if (res.isError) {
+                this.errorMessage = res.message;
+                return;
+            }
+            this.showResult(res);
+        } catch (error) {
+            console.error('Add documents error: ', error);
+            this.errorMessage = this.reduceError(error);
+        } finally {
+            this.isSubmitting = false;
+            this.progressText = '';
+        }
+    }
+
+    async handleSubmit() {
+        if (this.isOpenCaseMode) {
+            await this.handleAddDocuments();
+            return;
+        }
+
+        this.errorMessage = '';
+        if (!this.isReadyMode) return;
         if (!this.validateInputs()) return;
 
         this.isSubmitting = true;
@@ -540,29 +762,18 @@ export default class AgentforceImageUpload extends LightningElement {
                 this.errorMessage = pre.message;
                 return;
             }
+            if (pre.outcome === 'OPEN_CASE') {
+                // Opened by someone else meanwhile -> switch to documents-only
+                this.applyCheckResult(pre);
+                return;
+            }
             if (pre.proofRequired && !this.hasFiles) {
                 this.errorMessage = 'Please upload at least one image or PDF of the issue.';
                 return;
             }
 
             // 2. Upload documents (one file per call) only when the case needs them
-            const documentIds = [];
-            if (pre.uploadFiles) {
-                for (let i = 0; i < this.files.length; i++) {
-                    const file = this.files[i];
-                    this.progressText = `Uploading document ${i + 1} of ${this.files.length}...`;
-
-                    if (!file.documentId) {
-                        // eslint-disable-next-line no-await-in-loop
-                        file.documentId = await uploadProofFile({
-                            fileName: file.name,
-                            base64Data: file.base64Data,
-                            messagingSessionId: this.sessionId
-                        });
-                    }
-                    documentIds.push(file.documentId);
-                }
-            }
+            const documentIds = pre.uploadFiles ? await this.uploadSelectedFiles() : [];
 
             // 3. Create case OR update the existing case
             this.progressText = 'Registering your complaint...';
@@ -572,6 +783,16 @@ export default class AgentforceImageUpload extends LightningElement {
                 messagingSessionId: this.sessionId
             });
 
+            // Server re-check: not delivered / invalid / API error -> lock the form again
+            if (this.isWaybillOutcome(res.outcome)) {
+                this.applyCheckResult(res);
+                return;
+            }
+            // Same issue opened meanwhile -> documents-only (uploaded files are reused)
+            if (res.outcome === 'OPEN_CASE') {
+                this.applyCheckResult(res);
+                return;
+            }
             if (res.isError) {
                 this.errorMessage = res.message;
                 return;

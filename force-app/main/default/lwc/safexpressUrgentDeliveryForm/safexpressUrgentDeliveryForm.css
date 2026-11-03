@@ -402,38 +402,45 @@
     text-align: right;
 }
 
+/* ---------- NEW FOOTER ---------- */
 .sfx-footer {
-    background-color: #1a1a1a;
-    padding: 0.625rem 0.75rem 0.75rem;
+    padding: 16px 14px;
+    background: linear-gradient(90deg, #003a00, #007300, #003a00);
     color: #ffffff;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
-.sfx-footer-tag {
-    display: block;
-    font-size: 0.6875rem;
+.sfx-footer-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
     font-weight: 600;
-    letter-spacing: 0.02em;
 }
 
-.sfx-apps {
-    margin-top: 0.5rem;
-    padding-top: 0.5rem;
-    border-top: 1px solid #333333;
+.sfx-footer-title {
+    font-size: 14px;
 }
 
-.sfx-apps-label {
-    display: block;
-    font-size: 0.625rem;
-    color: #bdbdbd;
-    margin-bottom: 0.375rem;
+.sfx-footer-tagline {
+    font-size: 13px;
+}
+
+.sfx-footer-line {
+    flex: 0 0 32px;
+    height: 1px;
+    background-color: #ffffff;
+    opacity: 0.8;
 }
 
 .sfx-app-badges {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
+    gap: 12px;
     flex-wrap: wrap;
 }
 
@@ -446,14 +453,14 @@
 .sfx-badge-link:hover,
 .sfx-badge-link:focus-visible {
     transform: translateY(-1px);
-    box-shadow: 0 3px 10px rgba(30, 122, 52, 0.45);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     outline: none;
 }
 
 .sfx-badge {
-    height: 32px;
+    display: block;
+    height: 36px;
     width: auto;
     max-width: 140px;
     border-radius: 6px;
-    display: block;
 }

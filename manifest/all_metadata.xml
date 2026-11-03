@@ -16453,14 +16453,19 @@
         <members>Journey__c.Remarks_validation_on_Insert</members>
         <members>Journey__c.owner_readonly</members>
         <members>Lead.Block_Safexpress_Email</members>
+        <members>Lead.Existing_Customer_Details_Mandaotry</members>
         <members>Lead.GSTIN_Format_Validation</members>
+        <members>Lead.GST_is_required_for_Qualified_lead</members>
         <members>Lead.Lead_Central_Desk_Lock</members>
         <members>Lead.Lead_Core_Mandatory_Fields</members>
         <members>Lead.Lead_Drop_Reason_Required</members>
         <members>Lead.Lead_Dropped_By_Central_Desk</members>
         <members>Lead.Lead_Dropped_Read_Only</members>
+        <members>Lead.Lead_GST_State_Match</members>
         <members>Lead.Lead_Qualification_GST</members>
+        <members>Lead.Lead_Source_Required_Fields</members>
         <members>Lead.Mobile_No_should_be_in_10_digit</members>
+        <members>Lead.Prevent_Registered_Customer_Uncheck</members>
         <members>Lead.Validate_Pincode</members>
         <members>Lead__c.Assign_to_Central_Desk_uncheck_validatio</members>
         <members>Lead__c.Branch_Mandatory</members>

@@ -9,7 +9,7 @@
     </targets>
     <targetConfigs>
         <targetConfig targets="lightning__AgentforceInput">
-            <targetType name="c__safexpressDamageEscalationForm"/>
+            <targetType name="c__safexpressUrgentDeliveryForm"/>
         </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>

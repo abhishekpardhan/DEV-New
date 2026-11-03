@@ -59,6 +59,13 @@
                 <stringValue></stringValue>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varMatchedStateCode</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>Get_State_Codes</targetReference>
         </connector>
@@ -73,6 +80,13 @@
             <operator>Assign</operator>
             <value>
                 <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varMatchedStateCode</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Loop_State_Codes.State_Abbreviation__c</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -95,22 +109,6 @@
             <targetReference>If_State_Matches</targetReference>
         </connector>
     </assignments>
-    <choices>
-        <name>chNo</name>
-        <choiceText>No, keep the record as it is</choiceText>
-        <dataType>String</dataType>
-        <value>
-            <stringValue>No</stringValue>
-        </value>
-    </choices>
-    <choices>
-        <name>chUpdate</name>
-        <choiceText>Update Company and GST Status</choiceText>
-        <dataType>String</dataType>
-        <value>
-            <stringValue>Update</stringValue>
-        </value>
-    </choices>
     <customProperties>
         <name>ScreenProgressIndicator</name>
         <value>
@@ -190,31 +188,6 @@
                 <targetReference>Assign_State_Match</targetReference>
             </connector>
             <label>State Matches</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>If_User_Chose_Update</name>
-        <label>If User Chose Update</label>
-        <locationX>440</locationX>
-        <locationY>1514</locationY>
-        <defaultConnector>
-            <targetReference>No_Changes_Screen</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>No</defaultConnectorLabel>
-        <rules>
-            <name>Chose_Update</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>Update_Choice</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Update</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Update_Lead_Company_and_GST</targetReference>
-            </connector>
-            <label>Update</label>
         </rules>
     </decisions>
     <decisions>
@@ -397,6 +370,11 @@
         <expression>IF(ISBLANK({!varGstStateName}), {!Loop_State_Codes.MasterLabel}, {!varGstStateName} &amp; &quot; / &quot; &amp; {!Loop_State_Codes.MasterLabel})</expression>
     </formulas>
     <formulas>
+        <name>fPan</name>
+        <dataType>String</dataType>
+        <expression>MID({!fGstin}, 3, 10)</expression>
+    </formulas>
+    <formulas>
         <name>fPortalCompany</name>
         <dataType>String</dataType>
         <expression>IF(ISBLANK({!Call_GST_Portal.2XX.data.TradeName}), {!Call_GST_Portal.2XX.data.LegalName}, {!Call_GST_Portal.2XX.data.TradeName})</expression>
@@ -411,8 +389,13 @@
         <dataType>String</dataType>
         <expression>UPPER(TRIM({!StateInput}))</expression>
     </formulas>
-    <interviewLabel>Gst Callout {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>Gst Callout</label>
+    <formulas>
+        <name>fStateToSave</name>
+        <dataType>String</dataType>
+        <expression>IF(ISBLANK({!varMatchedStateCode}), TRIM({!StateInput}), {!varMatchedStateCode})</expression>
+    </formulas>
+    <interviewLabel>Verify GST {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Verify GST</label>
     <loops>
         <name>Loop_State_Codes</name>
         <label>Loop State Codes</label>
@@ -533,6 +516,18 @@
                 <elementReference>Call_GST_Portal.2XX.data.Status</elementReference>
             </value>
         </inputAssignments>
+        <inputAssignments>
+            <field>Pan_Number__c</field>
+            <value>
+                <elementReference>fPan</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>State</field>
+            <value>
+                <elementReference>fStateToSave</elementReference>
+            </value>
+        </inputAssignments>
         <object>Lead</object>
     </recordUpdates>
     <recordUpdates>
@@ -564,6 +559,12 @@
             <field>GST_Status__c</field>
             <value>
                 <elementReference>Call_GST_Portal.2XX.data.Status</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>State</field>
+            <value>
+                <elementReference>fStateToSave</elementReference>
             </value>
         </inputAssignments>
         <object>Lead</object>
@@ -601,15 +602,16 @@
         <label>Confirm Update</label>
         <locationX>440</locationX>
         <locationY>1406</locationY>
-        <allowBack>false</allowBack>
+        <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
+        <backButtonLabel>Previous</backButtonLabel>
         <connector>
-            <targetReference>If_User_Chose_Update</targetReference>
+            <targetReference>Update_Lead_Company_and_GST</targetReference>
         </connector>
         <fields>
             <name>Confirm_Message</name>
-            <fieldText>{!tPortalResult}&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;The Company on this Lead does not match the GST portal.&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Company on Lead: {!get_Lead.Company}&lt;/p&gt;&lt;p&gt;Name on GST portal: {!fPortalCompany}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Update will set Company to &lt;strong&gt;{!fPortalCompany}&lt;/strong&gt;, GST Number to &lt;strong&gt;{!fGstin}&lt;/strong&gt; and GST Status to &lt;strong&gt;{!Call_GST_Portal.2XX.data.Status}&lt;/strong&gt;.&lt;/p&gt;</fieldText>
+            <fieldText>{!tPortalResult}&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;The Company on this Lead does not match the GST portal.&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Company on Lead: {!get_Lead.Company}&lt;/p&gt;&lt;p&gt;Name on GST portal: {!fPortalCompany}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Update will set Company to &lt;strong&gt;{!fPortalCompany}&lt;/strong&gt;, GST Number to &lt;strong&gt;{!fGstin}&lt;/strong&gt;, PAN Number to &lt;strong&gt;{!fPan}&lt;/strong&gt;, GST Status to &lt;strong&gt;{!Call_GST_Portal.2XX.data.Status}&lt;/strong&gt; and State to &lt;strong&gt;{!fStateToSave}&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;Click Update to save these changes, or Previous to go back without saving anything.&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
             <styleProperties>
                 <verticalAlignment>
@@ -620,31 +622,13 @@
                 </width>
             </styleProperties>
         </fields>
-        <fields>
-            <name>Update_Choice</name>
-            <choiceReferences>chUpdate</choiceReferences>
-            <choiceReferences>chNo</choiceReferences>
-            <dataType>String</dataType>
-            <fieldText>Do you want to update this Lead?</fieldText>
-            <fieldType>RadioButtons</fieldType>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-            <isRequired>true</isRequired>
-            <styleProperties>
-                <verticalAlignment>
-                    <stringValue>top</stringValue>
-                </verticalAlignment>
-                <width>
-                    <stringValue>12</stringValue>
-                </width>
-            </styleProperties>
-        </fields>
-        <nextOrFinishButtonLabel>Continue</nextOrFinishButtonLabel>
+        <nextOrFinishButtonLabel>Update</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
     </screens>
     <screens>
         <name>Enter_GST</name>
-        <label>Enter GST</label>
+        <label>Verify GST</label>
         <locationX>176</locationX>
         <locationY>326</locationY>
         <allowBack>false</allowBack>
@@ -699,9 +683,9 @@
                     <defaultValue>
                         <elementReference>get_Lead.State</elementReference>
                     </defaultValue>
-                    <fieldText>State</fieldText>
+                    <fieldText>State/Province</fieldText>
                     <fieldType>InputField</fieldType>
-                    <helpText>&lt;p&gt;State code (e.g. HR) or full name (e.g. Haryana).&lt;/p&gt;</helpText>
+                    <helpText>&lt;p&gt;State code (e.g. HR) or full name (e.g. Haryana). Saved to the Lead together with the GST.&lt;/p&gt;</helpText>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                     <styleProperties>
@@ -785,30 +769,6 @@
         <showHeader>true</showHeader>
     </screens>
     <screens>
-        <name>No_Changes_Screen</name>
-        <label>No Changes Screen</label>
-        <locationX>704</locationX>
-        <locationY>1622</locationY>
-        <allowBack>false</allowBack>
-        <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
-        <fields>
-            <name>No_Changes_Message</name>
-            <fieldText>&lt;p&gt;No changes were made. The Lead is unchanged.&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-            <styleProperties>
-                <verticalAlignment>
-                    <stringValue>top</stringValue>
-                </verticalAlignment>
-                <width>
-                    <stringValue>12</stringValue>
-                </width>
-            </styleProperties>
-        </fields>
-        <showFooter>true</showFooter>
-        <showHeader>true</showHeader>
-    </screens>
-    <screens>
         <name>No_Data_Screen</name>
         <label>No Data Screen</label>
         <locationX>704</locationX>
@@ -861,9 +821,12 @@
         <label>Not Registered Screen</label>
         <locationX>968</locationX>
         <locationY>1298</locationY>
-        <allowBack>true</allowBack>
+        <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Enter_GST</targetReference>
+        </connector>
         <fields>
             <name>Not_Registered_Message</name>
             <fieldText>&lt;p&gt;GST Number {!fGstin} is not registered on the GST portal.&lt;/p&gt;&lt;p&gt;{!fInactiveSaveNote}&lt;/p&gt;</fieldText>
@@ -877,6 +840,7 @@
                 </width>
             </styleProperties>
         </fields>
+        <nextOrFinishButtonLabel>Previous</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
     </screens>
@@ -914,7 +878,7 @@
         <allowPause>false</allowPause>
         <fields>
             <name>Saved_Message</name>
-            <fieldText>{!tPortalResult}&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Lead updated.&lt;/strong&gt; GST Number and GST Status have been saved.&lt;/p&gt;</fieldText>
+            <fieldText>{!tPortalResult}&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Lead updated.&lt;/strong&gt; GST Number, GST Status and State ({!fStateToSave}) have been saved.&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
             <styleProperties>
                 <verticalAlignment>
@@ -988,6 +952,13 @@
     </variables>
     <variables>
         <name>varGstStateName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varMatchedStateCode</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>

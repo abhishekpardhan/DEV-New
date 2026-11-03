@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GST_is_required_for_Qualified_lead</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT($Permission.Lead_VR_Bypass),
+    ISPICKVAL(Status , &quot;Qualified&quot;),
+    ISBLANK(GST_Number__c)
+)</errorConditionFormula>
+    <errorMessage>GST number is required for qualified lead.</errorMessage>
+</ValidationRule>

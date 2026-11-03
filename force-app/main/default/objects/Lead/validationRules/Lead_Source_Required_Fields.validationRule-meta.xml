@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Source_Required_Fields</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+    AND(
+        ISPICKVAL( LeadSource , &quot;Campaign&quot;),
+        ISBLANK(Campaign__c)
+    ),
+    AND(
+        ISPICKVAL( LeadSource , &quot;Branch&quot;),
+        ISBLANK(Booking_Branch__c)
+    )
+)</errorConditionFormula>
+    <errorMessage>Please select the required Campaign or Booking Branch.</errorMessage>
+</ValidationRule>

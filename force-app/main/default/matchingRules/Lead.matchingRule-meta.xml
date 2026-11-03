@@ -21,12 +21,12 @@
         <matchingRuleItems>
             <blankValueBehavior>NullNotAllowed</blankValueBehavior>
             <fieldName>FirstName</fieldName>
-            <matchingMethod>Exact</matchingMethod>
+            <matchingMethod>FirstName</matchingMethod>
         </matchingRuleItems>
         <matchingRuleItems>
             <blankValueBehavior>NullNotAllowed</blankValueBehavior>
             <fieldName>LastName</fieldName>
-            <matchingMethod>Exact</matchingMethod>
+            <matchingMethod>LastName</matchingMethod>
         </matchingRuleItems>
         <ruleStatus>Active</ruleStatus>
     </matchingRules>

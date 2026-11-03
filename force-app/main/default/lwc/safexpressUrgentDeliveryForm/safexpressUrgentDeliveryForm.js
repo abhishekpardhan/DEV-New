@@ -2,8 +2,9 @@ import { LightningElement, api } from 'lwc';
 import submitRequest from '@salesforce/apex/SafexpressUrgentDeliveryController.submitRequest';
 import checkExistingCase from '@salesforce/apex/SafexpressUrgentDeliveryController.checkExistingCase';
 import SFX_LOGO from '@salesforce/resourceUrl/Safexpress_Logo';
-import IOS_BADGE from '@salesforce/resourceUrl/IOSAppLogo';
-import ANDROID_BADGE from '@salesforce/resourceUrl/AndroidAppLogo';
+// New static resource names for the footer
+import IOS_BADGE from '@salesforce/resourceUrl/IosStoreLogo';
+import ANDROID_BADGE from '@salesforce/resourceUrl/AppStoreLogo';
 
 const SAFEXPRESS_VARIANTS = ['safexpres', 'safeexpres', 'safexprs'];
 const BLOCKED_EMAIL_NAMES = ['test', 'testing', 'tester', 'testuser', 'testmail', 'dummy', 'fake', 'sample', 'demo', 'abc', 'abcd', 'abcde', 'xyz', 'asdf', 'qwerty', 'user', 'admin', 'example', 'temp', 'none', 'null', 'na', 'nil', 'xxx', 'aaa', 'name', 'email', 'mail', 'noreply', 'noemail'];
@@ -87,7 +88,6 @@ export default class SafexpressUrgentDeliveryForm extends LightningElement {
         if (!val) return;
         this._value = val;
         
-        // Check status if explicitly provided by Agentforce
         if (val.shipmentStatus && !this._statusChecked) {
             this._statusChecked = true;
             const status = val.shipmentStatus.toUpperCase();
@@ -233,6 +233,11 @@ export default class SafexpressUrgentDeliveryForm extends LightningElement {
 
         this[field] = val;
         this.errorMessage = '';
+
+        // Instantly trigger deduplication check on the 12th keystroke
+        if (field === 'waybill' && this.isWaybillValid && this.waybill !== this.lastCheckedWaybill) {
+            this.runInitialDeduplicationCheck();
+        }
     }
 
     handleBlur(event) {

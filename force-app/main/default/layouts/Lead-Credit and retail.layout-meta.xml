@@ -10,11 +10,10 @@
     <excludeButtons>CreateCallList</excludeButtons>
     <excludeButtons>CreateMyList</excludeButtons>
     <excludeButtons>CreateSurveyInvitation</excludeButtons>
-    <excludeButtons>DataDotComClean</excludeButtons>
     <excludeButtons>FindDup</excludeButtons>
+    <excludeButtons>GenerateKnowledge</excludeButtons>
     <excludeButtons>MassCancelSdrOutreach</excludeButtons>
     <excludeButtons>NewSampleManagement</excludeButtons>
-    <excludeButtons>OpenSlackRecordChannel</excludeButtons>
     <excludeButtons>PauseCadenceByTargetId</excludeButtons>
     <excludeButtons>RemoveFromCadence</excludeButtons>
     <excludeButtons>StartOutboundConversation</excludeButtons>
@@ -120,7 +119,7 @@
                 <field>Event_Lead__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>GST_Number__c</field>
             </layoutItems>
             <layoutItems>

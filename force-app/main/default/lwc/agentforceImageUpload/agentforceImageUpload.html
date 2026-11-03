@@ -80,13 +80,55 @@
                                     disabled={isBusy}
                                     oninput={handleInputChange}
                                     onblur={handleBlur} />
+                                <template lwc:if={isChecking}>
+                                    <span class="sfx-input-spinner"></span>
+                                </template>
                                 <span class="sfx-check">✓</span>
                             </div>
                             <template lwc:if={waybillError}>
                                 <p class="sfx-field-error">{waybillError}</p>
                             </template>
+                            <template lwc:if={isChecking}>
+                                <p class="sfx-checking-text">Checking waybill...</p>
+                            </template>
+
+                            <!-- Not delivered / API error -->
+                            <template lwc:if={showCheckBanner}>
+                                <div class={checkBannerClass} role="alert">
+                                    <span class="sfx-banner-icon">⚠️</span>
+                                    <span>{checkMessage}</span>
+                                </div>
+                            </template>
+
+                            <!-- Same issue already open -->
+                            <template lwc:if={isOpenCaseMode}>
+                                <div class="sfx-open-case" role="status">
+                                    <p class="sfx-open-case-title">ℹ️ {openCase.message}</p>
+                                    <div class="sfx-open-case-rows">
+                                        <div class="sfx-open-case-row">
+                                            <span>🎫 Case Number</span>
+                                            <strong>{openCase.caseNumber}</strong>
+                                        </div>
+                                        <div class="sfx-open-case-row">
+                                            <span>📝 Issue Type</span>
+                                            <strong>{openCase.issueLabel}</strong>
+                                        </div>
+                                        <div class="sfx-open-case-row">
+                                            <span>🚚 Status</span>
+                                            <strong>{openCase.caseStatus}</strong>
+                                        </div>
+                                        <div class="sfx-open-case-row">
+                                            <span>🕒 Created On</span>
+                                            <strong>{openCase.createdOn}</strong>
+                                        </div>
+                                    </div>
+                                    <p class="sfx-open-case-hint">{openCaseDocsHint}</p>
+                                </div>
+                            </template>
                         </div>
                     </div>
+
+                    <template lwc:if={showDetailsSections}>
 
                     <!-- Mobile -->
                     <div class={mobileStepClass}>
@@ -105,7 +147,7 @@
                                     maxlength="10"
                                     placeholder="10-digit mobile number"
                                     value={mobile}
-                                    disabled={isBusy}
+                                    disabled={isDetailsLocked}
                                     oninput={handleInputChange}
                                     onblur={handleBlur} />
                                 <span class="sfx-check">✓</span>
@@ -132,7 +174,7 @@
                                     inputmode="email"
                                     placeholder="name@example.com"
                                     value={email}
-                                    disabled={isBusy}
+                                    disabled={isDetailsLocked}
                                     oninput={handleInputChange}
                                     onblur={handleBlur} />
                                 <span class="sfx-check">✓</span>
@@ -142,6 +184,7 @@
                             </template>
                         </div>
                     </div>
+                    </template>
                 </div>
 
                 <!-- ===== Section 3: Complaint details ===== -->
@@ -151,6 +194,7 @@
                 </div>
 
                 <div class="sfx-steps">
+                    <template lwc:if={showDetailsSections}>
                     <!-- Description -->
                     <div class={descriptionStepClass}>
                         <span class="sfx-dot"></span>
@@ -172,7 +216,7 @@
                                 maxlength="2000"
                                 placeholder={descriptionPlaceholder}
                                 value={description}
-                                disabled={isBusy}
+                                disabled={isDetailsLocked}
                                 oninput={handleInputChange}
                                 onblur={handleBlur}></textarea>
                             <div class="sfx-counter-row">
@@ -200,7 +244,7 @@
                                         type="date"
                                         max={todayIso}
                                         value={incidentDate}
-                                        disabled={isBusy}
+                                        disabled={isDetailsLocked}
                                         onchange={handleInputChange}
                                         onblur={handleBlur} />
                                 </div>
@@ -209,6 +253,7 @@
                                 </template>
                             </div>
                         </div>
+                    </template>
                     </template>
 
                     <!-- Supporting documents -->
@@ -236,7 +281,7 @@
                                     type="file"
                                     multiple
                                     accept=".jpg,.jpeg,.png,.pdf,image/png,image/jpeg,application/pdf"
-                                    disabled={isBusy}
+                                    disabled={isDocsLocked}
                                     onchange={handleFileChange} />
                                 <span class="sfx-drop-icon">📤</span>
                                 <span class="sfx-drop-text">
@@ -286,7 +331,7 @@
                         class="sfx-upload-btn"
                         disabled={isSubmitDisabled}
                         onclick={handleSubmit}>
-                        Submit Complaint
+                        {submitLabel}
                     </button>
                 </div>
             </template>
@@ -346,27 +391,35 @@
 
         <!-- Footer -->
         <div class="sfx-footer">
-            <span class="sfx-footer-tag">Distribution Redefined</span>
-            <div class="sfx-apps">
-                <span class="sfx-apps-label">Get the Safexpress App</span>
-                <div class="sfx-app-badges">
-                    <a
-                        class="sfx-badge-link"
-                        href={iosAppUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title="Download on the App Store">
-                        <img src={iosBadgeUrl} alt="Download on the App Store" class="sfx-badge" />
-                    </a>
-                    <a
-                        class="sfx-badge-link"
-                        href={androidAppUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title="Get it on Google Play">
-                        <img src={androidBadgeUrl} alt="Get it on Google Play" class="sfx-badge" />
-                    </a>
-                </div>
+            <div class="sfx-footer-heading">
+                <span class="sfx-footer-line"></span>
+                <span class="sfx-footer-title">Get the Safexpress App</span>
+                <span class="sfx-footer-line"></span>
+            </div>
+
+            <div class="sfx-app-badges">
+                <a
+                    class="sfx-badge-link"
+                    href={androidAppUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Get it on Google Play">
+                    <img src={androidBadgeUrl} alt="Get it on Google Play" class="sfx-badge" />
+                </a>
+                <a
+                    class="sfx-badge-link"
+                    href={iosAppUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Download on the App Store">
+                    <img src={iosBadgeUrl} alt="Download on the App Store" class="sfx-badge" />
+                </a>
+            </div>
+
+            <div class="sfx-footer-heading sfx-footer-tagline-row">
+                <span class="sfx-footer-line"></span>
+                <span class="sfx-footer-tagline">One App, All Solutions, Always with You</span>
+                <span class="sfx-footer-line"></span>
             </div>
         </div>
     </div>

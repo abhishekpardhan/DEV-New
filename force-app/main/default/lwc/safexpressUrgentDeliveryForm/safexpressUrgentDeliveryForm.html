@@ -189,28 +189,25 @@
             </template>
         </div>
 
+        <!-- NEW GREEN FOOTER -->
         <div class="sfx-footer">
-            <span class="sfx-footer-tag">Distribution Redefined</span>
-            <div class="sfx-apps">
-                <span class="sfx-apps-label">Get the Safexpress App</span>
-                <div class="sfx-app-badges">
-                    <a
-                        class="sfx-badge-link"
-                        href={iosAppUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title="Download on the App Store">
-                        <img src={iosBadgeUrl} alt="Download on the App Store" class="sfx-badge" />
-                    </a>
-                    <a
-                        class="sfx-badge-link"
-                        href={androidAppUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title="Get it on Google Play">
-                        <img src={androidBadgeUrl} alt="Get it on Google Play" class="sfx-badge" />
-                    </a>
-                </div>
+            <div class="sfx-footer-row sfx-footer-title">
+                <span class="sfx-footer-line"></span>
+                <span>Get the Safexpress App</span>
+                <span class="sfx-footer-line"></span>
+            </div>
+            <div class="sfx-app-badges">
+                <a class="sfx-badge-link" href={androidAppUrl} target="_blank" rel="noopener noreferrer" title="Get it on Google Play">
+                    <img class="sfx-badge" src={androidBadgeUrl} alt="Get it on Google Play" />
+                </a>
+                <a class="sfx-badge-link" href={iosAppUrl} target="_blank" rel="noopener noreferrer" title="Download on the App Store">
+                    <img class="sfx-badge" src={iosBadgeUrl} alt="Download on the App Store" />
+                </a>
+            </div>
+            <div class="sfx-footer-row sfx-footer-tagline">
+                <span class="sfx-footer-line"></span>
+                <span>One App, All Solutions, Always with You</span>
+                <span class="sfx-footer-line"></span>
             </div>
         </div>
     </div>
