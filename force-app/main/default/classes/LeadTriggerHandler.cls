@@ -8,7 +8,7 @@ public class LeadTriggerHandler extends TriggerHandler {
     }
 
     protected override void beforeInsert() {
-        // LeadNameService.toUpperCase(newLeads, null);
+        LeadEnrichmentService.toUpperCase(newLeads, null);
         // LeadGstService.derivePan(newLeads, null);
         LeadAssignmentService.onBeforeInsert(newLeads);
         LeadDuplicateService.checkPan(newLeads, null);
@@ -20,7 +20,7 @@ public class LeadTriggerHandler extends TriggerHandler {
     }
 
     protected override void beforeUpdate() {
-        // LeadNameService.toUpperCase(newLeads,oldLeadsMap);
+        LeadEnrichmentService.toUpperCase(newLeads,oldLeadsMap);
         // LeadGstService.derivePan(newLeads,oldLeadsMap);
         LeadAssignmentService.onBeforeUpdate(newLeads, oldLeadsMap);
         // LeadGstService.checkStateVsRegion(
