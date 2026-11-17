@@ -1,82 +1,119 @@
-/**
- * @File Name          : CaseContactHelperTest.cls
- * @Description        : CaseContactHelperTest is the test class for CaseContactHelper apex class
- * @Author             : Manshi Joshi
- * @Group              : IBM
- * @Coverage		   : 95%
- *==============================================================================
- * Ver         Date                     Author                    Modification
- *==============================================================================
-* 1.0        21-07-2025                Manshi                   Initial Version
-* 1.1        11-02-2026                Rudra Singh              As per latest on contact we use MobilePhone Field instead of phone
-**/
-@isTest
-public class CaseContactHelperTest {
+@IsTest
+private class CaseContactHelperTest {
 
-    @TestSetup
-    static void setupTestData() {
-        // Existing contact with matching MobilePhone
-        Contact existingContact = new Contact(
-            FirstName = 'John',
-            LastName = 'Doe',
-            MobilePhone = '9998887777',
-            Email = 'john.doe@example.com',
-            Is_Active__c = true
-        );
-        insert existingContact;
-        
-        // Case with matching MobilePhone to existing contact
-        Case caseWithMatch = new Case(
-            Origin = 'Web',
-            SuppliedPhone = '9998887777',
-            Requester_Name__c = 'John Doe',
-            SuppliedEmail = 'john.doe@example.com',
-            Subject = 'Test Case With Match',
-            Status = 'New'
-        );
-        
-        // Case with no matching MobilePhone (should create new contact)
-        Case caseWithNoMatch = new Case(
-            Origin = 'Web',
-            SuppliedPhone = '8887776666',
-            Requester_Name__c = 'Jane Smith',
-            SuppliedEmail = 'jane.smith@example.com',
-            Subject = 'Test Case With No Match',
-            Status = 'New'
-        );
-        
-        
-        
-        insert new List<Case>{ caseWithMatch, caseWithNoMatch };
+    private static Case createB2BCase(String name, String phone, String email, String pincode) {
+        return CommonDataTest.getSupportCase(name, phone, email, ConstantUtility.CASE_TYPE_B2B, ConstantUtility.CASE_NATURE_ENQUIRY, pincode);
     }
-    
-    
-    
-    @isTest
-    static void testTagContactsToCases() {
-        // Fetch cases
-        List<Case> cases = [SELECT Id, SuppliedPhone FROM Case];
-        List<Id> caseIds = new List<Id>();
-        for (Case c : cases) {
-            caseIds.add(c.Id);
-        }
-        
-        // Invoke the method
+
+    @IsTest
+    static void taggedContact() {
+        Contact con = CommonDataTest.getContact();
+        con.MobilePhone = '8887776666';
+        con.Email = 'jane@test.com';
+        insert con;
+
+        Case newCasewithContact = createB2BCase('Jane Smith', '8887776666', 'jane@test.com', '122002');
+        newCasewithContact.ContactId = con.Id;
+
         Test.startTest();
-        CaseContactHelper.tagContactsToCases(caseIds);
+        insert newCasewithContact;
         Test.stopTest();
+
+        Case updatedCase = [SELECT Id, ContactId, Status FROM Case WHERE Id = :newCasewithContact.Id];
+        System.assertEquals(con.Id, updatedCase.ContactId, 'Existing Contact should be associated with the Case.');
+    }
+
+    @IsTest
+    static void noExistingContact() {
+        Case newCasewithoutContact = createB2BCase('Jane Smith', '8887776676', 'jane@test.com', '122002');
+        Test.startTest();
+        insert newCasewithoutContact;
+        Test.stopTest();
+
+        Case updatedCase = [SELECT Id, ContactId, Status FROM Case WHERE Id = :newCasewithoutContact.Id];
+        System.assertEquals(1, [SELECT COUNT() FROM Lead WHERE Case__c = :newCasewithoutContact.Id], 'A Lead should be created for the eligible Case.');
+    }
+
+    @IsTest
+    static void existingAccount() {
+        Account acc = CommonDataTest.getParentAccount();
+        acc.Mobile_No__c = '7829183918';
+        insert acc;
+
+        Case newTestCase = createB2BCase('Jane Smith', '7829183918', 'jane@test.com', '122002');
+
+        Test.startTest();
+        insert newTestCase;
+        Test.stopTest();
+
+        Case updatedCase = [SELECT Id, ContactId, Status FROM Case WHERE Id = :newTestCase.Id];
+
+        System.assertNotEquals(null, updatedCase.ContactId, 'A Contact should be associated with the Case.');
+        System.assertEquals(ConstantUtility.COMPLETED, updatedCase.Status, 'B2B Enquiry Case should be marked Completed.');
+        System.assertEquals(0, [SELECT COUNT() FROM Lead WHERE Case__c = :newTestCase.Id], 'Lead should not be created when an existing Account matches the mobile number.');
+    }
+
+    @IsTest
+    static void existingLead() {
+        Lead existLead = CommonDataTest.getLead('Existing Lead', 'Active', null, null);
+        existLead.MobilePhone = '7829183918';
+        existLead.Email = 'jane@test.com';
+        insert existLead;
+        Case newTestCase = createB2BCase('Jane Smith', '7829183918', 'jane@test.com', '122002');
+
+        Test.startTest();
+        insert newTestCase;
+        Test.stopTest();
+
+        Case updatedCase = [SELECT Id, ContactId, Status FROM Case WHERE Id = :newTestCase.Id];
+        System.assertNotEquals(null, updatedCase.ContactId, 'A Contact should be associated with the Case.');
+    }
+
+    @IsTest
+    static void bookingRequestcase() {
+        Case bookingCase = CommonDataTest.getSupportCase('Jane Smith', '8887775576', 'jane@test.com', ConstantUtility.CASE_TYPE_BUSINESS_REQUEST, 
+                                                         ConstantUtility.CASE_NATURE_REQUEST, '122002');
+        Test.startTest();
+        insert bookingCase;
+        Test.stopTest();
+        Case updatedCase = [SELECT Id, ContactId, Status FROM Case WHERE Id = :bookingCase.Id];
         
-        // Reload cases to verify updates
-        List<Case> updatedCases = [SELECT Id, ContactId, SuppliedPhone FROM Case];
-        
-        System.assertEquals(2, updatedCases.size(), 'Both cases should be processed');
-        
-        for (Case c : updatedCases) {
-            System.assertNotEquals(null, c.ContactId, 'Each case should have a ContactId after processing');
-        }
-        
-        // Assert new contact is created
-        List<Contact> newContacts = [SELECT Id, MobilePhone FROM Contact WHERE MobilePhone = '8887776666'];
-        System.assertEquals(1, newContacts.size(), 'One new contact should be created for unmatched MobilePhone');
+        System.assertEquals(1, [SELECT COUNT() FROM Lead WHERE Case__c = :bookingCase.Id], 'A Lead should be created for an eligible Booking Request.');
+    }
+
+    @IsTest
+    static void leadInserterror() {
+        Case newTestCase = createB2BCase('Jane Smith', '8887776676', null, '122002');
+        newTestCase.Requester_Location__c = null;
+        Test.startTest();
+        insert newTestCase;
+        Test.stopTest();
+
+        Case updatedCase = [SELECT Id, ContactId, Status FROM Case WHERE Id = :newTestCase.Id];
+        System.assertEquals(1, [SELECT COUNT() FROM Lead WHERE Case__c = :newTestCase.Id], 'Lead should be created when the mobile number and pincode are available, even if email is missing.');
+    }
+
+    @IsTest
+    static void missingPincode() {
+        Case newTestCase = createB2BCase('Jane Smith', '8887776676', 'jane@test.com', null);
+
+        Test.startTest();
+        insert newTestCase;
+        Test.stopTest();
+
+        Case updatedCase = [SELECT Id, ContactId, Status FROM Case WHERE Id = :newTestCase.Id];
+        System.assertNotEquals(null, updatedCase.ContactId, 'Contact should be created even when the pincode is missing.');
+    }
+
+    @IsTest
+    static void contactInsertError() {
+        Case newTestCase = createB2BCase('Jane Smith', '888777667', 'jane@test.com', '122002');
+
+        Test.startTest();
+        insert newTestCase;
+        Test.stopTest();
+        Case updatedCase = [SELECT Id, ContactId, Status FROM Case WHERE Id = :newTestCase.Id];
+
+        System.assertEquals('New', updatedCase.Status,'B2B Enquiry Case should be marked New.');
     }
 }

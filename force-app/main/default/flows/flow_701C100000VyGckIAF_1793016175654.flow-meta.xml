@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Send_Email_Message_Action_M271</name>
+        <label>Send Email Message Action</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>sendEmailMessage</actionName>
+        <actionType>sendEmailMessage</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>clickTracking</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>openTracking</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>sendEmailMessage</nameSegment>
+    </actionCalls>
     <apiVersion>68.0</apiVersion>
     <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <dataSpace>default</dataSpace>
@@ -28,6 +50,9 @@
     <start>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <connector>
+            <targetReference>Send_Email_Message_Action_M271</targetReference>
+        </connector>
         <triggerType>AutomationEvent</triggerType>
     </start>
     <status>InvalidDraft</status>

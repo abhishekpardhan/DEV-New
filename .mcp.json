@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "Salesforce DX": {
+      "command": "npx",
+      "args": ["-y", "@salesforce/mcp",
+               "--orgs", "Dev1,Qa1",
+               "--toolsets", "orgs,metadata,data,testing,code-analysis"]
+    }
+  }
+}

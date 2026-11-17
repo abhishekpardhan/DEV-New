@@ -331,6 +331,19 @@
         <sequence>0</sequence>
     </mktDataTranFields>
     <mktDataTranFields>
+        <fullName>isQuietPushEnabled</fullName>
+        <creationType>Custom</creationType>
+        <datatype>B</datatype>
+        <externalName>isQuietPushEnabled</externalName>
+        <isDataRequired>false</isDataRequired>
+        <length>0</length>
+        <masterLabel>isQuietPushEnabled</masterLabel>
+        <precision>0</precision>
+        <primaryIndexOrder>0</primaryIndexOrder>
+        <scale>0</scale>
+        <sequence>0</sequence>
+    </mktDataTranFields>
+    <mktDataTranFields>
         <fullName>locale</fullName>
         <creationType>Custom</creationType>
         <datatype>S</datatype>

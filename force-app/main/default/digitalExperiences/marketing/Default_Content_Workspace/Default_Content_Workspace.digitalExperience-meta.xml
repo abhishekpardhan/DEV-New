@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<DigitalExperienceBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+<ActionableListMemberStatus xmlns="http://soap.sforce.com/2006/04/metadata">
     <description>Content for your marketing campaigns.</description>
     <digitalExperienceFolderShares/>
     <label>Content Workspace for Marketing Cloud</label>
@@ -65,4 +65,4 @@
             <status>ENABLED</status>
         </module>
     </modules>
-</DigitalExperienceBundle>
+</ActionableListMemberStatus>

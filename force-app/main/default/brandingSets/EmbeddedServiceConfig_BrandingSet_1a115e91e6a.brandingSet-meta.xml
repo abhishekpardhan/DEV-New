@@ -2,15 +2,15 @@
 <BrandingSet xmlns="http://soap.sforce.com/2006/04/metadata">
     <brandingSetProperty>
         <propertyName>citationsText</propertyName>
-        <propertyValue>#181818</propertyValue>
+        <propertyValue>#0B4D2C</propertyValue>
     </brandingSetProperty>
     <brandingSetProperty>
         <propertyName>userMessageText</propertyName>
-        <propertyValue>#353131</propertyValue>
+        <propertyValue>#FFFFFF</propertyValue>
     </brandingSetProperty>
     <brandingSetProperty>
         <propertyName>inputFooterButton</propertyName>
-        <propertyValue>#1E7A34</propertyValue>
+        <propertyValue>#0B4D2C</propertyValue>
     </brandingSetProperty>
     <brandingSetProperty>
         <propertyName>botImage</propertyName>
@@ -18,27 +18,27 @@
     </brandingSetProperty>
     <brandingSetProperty>
         <propertyName>userMessageLink</propertyName>
-        <propertyValue>#FFFFFF</propertyValue>
+        <propertyValue>#F2C94C</propertyValue>
     </brandingSetProperty>
     <brandingSetProperty>
         <propertyName>headerBackground</propertyName>
-        <propertyValue>#1E7A34</propertyValue>
+        <propertyValue>#0B4D2C</propertyValue>
     </brandingSetProperty>
     <brandingSetProperty>
         <propertyName>font</propertyName>
-        <propertyValue>Georgia</propertyValue>
+        <propertyValue>Salesforce Sans</propertyValue>
     </brandingSetProperty>
     <brandingSetProperty>
         <propertyName>inputOutline</propertyName>
-        <propertyValue>#1E7A34</propertyValue>
+        <propertyValue>#F2C94C</propertyValue>
     </brandingSetProperty>
     <brandingSetProperty>
         <propertyName>height</propertyName>
-        <propertyValue>750</propertyValue>
+        <propertyValue>640</propertyValue>
     </brandingSetProperty>
     <brandingSetProperty>
         <propertyName>chatButton</propertyName>
-        <propertyValue>#1E7A34</propertyValue>
+        <propertyValue>#0B4D2C</propertyValue>
     </brandingSetProperty>
     <brandingSetProperty>
         <propertyName>conversationBodyBackground</propertyName>
@@ -54,7 +54,7 @@
     </brandingSetProperty>
     <brandingSetProperty>
         <propertyName>citationsBackground</propertyName>
-        <propertyValue>#FFFFFF</propertyValue>
+        <propertyValue>#FFF8E1</propertyValue>
     </brandingSetProperty>
     <brandingSetProperty>
         <propertyName>logoImage</propertyName>
@@ -66,11 +66,11 @@
     </brandingSetProperty>
     <brandingSetProperty>
         <propertyName>agentMessageText</propertyName>
-        <propertyValue>#1A1A1A</propertyValue>
+        <propertyValue>#1F1F1F</propertyValue>
     </brandingSetProperty>
     <brandingSetProperty>
         <propertyName>width</propertyName>
-        <propertyValue>500</propertyValue>
+        <propertyValue>440</propertyValue>
     </brandingSetProperty>
     <brandingSetProperty>
         <propertyName>invitationDismissalButton</propertyName>
@@ -82,23 +82,23 @@
     </brandingSetProperty>
     <brandingSetProperty>
         <propertyName>agentMessageBackground</propertyName>
-        <propertyValue>#5FAD86</propertyValue>
+        <propertyValue>#F1F6F2</propertyValue>
     </brandingSetProperty>
     <brandingSetProperty>
         <propertyName>primaryButtonBackground</propertyName>
-        <propertyValue>#2E2E2E</propertyValue>
+        <propertyValue>#0B4D2C</propertyValue>
     </brandingSetProperty>
     <brandingSetProperty>
         <propertyName>headerForeground</propertyName>
-        <propertyValue>#350404</propertyValue>
+        <propertyValue>#FFFFFF</propertyValue>
     </brandingSetProperty>
     <brandingSetProperty>
         <propertyName>invitationText</propertyName>
-        <propertyValue>#181717</propertyValue>
+        <propertyValue>#F2C94C</propertyValue>
     </brandingSetProperty>
     <brandingSetProperty>
         <propertyName>secondaryText</propertyName>
-        <propertyValue>#5C5C5C</propertyValue>
+        <propertyValue>#5A5A5A</propertyValue>
     </brandingSetProperty>
     <brandingSetProperty>
         <propertyName>baseFontSize</propertyName>
@@ -106,15 +106,19 @@
     </brandingSetProperty>
     <brandingSetProperty>
         <propertyName>userMessageBackground</propertyName>
-        <propertyValue>#1E7A34</propertyValue>
+        <propertyValue>#0B4D2C</propertyValue>
     </brandingSetProperty>
     <brandingSetProperty>
         <propertyName>primaryText</propertyName>
-        <propertyValue>#2E2E2E</propertyValue>
+        <propertyValue>#1F1F1F</propertyValue>
     </brandingSetProperty>
     <brandingSetProperty>
         <propertyName>agentMessageLink</propertyName>
-        <propertyValue>#1E7A34</propertyValue>
+        <propertyValue>#0B6E3A</propertyValue>
+    </brandingSetProperty>
+    <brandingSetProperty>
+        <propertyName>voiceButtonImage</propertyName>
+        <propertyValue></propertyValue>
     </brandingSetProperty>
     <masterLabel>EmbeddedServiceConfig_BrandingSet_1a115e91e6a</masterLabel>
     <type>es-messaging</type>

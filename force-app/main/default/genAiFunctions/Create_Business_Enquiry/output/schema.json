@@ -3,7 +3,7 @@
   "properties" : {
     "caseNumber" : {
       "title" : "Case Number",
-      "description" : "Reference number (support case number) of the new enquiry when Status is CREATED, or of the already registered enquiry when Status is DUPLICATE. Blank for VALIDATION_ERROR and ERROR. Never invent or change it.",
+      "description" : "Reference number of the new (CREATED) or already existing (DUPLICATE) business enquiry. Blank otherwise. Never invent or change it.",
       "lightning:type" : "lightning__textType",
       "lightning:isPII" : false,
       "copilotAction:isDisplayable" : false,
@@ -57,7 +57,7 @@
     },
     "message" : {
       "title" : "Message",
-      "description" : "The exact message to show the customer after the form is submitted. Reply with this text as it is and never change the reference number in it.",
+      "description" : "The exact message to show the customer. Reply with this text as it is and never change the reference number in it.",
       "lightning:type" : "lightning__textType",
       "lightning:isPII" : false,
       "copilotAction:isDisplayable" : false,
@@ -102,7 +102,7 @@
     },
     "status" : {
       "title" : "Status",
-      "description" : "Result of the submission. CREATED = new business enquiry registered. DUPLICATE = a business enquiry already exists with the same mobile number and email. VALIDATION_ERROR = a detail in the form is missing or not valid. ERROR = the enquiry could not be registered.",
+      "description" : "CREATED = the form registered a new business enquiry. DUPLICATE = a business enquiry already exists with the same mobile number and email. FORM_INCOMPLETE = the customer clicked the chat Submit before completing the form with its Submit Request button. ERROR = the request could not be processed.",
       "lightning:type" : "lightning__textType",
       "lightning:isPII" : false,
       "copilotAction:isDisplayable" : false,

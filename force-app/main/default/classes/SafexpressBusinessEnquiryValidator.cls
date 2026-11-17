@@ -8,7 +8,8 @@
  * EMAIL = standard syntax (RFC 5321/5322 dot-atom) plus these deliberate application policies:
  *   - leading/trailing spaces trimmed; internal whitespace rejected (never removed)
  *   - ASCII only (internationalised addresses are rejected explicitly)
- *   - local part limited to letters, digits and . _ - +
+ *   - local part limited to letters, digits and dots (no _ - + or other symbols), like Gmail
+ *   - local part must contain at least 3 letters or digits (symbols and a +tag are not counted)
  *   - domain must end in an alphabetic extension of 2+ letters
  *   - maximum 80 characters (length of Case.SuppliedEmail / Contact.Email)
  *   - Safexpress domains blocked in any spelling (domain only - the name part is not checked)
@@ -41,7 +42,8 @@ public inherited sharing class SafexpressBusinessEnquiryValidator {
     public static final String MSG_EMAIL_SAFEXPRESS      = 'Safexpress email addresses can\'t be used. Please enter your personal or company email address.';
     public static final String MSG_EMAIL_LENGTH          = 'Email address cannot be longer than 80 characters.';
     public static final String MSG_EMAIL_LOCAL_LENGTH    = 'The part before @ cannot be longer than 64 characters.';
-    public static final String MSG_EMAIL_LOCAL_CHARS     = 'The part before @ can contain only letters, numbers and the symbols . _ - +';
+    public static final String MSG_EMAIL_LOCAL_SHORT     = 'The part before @ must have at least 3 letters or numbers, e.g. abc@gmail.com.';
+    public static final String MSG_EMAIL_LOCAL_CHARS     = 'Sorry, only letters (a-z), numbers (0-9), and periods (.) are allowed.';
     public static final String MSG_EMAIL_LOCAL_DOT_EDGE  = 'The part before @ cannot start or end with a dot.';
     public static final String MSG_EMAIL_LOCAL_DOTS      = 'The part before @ cannot contain two dots in a row.';
     public static final String MSG_EMAIL_DOMAIN_CHARS    = 'The domain after @ can contain only letters, numbers, hyphens and dots.';
@@ -154,6 +156,7 @@ public inherited sharing class SafexpressBusinessEnquiryValidator {
     private static final Integer EMAIL_MAX_LENGTH = 80;   // Case.SuppliedEmail / Contact.Email
     private static final Integer LOCAL_MAX_LENGTH = 64;   // RFC 5321
     private static final Integer LABEL_MAX_LENGTH = 63;   // RFC 1035
+    private static final Integer LOCAL_MIN_ALNUM  = 3;    // letters + digits before @ (symbols and a +tag not counted)
 
     // Gmail username rules
     private static final Set<String> GMAIL_DOMAINS = new Set<String>{ 'gmail.com', 'googlemail.com' };
@@ -200,6 +203,13 @@ public inherited sharing class SafexpressBusinessEnquiryValidator {
         return false;
     }
 
+    // Letters and digits before any "+tag": "ab@x.com" -> 2, "a.b.c@x.com" -> 3, "ab+news@x.com" -> 2
+    private static Integer localAlnumCount(String localPart) {
+        Integer plus = localPart.indexOf('+');
+        String base = plus >= 0 ? localPart.substring(0, plus) : localPart;
+        return base.replaceAll('[^A-Za-z0-9]', '').length();
+    }
+
     // Gmail ignores dots and treats anything after "+" as a delivery tag, so neither is counted.
     private static String gmailError(String localPart) {
         String lower = localPart.toLowerCase();
@@ -239,9 +249,10 @@ public inherited sharing class SafexpressBusinessEnquiryValidator {
         if (localPart.length() > LOCAL_MAX_LENGTH) return MSG_EMAIL_LOCAL_LENGTH;
 
         // Part before @
-        if (!Pattern.matches('^[A-Za-z0-9._+-]+$', localPart)) return MSG_EMAIL_LOCAL_CHARS;
+        if (!Pattern.matches('^[A-Za-z0-9.]+$', localPart)) return MSG_EMAIL_LOCAL_CHARS;
         if (localPart.startsWith('.') || localPart.endsWith('.')) return MSG_EMAIL_LOCAL_DOT_EDGE;
         if (localPart.contains('..')) return MSG_EMAIL_LOCAL_DOTS;
+        if (localAlnumCount(localPart) < LOCAL_MIN_ALNUM) return MSG_EMAIL_LOCAL_SHORT;
 
         // Domain
         if (!Pattern.matches('^[a-z0-9.-]+$', domain)) return MSG_EMAIL_DOMAIN_CHARS;

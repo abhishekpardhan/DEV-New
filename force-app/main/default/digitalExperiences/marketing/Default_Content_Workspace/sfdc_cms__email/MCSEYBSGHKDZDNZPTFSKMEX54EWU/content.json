@@ -1,0 +1,36 @@
+{
+  "type" : "sfdc_cms__email",
+  "title" : "Diwali_Test_POC Email",
+  "contentBody" : {
+    "lightning:brandSource" : {
+      "defaultBrandOption" : "sfdcBrand"
+    },
+    "lightning:dataProviders" : [ {
+      "attributes" : {
+        "dataGraphApiName" : "MCN_Test_Poc"
+      },
+      "definition" : "sfdc_cms__dataGraphDataProvider",
+      "sfdcExpressionKey" : "$dataGraph"
+    } ],
+    "sfdc_cms:block" : {
+      "type" : "block",
+      "definition" : "sfdc_cms/rootContentBlock",
+      "id" : "daba4f76-f385-4f87-96c9-c66cc5272216",
+      "children" : [ ]
+    },
+    "messagePurpose" : "promotional",
+    "subjectLine" : "(No Subject)",
+    "backgroundColor" : "{!$brand.colorScheme.root}",
+    "preheader" : "Customize this draft with your own content.",
+    "sfdc_cms:title" : "Diwali_Test_POC Email",
+    "lightning:expressions" : [ ],
+    "lightning:backgroundImage" : {
+      "repeat" : "no-repeat",
+      "position" : "center center",
+      "size" : "cover"
+    },
+    "sfdc_cms:attachments" : [ ],
+    "sfdc_cms:variants" : [ ]
+  },
+  "urlName" : "diwali-test-poc-email"
+}

@@ -3,7 +3,15 @@ trigger trg_JourneyUpdateEvent on Update_Event__e (after insert) {
     try {
         Map<Id, Update_Event__e> journeyEventMap = new Map<Id, Update_Event__e>();
         List<Event__c> eventList = new List<Event__c>();
+        List<Lead> leadsToUpdate = new List<Lead>();
         for (Update_Event__e event : Trigger.new) {
+            if (event.ObjectName__c == 'Lead' && event.FieldName__c == 'OwnerId' &&
+                String.isNotBlank(event.ObjectId__c) && String.isNotBlank(event.Field_Value__c)) {
+                leadsToUpdate.add(new Lead(
+                    Id = event.ObjectId__c,
+                    OwnerId = event.Field_Value__c
+                ));
+            }
             if (event.ObjectName__c == 'Journey__c' && event.ObjectId__c != null) {
                 journeyEventMap.put(event.ObjectId__c, event);
                 
@@ -19,6 +27,18 @@ trigger trg_JourneyUpdateEvent on Update_Event__e (after insert) {
         }
         if(!eventList.isEmpty()) {
             Database.update(eventList, false);
+        }
+        if (!leadsToUpdate.isEmpty()) {
+            Database.SaveResult[] results = Database.update(
+                leadsToUpdate, false, AccessLevel.SYSTEM_MODE);
+            for (Integer i = 0; i < results.size(); i++) {
+                if (!results[i].isSuccess()) {
+                    for (Database.Error error : results[i].getErrors()) {
+                        ExceptionHandling.Exception('trg_JourneyUpdateEvent', 'Lead owner update',
+                            String.valueOf(leadsToUpdate[i].Id) + ': ' + error.getMessage());
+                    }
+                }
+            }
         }
         
         if (!journeyEventMap.isEmpty()) {

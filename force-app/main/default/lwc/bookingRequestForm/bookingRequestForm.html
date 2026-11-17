@@ -1,117 +1,210 @@
 <template>
-    <article class="card" aria-labelledby="booking-title">
-        <header class="card-head">
-            <template lwc:if={showLogo}>
-                <img class="card-logo" src={logoUrl} alt="Safexpress" onerror={handleLogoError} />
-            </template>
-            <h2 id="booking-title" class="card-title">Book a Pickup Request</h2>
-        </header>
-
-        <div class="card-body">
-            <p class="booking-hint">Please share your details to raise a pickup request. All fields are required.</p>
-
-            <fieldset class="group">
-                <legend class="group-title">Your details</legend>
-                <lightning-input data-field="name" label="Full name" value={form.name}
-                    max-length="80" autocomplete="name" required read-only={readOnly}
-                    onchange={handleChange} onblur={handleBlur}></lightning-input>
-                <lightning-input data-field="mobileNumber" type="tel" label="Mobile number"
-                    placeholder="10-digit mobile number" value={form.mobileNumber} max-length="16"
-                    autocomplete="tel" required read-only={readOnly}
-                    onchange={handleChange} onblur={handleBlur}></lightning-input>
-                <lightning-input data-field="email" type="email" label="Email address"
-                    placeholder="name@company.com" value={form.email} max-length="80" autocomplete="email"
-                    message-when-type-mismatch="Kindly enter a valid email address (like name@company.com)."
-                    required read-only={readOnly}
-                    onchange={handleChange} onblur={handleBlur}></lightning-input>
-            </fieldset>
-
-            <fieldset class="group">
-                <legend class="group-title">Pickup and delivery</legend>
-                <ol class="route">
-                    <li class={pickup.stopClass}>
-                        <span class="route-marker" aria-hidden="true"></span>
-                        <lightning-input data-field="pickupPincode" type="tel" label="Pickup pincode"
-                            placeholder="6-digit pincode" value={form.pickupPincode} max-length="6"
-                            autocomplete="postal-code" required read-only={readOnly}
-                            onchange={handleChange} onblur={handleBlur}></lightning-input>
-                        <div class="pin-status" aria-live="polite">
-                            <template lwc:if={pickup.checking}>
-                                <p class="pin-note"><span class="pin-spinner" aria-hidden="true"></span>Checking pincode…</p>
-                            </template>
-                            <template lwc:elseif={pickup.ok}>
-                                <div class="pin-found">
-                                    <lightning-icon icon-name="utility:success" variant="success" size="x-small"
-                                        alternative-text="Pincode verified"></lightning-icon>
-                                    <div>
-                                        <p class="pin-city">{pickup.city}</p>
-                                        <p class="pin-area">{pickup.area}</p>
-                                    </div>
-                                </div>
-                            </template>
-                            <template lwc:elseif={pickup.unavailable}>
-                                <p class="pin-note">We will verify this pincode when you submit.</p>
-                            </template>
-                        </div>
-                        <lightning-textarea data-field="pickupAddress" label="Pickup address"
-                            placeholder="House or plot number, street, area, landmark"
-                            value={form.pickupAddress} max-length="255" required read-only={readOnly}
-                            onchange={handleChange} onblur={handleBlur}></lightning-textarea>
-                    </li>
-                    <li class={delivery.stopClass}>
-                        <span class="route-marker" aria-hidden="true"></span>
-                        <lightning-input data-field="deliveryPincode" type="tel" label="Delivery pincode"
-                            placeholder="6-digit pincode" value={form.deliveryPincode} max-length="6"
-                            required read-only={readOnly}
-                            onchange={handleChange} onblur={handleBlur}></lightning-input>
-                        <div class="pin-status" aria-live="polite">
-                            <template lwc:if={delivery.checking}>
-                                <p class="pin-note"><span class="pin-spinner" aria-hidden="true"></span>Checking pincode…</p>
-                            </template>
-                            <template lwc:elseif={delivery.ok}>
-                                <div class="pin-found">
-                                    <lightning-icon icon-name="utility:success" variant="success" size="x-small"
-                                        alternative-text="Pincode verified"></lightning-icon>
-                                    <div>
-                                        <p class="pin-city">{delivery.city}</p>
-                                        <p class="pin-area">{delivery.area}</p>
-                                    </div>
-                                </div>
-                            </template>
-                            <template lwc:elseif={delivery.unavailable}>
-                                <p class="pin-note">We will verify this pincode when you submit.</p>
-                            </template>
-                        </div>
-                    </li>
-                </ol>
-            </fieldset>
-
-            <fieldset class="group">
-                <legend class="group-title">Shipment</legend>
-                <div class="pair">
-                    <lightning-input data-field="approxWeight" type="number" label="Approx weight (kg)"
-                        value={form.approxWeight} step="0.01" min="0.01"
-                        message-when-bad-input="Kindly enter the weight in kg as a number."
-                        message-when-step-mismatch="Weight can have up to 2 decimals."
-                        message-when-range-underflow="Weight must be more than 0 kg."
-                        required read-only={readOnly}
-                        onchange={handleChange} onblur={handleBlur}></lightning-input>
-                    <lightning-input data-field="packageCount" type="number" label="Number of packages"
-                        value={form.packageCount} step="1" min="1" max="10000000"
-                        message-when-bad-input="Kindly enter the number of packages as a whole number."
-                        message-when-step-mismatch="Kindly enter a whole number of packages."
-                        message-when-range-underflow="There must be at least 1 package."
-                        message-when-range-overflow="Number of packages can be at most 1,00,00,000 (1 crore)."
-                        required read-only={readOnly}
-                        onchange={handleChange} onblur={handleBlur}></lightning-input>
-                </div>
-            </fieldset>
-
-            <template lwc:if={showStatus}>
-                <p class={statusClass} role="status" aria-live="polite">{statusText}</p>
-            </template>
+    <div class="sfx-card">
+        <div class="sfx-header">
+            <span class="sfx-logo-box"><img class="sfx-logo" src={logoUrl} alt="Safexpress" /></span>
+            <span class="sfx-title">🚚 Book a Pickup</span>
         </div>
 
-        <footer class="card-foot">Distribution Redefined</footer>
-    </article>
+        <!-- ===== Result: shown after "Submit Request" ===== -->
+        <template lwc:if={hasResult}>
+            <div class="sfx-body">
+                <div class="sfx-result-note">{resultNote}</div>
+                <div class="sfx-result-icon-wrap">
+                    <span class="sfx-result-icon" aria-hidden="true">✓</span>
+                </div>
+                <p class="sfx-result-headline">{resultHeadline}</p>
+                <div class="sfx-result-table">
+                    <div class="sfx-result-row">
+                        <span class="sfx-result-label">🎫 Case Number</span>
+                        <span class="sfx-result-value">{resultCaseNumber}</span>
+                    </div>
+                    <div class="sfx-result-row">
+                        <span class="sfx-result-label">👤 Name</span>
+                        <span class="sfx-result-value">{resultName}</span>
+                    </div>
+                    <div class="sfx-result-row">
+                        <span class="sfx-result-label">📍 Pickup</span>
+                        <span class="sfx-result-value">{resultPickup}</span>
+                    </div>
+                    <div class="sfx-result-row">
+                        <span class="sfx-result-label">🏁 Delivery</span>
+                        <span class="sfx-result-value">{resultDelivery}</span>
+                    </div>
+                    <div class="sfx-result-row">
+                        <span class="sfx-result-label">⚖️ Weight</span>
+                        <span class="sfx-result-value">{resultWeight}</span>
+                    </div>
+                    <div class="sfx-result-row">
+                        <span class="sfx-result-label">📦 Packages</span>
+                        <span class="sfx-result-value">{resultPackages}</span>
+                    </div>
+                </div>
+                <p class="sfx-result-footnote">Our team will contact you shortly.</p>
+            </div>
+        </template>
+
+        <!-- ===== Form ===== -->
+        <template lwc:else>
+            <div class="sfx-body">
+                <p class="sfx-intro">Please share your details below to raise a pickup request. All fields are required.</p>
+
+                <div class="sfx-progress"><div class="sfx-progress-bar" style={progressStyle}></div></div>
+                <p class="sfx-progress-text">{progressText}</p>
+
+                <!-- Your details -->
+                <div class="sfx-section-title">Your details</div>
+
+                <div class="sfx-field">
+                    <label class="sfx-label"><span class="sfx-req">*</span>👤 Full name</label>
+                    <div class="sfx-input-wrap">
+                        <input class={nameInputClass} type="text" maxlength="80" autocomplete="name"
+                            placeholder="Your full name" data-field="name" value={form.name}
+                            oninput={handleInput} onblur={handleBlur} />
+                        <template lwc:if={isNameOk}><span class="sfx-tick" aria-hidden="true">✓</span></template>
+                    </div>
+                    <template lwc:if={nameError}><p class="sfx-error">{nameError}</p></template>
+                </div>
+
+                <div class="sfx-field">
+                    <label class="sfx-label"><span class="sfx-req">*</span>📱 Mobile number</label>
+                    <div class="sfx-input-wrap">
+                        <input class={mobileInputClass} type="tel" inputmode="numeric" autocomplete="tel-national"
+                            placeholder="10-digit mobile number" data-field="mobileNumber" value={form.mobileNumber}
+                            oninput={handleInput} onblur={handleBlur} />
+                        <template lwc:if={isMobileOk}><span class="sfx-tick" aria-hidden="true">✓</span></template>
+                    </div>
+                    <template lwc:if={mobileError}><p class="sfx-error">{mobileError}</p></template>
+                </div>
+
+                <div class="sfx-field">
+                    <label class="sfx-label"><span class="sfx-req">*</span>✉️ Email address</label>
+                    <div class="sfx-input-wrap">
+                        <input class={emailInputClass} type="text" inputmode="email" autocomplete="email"
+                            autocapitalize="off" spellcheck="false"
+                            placeholder="name@company.com" data-field="email" value={form.email}
+                            oninput={handleInput} onblur={handleBlur} />
+                        <template lwc:if={isEmailOk}><span class="sfx-tick" aria-hidden="true">✓</span></template>
+                    </div>
+                    <template lwc:if={emailError}><p class="sfx-error">{emailError}</p></template>
+                </div>
+
+                <!-- Pickup and delivery -->
+                <div class="sfx-section-title">Pickup and delivery</div>
+
+                <div class={pickupPincodeStepClass}>
+                    <label class="sfx-label"><span class="sfx-req">*</span>📍 Pickup pincode</label>
+                    <div class="sfx-input-wrap">
+                        <input class={pickupPincodeInputClass} type="text" inputmode="numeric" autocomplete="postal-code"
+                            placeholder="6-digit pincode" data-field="pickupPincode" value={form.pickupPincode}
+                            oninput={handleInput} onblur={handleBlur} />
+                        <template lwc:if={isPickupPincodeOk}><span class="sfx-tick" aria-hidden="true">✓</span></template>
+                    </div>
+                    <template lwc:if={pickupPin.checking}><p class="sfx-hint">Checking pincode…</p></template>
+                    <template lwc:if={pickupPin.found}>
+                        <div class="sfx-location">
+                            <span class="sfx-check" aria-hidden="true">✓</span>
+                            <div>
+                                <p class="sfx-location-city">{pickupPin.city}</p>
+                                <p class="sfx-location-sub">{pickupPin.area}</p>
+                            </div>
+                        </div>
+                    </template>
+                    <template lwc:if={pickupPincodeError}><p class="sfx-error">{pickupPincodeError}</p></template>
+                </div>
+
+                <div class={pickupAddressStepClass}>
+                    <label class="sfx-label"><span class="sfx-req">*</span>🏠 Pickup address</label>
+                    <div class="sfx-input-wrap">
+                        <input class={pickupAddressInputClass} type="text" maxlength="255" autocomplete="street-address"
+                             placeholder="House or plot number, street, area, landmark" data-field="pickupAddress"
+                             value={form.pickupAddress} oninput={handleInput} onblur={handleBlur} />
+                        <template lwc:if={isPickupAddressOk}><span class="sfx-tick" aria-hidden="true">✓</span></template>
+                        <template lwc:if={isPickupAddressOk}><span class="sfx-tick sfx-tick-top" aria-hidden="true">✓</span></template>
+                    </div>
+                    <template lwc:if={pickupAddressError}><p class="sfx-error">{pickupAddressError}</p></template>
+                </div>
+
+                <div class={deliveryPincodeStepClass}>
+                    <label class="sfx-label"><span class="sfx-req">*</span>🏁 Delivery pincode</label>
+                    <div class="sfx-input-wrap">
+                        <input class={deliveryPincodeInputClass} type="text" inputmode="numeric"
+                            placeholder="6-digit pincode" data-field="deliveryPincode" value={form.deliveryPincode}
+                            oninput={handleInput} onblur={handleBlur} />
+                        <template lwc:if={isDeliveryPincodeOk}><span class="sfx-tick" aria-hidden="true">✓</span></template>
+                    </div>
+                    <template lwc:if={deliveryPin.checking}><p class="sfx-hint">Checking pincode…</p></template>
+                    <template lwc:if={deliveryPin.found}>
+                        <div class="sfx-location">
+                            <span class="sfx-check" aria-hidden="true">✓</span>
+                            <div>
+                                <p class="sfx-location-city">{deliveryPin.city}</p>
+                                <p class="sfx-location-sub">{deliveryPin.area}</p>
+                            </div>
+                        </div>
+                    </template>
+                    <template lwc:if={deliveryPincodeError}><p class="sfx-error">{deliveryPincodeError}</p></template>
+                </div>
+
+                <!-- Shipment -->
+                <div class="sfx-section-title">Shipment</div>
+
+                <div class="sfx-pair">
+                    <div class="sfx-field">
+                        <label class="sfx-label"><span class="sfx-req">*</span>⚖️ Approx weight (kg)</label>
+                        <div class="sfx-input-wrap">
+                            <input class={weightInputClass} type="text" inputmode="decimal"
+                                placeholder="e.g. 12.5" data-field="approxWeight" value={form.approxWeight}
+                                oninput={handleInput} onblur={handleBlur} />
+                            <template lwc:if={isWeightOk}><span class="sfx-tick" aria-hidden="true">✓</span></template>
+                        </div>
+                        <template lwc:if={weightError}><p class="sfx-error">{weightError}</p></template>
+                    </div>
+                    <div class="sfx-field">
+                        <label class="sfx-label"><span class="sfx-req">*</span>📦 Packages</label>
+                        <div class="sfx-input-wrap">
+                            <input class={packagesInputClass} type="text" inputmode="numeric"
+                                placeholder="e.g. 3" data-field="packageCount" value={form.packageCount}
+                                oninput={handleInput} onblur={handleBlur} />
+                            <template lwc:if={isPackagesOk}><span class="sfx-tick" aria-hidden="true">✓</span></template>
+                        </div>
+                        <template lwc:if={packagesError}><p class="sfx-error">{packagesError}</p></template>
+                    </div>
+                </div>
+
+                <template lwc:if={submitError}>
+                    <div class="sfx-alert sfx-alert-error">{submitError}</div>
+                </template>
+
+                <button type="button" class="sfx-submit" disabled={isSubmitDisabled} onclick={handleSubmitRequest}>
+                    {submitLabel}
+                </button>
+            </div>
+        </template>
+
+        <!-- Footer: app download links -->
+        <div class="sfx-footer">
+            <div class="sfx-footer-heading">
+                <span class="sfx-footer-line"></span>
+                <span class="sfx-footer-title">Get the Safexpress App</span>
+                <span class="sfx-footer-line"></span>
+            </div>
+
+            <div class="sfx-app-badges">
+                <a class="sfx-badge-link" href={androidAppUrl} target="_blank" rel="noopener noreferrer"
+                    title="Get it on Google Play">
+                    <img class="sfx-badge" src={androidBadgeUrl} alt="Get it on Google Play" />
+                </a>
+                <a class="sfx-badge-link" href={iosAppUrl} target="_blank" rel="noopener noreferrer"
+                    title="Download on the App Store">
+                    <img class="sfx-badge" src={iosBadgeUrl} alt="Download on the App Store" />
+                </a>
+            </div>
+
+            <div class="sfx-footer-heading">
+                <span class="sfx-footer-line"></span>
+                <span class="sfx-footer-tagline">One App, All Solutions, Always with You</span>
+                <span class="sfx-footer-line"></span>
+            </div>
+        </div>
+    </div>
 </template>

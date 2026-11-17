@@ -1,7 +1,7 @@
 /**
  * @File Name          : SafexpressUrgentDeliveryAction.cls
- * @Description        : Agentforce action that shows the urgent delivery form to the user
- *                       and returns the case outcome back to the chat agent.
+ * @Description        : Agentforce action that validates and processes the urgent delivery form
+ *                       data, creates the case, and returns the outcome to the chat agent.
  * @Author             : Rohit Deshmukh
  */
 public without sharing class SafexpressUrgentDeliveryAction {
@@ -29,13 +29,13 @@ public without sharing class SafexpressUrgentDeliveryAction {
         @InvocableVariable(label='Case Number')
         public String caseNumber;
 
-        @InvocableVariable(label='Outcome' description='CREATED, EXISTING, or NOT_SUBMITTED')
+        @InvocableVariable(label='Outcome' description='CREATED, EXISTING, VALIDATION_ERROR, or ERROR')
         public String outcome;
     }
 
     @InvocableMethod(
         label='Submit Urgent Delivery Form'
-        description='Shows the Safexpress urgent delivery form to collect contact details and returns the case outcome.'
+        description='Processes the Safexpress urgent delivery form data, validates it, creates a case if valid, and returns the outcome.'
     )
     public static List<Response> execute(List<Request> requests) {
         List<Response> responses = new List<Response>();
@@ -44,39 +44,33 @@ public without sharing class SafexpressUrgentDeliveryAction {
             SafexpressUrgentDeliveryForm form = req.formData;
             Response res = new Response();
 
-            if (form == null || String.isBlank(form.caseNumber)) {
-                res.outcome = 'NOT_SUBMITTED';
-                res.resultMessage = 'The request was not submitted. Please fill in your mobile number and email ID, then submit the form.';
+            if (form == null || String.isBlank(form.waybillNumber)) {
+                res.outcome = 'VALIDATION_ERROR';
+                res.resultMessage = 'The request was missing data. Please fill out the form completely.';
                 responses.add(res);
                 continue;
             }
 
-            // Confirm the case really exists in the database
-            List<Case> cases = Database.queryWithBinds(
-                'SELECT CaseNumber, Status, WaybillNo__c FROM Case WHERE CaseNumber = :caseNumber LIMIT 1',
-                new Map<String, Object>{ 'caseNumber' => form.caseNumber.trim() },
-                AccessLevel.SYSTEM_MODE
-            );
+            // Delegate server-side validation, deduplication, and DML creation to your existing Controller
+            SafexpressUrgentDeliveryController.UrgentDeliveryResult submitRes = 
+                SafexpressUrgentDeliveryController.submitRequest(
+                    form.waybillNumber,
+                    form.mobileNumber,
+                    form.emailId,
+                    form.instructions,
+                    req.shipmentStatus
+                );
 
-            if (cases.isEmpty()) {
-                res.outcome = 'NOT_SUBMITTED';
-                res.resultMessage = 'We could not confirm your urgent delivery request. Please submit the form again.';
-                responses.add(res);
-                continue;
-            }
+            res.outcome = submitRes.outcome;
+            res.caseNumber = submitRes.caseNumber;
 
-            Case c = cases[0];
-            res.caseNumber = c.CaseNumber;
-            res.outcome = form.outcome;
-
-            if (form.outcome == 'CREATED') {
-                res.resultMessage = 'Your urgent delivery request has been successfully logged. Case number ' + c.CaseNumber 
-                    + ' for waybill ' + c.WaybillNo__c + '.';
-            } else if (form.outcome == 'EXISTING') {
-                res.resultMessage = 'An active support case ' + c.CaseNumber + ' is already open for waybill ' 
-                    + c.WaybillNo__c + '. Our team is actively working on it.';
+            if (submitRes.outcome == 'CREATED') {
+                res.resultMessage = 'Your urgent delivery request has been successfully logged. Case number ' + submitRes.caseNumber + ' created.';
+            } else if (submitRes.outcome == 'EXISTING') {
+                res.resultMessage = 'An active support case ' + submitRes.caseNumber + ' is already open for this waybill. Our team is actively working on it.';
             } else {
-                res.resultMessage = form.message;
+                // This gracefully handles VALIDATION_ERROR and ERROR outcomes, passing your exact Apex rejection reasons back to the AI.
+                res.resultMessage = submitRes.message; 
             }
 
             responses.add(res);

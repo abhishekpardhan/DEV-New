@@ -141,31 +141,6 @@
         </rules>
     </decisions>
     <decisions>
-        <name>If_Checked_GST_Is_Saved_GST</name>
-        <label>If Checked GST Is Saved GST</label>
-        <locationX>968</locationX>
-        <locationY>1406</locationY>
-        <defaultConnector>
-            <targetReference>Which_Inactive_Screen</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Different GST</defaultConnectorLabel>
-        <rules>
-            <name>Same_GST</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>fSameAsSavedGst</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Update_Lead_Status_Only</targetReference>
-            </connector>
-            <label>Same GST</label>
-        </rules>
-    </decisions>
-    <decisions>
         <name>If_State_Matches</name>
         <label>If State Matches</label>
         <locationX>440</locationX>
@@ -240,7 +215,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>If_Checked_GST_Is_Saved_GST</targetReference>
+                <targetReference>Which_Inactive_Screen</targetReference>
             </connector>
             <label>Not Found</label>
         </rules>
@@ -262,7 +237,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>If_Checked_GST_Is_Saved_GST</targetReference>
+                <targetReference>Which_Inactive_Screen</targetReference>
             </connector>
             <label>Not Active</label>
         </rules>
@@ -352,11 +327,6 @@
         <expression>LEFT({!fGstin}, 2)</expression>
     </formulas>
     <formulas>
-        <name>fInactiveSaveNote</name>
-        <dataType>String</dataType>
-        <expression>IF({!fSameAsSavedGst}, &quot;GST Status on this Lead has been updated to &quot; &amp; {!Call_GST_Portal.2XX.data.Status} &amp; &quot;.&quot;, &quot;Nothing was saved, because this GST Number is not the one saved on the Lead.&quot;)</expression>
-    </formulas>
-    <formulas>
         <name>fLoopStateMatches</name>
         <dataType>Boolean</dataType>
         <expression>OR(
@@ -377,12 +347,7 @@
     <formulas>
         <name>fPortalCompany</name>
         <dataType>String</dataType>
-        <expression>IF(ISBLANK({!Call_GST_Portal.2XX.data.TradeName}), {!Call_GST_Portal.2XX.data.LegalName}, {!Call_GST_Portal.2XX.data.TradeName})</expression>
-    </formulas>
-    <formulas>
-        <name>fSameAsSavedGst</name>
-        <dataType>Boolean</dataType>
-        <expression>{!fGstin} = UPPER(TRIM({!get_Lead.GST_Number__c}))</expression>
+        <expression>{!Call_GST_Portal.2XX.data.TradeName}</expression>
     </formulas>
     <formulas>
         <name>fState</name>
@@ -562,36 +527,15 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>Pan_Number__c</field>
+            <value>
+                <elementReference>fPan</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>State</field>
             <value>
                 <elementReference>fStateToSave</elementReference>
-            </value>
-        </inputAssignments>
-        <object>Lead</object>
-    </recordUpdates>
-    <recordUpdates>
-        <name>Update_Lead_Status_Only</name>
-        <label>Update Lead Status Only</label>
-        <locationX>968</locationX>
-        <locationY>1514</locationY>
-        <connector>
-            <targetReference>Which_Inactive_Screen</targetReference>
-        </connector>
-        <faultConnector>
-            <targetReference>Fault_Screen</targetReference>
-        </faultConnector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>recordId</elementReference>
-            </value>
-        </filters>
-        <inputAssignments>
-            <field>GST_Status__c</field>
-            <value>
-                <elementReference>Call_GST_Portal.2XX.data.Status</elementReference>
             </value>
         </inputAssignments>
         <object>Lead</object>
@@ -802,7 +746,7 @@
         <allowPause>false</allowPause>
         <fields>
             <name>Not_Active_Message</name>
-            <fieldText>{!tPortalResult}&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;This GST Number is not active (status: {!Call_GST_Portal.2XX.data.Status}).&lt;/strong&gt; Only GST Numbers with status ACT or PRO can be saved.&lt;/p&gt;&lt;p&gt;{!fInactiveSaveNote}&lt;/p&gt;</fieldText>
+            <fieldText>{!tPortalResult}&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;This GST Number is not active (status: {!Call_GST_Portal.2XX.data.Status}).&lt;/strong&gt; Only GST Numbers with status ACT or PRO can be saved. Nothing was saved to the Lead.&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
             <styleProperties>
                 <verticalAlignment>
@@ -829,7 +773,7 @@
         </connector>
         <fields>
             <name>Not_Registered_Message</name>
-            <fieldText>&lt;p&gt;GST Number {!fGstin} is not registered on the GST portal.&lt;/p&gt;&lt;p&gt;{!fInactiveSaveNote}&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;GST Number {!fGstin} is not registered on the GST portal. Nothing was saved to the Lead.&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
             <styleProperties>
                 <verticalAlignment>
@@ -889,6 +833,7 @@
                 </width>
             </styleProperties>
         </fields>
+        <nextOrFinishButtonLabel>Done</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
     </screens>

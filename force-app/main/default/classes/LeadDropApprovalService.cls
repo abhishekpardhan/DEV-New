@@ -13,6 +13,11 @@
 *                                                               and documentation
 **/
 public without sharing class LeadDropApprovalService {
+    @TestVisible
+    private static Boolean forceExceptionForTest = false;
+    @TestVisible
+    private static Boolean forceExceptionForInnerCatch = false;
+    private class TestException extends Exception {}
     /**
 * Submits Leads for approval when their Status changes to Dropped.
 *
@@ -41,12 +46,16 @@ public without sharing class LeadDropApprovalService {
         if (!ApexCommonUtils.isFeatureEnabled()) {
             return;
         }
+        try{
+            if (Test.isRunningTest() && forceExceptionForTest) {
+                throw new TestException('Forced exception for unit testing.');
+            }
         
         // Validate the input collections.
         if (newList == null || newList.isEmpty() || oldMap == null) {
             return;
         }
-        try{
+        
             Map<Id,Lead> leadMap = new Map<Id,Lead>();
             List<Id> leadIds = new List<Id>();
             List<Approval.ProcessSubmitRequest> requests = new List<Approval.ProcessSubmitRequest>();
@@ -93,6 +102,9 @@ public without sharing class LeadDropApprovalService {
             //Submit the requests using partial-success processing.
             List<Approval.ProcessResult> results;
             try {
+                if (Test.isRunningTest() && forceExceptionForInnerCatch) {
+                    throw new TestException('Forced exception for unit testing.');
+                }
                 results = Approval.process(requests, false);
             } catch (Exception ex) {
                 // If the bulk submission throws, associate the error with

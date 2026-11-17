@@ -75,10 +75,8 @@ public without sharing class SafexpressUrgentDeliveryController {
         // 2. STATUS RESOLUTION & GATE
         String statusCheck = shipmentStatus != null ? shipmentStatus.trim().toUpperCase() : '';
         
-        // Fallback: If Agentforce failed to pass shipmentStatus down to LWC, attempt API lookup
         if (String.isBlank(statusCheck)) {
             try {
-                // If your org has GetWayBillStatusAPI, retrieve the real-time status dynamically
                 Type apiType = Type.forName('GetWayBillStatusAPI');
                 if (apiType != null) {
                     Map<String, Object> apiRes = (Map<String, Object>) JSON.deserializeUntyped(
@@ -93,11 +91,9 @@ public without sharing class SafexpressUrgentDeliveryController {
             }
         }
 
-        // Check against allowed statuses
         Boolean isEligible = String.isNotBlank(statusCheck) && 
             (statusCheck.contains('TRANSIT') || statusCheck.contains('ARRIVED'));
 
-        // If status is confirmed and NOT eligible, reject
         if (String.isNotBlank(statusCheck) && !isEligible) {
             return validationError(result, 'Urgent delivery is strictly restricted to shipments currently In Transit or Arrived at Destination.');
         }
@@ -151,13 +147,30 @@ public without sharing class SafexpressUrgentDeliveryController {
                 newCase.Description = 'Raised via: Safexpress chat (Urgent Delivery form)';
             }
 
+            // Force Salesforce to run the active Case Assignment Rules
+            Database.DMLOptions caseDml = new Database.DMLOptions();
+            caseDml.assignmentRuleHeader.useDefaultRule = true;
+            newCase.setOptions(caseDml);
+
             Database.insert(newCase, AccessLevel.SYSTEM_MODE);
-            Case insertedCase = [SELECT CaseNumber, Status FROM Case WHERE Id = :newCase.Id LIMIT 1];
+            
+            // --- FIX: Query the inserted case using SYSTEM_MODE so the Bot User can see the CaseNumber even after Queue assignment ---
+            List<Case> insertedCases = Database.queryWithBinds(
+                'SELECT CaseNumber, Status FROM Case WHERE Id = :caseId LIMIT 1',
+                new Map<String, Object>{ 'caseId' => newCase.Id },
+                AccessLevel.SYSTEM_MODE
+            );
             
             result.outcome = 'CREATED';
-            result.caseNumber = insertedCase.CaseNumber;
-            result.caseStatus = insertedCase.Status;
-            result.message = 'Your complaint has been registered. Case #' + insertedCase.CaseNumber + ' created.';
+            if (!insertedCases.isEmpty()) {
+                result.caseNumber = insertedCases[0].CaseNumber;
+                result.caseStatus = insertedCases[0].Status;
+                result.message = 'Your urgent delivery request has been successfully logged. Your reference case number is ' + insertedCases[0].CaseNumber + '.';
+            } else {
+                result.caseNumber = 'Confirmed';
+                result.caseStatus = 'New';
+                result.message = 'Your urgent delivery request has been logged successfully.';
+            }
             return result;
 
         } catch (Exception ex) {
@@ -188,6 +201,10 @@ public without sharing class SafexpressUrgentDeliveryController {
 
     private static final List<String> SAFEXPRESS_VARIANTS = new List<String>{ 'safexpres', 'safeexpres', 'safexprs' };
     
+    private static final List<String> APPROVED_TLDS = new List<String>{
+        '.com', '.in', '.co.in', '.net', '.org', '.co', '.io', '.biz', '.info', '.edu', '.gov', '.ac.in', '.org.in', '.net.in'
+    };
+
     private static final Set<String> INVALID_DOMAINS = new Set<String>{
         'gmai.com', 'gamil.com', 'yhoo.com', 'hotmai.com', 'outlok.com', 'yahmail.com'
     };
@@ -253,16 +270,24 @@ public without sharing class SafexpressUrgentDeliveryController {
         if (regexFind('[0-9]', domain)) return 'The email domain (after @) cannot contain numbers.';
         if (!Pattern.matches('^[a-z]+(-[a-z]+)*(\\.[a-z]+(-[a-z]+)*)*\\.[a-z]{2,6}$', domain)) return 'Please enter a valid email address.';
 
+        Boolean hasValidTLD = false;
+        for (String tld : APPROVED_TLDS) {
+            if (domain.endsWith(tld)) {
+                hasValidTLD = true;
+                break;
+            }
+        }
+        if (!hasValidTLD) {
+            return 'Please provide a valid email domain (e.g., .com, .in).';
+        }
+
         if (INVALID_DOMAINS.contains(domain)) return 'Please check the email domain for typos.';
         
         for (String profanityWord : PROFANITY) {
             if (localPart.contains(profanityWord)) return 'Please provide a valid and appropriate email address.';
         }
-
-        if (localPart.replaceAll('[^0-9]', '').length() > 2) return 'Email name can contain at most 2 numbers.';
         
         if (regexFind('(.)\\1{2,}', localPart)) return 'This email address doesn\'t look valid. Please enter your real email address.';
-        
         if (regexFind('(.{2,})\\1{2,}', localPart)) return 'This email address doesn\'t look valid. Please enter your real email address.';
 
         String letters = localPart.replaceAll('[^a-z]', '');
@@ -286,6 +311,7 @@ public without sharing class SafexpressUrgentDeliveryController {
         for (String seg : localPart.split('\\.')) {
             if (looksRandom(seg.replaceAll('[^a-z]', ''))) return 'This email address doesn\'t look valid.';
         }
+        
         if (letters.length() >= 5 && !regexFind('[aeiouy]', letters)) return 'This email address doesn\'t look valid.';
 
         for (String label : nameLabels) {

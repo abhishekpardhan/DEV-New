@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Status_IsActive</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISNEW(),
+    NOT(IsVRBypassed__c),
+    NOT(ISPICKVAL( Status , &quot;Active&quot;))
+)</errorConditionFormula>
+    <errorMessage>Status should be Active only.</errorMessage>
+</ValidationRule>

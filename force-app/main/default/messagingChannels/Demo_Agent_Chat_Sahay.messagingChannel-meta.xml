@@ -12,6 +12,7 @@
         <response>Text STOP to opt out of further messages.</response>
         <type>HelpResponse</type>
     </automatedResponses>
+    <isAgentMessageResetInactivityEnabled>false</isAgentMessageResetInactivityEnabled>
     <isEstimatedWaitTimeEnabled>false</isEstimatedWaitTimeEnabled>
     <isFeedbackEnabled>false</isFeedbackEnabled>
     <isQueuePositionEnabled>false</isQueuePositionEnabled>

@@ -723,6 +723,16 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+                <componentName>runtime_slack:slackRecordChannel</componentName>
+                <identifier>runtime_slack_slackRecordChannel</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>Facet-66eb5be1-3a2a-406a-a460-29869d698da5</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
                 <componentInstanceProperties>
                     <name>body</name>
                     <value>Facet-94cd7246-16c7-44d4-bd4b-e72b1431452b</value>
@@ -747,6 +757,20 @@
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
                 <identifier>flexipage_tab3</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-66eb5be1-3a2a-406a-a460-29869d698da5</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>Slack</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:tab</componentName>
+                <identifier>flexipage_tab5</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-9ed54ae5-a663-4c35-b044-f75898a107f8</name>

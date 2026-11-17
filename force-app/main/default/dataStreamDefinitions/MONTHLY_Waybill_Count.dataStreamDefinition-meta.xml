@@ -12,4 +12,9 @@
     <masterLabel>MONTHLY_Waybill_Count</masterLabel>
     <mktDataLakeObject>MONTHLY_Waybill_Count__dll</mktDataLakeObject>
     <mktDataTranObject>MONTHLY_Waybill_Count</mktDataTranObject>
+    <parameters>
+        <fullName>MONTHLY_Waybill_Count_incrementalColumn</fullName>
+        <paramName>incrementalColumn</paramName>
+        <value>UPDT_DT</value>
+    </parameters>
 </DataStreamDefinition>

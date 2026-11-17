@@ -647,6 +647,21 @@
             <sequence>0</sequence>
         </externalDataTranFields>
         <externalDataTranFields>
+            <fullName>isQuietPushEnabled</fullName>
+            <creationType>Custom</creationType>
+            <datatype>B</datatype>
+            <externalName>isQuietPushEnabled</externalName>
+            <isCurrencyIsoCode>false</isCurrencyIsoCode>
+            <isDataRequired>false</isDataRequired>
+            <length>0</length>
+            <masterLabel>isQuietPushEnabled</masterLabel>
+            <mktDataTranField>MobileAppEventsV2_mobileProfile_87B60268.isQuietPushEnabled__c</mktDataTranField>
+            <precision>0</precision>
+            <primaryIndexOrder>0</primaryIndexOrder>
+            <scale>0</scale>
+            <sequence>0</sequence>
+        </externalDataTranFields>
+        <externalDataTranFields>
             <fullName>locale</fullName>
             <creationType>Custom</creationType>
             <datatype>S</datatype>

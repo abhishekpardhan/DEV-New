@@ -144,14 +144,14 @@
                     </div>
                 </template>
 
-                <div class="sfx-button-container">
-                    <button
-                        type="button"
-                        class="sfx-upload-btn"
-                        disabled={isSubmitDisabled}
-                        onclick={handleSubmit}>
-                        Submit Request
-                    </button>
+                <!-- DYNAMIC PROMPT FOR AGENTFORCE SUBMIT BUTTON -->
+                <div class="sfx-submit-prompt" style="text-align: center; margin-top: 15px; padding: 10px; background: #f9f9f9; border-radius: 4px;">
+                    <template lwc:if={isSubmitDisabled}>
+                        <p class="sfx-hint" style="color: #666; font-size: 0.9em; margin: 0;">Please complete all required fields to activate the Submit button below.</p>
+                    </template>
+                    <template lwc:else>
+                        <p class="sfx-ready-hint" style="color: #2e844a; font-weight: 600; margin: 0;">✅ All details provided. Please click the grey "Submit" button below to log your request.</p>
+                    </template>
                 </div>
             </template>
 

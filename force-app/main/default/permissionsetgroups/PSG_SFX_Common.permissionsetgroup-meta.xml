@@ -2,6 +2,8 @@
 <PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
     <hasActivationRequired>false</hasActivationRequired>
     <label>PSG SFX Common</label>
+    <permissionSets>PS_Journey_Event_Management</permissionSets>
+    <permissionSets>PS_Lead_Callout_Access</permissionSets>
     <permissionSets>Slack_user</permissionSets>
     <status>Updated</status>
 </PermissionSetGroup>

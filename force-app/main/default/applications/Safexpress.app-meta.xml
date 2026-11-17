@@ -113,6 +113,24 @@
     <navType>Standard</navType>
     <profileActionOverrides>
         <actionName>View</actionName>
+        <content>Event_Record_Page3</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Event__c</pageOrSobjectType>
+        <recordType>Event__c.New_Event</recordType>
+        <type>Flexipage</type>
+        <profile>SFX Oversight</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Event_Record_Page3</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Event__c</pageOrSobjectType>
+        <recordType>Event__c.New_Event</recordType>
+        <type>Flexipage</type>
+        <profile>SFX Oversight</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
         <content>Account_Record_Page</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>

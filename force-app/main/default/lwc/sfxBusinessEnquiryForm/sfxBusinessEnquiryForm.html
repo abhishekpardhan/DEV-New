@@ -2,126 +2,208 @@
     <div class="sfx-card">
         <div class="sfx-header">
             <span class="sfx-logo-box"><img class="sfx-logo" src={logoUrl} alt="Safexpress" /></span>
-            <span class="sfx-title">Business Enquiry</span>
+            <span class="sfx-title">🤝 Business Enquiry</span>
         </div>
 
-        <div class="sfx-body">
-            <p class="sfx-intro">Please share your details to register a business enquiry. All fields are required.</p>
+        <!-- ===== Result: shown after "Submit Request" ===== -->
+        <template lwc:if={hasResult}>
+            <div class="sfx-body">
+                <div class={resultNoteClass}>{resultNote}</div>
+                <div class="sfx-result-icon-wrap">
+                    <span class={resultIconClass} aria-hidden="true">{resultIcon}</span>
+                </div>
+                <p class={resultHeadlineClass}>{resultHeadline}</p>
+                <div class="sfx-result-table">
+                    <div class="sfx-result-row">
+                        <span class="sfx-result-label">🎫 Case Number</span>
+                        <span class="sfx-result-value">{resultCaseNumber}</span>
+                    </div>
+                    <div class="sfx-result-row">
+                        <span class="sfx-result-label">👤 Name</span>
+                        <span class="sfx-result-value">{resultName}</span>
+                    </div>
+                    <div class="sfx-result-row">
+                        <span class="sfx-result-label">🏢 Organisation</span>
+                        <span class="sfx-result-value">{resultOrganisation}</span>
+                    </div>
+                    <div class="sfx-result-row">
+                        <span class="sfx-result-label">📍 Location</span>
+                        <span class="sfx-result-value">{resultLocation}</span>
+                    </div>
+                </div>
+                <p class="sfx-result-footnote">Our team will contact you shortly.</p>
+            </div>
+        </template>
 
-            <!-- ===== Location and contact (verified first + duplicate check) ===== -->
-            <div class="sfx-section-title">Location and contact</div>
+        <!-- ===== Form ===== -->
+        <template lwc:else>
+            <div class="sfx-body">
+                <p class="sfx-intro">Please share your details below to register a business enquiry. All fields are required.</p>
 
-            <div class={pincodeStepClass}>
-                <label class="sfx-label"><span class="sfx-req">*</span>Pincode</label>
-                <input class={pincodeInputClass} type="text" inputmode="numeric" autocomplete="postal-code"
-                    placeholder="6-digit pincode" data-field="pincode" value={pincode}
-                    oninput={handleInput} onblur={handleBlur} />
-                <template lwc:if={isPincodeChecking}>
-                    <p class="sfx-hint">Checking pincode…</p>
-                </template>
-                <template lwc:if={hasLocation}>
-                    <div class="sfx-location">
-                        <span class="sfx-check" aria-hidden="true">✓</span>
-                        <div>
-                            <p class="sfx-location-city">{locationCity}</p>
-                            <p class="sfx-location-sub">{locationSubtext}</p>
+                <div class="sfx-progress"><div class="sfx-progress-bar" style={progressStyle}></div></div>
+                <p class="sfx-progress-text">{progressText}</p>
+
+                <!-- Location and contact (verified first + duplicate check) -->
+                <div class="sfx-section-title">Location and contact</div>
+
+                <div class={pincodeStepClass}>
+                    <label class="sfx-label"><span class="sfx-req">*</span>📍 Pincode</label>
+                    <div class="sfx-input-wrap">
+                        <input class={pincodeInputClass} type="text" inputmode="numeric" autocomplete="postal-code"
+                            placeholder="6-digit pincode" data-field="pincode" value={pincode}
+                            oninput={handleInput} onblur={handleBlur} />
+                        <template lwc:if={isPincodeValid}><span class="sfx-tick" aria-hidden="true">✓</span></template>
+                    </div>
+                    <template lwc:if={isPincodeChecking}>
+                        <p class="sfx-hint">Checking pincode…</p>
+                    </template>
+                    <template lwc:if={hasLocation}>
+                        <div class="sfx-location">
+                            <span class="sfx-check" aria-hidden="true">✓</span>
+                            <div>
+                                <p class="sfx-location-city">{locationCity}</p>
+                                <p class="sfx-location-sub">{locationSubtext}</p>
+                            </div>
                         </div>
+                    </template>
+                    <template lwc:if={pincodeFieldError}>
+                        <p class="sfx-error">{pincodeFieldError}</p>
+                    </template>
+                    <template lwc:if={pincodeServiceError}>
+                        <div class="sfx-alert sfx-alert-error">{pincodeServiceError}</div>
+                    </template>
+                </div>
+
+                <div class={mobileStepClass}>
+                    <label class="sfx-label"><span class="sfx-req">*</span>📱 Mobile number</label>
+                    <div class="sfx-input-wrap">
+                        <input class={mobileInputClass} type="tel" inputmode="numeric" autocomplete="tel-national"
+                            placeholder="10-digit mobile number" data-field="mobile" value={mobile}
+                            oninput={handleInput} onblur={handleBlur} />
+                        <template lwc:if={isMobileValid}><span class="sfx-tick" aria-hidden="true">✓</span></template>
+                    </div>
+                    <template lwc:if={mobileError}>
+                        <p class="sfx-error">{mobileError}</p>
+                    </template>
+                </div>
+
+                <div class={emailStepClass}>
+                    <label class="sfx-label"><span class="sfx-req">*</span>✉️ Email address</label>
+                    <div class="sfx-input-wrap">
+                        <input class={emailInputClass} type="text" inputmode="email" autocomplete="email"
+                            autocapitalize="off" spellcheck="false"
+                            placeholder="name@company.com" data-field="email" value={email}
+                            oninput={handleInput} onblur={handleBlur} />
+                        <template lwc:if={isEmailValid}><span class="sfx-tick" aria-hidden="true">✓</span></template>
+                    </div>
+                    <template lwc:if={emailError}>
+                        <p class="sfx-error">{emailError}</p>
+                    </template>
+                </div>
+
+                <template lwc:if={isDupChecking}>
+                    <p class="sfx-hint">Checking your details…</p>
+                </template>
+                <template lwc:if={isDuplicate}>
+                    <div class="sfx-alert sfx-alert-info">
+                        <p class="sfx-alert-title">Enquiry already registered</p>
+                        <p>{dupMessage}</p>
+                        <!-- Only before the chat Submit has been used -->
+                        <template lwc:if={showDupSubmitHint}>
+                            <p>Click Submit below to continue.</p>
+                        </template>
                     </div>
                 </template>
-                <template lwc:if={pincodeFieldError}>
-                    <p class="sfx-error">{pincodeFieldError}</p>
+                <template lwc:if={isDupError}>
+                    <div class="sfx-alert sfx-alert-error">
+                        {dupMessage}
+                        <button type="button" class="sfx-link" onclick={handleRetryDuplicate}>Try again</button>
+                    </div>
                 </template>
-                <template lwc:if={pincodeServiceError}>
-                    <div class="sfx-alert sfx-alert-error">{pincodeServiceError}</div>
+
+                <!-- Your details (unlocked only after the checks above pass) -->
+                <template lwc:if={showDetails}>
+                    <div class="sfx-section-title">Your details</div>
+                    <template lwc:if={showLockNote}>
+                        <p class="sfx-lock-note">Complete pincode, mobile number and email address above to continue.</p>
+                    </template>
+
+                    <div class="sfx-field">
+                        <label class="sfx-label"><span class="sfx-req">*</span>👤 Full name</label>
+                        <div class="sfx-input-wrap">
+                            <input class={nameInputClass} type="text" maxlength="80" autocomplete="name"
+                                placeholder="Your full name" data-field="fullName" value={fullName}
+                                disabled={isDetailsLocked} oninput={handleInput} onblur={handleBlur} />
+                            <template lwc:if={isNameOk}><span class="sfx-tick" aria-hidden="true">✓</span></template>
+                        </div>
+                        <template lwc:if={nameError}>
+                            <p class="sfx-error">{nameError}</p>
+                        </template>
+                    </div>
+
+                    <div class="sfx-field">
+                        <label class="sfx-label"><span class="sfx-req">*</span>💼 Designation</label>
+                        <div class="sfx-input-wrap">
+                            <input class={designationInputClass} type="text" maxlength="60" autocomplete="organization-title"
+                                placeholder="e.g. Logistics Manager" data-field="designation" value={designation}
+                                disabled={isDetailsLocked} oninput={handleInput} onblur={handleBlur} />
+                            <template lwc:if={isDesignationOk}><span class="sfx-tick" aria-hidden="true">✓</span></template>
+                        </div>
+                        <template lwc:if={designationError}>
+                            <p class="sfx-error">{designationError}</p>
+                        </template>
+                    </div>
+
+                    <div class="sfx-field">
+                        <label class="sfx-label"><span class="sfx-req">*</span>🏢 Organisation name</label>
+                        <div class="sfx-input-wrap">
+                            <input class={organisationInputClass} type="text" maxlength="80" autocomplete="organization"
+                                placeholder="Your company name" data-field="organisationName" value={organisationName}
+                                disabled={isDetailsLocked} oninput={handleInput} onblur={handleBlur} />
+                            <template lwc:if={isOrganisationOk}><span class="sfx-tick" aria-hidden="true">✓</span></template>
+                        </div>
+                        <template lwc:if={organisationError}>
+                            <p class="sfx-error">{organisationError}</p>
+                        </template>
+                    </div>
+                </template>
+
+                <template lwc:if={submitError}>
+                    <div class="sfx-alert sfx-alert-error">{submitError}</div>
+                </template>
+
+                <template lwc:if={showSubmitButton}>
+                    <button type="button" class="sfx-submit" disabled={isSubmitDisabled} onclick={handleSubmitRequest}>
+                        {submitLabel}
+                    </button>
                 </template>
             </div>
+        </template>
 
-            <div class={mobileStepClass}>
-                <label class="sfx-label"><span class="sfx-req">*</span>Mobile number</label>
-                <input class={mobileInputClass} type="tel" inputmode="numeric" autocomplete="tel-national"
-                    placeholder="10-digit mobile number" data-field="mobile" value={mobile}
-                    oninput={handleInput} onblur={handleBlur} />
-                <template lwc:if={mobileError}>
-                    <p class="sfx-error">{mobileError}</p>
-                </template>
+        <!-- Footer: app download links -->
+        <div class="sfx-footer">
+            <div class="sfx-footer-heading">
+                <span class="sfx-footer-line"></span>
+                <span class="sfx-footer-title">Get the Safexpress App</span>
+                <span class="sfx-footer-line"></span>
             </div>
 
-            <div class={emailStepClass}>
-                <label class="sfx-label"><span class="sfx-req">*</span>Email address</label>
-                <input class={emailInputClass} type="text" inputmode="email" autocomplete="email"
-                    autocapitalize="off" spellcheck="false"
-                    placeholder="name@company.com" data-field="email" value={email}
-                    oninput={handleInput} onblur={handleBlur} />
-                <template lwc:if={emailError}>
-                    <p class="sfx-error">{emailError}</p>
-                </template>
+            <div class="sfx-app-badges">
+                <a class="sfx-badge-link" href={androidAppUrl} target="_blank" rel="noopener noreferrer"
+                    title="Get it on Google Play">
+                    <img class="sfx-badge" src={androidBadgeUrl} alt="Get it on Google Play" />
+                </a>
+                <a class="sfx-badge-link" href={iosAppUrl} target="_blank" rel="noopener noreferrer"
+                    title="Download on the App Store">
+                    <img class="sfx-badge" src={iosBadgeUrl} alt="Download on the App Store" />
+                </a>
             </div>
 
-            <template lwc:if={isDupChecking}>
-                <p class="sfx-hint">Checking your details…</p>
-            </template>
-            <template lwc:if={isDuplicate}>
-                <div class="sfx-alert sfx-alert-info">
-                    <p class="sfx-alert-title">Enquiry already registered</p>
-                    <p>{dupMessage}</p>
-                    <p>Click Submit below to close this form. No new enquiry will be created.</p>
-                </div>
-            </template>
-            <template lwc:if={isDupError}>
-                <div class="sfx-alert sfx-alert-error">
-                    {dupMessage}
-                    <button type="button" class="sfx-link" onclick={handleRetryDuplicate}>Try again</button>
-                </div>
-            </template>
-
-            <!-- ===== Your details (unlocked only after the checks above pass) ===== -->
-            <template lwc:if={showDetails}>
-                <div class="sfx-section-title">Your details</div>
-                <template lwc:if={showLockNote}>
-                    <p class="sfx-lock-note">Complete pincode, mobile number and email address above to continue.</p>
-                </template>
-
-                <div class="sfx-field">
-                    <label class="sfx-label"><span class="sfx-req">*</span>Full name</label>
-                    <input class={nameInputClass} type="text" maxlength="80" autocomplete="name"
-                        placeholder="Your full name" data-field="fullName" value={fullName}
-                        disabled={isDetailsLocked} oninput={handleInput} onblur={handleBlur} />
-                    <template lwc:if={nameError}>
-                        <p class="sfx-error">{nameError}</p>
-                    </template>
-                </div>
-
-                <div class="sfx-field">
-                    <label class="sfx-label"><span class="sfx-req">*</span>Designation</label>
-                    <input class={designationInputClass} type="text" maxlength="60" autocomplete="organization-title"
-                        placeholder="e.g. Logistics Manager" data-field="designation" value={designation}
-                        disabled={isDetailsLocked} oninput={handleInput} onblur={handleBlur} />
-                    <template lwc:if={designationError}>
-                        <p class="sfx-error">{designationError}</p>
-                    </template>
-                </div>
-
-                <div class="sfx-field">
-                    <label class="sfx-label"><span class="sfx-req">*</span>Organisation name</label>
-                    <input class={organisationInputClass} type="text" maxlength="80" autocomplete="organization"
-                        placeholder="Your company name" data-field="organisationName" value={organisationName}
-                        disabled={isDetailsLocked} oninput={handleInput} onblur={handleBlur} />
-                    <template lwc:if={organisationError}>
-                        <p class="sfx-error">{organisationError}</p>
-                    </template>
-                </div>
-            </template>
-
-            <template lwc:if={isReady}>
-                <p class="sfx-ready">✓ All details look good. Click Submit below to register your enquiry.</p>
-            </template>
-
-            <!-- Shown when Submit is clicked before every check has passed -->
-            <template lwc:if={showSubmitError}>
-                <div class="sfx-alert sfx-alert-error">{formProblem}</div>
-            </template>
+            <div class="sfx-footer-heading">
+                <span class="sfx-footer-line"></span>
+                <span class="sfx-footer-tagline">One App, All Solutions, Always with You</span>
+                <span class="sfx-footer-line"></span>
+            </div>
         </div>
-
-        <div class="sfx-footer">Distribution Redefined</div>
     </div>
 </template>

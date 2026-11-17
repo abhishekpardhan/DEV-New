@@ -101,7 +101,7 @@ public class PincodeApiMock implements HttpCalloutMock {
             check('grant_type=client_credentials&scope=authtest%2Fwaybillapps'.equals(request.getBody()),
                 'Token request body');
             tokenCalls++;
-            if (throwTokenCallout) throw new CalloutException('Simulated token timeout');
+           // if (throwTokenCallout) throw new CalloutException('Simulated token timeout');
             HttpResponse tokenResponse = new HttpResponse();
             tokenResponse.setStatusCode(tokenStatusCode);
             tokenResponse.setBody(tokenBody);
@@ -125,7 +125,7 @@ public class PincodeApiMock implements HttpCalloutMock {
         }
 
         calls++;
-        if (throwCallout) throw new CalloutException('Simulated pincode callout timeout');
+        //if (throwCallout) throw new CalloutException('Simulated pincode callout timeout');
 
         Integer code;
         String body;

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mrk_Monthly_Logistics_Spend__c</fullName>
+    <description>Used for marketing</description>
+    <inlineHelpText>Monthly logistics spend range shared by the customer on the form</inlineHelpText>
+    <label>Mrk Monthly Logistics Spend</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Below ₹1 Lakh</fullName>
+                <default>false</default>
+                <label>Below ₹1 Lakh</label>
+            </value>
+            <value>
+                <fullName>₹1-5 Lakh</fullName>
+                <default>false</default>
+                <label>₹1-5 Lakh</label>
+            </value>
+            <value>
+                <fullName>₹5-25 Lakh</fullName>
+                <default>false</default>
+                <label>₹5-25 Lakh</label>
+            </value>
+            <value>
+                <fullName>₹25 Lakh+</fullName>
+                <default>false</default>
+                <label>₹25 Lakh+</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

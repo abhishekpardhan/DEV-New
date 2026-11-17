@@ -9,6 +9,9 @@
 * 1.0        26-10-2026                Aakash Kumar                   Initial Version
 **/
 public without sharing class LeadDuplicateService {
+    @TestVisible
+    private static Boolean forceExceptionForTest = false;
+    private class TestException extends Exception {}
     /**
 * Checks eligible Leads for duplicate PAN values against existing Leads
 * and qualifying Accounts. Duplicate records are rejected using addError().
@@ -29,6 +32,9 @@ public without sharing class LeadDuplicateService {
             return;
         }
         try{
+            if (Test.isRunningTest() && forceExceptionForTest) {
+                throw new TestException('Forced exception for unit testing.');
+            }
             List<Lead> eligibleLeads = new List<Lead>();
             Set<String> pans = new Set<String>();
             Set<Id> currentIds = new Set<Id>();
@@ -90,7 +96,7 @@ public without sharing class LeadDuplicateService {
             // Query Leads matching the PAN values collected earlier.
             // Current transaction records are excluded to prevent them from being treated as independent existing database duplicates.
             for (Lead existingLead : [SELECT Id, Owner.Name,Company, PAN_Number__c,GST_Number__c,FirstName, LastName FROM Lead 
-                                      WHERE PAN_Number__c IN :pans AND Id NOT IN :currentIds]) {
+                                      WHERE PAN_Number__c IN :pans AND Id NOT IN :currentIds WITH SYSTEM_MODE]) {
                                           String normalizedPan = String.isBlank(existingLead.PAN_Number__c) ? null : existingLead.PAN_Number__c.trim().toUpperCase();
                                           if (!existingLeadsByPan.containsKey(normalizedPan)) {
                                               existingLeadsByPan.put(normalizedPan, new List<Lead>());
@@ -100,7 +106,7 @@ public without sharing class LeadDuplicateService {
             Map<String, List<Account>> existingAccountsByPan = new Map<String, List<Account>>();
             for (Account existingAccount : [ SELECT Id, AccountNumber, Name, Owner.Name, Pan_No__c, 
                                             RecordType.DeveloperName FROM Account WHERE Pan_No__c IN :pans 
-                                            AND RecordType.DeveloperName IN (:ConstantUtility.PROSPECT_CUSTOMER_RT,:ConstantUtility.SFX_CUSTOMER_RT)] ) {
+                                            AND RecordType.DeveloperName IN (:ConstantUtility.PROSPECT_CUSTOMER_RT,:ConstantUtility.SFX_CUSTOMER_RT) WITH SYSTEM_MODE] ) {
                                                 String normalizedPan = String.isBlank(existingAccount.Pan_No__c) ? null : existingAccount.Pan_No__c.trim().toUpperCase();
                                                 if (!existingAccountsByPan.containsKey(normalizedPan)) {
                                                     existingAccountsByPan.put(normalizedPan, new List<Account>());

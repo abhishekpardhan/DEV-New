@@ -1,8 +1,6 @@
 import { LightningElement, api } from 'lwc';
-import submitRequest from '@salesforce/apex/SafexpressUrgentDeliveryController.submitRequest';
 import checkExistingCase from '@salesforce/apex/SafexpressUrgentDeliveryController.checkExistingCase';
 import SFX_LOGO from '@salesforce/resourceUrl/Safexpress_Logo';
-// New static resource names for the footer
 import IOS_BADGE from '@salesforce/resourceUrl/IosStoreLogo';
 import ANDROID_BADGE from '@salesforce/resourceUrl/AppStoreLogo';
 
@@ -13,13 +11,14 @@ const BLOCKED_DOMAIN_WORDS = ['test', 'testmail', 'testing', 'example', 'sample'
 const DISPOSABLE_DOMAIN_PARTS = ['mailinator', 'yopmail', 'tempmail', 'guerrillamail', 'trashmail', 'fakemail', 'throwaway', 'disposable', '10minute'];
 const KEYBOARD_RUNS = ['qwert', 'werty', 'asdfg', 'sdfgh', 'zxcvb', 'xcvbn', 'yuiop', 'hjkl', 'qazwsx'];
 
+const APPROVED_TLDS = ['.com', '.in', '.co.in', '.net', '.org', '.co', '.io', '.biz', '.info', '.edu', '.gov', '.ac.in', '.org.in', '.net.in'];
+
 const INVALID_DOMAINS = ['gmai.com', 'gamil.com', 'yhoo.com', 'hotmai.com', 'outlok.com', 'yahmail.com'];
 const PROFANITY = ['fuck', 'shit', 'bitch', 'asshole', 'dick', 'cunt', 'bastard', 'slut', 'whore', 'porn', 'scam', 'spam'];
 
 const MSG_EMAIL_REQUIRED = 'Email ID is required.';
 const MSG_EMAIL_FORMAT = 'Please enter a valid email address.';
 const MSG_EMAIL_DOMAIN_DIGITS = 'The email domain cannot contain numbers.';
-const MSG_EMAIL_TOO_MANY_DIGITS = 'Email name can contain at most 2 numbers.';
 const MSG_EMAIL_TEST = 'Test or dummy emails are not accepted. Please enter your real email address.';
 const MSG_EMAIL_RANDOM = "This email address doesn't look valid. Please enter a real email address.";
 const MSG_EMAIL_SAFEXPRESS = "Safexpress emails can't be used. Please enter a personal or company email.";
@@ -46,10 +45,13 @@ function emailRejectionReason(rawEmail) {
     if (/[0-9]/.test(domain)) return MSG_EMAIL_DOMAIN_DIGITS;
     if (!/^[a-z]+(-[a-z]+)*(\.[a-z]+(-[a-z]+)*)*\.[a-z]{2,6}$/.test(domain)) return MSG_EMAIL_FORMAT;
 
+    const hasValidTLD = APPROVED_TLDS.some(tld => domain.endsWith(tld));
+    if (!hasValidTLD) {
+        return 'Please provide a valid email domain (e.g., .com, .in).';
+    }
+
     if (INVALID_DOMAINS.includes(domain)) return 'Please check the email domain for typos.';
     if (PROFANITY.some((word) => local.includes(word))) return 'Please provide a valid and appropriate email address.';
-
-    if ((local.match(/[0-9]/g) || []).length > 2) return MSG_EMAIL_TOO_MANY_DIGITS;
     
     if (/(.)\1{2,}/.test(local)) return MSG_EMAIL_RANDOM;
     if (/(.{2,})\1{2,}/.test(local)) return MSG_EMAIL_RANDOM;
@@ -71,7 +73,21 @@ function emailRejectionReason(rawEmail) {
     return '';
 }
 
+function parseIncoming(val) {
+    if (!val) return null;
+    if (typeof val === 'string') {
+        try {
+            const parsed = JSON.parse(val);
+            return parsed && typeof parsed === 'object' ? parsed : null;
+        } catch (e) {
+            return null;
+        }
+    }
+    return typeof val === 'object' ? val : null;
+}
+
 const MAX_INSTRUCTIONS = 2000;
+const FIELDS = ['waybillNumber', 'mobileNumber', 'emailId', 'instructions'];
 
 export default class SafexpressUrgentDeliveryForm extends LightningElement {
     @api configuration;
@@ -80,36 +96,73 @@ export default class SafexpressUrgentDeliveryForm extends LightningElement {
     _statusChecked = false;
     _waybillInitialized = false;
 
+    connectedCallback() {
+        // Broadcast initial validity immediately so the grey button stays locked until the form is perfect
+        this.publishValue();
+    }
+
     @api
     get value() {
         return this._value;
     }
     set value(val) {
         if (!val) return;
-        this._value = val;
         
-        if (val.shipmentStatus && !this._statusChecked) {
+        let incoming = parseIncoming(val) || val;
+        
+        // UNWRAP AGENTFORCE PAYLOAD
+        if (typeof incoming === 'object') {
+            for (let key in incoming) {
+                let nested = parseIncoming(incoming[key]);
+                if (nested && typeof nested === 'object' && FIELDS.some(f => Object.prototype.hasOwnProperty.call(nested, f))) {
+                    incoming = nested;
+                    break;
+                }
+            }
+        }
+
+        // Absorb pre-filled data cleanly
+        if (incoming.waybillNumber) this.waybill = incoming.waybillNumber.replace(/[^\d]/g, '');
+        if (incoming.mobileNumber) this.mobile = incoming.mobileNumber;
+        if (incoming.emailId) this.email = incoming.emailId;
+        if (incoming.instructions) this.instructions = incoming.instructions;
+
+        if (incoming.waybillNumber && !this._waybillInitialized) {
+            this.touched.waybill = true;
+            this._waybillInitialized = true;
+        }
+
+        // Status Eligibility Check
+        if (incoming.shipmentStatus && !this._statusChecked) {
             this._statusChecked = true;
-            const status = val.shipmentStatus.toUpperCase();
+            const status = incoming.shipmentStatus.toUpperCase();
             
             if (!status.includes('TRANSIT') && !status.includes('ARRIVED')) {
                 this.result = {
                     outcome: 'NOT_ELIGIBLE',
-                    message: `Urgent delivery cannot be raised because the current shipment status is ${val.shipmentStatus}.`
+                    message: `Urgent delivery cannot be raised because the current shipment status is ${incoming.shipmentStatus}.`
                 };
-                this.publishValue(this.result);
+                this.publishValue();
                 return;
             }
         }
-        
-        if (val.waybillNumber && !this._waybillInitialized) {
-            this.waybill = val.waybillNumber.replace(/[^\d]/g, '');
-            this.touched.waybill = true;
-            this._waybillInitialized = true;
-            
-            if (this.isWaybillValid) {
-                this.runInitialDeduplicationCheck();
-            }
+
+        // If the Apex Action rejected the data and passed the form back, restore the EXISTING state
+        if (incoming.outcome === 'EXISTING') {
+            this.result = {
+                outcome: incoming.outcome,
+                caseNumber: incoming.caseNumber,
+                message: incoming.message,
+                caseStatus: incoming.caseStatus || 'New',
+                fromChat: true
+            };
+        }
+
+        // Trigger deduplication if we have a valid waybill, otherwise immediately sync state to unlock button
+        if (this.isWaybillValid && this.waybill !== this.lastCheckedWaybill) {
+            this.runInitialDeduplicationCheck();
+        } else {
+            this.publishValue(); 
         }
     }
 
@@ -127,7 +180,6 @@ export default class SafexpressUrgentDeliveryForm extends LightningElement {
 
     lastCheckedWaybill = ''; 
     isCheckingDuplicate = false;
-    isSubmitting = false;
     progressText = '';
     errorMessage = '';
     result = null;
@@ -176,46 +228,58 @@ export default class SafexpressUrgentDeliveryForm extends LightningElement {
 
     get isWaybillDisabled() { return this.isBusy || this._waybillInitialized; }
     get showForm() { return !this.result; }
-    get isBusy() { return this.isSubmitting || this.isCheckingDuplicate; }
+    get isBusy() { return this.isCheckingDuplicate; }
     get requiredChecks() { return [this.isWaybillValid, this.isMobileValid, this.isEmailValid]; }
     get totalSteps() { return this.requiredChecks.length; }
     get completedCount() { return this.requiredChecks.filter(Boolean).length; }
-    get progressStyle() { return `width: ${(this.completedCount / this.totalSteps) * 100}%;`; }
+    
+    // Core validity check for the Agentforce grey button
     get isSubmitDisabled() { return this.isBusy || this.completedCount < this.totalSteps || !this.isInstructionsValid; }
+
+    get progressStyle() { return `width: ${(this.completedCount / this.totalSteps) * 100}%;`; }
 
     get isExistingOutcome() { return this.result?.outcome === 'EXISTING'; }
     get resultIcon() { 
         if (this.result?.outcome === 'NOT_ELIGIBLE') return 'utility:error';
-        return this.isExistingOutcome ? 'utility:info' : 'utility:success'; 
+        return 'utility:info'; 
     }
     get resultVariant() { 
         if (this.result?.outcome === 'NOT_ELIGIBLE') return 'error';
-        return this.isExistingOutcome ? 'warning' : 'success'; 
+        return 'warning'; 
     }
+    
     get confirmNote() {
         if (this.result?.outcome === 'NOT_ELIGIBLE') return '⛔ Request Blocked';
-        return this.isExistingOutcome
-            ? '✅ A case is already open. Please click Submit below to confirm.'
-            : '✅ Your urgent request is logged. Please click Submit below to confirm.';
+        
+        // If it's an existing case, guide the user to finish the chat turn
+        if (this.isExistingOutcome) {
+             return `✅ An active case (${this.result?.caseNumber}) is already open. Click the grey 'Submit' button below to close this form and return to the chat.`;
+        }
+        return '✅ Form completed.';
     }
 
     async runInitialDeduplicationCheck() {
+        if (this.result && this.result.outcome === 'EXISTING') {
+            return;
+        }
+
         this.lastCheckedWaybill = this.waybill;
         this.isCheckingDuplicate = true;
         this.progressText = 'Checking case status...';
+        this.publishValue(); // Lock the button while querying
         
         try {
             const res = await checkExistingCase({ waybillNumber: this.waybill });
             
             if (res && res.outcome === 'EXISTING') {
                 this.result = res;
-                this.publishValue(res);
             }
         } catch (error) {
             console.error('Initial deduplication check failed: ', error);
         } finally {
             this.isCheckingDuplicate = false;
             this.progressText = '';
+            this.publishValue(); // Re-evaluate and unlock button
         }
     }
 
@@ -234,10 +298,11 @@ export default class SafexpressUrgentDeliveryForm extends LightningElement {
         this[field] = val;
         this.errorMessage = '';
 
-        // Instantly trigger deduplication check on the 12th keystroke
         if (field === 'waybill' && this.isWaybillValid && this.waybill !== this.lastCheckedWaybill) {
             this.runInitialDeduplicationCheck();
         }
+        
+        this.publishValue();
     }
 
     handleBlur(event) {
@@ -247,60 +312,31 @@ export default class SafexpressUrgentDeliveryForm extends LightningElement {
         if (field === 'waybill' && this.isWaybillValid && this.waybill !== this.lastCheckedWaybill) {
             this.runInitialDeduplicationCheck();
         }
+        
+        this.publishValue();
     }
 
-    async handleSubmit() {
-        this.errorMessage = '';
-        this.touched = { waybill: true, mobile: true, email: true, instructions: true };
+    publishValue() {
+        // If it's an existing case, we consider the form "valid" so the user can hit Submit and close it
+        const isValid = this.isExistingOutcome ? true : !this.isSubmitDisabled;
 
-        if (!this.isWaybillValid || !this.isMobileValid || !this.isEmailValid || !this.isInstructionsValid) {
-            this.errorMessage = 'Please correct the highlighted fields.';
-            return;
-        }
-
-        this.isSubmitting = true;
-        this.progressText = 'Processing your request...';
-
-        try {
-            const res = await submitRequest({
-                waybillNumber: this.waybill,
-                mobileNumber: this.mobile,
-                emailId: this.email,
-                instructions: this.instructions,
-                shipmentStatus: this._value?.shipmentStatus || ''
-            });
-
-            if (res.isError) {
-                this.errorMessage = res.message;
-                return;
-            }
-
-            this.result = res;
-            this.publishValue(res);
-
-        } catch (error) {
-            console.error('Urgent Delivery submit error: ', error);
-            this.errorMessage = error?.body?.message || error?.message || 'Something went wrong. Please try again.';
-        } finally {
-            this.isSubmitting = false;
-            this.progressText = '';
-        }
-    }
-
-    publishValue(res) {
         this._value = {
             waybillNumber: this.waybill,
             mobileNumber: this.mobile,
             emailId: this.email,
             instructions: this.instructions,
             shipmentStatus: this._value?.shipmentStatus || '',
-            caseNumber: res.caseNumber || '',
-            outcome: res.outcome || '',
-            message: res.message || ''
+            caseNumber: this.result?.caseNumber || '',
+            outcome: this.result?.outcome || '',
+            message: this.result?.message || ''
         };
+        
         this.dispatchEvent(
             new CustomEvent('valuechange', {
-                detail: { value: this._value },
+                detail: { 
+                    value: this._value,
+                    validity: isValid
+                },
                 bubbles: true,
                 composed: true
             })

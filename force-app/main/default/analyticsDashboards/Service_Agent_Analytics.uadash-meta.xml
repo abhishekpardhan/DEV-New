@@ -65,7 +65,7 @@
                 <colspan>130</colspan>
                 <column>1</column>
                 <row>17</row>
-                <rowspan>127</rowspan>
+                <rowspan>93</rowspan>
             </pageWidgets>
             <pageWidgets>
                 <analyticsDashboardWidget>button_7</analyticsDashboardWidget>
@@ -159,17 +159,10 @@
                 <rowspan>10</rowspan>
             </pageWidgets>
             <pageWidgets>
-                <analyticsDashboardWidget>text_8</analyticsDashboardWidget>
-                <colspan>130</colspan>
-                <column>1</column>
-                <row>76</row>
-                <rowspan>2</rowspan>
-            </pageWidgets>
-            <pageWidgets>
                 <analyticsDashboardWidget>visualization_2</analyticsDashboardWidget>
                 <colspan>127</colspan>
                 <column>3</column>
-                <row>116</row>
+                <row>82</row>
                 <rowspan>27</rowspan>
             </pageWidgets>
             <pageWidgets>
@@ -246,7 +239,7 @@
                 <analyticsDashboardWidget>text_12</analyticsDashboardWidget>
                 <colspan>41</colspan>
                 <column>3</column>
-                <row>112</row>
+                <row>78</row>
                 <rowspan>4</rowspan>
             </pageWidgets>
             <pageWidgets>
@@ -273,8 +266,8 @@
             <pageWidgets>
                 <analyticsDashboardWidget>txt_pageBorder</analyticsDashboardWidget>
                 <colspan>130</colspan>
-                <column>2</column>
-                <row>145</row>
+                <column>1</column>
+                <row>111</row>
                 <rowspan>2</rowspan>
             </pageWidgets>
             <pageWidgets>
@@ -288,28 +281,7 @@
                 <analyticsDashboardWidget>txt_effectivetab</analyticsDashboardWidget>
                 <colspan>130</colspan>
                 <column>1</column>
-                <row>110</row>
-                <rowspan>2</rowspan>
-            </pageWidgets>
-            <pageWidgets>
-                <analyticsDashboardWidget>txt_taskResolutionEmptyState</analyticsDashboardWidget>
-                <colspan>130</colspan>
-                <column>1</column>
-                <row>88</row>
-                <rowspan>4</rowspan>
-            </pageWidgets>
-            <pageWidgets>
-                <analyticsDashboardWidget>txt_taskResolutionDescription</analyticsDashboardWidget>
-                <colspan>130</colspan>
-                <column>1</column>
-                <row>92</row>
-                <rowspan>4</rowspan>
-            </pageWidgets>
-            <pageWidgets>
-                <analyticsDashboardWidget>button_enableEinsFeed</analyticsDashboardWidget>
-                <colspan>19</colspan>
-                <column>55</column>
-                <row>96</row>
+                <row>76</row>
                 <rowspan>2</rowspan>
             </pageWidgets>
         </pages>
@@ -813,7 +785,7 @@
                 <rowspan>3</rowspan>
             </pageWidgets>
             <pageWidgets>
-                <analyticsDashboardWidget>text_30</analyticsDashboardWidget>
+                <analyticsDashboardWidget>txt_ragDisabledDesc</analyticsDashboardWidget>
                 <colspan>130</colspan>
                 <column>1</column>
                 <row>81</row>
@@ -1226,7 +1198,7 @@
                 <colspan>130</colspan>
                 <column>1</column>
                 <row>17</row>
-                <rowspan>51</rowspan>
+                <rowspan>97</rowspan>
             </pageWidgets>
             <pageWidgets>
                 <analyticsDashboardWidget>button_17</analyticsDashboardWidget>
@@ -1372,7 +1344,7 @@
                 <analyticsDashboardWidget>txt_pageBorder</analyticsDashboardWidget>
                 <colspan>130</colspan>
                 <column>1</column>
-                <row>69</row>
+                <row>115</row>
                 <rowspan>2</rowspan>
             </pageWidgets>
             <pageWidgets>
@@ -1381,6 +1353,13 @@
                 <column>69</column>
                 <row>17</row>
                 <rowspan>3</rowspan>
+            </pageWidgets>
+            <pageWidgets>
+                <analyticsDashboardWidget>text_8</analyticsDashboardWidget>
+                <colspan>130</colspan>
+                <column>1</column>
+                <row>67</row>
+                <rowspan>2</rowspan>
             </pageWidgets>
             <pageWidgets>
                 <analyticsDashboardWidget>txt_trustEmptyState</analyticsDashboardWidget>
@@ -1394,6 +1373,27 @@
                 <colspan>19</colspan>
                 <column>55</column>
                 <row>41</row>
+                <rowspan>2</rowspan>
+            </pageWidgets>
+            <pageWidgets>
+                <analyticsDashboardWidget>txt_taskResolutionEmptyState</analyticsDashboardWidget>
+                <colspan>130</colspan>
+                <column>1</column>
+                <row>79</row>
+                <rowspan>4</rowspan>
+            </pageWidgets>
+            <pageWidgets>
+                <analyticsDashboardWidget>txt_taskResolutionDescription</analyticsDashboardWidget>
+                <colspan>130</colspan>
+                <column>1</column>
+                <row>83</row>
+                <rowspan>4</rowspan>
+            </pageWidgets>
+            <pageWidgets>
+                <analyticsDashboardWidget>button_enableEinsFeedTR</analyticsDashboardWidget>
+                <colspan>19</colspan>
+                <column>55</column>
+                <row>87</row>
                 <rowspan>2</rowspan>
             </pageWidgets>
         </pages>
@@ -1613,8 +1613,8 @@
             </pageWidgets>
             <pageWidgets>
                 <analyticsDashboardWidget>toggle_voice</analyticsDashboardWidget>
-                <colspan>30</colspan>
-                <column>100</column>
+                <colspan>52</colspan>
+                <column>78</column>
                 <row>22</row>
                 <rowspan>3</rowspan>
             </pageWidgets>
@@ -2834,7 +2834,7 @@
     <widgets>
         <analyticsDashboard>Service_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>Agent_Talk_Ratio_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -2931,22 +2931,6 @@
     <widgets>
         <analyticsDashboard>Service_Agent_Analytics</analyticsDashboard>
         <textWidgetDefs>
-            <parameters>{&quot;content&quot;:[{&quot;attributes&quot;:{&quot;color&quot;:&quot;#000000&quot;,&quot;size&quot;:&quot;14px&quot;},&quot;insert&quot;:&quot;Agent:&quot;,&quot;rules&quot;:[]},{&quot;attributes&quot;:{&quot;align&quot;:&quot;right&quot;},&quot;insert&quot;:&quot;\n&quot;,&quot;rules&quot;:[]}],&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;widgetIds&quot;:[]},&quot;conditionalFormattingRules&quot;:[]}</parameters>
-        </textWidgetDefs>
-        <type>text</type>
-        <widgetName>text_2</widgetName>
-    </widgets>
-    <widgets>
-        <analyticsDashboard>Service_Agent_Analytics</analyticsDashboard>
-        <textWidgetDefs>
-            <parameters>{&quot;content&quot;:[{&quot;attributes&quot;:{&quot;color&quot;:&quot;#000000&quot;,&quot;size&quot;:&quot;14px&quot;},&quot;insert&quot;:&quot;Modality:&quot;,&quot;rules&quot;:[]},{&quot;attributes&quot;:{&quot;align&quot;:&quot;right&quot;},&quot;insert&quot;:&quot;\n&quot;,&quot;rules&quot;:[]}],&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;widgetIds&quot;:[]},&quot;conditionalFormattingRules&quot;:[]}</parameters>
-        </textWidgetDefs>
-        <type>text</type>
-        <widgetName>text_5</widgetName>
-    </widgets>
-    <widgets>
-        <analyticsDashboard>Service_Agent_Analytics</analyticsDashboard>
-        <textWidgetDefs>
             <parameters>{&quot;content&quot;:[{&quot;attributes&quot;:{&quot;color&quot;:&quot;#2e2e2e&quot;,&quot;size&quot;:&quot;28px&quot;},&quot;insert&quot;:&quot;Agent Performance&quot;,&quot;rules&quot;:[]},{&quot;attributes&quot;:{&quot;align&quot;:&quot;left&quot;},&quot;insert&quot;:&quot;\n&quot;,&quot;rules&quot;:[]}],&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#F3F3F3&quot;,&quot;borderEdges&quot;:[],&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderWidth&quot;:1,&quot;borderRadius&quot;:0},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;widgetIds&quot;:[]},&quot;conditionalFormattingRules&quot;:[]}</parameters>
         </textWidgetDefs>
         <type>text</type>
@@ -3039,14 +3023,6 @@
             <version>66.0</version>
         </widgetActions>
         <widgetName>button_39</widgetName>
-    </widgets>
-    <widgets>
-        <analyticsDashboard>Service_Agent_Analytics</analyticsDashboard>
-        <textWidgetDefs>
-            <parameters>{&quot;content&quot;:[{&quot;attributes&quot;:{&quot;size&quot;:&quot;14px&quot;},&quot;insert&quot;:&quot;Filter by:&quot;,&quot;rules&quot;:[]},{&quot;attributes&quot;:{&quot;align&quot;:&quot;left&quot;},&quot;insert&quot;:&quot;\n&quot;,&quot;rules&quot;:[]}],&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;widgetIds&quot;:[]},&quot;conditionalFormattingRules&quot;:[]}</parameters>
-        </textWidgetDefs>
-        <type>text</type>
-        <widgetName>text_1</widgetName>
     </widgets>
     <widgets>
         <analyticsDashboard>Service_Agent_Analytics</analyticsDashboard>
@@ -3179,7 +3155,7 @@
     <widgets>
         <analyticsDashboard>Service_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>Average_Interaction_Per_Sessions_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -3199,7 +3175,7 @@
     <widgets>
         <analyticsDashboard>Service_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>Unique_Users_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -3219,7 +3195,7 @@
     <widgets>
         <analyticsDashboard>Service_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>Unique_Interaction_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -3239,7 +3215,7 @@
     <widgets>
         <analyticsDashboard>Service_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>Unique_Session_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -3248,7 +3224,7 @@
     <widgets>
         <analyticsDashboard>Service_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>Engagement_Rate_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -3257,7 +3233,7 @@
     <widgets>
         <analyticsDashboard>Service_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>Abandonment_Rate_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -3277,7 +3253,7 @@
     <widgets>
         <analyticsDashboard>Service_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>Escalation_Rate_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -3304,7 +3280,7 @@
     <widgets>
         <analyticsDashboard>Service_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>Success_Rate_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -3322,7 +3298,7 @@
     <widgets>
         <analyticsDashboard>Service_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>Deflection_Rate_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -3706,7 +3682,7 @@
     <widgets>
         <analyticsDashboard>Service_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>Agent_Quality_Score_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -3715,7 +3691,7 @@
     <widgets>
         <analyticsDashboard>Service_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>Interruption_Rate_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -3724,7 +3700,7 @@
     <widgets>
         <analyticsDashboard>Service_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>Error_Rate_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -3789,7 +3765,7 @@
     <widgets>
         <analyticsDashboard>Service_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>Agent_Response_Rate_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -3812,7 +3788,7 @@
     <widgets>
         <analyticsDashboard>Service_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>Session_Duration_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -4084,7 +4060,7 @@
     <widgets>
         <analyticsDashboard>Service_Agent_Analytics</analyticsDashboard>
         <textWidgetDefs>
-            <parameters>{&quot;content&quot;:[{&quot;attributes&quot;:{&quot;color&quot;:&quot;#5c5c5c&quot;,&quot;size&quot;:&quot;13px&quot;},&quot;insert&quot;:&quot;RAG metrics require RAG to be enabled. Enable it from Setup, wait for provisioning to complete&quot;,&quot;rules&quot;:[]},{&quot;attributes&quot;:{&quot;align&quot;:&quot;center&quot;},&quot;insert&quot;:&quot;\n&quot;,&quot;rules&quot;:[]},{&quot;attributes&quot;:{&quot;color&quot;:&quot;#5c5c5c&quot;,&quot;size&quot;:&quot;13px&quot;},&quot;insert&quot;:&quot;and for the related DMOs to be available in the Analytics Foundations SDM, then reconfigure the app.&quot;,&quot;rules&quot;:[]},{&quot;attributes&quot;:{&quot;align&quot;:&quot;center&quot;},&quot;insert&quot;:&quot;\n&quot;,&quot;rules&quot;:[]}],&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;widgetIds&quot;:[]},&quot;conditionalFormattingRules&quot;:[]}</parameters>
+            <parameters>{&quot;content&quot;:[{&quot;attributes&quot;:{&quot;color&quot;:&quot;--slds-g-color-palette-neutral-10&quot;,&quot;size&quot;:&quot;20px&quot;},&quot;insert&quot;:&quot;Agent Response Latency&quot;,&quot;rules&quot;:[]},{&quot;insert&quot;:&quot;\n&quot;,&quot;rules&quot;:[]},{&quot;attributes&quot;:{&quot;color&quot;:&quot;--slds-g-color-palette-neutral-40&quot;},&quot;insert&quot;:&quot;Monitor the distribution of response latency across P50, P90, P95, and P99 to track both everyday performance and long-tail delays.&quot;,&quot;rules&quot;:[]}],&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;widgetIds&quot;:[]},&quot;conditionalFormattingRules&quot;:[]}</parameters>
         </textWidgetDefs>
         <type>text</type>
         <widgetName>text_30</widgetName>
@@ -4092,7 +4068,7 @@
     <widgets>
         <analyticsDashboard>Service_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>P50_TTFT_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -4101,7 +4077,7 @@
     <widgets>
         <analyticsDashboard>Service_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>P90_TTFT_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -4110,7 +4086,7 @@
     <widgets>
         <analyticsDashboard>Service_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>P95_TTFT_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -4119,7 +4095,7 @@
     <widgets>
         <analyticsDashboard>Service_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>P99_TTFT_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -4145,7 +4121,7 @@
     <widgets>
         <analyticsDashboard>Service_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>P50_TTLT_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -4154,7 +4130,7 @@
     <widgets>
         <analyticsDashboard>Service_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>P90_TTLT_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -4163,7 +4139,7 @@
     <widgets>
         <analyticsDashboard>Service_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>P95_TTLT_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -4172,7 +4148,7 @@
     <widgets>
         <analyticsDashboard>Service_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;comparison&quot;:true,&quot;chart&quot;:false,&quot;insights&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Service_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>P99_TTLT_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -4256,6 +4232,28 @@
         </textWidgetDefs>
         <type>text</type>
         <widgetName>txt_taskResolutionDescription</widgetName>
+    </widgets>
+    <widgets>
+        <analyticsDashboard>Service_Agent_Analytics</analyticsDashboard>
+        <buttonWidgetDefs>
+            <parameters>{&quot;text&quot;:&quot;Enable Einstein Feedback&quot;,&quot;alignmentX&quot;:&quot;center&quot;,&quot;alignmentY&quot;:&quot;center&quot;,&quot;fontSize&quot;:12}</parameters>
+        </buttonWidgetDefs>
+        <type>button</type>
+        <widgetActions>
+            <actionType>navigate</actionType>
+            <eventType>click</eventType>
+            <parameters>{&quot;destination&quot;:{&quot;type&quot;:&quot;url&quot;,&quot;target&quot;:&quot;https://help.salesforce.com/s/articleView?id=ai.generative_ai_feedback_enable.htm&amp;type=5&quot;}}</parameters>
+            <version>66.0</version>
+        </widgetActions>
+        <widgetName>button_enableEinsFeedTR</widgetName>
+    </widgets>
+    <widgets>
+        <analyticsDashboard>Service_Agent_Analytics</analyticsDashboard>
+        <textWidgetDefs>
+            <parameters>{&quot;content&quot;:[{&quot;attributes&quot;:{&quot;color&quot;:&quot;#5c5c5c&quot;,&quot;size&quot;:&quot;13px&quot;},&quot;insert&quot;:&quot;RAG metrics require RAG to be enabled. Enable it from Setup, wait for provisioning to complete&quot;,&quot;rules&quot;:[]},{&quot;attributes&quot;:{&quot;align&quot;:&quot;center&quot;},&quot;insert&quot;:&quot;\n&quot;,&quot;rules&quot;:[]},{&quot;attributes&quot;:{&quot;color&quot;:&quot;#5c5c5c&quot;,&quot;size&quot;:&quot;13px&quot;},&quot;insert&quot;:&quot;and for the related DMOs to be available in the Analytics Foundations SDM, then reconfigure the app.&quot;,&quot;rules&quot;:[]},{&quot;attributes&quot;:{&quot;align&quot;:&quot;center&quot;},&quot;insert&quot;:&quot;\n&quot;,&quot;rules&quot;:[]}],&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;widgetIds&quot;:[]},&quot;conditionalFormattingRules&quot;:[]}</parameters>
+        </textWidgetDefs>
+        <type>text</type>
+        <widgetName>txt_ragDisabledDesc</widgetName>
     </widgets>
     <widgets>
         <analyticsDashboard>Service_Agent_Analytics</analyticsDashboard>

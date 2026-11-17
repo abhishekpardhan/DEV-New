@@ -297,6 +297,14 @@
         <sourceFormula>sdkVersion</sourceFormula>
         <targetField>MobileAppEventsV2_mobileProfile_87B60268__dll.sdkVersion__c</targetField>
     </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>MobileAppEventsV2_mobileProfile_87B60268.isQuietPushEnabled__c</sourceField>
+        <sourceFormula>isQuietPushEnabled</sourceFormula>
+        <targetField>MobileAppEventsV2_mobileProfile_87B60268__dll.isQuietPushEnabled__c</targetField>
+    </fieldSourceTargetMaps>
     <masterLabel>MobileAppEventsV2_mobileProfile_87B60268_map_MobileAppEventsV2_mobileProfile_87B60268_1792131605127</masterLabel>
     <sourceObjectName>MobileAppEventsV2_mobileProfile_87B60268</sourceObjectName>
     <targetObjectName>MobileAppEventsV2_mobileProfile_87B60268__dll</targetObjectName>

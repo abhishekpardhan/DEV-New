@@ -121,7 +121,7 @@
                 <colspan>130</colspan>
                 <column>1</column>
                 <row>17</row>
-                <rowspan>123</rowspan>
+                <rowspan>89</rowspan>
             </pageWidgets>
             <pageWidgets>
                 <analyticsDashboardWidget>button_3</analyticsDashboardWidget>
@@ -180,17 +180,10 @@
                 <rowspan>11</rowspan>
             </pageWidgets>
             <pageWidgets>
-                <analyticsDashboardWidget>text_11</analyticsDashboardWidget>
-                <colspan>130</colspan>
-                <column>1</column>
-                <row>69</row>
-                <rowspan>2</rowspan>
-            </pageWidgets>
-            <pageWidgets>
                 <analyticsDashboardWidget>visualization_2</analyticsDashboardWidget>
                 <colspan>62</colspan>
                 <column>3</column>
-                <row>109</row>
+                <row>74</row>
                 <rowspan>30</rowspan>
             </pageWidgets>
             <pageWidgets>
@@ -239,28 +232,28 @@
                 <analyticsDashboardWidget>visualization_12</analyticsDashboardWidget>
                 <colspan>63</colspan>
                 <column>66</column>
-                <row>109</row>
+                <row>74</row>
                 <rowspan>30</rowspan>
             </pageWidgets>
             <pageWidgets>
                 <analyticsDashboardWidget>text_5</analyticsDashboardWidget>
                 <colspan>62</colspan>
                 <column>3</column>
-                <row>106</row>
+                <row>71</row>
                 <rowspan>3</rowspan>
             </pageWidgets>
             <pageWidgets>
                 <analyticsDashboardWidget>text_43</analyticsDashboardWidget>
                 <colspan>62</colspan>
                 <column>66</column>
-                <row>106</row>
+                <row>71</row>
                 <rowspan>3</rowspan>
             </pageWidgets>
             <pageWidgets>
                 <analyticsDashboardWidget>txt_pageBorder</analyticsDashboardWidget>
                 <colspan>130</colspan>
                 <column>1</column>
-                <row>141</row>
+                <row>107</row>
                 <rowspan>2</rowspan>
             </pageWidgets>
             <pageWidgets>
@@ -274,28 +267,7 @@
                 <analyticsDashboardWidget>txt_effectivetab1</analyticsDashboardWidget>
                 <colspan>130</colspan>
                 <column>1</column>
-                <row>104</row>
-                <rowspan>2</rowspan>
-            </pageWidgets>
-            <pageWidgets>
-                <analyticsDashboardWidget>txt_taskResolutionEmptyState</analyticsDashboardWidget>
-                <colspan>126</colspan>
-                <column>3</column>
-                <row>82</row>
-                <rowspan>4</rowspan>
-            </pageWidgets>
-            <pageWidgets>
-                <analyticsDashboardWidget>txt_taskResolutionDescription</analyticsDashboardWidget>
-                <colspan>126</colspan>
-                <column>3</column>
-                <row>86</row>
-                <rowspan>4</rowspan>
-            </pageWidgets>
-            <pageWidgets>
-                <analyticsDashboardWidget>btn_EnableEF</analyticsDashboardWidget>
-                <colspan>16</colspan>
-                <column>57</column>
-                <row>90</row>
+                <row>69</row>
                 <rowspan>2</rowspan>
             </pageWidgets>
         </pages>
@@ -1476,7 +1448,7 @@
                 <colspan>130</colspan>
                 <column>1</column>
                 <row>17</row>
-                <rowspan>48</rowspan>
+                <rowspan>97</rowspan>
             </pageWidgets>
             <pageWidgets>
                 <analyticsDashboardWidget>button_40</analyticsDashboardWidget>
@@ -1538,7 +1510,7 @@
                 <analyticsDashboardWidget>txt_pageBorder</analyticsDashboardWidget>
                 <colspan>130</colspan>
                 <column>1</column>
-                <row>67</row>
+                <row>115</row>
                 <rowspan>2</rowspan>
             </pageWidgets>
             <pageWidgets>
@@ -1547,6 +1519,13 @@
                 <column>70</column>
                 <row>17</row>
                 <rowspan>3</rowspan>
+            </pageWidgets>
+            <pageWidgets>
+                <analyticsDashboardWidget>text_11</analyticsDashboardWidget>
+                <colspan>130</colspan>
+                <column>1</column>
+                <row>64</row>
+                <rowspan>2</rowspan>
             </pageWidgets>
             <pageWidgets>
                 <analyticsDashboardWidget>txt_trustEmptyState</analyticsDashboardWidget>
@@ -1567,6 +1546,27 @@
                 <colspan>16</colspan>
                 <column>57</column>
                 <row>42</row>
+                <rowspan>2</rowspan>
+            </pageWidgets>
+            <pageWidgets>
+                <analyticsDashboardWidget>txt_taskResolutionEmptyState</analyticsDashboardWidget>
+                <colspan>126</colspan>
+                <column>3</column>
+                <row>77</row>
+                <rowspan>4</rowspan>
+            </pageWidgets>
+            <pageWidgets>
+                <analyticsDashboardWidget>txt_taskResolutionDescription</analyticsDashboardWidget>
+                <colspan>126</colspan>
+                <column>3</column>
+                <row>81</row>
+                <rowspan>4</rowspan>
+            </pageWidgets>
+            <pageWidgets>
+                <analyticsDashboardWidget>btn_EnableEFTR</analyticsDashboardWidget>
+                <colspan>16</colspan>
+                <column>57</column>
+                <row>85</row>
                 <rowspan>2</rowspan>
             </pageWidgets>
         </pages>
@@ -2939,14 +2939,6 @@
     </widgets>
     <widgets>
         <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
-        <textWidgetDefs>
-            <parameters>{&quot;content&quot;:[{&quot;attributes&quot;:{&quot;align&quot;:&quot;left&quot;},&quot;insert&quot;:&quot;\n&quot;,&quot;rules&quot;:[]}],&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#ffffff&quot;,&quot;borderEdges&quot;:[],&quot;borderColor&quot;:&quot;#C9C9C9&quot;,&quot;borderWidth&quot;:1,&quot;borderRadius&quot;:16},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;widgetIds&quot;:[]},&quot;conditionalFormattingRules&quot;:[]}</parameters>
-        </textWidgetDefs>
-        <type>text</type>
-        <widgetName>text_9</widgetName>
-    </widgets>
-    <widgets>
-        <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
         <buttonWidgetDefs>
             <parameters>{&quot;text&quot;:&quot;Usage&quot;,&quot;alignmentX&quot;:&quot;center&quot;,&quot;alignmentY&quot;:&quot;center&quot;,&quot;fontSize&quot;:14,&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#ffffff&quot;,&quot;borderEdges&quot;:[],&quot;borderColor&quot;:&quot;#C9C9C9&quot;,&quot;borderWidth&quot;:1,&quot;borderRadius&quot;:0,&quot;fontColor&quot;:&quot;#5C5C5C&quot;,&quot;textStyle&quot;:[]}}</parameters>
         </buttonWidgetDefs>
@@ -3278,7 +3270,7 @@
     <widgets>
         <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>Average_Interactions_Per_Session_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -3287,7 +3279,7 @@
     <widgets>
         <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>Unique_Users_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -3296,7 +3288,7 @@
     <widgets>
         <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>Unique_Interactions_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -3305,7 +3297,7 @@
     <widgets>
         <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
         <buttonWidgetDefs>
-            <parameters>{&quot;text&quot;:&quot;Custom Scorers&quot;,&quot;alignmentX&quot;:&quot;center&quot;,&quot;alignmentY&quot;:&quot;center&quot;,&quot;fontSize&quot;:14,&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderEdges&quot;:[],&quot;borderColor&quot;:&quot;#5C5C5C&quot;,&quot;borderWidth&quot;:1,&quot;borderRadius&quot;:32,&quot;fontColor&quot;:&quot;#5C5C5C&quot;,&quot;textStyle&quot;:[]}}</parameters>
+            <parameters>{&quot;text&quot;:&quot;Custom Scorers&quot;,&quot;alignmentX&quot;:&quot;center&quot;,&quot;alignmentY&quot;:&quot;center&quot;,&quot;fontSize&quot;:14,&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderEdges&quot;:[],&quot;borderColor&quot;:&quot;#C9C9C9&quot;,&quot;borderWidth&quot;:1,&quot;borderRadius&quot;:0,&quot;fontColor&quot;:&quot;#5C5C5C&quot;,&quot;textStyle&quot;:[]}}</parameters>
         </buttonWidgetDefs>
         <type>button</type>
         <widgetActions>
@@ -3318,8 +3310,22 @@
     </widgets>
     <widgets>
         <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
+        <buttonWidgetDefs>
+            <parameters>{&quot;text&quot;:&quot;Custom Scorers&quot;,&quot;alignmentX&quot;:&quot;center&quot;,&quot;alignmentY&quot;:&quot;center&quot;,&quot;fontSize&quot;:14,&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderEdges&quot;:[&quot;right&quot;],&quot;borderColor&quot;:&quot;#C9C9C9&quot;,&quot;borderWidth&quot;:1,&quot;borderRadius&quot;:0,&quot;fontColor&quot;:&quot;#5C5C5C&quot;,&quot;textStyle&quot;:[]}}</parameters>
+        </buttonWidgetDefs>
+        <type>button</type>
+        <widgetActions>
+            <actionType>navigate</actionType>
+            <eventType>click</eventType>
+            <parameters>{&quot;destination&quot;:{&quot;type&quot;:&quot;page&quot;,&quot;target&quot;:&quot;8befcdfd-29ec-47ca-94db-5be321de5063&quot;}}</parameters>
+            <version>66.0</version>
+        </widgetActions>
+        <widgetName>button_18</widgetName>
+    </widgets>
+    <widgets>
+        <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>Unique_Sessions_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -3346,7 +3352,7 @@
     <widgets>
         <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>Stickiness_Rate_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -3355,7 +3361,7 @@
     <widgets>
         <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>Success_Rate_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -3373,7 +3379,7 @@
     <widgets>
         <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>Escalation_Rate_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -3396,7 +3402,7 @@
     <widgets>
         <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>Engagement_Rate_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -3837,14 +3843,6 @@
     <widgets>
         <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
         <textWidgetDefs>
-            <parameters>{&quot;content&quot;:[{&quot;attributes&quot;:{&quot;align&quot;:&quot;left&quot;},&quot;insert&quot;:&quot;\n&quot;,&quot;rules&quot;:[]}],&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#ffffff&quot;,&quot;borderEdges&quot;:[],&quot;borderColor&quot;:&quot;#C9C9C9&quot;,&quot;borderWidth&quot;:1,&quot;borderRadius&quot;:16},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;widgetIds&quot;:[]},&quot;conditionalFormattingRules&quot;:[]}</parameters>
-        </textWidgetDefs>
-        <type>text</type>
-        <widgetName>text_41</widgetName>
-    </widgets>
-    <widgets>
-        <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
-        <textWidgetDefs>
             <parameters>{&quot;content&quot;:[{&quot;attributes&quot;:{&quot;align&quot;:&quot;left&quot;},&quot;insert&quot;:&quot;\n&quot;,&quot;rules&quot;:[]}],&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#ffffff&quot;,&quot;borderEdges&quot;:[&quot;top&quot;],&quot;borderColor&quot;:&quot;#C9C9C9&quot;,&quot;borderWidth&quot;:1,&quot;borderRadius&quot;:0},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;widgetIds&quot;:[]},&quot;conditionalFormattingRules&quot;:[]}</parameters>
         </textWidgetDefs>
         <type>text</type>
@@ -3972,34 +3970,10 @@
     <widgets>
         <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
         <textWidgetDefs>
-            <parameters>{&quot;content&quot;:[{&quot;attributes&quot;:{&quot;align&quot;:&quot;left&quot;},&quot;insert&quot;:&quot;\n&quot;,&quot;rules&quot;:[]}],&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#ffffff&quot;,&quot;borderEdges&quot;:[],&quot;borderColor&quot;:&quot;#C9C9C9&quot;,&quot;borderWidth&quot;:1,&quot;borderRadius&quot;:16},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;widgetIds&quot;:[]},&quot;conditionalFormattingRules&quot;:[]}</parameters>
-        </textWidgetDefs>
-        <type>text</type>
-        <widgetName>text_35</widgetName>
-    </widgets>
-    <widgets>
-        <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
-        <textWidgetDefs>
             <parameters>{&quot;content&quot;:[{&quot;attributes&quot;:{&quot;color&quot;:&quot;#5c5c5c&quot;,&quot;size&quot;:&quot;13px&quot;},&quot;insert&quot;:&quot;Explore Subagents by Metric&quot;,&quot;rules&quot;:[]},{&quot;attributes&quot;:{&quot;align&quot;:&quot;left&quot;},&quot;insert&quot;:&quot;\n&quot;,&quot;rules&quot;:[]}],&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;widgetIds&quot;:[]},&quot;conditionalFormattingRules&quot;:[]}</parameters>
         </textWidgetDefs>
         <type>text</type>
         <widgetName>text_38</widgetName>
-    </widgets>
-    <widgets>
-        <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
-        <textWidgetDefs>
-            <parameters>{&quot;content&quot;:[{&quot;attributes&quot;:{&quot;align&quot;:&quot;left&quot;},&quot;insert&quot;:&quot;\n&quot;,&quot;rules&quot;:[]}],&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#ffffff&quot;,&quot;borderEdges&quot;:[],&quot;borderColor&quot;:&quot;#C9C9C9&quot;,&quot;borderWidth&quot;:1,&quot;borderRadius&quot;:16},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;widgetIds&quot;:[]},&quot;conditionalFormattingRules&quot;:[]}</parameters>
-        </textWidgetDefs>
-        <type>text</type>
-        <widgetName>text_37</widgetName>
-    </widgets>
-    <widgets>
-        <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
-        <textWidgetDefs>
-            <parameters>{&quot;content&quot;:[{&quot;attributes&quot;:{&quot;align&quot;:&quot;left&quot;},&quot;insert&quot;:&quot;\n&quot;,&quot;rules&quot;:[]}],&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#ffffff&quot;,&quot;borderEdges&quot;:[],&quot;borderColor&quot;:&quot;#C9C9C9&quot;,&quot;borderWidth&quot;:1,&quot;borderRadius&quot;:16},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;widgetIds&quot;:[]},&quot;conditionalFormattingRules&quot;:[]}</parameters>
-        </textWidgetDefs>
-        <type>text</type>
-        <widgetName>text_32</widgetName>
     </widgets>
     <widgets>
         <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
@@ -4092,7 +4066,7 @@
     <widgets>
         <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>Agent_Quality_Rate_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -4185,7 +4159,7 @@
     <widgets>
         <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>Session_Duration_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -4194,7 +4168,7 @@
     <widgets>
         <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>Error_Rate_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -4233,14 +4207,6 @@
     <widgets>
         <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
         <textWidgetDefs>
-            <parameters>{&quot;content&quot;:[{&quot;attributes&quot;:{&quot;align&quot;:&quot;left&quot;},&quot;insert&quot;:&quot;\n&quot;,&quot;rules&quot;:[]}],&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#ffffff&quot;,&quot;borderEdges&quot;:[],&quot;borderColor&quot;:&quot;#C9C9C9&quot;,&quot;borderWidth&quot;:1,&quot;borderRadius&quot;:16},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;widgetIds&quot;:[]},&quot;conditionalFormattingRules&quot;:[]}</parameters>
-        </textWidgetDefs>
-        <type>text</type>
-        <widgetName>text_24</widgetName>
-    </widgets>
-    <widgets>
-        <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
-        <textWidgetDefs>
             <parameters>{&quot;content&quot;:[{&quot;attributes&quot;:{&quot;align&quot;:&quot;left&quot;},&quot;insert&quot;:&quot;\n&quot;,&quot;rules&quot;:[]}],&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#ffffff&quot;,&quot;borderEdges&quot;:[&quot;top&quot;],&quot;borderColor&quot;:&quot;#C9C9C9&quot;,&quot;borderWidth&quot;:1,&quot;borderRadius&quot;:0},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;widgetIds&quot;:[]},&quot;conditionalFormattingRules&quot;:[]}</parameters>
         </textWidgetDefs>
         <type>text</type>
@@ -4253,14 +4219,6 @@
         </textWidgetDefs>
         <type>text</type>
         <widgetName>text_26</widgetName>
-    </widgets>
-    <widgets>
-        <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
-        <textWidgetDefs>
-            <parameters>{&quot;content&quot;:[{&quot;attributes&quot;:{&quot;align&quot;:&quot;left&quot;},&quot;insert&quot;:&quot;\n&quot;,&quot;rules&quot;:[]}],&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#ffffff&quot;,&quot;borderEdges&quot;:[],&quot;borderColor&quot;:&quot;#C9C9C9&quot;,&quot;borderWidth&quot;:1,&quot;borderRadius&quot;:16},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;widgetIds&quot;:[]},&quot;conditionalFormattingRules&quot;:[]}</parameters>
-        </textWidgetDefs>
-        <type>text</type>
-        <widgetName>text_20</widgetName>
     </widgets>
     <widgets>
         <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
@@ -4281,7 +4239,7 @@
     <widgets>
         <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>Agent_Response_Rate_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -4373,7 +4331,7 @@
     <widgets>
         <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>P50_TTFT_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -4382,7 +4340,7 @@
     <widgets>
         <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>P90_TTFT_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -4391,7 +4349,7 @@
     <widgets>
         <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>P95_TTFT_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -4400,7 +4358,7 @@
     <widgets>
         <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>P99_TTFT_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -4426,7 +4384,7 @@
     <widgets>
         <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>P50_TTLT_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -4435,7 +4393,7 @@
     <widgets>
         <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>P90_TTLT_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -4444,7 +4402,7 @@
     <widgets>
         <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>P95_TTLT_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -4453,7 +4411,7 @@
     <widgets>
         <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
         <metricWidgetDefs>
-            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
+            <parameters>{&quot;metricOption&quot;:{&quot;layout&quot;:{&quot;componentVisibility&quot;:{&quot;comparison&quot;:true,&quot;insights&quot;:false,&quot;details&quot;:false,&quot;title&quot;:true,&quot;value&quot;:true,&quot;chart&quot;:false},&quot;menuVisibility&quot;:{&quot;itemVisibility&quot;:{&quot;manageAlerts&quot;:false,&quot;explore&quot;:true}}},&quot;sdmApiName&quot;:&quot;Employee_Agent_Analytics_Extension_9c5&quot;},&quot;receiveFilterSource&quot;:{&quot;contextFields&quot;:[],&quot;filterMode&quot;:&quot;all&quot;,&quot;publishers&quot;:[],&quot;widgetIds&quot;:[]},&quot;widgetStyle&quot;:{&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;borderColor&quot;:&quot;#cccccc&quot;,&quot;borderEdges&quot;:[],&quot;borderRadius&quot;:0,&quot;borderWidth&quot;:1}}</parameters>
             <source>P99_TTLT_mtc</source>
         </metricWidgetDefs>
         <type>metric</type>
@@ -4551,6 +4509,20 @@
         </textWidgetDefs>
         <type>text</type>
         <widgetName>txt_taskResolutionDescription</widgetName>
+    </widgets>
+    <widgets>
+        <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>
+        <buttonWidgetDefs>
+            <parameters>{&quot;text&quot;:&quot;Enable Einstein Feedback&quot;,&quot;alignmentX&quot;:&quot;center&quot;,&quot;alignmentY&quot;:&quot;center&quot;,&quot;fontSize&quot;:12}</parameters>
+        </buttonWidgetDefs>
+        <type>button</type>
+        <widgetActions>
+            <actionType>navigate</actionType>
+            <eventType>click</eventType>
+            <parameters>{&quot;destination&quot;:{&quot;type&quot;:&quot;url&quot;,&quot;target&quot;:&quot;https://help.salesforce.com/s/articleView?id=ai.generative_ai_feedback_enable.htm&amp;type=5&quot;}}</parameters>
+            <version>66.0</version>
+        </widgetActions>
+        <widgetName>btn_EnableEFTR</widgetName>
     </widgets>
     <widgets>
         <analyticsDashboard>Employee_Agent_Analytics</analyticsDashboard>

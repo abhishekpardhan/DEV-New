@@ -5,6 +5,256 @@
 public class CommonDataTest{
     
     public Static String userId = userInfo.getUserId();
+    
+    /**
+     * Creates an inserted test User and grants the required access.
+     * permissionSetApiNames: PermissionSet.Name values (API names, not labels).
+     * requiredCustomPermissionNames: CustomPermission.DeveloperName values.
+     * A custom permission is satisfied by the profile, an explicitly requested
+     * permission set, or a single unambiguous eligible permission set in the org.
+     */
+    private static Integer testUserSequence = 0;
+
+    public static User createTestUser(String profileName, Set<String> permissionSetApiNames, Set<String> requiredCustomPermissionNames, Map<String, Object> additionalUserFields) {
+        // If omitted, use the running user's profile. Supplying an explicit
+        // business profile is preferable for tests of role-specific behavior.
+        List<Profile> profiles;
+        if (String.isBlank(profileName)) {
+            Id currentProfileId = UserInfo.getProfileId();
+            profiles = [SELECT Id, Name, UserLicenseId FROM Profile WHERE Id = :currentProfileId LIMIT 1];
+        } else {
+            profiles = [SELECT Id, Name, UserLicenseId FROM Profile WHERE Name = :profileName LIMIT 1];
+        }
+        System.assert(!profiles.isEmpty(), 'Test setup failed: Profile not found: ' + profileName);
+        Profile selectedProfile = profiles[0];
+        
+        Set<String> requestedPermSetNames = new Set<String>();
+        Set<String> requestedCustomPermNames = new Set<String>();
+        
+        if (requestedPermSetNames != null) {
+            requestedPermSetNames.addAll(permissionSetApiNames);
+        }
+        if (requestedCustomPermNames != null) {
+            requestedCustomPermNames.addAll(requiredCustomPermissionNames);
+        }
+        for (String apiName : requestedPermSetNames) {
+            System.assert(!String.isBlank(apiName),
+                'Permission set API names cannot be blank.');
+        }
+        for (String developerName : requestedCustomPermNames) {
+            System.assert(!String.isBlank(developerName),
+                'Custom permission developer names cannot be blank.');
+        }
+
+        // Resolve explicitly requested permission sets, never silently skip one.
+        Map<String, PermissionSet> requestedSetsByName = new Map<String, PermissionSet>();
+        if (!requestedPermSetNames.isEmpty()) {
+            for (PermissionSet ps : [
+                SELECT Id, Name, IsOwnedByProfile, LicenseId
+                FROM PermissionSet
+                WHERE Name IN :requestedPermSetNames AND IsOwnedByProfile = false
+            ]) {
+                requestedSetsByName.put(ps.Name, ps);
+            }
+        }
+        for (String apiName : requestedPermSetNames) {
+            System.assert(requestedSetsByName.containsKey(apiName),
+                'Test setup failed: Permission Set not found: ' + apiName);
+        }
+        Set<Id> selectedPermissionSetIds = new Set<Id>();
+        for (PermissionSet ps : requestedSetsByName.values()) {
+            selectedPermissionSetIds.add(ps.Id);
+        }
+
+        // Custom permissions aren't assigned to users directly. They live on
+        // profile-owned permission sets or ordinary permission sets.
+        if (!requestedCustomPermNames.isEmpty()) {
+            // Accept either My_Permission or namespace__My_Permission.
+            // Use the fully qualified name to disambiguate package metadata.
+            Set<String> developerNames = new Set<String>();
+            for (String fullName : requestedCustomPermNames) {
+                Integer separator = fullName.indexOf('__');
+                developerNames.add(separator > 0
+                    ? fullName.substring(separator + 2)
+                    : fullName);
+            }
+            Map<String, CustomPermission> customsByFullName =
+                new Map<String, CustomPermission>();
+            for (CustomPermission cp : [
+                SELECT Id, DeveloperName, NamespacePrefix
+                FROM CustomPermission
+                WHERE DeveloperName IN :developerNames
+            ]) {
+                String fullName = String.isBlank(cp.NamespacePrefix)
+                    ? cp.DeveloperName
+                    : cp.NamespacePrefix + '__' + cp.DeveloperName;
+                customsByFullName.put(fullName, cp);
+            }
+            Map<Id, String> nameByCustomId = new Map<Id, String>();
+            for (String name : requestedCustomPermNames) {
+                System.assert(customsByFullName.containsKey(name),
+                    'Test setup failed: Custom Permission not found: ' +
+                    name + '. Use DeveloperName or namespace__DeveloperName.');
+                nameByCustomId.put(customsByFullName.get(name).Id, name);
+            }
+
+            Set<Id> customIds = nameByCustomId.keySet();
+            Map<Id, Set<Id>> providerIdsByCustomId = new Map<Id, Set<Id>>();
+            Set<Id> allProviderIds = new Set<Id>();
+            for (SetupEntityAccess sea : [
+                SELECT SetupEntityId, ParentId
+                FROM SetupEntityAccess
+                WHERE SetupEntityId IN :customIds
+            ]) {
+                if (!providerIdsByCustomId.containsKey(sea.SetupEntityId)) {
+                    providerIdsByCustomId.put(sea.SetupEntityId, new Set<Id>());
+                }
+                providerIdsByCustomId.get(sea.SetupEntityId).add(sea.ParentId);
+                allProviderIds.add(sea.ParentId);
+            }
+            Map<Id, PermissionSet> providerSetsById = new Map<Id, PermissionSet>();
+            if (!allProviderIds.isEmpty()) {
+                providerSetsById = new Map<Id, PermissionSet>([
+                    SELECT Id, Name, IsOwnedByProfile, ProfileId, LicenseId
+                    FROM PermissionSet
+                    WHERE Id IN :allProviderIds
+                ]);
+            }
+
+            for (Id customId : customIds) {
+                Set<Id> providerIds = providerIdsByCustomId.get(customId);
+                List<PermissionSet> possibleAssignments = new List<PermissionSet>();
+                List<String> candidateNames = new List<String>();
+                Boolean granted = false;
+                if (providerIds != null) {
+                    for (Id providerId : providerIds) {
+                        PermissionSet provider = providerSetsById.get(providerId);
+                        if (provider == null) {
+                            continue;
+                        }
+                        if ((provider.IsOwnedByProfile &&
+                             provider.ProfileId == selectedProfile.Id) ||
+                            selectedPermissionSetIds.contains(provider.Id)) {
+                            granted = true;
+                            break;
+                        }
+                        // Do not auto-pick an incompatible user-license PS.
+                        if (!provider.IsOwnedByProfile &&
+                            (provider.LicenseId == null ||
+                             provider.LicenseId == selectedProfile.UserLicenseId)) {
+                            possibleAssignments.add(provider);
+                            candidateNames.add(provider.Name);
+                        }
+                    }
+                }
+                if (!granted) {
+                    System.assert(possibleAssignments.size() == 1,
+                        'Test setup failed: Custom Permission ' +
+                        nameByCustomId.get(customId) +
+                        ' is not covered by the profile or requested sets. ' +
+                        'Found ' + possibleAssignments.size() +
+                        ' eligible providers (' + String.join(candidateNames, ', ') +
+                        '). Pass the intended Permission Set API name explicitly.');
+                    selectedPermissionSetIds.add(possibleAssignments[0].Id);
+                }
+            }
+        }
+
+        // Org ID + millisecond timestamp + cryptographically random token +
+        // in-transaction sequence protects against cross-org/parallel collisions.
+        testUserSequence++;
+        String randomHex = EncodingUtil.convertToHex(Crypto.generateAesKey(128));
+        String uniquePart = UserInfo.getOrganizationId() + '.' +
+            String.valueOf(System.now().getTime()) + '.' +
+            randomHex.substring(0, 16) + '.' + String.valueOf(testUserSequence);
+
+        User testUser = new User(
+            FirstName = 'Unit',
+            LastName = 'TestUser',
+            Alias = 'ut' + randomHex.substring(0, 6), // Max 8 chars
+            Email = 'sfut+' + uniquePart + '@example.com',
+            Username = 'sfut.' + uniquePart + '@example.com',
+            CommunityNickname = 'ut' + randomHex.substring(0, 16) +
+                String.valueOf(testUserSequence),
+            EmailEncodingKey = 'UTF-8',
+            TimeZoneSidKey = 'America/Los_Angeles',
+            LocaleSidKey = 'en_US',
+            LanguageLocaleKey = 'en_US',
+            ProfileId = selectedProfile.Id,
+            IsActive = true,
+            // This custom field is present in your current factory.
+            AD_Id__c = 'UT' + randomHex.substring(0, 10) +
+                String.valueOf(testUserSequence)
+        );
+
+        // Callers can pass org-specific required fields/validation inputs.
+        if (additionalUserFields != null) {
+            Set<String> protectedFields = new Set<String>{
+                'username', 'email', 'alias', 'communitynickname',
+                'profileid', 'ad_id__c'
+            };
+            Map<String, Schema.SObjectField> userFields =
+                User.SObjectType.getDescribe().fields.getMap();
+            for (String fieldName : additionalUserFields.keySet()) {
+                System.assert(!String.isBlank(fieldName) &&
+                    userFields.containsKey(fieldName),
+                    'Test setup failed: Unknown User field: ' + fieldName);
+                System.assert(!protectedFields.contains(fieldName.toLowerCase()),
+                    'Test setup failed: ' + fieldName +
+                    ' is generated/controlled by the factory.');
+                testUser.put(fieldName, additionalUserFields.get(fieldName));
+            }
+        }
+
+        // Setup-object DML is enclosed in runAs to avoid mixed-DML failures
+        // when tests also create Lead/Account/Case or other business records.
+        System.runAs(new User(Id = UserInfo.getUserId())) {
+            insert testUser;
+            List<PermissionSetAssignment> assignments =
+                new List<PermissionSetAssignment>();
+            for (Id permissionSetId : selectedPermissionSetIds) {
+                assignments.add(new PermissionSetAssignment(
+                    AssigneeId = testUser.Id,
+                    PermissionSetId = permissionSetId
+                ));
+            }
+            if (!assignments.isEmpty()) {
+                insert assignments;
+            }
+        }
+
+        // Assert actual effective access rather than merely trusting metadata.
+        if (!requestedCustomPermNames.isEmpty()) {
+            System.runAs(testUser) {
+                for (String customPermissionName : requestedCustomPermNames) {
+                    System.assert(
+                        FeatureManagement.checkPermission(customPermissionName),
+                        'Test setup failed: ' + customPermissionName +
+                        ' is not effective for test user ' + testUser.Username
+                    );
+                }
+            }
+        }
+        return testUser;
+    }
+    
+    public static Lead getLead(String lastName, String status, String approvalStatus,String dropReason){
+        Lead leadRecord = new Lead(
+            LastName = lastName,
+            Company = 'Test Company',
+            Status = status,
+            Approval_Status__c = approvalStatus,
+            Lead_Drop_Reason__c = dropReason,
+            MobilePhone = '9282932829',
+            Email = 'test@mail.com',
+            Street = 'Test Street',
+            City = 'Test City',
+            State = 'Test State',
+            PostalCode = '283992'
+        );
+        return leadRecord;
+    }
+    
     public static Account getParentAccount() {
         Account objPro = new Account();
         objPro.name = 'TEST PROSPECT ACCOUNT';
@@ -12,6 +262,24 @@ public class CommonDataTest{
         objPro.Type = 'Credit';
         objPro.region__c = 'DELHI';
         return objPro;
+    }
+    
+    public static Case getSupportCase(String requesterName, String phone, String email, String caseType, String caseNature, String pincode){
+        Case objCase = new Case();
+        objCase.Origin = 'Web';
+        objCase.Status = 'New';
+        objCase.Subject = 'Test Support Case';
+        objCase.SuppliedCompany = 'Test Company';
+        objCase.Requester_Location__c = 'Test Location';
+        objCase.Origin_Pincode__c = '110027';
+        objCase.Destination_PinCode__c =  '400039';
+        objCase.Requester_Name__c = requesterName;
+        objCase.SuppliedPhone = phone;
+        objCase.SuppliedEmail = email;
+        objCase.Case_Type__c = caseType;
+        objCase.Case_Nature__c = caseNature;
+        objCase.Supplied_Pincode__c = pincode;
+        return objCase;
     }
     
    public static Opportunity__c getCustomOpportunity(Id accountId) {

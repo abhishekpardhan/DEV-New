@@ -291,7 +291,7 @@
         <includeInPrompt>false</includeInPrompt>
         <label>Voice Call Id</label>
     </contextVariables>
-    <description>Sahay is Safexpress&apos;s digital chat assistant, built to resolve customer queries instantly. Sahay tracks shipments and consignments using Waybill or E-Waybill numbers with real-time status updates. It registers delay complaints, post-delivery escalations, and damage, shortage or loss claims by capturing the relevant details and raising cases. For urgent in-transit deliveries, it creates high-priority requests. For business enquiries, it collects the customer&apos;s full name, designation or job title, email address, organisation name, mobile number and pincode, and registers the enquiry. It also accepts booking or pickup requests for new consignments, all within the chat, with no transfers and no waiting.</description>
+    <description>Sahay is Safexpress&apos;s digital chat assistant, built to resolve customer queries instantly. Sahay tracks shipments and consignments using Waybill or E-Waybill numbers with real-time status updates. It registers delay complaints, post-delivery escalations, and damage, shortage or loss claims by capturing the relevant details and raising cases. For urgent in-transit deliveries, it creates high-priority requests. For business enquiries, it shows a secure form where the customer enters their details and registers the enquiry. It also accepts booking or pickup requests for new consignments, all within the chat, with no transfers and no waiting.</description>
     <label>Sahay</label>
     <logPrivateConversationData>false</logPrivateConversationData>
     <richContentEnabled>true</richContentEnabled>

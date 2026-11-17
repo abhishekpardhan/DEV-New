@@ -6,8 +6,8 @@
  *  2. checkWaybill()               - called by LWC as soon as Issue Type + Waybill are entered:
  *                                    tracking API status check (Delivered only) + open-case check for the same issue
  *  3. precheckEscalation()         - called by LWC before uploading documents: validates all fields
- *  4. submitEscalation()           - called by LWC after uploading documents: re-checks Delivered + duplicates, creates the case
- *  5. addDocumentsToExistingCase() - called by LWC when the same issue is already open: attaches documents only
+ *  4. submitEscalation()           - called by SafexpressDamageEscalationAction after uploading documents: re-checks Delivered + duplicates, creates the case
+ *  5. addDocumentsToExistingCase() - called by SafexpressDamageEscalationAction when the same issue is already open: attaches documents only
  *
  * Issue types (form dropdown) and the Sub Type saved on the case:
  *   MATERIAL_DAMAGED -> Material Damaged          (documents required)
@@ -267,7 +267,6 @@ public without sharing class SafexpressPostDeliveryStatusAction {
      * re-checks Delivered on the server and the duplicate rule, then creates the case.
      * Everything is rolled back if any step fails.
      */
-    @AuraEnabled
     public static EscalationResult submitEscalation(
         String waybillNumber,
         String mobileNumber,
@@ -326,7 +325,6 @@ public without sharing class SafexpressPostDeliveryStatusAction {
      * Same issue already open: attach the uploaded documents to that case (no new case, no other changes).
      * Documents are mandatory when the open case has none.
      */
-    @AuraEnabled
     public static EscalationResult addDocumentsToExistingCase(
         String waybillNumber,
         String issueType,
@@ -435,7 +433,6 @@ public without sharing class SafexpressPostDeliveryStatusAction {
         return ws;
     }
 
-    // Copied from SafexpressWaybillEnquiryAction so the form and the enquiry card always agree
     private static String normalizeStatus(String raw) {
         if (String.isBlank(raw)) return null;
         String s = raw.toLowerCase();
@@ -479,7 +476,6 @@ public without sharing class SafexpressPostDeliveryStatusAction {
         Date incidentDate;
 
         Inputs(String waybill, String email, String mobile) {
-            // Normalise waybill: digits only so "1000 4224 1409" and "100042241409" match
             this.rawWaybill = waybill != null ? waybill.trim() : '';
             String digits = this.rawWaybill.replaceAll('[^0-9]', '');
             this.waybillNum = String.isNotBlank(digits) ? digits : this.rawWaybill;
@@ -491,14 +487,12 @@ public without sharing class SafexpressPostDeliveryStatusAction {
             this.mobile = normaliseMobile(mobile);
         }
 
-        // Invocable path: free-text sub type
         void setSubType(String value) {
             this.subType = String.isNotBlank(value) ? value.trim() : DEFAULT_SUBTYPE;
             this.isStaff = this.subType == STAFF_SUBTYPE;
             this.issueLabel = this.subType;
         }
 
-        // Form path: dropdown key
         void setIssue(String key) {
             this.issueRequired = true;
             this.issueKey = key != null ? key.trim().toUpperCase() : '';
@@ -518,7 +512,6 @@ public without sharing class SafexpressPostDeliveryStatusAction {
             return new Set<String>{ this.waybillNum, this.formattedWaybill, this.rawWaybill };
         }
 
-        // Text saved in Case.Description for a new case
         String caseDescriptionText() {
             List<String> lines = new List<String>{ 'Issue: ' + (String.isNotBlank(this.issueLabel) ? this.issueLabel : this.subType) };
             if (this.incidentDate != null) {
@@ -542,7 +535,7 @@ public without sharing class SafexpressPostDeliveryStatusAction {
         inp.incidentDateRaw = incidentDate != null ? incidentDate.trim() : '';
         if (String.isNotBlank(inp.incidentDateRaw)) {
             try {
-                inp.incidentDate = Date.valueOf(inp.incidentDateRaw);   // yyyy-MM-dd from <input type="date">
+                inp.incidentDate = Date.valueOf(inp.incidentDateRaw); 
             } catch (Exception e) {
                 inp.incidentDate = null;
             }
@@ -550,7 +543,6 @@ public without sharing class SafexpressPostDeliveryStatusAction {
         return inp;
     }
 
-    // "+91 98765 43210" / "09876543210" -> "9876543210"
     private static String normaliseMobile(String mobile) {
         if (String.isBlank(mobile)) return '';
         String digits = mobile.replaceAll('[^0-9]', '');
@@ -562,7 +554,6 @@ public without sharing class SafexpressPostDeliveryStatusAction {
         return String.isNotBlank(digits) ? digits : mobile.trim();
     }
 
-    // requireAll = true for the LWC form (all fields mandatory)
     private static String validate(Inputs inp, Boolean requireAll) {
         if (!inp.hasValidIssue()) {
             return 'Please select the type of issue you are facing.';
@@ -609,18 +600,15 @@ public without sharing class SafexpressPostDeliveryStatusAction {
         newCase.WaybillNo__c = inp.waybillNum;
         newCase.SuppliedEmail = inp.email;
         newCase.SuppliedPhone = inp.mobile;
-        newCase.Type = inp.caseType;            // kept: de-duplication query also checks Type
-        newCase.Case_Type__c = inp.caseType;    // "Case Type" shown on the page layout
+        newCase.Type = inp.caseType;            
+        newCase.Case_Type__c = inp.caseType;    
         newCase.Sub_Type__c = inp.subType;
         newCase.Case_Nature__c = inp.caseNature;
         newCase.Status = 'New';
         if (inp.issueRequired) {
             newCase.Description = inp.caseDescriptionText();
         }
-        // Subject intentionally not set: CaseTriggerHandler.updateSubject() builds
-        // "<CaseNumber>-Complaint-Complaint-<Sub Type>" when Subject is blank
 
-        // Assign to Complaints Queue (looked up by DeveloperName, so it works in every org)
         Id complaintsQueueId = lookup.getQueueId(COMPLAINTS_QUEUE_DEV_NAME);
         if (complaintsQueueId != null) {
             newCase.OwnerId = complaintsQueueId;
@@ -628,7 +616,6 @@ public without sharing class SafexpressPostDeliveryStatusAction {
 
         Database.insert(newCase, AccessLevel.SYSTEM_MODE);
 
-        // Re-read in system mode; never throws if the row is not visible
         Case inserted = lookup.getById(newCase.Id);
         return inserted != null ? inserted : newCase;
     }
@@ -665,7 +652,6 @@ public without sharing class SafexpressPostDeliveryStatusAction {
         return r;
     }
 
-    // Same issue already open for this waybill -> form shows the case, documents only
     private static EscalationResult openCaseResult(Inputs inp, Case c, Boolean hasDocuments) {
         EscalationResult r = existingResult(inp, c, OUTCOME_OPEN_CASE, MSG_OPEN_CASE);
         r.docsOnly = true;
@@ -677,7 +663,6 @@ public without sharing class SafexpressPostDeliveryStatusAction {
         return r;
     }
 
-    // Waybill could not be used: invalid / not delivered / API error
     private static EscalationResult waybillProblemResult(Inputs inp, String outcome, String msg, String currentStatus) {
         EscalationResult r = baseResult(inp, outcome);
         r.isError = true;
@@ -695,7 +680,7 @@ public without sharing class SafexpressPostDeliveryStatusAction {
         r.headerTitle = 'Documents Added to Existing Case';
         r.lastEvent = 'Created on: ' + r.createdOn;
         r.message = 'Your documents have been added to the active case (' + c.CaseNumber + ') for this waybill.';
-        r.footerNote = 'Thank you for choosing Safexpress. 😊';
+        r.footerNote = 'Thank you for choosing Safexpress. 馃槉';
         r.agentMessage = 'Documents (' + filesLinked + ' file(s)) added to existing case ' + c.CaseNumber
             + ' for waybill ' + inp.formattedWaybill + '.';
         return r;
@@ -711,8 +696,8 @@ public without sharing class SafexpressPostDeliveryStatusAction {
             ? 'Your complaint has been registered. Case #' + c.CaseNumber + ' created.'
             : 'Your complaint has been registered.';
         r.footerNote = String.isNotBlank(c.CaseNumber)
-            ? 'Case #' + c.CaseNumber + ' created. Thank you for choosing Safexpress. 😊'
-            : 'Your complaint has been registered. Thank you for choosing Safexpress. 😊';
+            ? 'Case #' + c.CaseNumber + ' created. Thank you for choosing Safexpress. 馃槉'
+            : 'Your complaint has been registered. Thank you for choosing Safexpress. 馃槉';
         r.agentMessage = 'Complaint registered. Case ' + (String.isNotBlank(c.CaseNumber) ? c.CaseNumber : '')
             + ' created for waybill ' + inp.formattedWaybill
             + (filesLinked > 0 ? ' with ' + filesLinked + ' supporting document(s).' : '.');
@@ -748,7 +733,6 @@ public without sharing class SafexpressPostDeliveryStatusAction {
         return r;
     }
 
-    // Maps a result onto the existing Agentforce output card
     private static SafexpressWaybillEnquiryCard toCard(EscalationResult r) {
         SafexpressWaybillEnquiryCard card = new SafexpressWaybillEnquiryCard();
         card.headerTitle = r.headerTitle;
@@ -767,11 +751,9 @@ public without sharing class SafexpressPostDeliveryStatusAction {
 
     // =====================================================================
     // SYSTEM-MODE DATA ACCESS
-    // Agent / site guest user may not see queue-owned cases, so everything runs in system mode.
     // =====================================================================
     private without sharing class CaseLookup {
 
-        // One OPEN complaint per waybill per issue type
         Case findOpenComplaintForIssue(Inputs inp) {
             String soql =
                 'SELECT Id, CaseNumber, Status, CreatedDate, Subject, Sub_Type__c, Description ' +
@@ -794,14 +776,12 @@ public without sharing class SafexpressPostDeliveryStatusAction {
             return null;
         }
 
-        // "Delivery not done" is shared by two issues: tell them apart by the issue text in Description
         Boolean isSameIssue(Case c, Inputs inp) {
             if (inp.subType != DELIVERY_NOT_DONE_SUBTYPE || !inp.issueRequired || String.isBlank(inp.issueLabel)) {
                 return true;
             }
             String descr = c.Description != null ? c.Description : '';
             if (descr.contains('Issue: ' + inp.issueLabel)) return true;
-            // Older cases without an "Issue:" line count as "Expected material not received"
             return !descr.contains('Issue: ') && inp.issueKey == 'NOT_RECEIVED';
         }
 
@@ -814,7 +794,6 @@ public without sharing class SafexpressPostDeliveryStatusAction {
             return cases.isEmpty() ? null : cases[0];
         }
 
-        // Queue Id by DeveloperName; null if the queue does not exist
         Id getQueueId(String developerName) {
             List<Group> queues = Database.queryWithBinds(
                 'SELECT Id FROM Group WHERE Type = \'Queue\' AND DeveloperName = :devName LIMIT 1',
@@ -824,7 +803,6 @@ public without sharing class SafexpressPostDeliveryStatusAction {
             return queues.isEmpty() ? null : queues[0].Id;
         }
 
-        // Proof = at least one file linked to the case
         Boolean hasProof(Id caseId) {
             List<ContentDocumentLink> links = Database.queryWithBinds(
                 'SELECT Id FROM ContentDocumentLink WHERE LinkedEntityId = :caseId LIMIT 1',
@@ -834,8 +812,7 @@ public without sharing class SafexpressPostDeliveryStatusAction {
             return !links.isEmpty();
         }
 
-        // Only accept files uploaded by the current user in the last few hours
-        // (stops someone passing arbitrary file Ids to attach to a case)
+        // FIX: Removed 'AND CreatedById = :userId' so the Bot User can see files uploaded by the Site Guest User
         Set<Id> verifiedUploads(List<String> contentDocumentIds) {
             Set<Id> requested = new Set<Id>();
             if (contentDocumentIds != null) {
@@ -846,9 +823,7 @@ public without sharing class SafexpressPostDeliveryStatusAction {
                         if (docId.getSObjectType() == ContentDocument.SObjectType) {
                             requested.add(docId);
                         }
-                    } catch (Exception e) {
-                        // invalid Id - skip
-                    }
+                    } catch (Exception e) {}
                 }
             }
 
@@ -859,11 +834,9 @@ public without sharing class SafexpressPostDeliveryStatusAction {
                 'SELECT ContentDocumentId FROM ContentVersion ' +
                 'WHERE ContentDocumentId IN :docIds ' +
                 'AND IsLatest = true ' +
-                'AND CreatedById = :userId ' +
                 'AND CreatedDate >= :cutoff',
                 new Map<String, Object>{
                     'docIds' => requested,
-                    'userId' => UserInfo.getUserId(),
                     'cutoff' => Datetime.now().addHours(-PROOF_UPLOAD_WINDOW_HOURS)
                 },
                 AccessLevel.SYSTEM_MODE
@@ -874,7 +847,6 @@ public without sharing class SafexpressPostDeliveryStatusAction {
             return verified;
         }
 
-        // Links files to the case (skips files already linked); returns number of files
         Integer linkFiles(Id caseId, Set<Id> docIds) {
             List<ContentDocumentLink> existingLinks = Database.queryWithBinds(
                 'SELECT ContentDocumentId FROM ContentDocumentLink ' +
@@ -903,7 +875,6 @@ public without sharing class SafexpressPostDeliveryStatusAction {
             return docIds.size();
         }
 
-        // Best effort: show the case on the Messaging Session for agents. Never fails the request.
         void linkSessionToCase(String messagingSessionId, Id caseId) {
             if (String.isBlank(messagingSessionId)) return;
             Id sessionId;
@@ -922,7 +893,7 @@ public without sharing class SafexpressPostDeliveryStatusAction {
             if (sessions.isEmpty() || sessions[0].CaseId != null) return;
 
             sessions[0].CaseId = caseId;
-            Database.update(sessions, false, AccessLevel.SYSTEM_MODE);   // allOrNone = false
+            Database.update(sessions, false, AccessLevel.SYSTEM_MODE);   
         }
     }
 
@@ -930,14 +901,10 @@ public without sharing class SafexpressPostDeliveryStatusAction {
     // VALIDATION
     // =====================================================================
 
-    // Blocks any email containing Safexpress in any spelling, case or position:
-    // safexpress@gmail.com, abc@safexpress.co.in, abc@mail.safexpress.company.com,
-    // Safe.Express@x.com, safe-xpress@x.com, safeexpress@x.com, safexpres@x.com ...
     private static final List<String> SAFEXPRESS_VARIANTS = new List<String>{ 'safexpres', 'safeexpres', 'safexprs' };
 
     private static Boolean isSafexpressEmail(String email) {
         if (String.isBlank(email)) return false;
-        // lower-case + keep only letters/digits, so dots, hyphens, underscores, spaces etc. are ignored
         String compact = email.toLowerCase().replaceAll('[^a-z0-9]', '');
         for (String variant : SAFEXPRESS_VARIANTS) {
             if (compact.contains(variant)) return true;
@@ -945,7 +912,6 @@ public without sharing class SafexpressPostDeliveryStatusAction {
         return false;
     }
 
-    // ---------- Email rules ----------
     private static final Set<String> BLOCKED_EMAIL_NAMES = new Set<String>{
         'test', 'testing', 'tester', 'testuser', 'testmail', 'dummy', 'fake', 'sample', 'demo',
         'abc', 'abcd', 'abcde', 'xyz', 'asdf', 'qwerty', 'user', 'admin', 'example', 'temp',
@@ -979,7 +945,6 @@ public without sharing class SafexpressPostDeliveryStatusAction {
         return Pattern.compile(regex).matcher(value).find();
     }
 
-    // A word looks random: aaaa, titititi, 5+ consonants in a row, keyboard runs
     private static Boolean looksRandom(String letters) {
         if (String.isBlank(letters)) return false;
         if (regexFind('(.)\\1{3,}', letters)) return true;
@@ -991,7 +956,6 @@ public without sharing class SafexpressPostDeliveryStatusAction {
         return false;
     }
 
-    // Returns the message to show, or null when the email is acceptable (same rules as the LWC)
     private static String emailRejectionReason(String rawEmail) {
         String e = rawEmail == null ? '' : rawEmail.trim().toLowerCase();
         if (String.isBlank(e)) return 'Please provide your email address.';
@@ -1002,9 +966,7 @@ public without sharing class SafexpressPostDeliveryStatusAction {
         String localPart = parts[0];
         String domain = parts[1];
 
-        // Name: letters, digits, dots; starts with a letter; 3-40 chars; no "..", no trailing dot
         if (!Pattern.matches('^[a-z][a-z0-9.]{1,38}[a-z0-9]$', localPart) || localPart.contains('..')) return MSG_EMAIL_FORMAT;
-        // Domain: no digits; letters/hyphens per part; ending of 2-6 letters
         if (regexFind('[0-9]', domain)) return MSG_EMAIL_DOMAIN_DIGITS;
         if (!Pattern.matches('^[a-z]+(-[a-z]+)*(\\.[a-z]+(-[a-z]+)*)*\\.[a-z]{2,6}$', domain)) return MSG_EMAIL_FORMAT;
 
@@ -1014,13 +976,11 @@ public without sharing class SafexpressPostDeliveryStatusAction {
         String letters = localPart.replaceAll('[^a-z]', '');
         if (letters.length() < 3) return MSG_EMAIL_RANDOM;
 
-        // Test / dummy names
         if (BLOCKED_EMAIL_NAMES.contains(letters)) return MSG_EMAIL_TEST;
         for (String prefix : BLOCKED_EMAIL_NAME_PREFIXES) {
             if (letters.startsWith(prefix)) return MSG_EMAIL_TEST;
         }
 
-        // Test / dummy / disposable domains
         List<String> labels = domain.split('\\.');
         List<String> nameLabels = new List<String>();
         for (Integer i = 0; i < labels.size() - 1; i++) {
@@ -1033,13 +993,11 @@ public without sharing class SafexpressPostDeliveryStatusAction {
             if (domain.contains(part)) return MSG_EMAIL_TEST;
         }
 
-        // Meaningless name: checked per dot-separated part, plus "no vowels at all"
         for (String seg : localPart.split('\\.')) {
             if (looksRandom(seg.replaceAll('[^a-z]', ''))) return MSG_EMAIL_RANDOM;
         }
         if (letters.length() >= 5 && !regexFind('[aeiouy]', letters)) return MSG_EMAIL_RANDOM;
 
-        // Meaningless domain name
         for (String label : nameLabels) {
             for (String piece : label.split('-')) {
                 if (looksRandom(piece)) return MSG_EMAIL_RANDOM;

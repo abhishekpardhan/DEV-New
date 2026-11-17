@@ -1,7 +1,7 @@
 /**
  * @File Name   : SafexpressBusinessEnquiryForm.cls
  * @Description : Data of the Business Enquiry form (Custom Lightning Type "SafexpressBusinessEnquiryForm").
- *                Filled by the sfxBusinessEnquiryForm LWC and passed to SafexpressBusinessEnquiryService.createBusinessEnquiry.
+ *                Filled by the sfxBusinessEnquiryForm LWC.
  */
 public class SafexpressBusinessEnquiryForm {
     @AuraEnabled public String pincode;

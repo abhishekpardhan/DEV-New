@@ -4,7 +4,7 @@
   "properties" : {
     "enquiryForm" : {
       "title" : "Business Enquiry Form",
-      "description" : "Details entered by the customer in the Business Enquiry form. Always collected from the customer through the form, never filled by the agent.",
+      "description" : "The Business Enquiry form exactly as the customer submitted it with the chat Submit button: pincode, mobile number, email address, full name, designation, organisation name, and the case number and submission status set by the form after the customer registered the enquiry. Always collected from the customer through the form. Never fill this yourself and never ask for these details in chat.",
       "lightning:type" : "c__SafexpressBusinessEnquiryForm",
       "lightning:isPII" : false,
       "copilotAction:isUserInput" : true

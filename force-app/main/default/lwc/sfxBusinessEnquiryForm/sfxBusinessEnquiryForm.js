@@ -1,10 +1,16 @@
 import { LightningElement, api } from 'lwc';
 import checkPincode from '@salesforce/apex/SafexpressBusinessEnquiryService.checkPincode';
 import checkDuplicate from '@salesforce/apex/SafexpressBusinessEnquiryService.checkDuplicate';
+import submitEnquiry from '@salesforce/apex/SafexpressBusinessEnquiryService.submitEnquiry';
 import SFX_LOGO from '@salesforce/resourceUrl/Safexpress_Logo';
+import IOS_BADGE from '@salesforce/resourceUrl/IosStoreLogo';      // App Store badge
+import ANDROID_BADGE from '@salesforce/resourceUrl/AppStoreLogo';  // Google Play badge
 
-const COMPONENT_VERSION = 'v6-strict-restore';
-const DEBUG = true; // set to false before go-live to silence the [sfxBEF] console lines
+const COMPONENT_VERSION = 'v19-pincode-accept-unlisted';
+const DEBUG = true; // set to false before go-live
+
+const STATUS_CREATED = 'CREATED';
+const STATUS_DUPLICATE = 'DUPLICATE';
 
 // =====================================================================
 // VALIDATION - must stay identical to SafexpressBusinessEnquiryValidator.cls
@@ -15,6 +21,7 @@ const MSG = {
     PINCODE_NOT_SERVICEABLE: 'Sorry, we are not serviceable in this area yet. Please try another pincode.',
     PINCODE_CHECK_FAILED: 'We could not check this pincode right now. Please try again.',
     DUPLICATE_CHECK_FAILED: 'We could not verify your details right now. Please try again.',
+    SUBMIT_FAILED: 'We could not register your enquiry right now. Please try again in a few minutes.',
 
     MOBILE_REQUIRED: 'Mobile number is required.',
     MOBILE_FORMAT: 'Please enter a valid 10-digit Indian mobile number starting with 6, 7, 8 or 9.',
@@ -30,7 +37,8 @@ const MSG = {
     EMAIL_SAFEXPRESS: "Safexpress email addresses can't be used. Please enter your personal or company email address.",
     EMAIL_LENGTH: 'Email address cannot be longer than 80 characters.',
     EMAIL_LOCAL_LENGTH: 'The part before @ cannot be longer than 64 characters.',
-    EMAIL_LOCAL_CHARS: 'The part before @ can contain only letters, numbers and the symbols . _ - +',
+    EMAIL_LOCAL_SHORT: 'The part before @ must have at least 3 letters or numbers, e.g. abc@gmail.com.',
+    EMAIL_LOCAL_CHARS: 'Sorry, only letters (a-z), numbers (0-9), and periods (.) are allowed.',
     EMAIL_LOCAL_DOT_EDGE: 'The part before @ cannot start or end with a dot.',
     EMAIL_LOCAL_DOTS: 'The part before @ cannot contain two dots in a row.',
     EMAIL_DOMAIN_CHARS: 'The domain after @ can contain only letters, numbers, hyphens and dots.',
@@ -127,13 +135,13 @@ function pincodeRejectionReason(raw) {
 }
 
 // ---------- Email (standard syntax + application policies) ----------
-const EMAIL_MAX_LENGTH = 80; // Case.SuppliedEmail / Contact.Email
-const LOCAL_MAX_LENGTH = 64; // RFC 5321
-const LABEL_MAX_LENGTH = 63; // RFC 1035
+const EMAIL_MAX_LENGTH = 80;
+const LOCAL_MAX_LENGTH = 64;
+const LABEL_MAX_LENGTH = 63;
+const LOCAL_MIN_ALNUM = 3; // letters + digits before @ (symbols and a +tag not counted)
 
-// Gmail username rules
 const GMAIL_DOMAINS = ['gmail.com', 'googlemail.com'];
-const GMAIL_MIN_LENGTH = 3; // kept at 3 so existing shorter Gmail addresses are accepted
+const GMAIL_MIN_LENGTH = 3;
 const GMAIL_MAX_LENGTH = 30;
 const GMAIL_LETTER_REQUIRED_FROM = 8;
 
@@ -145,17 +153,22 @@ const DISPOSABLE_DOMAINS = [
     'discard.email', 'fakemail.net', 'mailnesia.com', 'tempail.com', 'tempr.email', 'emailfake.com'
 ];
 
-// Safexpress is blocked only in the DOMAIN (after @), any spelling.
 function isSafexpressDomain(domain) {
     const compact = (domain || '').toLowerCase().replace(/[^a-z0-9]/g, '');
     return SAFEXPRESS_VARIANTS.some((v) => compact.includes(v));
+}
+
+// Letters and digits before any "+tag": "ab@x.com" -> 2, "a.b.c@x.com" -> 3, "ab+news@x.com" -> 2
+function localAlnumCount(local) {
+    const plus = local.indexOf('+');
+    const base = plus >= 0 ? local.slice(0, plus) : local;
+    return base.replace(/[^A-Za-z0-9]/g, '').length;
 }
 
 function isDisposableDomain(domain) {
     return DISPOSABLE_DOMAINS.some((d) => domain === d || domain.endsWith('.' + d));
 }
 
-// Gmail ignores dots and treats anything after "+" as a delivery tag, so neither is counted.
 function gmailRejectionReason(local) {
     const lower = local.toLowerCase();
     const plus = lower.indexOf('+');
@@ -170,7 +183,6 @@ function gmailRejectionReason(local) {
 }
 
 function emailRejectionReason(rawEmail) {
-    // Policy: accidental spaces at the start/end are ignored; anything inside is validated as typed
     const e = (rawEmail || '').trim();
     if (!e) return MSG.EMAIL_REQUIRED;
     if (/\s/.test(e)) return MSG.EMAIL_SPACES;
@@ -191,9 +203,10 @@ function emailRejectionReason(rawEmail) {
     if (e.length > EMAIL_MAX_LENGTH) return MSG.EMAIL_LENGTH;
     if (local.length > LOCAL_MAX_LENGTH) return MSG.EMAIL_LOCAL_LENGTH;
 
-    if (!/^[A-Za-z0-9._+-]+$/.test(local)) return MSG.EMAIL_LOCAL_CHARS;
+    if (!/^[A-Za-z0-9.]+$/.test(local)) return MSG.EMAIL_LOCAL_CHARS;
     if (local.startsWith('.') || local.endsWith('.')) return MSG.EMAIL_LOCAL_DOT_EDGE;
     if (local.includes('..')) return MSG.EMAIL_LOCAL_DOTS;
+    if (localAlnumCount(local) < LOCAL_MIN_ALNUM) return MSG.EMAIL_LOCAL_SHORT;
 
     if (!/^[a-z0-9.-]+$/.test(domain)) return MSG.EMAIL_DOMAIN_CHARS;
     if (domain.startsWith('.') || domain.endsWith('.')) return MSG.EMAIL_DOMAIN_DOT_EDGE;
@@ -207,7 +220,6 @@ function emailRejectionReason(rawEmail) {
     }
     if (!/^[a-z]{2,}$/.test(labels[labels.length - 1])) return MSG.EMAIL_EXTENSION;
 
-    // Provider rules
     if (GMAIL_DOMAINS.includes(domain)) {
         const gmailProblem = gmailRejectionReason(local);
         if (gmailProblem) return gmailProblem;
@@ -297,56 +309,8 @@ function organisationRejectionReason(raw) {
     });
 }
 
-// ---------- Restore previous values ----------
-// The entry the customer is typing is saved in the browser's session storage (shared by every copy of
-// the form on this website) and in memory as a fallback. A newly opened form restores it ONLY when:
-//   1. it is the entry the customer was just typing (same values) and the chat has just submitted it,
-//   2. it was incomplete (a complete one led to a new enquiry or a duplicate),
-//   3. it was submitted less than 30 seconds ago (the re-shown form arrives within seconds),
-//   4. it has not been used yet (used once only),
-//   5. it belongs to the same chat session (when the chat provides a session id).
-// Redrawn older forms can never re-mark an entry, so a new session or a refresh always starts empty.
-const STORAGE_KEY = 'sfxBusinessEnquiry.lastEntry';
-const RESTORE_WINDOW_MS = 30 * 1000;
-const RESTORE_RETRIES = 10;
-const RESTORE_RETRY_MS = 300;
+// ---------- Values handed in by the chat ----------
 const FORM_FIELDS = ['pincode', 'mobileNumber', 'emailAddress', 'fullName', 'designation', 'organisationName'];
-let memoryEntry = null;
-
-function debugLog(...args) {
-    if (!DEBUG) return;
-    // eslint-disable-next-line no-console
-    console.info('[sfxBEF]', COMPONENT_VERSION, ...args);
-}
-
-function saveLastEntry(entry) {
-    memoryEntry = entry;
-    try {
-        window.sessionStorage.setItem(STORAGE_KEY, JSON.stringify(entry));
-    } catch (e) {
-        debugLog('session storage not available, using memory only');
-    }
-}
-
-function loadLastEntry() {
-    try {
-        const raw = window.sessionStorage.getItem(STORAGE_KEY);
-        if (raw) return JSON.parse(raw);
-    } catch (e) {
-        debugLog('session storage not readable, using memory only');
-    }
-    return memoryEntry;
-}
-
-function sameFormValues(a, b) {
-    if (!a || !b) return false;
-    return FORM_FIELDS.every(
-        (f) => String(a[f] || '').trim().toLowerCase() === String(b[f] || '').trim().toLowerCase()
-    );
-}
-
-// Values handed in by the chat may be an object, JSON text, wrapped in "enquiryForm",
-// or use label-style keys ("full name", "mobile number"). All of these are mapped to the form's fields.
 const FIELD_ALIASES = {
     pincode: ['pincode', 'pin', 'pinno', 'pincodeno', 'postalcode', 'postcode', 'zipcode', 'zip'],
     mobileNumber: ['mobilenumber', 'mobile', 'mobileno', 'phone', 'phonenumber', 'contactnumber', 'contactno'],
@@ -356,6 +320,12 @@ const FIELD_ALIASES = {
     organisationName: ['organisationname', 'organizationname', 'organisation', 'organization', 'companyname', 'company']
 };
 const EMPTY_PLACEHOLDERS = ['null', 'undefined', 'none', 'n/a', '-'];
+
+function debugLog(...args) {
+    if (!DEBUG) return;
+    // eslint-disable-next-line no-console
+    console.info('[sfxBEF]', COMPONENT_VERSION, ...args);
+}
 
 function parseIncomingValue(val) {
     if (!val) return null;
@@ -391,15 +361,21 @@ function normaliseIncomingValue(raw) {
 
 const DUPLICATE_CHECK_DELAY_MS = 600;
 
+// Footer app links
+const IOS_APP_URL = 'https://apps.apple.com/in/app/safexpress-app/id6797861161';
+const ANDROID_APP_URL = 'https://play.google.com/store/apps/details?id=com.safexpress.enterprise';
+
 // =====================================================================
 // COMPONENT
 // =====================================================================
 export default class SfxBusinessEnquiryForm extends LightningElement {
     @api configuration;
 
-    // Lightning Type editor value (SafexpressBusinessEnquiryForm) - sent to the agent action on Submit.
-    // After Submit the chat redraws the submitted form and passes the submitted values in here: that copy
-    // shows them and, if they are the entry just typed, marks that entry as submitted.
+    // Lightning Type editor value - sent to the agent action when the customer clicks the chat Submit.
+    // After the chat Submit the chat redraws this form and passes the submitted values back in here:
+    // the form keeps them on screen so the customer can finish, and stays silent until they edit.
+    // If those values belong to an enquiry registered a moment ago, the redrawn copy shows its
+    // registration summary (see runDuplicateCheck).
     _value = {};
     @api
     get value() {
@@ -409,17 +385,23 @@ export default class SfxBusinessEnquiryForm extends LightningElement {
         debugLog('value received', val);
         const incoming = parseIncomingValue(val);
         if (!incoming) return;
+        const fromForm = FORM_FIELDS.some((f) => Object.prototype.hasOwnProperty.call(incoming, f));
         const fields = normaliseIncomingValue(incoming);
+        // Exactly the 7 fields of SafexpressBusinessEnquiryForm
         this._value = { ...fields, messagingSessionId: incoming.messagingSessionId || this.sessionId };
-        if (!this._userEdited && FORM_FIELDS.some((f) => fields[f])) {
-            this._readOnlyCopy = true; // this copy shows a submitted form; it never saves an entry itself
-            clearTimeout(this._restoreTimer);
-            this.markSubmitted(fields);
-            this.restoreFromValue(fields);
-        }
+
+        if (this._userEdited || this.result || !fromForm) return;
+
+        this._chatSubmitted = true; // the chat Submit has already been used for this form
+        this._silent = true;        // never send these old values back to the chat until the customer edits
+        this.restoreFromValue(fields);
     }
 
     logoUrl = SFX_LOGO;
+    iosBadgeUrl = IOS_BADGE;
+    androidBadgeUrl = ANDROID_BADGE;
+    iosAppUrl = IOS_APP_URL;
+    androidAppUrl = ANDROID_APP_URL;
 
     pincode = '';
     mobile = '';
@@ -429,15 +411,20 @@ export default class SfxBusinessEnquiryForm extends LightningElement {
     organisationName = '';
     touched = { pincode: false, mobile: false, email: false, fullName: false, designation: false, organisationName: false };
 
-    // Restore state
+    // Submission state
+    isSubmitting = false;
+    submitError = '';
+    result = null; // { status, caseNumber, customerName, organisationName, pincode, city, state, fromChat }
+
     _userEdited = false;
-    _restored = false;
-    _readOnlyCopy = false;
+    _silent = false;
+    _chatSubmitted = false;
     _connected = false;
     _pendingLookups = false;
-    _restoreTimer;
 
-    // Pincode lookup: idle | checking | serviceable | not_serviceable | error
+    // Pincode lookup: idle | checking | serviceable | not_serviceable
+    // A valid-format pincode is always accepted ('serviceable'); the location card shows only when the
+    // pincode is in Pincode__c. A pincode that is not listed, or a failed lookup, is accepted silently.
     pincodeState = 'idle';
     pincodeMessage = '';
     location = null;
@@ -454,65 +441,18 @@ export default class SfxBusinessEnquiryForm extends LightningElement {
 
     connectedCallback() {
         this._connected = true;
-        debugLog('form opened; chat context', JSON.stringify(this.configuration?.context || {}));
+        debugLog('form opened');
         if (this._pendingLookups) {
             this.runRestoreLookups();
         }
-        // Retried briefly because the submitted copy may mark the entry a moment after this form opens
-        this.tryRestoreFromStorage(0);
     }
 
     disconnectedCallback() {
         this._connected = false;
         clearTimeout(this._dupTimer);
-        clearTimeout(this._restoreTimer);
     }
 
-    // ---------------- Restore previous values ----------------
-    // Marks the entry as submitted only if it is exactly the entry the customer was just typing and it
-    // has not been submitted or used yet. A redrawn older form can never re-mark anything.
-    markSubmitted(fields) {
-        const existing = loadLastEntry();
-        if (!existing || !sameFormValues(existing, fields)) {
-            debugLog('submitted copy: not the entry being typed - ignored');
-            return;
-        }
-        if (existing.submitted || existing.consumed) {
-            debugLog('submitted copy: entry already submitted or used - ignored');
-            return;
-        }
-        saveLastEntry({ ...existing, submitted: true, submittedAt: Date.now() });
-        debugLog('submitted copy: entry marked as submitted; complete =', !!existing.wasComplete);
-    }
-
-    canRestore(last) {
-        if (!last || !last.submitted || last.consumed || last.wasComplete) return false;
-        if (!last.submittedAt || Date.now() - last.submittedAt > RESTORE_WINDOW_MS) return false;
-        // A different chat session never sees this entry
-        if (last.messagingSessionId && this.sessionId && last.messagingSessionId !== this.sessionId) return false;
-        return true;
-    }
-
-    tryRestoreFromStorage(attempt) {
-        if (this._restored || this._userEdited || this._readOnlyCopy || !this._connected) return;
-
-        const last = loadLastEntry();
-        if (this.canRestore(last)) {
-            debugLog('restoring last rejected submission');
-            saveLastEntry({ ...last, consumed: true }); // used once only
-            this.restoreFromValue(normaliseIncomingValue(last));
-            return;
-        }
-
-        if (attempt < RESTORE_RETRIES) {
-            // eslint-disable-next-line @lwc/lwc/no-async-operation
-            this._restoreTimer = setTimeout(() => this.tryRestoreFromStorage(attempt + 1), RESTORE_RETRY_MS);
-        } else {
-            debugLog('nothing to restore; last entry', last);
-        }
-    }
-
-    // Copies previous values into the on-screen fields. A value the customer never gave stays empty.
+    // ---------------- Keep the customer's entries after the chat Submit ----------------
     restoreFromValue(v) {
         const pin = this.sanitise('pincode', v.pincode || '');
         const mob = this.sanitise('mobile', v.mobileNumber || '');
@@ -521,10 +461,7 @@ export default class SfxBusinessEnquiryForm extends LightningElement {
         const des = this.sanitise('designation', v.designation || '');
         const org = this.sanitise('organisationName', v.organisationName || '');
 
-        // Nothing to restore
         if (!pin && !mob && !em && !name && !des && !org) return;
-
-        // Same as what is already on screen (e.g. our own published value coming back)
         if (
             pin === this.pincode && mob === this.mobile && em === this.email &&
             name === this.fullName && des === this.designation && org === this.organisationName
@@ -532,18 +469,14 @@ export default class SfxBusinessEnquiryForm extends LightningElement {
             return;
         }
 
-        this._restored = true;
         this.pincode = pin;
         this.mobile = mob;
         this.email = em;
         this.fullName = name;
         this.designation = des;
         this.organisationName = org;
-
-        // Show every problem straight away, including the field that was missed
         this.touched = { pincode: true, mobile: true, email: true, fullName: true, designation: true, organisationName: true };
 
-        // Start the pincode lookup and duplicate check again for the restored values
         this._pinSeq += 1;
         this.location = null;
         this.pincodeMessage = '';
@@ -564,6 +497,11 @@ export default class SfxBusinessEnquiryForm extends LightningElement {
         } else {
             this.scheduleDuplicateCheck(0);
         }
+    }
+
+    // True only for the untouched copy the chat redraws after its Submit
+    get isRedrawnCopy() {
+        return this._chatSubmitted && this._silent && !this._userEdited;
     }
 
     // ---------------- Pincode getters ----------------
@@ -590,7 +528,7 @@ export default class SfxBusinessEnquiryForm extends LightningElement {
         return this.touched.pincode || this.pincode.length === 6 ? problem : '';
     }
     get pincodeServiceError() {
-        return this.pincodeState === 'not_serviceable' || this.pincodeState === 'error' ? this.pincodeMessage : '';
+        return this.pincodeState === 'not_serviceable' ? this.pincodeMessage : '';
     }
 
     // ---------------- Mobile / email getters ----------------
@@ -604,8 +542,6 @@ export default class SfxBusinessEnquiryForm extends LightningElement {
         if (!this.touched.mobile && this.mobile.length < 10) return '';
         return this.mobileProblem;
     }
-
-    // Value saved and used for the duplicate check: ends trimmed + lowercase (same as Apex normaliseEmail)
     get normalisedEmail() {
         return (this.email || '').trim().toLowerCase();
     }
@@ -618,7 +554,7 @@ export default class SfxBusinessEnquiryForm extends LightningElement {
     get emailError() {
         const problem = this.emailProblem;
         if (!problem) return '';
-        if (EMAIL_INSTANT_MESSAGES.includes(problem)) return problem; // shown immediately while typing
+        if (EMAIL_INSTANT_MESSAGES.includes(problem)) return problem;
         return this.touched.email ? problem : '';
     }
 
@@ -641,6 +577,10 @@ export default class SfxBusinessEnquiryForm extends LightningElement {
     get isStepOneVerified() {
         return this.isStepOneValid && this.dupState === 'clear';
     }
+    // "Click Submit below to continue." only makes sense before the chat Submit was used
+    get showDupSubmitHint() {
+        return this.isDuplicate && !this._chatSubmitted;
+    }
 
     // ---------------- Details section ----------------
     get showDetails() {
@@ -652,12 +592,14 @@ export default class SfxBusinessEnquiryForm extends LightningElement {
     get showLockNote() {
         return this.isDetailsLocked && !this.isDupChecking && !this.isDupError;
     }
-
     get nameProblem() {
         return nameRejectionReason(this.fullName);
     }
     get nameError() {
         return this.touched.fullName ? this.nameProblem : '';
+    }
+    get isNameOk() {
+        return !this.nameProblem;
     }
     get designationProblem() {
         return designationRejectionReason(this.designation);
@@ -665,15 +607,147 @@ export default class SfxBusinessEnquiryForm extends LightningElement {
     get designationError() {
         return this.touched.designation ? this.designationProblem : '';
     }
+    get isDesignationOk() {
+        return !this.designationProblem;
+    }
     get organisationProblem() {
         return organisationRejectionReason(this.organisationName);
     }
     get organisationError() {
         return this.touched.organisationName ? this.organisationProblem : '';
     }
+    get isOrganisationOk() {
+        return !this.organisationProblem;
+    }
 
     get isReady() {
-        return this.isStepOneVerified && !this.nameProblem && !this.designationProblem && !this.organisationProblem;
+        return this.isStepOneVerified && this.isNameOk && this.isDesignationOk && this.isOrganisationOk;
+    }
+
+    // ---------------- Progress ----------------
+    get completedCount() {
+        return [this.isPincodeValid, this.isMobileValid, this.isEmailValid, this.isNameOk, this.isDesignationOk, this.isOrganisationOk]
+            .filter(Boolean).length;
+    }
+    get progressText() {
+        return `${this.completedCount} of 6 completed`;
+    }
+    get progressStyle() {
+        return `width: ${Math.round((this.completedCount / 6) * 100)}%;`;
+    }
+
+    // ---------------- Submit Request ----------------
+    get showSubmitButton() {
+        return !this.isDuplicate;
+    }
+    get isSubmitDisabled() {
+        return this.isSubmitting || !this.isReady;
+    }
+    get submitLabel() {
+        return this.isSubmitting ? 'Submitting…' : 'Submit Request';
+    }
+
+    async handleSubmitRequest() {
+        this.submitError = '';
+        this.touched = { pincode: true, mobile: true, email: true, fullName: true, designation: true, organisationName: true };
+        if (!this.isReady || this.isSubmitting) return;
+
+        this.isSubmitting = true;
+        try {
+            const res = await submitEnquiry({
+                pincode: this.pincode,
+                mobileNumber: this.mobile,
+                emailAddress: this.normalisedEmail,
+                fullName: clean(this.fullName),
+                designation: clean(this.designation),
+                organisationName: clean(this.organisationName),
+                messagingSessionId: this.sessionId
+            });
+            debugLog('submitEnquiry result', res);
+
+            if (res && (res.status === STATUS_CREATED || res.status === STATUS_DUPLICATE)) {
+                this.result = { ...res, fromChat: false };
+                this._silent = false;
+                this.publishValue();
+                this.notifyChatIfNeeded();
+            } else {
+                this.submitError = res?.message || MSG.SUBMIT_FAILED;
+            }
+        } catch (error) {
+            console.error('Submit enquiry error: ', error);
+            this.submitError = MSG.SUBMIT_FAILED;
+        } finally {
+            this.isSubmitting = false;
+        }
+    }
+
+    // If the chat Submit was already used (the customer clicked it before completing the form),
+    // post the reference number into the chat so the agent can confirm it.
+    notifyChatIfNeeded() {
+        if (!this._chatSubmitted || !this.result) return;
+        const util = this.configuration?.util;
+        if (!util || typeof util.sendTextMessage !== 'function') return;
+        const text = this.result.status === STATUS_DUPLICATE
+            ? `My business enquiry is already registered. Reference No. ${this.result.caseNumber}.`
+            : `I have submitted the business enquiry form. Reference No. ${this.result.caseNumber}.`;
+        try {
+            util.sendTextMessage(text);
+        } catch (error) {
+            console.error('sendTextMessage error: ', error);
+        }
+    }
+
+    // ---------------- Result view ----------------
+    get hasResult() {
+        return !!this.result;
+    }
+    get isCreatedResult() {
+        return this.result?.status === STATUS_CREATED;
+    }
+    get resultNote() {
+        if (this.result?.fromChat) return '✅ Your business enquiry is registered.';
+        if (!this.isCreatedResult) {
+            return this._chatSubmitted
+                ? '⚠️ An enquiry is already registered with these details.'
+                : '⚠️ An enquiry is already registered with these details. Please click Submit below to continue.';
+        }
+        return this._chatSubmitted
+            ? '✅ Your business enquiry is logged. I will confirm it in the chat.'
+            : '✅ Your business enquiry is logged. Please click Submit below to confirm.';
+    }
+    get resultNoteClass() {
+        return this.isCreatedResult ? 'sfx-result-note' : 'sfx-result-note is-warning';
+    }
+    get resultIcon() {
+        return this.isCreatedResult ? '✓' : '!';
+    }
+    get resultIconClass() {
+        return this.isCreatedResult ? 'sfx-result-icon' : 'sfx-result-icon is-warning';
+    }
+    get resultHeadline() {
+        const cn = this.result?.caseNumber || '';
+        return this.isCreatedResult
+            ? `Your business enquiry has been registered. Case #${cn} created.`
+            : `We already have a business enquiry registered with these details. Case #${cn}.`;
+    }
+    get resultHeadlineClass() {
+        return this.isCreatedResult ? 'sfx-result-headline' : 'sfx-result-headline is-warning';
+    }
+    get resultCaseNumber() {
+        return this.result?.caseNumber || '';
+    }
+    get resultName() {
+        return this.result?.customerName || clean(this.fullName) || '-';
+    }
+    get resultOrganisation() {
+        return this.result?.organisationName || clean(this.organisationName) || '-';
+    }
+    get resultLocation() {
+        const city = this.result?.city || this.location?.city || '';
+        const state = this.result?.state || this.location?.state || '';
+        const pin = this.result?.pincode || this.pincode || '';
+        const place = [city, state].filter(Boolean).join(', ');
+        return place ? `${place} - ${pin}` : pin || '-';
     }
 
     // ---------------- Styling ----------------
@@ -688,7 +762,6 @@ export default class SfxBusinessEnquiryForm extends LightningElement {
         if (error) return 'sfx-input has-error';
         return done ? 'sfx-input is-valid' : 'sfx-input';
     }
-
     get pincodeStepClass() {
         return this.stepClass(this.isPincodeValid, !!(this.pincodeFieldError || this.pincodeServiceError), false);
     }
@@ -708,13 +781,13 @@ export default class SfxBusinessEnquiryForm extends LightningElement {
         return this.inputClass(this.isEmailValid, !!this.emailError);
     }
     get nameInputClass() {
-        return this.inputClass(!this.nameProblem, !!this.nameError);
+        return this.inputClass(this.isNameOk, !!this.nameError);
     }
     get designationInputClass() {
-        return this.inputClass(!this.designationProblem, !!this.designationError);
+        return this.inputClass(this.isDesignationOk, !!this.designationError);
     }
     get organisationInputClass() {
-        return this.inputClass(!this.organisationProblem, !!this.organisationError);
+        return this.inputClass(this.isOrganisationOk, !!this.organisationError);
     }
 
     get sessionId() {
@@ -729,8 +802,9 @@ export default class SfxBusinessEnquiryForm extends LightningElement {
         if (val !== raw) event.target.value = val;
         if (val === this[field]) return;
 
-        this._userEdited = true; // from now on, values handed in from outside never overwrite the customer's typing
-        clearTimeout(this._restoreTimer);
+        this._userEdited = true;
+        this._silent = false;
+        this.submitError = '';
         this[field] = val;
 
         if (field === 'pincode') this.onPincodeChange(val);
@@ -744,7 +818,7 @@ export default class SfxBusinessEnquiryForm extends LightningElement {
         const field = event.target.dataset.field;
         this.touched = { ...this.touched, [field]: true };
         if ((field === 'mobile' || field === 'email') && this._dupPending) {
-            this.scheduleDuplicateCheck(0); // run the pending check now
+            this.scheduleDuplicateCheck(0);
         }
     }
 
@@ -760,7 +834,7 @@ export default class SfxBusinessEnquiryForm extends LightningElement {
             case 'mobile':
                 return toMobileDigits(raw);
             case 'email':
-                return raw; // never altered while typing - problems are reported, not silently fixed
+                return raw;
             case 'fullName':
                 return raw.replace(/[^A-Za-z .'-]/g, '').replace(/\s{2,}/g, ' ').replace(/^\s+/, '').slice(0, 80);
             default:
@@ -786,19 +860,26 @@ export default class SfxBusinessEnquiryForm extends LightningElement {
         this.pincodeState = 'checking';
         try {
             const res = await checkPincode({ pincode: pin });
-            if (seq !== this._pinSeq) return; // customer changed the pincode meanwhile
+            if (seq !== this._pinSeq) return;
             if (res && res.isServiceable) {
+                // Listed in Pincode__c: green tick + location card
                 this.pincodeState = 'serviceable';
                 this.location = { city: res.city, district: res.district, state: res.state };
+            } else if (res && (res.isAccepted || !res.message)) {
+                // Valid format but not listed: green tick only, accepted silently
+                this.pincodeState = 'serviceable';
+                this.location = null;
             } else {
+                // Only a format problem reported by the server
                 this.pincodeState = 'not_serviceable';
-                this.pincodeMessage = res?.message || MSG.PINCODE_NOT_SERVICEABLE;
+                this.pincodeMessage = res.message || MSG.PINCODE_FORMAT;
             }
         } catch (error) {
             if (seq !== this._pinSeq) return;
+            // The lookup failed: the format is already valid, so accept silently (no card, no message)
             console.error('Pincode check error: ', error);
-            this.pincodeState = 'error';
-            this.pincodeMessage = MSG.PINCODE_CHECK_FAILED;
+            this.pincodeState = 'serviceable';
+            this.location = null;
         }
         this.scheduleDuplicateCheck(0);
         this.publishValue();
@@ -814,7 +895,7 @@ export default class SfxBusinessEnquiryForm extends LightningElement {
     scheduleDuplicateCheck(delay) {
         clearTimeout(this._dupTimer);
         this._dupPending = false;
-        this._dupSeq += 1; // ignore any in-flight answer
+        this._dupSeq += 1;
 
         if (!this.isStepOneValid) {
             this.setDup('idle');
@@ -838,11 +919,32 @@ export default class SfxBusinessEnquiryForm extends LightningElement {
 
     async runDuplicateCheck(key, seq) {
         try {
-            const res = await checkDuplicate({ pincode: this.pincode, mobile: this.mobile, email: this.normalisedEmail });
+            const res = await checkDuplicate({
+                pincode: this.pincode,
+                mobile: this.mobile,
+                email: this.normalisedEmail,
+                fullName: clean(this.fullName),
+                designation: clean(this.designation),
+                organisationName: clean(this.organisationName)
+            });
             if (seq !== this._dupSeq) return;
             if (!res || res.isError) {
                 this.setDup('error', res?.message || MSG.DUPLICATE_CHECK_FAILED);
             } else if (res.isDuplicate) {
+                // Copy redrawn by the chat after its Submit (untouched): only when THIS form registered
+                // the enquiry a moment ago (same details) show the registration summary. An enquiry found
+                // by the duplicate check (details hidden, empty) keeps the "already registered" banner.
+                if (this.isRedrawnCopy && !this.result && res.isJustRegistered) {
+                    this.result = {
+                        status: STATUS_CREATED,
+                        caseNumber: res.caseNumber,
+                        customerName: clean(this.fullName),
+                        organisationName: clean(this.organisationName),
+                        pincode: this.pincode,
+                        fromChat: true
+                    };
+                    debugLog('redrawn copy: showing registration summary', this.result);
+                }
                 this.setDup('duplicate', res.message, res.caseNumber);
                 this._dupCache = { key, state: 'duplicate', message: res.message, caseNumber: res.caseNumber };
             } else {
@@ -857,9 +959,14 @@ export default class SfxBusinessEnquiryForm extends LightningElement {
         this.publishValue();
     }
 
-    // ---------------- Value for the agent action ----------------
-    // The server re-validates everything, so the value is always published as typed.
+    // ---------------- Value for the chat Submit ----------------
+    // Exactly the 7 fields of SafexpressBusinessEnquiryForm. The agent action finds the registration
+    // by mobile + email. A form redrawn by the chat after its Submit stays silent until the customer edits it.
     publishValue() {
+        if (this._silent) {
+            debugLog('values shown only, nothing sent to the chat');
+            return;
+        }
         this._value = {
             pincode: this.pincode,
             mobileNumber: this.mobile,
@@ -869,19 +976,6 @@ export default class SfxBusinessEnquiryForm extends LightningElement {
             organisationName: clean(this.organisationName),
             messagingSessionId: this.sessionId
         };
-
-        // Only the form the customer is filling saves the entry; the greyed "Submitted" copy never does.
-        // A restored form that the customer has not changed keeps the entry marked as used.
-        if (!this._readOnlyCopy || this._userEdited) {
-            saveLastEntry({
-                ...this._value,
-                wasComplete: this.isReady || this.isDuplicate,
-                submitted: false,
-                consumed: this._restored && !this._userEdited,
-                savedAt: Date.now()
-            });
-        }
-
         this.dispatchEvent(
             new CustomEvent('valuechange', {
                 detail: { value: this._value },

@@ -13,6 +13,11 @@
 *                                                               and documentation
 **/
 public class LeadReviveController {
+    
+    @TestVisible
+    private static Boolean forceUnlockException = false;
+    @TestVisible
+    private static Boolean forceMainException = false;
     /**
 * Revives eligible Leads supplied by a Screen Flow.
 *
@@ -47,6 +52,9 @@ public class LeadReviveController {
                     outputMessages[i] = ConstantUtility.PERMISSION_ERROR;
                 }
                 return outputMessages;
+            }
+            if (forceMainException) {
+                throw new AuraHandledException('Simulated Main Exception');
             }
             Set<Id> uniqueLeadIds = new Set<Id>();
             
@@ -94,7 +102,7 @@ public class LeadReviveController {
             List<Id> lockedLeadIds = new List<Id>();
             Map<Id, Boolean> lockStateById = Approval.isLocked(new List<Id>(eligibleLeadsById.keySet()));
             for (Id leadId : eligibleLeadsById.keySet()) {
-                if (lockStateById != null && lockStateById.containsKey(leadId) && lockStateById.get(leadId) == true) {
+                if ((lockStateById != null && lockStateById.containsKey(leadId) && lockStateById.get(leadId) == true)) {
                     lockedLeadIds.add(leadId);
                 }
             }
@@ -102,6 +110,9 @@ public class LeadReviveController {
             // Unlock records before updating them.
             if (!lockedLeadIds.isEmpty()) {
                 try {
+                    if (forceUnlockException) {
+                        throw new AuraHandledException('Simulated Approval Unlock Exception');
+                    }
                     Approval.UnlockResult[] unlockResults = Approval.unlock(lockedLeadIds, false);
                     for (Integer i = 0; i < lockedLeadIds.size(); i++) {
                         Id leadId = lockedLeadIds[i];

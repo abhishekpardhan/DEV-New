@@ -167,7 +167,7 @@ public class IntegrationTransactionHandler extends TriggerHandler {
         }
 
         if(pincodeLookupMap.size() > 0){
-            PincodeLookupQueueable.enqueueInChunks(pincodeLookupMap, 1); // 1 minute retry delay
+            PincodeLookupQueueable.enqueueInChunks(pincodeLookupMap, 0);
         }
 
         // if(slackRetryMap.size() > 0){

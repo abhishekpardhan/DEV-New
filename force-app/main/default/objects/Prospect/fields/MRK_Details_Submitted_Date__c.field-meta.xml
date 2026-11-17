@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MRK_Details_Submitted_Date__c</fullName>
+    <description>Used for marketing</description>
+    <inlineHelpText>Date and time the details form was submitted</inlineHelpText>
+    <label>MRK Details Submitted Date</label>
+    <required>false</required>
+    <type>DateTime</type>
+</CustomField>

@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
-    <apiVersion>66.0</apiVersion>
+    <apiVersion>64.0</apiVersion>
     <isExposed>true</isExposed>
-    <masterLabel>SFX Business Enquiry Form</masterLabel>
+    <masterLabel>Safexpress Business Enquiry Form</masterLabel>
+    <description>Business Enquiry form shown by the Sahay agent in Enhanced Chat. Registers the enquiry with its own Submit Request button.</description>
     <targets>
         <target>lightning__AgentforceInput</target>
     </targets>
     <targetConfigs>
         <targetConfig targets="lightning__AgentforceInput">
-            <targetType name="c__SafexpressBusinessEnquiryForm" />
+            <targetType name="c__SafexpressBusinessEnquiryForm"/>
         </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>

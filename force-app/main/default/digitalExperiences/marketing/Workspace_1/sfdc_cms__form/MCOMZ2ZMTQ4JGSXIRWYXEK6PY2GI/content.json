@@ -81,8 +81,7 @@
                 "textColor" : "{!$brand.colorScheme.contrast}"
               },
               "lightning:margin" : "{!$brand.spacing.none}",
-              "lightning:padding" : "{!$brand.spacing.none}",
-              "rawHtml" : "\n<html lang=\"en\"><head><meta charset=\"UTF-8\" /><meta name=\"viewport\" content=\"width&#61;device-width, initial-scale&#61;1.0\" /><title>Contact Us</title></head></html><style>body{font-family:Arial,sans-serif;background:#f4f6f9;padding:40px 16px}.mc-form{max-width:480px;margin:auto;background:#fff;padding:28px;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.08)}.mc-form h2{margin-top:0;color:#032d60}.mc-form label{display:block;font-size:14px;margin:14px 0 6px;color:#333}.mc-form input,.mc-form select,.mc-form textarea{width:100%;padding:10px;border:1px solid #ccc;border-radius:6px;font-size:14px;box-sizing:border-box}.mc-form .checkbox{display:flex;gap:8px;align-items:flex-start;margin-top:16px;font-size:13px}.mc-form .checkbox input{width:auto;margin-top:2px}.mc-form button{margin-top:20px;width:100%;padding:12px;background:#0176d3;color:#fff;border:0;border-radius:6px;font-size:15px;cursor:pointer}.mc-form button:hover{background:#014486}</style>\n\n<body>\n\n  <!-- Replace action with the Form Action URL from your Form Handler's Code Snippet tab -->\n  <form class=\"mc-form\" method=\"POST\" action=\"https://YOUR-FORM-ACTION-URL-FROM-MARKETING-CLOUD-NEXT\">\n\n    <h2>Get in Touch</h2>\n\n    <label for=\"FirstName\">First Name *</label>\n    <input type=\"text\" id=\"FirstName\" name=\"FirstName\" required=\"required\" />\n\n    <label for=\"LastName\">Last Name *</label>\n    <input type=\"text\" id=\"LastName\" name=\"LastName\" required=\"required\" />\n\n    <label for=\"Email\">Email *</label>\n    <input type=\"email\" id=\"Email\" name=\"Email\" required=\"required\" />\n\n    <label for=\"Phone\">Phone</label>\n    <input type=\"tel\" id=\"Phone\" name=\"Phone\" />\n\n    <label for=\"Company\">Company</label>\n    <input type=\"text\" id=\"Company\" name=\"Company\" />\n\n    <label for=\"Interest\">Interested In</label>\n    <select id=\"Interest\" name=\"Interest\"><option value=\"\">-- Select --</option><option value=\"Product Demo\">Product Demo</option><option value=\"Pricing\">Pricing</option><option value=\"Support\">Support</option></select>\n\n    <label for=\"Message\">Message</label>\n    <textarea id=\"Message\" name=\"Message\" rows=\"4\"></textarea>\n\n    <div class=\"checkbox\">\n      <input type=\"checkbox\" id=\"EmailOptIn\" name=\"EmailOptIn\" value=\"true\" />\n      <label for=\"EmailOptIn\" style=\"margin:0\">I agree to receive marketing emails.</label>\n    </div>\n\n    <!-- Hidden fields (optional) – e.g. tracking info -->\n    <input type=\"hidden\" name=\"LeadSource\" value=\"Website\" />\n    <input type=\"hidden\" name=\"utm_source\" id=\"utm_source\" />\n    <input type=\"hidden\" name=\"utm_medium\" id=\"utm_medium\" />\n    <input type=\"hidden\" name=\"utm_campaign\" id=\"utm_campaign\" />\n\n    <button type=\"submit\">Submit</button>\n  </form>\n\n  \n\n</body>\n"
+              "lightning:padding" : "{!$brand.spacing.none}"
             },
             "definition" : "lightning/html",
             "id" : "385af4b1-1ea4-4053-acb3-0c2c5fa1e60d",
@@ -123,10 +122,10 @@
                 "urlParameterValue" : "",
                 "valueType" : "staticValue"
               },
-              "sfdc_cms:formInputHiddenProperty" : false,
+              "sfdc_cms:formInputHiddenProperty" : true,
               "sfdc_cms:formInputLabelProperty" : "Lead Type",
               "sfdc_cms:formInputNameProperty" : "Lead_Type__c",
-              "sfdc_cms:formInputRequiredProperty" : true,
+              "sfdc_cms:formInputRequiredProperty" : false,
               "width" : "auto"
             },
             "definition" : "lightning/inputDropdown",
@@ -168,10 +167,10 @@
                 "urlParameterValue" : "",
                 "valueType" : "staticValue"
               },
-              "sfdc_cms:formInputHiddenProperty" : false,
+              "sfdc_cms:formInputHiddenProperty" : true,
               "sfdc_cms:formInputLabelProperty" : "Status",
               "sfdc_cms:formInputNameProperty" : "Status",
-              "sfdc_cms:formInputRequiredProperty" : true,
+              "sfdc_cms:formInputRequiredProperty" : false,
               "width" : "auto"
             },
             "definition" : "lightning/inputDropdown",
@@ -197,10 +196,10 @@
                 "defaultValue" : "",
                 "valueType" : "staticValue"
               },
-              "sfdc_cms:formInputHiddenProperty" : false,
+              "sfdc_cms:formInputHiddenProperty" : true,
               "sfdc_cms:formInputLabelProperty" : "Last Name",
               "sfdc_cms:formInputNameProperty" : "LastName",
-              "sfdc_cms:formInputRequiredProperty" : true,
+              "sfdc_cms:formInputRequiredProperty" : false,
               "width" : "auto"
             },
             "definition" : "lightning/inputText",

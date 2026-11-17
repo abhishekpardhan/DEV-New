@@ -3860,6 +3860,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Lead.Mrk_Promotional_Consent__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Lead.Pan_Number__c</field>
         <readable>true</readable>
     </fieldPermissions>

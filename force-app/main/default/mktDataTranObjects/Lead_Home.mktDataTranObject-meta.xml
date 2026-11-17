@@ -266,6 +266,32 @@
         <sequence>0</sequence>
     </mktDataTranFields>
     <mktDataTranFields>
+        <fullName>GST_Number_c</fullName>
+        <creationType>Custom</creationType>
+        <datatype>S</datatype>
+        <externalName>GST_Number__c</externalName>
+        <isDataRequired>false</isDataRequired>
+        <length>0</length>
+        <masterLabel>GST Number</masterLabel>
+        <precision>0</precision>
+        <primaryIndexOrder>0</primaryIndexOrder>
+        <scale>0</scale>
+        <sequence>70</sequence>
+    </mktDataTranFields>
+    <mktDataTranFields>
+        <fullName>GST_Status_c</fullName>
+        <creationType>Custom</creationType>
+        <datatype>S</datatype>
+        <externalName>GST_Status__c</externalName>
+        <isDataRequired>false</isDataRequired>
+        <length>0</length>
+        <masterLabel>GST Status</masterLabel>
+        <precision>0</precision>
+        <primaryIndexOrder>0</primaryIndexOrder>
+        <scale>0</scale>
+        <sequence>88</sequence>
+    </mktDataTranFields>
+    <mktDataTranFields>
         <fullName>HasOptedOutOfEmail</fullName>
         <creationType>Custom</creationType>
         <datatype>S</datatype>
@@ -578,6 +604,167 @@
         <sequence>0</sequence>
     </mktDataTranFields>
     <mktDataTranFields>
+        <fullName>Mrk_Annual_Turnover_c</fullName>
+        <creationType>Custom</creationType>
+        <datatype>S</datatype>
+        <externalName>Mrk_Annual_Turnover__c</externalName>
+        <isDataRequired>false</isDataRequired>
+        <length>0</length>
+        <masterLabel>Mrk Annual Turnover</masterLabel>
+        <precision>0</precision>
+        <primaryIndexOrder>0</primaryIndexOrder>
+        <scale>0</scale>
+        <sequence>100</sequence>
+    </mktDataTranFields>
+    <mktDataTranFields>
+        <fullName>MRK_Details_Submitted_By_c</fullName>
+        <creationType>Custom</creationType>
+        <datatype>S</datatype>
+        <externalName>MRK_Details_Submitted_By__c</externalName>
+        <isDataRequired>false</isDataRequired>
+        <length>0</length>
+        <masterLabel>MRK Details Submitted By</masterLabel>
+        <precision>0</precision>
+        <primaryIndexOrder>0</primaryIndexOrder>
+        <scale>0</scale>
+        <sequence>94</sequence>
+    </mktDataTranFields>
+    <mktDataTranFields>
+        <fullName>MRK_Details_Submitted_Date_c</fullName>
+        <creationType>Custom</creationType>
+        <datatype>F</datatype>
+        <dateFormat>yyyy-MM-dd&apos;T&apos;HH:mm:ss.SSS&apos;Z&apos;</dateFormat>
+        <externalName>MRK_Details_Submitted_Date__c</externalName>
+        <isDataRequired>false</isDataRequired>
+        <length>0</length>
+        <masterLabel>MRK Details Submitted Date</masterLabel>
+        <precision>0</precision>
+        <primaryIndexOrder>0</primaryIndexOrder>
+        <scale>0</scale>
+        <sequence>95</sequence>
+    </mktDataTranFields>
+    <mktDataTranFields>
+        <fullName>Mrk_Form_Source_c</fullName>
+        <creationType>Custom</creationType>
+        <datatype>S</datatype>
+        <externalName>Mrk_Form_Source__c</externalName>
+        <isDataRequired>false</isDataRequired>
+        <length>0</length>
+        <masterLabel>Mrk Form Source</masterLabel>
+        <precision>0</precision>
+        <primaryIndexOrder>0</primaryIndexOrder>
+        <scale>0</scale>
+        <sequence>98</sequence>
+    </mktDataTranFields>
+    <mktDataTranFields>
+        <fullName>MRK_Last_Resend_Date_c</fullName>
+        <creationType>Custom</creationType>
+        <datatype>F</datatype>
+        <dateFormat>yyyy-MM-dd&apos;T&apos;HH:mm:ss.SSS&apos;Z&apos;</dateFormat>
+        <externalName>MRK_Last_Resend_Date__c</externalName>
+        <isDataRequired>false</isDataRequired>
+        <length>0</length>
+        <masterLabel>MRK Last Resend Date</masterLabel>
+        <precision>0</precision>
+        <primaryIndexOrder>0</primaryIndexOrder>
+        <scale>0</scale>
+        <sequence>97</sequence>
+    </mktDataTranFields>
+    <mktDataTranFields>
+        <fullName>Mrk_Monthly_Logistics_Spend_c</fullName>
+        <creationType>Custom</creationType>
+        <datatype>S</datatype>
+        <externalName>Mrk_Monthly_Logistics_Spend__c</externalName>
+        <isDataRequired>false</isDataRequired>
+        <length>0</length>
+        <masterLabel>Mrk Monthly Logistics Spend</masterLabel>
+        <precision>0</precision>
+        <primaryIndexOrder>0</primaryIndexOrder>
+        <scale>0</scale>
+        <sequence>101</sequence>
+    </mktDataTranFields>
+    <mktDataTranFields>
+        <fullName>Mrk_Promotional_Consent_c</fullName>
+        <creationType>Custom</creationType>
+        <datatype>B</datatype>
+        <externalName>Mrk_Promotional_Consent__c</externalName>
+        <isDataRequired>false</isDataRequired>
+        <length>0</length>
+        <masterLabel>Mrk Promotional Consent</masterLabel>
+        <precision>0</precision>
+        <primaryIndexOrder>0</primaryIndexOrder>
+        <scale>0</scale>
+        <sequence>99</sequence>
+    </mktDataTranFields>
+    <mktDataTranFields>
+        <fullName>MRK_Reminder_Email_Sent_c</fullName>
+        <creationType>Custom</creationType>
+        <datatype>B</datatype>
+        <externalName>MRK_Reminder_Email_Sent__c</externalName>
+        <isDataRequired>false</isDataRequired>
+        <length>0</length>
+        <masterLabel>MRK Reminder Email Sent</masterLabel>
+        <precision>0</precision>
+        <primaryIndexOrder>0</primaryIndexOrder>
+        <scale>0</scale>
+        <sequence>92</sequence>
+    </mktDataTranFields>
+    <mktDataTranFields>
+        <fullName>MRK_Reminder_Email_Sent_Date_c</fullName>
+        <creationType>Custom</creationType>
+        <datatype>F</datatype>
+        <dateFormat>yyyy-MM-dd&apos;T&apos;HH:mm:ss.SSS&apos;Z&apos;</dateFormat>
+        <externalName>MRK_Reminder_Email_Sent_Date__c</externalName>
+        <isDataRequired>false</isDataRequired>
+        <length>0</length>
+        <masterLabel>MRK Reminder Email Sent Date</masterLabel>
+        <precision>0</precision>
+        <primaryIndexOrder>0</primaryIndexOrder>
+        <scale>0</scale>
+        <sequence>93</sequence>
+    </mktDataTranFields>
+    <mktDataTranFields>
+        <fullName>MRK_Resend_Requested_Date_c</fullName>
+        <creationType>Custom</creationType>
+        <datatype>F</datatype>
+        <dateFormat>yyyy-MM-dd&apos;T&apos;HH:mm:ss.SSS&apos;Z&apos;</dateFormat>
+        <externalName>MRK_Resend_Requested_Date__c</externalName>
+        <isDataRequired>false</isDataRequired>
+        <length>0</length>
+        <masterLabel>MRK Resend Requested Date</masterLabel>
+        <precision>0</precision>
+        <primaryIndexOrder>0</primaryIndexOrder>
+        <scale>0</scale>
+        <sequence>96</sequence>
+    </mktDataTranFields>
+    <mktDataTranFields>
+        <fullName>MRK_Welcome_Email_Sent_c</fullName>
+        <creationType>Custom</creationType>
+        <datatype>B</datatype>
+        <externalName>MRK_Welcome_Email_Sent__c</externalName>
+        <isDataRequired>false</isDataRequired>
+        <length>0</length>
+        <masterLabel>MRK Welcome Email Sent</masterLabel>
+        <precision>0</precision>
+        <primaryIndexOrder>0</primaryIndexOrder>
+        <scale>0</scale>
+        <sequence>90</sequence>
+    </mktDataTranFields>
+    <mktDataTranFields>
+        <fullName>MRK_Welcome_Email_Sent_Date_c</fullName>
+        <creationType>Custom</creationType>
+        <datatype>F</datatype>
+        <dateFormat>yyyy-MM-dd&apos;T&apos;HH:mm:ss.SSS&apos;Z&apos;</dateFormat>
+        <externalName>MRK_Welcome_Email_Sent_Date__c</externalName>
+        <isDataRequired>false</isDataRequired>
+        <length>0</length>
+        <masterLabel>MRK Welcome Email Sent Date</masterLabel>
+        <precision>0</precision>
+        <primaryIndexOrder>0</primaryIndexOrder>
+        <scale>0</scale>
+        <sequence>91</sequence>
+    </mktDataTranFields>
+    <mktDataTranFields>
         <fullName>Name</fullName>
         <creationType>Custom</creationType>
         <datatype>S</datatype>
@@ -615,6 +802,19 @@
         <primaryIndexOrder>0</primaryIndexOrder>
         <scale>0</scale>
         <sequence>0</sequence>
+    </mktDataTranFields>
+    <mktDataTranFields>
+        <fullName>Pan_Number_c</fullName>
+        <creationType>Custom</creationType>
+        <datatype>S</datatype>
+        <externalName>Pan_Number__c</externalName>
+        <isDataRequired>false</isDataRequired>
+        <length>0</length>
+        <masterLabel>Pan Number</masterLabel>
+        <precision>0</precision>
+        <primaryIndexOrder>0</primaryIndexOrder>
+        <scale>0</scale>
+        <sequence>75</sequence>
     </mktDataTranFields>
     <mktDataTranFields>
         <fullName>Phone</fullName>
@@ -747,6 +947,19 @@
         <sequence>0</sequence>
     </mktDataTranFields>
     <mktDataTranFields>
+        <fullName>Sub_Vertical_c</fullName>
+        <creationType>Custom</creationType>
+        <datatype>S</datatype>
+        <externalName>Sub_Vertical__c</externalName>
+        <isDataRequired>false</isDataRequired>
+        <length>0</length>
+        <masterLabel>Sub Vertical</masterLabel>
+        <precision>0</precision>
+        <primaryIndexOrder>0</primaryIndexOrder>
+        <scale>0</scale>
+        <sequence>84</sequence>
+    </mktDataTranFields>
+    <mktDataTranFields>
         <fullName>SystemModstamp</fullName>
         <creationType>Custom</creationType>
         <datatype>F</datatype>
@@ -771,6 +984,19 @@
         <primaryIndexOrder>0</primaryIndexOrder>
         <scale>0</scale>
         <sequence>0</sequence>
+    </mktDataTranFields>
+    <mktDataTranFields>
+        <fullName>Vertical_c</fullName>
+        <creationType>Custom</creationType>
+        <datatype>S</datatype>
+        <externalName>Vertical__c</externalName>
+        <isDataRequired>false</isDataRequired>
+        <length>0</length>
+        <masterLabel>Vertical</masterLabel>
+        <precision>0</precision>
+        <primaryIndexOrder>0</primaryIndexOrder>
+        <scale>0</scale>
+        <sequence>80</sequence>
     </mktDataTranFields>
     <mktDataTranFields>
         <fullName>Website</fullName>

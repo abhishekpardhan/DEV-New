@@ -6,12 +6,36 @@
  */
 @JsonAccess(serializable='always' deserializable='always')
 global class SafexpressUrgentDeliveryForm {
-    @AuraEnabled global String waybillNumber;
-    @AuraEnabled global String mobileNumber;
-    @AuraEnabled global String emailId;
-    @AuraEnabled global String instructions;
-    @AuraEnabled global String caseNumber;
-    @AuraEnabled global String outcome;
-    @AuraEnabled global String message;
-    @AuraEnabled global String shipmentStatus; // NEW: Receives status from Agentforce to block ineligible requests
+    
+    @AuraEnabled 
+    @InvocableVariable 
+    global String waybillNumber;
+    
+    @AuraEnabled 
+    @InvocableVariable 
+    global String mobileNumber;
+    
+    @AuraEnabled 
+    @InvocableVariable 
+    global String emailId;
+    
+    @AuraEnabled 
+    @InvocableVariable 
+    global String instructions;
+    
+    @AuraEnabled 
+    @InvocableVariable 
+    global String caseNumber;
+    
+    @AuraEnabled 
+    @InvocableVariable 
+    global String outcome;
+    
+    @AuraEnabled 
+    @InvocableVariable 
+    global String message;
+    
+    @AuraEnabled 
+    @InvocableVariable 
+    global String shipmentStatus;
 }

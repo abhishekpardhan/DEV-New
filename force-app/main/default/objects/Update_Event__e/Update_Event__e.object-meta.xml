@@ -4,5 +4,5 @@
     <eventType>HighVolume</eventType>
     <label>Update Event</label>
     <pluralLabel>Update Events</pluralLabel>
-    <publishBehavior>PublishImmediately</publishBehavior>
+    <publishBehavior>PublishAfterCommit</publishBehavior>
 </CustomObject>
