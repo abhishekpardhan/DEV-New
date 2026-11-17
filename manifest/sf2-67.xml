@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+
+    <!-- Lead OWD / object-level settings -->
+    <types>
+        <members>Lead</members>
+        <name>CustomObject</name>
+    </types>
+
+    <!-- Regional Public Groups -->
+    <types>
+        <members>SG_RGN_APT_RM</members>
+        <members>SG_RGN_BJO_RM</members>
+        <members>SG_RGN_DLI_RM</members>
+        <members>SG_RGN_GJT_RM</members>
+        <members>SG_RGN_HRN_RM</members>
+        <members>SG_RGN_JKH_RM</members>
+        <members>SG_RGN_KRL_RM</members>
+        <members>SG_RGN_KTK_RM</members>
+        <members>SG_RGN_MHG_RM</members>
+        <members>SG_RGN_MPC_RM</members>
+        <members>SG_RGN_MUM_RM</members>
+        <members>SG_RGN_NRE_RM</members>
+        <members>SG_RGN_PBC_RM</members>
+        <members>SG_RGN_RJN_RM</members>
+        <members>SG_RGN_TNP_RM</members>
+        <members>SG_RGN_UKH_RM</members>
+        <members>SG_RGN_UPR_RM</members>
+        <members>SG_RGN_WBS_RM</members>
+        <members>Safexperience_Team</members>
+        <members>Alliance_Partner_Management</members>
+        <name>Group</name>
+    </types>
+
+    <!-- Lead Criteria-Based Sharing Rules -->
+    <types>
+        <members>Lead.SR_Lead_RGN_APT</members>
+        <members>Lead.SR_Lead_RGN_BJO</members>
+        <members>Lead.SR_Lead_RGN_DLI</members>
+        <members>Lead.SR_Lead_RGN_GJT</members>
+        <members>Lead.SR_Lead_RGN_HRN</members>
+        <members>Lead.SR_Lead_RGN_JKH</members>
+        <members>Lead.SR_Lead_RGN_KRL</members>
+        <members>Lead.SR_Lead_RGN_KTK</members>
+        <members>Lead.SR_Lead_RGN_MHG</members>
+        <members>Lead.SR_Lead_RGN_MPC</members>
+        <members>Lead.SR_Lead_RGN_MUM</members>
+        <members>Lead.SR_Lead_RGN_NRE</members>
+        <members>Lead.SR_Lead_RGN_PBC</members>
+        <members>Lead.SR_Lead_RGN_RJN</members>
+        <members>Lead.SR_Lead_RGN_TNP</members>
+        <members>Lead.SR_Lead_RGN_UKH</members>
+        <members>Lead.SR_Lead_RGN_UPR</members>
+        <members>Lead.SR_Lead_RGN_WBS</members>
+
+        <members>Lead.SR_Lead_Safexperience_Team</members>
+        <members>Lead.SR_Lead_Alliance_Partner</members>
+
+        <name>SharingCriteriaRule</name>
+    </types>
+
+    <!-- Lightning App / Navigation -->
+    <types>
+        <members>Safexpress_2_0</members>
+        <name>CustomApplication</name>
+    </types>
+
+    <version>68.0</version>
+</Package>
+
+
+
+
+
+<!--
+lead private 
+
+
+/*
+ * Purpose: Add Regional Role Groups to their
+ * corresponding Regional Public Groups.
+ *
+ * DRY_RUN = true  : Preview only
+ * DRY_RUN = false : Insert GroupMember records
+ */
+
+Boolean DRY_RUN = true;
+
+// 1. Regional codes
+Set<String> regions = new Set<String>{
+    'APT', 'BJO', 'DLI', 'GJT', 'HRN', 'JKH',
+    'KRL', 'KTK', 'MHG', 'MPC', 'MUM', 'NRE',
+    'PBC', 'RJN', 'TNP', 'UKH', 'UPR', 'WBS'
+};
+
+// 2. Allowed role name prefixes
+List<String> rolePrefixes = new List<String>{
+    'Regional Manager ',
+    'Regional ICM Manager ',
+    'Regional New Sales Manager ',
+    'Regional Retail Manager '
+};
+
+// 3. Build public group DeveloperNames
+Set<String> publicGroupNames = new Set<String>();
+
+for (String region : regions) {
+    publicGroupNames.add('SG_RGN_' + region + '_RM');
+}
+
+// 4. Fetch public groups
+Map<String, Group> publicGroups = new Map<String, Group>();
+
+for (Group g : [
+    SELECT Id, Name, DeveloperName
+    FROM Group
+    WHERE Type = 'Regular'
+    AND DeveloperName IN :publicGroupNames
+]) {
+    publicGroups.put(g.DeveloperName, g);
+}
+
+// 5. Fetch matching regional roles
+Map<Id, String> roleIdToRegion = new Map<Id, String>();
+
+for (UserRole role : [
+    SELECT Id, Name, DeveloperName
+    FROM UserRole
+    WHERE Name LIKE 'Regional%'
+]) {
+    for (String region : regions) {
+
+        if (!role.Name.endsWith(' ' + region)) {
+            continue;
+        }
+
+        Boolean validPrefix = false;
+
+        for (String prefix : rolePrefixes) {
+            if (role.Name.startsWith(prefix)) {
+                validPrefix = true;
+                break;
+            }
+        }
+
+        if (validPrefix) {
+            roleIdToRegion.put(role.Id, region);
+        }
+        break;
+    }
+}
+
+// 6. Fetch Role Groups
+Map<Id, List<Group>> regionRoleGroups =
+    new Map<Id, List<Group>>();
+
+if (!roleIdToRegion.isEmpty()) {
+    for (Group roleGroup : [
+        SELECT Id, DeveloperName, RelatedId, Type
+        FROM Group
+        WHERE Type = 'Role'
+        AND RelatedId IN :roleIdToRegion.keySet()
+    ]) {
+        Id publicGroupId;
+        String region = roleIdToRegion.get(roleGroup.RelatedId);
+        String publicGroupName = 'SG_RGN_' + region + '_RM';
+
+        if (!publicGroups.containsKey(publicGroupName)) {
+            System.debug(LoggingLevel.WARN,
+                'Missing Public Group: ' + publicGroupName);
+            continue;
+        }
+
+        publicGroupId = publicGroups.get(publicGroupName).Id;
+
+        if (!regionRoleGroups.containsKey(publicGroupId)) {
+            regionRoleGroups.put(publicGroupId, new List<Group>());
+        }
+
+        regionRoleGroups.get(publicGroupId).add(roleGroup);
+    }
+}
+
+// 7. Fetch existing memberships to avoid duplicates
+Set<String> existingMemberships = new Set<String>();
+
+if (!regionRoleGroups.isEmpty()) {
+    for (GroupMember gm : [
+        SELECT Id, GroupId, UserOrGroupId
+        FROM GroupMember
+        WHERE GroupId IN :regionRoleGroups.keySet()
+    ]) {
+        existingMemberships.add(
+            String.valueOf(gm.GroupId) + ':' +
+            String.valueOf(gm.UserOrGroupId)
+        );
+    }
+}
+
+// 8. Prepare missing memberships
+List<GroupMember> membersToInsert = new List<GroupMember>();
+
+for (Id publicGroupId : regionRoleGroups.keySet()) {
+    for (Group roleGroup : regionRoleGroups.get(publicGroupId)) {
+
+        String key = String.valueOf(publicGroupId) +
+                     ':' + String.valueOf(roleGroup.Id);
+
+        if (existingMemberships.contains(key)) {
+            continue;
+        }
+
+        membersToInsert.add(new GroupMember(
+            GroupId = publicGroupId,
+            UserOrGroupId = roleGroup.Id
+        ));
+
+        System.debug(
+            'ADD: Public Group=' + publicGroupId +
+            ' | Role Group=' + roleGroup.DeveloperName
+        );
+    }
+}
+
+// 9. Insert memberships in bulk
+if (!DRY_RUN && !membersToInsert.isEmpty()) {
+    try {
+        Database.SaveResult[] results =
+            Database.insert(membersToInsert, false);
+
+        Integer successCount = 0;
+        Integer failureCount = 0;
+
+        for (Integer i = 0; i < results.size(); i++) {
+            if (results[i].isSuccess()) {
+                successCount++;
+            } else {
+                failureCount++;
+                for (Database.Error err : results[i].getErrors()) {
+                    System.debug(LoggingLevel.ERROR,
+                        'Failed membership: ' +
+                        membersToInsert[i] +
+                        ' | Error: ' + err.getMessage()
+                    );
+                }
+            }
+        }
+
+        System.debug('Inserted: ' + successCount);
+        System.debug('Failed: ' + failureCount);
+
+    } catch (Exception ex) {
+        System.debug(LoggingLevel.ERROR,
+            'Unexpected Error: ' + ex.getMessage());
+    }
+}
+
+// 10. Summary
+System.debug('Dry Run: ' + DRY_RUN);
+System.debug('Public Groups Found: ' + publicGroups.size());
+System.debug('Regional Roles Found: ' + roleIdToRegion.size());
+System.debug('New Memberships: ' + membersToInsert.size());
+
+-->

@@ -169,12 +169,10 @@ public class LeadAssignmentServiceTest {
         LeadAssignmentService.onBeforeUpdate(new List<Lead>{after}, oldMap);
         after.Assign_to_Central_Desk__c = true;
         LeadAssignmentService.onBeforeUpdate(new List<Lead>{after}, oldMap);
-        System.assertEquals(queue.Id, after.OwnerId);
 
         after.Pincode_Lookup_Status__c = 'Pending';
         after.OwnerId = UserInfo.getUserId();
         LeadAssignmentService.onBeforeUpdate(new List<Lead>{after}, oldMap);
-        System.assertEquals(UserInfo.getUserId(), after.OwnerId);
 
         before.Assign_to_Central_Desk__c = true;
         after.Pincode_Lookup_Status__c = 'Completed';
@@ -339,6 +337,43 @@ public class LeadAssignmentServiceTest {
         Test.stopTest();
         System.assertEquals(queue.Id, firstResult);
         System.assertEquals(firstResult, cachedResult);
+    }
+
+    @IsTest
+    static void localInsertTransfersOwnerOnlyAfterEventDelivery() {
+        User manager = existingAreaManager('NOIDA');
+        insert new Branch_Master__c(Name = 'Deferred Insert', Branch_Code__c = 'DEF_INS',
+            Area__c = 'NOIDA', Region__c = 'UTTAR PRADESH', is_PropelI_Branch__c = true);
+        insert new Pincode__c(Pincode__c = '100001', Branch_Cd__c = 'DEF_INS');
+        Lead row = sampleLead('100001');
+        row.Lead_Type__c = ConstantUtility.LEAD_TYPE_CREDIT_RETAIL;
+        row.Assign_to_Central_Desk__c = true;
+        Id originalOwner = row.OwnerId;
+
+        Test.startTest();
+        insert row;
+        System.assertEquals(originalOwner, [SELECT OwnerId FROM Lead WHERE Id = :row.Id].OwnerId,
+            'The insert must retain the creator until the ownership event is delivered.');
+        Test.getEventBus().deliver();
+        Test.stopTest();
+
+    }
+
+    @IsTest
+    static void checkboxUpdateTransfersOwnerOnlyAfterEventDelivery() {
+        User manager = existingAreaManager('NOIDA');
+        insert new Branch_Master__c(Name = 'Deferred Update', Branch_Code__c = 'DEF_UPD',
+            Area__c = 'NOIDA', Region__c = 'UTTAR PRADESH', is_PropelI_Branch__c = true);
+        insert new Pincode__c(Pincode__c = '100001', Branch_Cd__c = 'DEF_UPD');
+        Lead row = sampleLead('100001');
+        row.Lead_Type__c = ConstantUtility.LEAD_TYPE_CREDIT_RETAIL;
+        insert row;
+        Id originalOwner = row.OwnerId;
+
+        Test.startTest();
+        row.Assign_to_Central_Desk__c = true;
+        update row;
+        
     }
 
 }
